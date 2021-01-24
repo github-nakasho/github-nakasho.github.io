@@ -53,14 +53,10 @@ $$
 
 ![水素のエネルギー準位と放出される光の名称。](/images/atmos/hydrogen_level.png)
 
-![吸収係数の温度依存性。](/images/atmos/hydrogen_absorption.png)
+![不透明度の温度依存性の概形。](/images/atmos/hydrogen_opacity.png)
 
 # 3.3.3 Negative Hydrogen Ion
 
 水素原子の電子の存在は偏っているため、もう1つ電子がくっついて負の電荷を持つNegative hydrogen ion $${\rm H}^{-1}$$が存在できます。必要な電子は、その他の重元素から供給されます。その結合エネルギーは0.754eVと小さいため、高温の状態では存在できません。しかし、太陽やそれよりも温度が低い恒星の大気では吸収係数に重要な貢献をします。実際、太陽大気ではNegative hydrogen ionが吸収の大きな割合を占めます。Negative hydrogen ionはBound-free, Free-free過程で光の吸収と発光を行います。Bound-free吸収は16500Å (1.65$$\mu$$m)より短い波長の光で起こり、吸収の最大は8500Åです。$${\rm H}^{-1}$$イオンのFree-free吸収は赤外域で大きいという特徴があります。
 
-![T=6300KでのNegative hydrogen atomによるBound-free, Free-free過程による吸収係数。](/images/atmos/negative_hydrogen_absorption.png)
-
-![T=6500Kでの総吸収係数の概形。](/images/atmos/6500.png)
-
-![T=8400Kでの総吸収係数の概形。](/images/atmos/8400.png)
+![T=6300KでのNegative hydrogen atomによるBound-free, Free-free過程による吸収係数。](/images/atmos/negative_hydrogen_opacity.png)

@@ -37,7 +37,7 @@ $$
 $$
 dm 
 = -\rho dz 
-= \frac{d\tau_\nu}{\kappa_\nu + \sigma_\nu} \tag{4.4}
+= \frac{d \tau_\nu}{\kappa_\nu + \sigma_\nu} \tag{4.4}
 $$
 
 より、静水圧平衡の式は
@@ -49,22 +49,22 @@ P(m) = gm \tag{4.5}
 $$
 
 の様に積分でき、圧力$$P$$が$$m$$に比例することがわかります。途中で出てくる積分定数は、$$z \rightarrow \infty$$で$$P, g \rightarrow 0$$から0としました。  
-放射圧は$$K_\nu$$と$$P_{{\rm rad}, \nu} = \frac{4\pi}{c} K_\nu$$の関係があります。Radiative transferの式に$$\cos \theta$$をかけて全立体角で積分した式(2.29)で、独立変数を$$\tau_\nu$$から$$m$$に変えます。
+放射圧は$$K_\nu$$と$$P_{\rm{rad}, \nu} = \frac{4\pi}{c} K_\nu$$の関係があります。Radiative transferの式に$$\cos \theta$$をかけて全立体角で積分した式(2.29)で、独立変数を$$\tau_\nu$$から$$m$$に変えます。
 
 $$
 4\pi \frac{dK_\nu}{dz} 
 = - (\kappa_\nu + \sigma_\nu) \rho F_\nu \ \Longrightarrow \ 
-\frac{dP_{{\rm rad}, \nu}}{dz} 
+\frac{dP_{\rm{rad}, \nu}}{dz} 
 = - \frac{\kappa_\nu + \sigma_\nu}{c} \rho F_\nu \ \Longrightarrow \ 
-\frac{dP_{{\rm rad}}}{dm} 
+\frac{dP_{\rm{rad}}{dm} 
 = \frac{1}{c} \int_0^\infty (\kappa_\nu + \sigma_\nu) F_\nu d\nu \tag{4.6}
 $$
 
-が得られます。(4.5)式で、圧力をガス圧$$P_{{\rm gas}}$$と放射圧$$P_{{\rm rad}}$$に分けて、$$P = P_{{\rm gas}} + P_{{\rm rad}}$$と書くと
+が得られます。(4.5)式で、圧力をガス圧$$P_{\rm{gas}}$$と放射圧$$P_{\rm{rad}}$$に分けて、$$P = P_{\rm{gas}} + P_{\rm{rad}}$$と書くと
 
 $$
-\frac{dP_{{\rm gas}}}{dm} 
-= \frac{dP}{dm} - \frac{dP_{\rm rad}}{dm} 
+\frac{dP_{\rm{gas}}}{dm} 
+= \frac{dP}{dm} - \frac{dP_{\rm{rad}}}{dm} 
 = g - \frac{1}{c} \int_0^\infty (\kappa_\nu + \sigma_\nu) F_\nu d\nu \tag{4.7}
 $$
 
@@ -83,7 +83,7 @@ $$
 
 $$
 T(\tau) 
-= \frac{T_{\rm eff}}{T_{{\rm eff} \odot}} T_\odot (\tau)
+= \frac{T_{\rm{eff}}{T_{\rm{eff} \odot}} T_\odot (\tau)
 $$
 
 として得られる温度分布を用いることもできます。

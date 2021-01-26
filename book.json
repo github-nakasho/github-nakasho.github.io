@@ -18,13 +18,13 @@
         "custom-favicon", 
         "github", 
         "copy-code-button", 
-        "ga", 
+        "gtag", 
         "thumbnail", 
         "adsense"], 
     "pluginsConfig": {
         "favicon": "./images/favicon.ico", 
         "github": {"url": "https://github.com/github-nakasho"}, 
-        "ga": {"token": "UA-164587255-1"}, 
+        "gtag": {"token": "G-C550SVR5KQ"}, 
         "sunlightHighlighter": {
             "theme": "gitbook", 
             "lineNumbers": true

@@ -34,8 +34,7 @@
         "adsense": {"client": "ca-pub-9131160172347693", 
                     "slot": "1699244224", 
                     "format": "auto", 
-                    "element": ".page-inner section", 
-                    "position": "top"}
+                    "element": ".page-inner section"}
     },  
     "language": "ja"
 }

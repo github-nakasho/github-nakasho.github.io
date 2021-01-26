@@ -19,7 +19,8 @@
         "github", 
         "copy-code-button", 
         "ga", 
-        "thumbnail"], 
+        "thumbnail", 
+        "adsense"], 
     "pluginsConfig": {
         "favicon": "./images/favicon.ico", 
         "github": {"url": "https://github.com/github-nakasho"}, 
@@ -29,7 +30,12 @@
             "lineNumbers": true
         }, 
         "thumbnail": {"path": "./images/logo.png"}, 
-        "image-captions": {"align": "left"}
+        "image-captions": {"align": "left"}, 
+        "adsense": {"client": "ca-pub-9131160172347693", 
+                    "slot": "1699244224", 
+                    "format": "auto", 
+                    "element": ".page-inner section", 
+                    "position": "top"}
     },  
     "language": "ja"
 }

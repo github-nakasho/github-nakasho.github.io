@@ -110,6 +110,7 @@
     * [ゼータ関数](/math/zeta.md)
     * [母関数](/math/generating.md)
     * [ラゲール多項式](/math/laguerre.md)
+    * [ベッセル関数](/math/bessel.md)
     * [球ベッセル関数と球ノイマン関数](/math/sph_bessel.md)
 * [量子コンピュータ](/qc/index.md)
     * [QuantumNativeDojo0章](/qc/qnd0.md)

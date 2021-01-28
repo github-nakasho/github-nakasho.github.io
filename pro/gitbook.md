@@ -84,3 +84,70 @@ b &= 1
 ```
 
 のようにalignで囲みます。揃えたい部分に&記号を入れます。
+
+## Google Adsense
+
+### 事前準備
+
+事前にGoogle Adsenseのアカウントを取得しておきます。
+
+{% hint style='tip' %}
+GitHub Pagesでアカウントを取得する際は、例えばhttps://github-nakasho.github.ioのようなURLで登録します。https://github-nakasho.github.io/websiteのようにURLにパス名が入っていると、取得できません。ご注意ください。
+{% endhint %}
+
+### インストールと設定
+
+以下のコマンドで必要なプラグインをインストールします。
+
+```bash
+$ npm install gitbook-plugin-adsense
+```
+
+`book.json`に以下の行を追加します。
+
+```
+{
+    "plugins": ["adsense"]
+}
+```
+
+そしてこのプラグインの設定として以下も記述します。
+
+```
+{
+    "pluginsConfig": {
+        "adsense": {
+            "client": "ca-pub-XXXXXXXXXXXXXXXX",
+            "slot": "XXXXXXXXXX",
+            "format": "auto",
+            "element": ".page-inner section",
+            "position": "top"
+        }
+    }
+}
+```
+
+`client`にはca-pub-から始まる番号、`slot`にはどのAdsenseを貼るかを識別する番号を入力します。`position`は初期設定ではbottom(ページ下部)です。topかbottomを選ぶことができます(これ以外は試していません)。
+
+## Google Analytics 
+
+### インストールと設定
+
+以下のコマンドでプラグインをインストールします。
+
+```bash
+$ npm install gitbook-plugin-gtag 
+```
+
+`book.json`に以下を追記します。
+
+```
+"plugin": ['gtag'],
+"pluginsConfig": {
+  "gtag": {
+    "token": <gtag-id>
+  }
+}
+```
+
+Google Analyticsに登録した後、websiteをトラッキングするためのスクリプト部分から`gtag`番号を<gtag-id>部分に入力します。

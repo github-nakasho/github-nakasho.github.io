@@ -21,13 +21,14 @@
 
 * 2006/03. 神奈川大学附属高校、卒業
 * 2010/03. 東北大学理学部宇宙地球物理学科天文学コース、卒業
-* 2012/03. 東北大学大学院理学研究科天文学専攻修士課程、修了(理学修士)
-* 2016/03. 東北大学大学院理学研究科天文学専攻博士課程、単位取得退学(理学博士)  
+* 2012/03. 東北大学大学院理学研究科天文学専攻修士課程、修了
+* 2016/03. 東北大学大学院理学研究科天文学専攻博士課程、単位取得退学  
 
 ### Interests
 
 * 組合せ最適化
-* (量子)アニーリング
+* 量子アニーリング
+* 量子回路
 * 宇宙物理学/天文学
 * 磁気流体力学
 * スーパーコンピュータによるシミュレーション  
@@ -49,3 +50,9 @@
 * 自転車
 * 寺社仏閣巡り  
 * アニメ・ゲーム
+
+### Daily routine
+
+* [astro-ph](https://arxiv.org/list/astro-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/astroph/issues)
+* [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック
+* [Tae-bo Advanced workout](https://www.youtube.com/watch?v=s1t4xIlsmH0)で運動

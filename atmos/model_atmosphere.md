@@ -56,7 +56,7 @@ $$
 = - (\kappa_\nu + \sigma_\nu) \rho F_\nu \ \Longrightarrow \ 
 \frac{dP_{\rm{rad}, \nu}}{dz} 
 = - \frac{\kappa_\nu + \sigma_\nu}{c} \rho F_\nu \ \Longrightarrow \ 
-\frac{dP_{\rm{rad}}{dm} 
+\frac{dP_{\rm{rad}}}{dm} 
 = \frac{1}{c} \int_0^\infty (\kappa_\nu + \sigma_\nu) F_\nu d\nu \tag{4.6}
 $$
 
@@ -83,7 +83,7 @@ $$
 
 $$
 T(\tau) 
-= \frac{T_{\rm{eff}}{T_{\rm{eff} \odot}} T_\odot (\tau)
+= \frac{T_{\rm{eff}}}{T_{\rm{eff} \odot}} T_\odot (\tau)
 $$
 
 として得られる温度分布を用いることもできます。

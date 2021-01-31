@@ -1,22 +1,12 @@
-# Astrophysics Map
-
-![Astrophysics Map](/images/astromap/astromap_en.png)
-
-## Size
-
-[Large](/images/astromap/astromap_en.png)  
-[Middle](/images/astromap/astromap_en_m.png)  
-[Smale](/images/astromap/astromap_en_s.png)  
-
-# 宇宙物理学Map (日本語バージョン)
+# 宇宙物理学 Map (日本語バージョン)
 
 ![宇宙物理学Map](/images/astromap/astromap.png)
 
-## サイズ
+## ダウンロード
 
-[大サイズ](/images/astromap/astromap.png)  
-[中サイズ](/images/astromap/astromap_m.png)  
-[小サイズ](/images/astromap/astromap_s.png)  
+以下のリンクからこのマップをダウンロードいただけます。
+
+[宇宙物理学Map](/images/astromap/astromap.png)  
 
 ## 作成に使用したもの
 
@@ -45,13 +35,10 @@
 * 銀河団
 * 宇宙論
 
-## 著作権など
+## 使用上の注意と著作権
 
-宇宙物理学の普及と発展のため、このMapを経済・情報格差社会のしがらみから切り離してご利用いただくために  
-
-**著作権フリー素材**
-
-とします。商用利用OK, 再配布およびオリジナル加工を全面的に受け入れます。今後使用される際に本人許諾を得る必要もありません。  
+商用利用可能です。大学の授業やアウトリーチ活動にお役立てください。  
+ご利用になられる際は、**宇宙物理学Mapの右下にあるコピーライトとこのウェブサイトのリンクをご記載ください**。
 
 ## What's Next ? 
 
@@ -61,7 +48,6 @@
 * AGN Aquarium: Radio Loud AGNなど観測対象がその特徴から分類されるものを網羅したい  
 * 世界の望遠鏡性能まとめ: 様々ある望遠鏡とこれから建設される大型計画について紹介したい  
 * Distance Ladder: 天体までの距離は基本的な測定量の一つ。どのようにして近傍から遠方までを測定するのかを紹介したい 
-* 論文速報: 主にarXiv/astro-phの内容をピックアップし、わかりやすく紹介したい  
 
 (随時更新予定です。)
 

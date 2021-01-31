@@ -97,7 +97,7 @@
     * [連続光に対するEinstein-Milne relations](/atmos/continuum_einstein_milne.md)
     * [水素原子](/atmos/hydrogen_atom.md)
     * [LTE](/atmos/lte.md)
-    * [恒星大気モデル](/atmos/model_atmosphere.md)
+    * [静水圧平衡](/atmos/hydrostatic_equilibrium.md)
     * [放射平衡](/atmos/radiative_equilibrium.md)
     * [優勢な散乱によって生じる問題](/atmos/scattering_dominated.md)
     * [理論的大気モデル計算法の概要](/atmos/temperature_compensation.md)

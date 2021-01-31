@@ -63,6 +63,8 @@ $$
 
 # Appendix: ランダムウォークの平均移動距離
 
+![ランダムウォークの様子。](/images/atmos/random_walk.png)
+
 $$i$$回目のランダムウォークによって移動する方向ベクトルを$${\bf r}_i$$とします。またランダムウォークを行う粒子の1回の移動距離($${\bf r}_i$$の大きさ)は移動方向に依存せず全て$$\ell$$とします。今、粒子が原点から$$N$$回のランダムウォークを行ったとしましょう(ただし$$N \gg 1$$)。すると、このランダムウォークによって粒子の位置ベクトルは
 
 $$
@@ -77,16 +79,16 @@ $$
 R^2 
 = {\bf R} \cdot {\bf R}
 = \ell^2 \left( \sum_{i=1}^N {\bf n}_i \right) \cdot \left( \sum_{j=1}^N {\bf n}_j \right)
-= \ell^2 \left( \sum_{i=1}^N {\bf n}_i \cdot {\bf n}_i + 2 \sum_{i \neq j} {\bf n}_i \cdot {\bf n}_j \right)
+= \ell^2 \left( \sum_{i=1}^N {\bf n}_i \cdot {\bf n}_i + \sum_{i \neq j} {\bf n}_i \cdot {\bf n}_j \right)
 $$
 
 完全にランダムに動いているような場合を考えるので、様々な方向を向くベクトル$${\bf n}_i, {\bf n}_j$$の内積は$$[-1, 1]$$の間で完全にランダムな値をとります。第2項はそれを全ての$$i \neq j$$の組み合わせに対して和をとるので、$$N \gg 1$$においては0と近似できます。
 
 $$
 \therefore \ R^2 
-= \ell^2 N \ \Longrightarrow \ 
+\simeq \ell^2 N \ \Longrightarrow \ 
 R 
-= \ell \sqrt{N}
+\simeq \ell \sqrt{N}
 $$
 
 移動距離が、ランダムウォークの回数の平方根に比例するという重要な公式を得ることができました。

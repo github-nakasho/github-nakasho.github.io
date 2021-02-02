@@ -20,7 +20,8 @@
         "copy-code-button", 
         "gtag", 
         "thumbnail", 
-        "adsense"], 
+        "adsense", 
+        "youtube"], 
     "pluginsConfig": {
         "favicon": "./images/favicon.ico", 
         "github": {"url": "https://github.com/github-nakasho"}, 

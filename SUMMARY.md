@@ -128,6 +128,7 @@
     * [QuantumNativeDojo8章](/qc/qnd8.md)
 * [情報統計力学](/infostat/index.md)
     * [統計力学の復習](/infostat/statistical_mechanics.md)
+    * [ランダムスピン系](/infostat/random_spin_system.md)
 * [プログラミングなど](/pro/index.md)
     * [GitBookメモ](/pro/gitbook.md)
     * [Pythonメモ](/pro/python.md)

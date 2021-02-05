@@ -15,7 +15,7 @@
 
 ### Current Job
 
-2019/10-. [Jij Inc.](https://j-ij.com/ja_index.html)で研究開発  
+2019/10-. [Jij Inc.](https://j-ij.com/ja/)で研究開発、[技術ブログ](https://jijtech.hatenablog.com/)作成
 
 ### Education
 

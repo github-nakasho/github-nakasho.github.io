@@ -207,8 +207,8 @@ $$
 すると
 
 $$
-[Z^n] 
-= \frac{1}{N} \log \int dQ \ \sum_{\bf{x}} \exp \left( -\sum_{a, b} \frac{N q^{ab} \tilde{q}^{ab}}{2} + \frac{1}{2} \sum_{a, b} \tilde{q}^{ab} \sum_{i=1}^N x_i^a x_i^b \right) \tag{2.17}
+S(Q)
+= \frac{1}{N} \log \int \tilde{dQ} \ \sum_{\bf{x}} \exp \left( -\sum_{a, b} \frac{N q^{ab} \tilde{q}^{ab}}{2} + \frac{1}{2} \sum_{a, b} \tilde{q}^{ab} \sum_{i=1}^N x_i^a x_i^b \right) \tag{2.17}
 $$
 
 このままでは計算が難しいので、次に示す仮定を用います。
@@ -323,7 +323,7 @@ $$
 よって
 
 $$
-[Z^n] 
+[Z^n]
 = \int dq \ \exp \left[ N \left\{ \frac{\beta^2 J^2}{4} (n \cdot 1 + n (n-1) \cdot q^2) + \left( -\frac{n}{2} \tilde{q} (1-q) + n \int D_z \log (2 \cosh \sqrt{\tilde{q}}z) \right) \right\} \right] \tag{2.27}
 $$
 
@@ -334,17 +334,97 @@ $$
 = 0 \ \Longrightarrow \ 
 \therefore \ 
 \tilde{q} 
-= \beta^2 J^2 q \tag{2.27}
+= \beta^2 J^2 q \tag{2.28}
 $$
 
-(2.26), (2.27)を合わせて
+(2.26), (2.28)を合わせて
 
 $$
 q 
-= \int D_z \tanh^2 (\beta J \sqrt{q} z) \tag{2.28}
+= \int D_z \tanh^2 (\beta J \sqrt{q} z) \tag{2.29}
 $$
 
 となります。これは強磁性イジングモデルにおける磁化の式$$m = \tanh(\beta Jm)$$と似ている式になっています。しかし$$q \propto \sum x_i^a x_i^b$$より、$$x$$の2次式なので$$\tanh$$が2回出てきています。さらにこの場合は$$m$$に対応する値が$$\sqrt{q} z$$になっています。強磁性イジングモデルのときは$$J_{ij}$$が一様でしたが、今回は$$J_{ij}$$がガウス分布にしたがってランダムになっています。$$z$$はそのゆらぎを表し、スピングラス秩序パラメータはそれによって発生していることが見て取れます。
+
+## 極低温での$$q$$の振る舞い
+
+(2.29)式より低温極限($$\beta \rightarrow \infty$$)では、$$\tanh (\cdots) = 1$$より$$q \rightarrow 1$$となることがわかります。ここではその値だけでなく、その振る舞いも見てみましょう。$$\tanh^2 = 1- \frac{1}{\cosh^2}$$より
+
+$$
+q 
+= 1 - \int D_z \frac{1}{\cosh^2 (\beta J \sqrt{q} z)} 
+= 1 - \frac{1}{\beta J \sqrt{q}} \int D_z \frac{d}{dz} \tanh (\beta J \sqrt{q} z) 
+$$
+
+$$\beta \rightarrow \infty$$においては、$$f(z) = \tanh (\beta J \sqrt{q} z)$$は下図のような関数の形になります。
+
+![tanhとヘヴィサイド関数。](/images/infostat/tanh_heaviside.png)
+
+よってこれはヘヴィサイドの階段関数を用いて変形することができて
+
+$$
+\begin{align}
+q 
+&= 1 - \frac{1}{\beta J \sqrt{q}} \int D_z \frac{d}{dz} (2 \Theta(z) -1) 
+\underbrace{=}_{\delta(z) = \frac{d\Theta}{dz}} 1 - \frac{1}{\beta J \sqrt{q}} \int \frac{dz}{\sqrt{2\pi}} e^{-\frac{1}{2} z^2} 2 \delta (z) \\
+&\underbrace{=}_{q \sim 1} 1 - \frac{1}{\beta J} \sqrt{\frac{2}{\pi}} \tag{2.30}
+\end{align}
+$$
+
+この式の形から、$$\frac{1}{\beta J} = 0$$から温度を上げていくと、線形で$$q$$が小さくなることがわかります。
+
+## Negative entropy
+
+同様に、極低温でのエントロピーの振る舞いを計算してみましょう。
+
+$$
+S 
+= \frac{\partial F}{\partial T} 
+= \beta^2 \frac{\partial }{\partial \beta} \left[ -\frac{1}{\beta} \log Z\right] \tag{2.31}
+$$
+
+これまでの計算で(2.27), (2.28)式より
+
+$$
+\begin{align}
+[Z^n] 
+&= \exp \left[ N n \left\{ \frac{\beta^2 J^2}{4} (1 + (n-1) q^2) - \frac{1}{2} \beta^2 J^2 q (q-1) + \int D_z \log(2 \cosh (\beta J \sqrt{q} z)) \right\} \right] \\
+&\xrightarrow{n \rightarrow 0} 1 + nN \left\{ \frac{\beta^2 J^2}{4} (1 - q^2) - \frac{1}{2} \beta^2 J^2 q (q-1) + \int D_z \log(2 \cosh (\beta J \sqrt{q} z)) \right\}
+\end{align}
+$$
+
+これと(2.7)式より
+
+$$
+[\log Z] 
+= \lim_{n \rightarrow 0} \frac{[Z^n]-1}{n} 
+= N \left\{ \frac{\beta^2 J^2}{4} (1 - q^2) - \frac{1}{2} \beta^2 J^2 q (q-1) + \int D_z \log(2 \cosh (\beta J \sqrt{q} z)) \right\}
+$$
+
+これを(2.31)式に代入して
+
+$$
+S 
+= -N \left\{ \frac{J^2}{4} (1-q^2) + \frac{J^2}{2} q (1-q) - \left( \frac{1}{\beta}の項\right)\right\}
+$$
+
+今、考えているのは極低温$$\beta \rightarrow \infty$$なので
+
+$$
+S 
+= - \frac{N J^2}{4} (1-q) \{ (1+q) - 2q\} 
+= - \frac{N J^2}{4} (1-q)^2
+$$
+
+(2.30)式より
+
+$$
+S 
+= - \frac{N J^2}{4} \frac{1}{\beta^2 J^2} \frac{2}{\pi} 
+= - \frac{N}{2 \pi \beta^2} < 0 \tag{2.32}
+$$
+
+となります。エントロピーは状態数を数え上げたものなので、負になることはありません。これは、Sherrington-Kirkpatrick modelの極低温において、レプリカ対称性($$a^{qb} = q \ (a \neq b)$$)が破れていることから来るものです(Full-step replica symmetry breakingという特別なことが起こっています)。研究をしているとたまこのようなことが起こるので注意してください(実はレプリカ対称性が破れないことの方が多く、SKモデルが特別な場合だったりします)。レプリカ対称性が破られていると、相転移点も異なってきます。
 
 # Appendix 1: log公式の導出
 

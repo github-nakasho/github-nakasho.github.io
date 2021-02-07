@@ -424,7 +424,13 @@ S
 = - \frac{N}{2 \pi \beta^2} < 0 \tag{2.32}
 $$
 
-となります。エントロピーは状態数を数え上げたものなので、負になることはありません。これは、Sherrington-Kirkpatrick modelの極低温において、レプリカ対称性($$a^{qb} = q \ (a \neq b)$$)が破れていることから来るものです(Full-step replica symmetry breakingという特別なことが起こっています)。研究をしているとたまこのようなことが起こるので注意してください(実はレプリカ対称性が破れないことの方が多く、SKモデルが特別な場合だったりします)。レプリカ対称性が破られていると、相転移点も異なってきます。
+となります。
+
+{% hint style='tip' %}
+オンライン動画の結果と異なります。どこかに計算ミスがある？
+{% endhint %}
+
+エントロピーは状態数を数え上げたものなので、負になることはありません。これは、Sherrington-Kirkpatrick modelの極低温において、レプリカ対称性($$q^{qb} = q \ (a \neq b)$$)が破れていることから来るものです(Full-step replica symmetry breakingという特別なことが起こっています)。研究をしているとたまこのようなことが起こるので注意してください(実はレプリカ対称性が破れないことの方が多く、SKモデルが特別な場合だったりします)。レプリカ対称性が破られていると、相転移点も異なってきます。
 
 # Appendix 1: log公式の導出
 
@@ -468,3 +474,10 @@ $$
 = \int D_z f'(z)
 \end{align}
 $$
+
+# 参考文献及びリンク
+
+* [1] [大関真之 YouTube動画 "Statistical physics and information processing vol. 1 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=VcINN1ew7TU)
+* [2] [大関真之 YouTube動画 "Statistical physics and information processing vol. 2A (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=N-EcAGPXGLY)
+* [3] [大関真之 YouTube動画 "Statistical physics and information processing vol. 2B (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=57SLXGkVzAQ)
+* [2] 高橋和孝・西森秀稔、相転移・臨界現象とくりこみ群

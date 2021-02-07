@@ -1,3 +1,18 @@
+# Astrophysics Map
+
+![Astrophysics Map](/images/astromap/astromap_en.png)
+
+## Download
+
+You can get this map from this link.
+
+[Astrophysics Map](/images/astromap/astromap_en.png)  
+
+## Usage notes and copyrights
+
+Commercial use is allowed. Please use for your university classes and outreach activities.  
+**Please include the copyright and a link to this website in the lower right corner of Astrophysics Map when you use it**. 
+
 # 宇宙物理学 Map (日本語バージョン)
 
 ![宇宙物理学Map](/images/astromap/astromap.png)
@@ -7,6 +22,11 @@
 以下のリンクからこのマップをダウンロードいただけます。
 
 [宇宙物理学Map](/images/astromap/astromap.png)  
+
+## 使用上の注意と著作権
+
+商用利用可能です。大学の授業やアウトリーチ活動にお役立てください。  
+ご利用になられる際は、**宇宙物理学Mapの右下にあるコピーライトとこのウェブサイトのリンクをご記載ください**。
 
 ## 作成に使用したもの
 
@@ -34,11 +54,6 @@
 * 活動銀河中心核
 * 銀河団
 * 宇宙論
-
-## 使用上の注意と著作権
-
-商用利用可能です。大学の授業やアウトリーチ活動にお役立てください。  
-ご利用になられる際は、**宇宙物理学Mapの右下にあるコピーライトとこのウェブサイトのリンクをご記載ください**。
 
 ## What's Next ? 
 

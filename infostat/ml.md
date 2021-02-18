@@ -499,3 +499,7 @@ $$
 # Appendix 2: レプリカ法のアプリケーション例
 
 量子アニーリングを用いて最適化問題を解く(イジングの基底状態を求める)という応用例があることから、量子ゆらぎの計算を導入します。その時の計算方法にレプリカ法が用いられます。最近ではAdS/CFT対応の文脈でもレプリカ法が用いられており、論文数が増えていると言われています。
+
+# 参考文献及びリンク
+
+* [1] [大関真之 YouTube動画 "Statistical physics and information processing vol. 3 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=0nV9LAHOzmU&t=13096s)

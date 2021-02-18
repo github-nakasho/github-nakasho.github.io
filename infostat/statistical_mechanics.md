@@ -327,6 +327,31 @@ $$
 
 鞍点の安定性については、そこで取った値が最大(極大)なのか最小(極小)なのかを見極める必要があります。  
 
+# Appendix: 多次元のガウス積分
+
+$$N$$次元の正方正値対称行列$$A$$に対して
+
+$$
+\int d\mathbf{x} e^{-\frac{1}{2} \mathbf{x}^T A \mathbf{x}}
+$$
+
+を求めましょう。$$A$$が正の値しか持たない行列であることから、$$A^{1/2}$$が定義できます。よって$$e$$の肩を
+
+$$
+\mathbf{x}^T A \mathbf{x} 
+= (A^{1/2} \mathbf{x})^{T} (A^{1/2} \mathbf{x})
+$$
+
+のように変形します。$$\mathbf{y} = A^{1/2} \mathbf{x}$$とおくと、ヤコビアンは$$\mathrm{det} (A^{1/2})^{-1} = (\mathrm{det}(A))^{-1/2}$$です。よって
+
+$$
+\int d\mathbf{x} e^{-\frac{1}{2} \mathbf{x}^T A \mathbf{x}} 
+= (\mathrm{det}(A))^{-1/2} \int d\mathbf{y} e^{-\frac{1}{2} (y_1^2 + y_2^2 + \cdots + y_n^2)} 
+= \sqrt{\frac{(2\pi)^n}{\mathrm{det}(A)}}
+$$
+
+となります。
+
 # 参考リンク
 
 * [1] [大関真之 Youtube動画 "Statistical physics and information processing vol. 1 (情報統計物理) 【Tokyo Tech Lecture Live Streaming"](https://www.youtube.com/embed/VcINN1ew7TU)

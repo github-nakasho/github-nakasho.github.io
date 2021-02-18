@@ -192,10 +192,16 @@ $$
 
 $$
 [u_\mu^a] 
-= 0, \ 
+= 0
+$$
+
+$$
+\begin{align}
 [u_\mu^a u_\mu^b] 
-= [(\sqrt{q} z + \sqrt{1-q} x_a)(\sqrt{q} z + \sqrt{1-q} x_b)] 
-= [q z^2] + \sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] = q + (1-q) \delta_{ab}
+&= [(\sqrt{q} z + \sqrt{1-q} x_a)(\sqrt{q} z + \sqrt{1-q} x_b)] 
+= [q z^2] + \sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] \\
+&= q + (1-q) \delta_{ab}
+\end{align}
 $$
 
 となります。よって$$u_\mu^a$$を$$z, x_a$$で書き換えましょう。
@@ -207,16 +213,30 @@ $$
 
 $$n$$乗は$$a = 1, 2, \cdots, n$$の場合の計算が全て一致することから出てきます。  
 機械学習の一般形として、エネルギーを$$e^{-\beta f(\mathbf{w} \cdot \mathbf{x}_\mu)}$$と書くことができます。これは線形変換と非線形変換を施した形になっているため、これが一般形になっていることがわかります。これまでの議論から$$u_\mu^a = \mathbf{w}_a \cdot \mathbf{x}_\mu$$と書け、これはさらに等価定理で$$z, x_a$$で表現することができます...という議論の進め方を(公式のように)覚えてしまえば、あとは手を動かすだけで研究ができます。  
-$$(\cdots)^n$$の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。
+(4.18)式の変形をさらに進めます。
 
 $$
-\int_{-\infty}^{-\sqrt{\frac{q}{1-q}} z} D_x e^{-\beta y_\mu} + \int_{-\sqrt{\frac{q}{1-q}} z}^\infty D_x e^{\beta y_\mu} \tag{4.17}
+\begin{align}
+-\beta e(Q) 
+&= \frac{M}{N} \log \left[ \int D_z e^{\log (\cdots)^n} \right]
+= \frac{M}{N} \log \left[ \int D_z e^{n \log (\cdots)} \right] \\
+&\xrightarrow{n \rightarrow 0} \frac{M}{N} \log \left[ \int D_z (1 + n \log (\cdots)) \right] 
+= \frac{M}{N} \log \left[ 1 + n \int D_z \log (\cdots) \right] \\
+&\simeq \frac{M}{N} \log \left[ e^{n \int D_z \log (\cdots)} \right] 
+= \frac{M}{N} n \int D_z \log (\cdots) \tag{4.17}
+\end{align}
+$$
+
+$$(\cdots)$$の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。
+
+$$
+\int_{-\infty}^{-\sqrt{\frac{q}{1-q}} z} D_x e^{-\beta y_\mu} + \int_{-\sqrt{\frac{q}{1-q}} z}^\infty D_x e^{\beta y_\mu} \tag{4.18}
 $$
 
 相補誤差関数
 
 $$
-H(x) = \int_x^\infty D_z \tag{4.18}
+H(x) = \int_x^\infty D_z \tag{4.19}
 $$
 
 を用いると
@@ -226,17 +246,17 @@ H(-x)
 = \int_{-x}^\infty D_z 
 = \int_{-\infty}^\infty D_z - \int_{-\infty}^{-x} D_z 
 \underbrace{=}_{z \rightarrow -z} 1 + \int_\infty^x D_x 
-= 1 - H(x) \tag{4.19}
+= 1 - H(x) \tag{4.20}
 $$
 
 より
 
 $$
 \begin{align}
-(4.17) 
+(4.18) 
 &= e^{\beta y_\mu} H \left( - \sqrt{\frac{q}{1-q}} z\right) + \left( \int_{-\infty}^\infty D_z - \int_{-\sqrt{\frac{q}{1-q}} z}^\infty D_z\right) e^{-\beta y_\mu} \\
 &= e^{\beta y_\mu} H \left( -\sqrt{\frac{q}{1-q}} z \right) + e^{-\beta y_\mu} \left( 1- H \left( -\sqrt{\frac{q}{1-q}} z\right)\right) \\
-&= e^{\beta y_\mu} \left( 1- H \left( \sqrt{\frac{q}{1-q}} z\right)\right) + e^{-\beta y_\mu} H\left( \sqrt{\frac{q}{1-q}} z\right) \tag{4.20}
+&= e^{\beta y_\mu} \left( 1- H \left( \sqrt{\frac{q}{1-q}} z\right)\right) + e^{-\beta y_\mu} H\left( \sqrt{\frac{q}{1-q}} z\right) \tag{4.21}
 \end{align}
 $$
 
@@ -244,7 +264,7 @@ $$
 
 $$
 -\beta e(Q) 
-= \alpha \left[ \int D_z \log (e^{-\beta y_\mu} H + e^{\beta y_\mu} (1-H)) \right]_{y_\mu} \tag{4.21}
+= \alpha n \left[ \int D_z \log (e^{-\beta y_\mu} H + e^{\beta y_\mu} (1-H)) \right]_{y_\mu} \tag{4.22}
 $$
 
 ここで$$\alpha \equiv M/N, H \equiv H (\sqrt{\frac{q}{1-q}} z)$$です。
@@ -256,27 +276,27 @@ $$
 $$
 \begin{align}
 &\prod_{a=1}^n \int d\mathbf{w}_a \prod_{a\neq b} \delta (Nq - \mathbf{w}_a^T \mathbf{w}_b) \prod_a \delta (N- \mathbf{w}_a^T \mathbf{w}_a) \\
-&= \prod_a \int d\mathbf{w}_a \int d\tilde{Q} \int d\tilde{q} \exp \left( \frac{1}{2} \tilde{Q} \sum_a (N-\mathbf{w}_a \mathbf{w}_a)\right) \exp \left( -\frac{\tilde{q}}{2} \sum_{a\neq b} (Nq - \mathbf{w}_a \cdot \mathbf{w}_b)\right) \tag{4.22}
+&= \prod_a \int d\mathbf{w}_a \int d\tilde{Q} \int d\tilde{q} \exp \left( \frac{1}{2} \tilde{Q} \sum_a (N-\mathbf{w}_a \mathbf{w}_a)\right) \exp \left( -\frac{\tilde{q}}{2} \sum_{a\neq b} (Nq - \mathbf{w}_a \cdot \mathbf{w}_b)\right) \tag{4.23}
 \end{align}
 $$
 
 $$e$$の肩の部分を整理すると
 
 $$
-\frac{1}{2} nN \tilde{Q} - \frac{1}{2} \tilde{q} q N n(n-1) - \frac{\tilde{Q}}{2} \sum_a \mathbf{w}_a \cdot \mathbf{w}_a + \frac{\tilde{q}}{2} \sum_{a \neq b} \mathbf{w}_a \cdot \mathbf{w}_b \tag{4.23}
+\frac{1}{2} nN \tilde{Q} - \frac{1}{2} \tilde{q} q N n(n-1) - \frac{\tilde{Q}}{2} \sum_a \mathbf{w}_a \cdot \mathbf{w}_a + \frac{\tilde{q}}{2} \sum_{a \neq b} \mathbf{w}_a \cdot \mathbf{w}_b \tag{4.24}
 $$
 
 最後の項を整理すると
 
 $$
-\frac{\tilde{q}}{2} \left\{ \left( \sum_a \mathbf{w}_a\right)^2 - \sum_a \mathbf{w}_a^2\right\} \tag{4.24}
+\frac{\tilde{q}}{2} \left\{ \left( \sum_a \mathbf{w}_a\right)^2 - \sum_a \mathbf{w}_a^2\right\} \tag{4.25}
 $$
 
 この$$(\sum_a \mathbf{w}_a)^2$$の部分にHubbard-Stratonovich変換をして$$\sqrt{\tilde{q}}\mathbf{z} \sum_a \mathbf{w}_a$$とすると
 
 $$
-(4.22) 
-= \int D_z \prod_{a=1}^n \int d\mathbf{w}_a \int d\tilde{Q} \int d\tilde{q} \exp \left( nN \left( \frac{1}{2} \tilde{Q} + \frac{1}{2} q \tilde{q} \right) \right) \exp \left( -\frac{1}{2} (\tilde{Q} + \tilde{q}) \sum_a \mathbf{w}_a \cdot \mathbf{w}_a + \sqrt{\tilde{q}} \mathbf{z} \sum_a \mathbf{w}_a \right) \tag{4.25}
+(4.23) 
+= \int D_z \prod_{a=1}^n \int d\mathbf{w}_a \int d\tilde{Q} \int d\tilde{q} \exp \left( nN \left( \frac{1}{2} \tilde{Q} + \frac{1}{2} q \tilde{q} \right) \right) \exp \left( -\frac{1}{2} (\tilde{Q} + \tilde{q}) \sum_a \mathbf{w}_a \cdot \mathbf{w}_a + \sqrt{\tilde{q}} \mathbf{z} \sum_a \mathbf{w}_a \right) \tag{4.26}
 $$
 
 上式において$$\prod_a \int d\mathbf{w}_a \exp (\cdots)$$の部分でガウス積分を実行すると$$\left( \sqrt{\frac{2\pi}{\tilde{Q} + \tilde{q}}} \exp \left( \frac{\tilde{q} \mathbf{z}^2}{2(\tilde{Q} + \tilde(q))}\right)\right)^{nN}$$となります。計算していくと
@@ -284,7 +304,7 @@ $$
 $$
 S(Q) 
 = \frac{1}{N} \log \prod_a \int d\mathbf{w}_a \cdots 
-= \frac{n}{2} (\tilde{Q} + q \tilde{q}) - \frac{n}{2} \log(\tilde{Q} + \tilde{q}) + \frac{n}{2} \frac{\tilde{q}}{\tilde{Q} + \tilde{q}} \tag{4.26}
+= \frac{n}{2} (\tilde{Q} + q \tilde{q}) - \frac{n}{2} \log(\tilde{Q} + \tilde{q}) + \frac{n}{2} \frac{\tilde{q}}{\tilde{Q} + \tilde{q}} \tag{4.27}
 $$
 
 ## エントロピーに鞍点法を適用
@@ -294,7 +314,7 @@ $$
 = \frac{1}{2} - \frac{1}{2} \frac{1}{\tilde{Q} + \tilde{q}} - \frac{1}{2} \frac{\tilde{q}}{\tilde{Q} + \tilde{q}} 
 = 0 \ \Longrightarrow \ 
 \therefore \ 1 
-= \frac{1}{\tilde{Q} + \tilde{q}} + \frac{\tilde{q}}{(\tilde{Q} + \tilde{q})^2} \tag{4.27}
+= \frac{1}{\tilde{Q} + \tilde{q}} + \frac{\tilde{q}}{(\tilde{Q} + \tilde{q})^2} \tag{4.28}
 $$
 
 $$
@@ -302,7 +322,7 @@ $$
 = \frac{1}{2} q - \frac{\tilde{q}}{2 (\tilde{Q} + \tilde{q})^2} 
 = 0 \ \Longrightarrow \ 
 \therefore \ q 
-= \frac{\tilde{q}}{(\tilde{Q} + \tilde{q})^2} \tag{4.28}
+= \frac{\tilde{q}}{(\tilde{Q} + \tilde{q})^2} \tag{4.29}
 $$
 
 以上より
@@ -311,7 +331,7 @@ $$
 1-q 
 = \frac{1}{\tilde{Q} + \tilde{q}}, \
 q 
-= (1-q^2) \tilde{q} \tag{4.29}
+= (1-q^2) \tilde{q} \tag{4.30}
 $$
 
 という恒等式を得ます。
@@ -322,14 +342,14 @@ $$
 
 $$
 -\beta e(Q) 
-= \alpha \int D_z \log(e^{-\beta} H + e^{\beta}(1-H))
+= \alpha n \int D_z \log(e^{-\beta} H + e^{\beta}(1-H))
 $$
 
 ここで$$H = H (\sqrt{\frac{q}{1-q}}z)$$です。logの中身を$$Y$$と定義すると、エントロピー項から$$\frac{1}{2} q \tilde{q}$$が出てくることを合わせて
 
 $$
 \frac{\partial e}{\partial q} 
-= \frac{1}{2} \tilde{q} + \alpha \int D_z \frac{1}{Y} \left[ e^{-\beta} - e^\beta \right] H' \left( \frac{1}{2} \frac{z}{\sqrt{q} \sqrt{1-q}} + \frac{1}{2} \frac{\sqrt{q}z}{(1-q)^{3/2}}\right) = 0 \tag{4.30}
+= \frac{1}{2} \tilde{q} + \alpha \int D_z \frac{1}{Y} \left[ e^{-\beta} - e^\beta \right] H' \left( \frac{1}{2} \frac{z}{\sqrt{q} \sqrt{1-q}} + \frac{1}{2} \frac{\sqrt{q}z}{(1-q)^{3/2}}\right) = 0 \tag{4.31}
 $$
 
 ここで
@@ -347,22 +367,22 @@ $$
 = 0 \\
 &\Longrightarrow \ 
 \tilde{q} 
-= - \frac{\alpha}{(1-q)^2} \int D_z \left[ \frac{1}{Y} (e^{-\beta} - e^\beta) H'' - \left( \frac{1}{Y} (e^{-\beta} - e^\beta) H' \right)^2\right] \tag{4.31}
+= - \frac{\alpha}{(1-q)^2} \int D_z \left[ \frac{1}{Y} (e^{-\beta} - e^\beta) H'' - \left( \frac{1}{Y} (e^{-\beta} - e^\beta) H' \right)^2\right] \tag{4.32}
 \end{align}
 $$
 
-(4.29), (4.31)式より
+(4.30), (4.32)式より
 
 $$
 q 
-= -\alpha \int D_z \left[ \frac{1}{Y} (e^{-\beta} - e^\beta) H'' - \left( \frac{1}{Y} (e^{-\beta} - e^\beta) H' \right)^2\right] \tag{4.32}
+= -\alpha \int D_z \left[ \frac{1}{Y} (e^{-\beta} - e^\beta) H'' - \left( \frac{1}{Y} (e^{-\beta} - e^\beta) H' \right)^2\right] \tag{4.33}
 $$
 
 これは$$q$$についての自己無撞着方程式になっています。この式において$$\beta \rightarrow \infty$$を考えましょう。すると$$Y = e^{-\beta} H + e^\beta (1-H)$$より
 
 $$
 q 
-\rightarrow \alpha \int D_z \left( \frac{H''}{1-H} - \left( \frac{H'}{1-H}\right)^2\right) \tag{4.33}
+\rightarrow \alpha \int D_z \left( \frac{H''}{1-H} - \left( \frac{H'}{1-H}\right)^2\right) \tag{4.34}
 $$
 
 となります。$$\beta \rightarrow \infty$$極限の$$q$$を横軸$$\alpha$$で図示すると以下のようになります。
@@ -415,14 +435,14 @@ $$x, y$$は何かしらの相関を持っており、そのような関係性が
 
 $$
 \mathbf{x}_\mu 
-= \sigma \left( \frac{1}{\sqrt{d}}F \cdot \mathbf{C}_\mu \right) \qquad (F \in \mathbb{R}^{d \times \rho}, \mathbf{C} \in \mathbb{R}^\rho) \tag{4.34}
+= \sigma \left( \frac{1}{\sqrt{d}}F \cdot \mathbf{C}_\mu \right) \qquad (F \in \mathbb{R}^{d \times \rho}, \mathbf{C} \in \mathbb{R}^\rho) \tag{4.35}
 $$
 
 そして出力は、入力と相関する形として
 
 $$
 y_\mu 
-= f\left( \frac{1}{\sqrt{d}} \mathbf{C}_\mu^T \mathbf{w}_0 \right) \tag{4.35}
+= f\left( \frac{1}{\sqrt{d}} \mathbf{C}_\mu^T \mathbf{w}_0 \right) \tag{4.36}
 $$
 
 本質的なものは深い複雑な構造にあるのではなくて、データの相関にあるということを覚えておきましょう。

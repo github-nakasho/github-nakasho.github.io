@@ -130,6 +130,7 @@
     * [統計力学の復習](/infostat/statistical_mechanics.md)
     * [ランダムスピン系](/infostat/random_spin_system.md)
     * [ランダム行列](/infostat/random_matrix.md)
+    * [機械学習](/infostat/ml.md)
     * [レポート課題](/infostat/report.md)
 * [プログラミングなど](/pro/index.md)
     * [GitBookメモ](/pro/gitbook.md)

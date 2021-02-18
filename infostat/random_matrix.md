@@ -716,3 +716,7 @@ $$
 
 となります。よって$$y_{\mu a}$$が再びガウス分布に従っていることがわかります。ここから平均は$$[y_{\mu a}] = 0$$, 分散は$$[y_{\mu a} y_{\mu b}] = [Q]_{ab} = q^{ab}$$となることがわかりました。
 
+# 参考文献及びリンク
+
+* [1] [大関真之 YouTube動画 "Statistical physics and information processing vol. 2B (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=57SLXGkVzAQ)
+* [2] [高校数学の美しい物語, 行列のトレースのいろいろな性質その証明](https://mathtrain.jp/trace)

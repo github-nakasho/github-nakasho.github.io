@@ -480,4 +480,4 @@ $$
 * [1] [大関真之 YouTube動画 "Statistical physics and information processing vol. 1 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=VcINN1ew7TU)
 * [2] [大関真之 YouTube動画 "Statistical physics and information processing vol. 2A (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=N-EcAGPXGLY)
 * [3] [大関真之 YouTube動画 "Statistical physics and information processing vol. 2B (情報統計物理) 【Tokyo Tech Lecture Live Streaming】"](https://www.youtube.com/watch?v=57SLXGkVzAQ)
-* [2] 高橋和孝・西森秀稔、相転移・臨界現象とくりこみ群
+* [4] 高橋和孝・西森秀稔、相転移・臨界現象とくりこみ群

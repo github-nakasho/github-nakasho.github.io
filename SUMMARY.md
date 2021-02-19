@@ -11,6 +11,7 @@
     * [2020年](/astroph/2020.md)
 * [宇宙電磁気学](/astroelec/index.md)
     * [観測の不確定性と可干渉時間](/astroelec/coherent_time.md)
+    * [ダランベール方程式の球面波解](/astroelec/dalembert.md)
     * [電磁場テンソル](/astroelec/emtensor.md)
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)

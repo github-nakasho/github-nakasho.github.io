@@ -312,7 +312,7 @@ $$
 
 $$
 Q 
-= \frac{1}{2} (\lambda \pm \sqrt{q^2 - 4})  
+= \frac{1}{2} (\lambda \pm \sqrt{\lambda^2 - 4})  
 $$
 
 $$

@@ -13,6 +13,7 @@
     * [観測の不確定性と可干渉時間](/astroelec/coherent_time.md)
     * [ダランベール方程式の球面波解](/astroelec/dalembert.md)
     * [電磁場のエネルギーと運動量](/astroelec/em_energy_momentum.md)
+    * [遅延グリーン関数](/astroelec/retarded_green.md)
     * [電磁場テンソル](/astroelec/emtensor.md)
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)

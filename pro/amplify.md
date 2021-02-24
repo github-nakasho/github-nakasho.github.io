@@ -158,3 +158,7 @@ x_sol = decode_solution(x, values)
 * どの制約が破れているのか見にくい(制約1つずつにラベルを割り当てることはできない？)
 
 
+# 参考資料
+
+* [1] [Amplify website](https://amplify.fixstars.com/)
+* [2] [Amplify document](https://amplify.fixstars.com/docs/index.html)

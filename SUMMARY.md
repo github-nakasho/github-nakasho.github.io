@@ -138,6 +138,7 @@
 * [プログラミングなど](/pro/index.md)
     * [GitBookメモ](/pro/gitbook.md)
     * [Pythonメモ](/pro/python.md)
+    * [Amplifyメモ](/pro/amplify.md)
 * [tips](/tips/index.md)
     * [物理定数](/tips/physical_const.md)
     * [物理量の大きさ概算](/tips/estimate.md)

@@ -23,10 +23,6 @@
         "adsense", 
         "youtube"], 
     "pluginsConfig": {
-        "mathjax": {
-            "forceSVG": false, 
-            "version": "2.7.6"    
-        }, 
         "favicon": "./images/favicon.ico", 
         "github": {"url": "https://github.com/github-nakasho"}, 
         "gtag": {"token": "G-C550SVR5KQ"}, 

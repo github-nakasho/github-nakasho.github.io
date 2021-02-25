@@ -23,7 +23,7 @@ E(t) = \left\{
 \begin{array}{ll}
 \cos \omega_0 t & (-\displaystyle{\frac{\Delta t}{2}} < t < \displaystyle{\frac{\Delta t}{2}})\\
 \\
-0 & {\rm(otherwise)}
+0 & \mathrm{(otherwise)}
 \end{array} \right.
 $$
 

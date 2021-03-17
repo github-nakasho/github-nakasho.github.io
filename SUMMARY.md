@@ -19,6 +19,7 @@
     * [リエナー・ブィーヒェルトポテンシャル](/astroelec/lienard_wiechart.md)
     * [電磁場導出](/astroelec/lienard_wiechart_em.md)
     * [速度場と輻射場の性質](/astroelec/vel_rad.md)
+    * [輻射場のフーリエスペクトル](/astroelec/rad_fourier.md)
     * [電磁場テンソル](/astroelec/emtensor.md)
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)

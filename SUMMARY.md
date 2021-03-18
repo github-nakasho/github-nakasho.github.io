@@ -21,6 +21,7 @@
     * [速度場と輻射場の性質](/astroelec/vel_rad.md)
     * [輻射場のフーリエスペクトル](/astroelec/rad_fourier.md)
     * [電磁場テンソル](/astroelec/emtensor.md)
+    * [一様磁場中での荷電粒子の運動](/astroelec/uniform_mag.md)
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)
     * [超光速運動](/astroelec/slmotion.md)

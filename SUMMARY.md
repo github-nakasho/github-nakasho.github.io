@@ -7,7 +7,7 @@
 ## Contents
 
 * [宇宙物理学Map](/astromap/index.md)
-* [astro-ph読み](/astroph/index.md)
+* [astrophチェック](/astroph/index.md)
     * [2020年](/astroph/2020.md)
     * [GN-z11-flash](/astroph/gn_z11_flash.md)
 * [宇宙電磁気学](/astroelec/index.md)
@@ -19,6 +19,7 @@
     * [リエナー・ブィーヒェルトポテンシャル](/astroelec/lienard_wiechart.md)
     * [電磁場導出](/astroelec/lienard_wiechart_em.md)
     * [速度場と輻射場の性質](/astroelec/vel_rad.md)
+    * [リエナーの式・ラーモアの式](/astroelec/lienard_larmor.md)
     * [輻射場のフーリエスペクトル](/astroelec/rad_fourier.md)
     * [電磁場テンソル](/astroelec/emtensor.md)
     * [一様磁場中での荷電粒子の運動](/astroelec/uniform_mag.md)
@@ -130,7 +131,9 @@
     * [ラゲール多項式](/math/laguerre.md)
     * [ベッセル関数](/math/bessel.md)
     * [球ベッセル関数と球ノイマン関数](/math/sph_bessel.md)
-* [量子コンピュータ](/qc/index.md)
+* [数理最適化](/mo/index.md)
+    * [最適性の1次の必要条件](/mo/first.md)
+* [量子回路](/qc/index.md)
     * [QuantumNativeDojo0章](/qc/qnd0.md)
     * [QuantumNativeDojo1章](/qc/qnd1.md)
     * [QuantumNativeDojo2章](/qc/qnd2.md)

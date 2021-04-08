@@ -4,6 +4,7 @@
     "plugins": [
         "theme-api", 
         "hide-published-with", 
+        "mathjax-commonhtml", 
         "mathjax", 
         "anchors", 
         "intopic-toc", 

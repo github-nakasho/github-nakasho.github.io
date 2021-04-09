@@ -142,7 +142,7 @@ $$
 \begin{aligned}
 &\frac{d W}{d \omega d \Omega d t^{\prime}}=\frac{c / n_{r} R^{2}}{T^{\prime}}\left(\left|\hat{E}_{x}\right|^{2}+\left|\hat{E}_{y}\right|^{2}+\left|\hat{E}_{z}\right|^{2}\right)=\frac{q^{2} n_{r}}{\pi^{2} c} \omega^{2} \beta^{2} \sin ^{2} \theta \underbrace{\left(\cos ^{2} \theta+\sin ^{2} \theta\right)}_{=1} \frac{T^{\prime}}{4} \operatorname{sinc}^{2}\left\{\omega\left(1-n_{r} \beta \cos \theta\right) \frac{T^{\prime}}{2}\right\} \\
 &\underbrace{=}_{T^{\prime}=L / v} \frac{q^{2}}{2 \pi^{2} c} \omega \beta \sin ^{2} \theta \frac{\omega L n_{r} \beta}{2 c v / c} \operatorname{sinc}^{2}\left\{\frac{\omega L n_{r} \beta}{2 c v / c}\left(\frac{1}{n_{r} \beta}-\cos \theta\right)\right\} \\
-&\underbrace{=}_{\operatorname{sinc}^{2} \text { は even }} \frac{q^{2}}{2 \pi^{2} c} \omega \beta \sin ^{2} \theta \frac{\omega L n_{r}}{2 c} \operatorname{sinc}^{2}\left\{\frac{\omega L n_{r}}{2 c}\left(\cos \theta-\frac{1}{n_{r} \beta}\right)\right\}
+&\underbrace{=}_{\operatorname{sinc}^{2} \text { is even }} \frac{q^{2}}{2 \pi^{2} c} \omega \beta \sin ^{2} \theta \frac{\omega L n_{r}}{2 c} \operatorname{sinc}^{2}\left\{\frac{\omega L n_{r}}{2 c}\left(\cos \theta-\frac{1}{n_{r} \beta}\right)\right\}
 \end{aligned}
 $$
 

@@ -135,6 +135,7 @@
     * [最適性の1次の必要条件](/mo/first.md)
     * [最適性の2次の十分条件](/mo/second.md)
     * [Time to solution](/mo/tts.md)
+    * [拡張ラグランジュ関数法](/mo/augmented_lagrangian.md)
 * [量子回路](/qc/index.md)
     * [QuantumNativeDojo0章](/qc/qnd0.md)
     * [QuantumNativeDojo1章](/qc/qnd1.md)

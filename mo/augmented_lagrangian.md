@@ -127,6 +127,8 @@ $$
 よって点$$\mathbf{x}^\ast$$は$$\mathbf{x}$$について$$L_\rho (\mathbf{x}, \boldsymbol{\lambda}^\ast)$$を最小化する、制約なし最適化問題の[最適性の2次の十分条件](/mo/second.md)を満たす局所最適解になっていることがわかります。これから、$$L_\rho (\mathbf{x}, \boldsymbol{\lambda})$$を最小化する最適化問題を解けば、$$H(\mathbf{x}, \boldsymbol{\lambda})$$の局所最適解$$\mathbf{x}^\ast$$の精度の高い近似解を得ることができます。  
 拡張ラグランジュ関数法では$$\mathbf{x}$$について$$L_\rho (\mathbf{x}, \boldsymbol{\lambda})$$を最小化した後、$$\boldsymbol{\lambda}$$を更新します。そのために、まず$$\mathbf{x}$$について$$L_\rho (\mathbf{x}, \boldsymbol{\lambda}^{(k)})$$を最小化します。この最適化問題の停留点を$$\mathbf{x}^{\ast (k+1)}$$とします。  
 
+注意: $$\mathbf{x}^{(0)}, \boldsymbol{\lambda}^{(0)}$$を出発点に$$\mathbf{x}^{(1)}$$を求める操作を行うので、$$\boldsymbol{\lambda}$$の肩と$$\mathbf{x}$$の肩の値が1つズレていることに注意しましょう。  
+
 [最適性の1次の必要条件](/mo/first.md)より
 
 $$

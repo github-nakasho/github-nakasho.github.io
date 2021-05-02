@@ -44,7 +44,7 @@
 
 ### Hobbies  
 
-* 宇宙物理学・物理・プログラミングの知識をこのwebsiteにまとめること
+* 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること
 * 海外旅行
 * 自転車
 * 寺社仏閣巡り  
@@ -53,5 +53,4 @@
 ### Daily routine
 
 * [astro-ph](https://arxiv.org/list/astro-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/astroph/issues)
-* [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック
-* [Tae-bo Advanced workout](https://www.youtube.com/watch?v=s1t4xIlsmH0)で運動
+* [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/quantph/issues)

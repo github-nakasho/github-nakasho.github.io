@@ -106,6 +106,76 @@ $$
 
 とも計算できます。
 
+## ガウスの公式
+
+$$0<x<1$$においてガンマ関数$$\Gamma (x)$$に対して成り立つ公式を導出しましょう。この照明では、$$n>2$$とします。$$a=n+x > 3$$となる実数において
+
+$$
+f(a) 
+= \frac{\ln \Gamma (a) - \ln \Gamma (n)}{a-n}
+$$
+
+は単調増加関数です(実際に証明しても良いですが、適当なスクリプトなどで図示して見ても良いでしょう)。すると以下の不等式が成り立ちます。
+
+$$
+\frac{\ln \Gamma (n-1) - \ln \Gamma (n)}{(n-1) - n} 
+\leq \frac{\ln \Gamma (n+x) - \ln \Gamma (n)}{(n+x) - n}
+\leq \frac{\ln \Gamma (n+1) - \ln \Gamma (n)}{(n+1) - n}
+$$
+
+この不等式と$$\Gamma (n) = (n-1)!$$より
+
+$$
+\ln (n-1) 
+\leq \frac{\ln \frac{\Gamma (n+x)}{(n-1)!}}{x}
+\leq \ln n \ \Longrightarrow \ 
+\ln (n-1)^x 
+\leq \ln \frac{\Gamma (n+x)}{(n-1)!}
+\leq \ln n^x
+$$
+
+となります。両辺のlogを外すことで
+
+$$
+(n-1)^x (n-1)! 
+\leq \Gamma (n+x)
+\leq n^x (n-1)!
+$$
+
+を得ます。ここでガンマ関数の公式から$$\Gamma(n+x) = (n+x-1) (n+x-2) \cdots (x+1) x \Gamma (x)$$より
+
+$$
+\frac{(n-1)^x (n-1)!}{(n+x-1) (n+x-2) \cdots (x+1) x} 
+\leq \Gamma (x)
+\leq \frac{n^x (n-1)!}{(n+x-1) (n+x-2) \cdots (x+1) x}
+$$
+
+となります。左右の辺において、$$n \rightarrow n+1$$のように置換すれば
+
+$$
+\frac{n^x n!}{(n+x) (n+x-1) \cdots (x+1) x} 
+\leq \Gamma (x)
+\leq \frac{(n+1)^x n!}{(n+x) (n+x-1) \cdots (x+1) x}
+$$
+
+です。ここで最右辺において$$(n+1)^x = \left(\frac{n+1}{n} \right)^x n^x$$という変形をします。最左辺と最右辺において$$n \rightarrow \infty$$の極限をとると
+
+$$
+\lim_{n \rightarrow \infty} \frac{n^x n!}{(n+x) (n+x-1) \cdots (x+1) x} 
+\leq \Gamma (x)
+\leq \lim_{n \rightarrow \infty} \underbrace{\left( 1+\frac{1}{n}\right)^x}_{\rightarrow 1} \frac{n^x n!}{(n+x) (n+x-1) \cdots (x+1) x}
+$$
+
+はさみうちの原理から
+
+$$
+\Gamma (x) 
+= \lim_{n \rightarrow \infty} \frac{n^x n!}{(n+x) (n+x-1) \cdots (x+1) x} 
+= \lim_{n \rightarrow \infty} \frac{n^x n!}{\prod_{k=0}^n (x+k)} 
+$$
+
+となります。これをガンマ関数におけるガウスの公式と呼びます。
+
 ## 補遺: ガウス積分
 
 $$

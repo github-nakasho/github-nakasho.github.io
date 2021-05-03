@@ -29,6 +29,8 @@
     * [チェレンコフ放射](/astroelec/cherenkov.md)
     * [遷移放射](/astroelec/transition.md)
     * [シンクロトロン自己吸収](/astroelec/ssa.md)
+    * [シンクロトロン自己逆コンプトン](/astroelec/ssc.md)
+    * [逆コンプトン放射によるエネルギー急暴落](/astroelec/sc_catastroph.md)
     * [逆コンプトン散乱の放射強度スペクトル](/astroelec/ics_spectrum.md)
     * [電波干渉系の基礎](/astroelec/interferometer.md)
 * [流体力学・磁気流体力学](/mhd/index.md)

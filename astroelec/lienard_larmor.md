@@ -179,7 +179,7 @@ I_{n+1}
 = \frac{1}{n\beta}\left[ (1-\beta \mu)^{-n}\right]_{-1}^1 
 = \frac{1}{n \beta}\left\{ (1-\beta)^{-n} - (1+ \beta)^{-n}\right\} \\
 &= \frac{1}{n\beta} \left( \frac{(1+\beta)^n}{(1-\beta)^n (1+\beta)^n} - \frac{(1-\beta)^n}{(1-\beta)^n (1+\beta)^n}\right) 
-= \frac{(1+\beta)^n-(1-\beta)^n}{n\beta(1-\beta^2)^n} \tag{11}
+= \frac{(1+\beta)^n-(1-\beta)^n}{n\beta(1-\beta^2)^n} \tag{12}
 \end{align}
 $$
 
@@ -197,7 +197,7 @@ $$
 $$
 J_{n+1} 
 \equiv \int_{-1}^1d\mu \frac{\mu}{(1-\beta\mu)^{n+1}} 
-=\frac{1}{n} \frac{d I_n}{d\beta} \tag{12}
+=\frac{1}{n} \frac{d I_n}{d\beta} \tag{13}
 $$
 
 さらにこれを$$\beta$$で微分したものを計算すると
@@ -213,7 +213,7 @@ $$
 
 $$
 K_{n+1} \equiv  \int_{-1}^1d\mu \frac{\mu^2}{(1-\beta\mu)^{n+1}} 
-=\frac{1}{n} \frac{d J_n}{d\beta} \tag{13}
+=\frac{1}{n} \frac{d J_n}{d\beta} \tag{14}
 $$
 
 これで計算を進めるにあたって必要な材料が揃いました。それでは$$\kappa g^2$$の全立体角積分を行いましょう。そこで、以降では全立体角積分を
@@ -221,7 +221,7 @@ $$
 $$
 \int_{4\pi} d\Omega 
 = \int_0^\pi d\theta \int_0^{2\pi} d\phi \sin \theta 
-\underbrace{=}_{\mu = \cos \theta} \int_0^{2\pi} d\phi \int_{-1}^1 d\mu \tag{14}
+\underbrace{=}_{\mu = \cos \theta} \int_0^{2\pi} d\phi \int_{-1}^1 d\mu \tag{15}
 $$
 
 のように書き換えた形で行います。$$\kappa = 1- \mathbf{n} \cdot \boldsymbol{\beta} = 1-\beta \cos \theta = 1-\beta \mu$$より
@@ -229,19 +229,19 @@ $$
 $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^3} 
 = \int_0^{2\pi} d\phi \int_{-1}^1 d\mu \frac{1}{(1-\beta\mu)^3} 
-= 2\pi I_3 \tag{15}
+= 2\pi I_3 \tag{16}
 $$
 
 $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^4} \sin \theta \cos \phi \sin i \cos i 
 = \sin i \cos i \underbrace{\int_0^{2\pi} d\phi \cos \phi}_{0}\int_{-1}^1 d\mu \frac{\sqrt{1-\mu^2}}{(1-\beta\mu)^4} 
-= 0 \tag{16}
+= 0 \tag{17}
 $$
 
 $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^4} \cos \theta \cos^2 i 
 = \cos^2 i \int_0^{2\pi} d\phi \int_{-1}^1 d\mu \frac{\mu}{(1-\beta\mu)^4} 
-=2\pi \cos^2 i J_4 \tag{17}
+=2\pi \cos^2 i J_4 \tag{18}
 $$
 
 $$
@@ -249,19 +249,19 @@ $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^5} \sin^2 \theta \cos^2 \phi \sin^2 i 
 &= \sin^2 i\int_0^{2\pi} d\phi \cos^2 \phi \int_{-1}^1 d\mu \frac{1-\mu^2}{(1-\beta\mu)^5} \\
 &=\sin^2 i \int_0^{2\pi} d\phi \frac{1+ \cos 2\phi}{2} (I_5-K_5) 
-= \pi \sin^2 i (I_5-K_5) \tag{18}
+= \pi \sin^2 i (I_5-K_5) \tag{19}
 \end{align}
 $$
 
 $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^5} \sin \theta \cos \theta \cos \phi \sin i \cos i= \sin i \cos i \underbrace{\int_0^{2\pi} d\phi \cos \phi}_{0} \int_{-1}^1 d\mu \frac{\mu \sqrt{1-\mu^2}}{(1-\beta\mu)^5} 
-= 0 \tag{19}
+= 0 \tag{20}
 $$
 
 $$
 \int_{4\pi} d\Omega \frac{1}{\kappa^5} \cos^2 \theta \cos^2 i 
 = \cos^2 i \int_0^{2\pi} d\phi \int_{-1}^1 d\mu \frac{\mu^2}{(1-\beta\mu)^5} 
-= 2\pi \cos^2 i K_5 \tag{20}
+= 2\pi \cos^2 i K_5 \tag{21}
 $$
 
 以上を用いて
@@ -275,7 +275,7 @@ P_e
 &= \frac{q^2}{4\pi c} 2\pi \left[ \dot{\beta}^2\left\{I_3 + 2\beta J_4 -2\beta \sin^2 i J_4 - \gamma^{-2} K_5 -\frac{1}{2\gamma^2} (I_5 -3K_5)\sin^2 i \right\}\right] \\
 &= \frac{q^2}{4\pi c} 2\pi \left[ \dot{\beta} \left\{I_3 + 2\beta J_4 - \gamma^{-2} K_5 -(2\beta J_4 + \frac{1}{2\gamma^2} (I_5 -3K_5)) \sin^2 i\right\}\right] \\
 &= \frac{q^2}{4\pi c} 2\pi \left[  \dot{\beta} \left\{I_3 + 2\beta \frac{1}{3}\frac{d I_3}{d\beta} - \gamma^{-2} \frac{1}{4} \frac{d J_4}{d\beta} -(2\beta \frac{1}{3}\frac{d I_3}{d\beta} + \frac{1}{2\gamma^2} (I_5 -3\frac{1}{4} \frac{d J_4}{d\beta})) \sin^2 i\right\}\right] \\
-&= \frac{q^2}{4\pi c} 2\pi \left[  \dot{\beta} \left\{I_3 +\frac{2}{3}\beta  \frac{d I_3}{d\beta} - \frac{1}{4 \gamma^2} \frac{1}{3}\frac{d^2 I_3}{d\beta^2} -(\frac{2}{3} \beta \frac{d I_3}{d\beta} + \frac{1}{2\gamma^2} (I_5 -\frac{3}{4} \frac{1}{3}\frac{d^2 I_3}{d\beta^2})) \sin^2 i\right\}\right] \tag{21}
+&= \frac{q^2}{4\pi c} 2\pi \left[  \dot{\beta} \left\{I_3 +\frac{2}{3}\beta  \frac{d I_3}{d\beta} - \frac{1}{4 \gamma^2} \frac{1}{3}\frac{d^2 I_3}{d\beta^2} -(\frac{2}{3} \beta \frac{d I_3}{d\beta} + \frac{1}{2\gamma^2} (I_5 -\frac{3}{4} \frac{1}{3}\frac{d^2 I_3}{d\beta^2})) \sin^2 i\right\}\right] \tag{22}
 \end{align}
 $$
 
@@ -285,7 +285,7 @@ $$
 I_3 = 
 \frac{(1+\beta)^2-(1-\beta)^2}{2\beta (1-\beta^2)^2} 
 = \frac{4\beta}{2\beta(1-\beta^2)^2} = \frac{2}{(1-\beta^2)^2}
-=2\gamma^4 \tag{22}
+=2\gamma^4 \tag{23}
 $$
 
 $$
@@ -294,14 +294,14 @@ I_5
 &= \frac{(1+\beta)^4-(1-\beta)^4}{4\beta (1-\beta^2)^2} 
 = \frac{(1+4\beta+ 6\beta^2+ 4\beta^3 + \beta^4)-(1-4\beta+ 6\beta^2 -4\beta^3 + \beta^4)}{4\beta (1-\beta^2)^4} \\
 &= \frac{8\beta + 8\beta^3}{4\beta(1-\beta^2)^4} 
-= 2(1+\beta^2 )\gamma^8 \tag{23}
+= 2(1+\beta^2 )\gamma^8 \tag{24}
 \end{align}
 $$
 
 $$
 \frac{dI_3}{d\beta} 
 = \frac{-2 \cdot 2(1-\beta^2) (-2\beta)}{(1-\beta^2)^4} 
-= \frac{8\beta}{(1-\beta^2)^3} = 8\beta \gamma^6 \tag{24}
+= \frac{8\beta}{(1-\beta^2)^3} = 8\beta \gamma^6 \tag{25}
 $$
 
 $$
@@ -311,7 +311,7 @@ $$
 = 8\frac{(1-\beta^2)^3 - \beta \cdot 3(1-\beta^2)^2 (-2\beta)}{(1-\beta^2)^6} 
 = 8\frac{1-\beta^2 + 6\beta^2}{(1-\beta^2)^4} \\
 &= 8 \frac{1+5\beta^2}{(1-\beta^2)^4} 
-= 8(1+5\beta^2)\gamma^8 \tag{25}
+= 8(1+5\beta^2)\gamma^8 \tag{26}
 \end{align}
 $$
 
@@ -326,7 +326,7 @@ P_e
 &= \frac{q^2}{4\pi c} 2\pi \left[ \dot{\beta}^2 \left( 2\gamma^4 + 2\beta^2 \gamma^6 -\frac{2}{3}\gamma^6 -\frac{4}{3} \beta^2 \gamma^6 \sin^2 i\right) \right] \\
 &= \frac{q^2}{4\pi c} 2 \pi \left[ \dot{\beta}^2 \gamma^6 \left( 2\gamma^{-2} + 2\beta^2 - \frac{2}{3} -\frac{4}{3} \beta^2 \sin^2 i\right)\right] \\
 &\underbrace{=}_{\gamma^{-2} = 1-\beta^2} \frac{q^2}{4\pi c} 2\pi \left[ \dot{\beta}^2 \gamma^6 \left( 2-\frac{2}{3} -\frac{4}{3}\beta^2 \sin^2 i\right)\right] \\
-&= \frac{2q^2}{3c^3} \left[ \dot{u}\gamma^6 (1-\beta^2 \sin^2 i)\right] \tag{26}
+&= \frac{2q^2}{3c^3} \left[ \dot{u}\gamma^6 (1-\beta^2 \sin^2 i)\right] \tag{27}
 \end{align}
 $$
 
@@ -334,7 +334,7 @@ $$
 
 $$
 P_e
-= \frac{2q^2}{3c^3}\left[ \gamma^6 (\dot{u}^2 - \left| \dot{\bf u} \times \boldsymbol{\beta} \right|^2)\right] \tag{27}
+= \frac{2q^2}{3c^3}\left[ \gamma^6 (\dot{u}^2 - \left| \dot{\bf u} \times \boldsymbol{\beta} \right|^2)\right] \tag{28}
 $$
 
 これをLiénardの式と呼びます。
@@ -345,7 +345,7 @@ $$
 
 $$
 P_e 
-= \frac{2q^2}{3c^3} \dot{u}^2 \tag{28}
+= \frac{2q^2}{3c^3} \dot{u}^2 \tag{29}
 $$
 
 これはLarmorの式と呼ばれるものです。

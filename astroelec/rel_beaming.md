@@ -9,7 +9,7 @@ $$
 
 のように書けました。ここでは荷電粒子が相対論的な運動をしているとき、すなわち$$\gamma = \frac{1}{\sqrt{1-\beta^2}} \gg 1$$のときを考えましょう。さらに以下では$${\bf n}\cdot \boldsymbol{\beta}=\beta \cos \theta$$とします。
 
-## kappa
+## $$\kappa$$
 
 $$\kappa$$を$$\theta$$の関数で表してみましょう。
 
@@ -24,7 +24,7 @@ $$
 $$
 \kappa(\theta) 
 = 1- \beta \overbrace{\cos \theta}^{\simeq 1-\frac{\theta^2}{2}} 
-\simeq 1- (1- \frac{\theta^2}{2} - \frac{1}{2\gamma^2} + \underbrace{\frac{\theta^2}{4\gamma^2}}_{微少量}) 
+\simeq 1- (1- \frac{\theta^2}{2} - \frac{1}{2\gamma^2} + \underbrace{\frac{\theta^2}{4\gamma^2}}_{\mathrm{negligible}}) 
 \simeq \frac{\theta^2}{2} + \frac{1}{2\gamma^2} 
 = \frac{1}{2\gamma^2} (\gamma^2 \theta^2 + 1) \tag{*2}
 $$

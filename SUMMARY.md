@@ -25,6 +25,8 @@
     * [一様磁場中での荷電粒子の運動](/astroelec/uniform_mag.md)
     * [一様磁場中での荷電粒子の相対論的運動](/astroelec/uniform_mag_rel.md)
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
+    * [相対論的ビーミングによる放射スペクトル](/astroelec/rel_beaming_sync.md)
+    * [シンクロトロン放射のスペクトル](/astroelec/synchrotron.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)
     * [超光速運動](/astroelec/slmotion.md)
     * [チェレンコフ放射](/astroelec/cherenkov.md)

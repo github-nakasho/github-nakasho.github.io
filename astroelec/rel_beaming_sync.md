@@ -6,7 +6,7 @@
 
 [相対論的な電子が一様磁場中で円運動する](/astroelec/uniform_mag_rel.md)ときの各周波数は$$\omega_\mathrm{se} = \omega_\mathrm{ce}/\gamma$$です。そして相対論的ビーミング効果により、形成される放射コーンの角度は$$\theta \simeq 1/ \gamma$$でした。よって下図のように考えると、$$t=t_1$$のときの速度ベクトル$$\mathbf{v}_1$$と、$$t=t_2$$のときの速度ベクトル$$\mathbf{v}_2$$のなす角は$$2/\gamma$$となります。
 
-![放射コーンが視線に入るときの図](/images/astroelec/cone.png)
+![放射コーンが視線に入るときの図](/images/astroelec/rel_beam_cone.png)
 
 よって放射コーンが観測者の視線方向に入っている時間間隔$$\Delta t = t_2 - t_1$$は
 

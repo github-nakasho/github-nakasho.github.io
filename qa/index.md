@@ -1,6 +1,8 @@
 # 量子アニーリング
 
-## 量子アニーリングの基礎
+## Quantum annealing for you
 
-* [イジング模型とフラストレーション・スピングラス](/qa/ising.md)
-* [組合せ最適化問題とイジング模型](/qa/opt.md)
+* [第1回講義](/qa/qa4u01.md)
+* [第2回講義](/qa/qa4u02.md)
+* [第3回講義](/qa/qa4u03.md)
+* [グループ演習](/qa/qa4u_group.md)

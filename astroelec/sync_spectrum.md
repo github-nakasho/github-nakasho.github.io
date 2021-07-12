@@ -495,7 +495,7 @@ $$
 
 ![ピッチ角α0の螺旋運動をする電子の様子は、xy平面内で円運動する電子を下から見るのと同じ](/images/astroelec/sync_spectrum_04.png)
 
-視線方向が任意の$$\theta$$の場合には、これまで得られた結果の中の磁場$$B$$を$$B_\perp=B\sin \theta$$で置き換えることで得ることができます。以上の議論から(8)式に(9)式をかけたものを積分します。そのときに$$B \rightarrow B_\perp$$で置き換え、全立体角$$4\pi$$で割ると
+視線方向が任意の$$\theta$$の場合には、これまで得られた結果の中の磁場$$B$$を$$B_\perp=B\sin \theta$$で置き換えることで得ることができます。以上の議論から(8)式に(9)式をかけたものを$$\gamma$$で積分します。そのときに$$B \rightarrow B_\perp$$で置き換え、全立体角$$4\pi$$で割ると
 
 $$
 P_e (\omega, \mathbf{n}) 
@@ -540,7 +540,7 @@ $$
 \begin{align}
 P_e (\omega, \mathbf{n})
 &= \frac{\sqrt{3} e^3 B_\perp}{8\pi^2 m_e c^2} \frac{N_0}{2} \gamma_0^{p-1} \left( \frac{2m_ec \omega}{3eB_\perp}\right)^{-\frac{p-1}{2}}\frac{2^{\frac{p-3}{2}+1}}{\frac{p-3}{2}+2} \Gamma\left( \frac{p-3}{4}+ \frac{7}{3} \right) \Gamma\left( \frac{p-3}{4}+\frac{2}{3}\right) \\
-&= \frac{\sqrt{3} e^3 B_\perp N_0 \gamma_0^{p-1}}{8\pi^2 m_e c^2(p+1)} \left( \frac{m_ec \omega}{3eB_\perp}\right)^{-\frac{p-1}{2}} \Gamma \left( \frac{p}{4}+ \frac{19}{12} \right) \Gamma \left( \frac{p}{4} - \frac{1}{12}\right)
+&= \frac{\sqrt{3} e^3 B_\perp N_0 \gamma_0^{p-1}}{8\pi^2 m_e c^2(p+1)} \left( \frac{m_ec \omega}{3eB_\perp}\right)^{-\frac{p-1}{2}} \Gamma \left( \frac{p}{4}+ \frac{19}{12} \right) \Gamma \left( \frac{p}{4} - \frac{1}{12}\right) \tag{10}
 \end{align}
 $$
 

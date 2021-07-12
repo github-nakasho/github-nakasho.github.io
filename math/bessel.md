@@ -491,6 +491,230 @@ $$
 
 のように展開することができます。これをフーリエ・ベッセル展開と呼びます。
 
+## ベッセル関数の2乗
+
+(*7)式より、この2乗を計算しましょう。
+
+$$
+J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{k, \ell=0}^\infty \frac{(-1)^{k+\ell}}{k! \ell ! (n+k)!(n+\ell)!} \left( \frac{z}{2}\right)^{2(k+\ell)}
+$$
+
+ここで$$k+\ell=m$$とおいて、和を書き換えます。
+
+$$
+J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \sum_{k=0}^m \frac{(-1)^{m}}{k! (m-k) ! (n+k)!(n+m-k)!} \left( \frac{z}{2}\right)^{2(k+\ell)}
+$$
+
+それでは階乗の変形を行いましょう。唐突ですが$$(1+x)^{n+m}$$の$$x^{m-k}$$の項の係数を考えると、$${}_{n+m}C_{m-k}$$です。よって
+
+$$
+\frac{d^{m-k}}{dx^{m-k}} {}_{n+m} C_{m-k} x^{m-k} 
+= (m-k)! \frac{(n+m)!}{(m-k)!(n+m-m+k)!} 
+= \frac{(n+m)!}{(n+k)!}
+$$
+
+より
+
+$$
+\frac{1}{(n+k)!} 
+= \frac{1}{(n+m)!} \frac{(n+m)!}{(n+k)!} 
+= \frac{1}{(n+m)!} \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m}\right]_{x=0}
+$$
+
+同様に$$(1+x)^{n+m}$$の$$x^k$$の項の係数は$${}_{n+m}C_k$$です。よって
+
+$$
+\frac{d^k}{dx^k} {}_{n+m} C_k x^k 
+= k! {}_{n+m} C_k 
+= \frac{(n+m)!}{(n+m-k)!}
+$$
+
+より
+
+$$
+\frac{1}{(n+m-k)!} 
+= \frac{1}{(n+m)!} \frac{(n+m)!}{(n+m-k)!} 
+= \frac{1}{(n+m)!} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m}\right]_{x=0}
+$$
+
+これらを用いて
+
+$$
+\begin{align}
+J_n^2(z) 
+&= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty (-1)^m \sum_{k=0}^m \frac{1}{k! (m-k) ! \{ (n+m)!\}^2} \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m} \right]_{x=0} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m} \right]_{x=0} \left( \frac{z}{2}\right)^{2m} \\
+&= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)!\}^2} \left( \frac{z}{2}\right)^{2m} \sum_{k=0}^m {}_{m}C_k \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m} \right]_{x=0} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m} \right]_{x=0} \\
+&= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2m} \left[ \frac{d^m}{dx^m} (1+x)^{2(n+m)} \right]_{x=0} 
+\end{align}
+$$
+
+と変形されます。$$(1+x)^{2(n+m)}$$の$$x^m$$の係数は$${}_{2(n+m)} C_m$$より
+
+$$
+\left[ \frac{d^m}{dx^m} (1+x)^{2(n+m)} \right]_{x=0} 
+= \frac{(2n+2m)!}{(2n+m)!}
+$$
+
+よって
+
+$$
+J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2m} \tag{*14}
+$$
+
+## 2乗との間に成り立つ公式
+
+$$
+I_n 
+= \int_0^{\pi/2} \cos^n x dx
+$$
+
+を求めましょう。ただし$$I_0 = \pi/2, I_1 = 1$$です。
+
+$$
+\begin{align}
+I_n 
+&= \int_0^{\pi/2} \cos x \cos^{n-1} x dx 
+= [\sin x \cos^{n-1} x]_0^{\pi/2} + (n-1) \int_0^{\pi/2} \sin^2 x \cos^{n-2} x dx \\
+&= (n-1) \int_0^{\pi/2} (1-\cos^2 x) \cos^{n-2} x dx 
+= (n-1) I_{n-2} - (n-1) I_n 
+\ \Longrightarrow \ I_n 
+= \frac{n-1}{n} I_{n-2}
+\end{align} 
+$$
+
+$$n$$が偶数のとき
+
+$$
+I_n 
+= \frac{n-1}{n} I_{n-2} 
+= \frac{n-1}{n} \frac{n-3}{n-2} \cdots \frac{1}{2} I_0 
+= \frac{\pi}{2} \frac{(n-1)!!}{n!!} 
+$$
+
+この積分計算において$$n \rightarrow 2(n+m)$$と置換すると
+
+$$
+\int_0^{\pi/2} \cos^{2(n+m)} x dx 
+= \frac{\pi}{2} \frac{(2n+2m-1)!!}{(2n+2m)!!}
+= \frac{\pi}{2} \frac{(2n+2m)!}{\{ (2n+2m)!! \}^2}
+= \frac{\pi}{2} \frac{1}{(2^{n+m})^2}\frac{(2n+2m)!}{\{ (n+m)! \}^2}
+$$
+
+よって
+
+$$
+J_n^2(z) = \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2}\right)^{2m} \frac{2}{\pi} 2^{2n+2m} \int_0^{\pi/2} \cos^{2(n+m)}x dx 
+$$
+
+となります。  
+唐突ですが、(*7)式から
+
+$$
+J_{2n}(z) 
+= \left( \frac{z}{2}\right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2} \right)^{2m}
+$$
+
+これにおいて$$z \rightarrow 2z \cos \theta$$と置換すると
+
+$$
+J_{2n}(2z \cos \theta) 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} z^{2n+2m} \cos^{2n+2m} \theta
+$$
+
+よって
+
+$$
+\int_0^{\pi/2} J_{2n} (2z \cos \theta) d \theta 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} z^{2n+2m} \int_0^{\pi/2} \cos^{2n+2m} \theta d\theta 
+= \frac{\pi}{2} J_n^2(z) \tag{*15}
+$$
+
+が成り立ちます。  
+
+(*14)式において$$z \rightarrow z \sin \theta$$と置換し、両辺に$$\sin \theta$$をかけたものを$$0 \leq \theta \leq \pi/2$$で積分すると
+
+$$
+\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d \theta 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2n+2m} \int_0^{\pi/2} \sin^{2n+2m+1} \theta  d\theta
+$$
+
+ここで
+
+$$
+I_n 
+= \int_0^{\pi/2} \sin^{n} \theta d\theta
+$$
+
+を求めましょう。$$I_0 = \pi/2, I_1 = 1$$です。
+
+$$
+\begin{align}
+I_n 
+&= \int_0^{\pi/2} \sin \theta \sin^{n-1} \theta d\theta 
+= [-\cos \theta \sin^{n-1}]_0^{\pi/2} + (n-1) \int_0^{\pi/2} \cos^2 \theta \sin^{n-2} \theta d\theta \\
+&= (n-1) \int_0^{\pi/2} (\sin^{n-2} \theta - \sin^n \theta) d\theta
+= (n-1) I_{n-2} - (n-1) I_n \ \Longrightarrow \ 
+I_n 
+= \frac{n-1}{n} I_{n-2}
+\end{align}
+$$
+
+$$n$$が奇数のとき
+
+$$
+I_n 
+= \frac{n-1}{n} \frac{n-3}{n-2} \cdots \frac{4}{5} \frac{2}{3} I_1 
+= \frac{(n-1)!!}{n!!}
+$$
+
+$$n \rightarrow 2(n+m)+1$$に置換すると
+
+$$
+\int_0^{\pi/2} \sin^{2(n+m)+1} \theta d\theta 
+= \frac{(2n+2m)!!}{(2n+2m+1)!!}
+$$
+
+よって
+
+$$
+\begin{align}
+\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d \theta 
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2n+2m}
+\frac{(2n+2m)!!}{(2n+2m+1)!!} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (2n+2m)!!\}^2} z^{2n+2m} \frac{(2n+2m)!!}{(2n+2m+1)!!} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{(2n+2m+1)!} z^{2n+2m} 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{2n+2m+1} 
+\end{align}
+$$
+
+と求まります。  
+唐突ですが(*7)式から
+
+$$
+J_{2n} (t) 
+= \left( \frac{t}{2} \right)^{2n} \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \left( \frac{t}{2} \right)^{2k}
+$$
+
+より
+
+$$
+\frac{1}{2z} \int_0^{2z} J_{2n} (t) dt 
+= \frac{1}{2z} \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \frac{1}{2^{2n+2k}} \frac{1}{2n+2k+1} [ t^{2n+2k+1}]_0^{2z} 
+= \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \frac{z^{2n+2k}}{2n+2k+1}
+$$
+
+以上から
+
+$$
+\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d\theta 
+= \frac{1}{2z} \int_0^{2z} J_{2n} (t) dt \tag{*16}
+$$
+
+という公式が導かれます。
+
 ## ベッセル関数の概形
 
 以下にいくつかの$$n$$に対するベッセル関数を図示するスクリプトを示します。
@@ -527,6 +751,8 @@ if __name__ == '__main__':
 
 # 参考文献
 
-* 田島, 近道, "改訂 演習工科の数学4 複素関数"
-* 中山, "裳華房フィジックスライブラリー 物理数学 II"
-* 福山, 小形, "基礎物理学シリーズ3 物理数学 I"
+[1] 田島, 近道, "改訂 演習工科の数学4 複素関数"
+[2] 中山, "裳華房フィジックスライブラリー 物理数学 II"
+[3] 福山, 小形, "基礎物理学シリーズ3 物理数学 I"
+[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
+[5] [高校数学の美しい物語, sinのn乗, cosのn乗の積分公式](https://manabitimes.jp/math/663)

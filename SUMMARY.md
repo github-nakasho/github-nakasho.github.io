@@ -129,6 +129,7 @@
 * [数学](/math/index.md)
     * [sinc関数の積分](/math/sinc.md)
     * [sinc関数の2乗の積分](/math/sinc2.md)
+    * [sin^n, cos^nの積分](/math/sin_n_cos_n.md)
     * [フレネル積分](/math/fresnel_integral.md)
     * [3次元極座標でのラプラシアン](/math/laplacian.md)
     * [ガンマ関数](/math/gamma.md)

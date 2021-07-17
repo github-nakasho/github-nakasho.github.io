@@ -566,35 +566,7 @@ $$
 
 ## 2乗との間に成り立つ公式
 
-$$
-I_n 
-= \int_0^{\pi/2} \cos^n x dx
-$$
-
-を求めましょう。ただし$$I_0 = \pi/2, I_1 = 1$$です。
-
-$$
-\begin{align}
-I_n 
-&= \int_0^{\pi/2} \cos x \cos^{n-1} x dx 
-= [\sin x \cos^{n-1} x]_0^{\pi/2} + (n-1) \int_0^{\pi/2} \sin^2 x \cos^{n-2} x dx \\
-&= (n-1) \int_0^{\pi/2} (1-\cos^2 x) \cos^{n-2} x dx 
-= (n-1) I_{n-2} - (n-1) I_n 
-\ \Longrightarrow \ I_n 
-= \frac{n-1}{n} I_{n-2}
-\end{align} 
-$$
-
-$$n$$が偶数のとき
-
-$$
-I_n 
-= \frac{n-1}{n} I_{n-2} 
-= \frac{n-1}{n} \frac{n-3}{n-2} \cdots \frac{1}{2} I_0 
-= \frac{\pi}{2} \frac{(n-1)!!}{n!!} 
-$$
-
-この積分計算において$$n \rightarrow 2(n+m)$$と置換すると
+[sin, cosのn乗(nが偶数の場合)](/math/sin_n_cos_n.md)の公式において、$$n \rightarrow 2(n+m)$$と置換すると
 
 $$
 \int_0^{\pi/2} \cos^{2(n+m)} x dx 
@@ -603,10 +575,11 @@ $$
 = \frac{\pi}{2} \frac{1}{(2^{n+m})^2}\frac{(2n+2m)!}{\{ (n+m)! \}^2}
 $$
 
-よって
+よって(*14)式から
 
 $$
-J_n^2(z) = \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2}\right)^{2m} \frac{2}{\pi} 2^{2n+2m} \int_0^{\pi/2} \cos^{2(n+m)}x dx 
+J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2}\right)^{2m} \frac{2}{\pi} 2^{2n+2m} \int_0^{\pi/2} \cos^{2(n+m)}x dx 
 $$
 
 となります。  
@@ -641,36 +614,7 @@ $$
 = \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2n+2m} \int_0^{\pi/2} \sin^{2n+2m+1} \theta  d\theta
 $$
 
-ここで
-
-$$
-I_n 
-= \int_0^{\pi/2} \sin^{n} \theta d\theta
-$$
-
-を求めましょう。$$I_0 = \pi/2, I_1 = 1$$です。
-
-$$
-\begin{align}
-I_n 
-&= \int_0^{\pi/2} \sin \theta \sin^{n-1} \theta d\theta 
-= [-\cos \theta \sin^{n-1}]_0^{\pi/2} + (n-1) \int_0^{\pi/2} \cos^2 \theta \sin^{n-2} \theta d\theta \\
-&= (n-1) \int_0^{\pi/2} (\sin^{n-2} \theta - \sin^n \theta) d\theta
-= (n-1) I_{n-2} - (n-1) I_n \ \Longrightarrow \ 
-I_n 
-= \frac{n-1}{n} I_{n-2}
-\end{align}
-$$
-
-$$n$$が奇数のとき
-
-$$
-I_n 
-= \frac{n-1}{n} \frac{n-3}{n-2} \cdots \frac{4}{5} \frac{2}{3} I_1 
-= \frac{(n-1)!!}{n!!}
-$$
-
-$$n \rightarrow 2(n+m)+1$$に置換すると
+ここで[sin, cosのn乗(nが奇数の場合)](/math/sin_n_cos_n.md)の公式において、$$n \rightarrow 2(n+m)+1$$に置換すると
 
 $$
 \int_0^{\pi/2} \sin^{2(n+m)+1} \theta d\theta 
@@ -713,7 +657,40 @@ $$
 = \frac{1}{2z} \int_0^{2z} J_{2n} (t) dt \tag{*16}
 $$
 
-という公式が導かれます。
+という公式が導かれます。  
+同様に
+
+$$
+\begin{align}
+\int_0^{\pi/2} \frac{J_n^2(z \sin \theta)}{\sin \theta} d\theta 
+&= \int_0^{\pi/2} \frac{1}{\sin \theta} \left( \frac{z \sin \theta}{2}\right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z \sin \theta}{2}\right)^{2m} d\theta \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2n+2m} \int_0^{\pi/2} \sin^{2n+2m-1} \theta d\theta \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2n+2m} \frac{(2n+2m-2)!!}{(2n+2m-1)!!} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (2n+2m)!!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} z^{2n+2m} \frac{(2n+2m-2)!!}{(2n+2m-1)!!} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+2m) (2n+2m)!! } \frac{(2n+2m)!}{(2n+m)!} \frac{z^{2n+2m}}{(2n+2m-1)!!} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{2n+2m}
+\end{align}
+$$
+
+と
+
+$$
+\begin{align}
+\int_0^{2z} \frac{J_{2n}(t)}{t} dt 
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \int_0^{2z} \frac{t^{2n+2m-1}}{2^{2n+2m}} dt 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{1}{2^{2n+2m} (2n+2m)} [t^{2n+2m}]_0^{2z} \\
+&= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{(2n+2m)} 
+\end{align}
+$$
+
+より
+
+$$
+\int_0^{\pi/2} \frac{J_n^2(z \sin \theta)}{\sin \theta} d\theta 
+= \int_0^{2z} \frac{J_{2n}(t)}{t} dt \tag{*17}
+$$
+
+も成り立ちます。
 
 ## ベッセル関数の概形
 
@@ -751,8 +728,7 @@ if __name__ == '__main__':
 
 # 参考文献
 
-[1] 田島, 近道, "改訂 演習工科の数学4 複素関数"
-[2] 中山, "裳華房フィジックスライブラリー 物理数学 II"
-[3] 福山, 小形, "基礎物理学シリーズ3 物理数学 I"
+[1] 田島, 近道, "改訂 演習工科の数学4 複素関数"  
+[2] 中山, "裳華房フィジックスライブラリー 物理数学 II"  
+[3] 福山, 小形, "基礎物理学シリーズ3 物理数学 I"  
 [4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
-[5] [高校数学の美しい物語, sinのn乗, cosのn乗の積分公式](https://manabitimes.jp/math/663)

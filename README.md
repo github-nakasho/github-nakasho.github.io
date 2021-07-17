@@ -54,3 +54,4 @@
 
 * [astro-ph](https://arxiv.org/list/astro-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/astroph/issues)
 * [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/quantph/issues)
+* [Just Dance](https://justdancenow.com/)でエキササイズ

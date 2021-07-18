@@ -27,6 +27,8 @@
     * [相対論的ビーミング](/astroelec/rel_beaming.md)
     * [相対論的ビーミングによる放射スペクトル](/astroelec/rel_beaming_sync.md)
     * [シンクロトロン放射のスペクトル](/astroelec/sync_spectrum.md)
+    * [偏光](/astroelec/polarization.md)
+    * [ストークスパラメータ](/astroelec/stokes.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)
     * [超光速運動](/astroelec/slmotion.md)
     * [チェレンコフ放射](/astroelec/cherenkov.md)

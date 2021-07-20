@@ -29,6 +29,8 @@
     * [シンクロトロン放射のスペクトル](/astroelec/sync_spectrum.md)
     * [偏光](/astroelec/polarization.md)
     * [ストークスパラメータ](/astroelec/stokes.md)
+    * [シンクロトロン放射の偏光度](/astroelec/sync_pol.md)
+    * [ラザフォード散乱](/astroelec/rutherford.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)
     * [超光速運動](/astroelec/slmotion.md)
     * [チェレンコフ放射](/astroelec/cherenkov.md)

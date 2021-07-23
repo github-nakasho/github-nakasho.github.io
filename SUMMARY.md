@@ -50,7 +50,7 @@
 * [星間空間の物理学](/ism/index.md)
     * [放射冷却率](/ism/cooling.md)
     * [ラザフォード散乱](/ism/rutherford.md)
-    * [完全電離プラズマ中でのラザフォード散乱](/ism/fully_ionized_rutherford.md)
+    * [スピッツァー熱伝導率](/ism/spitzer_thermal.md)
 * [一般相対性理論](/gr/index.md)
     * [等価原理](/gr/equivalenceprinciple.md)
     * [一般相対性原理](/gr/general.md)

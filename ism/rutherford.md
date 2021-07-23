@@ -1,6 +1,8 @@
-# ラザフォード散乱
+# Rutherford散乱
 
 陽子による電子の散乱の問題を考えましょう。ただし、陽子(938MeV)は電子(511keV)よりも1840倍も質量が大きいので、以下では陽子は重心に静止していると考えます。
+
+![ラザフォード散乱の座標設定](/images/ism/rutherford_01.png)
 
 ## 角運動量保存
 
@@ -186,7 +188,11 @@ $$
 I = n V_0
 $$
 
-です。次の図のように、半径$$b$$, 幅$$db$$の細いリングを通過した電子が、角度$$\theta$$から$$\theta + d\theta$$の方向に散乱されたと考えます。(4)式より
+です。次の図のように、半径$$b$$, 幅$$db$$の細いリングを通過した電子が、角度$$\theta$$から$$\theta + d\theta$$の方向に散乱されたと考えます。
+
+![微分散乱断面積の考え方。幅dbの間に撃ち込まれた電子が[θ, θ+dθ]の間に飛び去ると考える](/images/ism/rutherford_02.png)
+
+(4)式より
 
 $$
 db 
@@ -197,11 +203,13 @@ $$
 単位時間に$$\theta, \phi$$方向に散乱された電子の数を$$N$$とすると、その定義より
 
 $$
+\begin{align}
 2 \pi N \sin \theta d \theta 
-= I \cdot 2 \pi b | db | 
+&= I \cdot 2 \pi b | db | 
 = n V_{0} \pi {\left(\frac{e^{2}}{m_{e} {V_{0}}^{2}}\right)}^{2} \frac{\cot \frac{\theta}{2}}{\sin^{2} \frac{\theta}{2}} d \theta 
-= n V_0 \pi \left( \frac{e^2}{m_e {V_0}^2}\right)^2 \frac{2 \sin \frac{\theta}{2} \cos \frac{\theta}{2}}{2 \sin^4 \frac{\theta}{2}} d\theta 
-= n V_0 \pi \left( \frac{e^2}{m_e {V_0}^2}\right)^2 \frac{\sin \theta}{2 \sin^4 \frac{\theta}{2}} d\theta
+= n V_0 \pi \left( \frac{e^2}{m_e {V_0}^2}\right)^2 \frac{2 \sin \frac{\theta}{2} \cos \frac{\theta}{2}}{2 \sin^4 \frac{\theta}{2}} d\theta \\
+&= n V_0 \pi \left( \frac{e^2}{m_e {V_0}^2}\right)^2 \frac{\sin \theta}{2 \sin^4 \frac{\theta}{2}} d\theta
+\end{align}
 $$
 
 となります。$$x$$軸に対して軸対称な系なので、$$\phi$$方向はすでに積分して$$2\pi$$としています。また$$|db|$$は$$b$$が増加すると散乱角度$$\theta$$が減少することから、辻褄を合わせるために絶対値としています。以上より
@@ -245,3 +253,4 @@ $$
 
 となります。$$(\cdots)^2$$の中身は、最も散乱頻度の高い$$\theta=\pi/2$$となるときの衝突パラメータに等しくなっています。(9)式から、電子にとって陽子はこれを半径とした円盤のまとであることがわかります。  
 まとめると、全散乱断面積とは衝突時のまとの面積の大きさを表すものです。微分散乱断面積$$\frac{d\sigma}{d\Omega}$$は、入射fluxが$$I=1$$のとき、角度$$\theta, \phi$$の方向を中心とした微小立体角$$d\Omega$$に散乱されて出ていく電子の数を与えます。ランダムに粒子を入射させたときに、ある方向に散乱されて出てくる確率に比例した量と考えることもできます。
+

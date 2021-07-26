@@ -201,3 +201,7 @@ $$
 
 となります(正確には$$1.84 \times 10^{-6}$$程度です)。  
 これはSpitzer熱伝導率と呼ばれ、星間物質中で起こる熱伝導を考えるときによく用いられる値です。
+
+## 参考文献
+
+[1] [Lyman Spitzer Jr., "Physics of Fully Ionized Gases"](https://www.amazon.co.jp/-/en/Lyman-Spitzer-Jr/dp/0486449823/ref=sr_1_1?dchild=1&keywords=fully+ionized+spitzer&qid=1627335728&s=english-books&sr=1-1)

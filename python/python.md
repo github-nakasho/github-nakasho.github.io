@@ -9,13 +9,13 @@
 ## pip3 install したものがcommand not findとなる
 
 ```bash
-$ pip3 install jupyter
+$ pip install jupyter
 ```
 
 としてインストールしようとするとErrorとなります。解決策としては
 
 ```bash
-$ pip3 install --user jupyter
+$ pip install --user jupyter
 ```
 
 のようにしてユーザーディレクトリにインストール先を変更します。すると`~/Library/Python/X.Y/bin`にインストールされます(X.Yはお使いのPythonのバージョンです)。それをどこからでも呼び出せるように、`.bashrc`に以下のようにしてパスを記述します。
@@ -148,3 +148,22 @@ myarray = np.array([[[1, 1, 1], [1, 1, 1], [1, 1, 1]],
 ```python
 {0: {0: {0: 0, 1: 0, 2: 0}, 1: {0: 1, 1: 1, 2: 1}, 2: {0: 1, 1: 1, 2: 1}}, 1: {0: {0: 0, 1: 0, 2: 0}, 1: {0: 1, 1: 1, 2: 1}, 2: {0: 0, 1: 0, 2: 0}}, 2: {0: {0: 1, 1: 1, 2: 1}, 1: {0: 1, 1: 1, 2: 1}, 2: {0: 1, 1: 1, 2: 1}}}
 ```
+
+## Jupyter Notebookでのimport error
+
+`pip`を用いてインストールしたが、いざJupyter Notebook上でこれを使おうとするとエラーとなる時の対処法です。
+
+```bash
+$ pip show
+```
+
+で出てくる`Location`部分にインストールされたライブラリがあるので、このパスを追記します。
+
+```python
+import sys
+sys.path.append('(Locationに表示されていたパス)')
+```
+
+をNotebook上で実行することで、これが解消されます。
+
+> ターミナル上で`.bash_profile`に追記することでパスを通す方法もあります。

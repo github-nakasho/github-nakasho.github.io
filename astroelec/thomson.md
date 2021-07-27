@@ -14,7 +14,7 @@ $$
 電子の運動方程式は、電場の式より
 
 $$
-m_e \ddot{r} 
+m_e \ddot{\mathbf{r}} 
 = - e (E_0 \cos \omega_0 t ) \boldsymbol{\epsilon} \tag{1}
 $$
 

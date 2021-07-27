@@ -31,6 +31,7 @@
     * [ストークスパラメータ](/astroelec/stokes.md)
     * [シンクロトロン放射の偏光度](/astroelec/sync_pol.md)
     * [トムソン散乱](/astroelec/thomson.md)
+    * [コンプトン散乱](/astroelec/compton.md)
     * [RMによる銀河団磁場の推定](/astroelec/gcm.md)
     * [超光速運動](/astroelec/slmotion.md)
     * [チェレンコフ放射](/astroelec/cherenkov.md)

@@ -22,10 +22,10 @@ $$
 
 $$
 \mathbf{E} 
-= - \frac{e}{c} \left[ \frac{\mathbf{n} \times (\mathbf{n} \times \dot{\boldsymbol{\beta}})}{\kappa^3 R}\right] \tag{2}
+= - \frac{e}{c} \frac{\mathbf{n} \times (\mathbf{n} \times \dot{\boldsymbol{\beta}})}{\kappa^3 R} \tag{2}
 $$
 
-分子部分を計算すると
+ここで電子の運動が非相対論的であることから、遅延時間量を普通の時刻のものに置き換えました。分子部分を計算すると
 
 $$
 \mathbf{n} \times (\mathbf{n}\times \dot{\boldsymbol{\beta}}) 

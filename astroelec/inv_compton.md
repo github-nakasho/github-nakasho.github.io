@@ -175,7 +175,7 @@ $$
 = \gamma^2 (1+ \beta \cos \theta_1') (1-\beta \cos \theta) \epsilon \tag{7}
 $$
 
-以降では、特に$$\theta=\pi, \theta'=0$$(相対論的な電子と光子が正面衝突した)のときを考えましょう。すると
+以降では、特に$$\theta=\pi, \theta'_1=0$$(相対論的な電子と光子が正面衝突した)のときを考えましょう。すると
 
 $$
 \epsilon_1 

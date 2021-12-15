@@ -1,3 +1,0 @@
-# Under Construction...
-
-Coming Soon !

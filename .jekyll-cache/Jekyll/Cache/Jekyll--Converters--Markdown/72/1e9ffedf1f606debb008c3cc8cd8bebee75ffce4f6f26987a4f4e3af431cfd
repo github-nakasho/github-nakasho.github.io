@@ -1,0 +1,128 @@
+I"{
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#エネルギー運動量保存則" id="markdown-toc-エネルギー運動量保存則">エネルギー運動量保存則</a>    <ol>
+      <li><a href="#計量テンソルに関する公式" id="markdown-toc-計量テンソルに関する公式">計量テンソルに関する公式</a></li>
+      <li><a href="#クリストッフェル記号の計算" id="markdown-toc-クリストッフェル記号の計算">クリストッフェル記号の計算</a></li>
+      <li><a href="#2階の対称テンソルの共偏微分" id="markdown-toc-2階の対称テンソルの共偏微分">2階の対称テンソルの共偏微分</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="エネルギー運動量保存則">エネルギー運動量保存則</h1>
+
+<p>エネルギー運動量保存則</p>
+
+\[T^\mu_{\nu ; \mu} = 0\]
+
+<p>が具体的にどのような形で書かれるかを導出してみましょう。</p>
+
+<h2 id="計量テンソルに関する公式">計量テンソルに関する公式</h2>
+
+\[g \equiv {\rm det} (g_{\alpha \beta})\]
+
+<p>とします。\(g_{\alpha \beta}\)の余因子行列\(\tilde{g}^{\alpha \beta}\)に対して以下の公式がが成り立ちます。</p>
+
+\[\tilde{g}^{\mu \nu} g_{\nu \alpha} = g \delta^\mu_\alpha \ \Longrightarrow \ 
+\frac{\partial g}{\partial g_{\nu \alpha}} \delta^\mu_\alpha = \tilde{g}^{\mu \nu}\]
+
+<p>両辺に\(g^{\alpha \beta}\)をかけると</p>
+
+\[(左辺) 
+= \tilde{g}^{\mu \nu} g_{\nu \alpha} g^{\alpha \beta} 
+= \tilde{g}^{\mu \nu} \delta^\beta_\nu 
+= \tilde{g}^{\mu \beta}\]
+
+\[(右辺) 
+= g \delta^\mu_\alpha g^{\alpha \beta} 
+= g g^{\mu \beta}\]
+
+\[\therefore \tilde{g}^{\mu \beta} = g g^{\mu \beta}\]
+
+<p>さらに式変形を行うことで</p>
+
+\[\frac{\partial g}{\partial x^\mu} = \frac{\partial g}{\partial g_{\alpha \beta}} \frac{\partial g_{\alpha \beta}}{\partial x^\mu} \ \Longrightarrow \ 
+\frac{\partial g}{\partial x^\mu} \delta^\mu_\alpha 
+= \frac{\partial g}{\partial g_{\nu \alpha}} \frac{\partial g_{\nu \alpha}}{\partial x^\mu} \delta^\mu_\alpha \ \Longrightarrow \
+\frac{\partial g}{\partial x^\alpha} 
+= \tilde{g}^{\mu \nu} \frac{\partial g_{\nu \mu}}{\partial x^\alpha} 
+= g g^{\mu \nu} \frac{\partial g_{\nu \mu}}{\partial x^\alpha} \ \Longrightarrow \ 
+\frac{1}{g} \frac{\partial g}{\partial x^\alpha} 
+= g^{\mu \nu} \frac{\partial g_{\mu \nu}}{\partial x^\alpha}\]
+
+<p>となります。\(g&lt;0\)より\(g= (\sqrt{-g})^2 \ \Longrightarrow \ dg = 2\sqrt{-g} d\sqrt{-g}\)から</p>
+
+\[\frac{2}{\sqrt{-g}} \frac{\partial \sqrt{-g}}{\partial x^\alpha} 
+= g^{\mu \nu} \frac{\partial g_{\mu \nu}}{\partial x^\alpha}\]
+
+<p>が求まります。</p>
+
+<h2 id="クリストッフェル記号の計算">クリストッフェル記号の計算</h2>
+
+\[\Gamma^\alpha_{\beta \gamma} 
+= \frac{1}{2} g^{\alpha \nu} (g_{\nu \beta, \gamma} + g_{\gamma \nu, \beta} - g_{\beta \gamma, \nu})\]
+
+<p>から</p>
+
+\[2 \Gamma^\mu_{\varphi \mu} 
+= g^{\mu \nu} (g_{\nu \varphi, \mu} + g_{\mu \nu, \varphi} - \underbrace{g_{\varphi \mu, \nu}}_{=g_{\mu \varphi, \nu}}) 
+= g^{\mu \nu} \frac{\partial g_{\mu \nu}}{\partial x^\varphi}\]
+
+<p>先ほど導いた式と合わせて</p>
+
+\[\Gamma^\mu_{\alpha \mu} 
+= \frac{1}{\sqrt{-g}} \frac{\partial \sqrt{-g}}{\partial x^\alpha}\]
+
+<p>が成立します。</p>
+
+<h2 id="2階の対称テンソルの共偏微分">2階の対称テンソルの共偏微分</h2>
+
+<p>エネルギー運動量テンソルは2階の対称テンソルです。よってここではそれに対する公式の導出を行います。<br />
+２階のテンソルの共偏微分より</p>
+
+\[T^\mu_{\ \nu ; \mu} 
+= T^\mu_{\ \nu, \mu} + \Gamma^\mu_{\beta \mu} T^\beta_{\ \nu} - \Gamma^\beta_{\nu \mu} T^\mu_{\ \beta}\]
+
+<p>第1項+第2項より</p>
+
+\[T^\mu_{\ \nu, \mu} + \Gamma^\mu_{\beta \mu} T^\beta_{\ \nu} 
+= T^\mu_{\ \nu, \mu} + \frac{1}{\sqrt{-g}} \frac{\partial \sqrt{-g}}{\partial x^\beta} T^\beta_{\ \nu} 
+= T^\mu_{\ \nu, \mu} + \frac{1}{\sqrt{-g}} \frac{\partial \sqrt{-g}}{\partial x^\mu} T^\mu_{\ \nu} 
+= \frac{1}{\sqrt{-g}} \frac{\partial }{\partial x^\mu} (\sqrt{-g} T^\mu_{\ \nu})\]
+
+<p>第3項より</p>
+
+\[\begin{aligned}
+- \Gamma^\beta_{\nu \mu} T^\mu_{\ \beta} 
+&amp;= -\frac{1}{2} g^{\beta \gamma} (g_{\gamma \nu, \mu} + g_{\mu \gamma, \nu} - g_{\nu \mu, \gamma}) g_{\beta \alpha} T^{\mu \alpha} 
+= -\frac{1}{2} \delta^\gamma_\alpha (g_{\gamma \nu, \mu} + g_{\mu \gamma, \nu} - g_{\nu \mu, \gamma}) T^{\mu \alpha} \\
+&amp;= -\frac{1}{2} (g_{\alpha \nu, \mu} + g_{\mu \alpha, \nu} - g_{\nu \mu, \alpha}) T^{\mu \alpha} 
+= -\frac{1}{2} g_{\mu \alpha, \nu} T^{\mu \alpha}
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[T^\mu_{\ \nu ; \mu} 
+= \frac{1}{\sqrt{-g}} \frac{\partial }{\partial x^\mu} (\sqrt{-g} T^\mu_{\ \nu}) -\frac{1}{2} g_{\mu \alpha, \nu} T^{\mu \alpha}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

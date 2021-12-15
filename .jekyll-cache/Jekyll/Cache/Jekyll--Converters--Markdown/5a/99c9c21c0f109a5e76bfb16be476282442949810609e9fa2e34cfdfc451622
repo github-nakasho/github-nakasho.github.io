@@ -1,0 +1,161 @@
+I"A
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#261-eddington-approximation" id="markdown-toc-261-eddington-approximation">2.6.1 Eddington Approximation</a></li>
+  <li><a href="#262-一般の場合" id="markdown-toc-262-一般の場合">2.6.2 一般の場合</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="261-eddington-approximation">2.6.1 Eddington Approximation</h1>
+
+<p>以前に大気の十分深いところでは\(J_\nu \simeq 3 K_\nu\)となることを(2.33), (2.52)式で導出しました。Eddington 近似では</p>
+
+\[J 
+= 3K \tag{2.62}\]
+
+<p>の関係がどこでも成り立っていることを仮定します。この関係を(2.61)式に用いると</p>
+
+\[J_E (\tau) 
+= \frac{3}{4\pi} F \tau + C' \tag{2.63}\]
+
+<p>が得られます。(2.58)式の関係\(S = J\)より</p>
+
+\[S(\tau) 
+= J_E (\tau) 
+= \frac{3}{4\pi} F \tau + C'\]
+
+<p>となり、Source function \(S\)がOptical depth \(\tau\)の関数で与えられることになります。よってRadiative transferの式(2.56)の解は、形式解(2.16)で与えられます。Flux \(F\)はExponentical integral \(E_2\)を用いて(2.40)式で与えられます。よって(2.40)式に\(S(\tau)\)を代入すると</p>
+
+\[F 
+= F(0) 
+= 2\pi \int_0^\infty J(t) E_2 (t) dt 
+= 2\pi \int_0^\infty \left( \frac{3}{4\pi} Ft + C' \right) E_2 (t) dt\]
+
+<p>最初の等式は\(F = {\rm Const}\)であることを用いました。Exponentical integralについて成り立つ関係式\(E_n (x) = -E'_{n+1}(x)\)の関係を用いて</p>
+
+\[\begin{aligned}
+F 
+&amp;= -2\pi \int_0^\infty \left( \frac{3}{4\pi} Ft + C' \right) \frac{dE_3}{dt} dt
+= -2\pi \left\{ \left[ E_3(t) \left( \frac{3F}{4\pi} t + C' \right)\right]_0^\infty - \int_0^\infty \frac{3}{4\pi} F E_3 (t) \right\} \\
+&amp;= -2\pi \left( -E_3 (0) C' + \frac{3}{4\pi} F \left[ E_4 (t) \right]_0^\infty \right) 
+= 2\pi C' E_3 (0) + \frac{3F}{2} E_4(0)
+\end{aligned}\]
+
+<p>ここで\(E_n (0) = 1/ (n-1)\)を使うと</p>
+
+\[F
+= \pi C' + \frac{1}{2} F \ \Longrightarrow \ 
+C' 
+= \frac{F}{2\pi} \tag{2.64}\]
+
+<p>よって、(2.63)式は</p>
+
+\[J_E (\tau) 
+= \frac{3F}{4\pi} \left( \tau + \frac{2}{3} \right) \tag{2.65}\]
+
+<p>となります。LTEにおいて</p>
+
+\[J 
+= \int_0^\infty J_\nu d\nu 
+= \int_0^\infty B_\nu d\nu 
+= B 
+= \frac{\sigma}{\pi} T^4\]
+
+<p>さらに\(F = F(0) = \sigma T_{\rm{eff}}^4\)より</p>
+
+\[T^4 (\tau) 
+= \frac{3}{4} T_{\rm{eff}}^4 \left( \tau + \frac{2}{3} \right) \tag{2.66}\]
+
+<p>のように温度とOptical depthの関係に変換されます。この式から、\(\tau=0\)での温度\(T_0\)とEffective temperature \(T_{\rm{eff}}\)との比が\(T_0/T_{\rm{eff}} = (1/2)^{1/4} \sim 0.841\)であることを示しています。この値は、厳密な値である0.8114から遠くない値であることが知られています。またこの式は\(\tau = 2/3\)で\(T = T_{\rm{eff}}\)になっており、この深さが光球(連続光が放出される層)であることを示しています。この層から出た光子が表面\((\tau=0)\)まで出てくる確率は、\(e^{-2/3}\sim 0.5\)で光球の概念と合致しています。</p>
+
+<p>\(S = J\)より(2.65)式を(2.19)式に用いて、\(\tau = 0\)で外側に向かう\((0\leq \mu \leq 1)\) Intensityを求めましょう。</p>
+
+\[I_E^+(0, \mu) 
+= \frac{3}{4\pi} F \int_0^\infty \left( t+ \frac{2}{3} \right) e^{-t/\mu} \frac{dt}{\mu} 
+= \frac{3F}{4\pi} \left( \mu + \frac{2}{3} \right) \tag{2.67}\]
+
+<p>これはSource functionがOptical depthの線型関数であれば、Emergent intensityが\(\tau = \mu\)の場所のSource functionになる、というEddington-Barbier relationの特別な形になっています。この式から得られるLimb-darkeningは</p>
+
+\[\frac{I_E^+ (0, \mu)}{I_E^+ (0, 1)} 
+= \frac{3}{5} \left( \mu + \frac{2}{3} \right) \tag{2.68}\]
+
+<p>のようになります。太陽ディスクの端\((\mu = 0)\)のIntensityが中央の40%であることを示しています。これは可視光での観測とよく合っています。</p>
+
+<h1 id="262-一般の場合">2.6.2 一般の場合</h1>
+
+<p>特別な近似を使わない場合はRadiative transferの式(2.59)は解析的に解くことができません。この式の難しさは</p>
+
+\[J 
+= \frac{1}{2} \int_{-1}^1 I(\tau, \mu) d\mu \tag{2.69}\]
+
+<p>より、積分-微分方程式になっていることに由来します。数値的に解く方法として、Variable Eddington-factorの方法があります。この方法では、Eddington-factor</p>
+
+\[f(\tau) 
+= \frac{K(\tau)}{J(\tau)} \tag{2.70}\]
+
+<p>を導入します。Eddington approximationでは\(f_E = 1/3\)ですが、一般には場所によって変化する量です。最初に\(f(\tau)\)の値を仮定すると、(2.61)式を用いて、(2.59)式を数値的に解いて\(I(\tau, \mu)\)を種々の\(\mu\)の値に対して得ることができます。これを(2.69)式に使うと\(J(\tau)\)が求まり</p>
+
+\[K(\tau) 
+= \frac{1}{2} \int_{-1}^1 \mu^2 I(\tau, \mu) d\mu \tag{2.71}\]
+
+<p>から\(K(\tau)\)が求まります。これらから再び\(f(\tau)\)を決定することができます。この値は一般に最初に仮定した値とは異なっているので、上の計算を\(f(\tau)\)の仮定した値と得られた値とが同じになるまで繰り返すと\(I, J, K\)の厳密な解が得られます。<br />
+厳密解では、(2.65)式の代わりに</p>
+
+\[J(\tau) 
+= \frac{3F}{4\pi} \left\{ \tau + q(\tau) \right\} 
+= \frac{3\sigma}{4\pi} T_{\rm{eff}}^4 \left\{ \tau + q(\tau) \right\} \tag{2.72}\]
+
+<p>のように表されます。\(q(\tau)\)はHopf functionとして知られます。Eddington近似では\(2/3\)となります。\(f(\tau), q(\tau)\)の関係を示しましょう。(2.61), (2.72)式より</p>
+
+\[\frac{1}{3} J(\tau) - K(\tau) 
+= \frac{F}{4\pi} \left\{ q(\tau) - \frac{4\pi}{F} C\right\} \tag{2.73}\]
+
+<p>の関係が得られます。\(\tau \rightarrow \infty\)では輻射は等方的になるので、\(K \rightarrow J/3\)という境界条件が得られます。よって</p>
+
+\[C 
+= \frac{F}{4\pi} q(\infty)\]
+
+<p>よって</p>
+
+\[K(\tau) 
+= \frac{F}{4\pi} \left\{ \tau + q(\infty) \right\} \tag{2.74}\]
+
+<p>のように表されます。したがってEddington factorは</p>
+
+\[f(\tau) 
+= \frac{K}{J} 
+= \frac{\tau + q(\infty)}{3\{ \tau + q(\tau) \}} \tag{2.75}\]
+
+<p>のようになります。下図は\(q(\tau), f(\tau)\)を表しています。\(\tau\)がある程度大きくなると\(f\)が1/3に近くなっていることが見て取れます。</p>
+
+<p><img src="/assets/images/atmos/q_and_f.png" alt="Hopf functionとEddington factorの推移の概形。" /></p>
+
+<p>またLTEを仮定すると\(J = B = \frac{\sigma}{\pi} T^4\)より、温度分布が</p>
+
+\[T^4 
+= \frac{3}{4} T_{\rm{eff}}^4 \{\tau + q(\tau)\} \tag{2.76}\]
+
+<p>のように表されます。下図はEddington近似の場合と厳密解の場合で温度分布を比較したものです。</p>
+
+<p><img src="/assets/images/atmos/eddington_generalized.png" alt="一般の場合とEddington近似の場合の温度比較の概形。" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

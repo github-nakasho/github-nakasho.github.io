@@ -1,0 +1,70 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#最適性の2次の十分条件" id="markdown-toc-最適性の2次の十分条件">最適性の2次の十分条件</a>    <ol>
+      <li><a href="#内容" id="markdown-toc-内容">内容</a></li>
+      <li><a href="#証明" id="markdown-toc-証明">証明</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="最適性の2次の十分条件">最適性の2次の十分条件</h1>
+
+<h2 id="内容">内容</h2>
+
+<p>最適化問題の目的関数\(\mathrm{obj} (\mathbf{x})\)と制約条件\(g_i (\mathbf{x}) \ (i = 0, \dots, N-1)\)が2階微分可能とします。そして点\(\mathbf{x}^\ast\)は局所最適解かつ正則とします。このとき<a href="/mo/first.md">最適性の1次の必要条件</a>に加えて</p>
+
+\[\mathbf{d}^\top \left( \nabla^2 \mathrm{obj} (\mathbf{x}^\ast) + \sum_i \lambda_i \nabla^2 g_i (\mathbf{x}^\ast) \right) \mathbf{d} 
+\geq 0 \tag{1}\]
+
+<p>を満たすベクトル\(\boldsymbol{\lambda}\)が存在します。ここで\(\mathbf{d}\)は点\(\mathbf{x}^\ast\)から少しだけズレた位置を考えるときの方向ベクトルです。</p>
+
+<h2 id="証明">証明</h2>
+
+<p>目的関数と制約条件を全て足し合わせた関数を\(H (\mathbf{x}, \boldsymbol{\lambda})\)とします。局所最適解\(\mathbf{x}^\ast\)から少しだけズレた位置での値を考えるために微小な値\(\alpha\)を考えると</p>
+
+\[H (\mathbf{x}^\ast + \alpha \mathbf{d}, \boldsymbol{\lambda}) 
+= H (\mathbf{x}^\ast, \boldsymbol{\lambda})+ \alpha (\nabla_\mathbf{x} H(\mathbf{x}^\ast, \boldsymbol{\lambda}))^\top \mathbf{d} + \frac{1}{2} \alpha^2 \mathbf{d}^\top \nabla_\mathbf{xx}^2 H (\mathbf{x}^\ast, \boldsymbol{\lambda}) \mathbf{d} + \mathcal{O} (\alpha^3)\]
+
+<p><a href="/mo/first">最適性の1次の必要条件</a>から\(\nabla_\mathbf{x} H (\mathbf{x}^\ast, \boldsymbol{\lambda}) = \mathbf{0}\)より</p>
+
+\[\frac{H (\mathbf{x}^\ast + \alpha \mathbf{d}, \boldsymbol{\lambda})-H(\mathbf{x}^\ast, \boldsymbol{\lambda})}{\alpha^2} 
+= \frac{1}{2} \mathbf{d}^\top \nabla_\mathbf{xx}^2 H (\mathbf{x}^\ast, \boldsymbol{\lambda}) \mathbf{d} + \mathcal{O} (\alpha) 
+\geq 0\]
+
+<p>両辺の\(\alpha \rightarrow 0\)の極限をとると</p>
+
+\[\frac{1}{2} \mathbf{d}^\top \nabla_\mathbf{xx}^2 H (\mathbf{x}^\ast, \boldsymbol{\lambda}) \mathbf{d} 
+\geq 0\]
+
+<p>よって(1)式が成り立っており、これを満たす\(\boldsymbol{\lambda}\)が存在することがわかります。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>[1] 梅谷俊治, しっかり学ぶ数理最適化 モデルからアルゴリズムまで</li>
+  <li>[2] <a href="http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf">山下信雄, 数理計画法 第3回目: 最適性の条件1</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

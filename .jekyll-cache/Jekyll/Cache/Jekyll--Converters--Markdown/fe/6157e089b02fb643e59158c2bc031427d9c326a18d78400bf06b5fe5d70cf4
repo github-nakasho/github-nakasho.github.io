@@ -1,0 +1,116 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力崩壊" id="markdown-toc-重力崩壊">重力崩壊</a>    <ol>
+      <li><a href="#圧力" id="markdown-toc-圧力">圧力</a></li>
+      <li><a href="#中心圧力と重力崩壊" id="markdown-toc-中心圧力と重力崩壊">中心圧力と重力崩壊</a></li>
+      <li><a href="#本当にブラックホールが形成されるのか因果律の計算" id="markdown-toc-本当にブラックホールが形成されるのか因果律の計算">本当にブラックホールが形成されるのか？因果律の計算</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力崩壊">重力崩壊</h1>
+
+<p>TOV方程式から星が重力崩壊する条件を導いてみましょう。</p>
+
+<h2 id="圧力">圧力</h2>
+
+<p>以下では密度一定</p>
+
+\[\rho = \rho_0 \ (r \leq R)\]
+
+<p>を仮定します。これより半径\(r\)より内側の質量は</p>
+
+\[M (r) 
+= \frac{4\pi}{3} r^3 \rho_0\]
+
+<p>となります。<br />
+TOV方程式より</p>
+
+\[\frac{dp}{dr} 
+= -\frac{\rho_0 c^2 + p}{r (r - \frac{2G}{c^2} \frac{4\pi }{3} r^3 \rho_0)} (\frac{G}{c^2} \frac{4\pi}{3} r^3 \rho_0 + \frac{4\pi G}{c^4} p r^3) \ \Longrightarrow \ 
+\frac{1}{(\rho_0 c^2 + p)^2} \frac{dp}{dr} 
+= -\frac{4\pi G}{3c^4} r \frac{\rho_0 c^2 + 3p}{ (\rho_0 c^2 + p) (1-\frac{8\pi G}{3c^2} \rho_0 r^2)}\]
+
+<p>ここで</p>
+
+\[\frac{d}{dr} (\frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p}) = \frac{2 \rho_0 c^2 \frac{dp}{dr}}{(\rho_0 c^2 + p)^2}\]
+
+<p>より</p>
+
+\[\frac{1}{2 \rho_0 c^2} \frac{d}{dr} (\frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p}) 
+= -\frac{4\pi G}{3 c^4} r \frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p} \frac{1}{1-\frac{8\pi G}{3c^2} \rho_0 r^2}\]
+
+<p>積分を行うと</p>
+
+\[\ln (\frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p}) 
+= \frac{1}{2} \ln (1-\frac{8\pi G}{3c^2} \rho_0 r^2) \ \Longrightarrow \ 
+\frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p} = C (1-\frac{8\pi G}{3c^2} \rho_0 r^2)^{1/2}\]
+
+<p>星の表面\(r = R\)で\(p = 0\)という境界条件より</p>
+
+\[C = \frac{1}{\sqrt{1-\frac{8\pi G}{3c^2} \rho_0 R^2}}\]
+
+<p>と求まるので</p>
+
+\[\frac{\rho_0 c^2 + 3p}{\rho_0 c^2 + p} = \sqrt{\frac{1-\frac{8 \pi G}{3c^2} \rho_0 r^2}{1-\frac{8\pi G}{3c^2} \rho_0 R^2}}\]
+
+<p>となります。これを整理すると</p>
+
+\[p = \frac{\sqrt{1-\frac{r_g}{R} \frac{r^2}{R^2}} - \sqrt{1-\frac{r_g}{R}}}{3 \sqrt{1-\frac{r_g}{R}} - \sqrt{1-\frac{r_g}{R} \frac{r^2}{R^2}}} \rho_0 c^2\]
+
+<p>と求まります。途中、星の全質量\(M\)を用いて\(M (r)= \frac{r^3}{R^3} M\)として整理を行いました。また\(r_g \equiv 2GM/c^2\)はシュバルツシルト半径です。</p>
+
+<h2 id="中心圧力と重力崩壊">中心圧力と重力崩壊</h2>
+
+<p>中心\(r = 0\)での圧力\(p_c\)が無限大となる条件を求めてみましょう。</p>
+
+\[p_c = \frac{1-\sqrt{1 - r_g / R}}{3 \sqrt{1 - r_g / R} -1} \rho_0 c^2\]
+
+<p>これが無限大に発散するには\(3 \sqrt{1 - r_g / R} -1 = 0\)となれば良いので、これを整理すると</p>
+
+\[9 (1- \frac{r_g}{R} ) = 1 \ \Longrightarrow \ 
+R = \frac{9}{8} r_g = R_c\]
+
+<p>と求まります。\(R \rightarrow R_c\)のとき、\(p_c \rightarrow \infty\)となります。よって有限の圧力でこの星を支えるには、星はこの半径より大きくなくてはいけません。逆を言えば、質量\(M\)の物質をこの半径以内に詰め込むと、重力崩壊を起こして原点へと収縮し、ブラックホールを形成することがわかります。</p>
+
+<h2 id="本当にブラックホールが形成されるのか因果律の計算">本当にブラックホールが形成されるのか？因果律の計算</h2>
+
+<p>ニュートン力学より</p>
+
+\[\frac{d^2 r}{dt^2} 
+= -\frac{GM}{r^2} 
+= -\frac{4\pi G}{3} \rho_0 r \ \Longrightarrow \ 
+\frac{R}{\tau_{\rm dyn}^2} 
+= \frac{4\pi G}{3} \rho_0 R \ \Longrightarrow \ 
+\tau_{\rm dyn} \simeq \sqrt{\frac{3}{4\pi G \rho_0}}\]
+
+<p>のように力学的タイムスケール(半径\(R\)の物質が重力収縮するのにかかるおよその時間)が求まります。先ほどの式より</p>
+
+\[R &lt; R_c 
+= \frac{9}{8} \frac{2GM}{c^2} 
+= \frac{3 \pi G \rho_0}{c^2} R^3 \ \Longrightarrow \ R &gt; \frac{c}{\sqrt{3\pi G \rho_0}} \simeq c \tau_{\rm dyn}\]
+
+<p>よって星の中心\(r = 0\)から星表面\(r = R\)までの距離は、\(\tau_{\rm dyn}\)の時間内では光の速度でも到達できない距離となっています。そのため、因果的に星内部の圧力を上げても、重力収縮を止めることはできないことがわかります。因果的に孤立したものになるので、これはブラックホールの形成を意味することもわかります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

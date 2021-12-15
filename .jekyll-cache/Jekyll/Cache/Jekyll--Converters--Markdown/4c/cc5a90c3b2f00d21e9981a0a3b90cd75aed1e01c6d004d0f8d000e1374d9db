@@ -1,0 +1,88 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#臨界密度密度パラメータハッブル時間ハッブル長" id="markdown-toc-臨界密度密度パラメータハッブル時間ハッブル長">臨界密度、密度パラメータ、ハッブル時間、ハッブル長</a>    <ol>
+      <li><a href="#臨界密度と密度パラメータ" id="markdown-toc-臨界密度と密度パラメータ">臨界密度と密度パラメータ</a></li>
+      <li><a href="#ハッブル時間" id="markdown-toc-ハッブル時間">ハッブル時間</a></li>
+      <li><a href="#ハッブル長" id="markdown-toc-ハッブル長">ハッブル長</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="臨界密度密度パラメータハッブル時間ハッブル長">臨界密度、密度パラメータ、ハッブル時間、ハッブル長</h1>
+
+<p>種々の定義量をご紹介します。</p>
+
+<h2 id="臨界密度と密度パラメータ">臨界密度と密度パラメータ</h2>
+
+<p><a href="/cosmo/friedmann">フリードマン方程式</a>より</p>
+
+\[Kc^2 = \frac{8\pi G}{3} \rho a^2 - a^2 H^2 
+= \frac{8\pi G}{3} \rho_0 - H_0^2 
+= H_0^2 \left(\frac{\rho_0}{\rho_{\rm cr, 0}} -1 \right) \tag{1}\]
+
+<p>ここで</p>
+
+\[\rho_{\rm cr, 0} \equiv \frac{3H_0^2}{8\pi G} 
+\simeq 8.44 \times 10^{-30} h_{0.67}^2 \ [{\rm g/cm^3}]\]
+
+<p>を臨界密度(critical density)と呼びます。さらに\(\Omega_0 \equiv \rho_0/\rho_{\rm cr, 0}\)を密度パラメータと定義します。<br />
+上式の</p>
+
+\[h_{0.67} = \frac{H_0}{67{\rm km/s/Mpc}}\]
+
+<p>はハッブル定数依存性を明示的に示すための変数です。<br />
+(1)式より</p>
+
+\[\Omega_0 = 1 \ \Longrightarrow \ K = 0 \ (\mathrm{flat}) \cdots
+ずっと膨張(ずっと\dot{a}&gt;0)\]
+
+\[\Omega_0 &lt; 1 \ \Longrightarrow \ K &gt; 0 \ (\mathrm{closed}) \cdots 
+\dot{a}=0となる時期がある\]
+
+\[\Omega_0 &gt; 1 \ \Longrightarrow \ K &lt; 0 \ (\mathrm{open}) \cdots
+ずっと膨張\]
+
+<p>となることがわかります。</p>
+
+<h2 id="ハッブル時間">ハッブル時間</h2>
+
+<p>ハッブル定数の逆数は宇宙年齢を与える良い目安となり、ハッブル時間(Hubble time)と呼ばれます。</p>
+
+\[t_{H_0}\equiv
+H_0 = 4.6 \times 10^{17} h_{0.67}^{-1} [{\rm s}] \simeq 10^{10} h^{-1}_{0.67} [{\rm yr}]\]
+
+<p>またハッブル時間は宇宙膨張によって宇宙の半径が変わったことが認識される目安を与える時間スケールです。逆を言えば、これより十分短い時間スケールであれば、宇宙膨張の効果は無視できると言って議論を進めても良いでしょう。</p>
+
+<h2 id="ハッブル長">ハッブル長</h2>
+
+<p>ハッブル時間の間に光が走ることができる距離をハッブル長(Hubble length)と呼びます。</p>
+
+\[\ell_{H_0} 
+\equiv ct_{H_0} 
+= 1.38 \times 10^{28} h^{-1}_{0.67} [{\rm cm}]
+\simeq 4 h^{-1}_{0.67} [{\rm Gpc}]\]
+
+<p>これは現在の宇宙のサイズを与える目安や、宇宙の状態が変化する長さの指標となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

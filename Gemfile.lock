@@ -76,7 +76,7 @@ PLATFORMS
   arm64-darwin-20
 
 DEPENDENCIES
-  jekyll (~> 4.2.1)
+  jekyll (= 4.2.1)
   jekyll-feed (~> 0.12)
   jekyll-twitter-plugin
   just-the-docs

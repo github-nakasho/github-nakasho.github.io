@@ -1,0 +1,158 @@
+I" -
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#共変微分" id="markdown-toc-共変微分">共変微分</a>    <ol>
+      <li><a href="#共変微分とは" id="markdown-toc-共変微分とは">共変微分とは</a></li>
+      <li><a href="#演習問題-クリストッフェル記号はテンソルか" id="markdown-toc-演習問題-クリストッフェル記号はテンソルか">演習問題: クリストッフェル記号はテンソルか？</a></li>
+      <li><a href="#演習問題-共変微分されたベクトル成分はテンソルか" id="markdown-toc-演習問題-共変微分されたベクトル成分はテンソルか">演習問題: 共変微分されたベクトル成分はテンソルか？</a></li>
+      <li><a href="#スカラー量の共変微分" id="markdown-toc-スカラー量の共変微分">スカラー量の共変微分</a></li>
+      <li><a href="#反変ベクトルの共変微分" id="markdown-toc-反変ベクトルの共変微分">反変ベクトルの共変微分</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="共変微分">共変微分</h1>
+
+<h2 id="共変微分とは">共変微分とは</h2>
+
+<p>あるベクトルの微分を考えたとき</p>
+
+\[\partial_\mu {\bf A}({\bf x}) 
+=\partial_\mu (A^\nu ({\bf x}){\bf e}_\nu ({\bf x})) 
+=\partial_\mu (A^\nu ({\bf x})) {\bf e}_\nu ({\bf x}) + A^\nu ({\bf x}) (\partial_\mu{\bf e}_\nu ({\bf x}))\]
+
+<p>微分の定義から</p>
+
+\[\partial_\mu A 
+= \lim_{d{\bf x} \rightarrow {\bf 0}} \frac{A ({\bf x}+ d{\bf x}) - A({\bf 
+ x})}{d{\bf x}}\]
+
+<p>となります。このとき位置\({\bf x}\)の局所慣性系に移ったとき、位置\({\bf x} + d{\bf x}\)は局所慣性系ではなくなる可能性があります。逆に、位置\({\bf x} + d{\bf x}\)の局所慣性系に移ったときには、位置\({\bf x}\)は局所慣性系でなくなる可能性があります。よって、位置\({\bf x}, {\bf x}+ d{\bf x}\)のように異なる位置で変換則が異なるために、同じ物理量でも直接の比較は不可能となります。そこで上式のような微分の方法ではなく、新しい微分の仕方を定義しなければなりません。</p>
+
+<p>その方法として、位置\({\bf x}\)での基底ベクトルの微分方法を</p>
+
+\[\partial_\mu {\bf e}_\nu ({\bf x}) 
+= \Gamma^{\alpha}_{\mu \nu}({\bf x}) {\bf e}_\alpha ({\bf x})\]
+
+<p>のように表現しましょう。これは基底ベクトルの微分をその位置の基底ベクトルで展開し、その時の展開係数を<strong>クリストッフェル記号\(\Gamma\)</strong>で表したものです。</p>
+
+<p>このとき\({\bf A}\)の微分は</p>
+
+\[\partial_\mu {\bf A} 
+= (\partial_\mu A^\alpha + A^\nu \Gamma^\alpha_{\mu \nu}){\bf e}_\alpha\]
+
+<p>となります。よってこのベクトルの成分の微分</p>
+
+\[\nabla_\mu A^\alpha 
+= \partial_\mu A^\alpha + A^\nu \Gamma^\alpha_{\mu \nu} 
+\equiv A^\alpha_{;\mu}\]
+
+<p>を共変微分と呼び、新しい微分方法として定義します。最初の項はこれまで通りの成分の微分、そして第二項は先ほど説明した基底の微分のお釣りが付いています。</p>
+
+<h2 id="演習問題-クリストッフェル記号はテンソルか">演習問題: クリストッフェル記号はテンソルか？</h2>
+
+\[\partial_\mu {\bf e}_\nu 
+= \Gamma^\alpha_{\mu \nu} {\bf e}_\alpha\]
+
+<p>を\(x'\)系に変換しましょう。</p>
+
+\[\begin{aligned}
+(左辺) 
+&amp;= \partial_{\mu'} {\bf e}_{\nu'} 
+= \partial_{\mu'} \left(\frac{\partial x^\gamma}{\partial x^{\nu'}} {\bf e}_\gamma \right)
+= \frac{\partial^2 x^\gamma}{\partial x^{\mu'} \partial x^{\nu'}} {\bf e}_\gamma + \frac{\partial x^\gamma}{\partial x^{\nu'}} \underbrace{\frac{\partial {\bf e}_\gamma}{\partial x^{\mu'}}}_{連鎖律} \\
+&amp;= \frac{\partial^2 x^\gamma}{\partial x^{\mu'} \partial x^{\nu'}} {\bf e}_\gamma + \frac{\partial x^\gamma}{\partial x^{\nu'}} \frac{\partial x^\beta}{\partial x^{\mu'}} \frac{\partial {\bf e}_\gamma}{\partial x^\beta}
+=\frac{\partial^2 x^\alpha}{\partial x^{\mu'} \partial x^{\nu'}} {\bf e}_\alpha + \frac{\partial x^\gamma}{\partial x^{\nu'}} \frac{\partial x^\beta}{\partial x^{\mu'}} \Gamma^\alpha_{\beta \gamma} {\bf e}_\alpha
+\end{aligned}\]
+
+\[(右辺) 
+= \Gamma'^\alpha_{\mu \nu}\frac{\partial x^\beta}{\partial x^{\alpha'}} {\bf e}_\beta 
+=\Gamma'^\beta_{\mu \nu}\frac{\partial x^\alpha}{\partial x^{\beta'}} {\bf e}_\alpha\]
+
+<p>よって\({\bf e}_\alpha\)の係数のみを比較しましょう。</p>
+
+\[\frac{\partial x^\alpha}{\partial x^{\beta'}} \Gamma'^\beta_{\mu\nu} 
+= \frac{\partial^2 x^\alpha}{\partial x^{\mu'} \partial x^{\nu'}} + \frac{\partial x^\gamma}{\partial x^{\nu'}} \frac{\partial x^\beta}{\partial x^{\mu'}} \Gamma^\alpha_{\beta \gamma}\]
+
+<p>この両辺に\(\frac{\partial x^{\sigma'}}{\partial x^\alpha}\)をかけて整理します。</p>
+
+\[\underbrace{\frac{\partial x^{\sigma'}}{\partial x^\alpha} \frac{\partial x^{\alpha}}{\partial x^{\beta'}}}_{\delta^{\sigma'}_{\beta'}}\Gamma'^\beta_{\mu \nu}
+=\Gamma'^\sigma_{\mu \nu}
+=\frac{\partial x^{\sigma'}}{\partial x^\alpha} \frac{\partial^2 x^\alpha}{\partial x^{\mu'} \partial x^{\nu'}} + \frac{\partial x^{\sigma'}}{\partial x^\alpha} \frac{\partial x^\gamma}{\partial x^{\nu'}} \frac{\partial x^\beta}{\partial x^{\mu'}} \Gamma^\alpha_{\beta \gamma}\]
+
+<p>ご覧のように、テンソルの変換のときにはつかなかった第一項が現れます。よってクリストッフェル記号はテンソルではありません。</p>
+
+<h2 id="演習問題-共変微分されたベクトル成分はテンソルか">演習問題: 共変微分されたベクトル成分はテンソルか？</h2>
+
+\[\begin{aligned}
+\nabla_\mu' A^{\sigma'} 
+&amp;= \partial_{\mu'} A^{\sigma'} +  A^{\nu'} \Gamma'^{\sigma}_{\mu \nu} 
+= \partial_{\mu'} \left( \frac{\partial x^{\sigma'}}{\partial x^{\beta}} A^{\beta} \right) + \frac{\partial x^{\nu'}}{\partial x^{\rho}} A^{\rho} \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial^2 x^{\alpha}}{\partial x^{\mu'} \partial x^{\nu'}} + \frac{\partial x^{\nu'}}{\partial x^{\rho}} A^{\rho} \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial x^{\gamma}}{\partial x^{\nu'}}  \frac{\partial x^{\beta}}{\partial x^{\mu'}} \Gamma^{\alpha}_{\beta \gamma} \\
+&amp;= \partial_{\mu'} \left( \frac{\partial x^{\sigma'}}{\partial x^{\beta}} A^{\beta} \right) + \frac{\partial x^{\nu'}}{\partial x^{\rho}} A^{\rho} \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial^2 x^{\alpha}}{\partial x^{\mu'} \partial x^{\nu'}} + \delta_\rho^\gamma A^\rho \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial x^{\beta}}{\partial x^{\mu'}} \Gamma^\alpha_{\beta \gamma}
+\end{aligned}\]
+
+\[\partial_{\mu'} \left( \frac{\partial x^{\sigma'}}{\partial x^{\beta}} A^{\beta} \right) 
+= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial}{\partial x^{\alpha}} \left( \frac{\partial x^{\sigma'}}{\partial x^{\beta}} A^\beta \right) 
+=\frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial A^\beta}{\partial x^{\alpha}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} + \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^{\alpha} \partial x^\beta} A^\beta\]
+
+\[\frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial^2 x^{\alpha}}{\partial x^{\mu'} \partial x^{\nu'}} 
+= \frac{\partial}{\partial x^{\mu'}} \left( \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial x^{\alpha}}{\partial x^{\nu'}} \right) - \frac{\partial^2 x^{\sigma'}}{\partial x^{\mu} \partial x^\alpha} \frac{\partial x^{\alpha}}{\partial x^{\nu'}} 
+= - \frac{\partial x^{\beta}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^{\beta} \partial x^\alpha} \frac{\partial x^{\alpha}}{\partial x^{\nu'}}
+= - \frac{\partial x^{\beta}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^{\beta} \partial x^\alpha} \frac{\partial x^{\alpha}}{\partial x^{\nu'}}\]
+
+<p>以上より</p>
+
+\[\begin{aligned}
+\nabla'_\mu A^{\sigma'} 
+&amp;= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial A^{\beta}}{\partial x^{\alpha}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} + \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^{\alpha} \partial x^\beta} A^\beta - \frac{\partial x^{\nu'}}{\partial x^{\rho}} A^\rho \frac{\partial x^{\beta}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^\beta \partial x^{\alpha}} \frac{\partial x^{\alpha}}{\partial x^{\nu'}} + A^\rho \frac{\partial x^{\sigma'}}{\partial x^{\alpha}} \frac{\partial x^{\beta}}{\partial x^{\mu'}} \Gamma^\alpha_{\beta \rho} \\
+&amp;= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial A^{\beta}}{\partial x^{\alpha}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} + \frac{\partial x^{\beta}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^\beta\partial x^{\alpha}} A^\rho - A^\rho \frac{\partial x^{\beta}}{\partial x^{\mu'}} \frac{\partial^2 x^{\sigma'}}{\partial x^\beta \partial x^{\alpha}} \beta_\rho^\alpha + A^\rho \frac{\partial x^{\sigma'}}{\partial x^{\beta}} \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \Gamma^\beta_{\alpha \rho} \\
+&amp;= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial A^{\beta}}{\partial x^{\alpha}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} + A^\rho \frac{\partial x^{\sigma'}}{\partial x^{\beta}} \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \Gamma^\beta_{\alpha \rho} 
+= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} (\partial_\alpha A^\beta+ A^\rho \Gamma^\beta_{\alpha \rho}) 
+= \frac{\partial x^{\alpha}}{\partial x^{\mu'}} \frac{\partial x^{\sigma'}}{\partial x^{\beta}} \nabla_\alpha A^\beta
+\end{aligned}\]
+
+<p>よってこれは2階のテンソルです。</p>
+
+<h2 id="スカラー量の共変微分">スカラー量の共変微分</h2>
+
+<p>基底ベクトルの微分がないので</p>
+
+\[\nabla_\mu \phi = \partial_\mu \phi\]
+
+<h2 id="反変ベクトルの共変微分">反変ベクトルの共変微分</h2>
+
+\[\nabla_\mu (B^\nu A_\nu) 
+= A_\nu (\nabla_\mu B^\nu) + B^\nu (\nabla_\mu A_\nu) 
+= A_\nu (\partial_\mu B^\nu + \Gamma^\nu_{\gamma \mu} B^\gamma) + B^\nu (\nabla_\mu A_\nu) 
+= A_\nu (\partial_\mu B^\nu) + A_\gamma \Gamma^\gamma_{\nu \mu} B^\nu + B^\nu (\nabla_\nu A_\nu)\]
+
+<p>一方で、スカラーの共変微分より</p>
+
+\[\nabla_\mu (B^\nu A_\nu) 
+= \partial_\mu (B^\nu A_\nu) 
+= B^\nu (\partial_\mu A_\nu) + A_\nu (\partial_\mu B^\nu)\]
+
+\[\therefore \ \nabla_\mu A_\nu 
+= \partial_\mu A_\nu - A_\gamma \Gamma^\gamma_{\nu \mu}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,77 @@
+I"a
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#観測の不確定性と可干渉時間" id="markdown-toc-観測の不確定性と可干渉時間">観測の不確定性と可干渉時間</a>    <ol>
+      <li><a href="#フーリエ変換" id="markdown-toc-フーリエ変換">フーリエ変換</a></li>
+      <li><a href="#sinc関数の性質と波の広がり" id="markdown-toc-sinc関数の性質と波の広がり">sinc関数の性質と波の広がり</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="観測の不確定性と可干渉時間">観測の不確定性と可干渉時間</h1>
+
+<p>\(-\Delta t /2 \leq t \leq \Delta t /2\)の間で</p>
+
+\[E(t) = \cos \omega_0 t\]
+
+<p>を観測し、それ以外では\(E(t) = 0\)の波が存在したとします。以下では\(\omega_0 \gg 2\pi /\Delta t\)とし、正の角周波数のスペクトルのみ考えることにましょう。</p>
+
+<h2 id="フーリエ変換">フーリエ変換</h2>
+
+\[E(t) = \left\{
+\begin{array}{ll}
+\cos \omega_0 t &amp; (-\displaystyle{\frac{\Delta t}{2}} &lt; t &lt; \displaystyle{\frac{\Delta t}{2}})\\
+\\
+0 &amp; \mathrm{(otherwise)}
+\end{array} \right.\]
+
+<p>の波形を観測したと考え、これをフーリエ変換します。</p>
+
+\[\begin{align}
+\hat{E}(\omega) 
+&amp;= \frac{1}{2\pi} \int_{-\infty}^{+\infty} E(t) e^{i\omega t} \ dt 
+= \frac{1}{2\pi} \int_{-\Delta t/2}^{\Delta t/2} \cos \omega_0 t e^{i\omega t} \ dt
+= \frac{1}{4\pi} \int_{-\Delta t/2}^{\Delta t/2} (e^{i (\omega+\omega_0)t} + e^{i (\omega-\omega_0) t}) dt \notag \\
+&amp;= \frac{1}{4\pi i} \left[\frac{e^{i (\omega+ \omega_0) t}}{\omega + \omega_0} + \frac{e^{i (\omega -\omega_0) t}}{\omega -\omega_0}\right]_{-\Delta t/2}^{\Delta t/2} \notag \\
+&amp;= \frac{1}{4\pi i} \left\{ \frac{1}{\omega + \omega_0} (e^{i(\omega+\omega_0)\frac{\Delta t}{2}}- e^{-i(\omega+ \omega_0)\frac{\Delta t}{2}})+\frac{1}{\omega - \omega_0} (e^{i(\omega-\omega_0)\frac{\Delta t}{2}}- e^{-i(\omega- \omega_0)\frac{\Delta t}{2}}) \right\} \notag \\
+&amp;= \frac{1}{2\pi} \left( \frac{\sin \left( (\omega + \omega_0) \frac{\Delta t}{2}\right)}{\omega+ \omega_0} + \frac{\sin \left( (\omega - \omega_0) \frac{\Delta t}{2}\right)}{\omega- \omega_0}\right)
+\end{align}\]
+
+<h2 id="sinc関数の性質と波の広がり">sinc関数の性質と波の広がり</h2>
+
+<p>(1)式の最右辺に置いて、物理的に意味を持つ\(\omega &gt; 0\)のみを考えましょう。</p>
+
+\[\hat{E}(\omega) = \frac{1}{2\pi} \frac{\sin \left( (\omega - \omega_0) \frac{\Delta t}{2}\right)}{\omega- \omega_0}\]
+
+<p>これはsinc関数より\(\omega = \omega_0\)を中心として\(\Delta \omega \simeq \frac{2\pi}{\Delta t}\)程度の広がりを持ちます。すなわち実際に観測されるのは角振動数が\(\omega_0 - \frac{\Delta \omega}{2} &lt; \omega &lt; \omega_0 + \frac{\Delta \omega}{2}\)の波です。</p>
+
+<p>物理的解釈からこの広がりを考えてみましょう。観測時間が\(-\frac{\Delta t}{2} &lt; t &lt; \frac{\Delta t}{2}\)なので、それ以外の時間では波が存在していないと考えることができます。このような波形を作るには多数の角振動数の波を重ね合わさなければなりません。\(\frac{\Delta t}{2}\)の時間が経過した所で角振動数\(\omega_0\)の波が消えるためには\(t=\frac{\Delta t}{2}\)でこの波と位相が\(\pi\)ずれた波が存在していればよいと考えられるでしょう。その波の角振動数を\(\omega_0+\Delta \omega\)とすると</p>
+
+\[(\omega_0+ \Delta \omega) \frac{\Delta t}{2} - \omega_0 \frac{\Delta t}{2} 
+= \frac{\Delta \omega \Delta t}{2} \sim \pi 
+\ \Longrightarrow \ \Delta \omega \simeq \frac{2\pi}{\Delta t}\]
+
+<p>逆に言えばこれくらいの角振動数の広がりが仕込まれていることによって、観測時間が有限であるような波形が再現される、ということになります。\(\Delta t \simeq \frac{2\pi}{\Delta \omega}\)を可干渉時間(coherent time)と呼びます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

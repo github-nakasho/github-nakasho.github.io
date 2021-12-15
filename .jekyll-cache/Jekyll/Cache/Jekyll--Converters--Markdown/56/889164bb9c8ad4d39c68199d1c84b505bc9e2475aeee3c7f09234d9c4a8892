@@ -1,0 +1,62 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#等価原理" id="markdown-toc-等価原理">等価原理</a></li>
+  <li><a href="#一般相対性原理" id="markdown-toc-一般相対性原理">一般相対性原理</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="等価原理">等価原理</h1>
+
+<p>慣性質量\(m_I\)の運動方程式を考えます。</p>
+
+\[F=m_I a\]
+
+<p>\(a\)は加速度です。<br />
+これとは別に、加速度が重力加速度\(g\)の系で運動する質量\(m_g\)の質点を考えます。
+するとその質点の運動方程式は</p>
+
+\[F_g = m_g g\]
+
+<p>となります。さてここで\(g\)は質量に依存せず、一様に全ての物質にかかるとします。一番簡単な例は地球上の物体です。すると慣性質量\(m_I\)の</p>
+
+<p>実験室系の運動方程式: \(F = F_g = m_g g = m_I a\)<br />
+加速度\(g\)で自由落下している系での運動方程式: \(m_{g}^{(1)} g-m_{I}^{(1)} a=0\)</p>
+
+<p>となります。自由落下系での運動方程式の質量には、系を移ることによる変換の意味で添字の(1)をつけました。慣性質量に\(m_I^{(1)} = m_g^{(1)}\)となるような物質を選んだとしましょう。すると自由落下系の運動方程式から慣性力は</p>
+
+\[m_{g}^{(1)}(g-a)=0\]
+
+<p>となります。つまり<strong>\(a=g\)の系に移れば、全ての物質の重力を打ち消すことができる</strong>のです。しかしここでは\(m_I^{(1)}=m_g^{(1)}\)という仮定をしています。「自由落下している系に移る」という法則は同じなので、\(m_g=m_I\)ということになります。</p>
+
+<p><strong>等価原理とは「\(m_g=m_I\)ならば必ず局所慣性系(慣性力が0となる系)に移ることができる」</strong>というものです。</p>
+
+<p>ここで「局所」とついたのは、加速度が今のように一様でなく場所に依存する場合でも、その場所に移れば慣性系となることを意味しています。</p>
+
+<h1 id="一般相対性原理">一般相対性原理</h1>
+
+<p>ある物理現象を考えてみましょう。例えば、静止している観測者が風向きと風速を調べたところ、北東の風が10m/sで吹いていました。これを別の、動いている観測者が風速を図ったとします。動いている分、風向きと風速は変わって観測されますね。<br />
+ということは北東方向に10m/sで動いて風の観測をすれば、この系では風速は0m/sで<strong>風は吹いていないということになるのでしょうか</strong>。<br />
+答えはノーです。どのように座標変換しても、<strong>風が吹いているという事実に変わりない</strong>はずです。兎にも角にも、風は座標に関係なく存在するのです。今回は風が吹いているという現象をとりあげましたが、これは物理法則にも言えることです。<strong>一般相対性原理は物理法則は一般座標変換に対して不変である</strong>ということを意味します。<br />
+この原理から、<strong>スカラー・ベクトル・テンソル・物理法則を座標系から解放してあげる</strong>ことができます。これがこの原理、そして一般相対論の肝になります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

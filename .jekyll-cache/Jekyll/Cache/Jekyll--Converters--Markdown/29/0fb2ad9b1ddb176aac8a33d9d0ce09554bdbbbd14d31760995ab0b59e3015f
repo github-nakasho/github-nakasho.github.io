@@ -1,0 +1,133 @@
+I"K"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#角径距離" id="markdown-toc-角径距離">角径距離</a>    <ol>
+      <li><a href="#見かけの大きさと距離の関係" id="markdown-toc-見かけの大きさと距離の関係">見かけの大きさと距離の関係</a></li>
+      <li><a href="#角径距離の導出" id="markdown-toc-角径距離の導出">角径距離の導出</a></li>
+      <li><a href="#eds宇宙" id="markdown-toc-eds宇宙">EdS宇宙</a></li>
+      <li><a href="#例題-totally-flat-model" id="markdown-toc-例題-totally-flat-model">例題: Totally flat model</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="角径距離">角径距離</h1>
+
+<p>続いて<strong>角半距離(Angular diameter distance)</strong>を導出しましょう。</p>
+
+<h2 id="見かけの大きさと距離の関係">見かけの大きさと距離の関係</h2>
+
+<p>ユークリッド幾何学においては、大きさが\(y\)の物体が距離\(D_A\)にあるとき、その見かけの大きさを\(d\theta\)とすると</p>
+
+\[y = D_A d\theta\]
+
+<p>の関係にあるので</p>
+
+\[D_A = \frac{y}{d\theta}\]
+
+<p>のように\(d \theta\)を観測で求めればその物体までの距離がわかります。</p>
+
+<h2 id="角径距離の導出">角径距離の導出</h2>
+
+<p>ロバートソン・ウォーカー計量より</p>
+
+\[ds^2 = -c^2 dt^2 +a^2 (\frac{dr^2}{1-Kr^2} + r^2 d\theta^2 + r^2\sin^2 \theta d\varphi)\]
+
+<p>ここに\(dt = dr = d\varphi = 0\)を代入すると</p>
+
+\[ds = ar d\theta\]
+
+<p>この\(ds\)を、先ほどの物体の大きさ\(y\)とすると</p>
+
+\[D_A 
+= a r 
+= \frac{r}{1+z}\]
+
+<p>光度距離は\(D_L = (1+z) r\)より</p>
+
+\[D_A = \frac{D_L}{(1+z)^2}\]
+
+<p>の関係にあることがわかります。</p>
+
+<h2 id="eds宇宙">EdS宇宙</h2>
+
+<p>特にアインシュタイン・ド・ジッター宇宙のときには</p>
+
+\[D_A 
+= \frac{2c}{H_0} \frac{1}{1+z} (1-\frac{1}{\sqrt{1+z}})\]
+
+<p>となります。</p>
+
+<h2 id="例題-totally-flat-model">例題: Totally flat model</h2>
+
+<p>\(\Omega_{r, 0} = 0, \Omega_{m, 0} + \Omega_{\rm DE, 0} = 1, \Omega_{m, 0} + \Omega_{\Lambda, 0} = 1\)のとき、\(\Omega_{\Lambda, 0} = 1-\Omega_{m, 0}\)より</p>
+
+\[D_A = \frac{c}{H_0} \frac{1}{1+z} \int_0^z \frac{dz}{(\Omega_{m, 0} (1+z)^3 + 1-\Omega_{m, 0})^{1/2}}\]
+
+<p>このモデルでの光度距離を計算するPythonスクリプトとその計算例を掲載します。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">integrate</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># define integrand
+</span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">omega_m</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">omega_m</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="o">-</span><span class="n">omega_m</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set variables
+</span>    <span class="n">iz</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="c1"># set plot range
+</span>    <span class="n">zmin</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">zmax</span> <span class="o">=</span> <span class="mf">5.0</span>
+    <span class="c1"># set density parameter
+</span>    <span class="n">oms</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="c1"># set z coordinate
+</span>    <span class="n">zlist</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">zmin</span><span class="p">,</span> <span class="n">zmax</span><span class="p">,</span> <span class="n">iz</span><span class="p">)</span>
+    <span class="c1"># set Romberg integrate step
+</span>    <span class="n">izz</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">6</span>
+    <span class="c1"># main loop
+</span>    <span class="k">for</span> <span class="n">om</span> <span class="ow">in</span> <span class="n">oms</span><span class="p">:</span>
+        <span class="c1"># set empty list for dl
+</span>        <span class="n">dl</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># compute [0:z] integration
+</span>        <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">zlist</span><span class="p">:</span>
+            <span class="n">zz</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">izz</span><span class="p">)</span>
+            <span class="c1"># compute luminosity distance
+</span>            <span class="n">d</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">.</span><span class="n">romb</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">om</span><span class="p">,</span> <span class="n">zz</span><span class="p">),</span> <span class="n">dx</span><span class="o">=</span><span class="n">zz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">zz</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">z</span><span class="p">)</span>
+            <span class="n">dl</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="c1"># make plot
+</span>        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zlist</span><span class="p">,</span> <span class="n">dl</span><span class="p">)</span>
+    <span class="c1"># show plot
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/cosmo/ad.png" alt="光度距離の作図例" /></p>
+
+<p>青, オレンジ, 緑線の順に、\(\Omega_{m, 0} = 0, 0.3, 1.0\)のプロット。横軸: 赤方偏移、縦軸: \(D_L/(c/H_0)\)</p>
+
+<p>\(z\)が大きい(宇宙初期)ほど距離が小さい(近くにあるように見える)のは、過去に遡るほど宇宙の大きさが小さくなるため、大きさが同じ天体でも宇宙全体に占める割合が大きくなることに由来しています。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

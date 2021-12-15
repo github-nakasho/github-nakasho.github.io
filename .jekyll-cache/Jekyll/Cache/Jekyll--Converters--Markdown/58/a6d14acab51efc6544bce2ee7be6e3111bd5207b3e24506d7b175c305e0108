@@ -1,0 +1,225 @@
+I"�P
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#amplify" id="markdown-toc-amplify">Amplify</a>    <ol>
+      <li><a href="#amplifyとは" id="markdown-toc-amplifyとは">Amplifyとは</a>        <ol>
+          <li><a href="#概要" id="markdown-toc-概要">概要</a></li>
+          <li><a href="#対応ハードウェア" id="markdown-toc-対応ハードウェア">対応ハードウェア</a></li>
+          <li><a href="#料金プラン" id="markdown-toc-料金プラン">料金プラン</a></li>
+        </ol>
+      </li>
+      <li><a href="#python-sdkの使用感" id="markdown-toc-python-sdkの使用感">Python SDKの使用感</a>        <ol>
+          <li><a href="#モデル構築" id="markdown-toc-モデル構築">モデル構築</a>            <ol>
+              <li><a href="#gen_symbols" id="markdown-toc-gen_symbols">gen_symbols()</a></li>
+              <li><a href="#equal_to" id="markdown-toc-equal_to">equal_to()</a></li>
+              <li><a href="#sum_poly" id="markdown-toc-sum_poly">sum_poly()</a></li>
+            </ol>
+          </li>
+          <li><a href="#計算実行" id="markdown-toc-計算実行">計算実行</a>            <ol>
+              <li><a href="#client" id="markdown-toc-client">client</a></li>
+              <li><a href="#solver" id="markdown-toc-solver">solver</a></li>
+              <li><a href="#result" id="markdown-toc-result">result</a></li>
+              <li><a href="#check_constraints" id="markdown-toc-check_constraints">check_constraints</a></li>
+            </ol>
+          </li>
+          <li><a href="#解の解析" id="markdown-toc-解の解析">解の解析</a></li>
+        </ol>
+      </li>
+      <li><a href="#使用してみた感想長所短所含む" id="markdown-toc-使用してみた感想長所短所含む">使用してみた感想(長所・短所含む)</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考資料" id="markdown-toc-参考資料">参考資料</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="amplify">Amplify</h1>
+
+<h2 id="amplifyとは">Amplifyとは</h2>
+
+<h3 id="概要">概要</h3>
+
+<p><a href="https://www.fixstars.com/ja/">フィックスターズ</a>が開発・提供している、イジングマシンに対応したアプリケーション開発を支援するSDKです。Pythonを用いて組合せ最適化を定式化し、ソルバーを用いて最適化計算を行うことができます。</p>
+
+<p><a href="https://amplify.fixstars.com/" class="btn btn-purple">Amplify website</a></p>
+
+<h3 id="対応ハードウェア">対応ハードウェア</h3>
+
+<p>2021年2月現在、以下のハードウェアに対応しています。</p>
+
+<ul>
+  <li>D-Wave Systems: 2000Q/Advantage</li>
+  <li>富士通: デジタルアニーラ</li>
+  <li>東芝: Simulated Bifurcation Machine</li>
+  <li>日立: CMOSアニーリングマシン</li>
+  <li>フィックスターズ: Amplify Annealing Engine</li>
+</ul>
+
+<p><a href="https://amplify.fixstars.com/engine">Amplifyウェブサイト</a>にマシン性能の比較早見表があります。詳しくは以下をご覧ください。</p>
+
+<p><img src="/assets/images/pro/amplify_hardware.png" alt="マシン性能比較。" /></p>
+
+<h3 id="料金プラン">料金プラン</h3>
+
+<p>Amplifyの料金プランの詳細を以下に示します(2021年2月現在)。</p>
+
+<p><img src="/assets/images/pro/amplify_plan.png" alt="使用料金表。" /></p>
+
+<p>筆者は(お金がないため)ひとまずDeveloperプランを利用しています。このプランで使えるのは、Amplify Annealing Engineを1回の計算につき10秒までとなっています。</p>
+
+<h2 id="python-sdkの使用感">Python SDKの使用感</h2>
+
+<p>ここでは実際にAmplifyを使ってQUBO定式化されたものを実装したときに感じた長所・短所を記述します。例としてTSPを実装しました。</p>
+
+<p><a href="https://github.com/github-nakasho/tsp_amplify" class="btn btn-purple">GitHub リポジトリ</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h3 id="モデル構築">モデル構築</h3>
+
+<p>以下にモデル構築部分のPythonスクリプトを示します。</p>
+
+<p>from amplify import BinaryPoly, gen_symbols, sum_poly
+from amplify.constraint import equal_to</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">make_hamiltonian</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">feed_dict</span><span class="p">):</span>
+    <span class="c1"># set the number of cities
+</span>    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="c1"># set hyperparameters
+</span>    <span class="n">lambda_1</span> <span class="o">=</span> <span class="n">feed_dict</span><span class="p">[</span><span class="s">'h1'</span><span class="p">]</span>
+    <span class="n">lambda_2</span> <span class="o">=</span> <span class="n">feed_dict</span><span class="p">[</span><span class="s">'h2'</span><span class="p">]</span>
+    <span class="c1"># make variables
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">gen_symbols</span><span class="p">(</span><span class="n">BinaryPoly</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+    <span class="c1"># set One-hot constraint for time
+</span>    <span class="n">h1</span> <span class="o">=</span> <span class="p">[</span><span class="n">equal_to</span><span class="p">(</span><span class="n">sum_poly</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+    <span class="c1"># set One-hot constraint for city
+</span>    <span class="n">h2</span> <span class="o">=</span> <span class="p">[</span><span class="n">equal_to</span><span class="p">(</span><span class="n">sum_poly</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+    <span class="c1"># compute the total of constraints
+</span>    <span class="n">const</span> <span class="o">=</span> <span class="n">lambda_1</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span> <span class="o">+</span> <span class="n">lambda_2</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+    <span class="c1"># set objective function
+</span>    <span class="n">obj</span> <span class="o">=</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">j</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">N</span><span class="p">][</span><span class="n">j</span><span class="p">])))</span>
+    <span class="c1"># compute model
+</span>    <span class="n">model</span> <span class="o">=</span> <span class="n">obj</span> <span class="o">+</span> <span class="n">const</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">model</span>
+</code></pre></div></div>
+
+<h4 id="gen_symbols">gen_symbols()</h4>
+
+<p>変数配列を生成します。第一引数にBinaryPolyを指定するとバイナリ多項式を表現するためのバイナリ変数を、IsingPolyを指定するとスピン変数による多項式を表現するためのスピン変数を生成することができます。</p>
+
+<h4 id="equal_to">equal_to()</h4>
+
+<p>equal_toで等式制約を実装することができます。例えば</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">h1</span> <span class="o">=</span> <span class="p">[</span><span class="n">equal_to</span><span class="p">(</span><span class="n">sum_poly</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p>は以下の実装を行ったことと等価です。</p>
+
+\[\sum_{n} x_{ni} = 1 \quad (\forall i)\]
+
+<p>その他、Amplifyではless_equal(), greater_equal(), clamp()で不等式制約を簡単に表現することができます。</p>
+
+<h4 id="sum_poly">sum_poly()</h4>
+
+<p>sum_poly(N, f(n))は\(\sum_{n=0}^{N-1} f(n)\)を表す関数です。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">obj</span> <span class="o">=</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">sum_poly</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">j</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">N</span><span class="p">][</span><span class="n">j</span><span class="p">])))</span>
+</code></pre></div></div>
+
+<p>のようにlambda式を使ってf(n)部分を表現しています。</p>
+
+<h3 id="計算実行">計算実行</h3>
+
+<p>イジングマシンのクライアントを作成しパラメータを設定、そしてソルバーを作成しクライアントを設定することでモデル構築の部分で実装した問題を解くことができます。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">amplify</span> <span class="kn">import</span> <span class="n">Solver</span>
+<span class="kn">from</span> <span class="nn">amplify.client</span> <span class="kn">import</span> <span class="n">FixstarsClient</span>
+
+<span class="k">def</span> <span class="nf">solve_problem</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="c1"># set client and parameters
+</span>    <span class="n">client</span> <span class="o">=</span> <span class="n">FixstarsClient</span><span class="p">()</span>
+    <span class="n">client</span><span class="p">.</span><span class="n">token</span> <span class="o">=</span> <span class="s">"xxxxxxxxxxxxxxxxxxxx"</span>
+    <span class="n">client</span><span class="p">.</span><span class="n">parameters</span><span class="p">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">5000</span>
+    <span class="c1"># set solver
+</span>    <span class="n">solver</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+    <span class="c1"># get result
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="c1"># extract value of objective function and binary variables
+</span>    <span class="n">obj</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">energy</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">values</span>
+    <span class="c1"># get values of constraints
+</span>    <span class="n">broken</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">check_constraints</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">broken</span>
+</code></pre></div></div>
+
+<h4 id="client">client</h4>
+
+<p>クライアントにはFixstarsClient, DWaveClient, DWaveSamplerClient, LeapHybridSamplerClientなどを選択することができます。</p>
+
+<h4 id="solver">solver</h4>
+
+<p>soverメソッドにモデルを入力することで、指定されたclient上で計算が実行されます。</p>
+
+<h4 id="result">result</h4>
+
+<p>resultには制約を満たした解のリストが格納されています。もし制約を満たす解が得られなかった場合には、空のリストが返されます。実行可能解以外をフィルタする機能は、ソルバークラスのfilter_solutionをFalseにすることで無効化できます。energyでコスト関数(目的関数)の値を、valuesで入力変数の値を辞書で取得できます。</p>
+
+<h4 id="check_constraints">check_constraints</h4>
+
+<p>この関数の引数にvaluesを用いることで、その解がどの制約を満たしているか/どの制約を満たしていないかを確認することができます。実際の出力を以下に示します。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[((</span>q_0 + q_5 + q_10 + q_15 + q_20 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_1 + q_6 + q_11 + q_16 + q_21 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_2 + q_7 + q_12 + q_17 + q_22 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_3 + q_8 + q_13 + q_18 + q_23 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_4 + q_9 + q_14 + q_19 + q_24 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_0 + q_1 + q_2 + q_3 + q_4 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_5 + q_6 + q_7 + q_8 + q_9 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_10 + q_11 + q_12 + q_13 + q_14 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_15 + q_16 + q_17 + q_18 + q_19 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)</span>, <span class="o">((</span>q_20 + q_21 + q_22 + q_23 + q_24 <span class="o">==</span> 1.000000, 1<span class="o">)</span>, True<span class="o">)]</span>
+</code></pre></div></div>
+
+<p>Trueは制約が満たされているもの、Falseは制約が満たされていないものを表します。</p>
+
+<h3 id="解の解析">解の解析</h3>
+
+<p>上述までに得られたvaluesは入力変数と解の値のマッピングを表す辞書です。このままでは評価しづらいので、これをデコードします。Amplifyにもこの機能が備わっています。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x_sol</span> <span class="o">=</span> <span class="n">decode_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="使用してみた感想長所短所含む">使用してみた感想(長所・短所含む)</h2>
+
+<ul>
+  <li>PyQUBOと同じかそれ以上に簡単に最適化問題の実装ができる</li>
+  <li>不等式制約も簡単に実装できそう</li>
+  <li>LogEncIntegerなど無い機能もある(まだ私が見つけていないだけかもしれない、要チェック)</li>
+  <li>複雑な制約・目的関数(例えば和を計算するときの添字について\(i&gt;j, i\neq 0\)などがある場合)は記述が冗長になりそう？</li>
+  <li>どの制約が破れているのか見にくい(制約1つずつにラベルを割り当てることはできない？)</li>
+</ul>
+
+<h1 id="参考資料">参考資料</h1>
+
+<ul>
+  <li>[1] <a href="https://amplify.fixstars.com/">Amplify website</a></li>
+  <li>[2] <a href="https://amplify.fixstars.com/docs/index.html">Amplify document</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

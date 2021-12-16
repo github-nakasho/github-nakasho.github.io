@@ -2,7 +2,8 @@ title: 宇宙物理メモ
 description: An astrophysics and physics memo.
 twitter_username: tweet_nakasho
 github_username:  github-nakasho
-google_analytics: G-C550SVR5KQ
+ga_tracking: G-C550SVR5KQ
+ga_tracking_anonymize_ip: true
 theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 plugins:
@@ -11,4 +12,4 @@ souce: ./mds
 destination: ./docs
 domain: github-nakasho.github.io
 url: https://github-nakasho.github.io
-
+logo: /assets/images/logo.png

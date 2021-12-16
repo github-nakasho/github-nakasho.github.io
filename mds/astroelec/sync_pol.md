@@ -199,14 +199,14 @@ Q
 =\frac{2e^2 \omega^2}{c\omega_{\rm se}} \left( \frac{\beta}{n} J_{2n}' (2n\beta) + \int_0^{2n\beta} J_{2n} \left(\frac{1+\beta^2}{2n\beta} - \frac{2}{t} \right) dt \right) \tag{1}
 $$
 
-ここで第一項において[シンクロトロン放射のスペクトル]のときに現れた関係式
+ここで第一項において[シンクロトロン放射のスペクトル](/astroelec/sync_spectrum)のときに現れた関係式
 
 $$
 J_{2n}’(2n\beta) 
 = - \frac{\beta}{\sqrt{\pi}n^{2/3}}\Phi’(n^{2/3}(1-\beta^2))
 $$
 
-を用います。ここで$$\Phi$$は[エアリー関数](/math/modified_bessel_airy)です。さらにエアリー関数と修正ベッセル関数の関係式より
+を用います。ここで$$\Phi$$は[エアリー関数](/math/modified_bessel_airy)です。さらに[エアリー関数と修正ベッセル関数の関係式](/math/modified_bessel_airy)より
 
 $$
 \begin{align}
@@ -353,11 +353,13 @@ Q
 = \frac{\sqrt{3} e^3 B }{2m_e c^2 \pi }  \chi_0 K_{2/3} ( \chi_0 ) \tag{3}
 $$
 
-[シンクロトロン放射のスペクトル](/astroelec/sync_spectrum)のときと同様に、電子のエネルギー分布が
+のようになります。
 
 {% include adsense.html %}
 
 ## べき乗の電子分布からの放射の$$Q$$
+
+[シンクロトロン放射のスペクトル](/astroelec/sync_spectrum)のときと同様に、電子のエネルギー分布が
 
 $$
 N(\gamma) d\gamma 
@@ -398,7 +400,7 @@ Q_e
 \end{align}
 $$
 
-[ガンマ関数の公式](/math/gamma.md)より
+[ガンマ関数の公式](/math/gamma)より
 
 $$
 \Gamma \left( \frac{p}{4} + \frac{19}{12} \right) 
@@ -429,7 +431,7 @@ $$
 
 ## Faraday depolarization
 
-実はシンクロトロン放射が観測されている天体の多くでは、偏光度があまり大きくありません。この原因の1つにFaraday rotationがあります。観測者から見て天体の奥側で生成された放射は天体内を伝搬する間に強いFaraday rotationを受けます。一方で、観測者から見て天体の手前側で生成された放射はさほどFaraday rotationを受けません。結果として天体の奥側の放射の偏光方向と手前側の放射の偏光方向に大きなさが生じることとなります。途中で生成された放射の偏光方向はその間に分布し、これらを重ね合わせとして、お互いに打ち消しあった(偏光度が下がった)シンクロトロン放射が観測されます。これをFaraday depolarizationと呼びます。
+実はシンクロトロン放射が観測されている天体の多くでは、偏光度があまり大きくありません。この原因の1つにFaraday rotationがあります。観測者から見て天体の奥側で生成された放射は天体内を伝搬する間に強いFaraday rotationを受けます。一方で、観測者から見て天体の手前側で生成された放射はさほどFaraday rotationを受けません。結果として天体の奥側の放射の偏光方向と手前側の放射の偏光方向に大きな差が生じることとなります。途中で生成された放射の偏光方向はその間に分布し、これらを重ね合わせとして、お互いに打ち消しあった(偏光度が下がった)シンクロトロン放射が観測されます。これをFaraday depolarizationと呼びます。
 
 ![観測者から見て天体の奥側から来る放射と天体の手前側から来る放射のFaraday rotation](/assets/images/astroelec/sync_pol_02.png)
 

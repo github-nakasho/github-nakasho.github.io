@@ -8,4 +8,6 @@ plugins:
   - jekyll-feed
 souce: ./mds
 destination: ./docs
+domain: github-nakasho.github.io
+url: https://github-nakasho.github.io
 

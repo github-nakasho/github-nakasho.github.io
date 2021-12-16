@@ -22,10 +22,6 @@ permalink: /
 
 [@tweet_nakasho](https://twitter.com/tweet_nakasho){: .btn .btn-purple }
 
-こんなことをつぶやいております。
-
-{% twitter https://twitter.com/tweet_nakasho maxwidth=400 limit=3 %}
-
 ### Current Job
 
 2019/10-. [Jij Inc.](https://j-ij.com/ja/)で研究開発、[技術ブログ](https://jijtech.hatenablog.com/)作成

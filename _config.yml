@@ -7,4 +7,6 @@ theme: "just-the-docs"
 plugins:
   - jekyll-feed
   - jekyll-twitter-plugin
+souce: ./mds
+destination: ./docs
 

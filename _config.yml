@@ -3,7 +3,7 @@ description: An astrophysics and physics memo.
 twitter_username: tweet_nakasho
 github_username:  github-nakasho
 google_analytics: G-C550SVR5KQ
-theme: "just-the-docs"
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 souce: ./mds

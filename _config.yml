@@ -4,6 +4,7 @@ twitter_username: tweet_nakasho
 github_username:  github-nakasho
 google_analytics: G-C550SVR5KQ
 theme: "just-the-docs"
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 souce: ./mds

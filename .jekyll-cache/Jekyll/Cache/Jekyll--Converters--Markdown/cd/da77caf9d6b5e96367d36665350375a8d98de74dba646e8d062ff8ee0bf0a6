@@ -1,0 +1,279 @@
+I""f
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#m1-macでjekyll環境を設定からgithub-pagesに自作websiteをuploadするまで" id="markdown-toc-m1-macでjekyll環境を設定からgithub-pagesに自作websiteをuploadするまで">M1 MacでJekyll環境を設定からGitHub Pagesに自作websiteをuploadするまで</a>    <ol>
+      <li><a href="#jekyll環境構築" id="markdown-toc-jekyll環境構築">Jekyll環境構築</a>        <ol>
+          <li><a href="#xcodeのインストール" id="markdown-toc-xcodeのインストール">Xcodeのインストール</a></li>
+          <li><a href="#homebrewのインストール" id="markdown-toc-homebrewのインストール">Homebrewのインストール</a></li>
+          <li><a href="#ruby-rbenvのインストール" id="markdown-toc-ruby-rbenvのインストール">Ruby, Rbenvのインストール</a></li>
+          <li><a href="#jekyllのインストール" id="markdown-toc-jekyllのインストール">Jekyllのインストール</a></li>
+          <li><a href="#m1-macへの処方箋-jekyllの修正" id="markdown-toc-m1-macへの処方箋-jekyllの修正">M1 Macへの処方箋: Jekyllの修正</a></li>
+        </ol>
+      </li>
+      <li><a href="#github-pagesにアップロードする" id="markdown-toc-github-pagesにアップロードする">GitHub Pagesにアップロードする</a>        <ol>
+          <li><a href="#_configyml" id="markdown-toc-_configyml">_config.yml</a></li>
+          <li><a href="#actionのセットアップ" id="markdown-toc-actionのセットアップ">Actionのセットアップ</a></li>
+          <li><a href="#github-actions-に権限を与える" id="markdown-toc-github-actions-に権限を与える">GitHub Actions に権限を与える</a></li>
+          <li><a href="#ビルドとデプロイ" id="markdown-toc-ビルドとデプロイ">ビルドとデプロイ</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考リンク" id="markdown-toc-参考リンク">参考リンク</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="m1-macでjekyll環境を設定からgithub-pagesに自作websiteをuploadするまで">M1 MacでJekyll環境を設定からGitHub Pagesに自作websiteをuploadするまで</h1>
+
+<p>ここでは上述の通り、まずはM1 MacにJekyll環境を構築します。そのローカル環境でwebsiteが正しく作られていることを確認したのち、GitHub Pagesにそれをアップロードする方法までをメモしておきます。私の環境は以下の通りです。</p>
+
+<ul>
+  <li>OS: macOS Big Sur, Ver. 11.6</li>
+  <li>Chip: Apple M1</li>
+  <li>Shell: Zsh</li>
+  <li>インストールされたJekyll: 4.2.1</li>
+</ul>
+
+<h2 id="jekyll環境構築">Jekyll環境構築</h2>
+
+<h3 id="xcodeのインストール">Xcodeのインストール</h3>
+
+<p>まずは自分のMacに<a href="https://developer.apple.com/xcode/">Xcode</a>をインストールしましょう。App Storeでダウンロードしても大丈夫ですが、ここで必要となるのはコマンドラインツールです。以下のようにしてインストールすることができます。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
+
+<h3 id="homebrewのインストール">Homebrewのインストール</h3>
+
+<p>次に必要となるのは<a href="https://brew.sh/">Homebrew</a>です。Homebrewのwebsiteの手順通り、コマンドでインストールを行います。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% /bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h3 id="ruby-rbenvのインストール">Ruby, Rbenvのインストール</h3>
+
+<p>先程インストールしたHomebrewを用いてRubyと<code class="language-plaintext highlighter-rouge">rbenv</code>をインストールします。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% brew <span class="nb">install </span>rbenv ruby-build
+</code></pre></div></div>
+
+<p>ターミナルを開いたときにいつでもrbenvが使えるように、<code class="language-plaintext highlighter-rouge">.zshrc</code>に以下の文を加筆しましょう。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span>which rbenv <span class="o">&gt;</span> /dev/null<span class="p">;</span> <span class="k">then </span><span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>rbenv init -<span class="si">)</span><span class="s2">"</span><span class="p">;</span> <span class="k">fi</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">.zshrc</code>の変更を反映させます。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% <span class="nb">source</span> ~/.zshrc
+</code></pre></div></div>
+
+<p>続いて、このrbenvを用いて<code class="language-plaintext highlighter-rouge">Ruby 3.0.0</code>をインストールします。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rbenv <span class="nb">install </span>3.0.0
+% rbenv global 3.0.0
+% ruby <span class="nt">-v</span>
+<span class="c"># ruby 3.0.0などが表示されればOK</span>
+% rbenv rehash
+</code></pre></div></div>
+
+<p>Rubyとgemsのパスを通します。そのためには<code class="language-plaintext highlighter-rouge">.zshrc</code>に以下の文を加筆します。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>先程と同様に<code class="language-plaintext highlighter-rouge">source</code>コマンドでこの変更を反映させましょう。もしパスが通っているか確認したければ<code class="language-plaintext highlighter-rouge">% echo $SHELL</code>などで確認することができます。</p>
+
+<h3 id="jekyllのインストール">Jekyllのインストール</h3>
+
+<p>それでは<a href="http://jekyllrb-ja.github.io/">Jekyll</a>および<code class="language-plaintext highlighter-rouge">Bundler</code>をインストールしていきましょう。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% gem <span class="nb">install</span> <span class="nt">--user-install</span> bundler jekyll
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Jekyll</code>をどこからでも使えるように、以下の文を<code class="language-plaintext highlighter-rouge">.zshrc</code>に追加します。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem/ruby/3.0.0/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CAUTION: もしRubyのバージョンが違う場合は、3.0.0の部分を該当するバージョンに変更します。
+</code></pre></div></div>
+
+<p>今しがた追加したパスが通っているかは、以下のコマンドを入力したときに表示される<code class="language-plaintext highlighter-rouge">GEM PATHS:</code>項目を見ることで確認することができます。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% gem <span class="nb">env</span>
+</code></pre></div></div>
+
+<p>これでJekyllが使えるようになりました。それではJekyllのクイックスタートを実行してみましょう。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% gem <span class="nb">install </span>bundler jekyll
+% jekyll new good-looking-site
+% <span class="nb">cd </span>good-looking-site
+% bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>上の”good-looking-site”の部分は自分の好きなwebsiteプロジェクト名を入れます。しかしM1 Macを使用している場合、一番最後のコマンドでエラーとなるはずです。</p>
+
+<h3 id="m1-macへの処方箋-jekyllの修正">M1 Macへの処方箋: Jekyllの修正</h3>
+
+<p>ここで起きたエラーを解消するには<code class="language-plaintext highlighter-rouge">webrick</code>なるものを自分たちのプロジェクトに加えます。念のために<code class="language-plaintext highlighter-rouge">bundle</code>をアップデートして臨みましょう。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% bundle update <span class="nt">--bundler</span>
+% bundle add webrick
+% bundle <span class="nb">install</span> <span class="nt">--redonwload</span>
+</code></pre></div></div>
+
+<p>最後のコマンドは全て再構築することを確実に行うために実行します。もしエラーが出るようであれば成功するまで何度か実行します。
+そして</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>を行うと、ローカルでサーバーが立ち上がります。この状態で<code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000</code>などにアクセスすると、たった今Jekyllによって作成されたwebsiteを見ることができるはずです。　　</p>
+
+<p>もしこれで上手くいかない場合には、以下の手順を全て順番通りに実行すると良いでしょう。</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% gem uninstall sassc
+% gem <span class="nb">install </span>sassc <span class="nt">--</span> <span class="nt">--disable-march-tune-native</span>
+% gem uninstall ffi
+% gem <span class="nb">install </span>ffi
+% bundle update <span class="nt">--bundler</span>
+% bundle add webrick
+% bundle <span class="nb">install</span> <span class="nt">--redownload</span>
+% bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="github-pagesにアップロードする">GitHub Pagesにアップロードする</h2>
+
+<p>以下の文章は<a href="http://jekyllrb-ja.github.io/docs/continuous-integration/github-actions/">Jekyllの日本語公式website</a>に書かれたものに則って書かれています。しかし自分のつまづきポイントなども加えたオリジナル文章であるため、間違いもあるかもしれません。ご容赦ください。</p>
+
+<h3 id="_configyml">_config.yml</h3>
+
+<p>特に気をつけるところは、<code class="language-plaintext highlighter-rouge">GitHub Pages</code>に対応するために<code class="language-plaintext highlighter-rouge">remote theme</code>を設定することです。私がこのwebsiteに用いている<code class="language-plaintext highlighter-rouge">Just the Docs</code>というテーマプラグインでは、以下の一行を<code class="language-plaintext highlighter-rouge">_config.yml</code>に加筆します。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">pmarsceill/just-the-docs</span>
+</code></pre></div></div>
+
+<p>コロン以降の部分には(テーマプラグインのオーナー)/(プラグイン名)のような書式で書きます。もしこの設定を忘れると、GitHub Pagesにアップロードしたときに、GitHubに登録されているメールアドレス宛に以下のようなメールが送信されます。</p>
+
+<p><a href="/assets/images/pro/jekyll_01.png">GitHubから送信されたメール</a></p>
+
+<h3 id="actionのセットアップ">Actionのセットアップ</h3>
+
+<p>Jekyllで作成したwebsiteをGitHub Pagesで表示するには、<code class="language-plaintext highlighter-rouge">GitHub Actions</code>を用います。<code class="language-plaintext highlighter-rouge">Jekyll 3.9.0</code>であれば<code class="language-plaintext highlighter-rouge">Gemfile</code>内に2行ほど追加するだけで、GitHub Pages環境のための準びが調います。しかし最新のJekyllではこれに対応しておらず、<code class="language-plaintext highlighter-rouge">GitHub Actions</code>を用いた対応をする必要があります。<br />
+そのためには<code class="language-plaintext highlighter-rouge">_config.yml</code>と同じ場所に<code class="language-plaintext highlighter-rouge">.github/workflows</code>というディレクトリを作成し、その中に<code class="language-plaintext highlighter-rouge">github-pages.yml</code>というファイルを作成しましょう。ここには<code class="language-plaintext highlighter-rouge">GitHub Actions</code>が実際にGitHub上で行うワークフローを記述しておきます。私は以下のように記述したものを用いています。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build and Deploy to Github Pages</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">master</span>  <span class="c1"># Here source code branch is `master`, it could be other branch</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build_and_deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="c1"># Use GitHub Actions' cache to cache dependencies on servers</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v2</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">vendor/bundle</span>
+          <span class="na">key</span><span class="pi">:</span> <span class="s">$\{\{ runner.os }\}-gems-$\{\{ hashFiles('**/Gemfile.lock')\}\}</span>
+          <span class="na">restore-keys</span><span class="pi">:</span> <span class="pi">|</span>
+            <span class="s">$\{\{ runner.os \}\}-gems-</span>
+      <span class="c1"># Use GitHub Deploy Action to build and deploy to Github</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">jeffreytse/jekyll-deploy-action@v0.3.1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">provider</span><span class="pi">:</span> <span class="s1">'</span><span class="s">github'</span>
+          <span class="na">token</span><span class="pi">:</span> <span class="s">$\{\{ secrets.JEKYLL_PAT \}\}</span> <span class="c1"># It's your Personal Access Token(PAT)</span>
+          <span class="na">repository</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>             <span class="c1"># Default is current repository</span>
+          <span class="na">branch</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gh-pages'</span>         <span class="c1"># Default is gh-pages for github provider</span>
+          <span class="na">jekyll_src</span><span class="pi">:</span> <span class="s1">'</span><span class="s">./'</span>           <span class="c1"># Default is root directory</span>
+          <span class="na">jekyll_cfg</span><span class="pi">:</span> <span class="s1">'</span><span class="s">_config.yml'</span>  <span class="c1"># Default is _config.yml</span>
+          <span class="na">jekyll_baseurl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>         <span class="c1"># Default is according to _config.yml</span>
+          <span class="na">bundler_ver</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&gt;=0'</span>         <span class="c1"># Default is latest bundler version</span>
+          <span class="na">cname</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>                  <span class="c1"># Default is to not use a cname</span>
+          <span class="na">actor</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>                  <span class="c1"># Default is the GITHUB_ACTOR</span>
+          <span class="na">pre_build_commands</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>     <span class="c1"># Installing additional dependencies (Arch Linux)</span>
+</code></pre></div></div>
+
+<p>最も重要なのは、最後の方に記述されている<code class="language-plaintext highlighter-rouge">token: ${\{ secrets.JEKYLL_PAT \}\}</code>部分です。この<code class="language-plaintext highlighter-rouge">JEKYLL_PAT</code>という文字列は好きに変更しても構いませんが、その後の設定に変更が生じるので覚えておきましょう。</p>
+
+<p>最初の<code class="language-plaintext highlighter-rouge">on.schedule</code>にはビルドする時刻を指定します。ここでは毎時間ごとにビルドするようにワークフローを設定しています。<br />
+次の<code class="language-plaintext highlighter-rouge">on.push.branches</code>には、どのブランチが更新されたときにビルドを行うかを設定します。ここでは<code class="language-plaintext highlighter-rouge">master(main)</code>ブランチを指定しています。<br />
+途中の部分では<a href="https://github.com/jeffreytse/jekyll-deploy-action">JEKYLL DEPLOY ACTION</a>という、GitHub PagesにJekyllで作成したwebsiteのデプロイを行ってくれるActionを設定してくださったものを使用しています。</p>
+
+<h3 id="github-actions-に権限を与える">GitHub Actions に権限を与える</h3>
+
+<p>上で示した<code class="language-plaintext highlighter-rouge">.github/workflows/github-pages.yml</code>の設定では、<code class="language-plaintext highlighter-rouge">master</code>にpushされたJekyllのwebsiteを<code class="language-plaintext highlighter-rouge">gh-pages</code>ブランチにプッシュします。よってこれを行う権限をActionに与える必要があります。</p>
+
+<p>GitHub画面の右上にある自分のアイコンを押下し、<code class="language-plaintext highlighter-rouge">Settings</code>に移動します。</p>
+
+<p><a href="/assets/images/pro/jekyll_02.png">Settings</a></p>
+
+<p>下の方にある<code class="language-plaintext highlighter-rouge">Developer settings</code>に移動します。</p>
+
+<p><a href="/assets/images/pro/jekyll_03.png">Developer settings</a></p>
+
+<p><code class="language-plaintext highlighter-rouge">Personal access tokens</code>に移動し、<code class="language-plaintext highlighter-rouge">Generate new token</code>を押下してアクセストークンを発行します。</p>
+
+<p><a href="/assets/images/pro/jekyll_04.png">Access token</a></p>
+
+<p>Note部分には好きな名前(画像ではGitHub Actionsとなっています)を入力します。Expirationには、このトークンの有効期間を指定します。無期限で使用したい場合には<code class="language-plaintext highlighter-rouge">No expiration</code>を選びましょう。<br />
+ここで重要なのは、次のSelect scopesの部分です。ここではこのトークンを知っているものにどのような権限を与えるかなどを設定します。画像のように<code class="language-plaintext highlighter-rouge">repo</code>と<code class="language-plaintext highlighter-rouge">workflow</code>にチェックを入れてください。<br />
+最後に一番下のGenerate tokenボタンを押下して、トークンの発行手続きは終了です。するとトークンの文字列が出現するので、これをコピーしておきます。<br />
+次に、Jekyllで作成されたwebsiteが置いてあるリポジトリへ移動します(もし作成されていない場合は、これをpushしておいてください)。リポジトリの<code class="language-plaintext highlighter-rouge">Settings</code>-&gt;<code class="language-plaintext highlighter-rouge">Secrets</code>に移動し、<code class="language-plaintext highlighter-rouge">New repository secret</code>ボタンを押下してワークフローを登録します。</p>
+
+<p><a href="/assets/images/pro/jekyll_05.png">Secrets</a></p>
+
+<p>このとき<code class="language-plaintext highlighter-rouge">NAME</code>には、先程<code class="language-plaintext highlighter-rouge">.github/workflows/github-pages.yml</code>の<code class="language-plaintext highlighter-rouge">token: $</code>部分の<code class="language-plaintext highlighter-rouge">JEKILL_PAT</code>と同じ文字列を入力します。そして<code class="language-plaintext highlighter-rouge">Value</code>には先程コピーしておいたトークン文字列を貼り付けます。<br />
+これでトークンが紐づけられたactions secretsには<code class="language-plaintext highlighter-rouge">.github/workflows/github-pages.yml</code>を実行する権限が与えられ、ワークフローの途中でリポジトリにアクセスする権限まで与えられたことになります。</p>
+
+<h3 id="ビルドとデプロイ">ビルドとデプロイ</h3>
+
+<p>以上の設定が完了したのち、<code class="language-plaintext highlighter-rouge">master</code>上のローカル変更をpushすると、actionsが起動してビルドを開始します。進行状況の確認やビルドエラーを確認するためには1. commitを見る, 2. Actionsタブの2つの方法があります。</p>
+
+<p>Actionsタブを開くと以下のように、最近実行されたコミットやビルドが一覧で表示されます。ここをさらにクリックすればビルドメッセージを見ることが可能です。</p>
+
+<p><a href="/assets/images/pro/jekyll_06.png">Actions</a></p>
+
+<p>全てが上手く実行されれば緑色が表示されますが、どこかでエラーとなると赤色が表示されます。そして上の設定では、websiteに必要なhtmlファイルなどが<code class="language-plaintext highlighter-rouge">gh-pages</code>に作成されます。あとはリポジトリの<code class="language-plaintext highlighter-rouge">Settings</code>-&gt;<code class="language-plaintext highlighter-rouge">Pages</code>でGitHub Pagesの設定を行うだけです。</p>
+
+<h1 id="参考リンク">参考リンク</h1>
+
+<ul>
+  <li>[1] <a href="https://colingallagher.me/webdev/2021/04/15/installing-jekyll-apple-m1-mac/">Installing Jekyll on an Apple M1 Mac</a></li>
+  <li>[2] <a href="https://github.com/jekyll/jekyll/issues/8576#issuecomment-798080994">Can’t install Jekyll on Mac OS Big Sur (Apple Silicon M1)</a></li>
+  <li>[3] <a href="http://jekyllrb-ja.github.io/docs/continuous-integration/github-actions/">Jekyll, GitHub Actions</a></li>
+  <li>[4] <a href="https://github.com/jeffreytse/jekyll-deploy-action">JEKYLL DEPLOY ACTION</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

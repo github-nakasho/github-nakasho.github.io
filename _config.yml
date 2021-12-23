@@ -13,3 +13,10 @@ destination: ./docs
 domain: github-nakasho.github.io
 url: https://github-nakasho.github.io
 logo: /assets/images/logo.png
+thumbnail: /assets/images/logo.png
+heading_anchors: true
+footer_content: "Copyright &copy; Sho NAKAMURA"
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
+color_scheme: for_astrophysics
+

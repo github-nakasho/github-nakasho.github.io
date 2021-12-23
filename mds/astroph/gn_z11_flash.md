@@ -4,7 +4,7 @@ title: GN-z11-flashまとめ
 parent: astroph
 math: mathjax3
 permalink: /astroph/gn_z11_flash
-nav_order: 2
+nav_order: 3
 ---
 
 {: .no_toc }

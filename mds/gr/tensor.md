@@ -44,7 +44,7 @@ $$
 = (\partial_\mu A_\alpha)B_\beta - A_\nu \Gamma^\nu_{\mu \alpha} B_\beta + A_\alpha (\partial_\mu B_\beta) - A_\alpha B_\nu \Gamma^\nu_{\mu \beta} \\
 &= \partial_\mu (A_\alpha B_\beta) - \Gamma^\nu_{\mu \alpha} A_\nu B_\beta - \Gamma^\nu_{\mu \beta} A_\alpha B_\nu \ \Longrightarrow \
 \therefore \ \nabla_\mu T_{\alpha \beta} 
-= \partial T_{\alpha \beta} \Gamma^\nu_{\mu \alpha} T_{\nu \beta} - \Gamma^\nu_{\mu \beta} T_{\alpha \nu}
+= \partial_\mu T_{\alpha \beta} - \Gamma^\nu_{\mu \alpha} T_{\nu \beta} - \Gamma^\nu_{\mu \beta} T_{\alpha \nu}
 \end{aligned}
 $$
 

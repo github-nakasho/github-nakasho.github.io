@@ -1,0 +1,144 @@
+I"� 
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#リーマンテンソル" id="markdown-toc-リーマンテンソル">リーマンテンソル</a>    <ol>
+      <li><a href="#リーマンテンソルの計算" id="markdown-toc-リーマンテンソルの計算">リーマンテンソルの計算</a></li>
+      <li><a href="#リーマンテンソルの公式" id="markdown-toc-リーマンテンソルの公式">リーマンテンソルの公式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="リーマンテンソル">リーマンテンソル</h1>
+
+<h2 id="リーマンテンソルの計算">リーマンテンソルの計算</h2>
+
+<p><img src="/assets/images/gr/riemann.png" alt="リーマンテンソルの考え方" /></p>
+
+<p>上図のような曲面でのベクトルの平行移動とその差分を考えましょう。</p>
+
+\[d_1 {\bf E} 
+= \frac{\mathbf{E} (A \rightarrow B) - \mathbf{E}(A)}{\delta x^1}\]
+
+\[d_2 {\bf E} 
+= \frac{\mathbf{E} (A \rightarrow D) - \mathbf{E}(A)}{\delta x^2}\]
+
+<p>\(d_1\)は上図の横方向への平行移動をしたときの差分、\(d_2\)は上図の縦方向への平行移動をしたときの差分を表します。これらから、2方向への平行移動を考えましょう。</p>
+
+\[d_2 d_1 {\bf E} = \frac{({\bf E}(A\rightarrow B \rightarrow C) - {\bf E}(A\rightarrow B))-({\bf E}(A\rightarrow B) - {\bf E}(A))}{\delta x^2 \delta x^1}\]
+
+\[d_1 d_2 {\bf E} = \frac{({\bf E}(A\rightarrow D \rightarrow C) - {\bf E}(A\rightarrow D))-({\bf E}(A\rightarrow D) - {\bf E}(A))}{\delta x^1 \delta x^2}\]
+
+<p>さらにこの差分をとると</p>
+
+\[d_2 d_1 {\bf E} - d_1 d_2 {\bf E} 
+= \frac{\mathbf{E}(A\rightarrow B \rightarrow C) - \mathbf{E}(A\rightarrow D \rightarrow C)}{\delta x^1 \delta x^2} 
+\neq {\bf 0}\]
+
+<p>となります。これは同じA地点にある同じベクトルを違う経路で曲面上を平行移動すると、違うベクトルになることを意味します。これは空間の曲がり具合を表現していると考えられます。よって交換関係</p>
+
+\[[\nabla_\mu, \nabla_\nu] 
+= \nabla_\mu \nabla_\nu - \nabla_\nu \nabla_\mu\]
+
+<p>をベクトルに作用させたものを</p>
+
+\[[\nabla_\mu, \nabla_\nu] A^\alpha 
+\equiv R^\alpha_{\gamma \mu \nu} A^\gamma \tag{1}\]
+
+<p>の\(R\)をリーマンテンソルと定義します。先ほども記述したとおり、このリーマンテンソルは空間の曲がり具合を表現するものです。<br />
+計算を進める前に便利な公式を導出しましょう。<a href="/gr/derivative">反変ベクトルと共変ベクトルの共偏微分</a>より</p>
+
+\[\nabla_\mu (A_\alpha B^\beta) 
+&amp;= B^\beta (\nabla_\mu A_\alpha) + A_\alpha (\nabla_\mu B^\beta) 
+= B^\beta (\partial_\mu A_\alpha - A_\gamma \Gamma^\gamma_{\alpha \mu}) + A_\alpha (\partial_\mu B^\beta + B^\gamma \Gamma^\beta_{\mu \gamma}) \\
+&amp;= \partial_\mu (A_\alpha B^\beta) - \Gamma^\gamma_{\alpha \mu} (A_\gamma B^\beta) + \Gamma^\beta_{\mu \gamma} (A_\alpha B^\gamma)\]
+
+<p>これを用いて</p>
+
+\[\begin{aligned}
+(左辺) 
+&amp;= \nabla_\mu \nabla_\nu A^\alpha -\nabla_\nu \nabla_\mu A^\alpha 
+= \partial_\mu (\nabla_\nu A^\alpha) - \Gamma^\gamma_{\mu \nu} \nabla_\gamma A^\alpha + \Gamma^\alpha_{\mu \gamma} \nabla_\nu A^\gamma - \partial_\nu (\nabla_\mu A^\alpha) + \Gamma^\gamma_{\nu \mu} \nabla_\gamma A^\alpha - \Gamma^\alpha_{\nu \gamma} \nabla_\mu A^\gamma \\
+&amp;= \partial_\mu (\partial_\nu A^\alpha + \Gamma^\alpha_{\nu \gamma} A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - \partial_\nu (\partial_\mu A^\alpha + \Gamma^\alpha_{\mu \gamma} A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\mu \beta} A^\beta) \\
+&amp;= A^\gamma (\partial_\mu \Gamma^\alpha_{\nu \gamma}) + \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) + \Gamma^\alpha_{\mu \gamma} \Gamma^\gamma_{\nu \beta} A^\beta - A^\gamma (\partial_\nu \gamma^\alpha_{\mu \gamma}) - \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\nu A^\gamma) - \Gamma^\alpha_{\nu \gamma} \Gamma^\gamma_{\mu \beta} A^\beta \\
+&amp;= A^\gamma (\partial_\mu \Gamma^\alpha_{\nu \gamma}) + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma - A^\gamma (\partial_\nu \Gamma^\alpha_{\mu \gamma}) - \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\mu \gamma} A^\gamma
+\end{aligned}\]
+
+<p>\(A^\gamma\)は任意のベクトルなので、恒等的に</p>
+
+\[R^\alpha_{\gamma \mu \nu} 
+= \partial_\mu \Gamma^\alpha_{\nu \gamma} + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} – \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\nu \gamma}\]
+
+<p>が成立します。特に局所慣性系では\(\Gamma = 0\)より</p>
+
+\[\bar{R}^\alpha_{\gamma \mu \nu} 
+= \bar{\partial_\mu} \bar{\Gamma^\alpha_{\nu \gamma}} - \bar{\partial_\nu} \bar{\Gamma}^\alpha_{\mu \gamma}\]
+
+<p>交換関係をスカラー\(\phi\)に作用させると</p>
+
+\[[\nabla_\mu, \nabla_\nu] \phi = 0\]
+
+<p>これはスカラーに向きがなく、曲面の平行移動に関係なく存在する値だ彼です。これより</p>
+
+\[\begin{aligned}
+&amp;[\nabla_\mu, \nabla_\nu] (A^\alpha B_\alpha) = ([\nabla_\mu, \nabla_\nu] A^\alpha) B_\alpha + A^\alpha ([\nabla_\mu, \nabla_\nu] B_\alpha) 
+= 0 
+= R^\alpha_{\gamma \mu \nu} A^\gamma B_\alpha + A^\alpha ([\nabla_\mu, \nabla_\mu] B_\alpha) \\
+&amp;\Longrightarrow \ A^\alpha ([\nabla_\mu, \nabla_\nu]B_\alpha) = - R^\gamma_{\alpha \mu \nu} A^\alpha B_\gamma
+\end{aligned}\]
+
+<p>\(A^\alpha\)は任意のベクトルなので</p>
+
+\[[\nabla_\mu, \nabla_\nu] B_\alpha = - R^\gamma_{\alpha \mu \nu} B_\gamma\]
+
+<h2 id="リーマンテンソルの公式">リーマンテンソルの公式</h2>
+
+<p>計量テンソルを用いて添字の上げ下げを行います。</p>
+
+\[R_{\alpha \gamma \mu \nu} = g_{\alpha \sigma} R^\sigma_{\ \gamma \mu \nu}\]
+
+<p>局所慣性系では</p>
+
+\[\begin{aligned}
+R_{\sigma \gamma \mu \nu} 
+&amp;= \eta_{\alpha \sigma} (\partial_\mu \Gamma^\sigma_{\nu \gamma} -\partial_\nu \Gamma^\sigma_{\mu \gamma})
+= \eta_{\alpha \sigma} \frac{1}{2} \partial_\mu (\eta^{\sigma \rho} (\eta_{\rho \nu, \gamma}+ \eta_{\rho \gamma, \nu} - \eta_{\nu \gamma, \rho})) + \eta_{\alpha \sigma} \frac{1}{2} \partial_\nu (\eta^{\sigma \rho} (\eta_{\rho \mu, \gamma} + \eta_{\rho \gamma, \mu}- \eta_{\mu \gamma, \rho})) \\
+&amp;= \frac{1}{2} \sigma^\rho_\alpha (\eta_{\rho \nu, \gamma \mu}-\eta_{\nu \gamma, \rho \mu} - \eta_{\rho \mu, \gamma \nu} + \eta_{\mu \gamma, \rho \nu}) 
+= \frac{1}{2} (\eta_{\alpha \nu, \gamma \mu} - \eta_{\nu \gamma, \alpha \mu} - \eta_{\alpha \mu, \gamma \nu} + \eta_{\mu \gamma, \alpha \nu})
+\end{aligned}\]
+
+<p>ここで\(\eta_{\rho \nu, \gamma \mu} = \partial_\mu \partial_\gamma \eta_{\rho \nu}\)のような記法を用いました。<br />
+これより</p>
+
+\[R_{\mu \nu \alpha \gamma} 
+= \frac{1}{2} (\eta_{\mu \gamma, \nu \alpha} - \eta_{\gamma \nu, \mu \alpha} - \eta_{\mu \alpha, \nu \gamma} + \eta_{\alpha \nu, \mu \gamma}) 
+= R_{\alpha \gamma \mu \nu}\]
+
+\[R_{\alpha \gamma \mu \nu} 
+= \frac{1}{2} (\eta_{\gamma \nu, \alpha \mu} - \eta_{\nu \alpha, \gamma \mu} - \eta_{\gamma \mu, \alpha \nu} + \eta_{\mu \alpha, \gamma \nu}) 
+= - R_{\alpha \gamma \nu \mu}\]
+
+\[R_{\alpha \gamma \nu \mu} = R_{\nu \mu \alpha \gamma} = - R_{\mu \nu \alpha \gamma} = - R_{\alpha \gamma \mu \nu}\]
+
+<p>が成立します。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

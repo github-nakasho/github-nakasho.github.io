@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 反変ベクトル・ベクトル
+title: 反変ベクトルと共変ベクトル
 parent: 一般相対性理論
 math: mathjax3
 permalink: /gr/vector

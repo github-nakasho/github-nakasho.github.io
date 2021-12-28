@@ -67,19 +67,31 @@ $$
 
 $$
 [\nabla_\mu, \nabla_\nu] A^\alpha 
-\equiv R^\alpha_{\gamma \mu \nu} A^\gamma
+\equiv R^\alpha_{\gamma \mu \nu} A^\gamma \tag{1}
 $$
 
-の$$R$$をリーマンテンソルと定義します。先ほども記述したとおり、このリーマンテンソルは空間の曲がり具合を表現するものです。
+の$$R$$をリーマンテンソルと定義します。先ほども記述したとおり、このリーマンテンソルは空間の曲がり具合を表現するものです。  
+計算を進める前に便利な公式を導出しましょう。[反変ベクトルと共変ベクトルの共偏微分](/gr/derivative)より
+
+$$
+\begin{aligned}
+\nabla_\mu (A_\alpha B^\beta) 
+&= B^\beta (\nabla_\mu A_\alpha) + A_\alpha (\nabla_\mu B^\beta) 
+= B^\beta (\partial_\mu A_\alpha - A_\gamma \Gamma^\gamma_{\alpha \mu}) + A_\alpha (\partial_\mu B^\beta + B^\gamma \Gamma^\beta_{\mu \gamma}) \\
+&= \partial_\mu (A_\alpha B^\beta) - \Gamma^\gamma_{\alpha \mu} (A_\gamma B^\beta) + \Gamma^\beta_{\mu \gamma} (A_\alpha B^\gamma)
+\end{aligned}
+$$
+
+これを用いて
 
 $$
 \begin{aligned}
 (左辺) 
-&= \nabla_\mu \nabla_\nu A^\alpha \nabla_\nu \nabla_\mu A^\alpha 
-= \partial_\mu (\nabla_\nu A^\alpha) - \Gamma^\gamma_{\mu \nu} \nabla_\gamma A^\alpha + \Gamma^\alpha_{\mu \gamma} \nabla_\nu A^\alpha - \partial_\nu (\nabla_\mu A^\alpha) + \Gamma^\gamma_{\nu \mu} \nabla_\gamma A^\alpha - \Gamma^\alpha_{\nu \gamma} \nabla_\mu A^\alpha \\
-&= \partial_\mu (\partial_\nu A^\alpha + \Gamma^\alpha_{\nu \gamma} A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - \partial_\nu (\partial_\mu A^\alpha + \Gamma^\alpha_{\mu \gamma} A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) \\
-&= (\partial_\mu \Gamma^\alpha_{\nu \gamma} )A^\gamma + \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma) + \Gamma^\alpha_{\mu \nu} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - (\partial_\nu \Gamma^\alpha_{\mu \gamma}) A^\gamma - \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) \\
-&= (\partial_\mu \Gamma^\alpha_{\nu \gamma} )A^\gamma + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma) - (\partial_\nu \Gamma^\alpha_{\mu \gamma}) A^\gamma - \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma
+&= \nabla_\mu \nabla_\nu A^\alpha -\nabla_\nu \nabla_\mu A^\alpha 
+= \partial_\mu (\nabla_\nu A^\alpha) - \Gamma^\gamma_{\mu \nu} \nabla_\gamma A^\alpha + \Gamma^\alpha_{\mu \gamma} \nabla_\nu A^\gamma - \partial_\nu (\nabla_\mu A^\alpha) + \Gamma^\gamma_{\nu \mu} \nabla_\gamma A^\alpha - \Gamma^\alpha_{\nu \gamma} \nabla_\mu A^\gamma \\
+&= \partial_\mu (\partial_\nu A^\alpha + \Gamma^\alpha_{\nu \gamma} A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - \partial_\nu (\partial_\mu A^\alpha + \Gamma^\alpha_{\mu \gamma} A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\mu \beta} A^\beta) \\
+&= A^\gamma (\partial_\mu \Gamma^\alpha_{\nu \gamma}) + \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) + \Gamma^\alpha_{\mu \gamma} \Gamma^\gamma_{\nu \beta} A^\beta - A^\gamma (\partial_\nu \gamma^\alpha_{\mu \gamma}) - \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma) - \Gamma^\alpha_{\nu \gamma} \Gamma^\gamma_{\mu \beta} A^\beta \\
+&= A^\gamma (\partial_\mu \Gamma^\alpha_{\nu \gamma}) + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma - A^\gamma (\partial_\nu \Gamma^\alpha_{\mu \gamma}) - \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\mu \gamma} A^\gamma
 \end{aligned}
 $$
 
@@ -87,7 +99,7 @@ $$A^\gamma$$は任意のベクトルなので、恒等的に
 
 $$
 R^\alpha_{\gamma \mu \nu} 
-= \partial_\mu \Gamma^\alpha_{\nu \gamma} + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} – \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\nu \gamma}
+= \partial_\mu \Gamma^\alpha_{\nu \gamma} + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} – \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma}
 $$
 
 が成立します。特に局所慣性系では$$\Gamma = 0$$より
@@ -103,7 +115,7 @@ $$
 [\nabla_\mu, \nabla_\nu] \phi = 0
 $$
 
-これはスカラーに向きがなく、曲面の平行移動に関係なく存在する値だ彼です。これより
+これはスカラーに向きがなく、曲面の平行移動に関係なく存在する値だからです。これより
 
 $$
 \begin{aligned}

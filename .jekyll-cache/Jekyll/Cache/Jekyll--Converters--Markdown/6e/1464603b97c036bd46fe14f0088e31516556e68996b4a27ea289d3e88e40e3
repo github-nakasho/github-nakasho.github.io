@@ -1,4 +1,4 @@
-I"f
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -61,11 +61,10 @@
 
 \[\begin{aligned}
 (左辺) 
-&amp;= \nabla_\mu \nabla_\nu A^\alpha \nabla_\nu \nabla_\mu A^\alpha 
-= \partial_\mu (\nabla_\nu A^\alpha) - \Gamma^\gamma_{\mu \nu} \nabla_\gamma A^\alpha + \Gamma^\alpha_{\mu \gamma} \nabla_\nu A^\alpha - \partial_\nu (\nabla_\mu A^\alpha) + \Gamma^\gamma_{\nu \mu} \nabla_\gamma A^\alpha - \Gamma^\alpha_{\nu \gamma} \nabla_\mu A^\alpha \\
-&amp;= \partial_\mu (\partial_\nu A^\alpha + \Gamma^\alpha_{\nu \gamma} A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - \partial_\nu (\partial_\mu A^\alpha + \Gamma^\alpha_{\mu \gamma} A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) \\
-&amp;= (\partial_\mu \Gamma^\alpha_{\nu \gamma} )A^\gamma + \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma) + \Gamma^\alpha_{\mu \nu} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - (\partial_\nu \Gamma^\alpha_{\mu \gamma}) A^\gamma - \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) \\
-&amp;= (\partial_\mu \Gamma^\alpha_{\nu \gamma} )A^\gamma + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma) - (\partial_\nu \Gamma^\alpha_{\mu \gamma}) A^\gamma - \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\nu \gamma} A^\gamma
+&amp;= \nabla_\mu \nabla_\nu A^\alpha -\nabla_\nu \nabla_\mu A^\alpha 
+= \partial_\mu (\nabla_\nu A^\alpha) - \Gamma^\gamma_{\mu \nu} \nabla_\gamma A^\alpha + \Gamma^\alpha_{\mu \gamma} \nabla_\nu A^\gamma - \partial_\nu (\nabla_\mu A^\alpha) + \Gamma^\gamma_{\nu \mu} \nabla_\gamma A^\alpha - \Gamma^\alpha_{\nu \gamma} \nabla_\mu A^\gamma \\
+&amp;= \partial_\mu (\partial_\nu A^\alpha + \Gamma^\alpha_{\nu \gamma} A^\gamma) + \Gamma^\alpha_{\mu \gamma} (\partial_\nu A^\gamma + \Gamma^\gamma_{\nu \beta} A^\beta) - \partial_\nu (\partial_\mu A^\alpha + \Gamma^\alpha_{\mu \gamma} A^\gamma) - \Gamma^\alpha_{\nu \gamma} (\partial_\mu A^\gamma + \Gamma^\gamma_{\mu \beta} A^\beta) \\
+&amp;= 
 \end{aligned}\]
 
 <p>\(A^\gamma\)は任意のベクトルなので、恒等的に</p>

@@ -7,7 +7,7 @@ permalink: /
 
 {% include adsense.html %} 
 
-# About
+# 宇宙物理メモ
 
 このwebsiteはgithub-nakashoが運営するwebsiteです。
 主に物理、宇宙物理、数学、プログラミングの勉強メモを掲載しています。

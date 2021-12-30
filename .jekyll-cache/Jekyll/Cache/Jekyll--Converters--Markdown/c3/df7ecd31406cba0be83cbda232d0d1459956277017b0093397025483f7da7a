@@ -1,0 +1,106 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ルジャンドル多項式" id="markdown-toc-ルジャンドル多項式">ルジャンドル多項式</a>    <ol>
+      <li><a href="#母関数展開からの導出" id="markdown-toc-母関数展開からの導出">母関数展開からの導出</a></li>
+      <li><a href="#ロドリゲスの公式" id="markdown-toc-ロドリゲスの公式">ロドリゲスの公式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ルジャンドル多項式">ルジャンドル多項式</h1>
+
+<h2 id="母関数展開からの導出">母関数展開からの導出</h2>
+
+<p>母関数展開</p>
+
+\[\frac{1}{\sqrt{1-2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(z) w^n \tag{1}\]
+
+<p>によって定義される\(P_n(z)\)をルジャンドル多項式と呼びます。\(X = 2zw - w^2\)とおいて、左辺を\(X=0\)の周りでTaylor展開すると</p>
+
+\[\begin{align}
+\frac{1}{\sqrt{1-X}} 
+&amp;= 1 + \frac{1}{2} X + \frac{1}{2!} \frac{1}{2} \frac{3}{2} X^2 + \frac{1}{3!} \frac{1}{2} \frac{3}{2} \frac{5}{2} X^3 + \cdots + \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} X^m + \cdots \notag \\
+&amp;= \sum_{m=0}^\infty \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} X^m \tag{2}
+\end{align}\]
+
+<p>のようになります。一方</p>
+
+\[X^m 
+= (2zw - w^2)^m 
+= \sum_{\ell=0}^m {}_\ell C_{m-\ell} (2zw)^\ell (-w^2)^{m-\ell} 
+= \sum_{\ell=0}^m \frac{(-1)^{m-\ell} m!}{\ell ! (m-\ell)!} (2z)^\ell w^{2m-\ell} \tag{3}\]
+
+<p>より、これを(2)式に代入すると</p>
+
+\[\begin{align}
+\frac{1}{\sqrt{1-2zw+w^2}} 
+&amp;= \sum_{m=0}^\infty \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} \sum_{\ell =0}^m \frac{(-1)^{m-\ell} m!}{\ell ! (m-\ell)!} (2z)^\ell w^{2m-\ell} \notag \\
+&amp;= \sum_{m=0}^\infty \sum_{\ell=0}^m \frac{(2m)!}{2^m m!} \frac{1}{2^{m-\ell}} \frac{(-1)^{m-\ell}}{\ell ! (m-\ell)!} z^\ell w^{2m-\ell} \tag{4}
+\end{align}\]
+
+<p>となります。ここで\(n = 2m-\ell, \ell=n-2k\)のようにパラメータを変換し、\(\ell, m\)を消去することを考えましょう。すると\(n = k+m\)であり、さらに\(\ell\)についての総和を取る範囲が</p>
+
+\[0 \leq \ell \leq m \ \Longrightarrow \ 
+0 \leq n - 2k \leq n-2k \ \Longrightarrow \ 
+2k \leq n \leq n+k \tag{5}\]
+
+<p>のようになります。これより\(k\)に対して\(n \geq 2k, k\geq 0\)という条件を得ることができます。すると(4)式は</p>
+
+\[\frac{1}{\sqrt{1-2zw+w^2}} 
+= \sum_{n=0}^\infty \sum_{k=0}^{[n/2]} \frac{(2n-2k)!}{2^{n-k} (n-k)!} \frac{1}{2^k} \frac{(-1)^k}{(n-2k)! k!} z^{n-2k} w^n 
+= \sum_{n=0}^\infty \sum_{k=0}^{[n/2]} \frac{(2n-2k)!}{2^n (n-k)!} \frac{(-1)^k}{(n-2k)! k!} z^{n-2k} w^n \tag{6}\]
+
+<p>途中の\([n/2]\)は\(n/2\)を超えない整数を表すガウス記号です。以上より(6)式と(1)式を比較して</p>
+
+\[P_n (z) 
+= \frac{1}{2^n} \sum_{k=0}^{[n/2]} \frac{(-1)^k (2n-2k)!}{k! (n-k)! (n-2k)!} z^{n-2k} \tag{7}\]
+
+<p>とわかります。</p>
+
+<h2 id="ロドリゲスの公式">ロドリゲスの公式</h2>
+
+<p>これの別表記を考えていきましょう。</p>
+
+\[(z^2-1)^n 
+= \sum_{k=0}^n {}_k C_{n-k} (-1)^k z^{2(n-k)} 
+= \sum_{k=0}^n \frac{n!}{k! (n-k)!} (-1)^k z^{2(n-k)} \tag{8}\]
+
+<p>この両辺の\(z\)の\(n\)階微分を考えると</p>
+
+\[\frac{d^n}{dz^n} (z^2-1)^n 
+= \sum_{k=0}^n \frac{n!}{k! (n-k)!} (-1)^k \frac{d^n}{dz^n} z^{2(n-k)} 
+= \sum_{k=0}^{[n/2]} \frac{n!}{k! (n-k)!} (-1)^k \frac{1}{(2n-2k) (2n-2k-1) \cdots (2n-2k-n+1)} z^{n-2k} 
+= \sum_{k=0}^{[n/2]} \frac{n!}{k! (n-k)!} (-1)^k (2n-2k) (2n-2k-1) \cdots (2n-2k-n+1) z^{n-2k}
+= \sum_{k=0}^{[n/2]} \frac{n!}{k! (n-k)!} (-1)^k \frac{(2n-2k)!}{(2n-2k-n)!} z^{n-2k}
+= n! \sum_{k=0}^{[n/2]} \frac{(-1)^k (2n-2k)!}{k! (n-k)! (n-2k)!} z^{n-2k} z^{n-2k} \tag{9}\]
+
+<p>これと(7)式を比較すると</p>
+
+\[P_n(z) 
+= \frac{1}{2^n n!} \frac{d}{dz^n} (z^2-1)^n \tag{10}\]
+
+<p>となります。これをRodriguesの公式と呼びます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

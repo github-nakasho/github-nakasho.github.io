@@ -1,0 +1,144 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#カーブラックホール時空を厳密性は省いて求める" id="markdown-toc-カーブラックホール時空を厳密性は省いて求める">カー・ブラックホール時空を(厳密性は省いて)求める</a>    <ol>
+      <li><a href="#ミンコフスキー時空のボイヤーリンキスト座標表現" id="markdown-toc-ミンコフスキー時空のボイヤーリンキスト座標表現">ミンコフスキー時空のボイヤー・リンキスト座標表現</a></li>
+      <li><a href="#測地線方程式と粒子のラグランジアン" id="markdown-toc-測地線方程式と粒子のラグランジアン">測地線方程式と粒子のラグランジアン</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<p class="label label-yellow">現在作成中、今後更新予定です。</p>
+
+<h1 id="カーブラックホール時空を厳密性は省いて求める">カー・ブラックホール時空を(厳密性は省いて)求める</h1>
+
+<p>ここでは\(z\)軸を回転軸として自転している、Kerrメトリックの導出方法について記述します。</p>
+
+<p class="label label-yellow">タイトルから分かる通り、数学的な厳密性は保証されていません。ご注意ください。</p>
+
+<h2 id="ミンコフスキー時空のボイヤーリンキスト座標表現">ミンコフスキー時空のボイヤー・リンキスト座標表現</h2>
+
+<p>まずはMinkowski時空を考えます。</p>
+
+\[ds^2 
+= -c^2 dt^2 + dx^2 + dy^2 + dz^2 \tag{1}\]
+
+<p>これを以下のような楕円体の座標(Boyer-Lindquist座標)に変換しましょう。</p>
+
+\[\left\{
+\begin{array}{l}
+x = \sqrt{r^2 + a^2} \sin \theta \cos \varphi \\
+y = \sqrt{r^2 + a^2} \sin \theta \sin \varphi \\
+z = r \cos \varphi
+\end{array}
+\right. \tag{2}\]
+
+<p>ここで\(a\)は定数です。すると</p>
+
+\[\left\{
+\begin{array}{l}
+dx = \frac{r}{(r^2 + a^2)^{3/2}} \sin \theta \cos \varphi dr + (r^2 + a^2)^{1/2} \cos \theta \cos \varphi d\theta + (r^2 + a^2)^{1/2} \sin \theta (-\sin \varphi) d\varphi\\
+dy = \frac{r}{(r^2 + a^2)^{3/2}} \sin \theta \sin \varphi dr + (r^2 + a^2)^{1/2} \cos \theta \sin \varphi d\theta + (r^2 + a^2)^{1/2} \sin \theta \cos \varphi d\varphi\\
+dz = \cos \theta dr - r \sin \theta d\theta
+\end{array}
+\right. \tag{3}\]
+
+<p>これらより</p>
+
+\[dx^2 + dy^2 + dz^2 
+= \frac{\rho^2}{r^2 + a^2} dr^2 + \rho^2 d\theta + \rho^2 \sin^2 \theta d\varphi^2 \tag{4}\]
+
+<p>ここで\(\rho^2 \equiv r^2 + a^2 \cos^2 \theta\)です。(1)式と合わせると、このままでは\(g_{tt} g_{rr}=-1\)のようにならずに、見通しが悪いことがわかります(Minkowskiメトリックや<a href="/gr/schwarzschild">Schwarzschildメトリック</a>を参照)。よって、これをさらに以下のように変形します。</p>
+
+\[ds^2 
+= -B (cdt - a \sin^2 \theta d\varphi)^2 + C \{ (r^2 + a^2) d\varphi - a c dt\}^2 + \frac{\rho^2}{r^2 + a^2} dr^2 + \rho^2 d\theta \tag{5}\]
+
+<p>先程の議論から、\(B=\frac{r^2 + a^2}{\rho^2}\)となるように\(C\)を定めると、\(C = \frac{\sin^2 \theta}{\rho^2}\)となります。よって</p>
+
+\[ds^2 = - \frac{r^2 + a^2}{\rho^2} db^2 + \frac{\rho^2}{r^2 + a^2} dr^2 + \rho^2 d\theta^2 + \frac{\sin^2 \theta}{\rho^2} d\phi \tag{6}\]
+
+<p>ここで\(db =cdt - a \sin^2 \theta d\varphi, d\phi =(r^2 + a^2) d\varphi - a c dt\)のように置換しました。</p>
+
+<h2 id="測地線方程式と粒子のラグランジアン">測地線方程式と粒子のラグランジアン</h2>
+
+<p>ここまではMinkowskiメトリックに座標変換を施しただけであって、質量\(M\)の物体による重力場を考慮してはいません。ここで<a href="/gr/schwarzschild">Schwarzschildメトリック</a>を思い出してみると</p>
+
+\[g_{tt} 
+= - \left( 1 - \frac{2GM}{c^2 r}\right) 
+= - \frac{r^2 - r_g r}{r^2}\]
+
+<p>のように考えることができます。ここで\(r_g = 2 GM/c^2\) (Schwarzschild半径)です。今、\(r\)の代わりに\(\rho\)が距離の指標であると考えると(6)式とこれとの比較から、重力の効果を含めた場合を</p>
+
+\[ds^2 
+= - \frac{f(r)}{\rho^2} db^2 + \frac{\rho^2}{f(r)} dr^2 + \rho^2 d\theta^2 + \frac{\sin^2 \theta}{\rho^2} d\phi \tag{7}\]
+
+<p>のように書くことができます。ここで\(f(\rho)\)ではなく\(f(r)\)としているのは、ここまでの適切な座標変換によって\(g_{bb}, g_{rr}\)部分の\(\theta\)依存性は消去され、この座標系においては球対称になっていると考えたためです。<br />
+ここから質量\(m\)の粒子の<a href="/gr/geodesic">測地線方程式</a>を考えましょう。</p>
+
+\[m \frac{dp_\nu}{d\tau} 
+= - \frac{1}{2} g_{\beta \mu, \nu} p^\mu p^\beta \tag{8}\]
+
+<p>ここで\(p\)は粒子の4元運動量、\(\tau\)は固有時間を表します。(8)式右辺の\(g_{\beta \mu}\)の依存性から</p>
+
+\[\frac{dp_b}{ d\tau} = 0 \ \Longrightarrow \ 
+p_b = mE\]
+
+<p>とわかります。ここで\(E\)は単位質量あたりのエネルギーを表す定数です。よって</p>
+
+\[p^b = g^{b \mu} p_\mu 
+= g^{bb} p_b 
+= -\frac{\rho^2}{f(r)} m E\]
+
+<p>さらに最左辺の運動量は\(p^b = m v^b = m \dot{b}\)と考えれば</p>
+
+\[\dot{b} = - \frac{\rho^2}{f} E \tag{9}\]
+
+<p>となります。ここでドットは固有時間\(\tau\)の微分を表します。さらにLagrangianを計算すると</p>
+
+\[L 
+= \frac{1}{2} g_{\alpha \beta} \dot{x}^\alpha \dot{x}^\beta 
+= -\frac{f}{\rho^2} \dot{b}^2 + \frac{\rho^2}{2f} \dot{r}^2 \tag{10}\]
+
+<p>です。ここでは球対称なので\(\theta=0, d\theta=0\)として計算しました。(9), (10)式より</p>
+
+\[\dot{r} 
+= \frac{f}{\rho^2} (2L + \frac{\rho^2}{f} E^2) \tag{11}\]
+
+<p>ここまで有限の質量\(m\)の粒子について考えてきましたが、(11)式には質量が含まれていません。よってこれを質量のない粒子(光子など)に拡張します。その場合\(L\)はただの4元運動量どうしの内積となるため</p>
+
+\[\dot{r} 
+=\]
+
+<p>\(r\)方向の測地線方程式を考えると</p>
+
+\[m \frac{dp_r}{d\tau} 
+= - \frac{1}{2} g_{rr, r} p^r p^2\]
+
+<p>です。これを計算していきましょう。</p>
+
+\[\frac{d}{d\tau} (\rho^2 \dot{r}) 
+= \ddot{r} \rho^2 + 2 r \dot{r}^2\]
+
+\[\frac{df}{d\tau} = \dot{r} f'\]
+
+<p>より</p>
+
+\[(左辺) 
+= m^2 \frac{d}{d\tau} \left( \frac{\rho^2}{f} \dot{r} \right) 
+= m^2 \frac{\frac{d}{d\tau} (\rho^2 \dot{r})f -\rho^2 \dot{r} \frac{df}{d\tau}}{f^2} 
+= \frac{m^2}{f^2} (\ddot{r} \rho^2 f + 2 r \dot{r}^2 f - \rho^2 \dot{r}^2 f')\]
+
+:ET

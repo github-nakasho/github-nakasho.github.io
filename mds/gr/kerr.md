@@ -172,10 +172,11 @@ $$
 \frac{df}{d\tau} = \dot{r} f'
 $$
 
-より
+と$$p^r = m \dot{r}$$より
 
 $$
 (左辺) 
+= m \frac{d}{d\tau} (g_{rr} p^r)
 = m^2 \frac{d}{d\tau} \left( \frac{\rho^2}{f} \dot{r} \right) 
 = m^2 \frac{\frac{d}{d\tau} (\rho^2 \dot{r})f -\rho^2 \dot{r} \frac{df}{d\tau}}{f^2} 
 = \frac{m^2}{f^2} (\ddot{r} \rho^2 f + 2 r \dot{r}^2 f - \rho^2 \dot{r}^2 f')
@@ -256,3 +257,4 @@ $$
 [3] [D'Inverno, 1992, "Introducing Einstein's Relativity"](https://www.amazon.co.jp/Introducing-Einsteins-Relativity-Ray-DInverno/dp/0198596863)  
 [4] [Chandrasekhar, 1998, "The mathematical Theory of Black Holes"](https://www.amazon.com/dp/0198503709/ref=cm_sw_em_r_mt_dp_9HPGCYPVZ3NHC6DC30EF)
 
+{% include adsense.html %}

@@ -1,4 +1,4 @@
-I"�%
+I"@,
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -7,8 +7,11 @@
   <li><a href="#カーブラックホール時空を厳密性は省いて求める" id="markdown-toc-カーブラックホール時空を厳密性は省いて求める">カー・ブラックホール時空を(厳密性は省いて)求める</a>    <ol>
       <li><a href="#ミンコフスキー時空のボイヤーリンキスト座標表現" id="markdown-toc-ミンコフスキー時空のボイヤーリンキスト座標表現">ミンコフスキー時空のボイヤー・リンキスト座標表現</a></li>
       <li><a href="#測地線方程式と粒子のラグランジアン" id="markdown-toc-測地線方程式と粒子のラグランジアン">測地線方程式と粒子のラグランジアン</a></li>
+      <li><a href="#無限遠との接続" id="markdown-toc-無限遠との接続">無限遠との接続</a></li>
+      <li><a href="#シュバルツシルト時空への接続" id="markdown-toc-シュバルツシルト時空への接続">シュバルツシルト時空への接続</a></li>
     </ol>
   </li>
+  <li><a href="#より厳密な導出方法" id="markdown-toc-より厳密な導出方法">より厳密な導出方法</a></li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ol>
 
@@ -21,8 +24,6 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
-
-<p class="label label-yellow">現在作成中、今後更新予定です。</p>
 
 <h1 id="カーブラックホール時空を厳密性は省いて求める">カー・ブラックホール時空を(厳密性は省いて)求める</h1>
 
@@ -118,10 +119,14 @@ p_b = mE\]
 \[\dot{r}^2
 = \frac{f}{\rho^2} (2L + \frac{\rho^2}{f} E^2) \tag{11}\]
 
-<p>\(L=1/2, E=0\)の粒子についてのみ考えると、この粒子が感じる速度は</p>
+<p>\(L=1/2, E=0\)の粒子についてのみ考えると、この粒子においては</p>
 
 \[\dot{r}^2 
 = \frac{f}{\rho^2} \tag{12}\]
+
+<p>と求まります。</p>
+
+<h2 id="無限遠との接続">無限遠との接続</h2>
 
 <p>そして\(r\)方向の測地線方程式を考えると</p>
 
@@ -135,9 +140,10 @@ p_b = mE\]
 
 \[\frac{df}{d\tau} = \dot{r} f'\]
 
-<p>より</p>
+<p>と\(p^r = m \dot{r}\)より</p>
 
 \[(左辺) 
+= m \frac{d}{d\tau} (g_{rr} p^r)
 = m^2 \frac{d}{d\tau} \left( \frac{\rho^2}{f} \dot{r} \right) 
 = m^2 \frac{\frac{d}{d\tau} (\rho^2 \dot{r})f -\rho^2 \dot{r} \frac{df}{d\tau}}{f^2} 
 = \frac{m^2}{f^2} (\ddot{r} \rho^2 f + 2 r \dot{r}^2 f - \rho^2 \dot{r}^2 f')\]
@@ -165,29 +171,47 @@ p_b = mE\]
 
 \[ds^2 = - \frac{r^2 + a^2 - 2D r}{\rho^2} (cdt - a \sin^2 \theta d\varphi)^2 + \frac{\rho^2}{r^2 + a^2 - 2D r} dr^2 + \rho^2 d\theta^2 + \frac{\sin^2 \theta}{\rho^2} \{ (r^2 + a^2) d\varphi - a c dt\}^2\]
 
+<h2 id="シュバルツシルト時空への接続">シュバルツシルト時空への接続</h2>
+
 <p>(2)式から\(a \rightarrow 0\)の極限で、これは質量\(M\)が作る球対称な重力場、すなわち<a href="/gr/schwarzschild">Schwarzschild時空</a>の3次元極座標表示に一致しなければなりません。このとき\(\rho^2 = r^2\)より</p>
 
 \[g_{rr} 
 = \frac{r^2}{r^2 - 2 Dr} = \frac{1}{1-\frac{r_g}{r}} \ \Longrightarrow \ 
 D 
-= r_g\]
+= \frac{r_g}{2} 
+= \frac{GM}{c^2}\]
 
 <p>以上より</p>
 
 \[ds^2 
 = - \frac{\Delta}{\rho^2} (cdt - a \sin^2 \theta d\varphi)^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 + \frac{\sin^2 \theta}{\rho^2} \{ (r^2 + a^2) d\varphi - a c dt\}^2 \tag{15}\]
 
-<p>と求まります。さらに分解すれば</p>
+<p>と求まります。ここで\(\Delta \equiv r^2 + a^2 - r_g r\)です。さらに分解すれば</p>
 
 \[ds^2 
 = - \frac{\Delta -a^2 \sin^2 \theta}{\rho^2} c^2 dt^2 - \frac{2 a r_g \sin^2 \theta}{\rho^2} c dt d\varphi + \frac{(r^2 + a^2)^2 -a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 \tag{16}\]
 
-<p>\(a\)は距離の次元ですが、自転と結びつけて考えると\(a = J/(Mc)\)となります。\(J\)はブラックホールの自転角運動量です。</p>
+<p>のようになります。\(a\)は距離の次元ですが、自転と結びつけて考えると\(a = J/(Mc)\)となります。\(J\)はブラックホールの自転角運動量です。</p>
+
+<p class="label label-yellow">もう少し厳密な自転の導出方法はいつか掲載予定です。</p>
+
+<h1 id="より厳密な導出方法">より厳密な導出方法</h1>
+
+<p>私には追えませんでしたが、<a href="https://www.amazon.com/dp/0198503709/ref=cm_sw_em_r_mt_dp_9HPGCYPVZ3NHC6DC30EF">Chandrasekharの”The mathematical Theory of Black Holes”</a>などを参照するのが良いでしょう。</p>
 
 <h1 id="参考文献">参考文献</h1>
 
 <p>[1] Dadhich, 2013, “A novel derivation of the rotating black hole metric”<br />
 [2] Nikolic &amp; Pantic, 2012, “A Possible Intuitive Derivation of Kerr Metric in Orthogonal Form Based On Ellipsoidal Metric Ansatz”<br />
-[3] <a href="https://www.amazon.co.jp/Introducing-Einsteins-Relativity-Ray-DInverno/dp/0198596863">D’Inverno, 1992, “Introducing Einstein’s Relativity”</a></p>
+[3] <a href="https://www.amazon.co.jp/Introducing-Einsteins-Relativity-Ray-DInverno/dp/0198596863">D’Inverno, 1992, “Introducing Einstein’s Relativity”</a><br />
+[4] <a href="https://www.amazon.com/dp/0198503709/ref=cm_sw_em_r_mt_dp_9HPGCYPVZ3NHC6DC30EF">Chandrasekhar, 1998, “The mathematical Theory of Black Holes”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 :ET

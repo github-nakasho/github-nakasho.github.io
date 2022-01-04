@@ -1,4 +1,4 @@
-I"a%
+I"8
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -10,6 +10,12 @@
       <li><a href="#シュラーフリの公式" id="markdown-toc-シュラーフリの公式">シュラーフリの公式</a></li>
       <li><a href="#漸化式" id="markdown-toc-漸化式">漸化式</a></li>
       <li><a href="#ルジャンドルの微分方程式" id="markdown-toc-ルジャンドルの微分方程式">ルジャンドルの微分方程式</a></li>
+      <li><a href="#ルジャンドル多項式の直交性" id="markdown-toc-ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</a>        <ol>
+          <li><a href="#n--mのとき" id="markdown-toc-n--mのとき">\(n &gt; m\)のとき</a></li>
+          <li><a href="#m-nのとき" id="markdown-toc-m-nのとき">\($m &gt;n\)のとき</a></li>
+          <li><a href="#ルジャンドル多項式の直交性-1" id="markdown-toc-ルジャンドル多項式の直交性-1">ルジャンドル多項式の直交性</a></li>
+        </ol>
+      </li>
     </ol>
   </li>
 </ol>
@@ -225,6 +231,91 @@
 \[\frac{d^n}{dz^n} \{ (z^2-1) f''\} 
 = \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} (z^2-1)\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f'' \right\} 
 = (z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^{n-1}}{dz^{n-1}} f'' + 2\frac{n(n-1)}{2} \frac{d^{n-2}}{dz^{n-2}} f''\]
+
+\[\frac{d^n}{dz^n} (zf') 
+= \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} z\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f' \right\}
+= z \frac{d^n}{dz^n} f' + n \frac{d^{n-1}}{dz^{n-1}} f' 
+= z \frac{d^n}{dz^n} f' + n \frac{d^n}{dz^n} f\]
+
+<p>より</p>
+
+\[\begin{aligned}
+&amp;(z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^n }{dz^n} f' + n (n-1) \frac{d^n}{dz^n} f - 2n \frac{d^n}{dz^n} f - 2n (n-1) z \frac{d^n}{dz^n} f' - 2n(n-1) \frac{d^n}{dz^n} f \\
+&amp;= (z^2-1) \frac{d^2}{dz^2} f^{(n)} + 2z \frac{d}{dz} f^{(n)} - n(n+1) f^{(n)} = 0
+\end{aligned}\]
+
+<p>ここで(10)式より、両辺を\(2^n n!\)で割れば</p>
+
+\[(1-z^2) \frac{d^2}{dz^2} P_n (z) - 2z \frac{d}{dz} P_n (z) + n(n+1) P_n (z) 
+= 0 \tag{21}\]
+
+<p>となります。これをLegendreの微分方程式と呼び、Legendre多項式はこの微分方程式の解となっていることがわかります。</p>
+
+<h2 id="ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</h2>
+
+<p>直交性を証明しましょう。そのためにまずは次の計算を行います。</p>
+
+\[\begin{aligned}
+\int_{-1}^1 z^m P_n (z) dz 
+&amp;\underbrace{=}_{(10)} \frac{1}{2^n n!} \int_{-1}^1 z^m \frac{d^n}{dz^n} (z^2-1)^n dz 
+= \frac{1}{2^n n!} \left\{ \left[z^m \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right]_{-1}^1 - \int_{-1}^1 m z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right\} \\
+&amp;= - \frac{m}{2^n n!} \int_{-1}^1 z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n dz\]
+
+<p>\([\cdots ]\)部分は\(z^2-1\)が必ず1つ残るため、\(z = \pm 1\)で必ず0となります。この作業を\(k\)回\((k \leq n, m)\)回繰り返すと</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^k m!}{(m-k)! 2^n n!} \int_{-1}^1 z^{m-k} \frac{d^{n-k}}{dz^{n-k}} (z^2-1)^n dz\]
+
+<p>を得ます。ここで\(n, m\)について場合分けして考えましょう。</p>
+
+<h3 id="n--mのとき">\(n &gt; m\)のとき</h3>
+
+<p>この作業を\(k=m\)まで行うことができて</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^m m!}{2^n n!} \int_{-1}^1 \frac{d^{n-m}}{dz^{n-m}} (z^2-1)^n dz 
+= \frac{(-1)^m m!}{2^n n!} \left[ \frac{d^{n-m-1}}{dz^{n-m-1}} (z^2-1)^n\right]_{-1}^1 
+= 0\]
+
+<h3 id="m-nのとき">\($m &gt;n\)のとき</h3>
+
+<p>この作業を\(k=n\)まで行うことができて</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \int_{-1}^1 z^{m-n} (z^2-1)^n dz 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \left\{ \left[ \frac{z^{m-n+1}}{m-n+1} (z^2-1)^n\right]_{-1}^1 - \int_{-1}^1 \frac{2n z^{m-n+2}}{m-n+1} (z^2-1)^{n-1} dz \right\} 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{-2n}{m-n+1} \int_{-1}^1 z^{m-n+2} (z^2-1)^{n-1} dz
+= \cdots 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{(-2)^n n!}{(m-n+1)(m-n+3) \cdots (m-n+2n+1)} \int_{-1}^1 z^{m-n+2} dz\]
+
+<p>最後の積分部分は\(m-n\)が奇数か偶数かで計算結果が変わります。よって</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \left\{ \begin{array}{ll}
+0 &amp; (m-nが奇数)\\
+\frac{2 m! }{(m-n)!} \frac{(m-n-1)(m-n-3) \cdots 1}{(m-n+2n+1) \cdots (m-n+1)(m-n-1) \cdots 1} &amp; (m-nが偶数)
+\end{array} \right. \tag{22}\]
+
+<h3 id="ルジャンドル多項式の直交性-1">ルジャンドル多項式の直交性</h3>
+
+<p>この2つの場合分けから、先程の式は\(m&gt;n\)かつ\(m-n\)が偶数の場合のみ値を持ちます。\(P_m(z)\)は\(z\)の\(m\)次多項式であるため、\(m \neq n\)であれば、\(P_m (z), P_n (z)\)はどちらかは必ず他方より小さな次数の多項式となります。上式は\(m, n\)を入れ替えても成り立つ式であるため</p>
+
+\[\int_{-1}^1 P_m (z) P_n (z) 
+= 0 \quad (m \neq n)\]
+
+<p>がどのような\(m, n\)でも成立します。<br />
+\(m=n\)のとき、\(P_n (z)\)の最高次の項の係数は(7)式より\((2n)!/(2^n n!^2)\)、それ以外の項は積分値が0となることから</p>
+
+\[\int_{-1}^1 P_n (z) P_n (z) dz
+= \frac{(2n)!}{2^n n!^2} \int_{-1}^1 z^n P_n (z) dz 
+\underbrace{=}_{(22)} \frac{(2n)!}{2^n n!^2} \frac{2n!}{(2n+1)(2n-1) \cdots 1} 
+= \frac{2n (2n-1) \cdots 2 \cdot 1 }{2n (2n-2) \cdots 4 \cdot 2} \frac{2}{(2n+1)(2n-1) \cdots 3 \cdot 1} 
+= \frac{2}{2n+1}\]
+
+<p>以上より</p>
+
+\[\int_{-1}^1 P_m (z) P_n (z) dz 
+= \frac{2}{2n+1} \delta_{mn} \tag{23}\]
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

@@ -1,0 +1,347 @@
+I"�;
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ルジャンドル多項式" id="markdown-toc-ルジャンドル多項式">ルジャンドル多項式</a>    <ol>
+      <li><a href="#母関数展開からの導出" id="markdown-toc-母関数展開からの導出">母関数展開からの導出</a></li>
+      <li><a href="#ロドリゲスの公式" id="markdown-toc-ロドリゲスの公式">ロドリゲスの公式</a></li>
+      <li><a href="#シュラーフリの公式" id="markdown-toc-シュラーフリの公式">シュラーフリの公式</a></li>
+      <li><a href="#漸化式" id="markdown-toc-漸化式">漸化式</a></li>
+      <li><a href="#ルジャンドルの微分方程式" id="markdown-toc-ルジャンドルの微分方程式">ルジャンドルの微分方程式</a></li>
+      <li><a href="#ルジャンドル多項式の直交性" id="markdown-toc-ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</a>        <ol>
+          <li><a href="#n--mのとき" id="markdown-toc-n--mのとき">\(n &gt; m\)のとき</a></li>
+          <li><a href="#m-nのとき" id="markdown-toc-m-nのとき">\(m &gt;n\)のとき</a></li>
+          <li><a href="#ルジャンドル多項式の直交性-1" id="markdown-toc-ルジャンドル多項式の直交性-1">ルジャンドル多項式の直交性</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ルジャンドル多項式">ルジャンドル多項式</h1>
+
+<h2 id="母関数展開からの導出">母関数展開からの導出</h2>
+
+<p>母関数展開</p>
+
+\[\frac{1}{\sqrt{1-2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(z) w^n \tag{1}\]
+
+<p>によって定義される\(P_n(z)\)をルジャンドル多項式と呼びます。\(X = 2zw - w^2\)とおいて、左辺を\(X=0\)の周りでTaylor展開すると</p>
+
+\[\begin{align}
+\frac{1}{\sqrt{1-X}} 
+&amp;= 1 + \frac{1}{2} X + \frac{1}{2!} \frac{1}{2} \frac{3}{2} X^2 + \frac{1}{3!} \frac{1}{2} \frac{3}{2} \frac{5}{2} X^3 + \cdots + \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} X^m + \cdots \notag \\
+&amp;= \sum_{m=0}^\infty \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} X^m \tag{2}
+\end{align}\]
+
+<p>のようになります。一方</p>
+
+\[X^m 
+= (2zw - w^2)^m 
+= \sum_{\ell=0}^m {}_\ell C_{m-\ell} (2zw)^\ell (-w^2)^{m-\ell} 
+= \sum_{\ell=0}^m \frac{(-1)^{m-\ell} m!}{\ell ! (m-\ell)!} (2z)^\ell w^{2m-\ell} \tag{3}\]
+
+<p>より、これを(2)式に代入すると</p>
+
+\[\frac{1}{\sqrt{1-2zw+w^2}} 
+= \sum_{m=0}^\infty \frac{1}{m!} \frac{(2m)!}{2^m m!} \frac{1}{2^m} \sum_{\ell =0}^m \frac{(-1)^{m-\ell} m!}{\ell ! (m-\ell)!} (2z)^\ell w^{2m-\ell} \notag
+= \sum_{m=0}^\infty \sum_{\ell=0}^m \frac{(2m)!}{2^m m!} \frac{1}{2^{m-\ell}} \frac{(-1)^{m-\ell}}{\ell ! (m-\ell)!} z^\ell w^{2m-\ell} \tag{4}\]
+
+<p>となります。ここで\(n = 2m-\ell, \ell=n-2k\)のようにパラメータを変換し、\(\ell, m\)を消去することを考えましょう。すると\(n = k+m\)であり、さらに\(\ell\)についての総和を取る範囲が</p>
+
+\[0 \leq \ell \leq m \ \Longrightarrow \ 
+0 \leq n - 2k \leq n-2k \ \Longrightarrow \ 
+2k \leq n \leq n+k \tag{5}\]
+
+<p>のようになります。これより\(k\)に対して\(n \geq 2k, k\geq 0\)という条件を得ることができます。すると(4)式は</p>
+
+\[\frac{1}{\sqrt{1-2zw+w^2}} 
+= \sum_{n=0}^\infty \sum_{k=0}^{[n/2]} \frac{(2n-2k)!}{2^{n-k} (n-k)!} \frac{1}{2^k} \frac{(-1)^k}{(n-2k)! k!} z^{n-2k} w^n 
+= \sum_{n=0}^\infty \sum_{k=0}^{[n/2]} \frac{(2n-2k)!}{2^n (n-k)!} \frac{(-1)^k}{(n-2k)! k!} z^{n-2k} w^n \tag{6}\]
+
+<p>途中の\([n/2]\)は\(n/2\)を超えない整数を表すガウス記号です。以上より(6)式と(1)式を比較して</p>
+
+\[P_n (z) 
+= \frac{1}{2^n} \sum_{k=0}^{[n/2]} \frac{(-1)^k (2n-2k)!}{k! (n-k)! (n-2k)!} z^{n-2k} \tag{7}\]
+
+<p>とわかります。</p>
+
+<h2 id="ロドリゲスの公式">ロドリゲスの公式</h2>
+
+<p>これの別表記を考えていきましょう。</p>
+
+\[(z^2-1)^n 
+= \sum_{k=0}^n {}_k C_{n-k} (-1)^k z^{2(n-k)} 
+= \sum_{k=0}^n \frac{n!}{k! (n-k)!} (-1)^k z^{2(n-k)} \tag{8}\]
+
+<p>この両辺の\(z\)の\(n\)階微分を考えると</p>
+
+\[\begin{align}
+\frac{d^n}{dz^n} (z^2-1)^n 
+&amp;= \sum_{k=0}^n \frac{n!}{k! (n-k)!} (-1)^k \frac{d^n}{dz^n} z^{2(n-k)} \notag \\
+&amp;= \sum_{k=0}^{[n/2]} \frac{n!}{k! (n-k)!} (-1)^k (2n-2k) (2n-2k-1) \cdots (2n-2k-n+1) z^{n-2k} \notag \\
+&amp;= \sum_{k=0}^{[n/2]} \frac{n!}{k! (n-k)!} (-1)^k \frac{(2n-2k)!}{(2n-2k-n)!} z^{n-2k}
+= n! \sum_{k=0}^{[n/2]} \frac{(-1)^k (2n-2k)!}{k! (n-k)! (n-2k)!} z^{n-2k} \tag{9}
+\end{align}\]
+
+<p>これと(7)式を比較すると</p>
+
+\[P_n(z) 
+= \frac{1}{2^n n!} \frac{d}{dz^n} (z^2-1)^n \tag{10}\]
+
+<p>となります。これをRodriguesの公式と呼びます。</p>
+
+<h2 id="シュラーフリの公式">シュラーフリの公式</h2>
+
+<p>留数定理より、関数\(f(z)\)の\(n\)階微分を\(f^{(n)}\)とすると</p>
+
+\[f^{(n)} (z) 
+= \frac{n!}{2 \pi i} \oint_C \frac{f(t)}{(t-z)^{n+1}} dt\]
+
+<p>の様に書けます。ここで\(C\)は点\(z\)を正方向に1回転する積分路です。これに\(f(z) = (z^2-1)^n/(2^n n!)\)を代入すると、(10)式より</p>
+
+\[P_n (z) = \frac{1}{2^n 2 \pi i} \oint_C \frac{(t^2-1)^n}{(t-z)^{n+1}} dt \tag{11}\]
+
+<p>これをSchlafliの公式と呼びます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="漸化式">漸化式</h2>
+
+<p>(1)式の両辺を\(w\)で微分すると</p>
+
+\[\begin{align}
+&amp;\frac{z-w}{(1-2zw+w^2)^{3/2}} 
+= n\sum_{n=1}^\infty P_n (z) w^{n-1} 
+= n\sum_{n=0}^\infty P_n (z) w^{n-1} \notag \\ 
+&amp;\Longrightarrow \ 
+\frac{z-w}{\sqrt{1-2zw + w^2}} 
+= \sum_{n=0}^\infty n P_n (z) (1-2zw + w^2) w^{n-1} \notag \\
+&amp;= \sum_{n=0}^\infty (n+1) P_{n+1} (z) w^{n} -2z \sum_{n=0}^\infty n P_n (z) w^n + \sum_{n=1}^\infty (n-1) P_{n-1} (z) w^n \tag{12}
+\end{align}\]
+
+<p>また最左辺は(1)式より</p>
+
+\[(z-w) \sum_{n=0}^\infty P_n (z) w^n 
+= z \sum_{n=0}^\infty P_n (z) w^n - \sum_{n=1}^\infty P_{n-1} w^n\]
+
+<p>よって、\(w^n\)の係数を比較することで</p>
+
+\[(n+1) P_{n+1} - (2n+1) z P_n + n P_{n-1} 
+= 0 \quad (n \geq 1) \tag{13}\]
+
+<p>を得ます。さらに(1)式を\(z\)で微分すると</p>
+
+\[\frac{w}{(1-2zw+w^2)^{3/2}} 
+= \sum_{n=0}^\infty P_n' w^n \tag{14}\]
+
+<p>この式の両辺に\(z/w\)をかけると</p>
+
+\[\frac{z}{(1-2zw+w^2)^{3/2}} 
+= z \sum_{n=0}^\infty P_n' w^{n-1}
+= z \sum_{n=0}^\infty P_{n+1}' w^{n} \tag{15}\]
+
+<p>(15)式の最後の等号には\(P_0'=0\)を用いました。(14), (15)式の辺々を引き算すると</p>
+
+\[\frac{z-w}{(1-2zw+w^2)^{3/2}} 
+= \sum_{n=0}^\infty (z P_{n+1}' - P_n') w^n\]
+
+<p>(12)式の途中から</p>
+
+\[\sum_{n=0}^\infty (n+1) P_{n+1} (z) w^n 
+= \sum_{n=0}^\infty (z P_{n+1}' - P_n') w^n \ \Longrightarrow \ 
+(n+1) P_{n+1} = z P_{n+1}' - P_n' \tag{16}\]
+
+<p>という漸化式を得ます。他にもLegendre多項式が満たす漸化式をいくつか証明しましょう。(13)式の両辺を\(z\)で微分すると</p>
+
+\[\begin{aligned}
+(n+1) P_{n+1}' - (2n+1) (P_n + zP_n') + n P_{n-1}' 
+&amp;= (n+1) (P_{n+1}' - zP_n') - n\underbrace{(zP_n'-P_{n-1}')}_{(16)式のn \rightarrow n-1} - (2n+1) P_n \\
+&amp;= (n+1) (P_{n+1}' - zP_n') - (n+1)^2 P_n 
+= 0
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[P_{n+1}' - zP_n' - (n+1) P_n 
+= 0 \tag{17}\]
+
+<p>また(17)式の左辺第2項に(16)式の\(n \rightarrow n-1\)を適用すれば</p>
+
+\[P_{n+1}' -nP_n -P_{n-1}'-(n+1) P_n 
+= P_{n+1}' -(2n+1) P_n - P_{n-1}' 
+= 0 \tag{18}\]
+
+<p>さらに(17)式において\(n \rightarrow n-1\)とすれば</p>
+
+\[P_n' - zP_{n-1} -n P_{n-1} 
+\underbrace{=}_{(16)のn \rightarrow n-1} P_n' - z(zP_n'-nP_n) - n P_{n-1} 
+= (1-z^2) P_n" + nzP_n-nP_{n-1} 
+=0 \tag{19}\]
+
+<p>となります。また(1)式で\(z \rightarrow -z\)と置換すると</p>
+
+\[\frac{1}{\sqrt{1+2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(-z)w^n\]
+
+<p>同様に(1)式で\(w \rightarrow -w\)と置換すると</p>
+
+\[\frac{1}{\sqrt{1+2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(z) (-1)^n w^n\]
+
+<p>この2つを比較することで</p>
+
+\[P_n(-z) = (-1)^n P_n(z) \tag{20}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="ルジャンドルの微分方程式">ルジャンドルの微分方程式</h2>
+
+<p>Legendre多項式が満たす微分方程式を導出しましょう。\(f(z) = (z^2-1)^n\)とすると</p>
+
+\[f' 
+= 2zn (z^2-1)^{n-1} 
+= \frac{2zn}{z^2-1} f\]
+
+\[f'' 
+= 2n(z^2-1)^{n-1} + 4z^2 n (n-1) (z^2-1)^{n-2} 
+= \frac{2n}{z^2-1} f + \frac{2z(n-1)}{z^2-1} f' \ \Longrightarrow \
+(z^2-1) f'' - 2z(n-1) f' -2nf 
+= 0\]
+
+<p>この式の両辺を\(d^n/dz^n\)微分します。このとき</p>
+
+\[\frac{d^n}{dz^n} \{ (z^2-1) f''\} 
+= \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} (z^2-1)\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f'' \right\} 
+= (z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^{n-1}}{dz^{n-1}} f'' + 2\frac{n(n-1)}{2} \frac{d^{n-2}}{dz^{n-2}} f''\]
+
+\[\frac{d^n}{dz^n} (zf') 
+= \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} z\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f' \right\}
+= z \frac{d^n}{dz^n} f' + n \frac{d^{n-1}}{dz^{n-1}} f' 
+= z \frac{d^n}{dz^n} f' + n \frac{d^n}{dz^n} f\]
+
+<p>より</p>
+
+\[\begin{aligned}
+&amp;(z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^n }{dz^n} f' + n (n-1) \frac{d^n}{dz^n} f - 2n \frac{d^n}{dz^n} f - 2n (n-1) z \frac{d^n}{dz^n} f' - 2n(n-1) \frac{d^n}{dz^n} f \\
+&amp;= (z^2-1) \frac{d^2}{dz^2} f^{(n)} + 2z \frac{d}{dz} f^{(n)} - n(n+1) f^{(n)} = 0
+\end{aligned}\]
+
+<p>ここで(10)式より、両辺を\(2^n n!\)で割れば</p>
+
+\[(1-z^2) \frac{d^2}{dz^2} P_n (z) - 2z \frac{d}{dz} P_n (z) + n(n+1) P_n (z) 
+= 0 \tag{21}\]
+
+<p>となります。これをLegendreの微分方程式と呼び、Legendre多項式はこの微分方程式の解となっていることがわかります。</p>
+
+<h2 id="ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</h2>
+
+<p>直交性を証明しましょう。そのためにまずは次の計算を行います。</p>
+
+\[\begin{aligned}
+\int_{-1}^1 z^m P_n (z) dz 
+&amp;\underbrace{=}_{(10)} \frac{1}{2^n n!} \int_{-1}^1 z^m \frac{d^n}{dz^n} (z^2-1)^n dz 
+= \frac{1}{2^n n!} \left\{ \left[z^m \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right]_{-1}^1 - \int_{-1}^1 m z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right\} \\
+&amp;= - \frac{m}{2^n n!} \int_{-1}^1 z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n dz
+\end{aligned}\]
+
+<p>\([\cdots ]\)部分は\(z^2-1\)が必ず1つ残るため、\(z = \pm 1\)で必ず0となります。この作業を\(k\)回\((k \leq n, m)\)回繰り返すと</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^k m!}{(m-k)! 2^n n!} \int_{-1}^1 z^{m-k} \frac{d^{n-k}}{dz^{n-k}} (z^2-1)^n dz\]
+
+<p>を得ます。ここで\(n, m\)について場合分けして考えましょう。</p>
+
+<h3 id="n--mのとき">\(n &gt; m\)のとき</h3>
+
+<p>この作業を\(k=m\)まで行うことができて</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^m m!}{2^n n!} \int_{-1}^1 \frac{d^{n-m}}{dz^{n-m}} (z^2-1)^n dz 
+= \frac{(-1)^m m!}{2^n n!} \left[ \frac{d^{n-m-1}}{dz^{n-m-1}} (z^2-1)^n\right]_{-1}^1 
+= 0\]
+
+<h3 id="m-nのとき">\(m &gt;n\)のとき</h3>
+
+<p>この作業を\(k=n\)まで行うことができて</p>
+
+\[\begin{aligned}
+\int_{-1}^1 z^m P_n(z) dz 
+&amp;= \frac{(-1)^n m!}{(m-n)! 2^n n!} \int_{-1}^1 z^{m-n} (z^2-1)^n dz \\
+&amp;= \frac{(-1)^n m!}{(m-n)! 2^n n!} \left\{ \left[ \frac{z^{m-n+1}}{m-n+1} (z^2-1)^n\right]_{-1}^1 - \int_{-1}^1 \frac{2n z^{m-n+2}}{m-n+1} (z^2-1)^{n-1} dz \right\} \\
+&amp;= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{-2n}{m-n+1} \int_{-1}^1 z^{m-n+2} (z^2-1)^{n-1} dz
+= \cdots \\
+&amp;= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{(-2)^n n!}{(m-n+1)(m-n+3) \cdots (m-n+2n+1)} \int_{-1}^1 z^{m-n+2} dz
+\end{aligned}\]
+
+<p>最後の積分部分は\(m-n\)が奇数か偶数かで計算結果が変わります。よって</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \left\{ \begin{array}{ll}
+0 &amp; (m-nが奇数)\\
+\frac{2 m! }{(m-n)!} \frac{(m-n-1)(m-n-3) \cdots 1}{(m-n+2n+1) \cdots (m-n+1)(m-n-1) \cdots 1} &amp; (m-nが偶数)
+\end{array} \right. \tag{22}\]
+
+<h3 id="ルジャンドル多項式の直交性-1">ルジャンドル多項式の直交性</h3>
+
+<p>この2つの場合分けから、先程の式は\(m&gt;n\)かつ\(m-n\)が偶数の場合のみ値を持ちます。\(P_m(z)\)は\(z\)の\(m\)次多項式であるため、\(m \neq n\)であれば、\(P_m (z), P_n (z)\)はどちらかは必ず他方より小さな次数の多項式となります。上式は\(m, n\)を入れ替えても成り立つ式であるため</p>
+
+\[\int_{-1}^1 P_m (z) P_n (z) 
+= 0 \quad (m \neq n)\]
+
+<p>がどのような\(m, n\)でも成立します。<br />
+\(m=n\)のとき、\(P_n (z)\)の最高次の項の係数は(7)式より\((2n)!/(2^n n!^2)\)、それ以外の項は積分値が0となることから</p>
+
+\[\begin{aligned}
+\int_{-1}^1 P_n (z) P_n (z) dz
+&amp;= \frac{(2n)!}{2^n n!^2} \int_{-1}^1 z^n P_n (z) dz 
+\underbrace{=}_{(22)} \frac{(2n)!}{2^n n!^2} \frac{2n!}{(2n+1)(2n-1) \cdots 1} \notag \\
+&amp;= \frac{2n (2n-1) \cdots 2 \cdot 1 }{2n (2n-2) \cdots 4 \cdot 2} \frac{2}{(2n+1)(2n-1) \cdots 3 \cdot 1} 
+= \frac{2}{2n+1}
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[\int_{-1}^1 P_m (z) P_n (z) dz 
+= \frac{2}{2n+1} \delta_{mn} \tag{23}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”</p>
+:ET

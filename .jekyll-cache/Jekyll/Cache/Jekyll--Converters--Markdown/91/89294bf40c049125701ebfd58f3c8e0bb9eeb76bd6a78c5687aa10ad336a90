@@ -1,4 +1,4 @@
-I"�
+I"�2
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -9,6 +9,12 @@
       <li><a href="#ロドリゲスの公式" id="markdown-toc-ロドリゲスの公式">ロドリゲスの公式</a></li>
       <li><a href="#シュラーフリの公式" id="markdown-toc-シュラーフリの公式">シュラーフリの公式</a></li>
       <li><a href="#漸化式" id="markdown-toc-漸化式">漸化式</a></li>
+      <li><a href="#ルジャンドルの微分方程式" id="markdown-toc-ルジャンドルの微分方程式">ルジャンドルの微分方程式</a></li>
+      <li><a href="#ルジャンドル多項式の直交性" id="markdown-toc-ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</a>        <ol>
+          <li><a href="#n--mのとき" id="markdown-toc-n--mのとき">\(n &gt; m\)のとき</a></li>
+          <li><a href="#m-nのとき" id="markdown-toc-m-nのとき">\($m &gt;n\)のとき</a></li>
+        </ol>
+      </li>
     </ol>
   </li>
 </ol>
@@ -110,19 +116,27 @@
 
 <p>これをSchlafliの公式と呼びます。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="漸化式">漸化式</h2>
 
 <p>(1)式の両辺を\(w\)で微分すると</p>
 
-\[\begin{aligned}
+\[\begin{align}
 &amp;\frac{z-w}{(1-2zw+w^2)^{3/2}} 
-= \sum_{n=1}^\infty P_n (z) w^{n-1} 
-= \sum_{n=0}^\infty P_n (z) w^{n-1} \\ 
+= n\sum_{n=1}^\infty P_n (z) w^{n-1} 
+= n\sum_{n=0}^\infty P_n (z) w^{n-1} \notag \\ 
 &amp;\Longrightarrow \ 
 \frac{z-w}{\sqrt{1-2zw + w^2}} 
-= \sum_{n=0}^\infty n P_n (z) (1-2zw + w^2) w^{n-1} 
-= \sum_{n=0}^\infty (n+1) P_{n+1} (z) w^{n} -2z \sum_{n=0}^\infty n P_n (z) w^n + \sum_{n=1}^\infty (n-1) P_{n-1} (z) w^n \tag{12}
-\end{aligned}\]
+= \sum_{n=0}^\infty n P_n (z) (1-2zw + w^2) w^{n-1} \notag \\
+&amp;= \sum_{n=0}^\infty (n+1) P_{n+1} (z) w^{n} -2z \sum_{n=0}^\infty n P_n (z) w^n + \sum_{n=1}^\infty (n-1) P_{n-1} (z) w^n \tag{12}
+\end{align}\]
 
 <p>また最左辺は(1)式より</p>
 
@@ -156,7 +170,127 @@
 = \sum_{n=0}^\infty (z P_{n+1}' - P_n') w^n \ \Longrightarrow \ 
 (n+1) P_{n+1} = z P_{n+1}' - P_n' \tag{16}\]
 
-<p>という漸化式を得ます。他にもLegendre多項式が満たす漸化式をいくつか証明しましょう。</p>
+<p>という漸化式を得ます。他にもLegendre多項式が満たす漸化式をいくつか証明しましょう。(13)式の両辺を\(z\)で微分すると</p>
+
+\[\begin{aligned}
+(n+1) P_{n+1}' - (2n+1) (P_n + zP_n') + n P_{n-1}' 
+&amp;= (n+1) (P_{n+1}' - zP_n') - n\underbrace{(zP_n'-P_{n-1}')}_{(16)式のn \rightarrow n-1} - (2n+1) P_n \\
+&amp;= (n+1) (P_{n+1}' - zP_n') - (n+1)^2 P_n 
+= 0
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[P_{n+1}' - zP_n' - (n+1) P_n 
+= 0 \tag{17}\]
+
+<p>また(17)式の左辺第2項に(16)式の\(n \rightarrow n-1\)を適用すれば</p>
+
+\[P_{n+1}' -nP_n -P_{n-1}'-(n+1) P_n 
+= P_{n+1}' -(2n+1) P_n - P_{n-1}' 
+= 0 \tag{18}\]
+
+<p>さらに(17)式において\(n \rightarrow n-1\)とすれば</p>
+
+\[P_n' - zP_{n-1} -n P_{n-1} 
+\underbrace{=}_{(16)のn \rightarrow n-1} P_n' - z(zP_n'-nP_n) - n P_{n-1} 
+= (1-z^2) P_n" + nzP_n-nP_{n-1} 
+=0 \tag{19}\]
+
+<p>となります。また(1)式で\(z \rightarrow -z\)と置換すると</p>
+
+\[\frac{1}{\sqrt{1+2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(-z)w^n\]
+
+<p>同様に(1)式で\(w \rightarrow -w\)と置換すると</p>
+
+\[\frac{1}{\sqrt{1+2zw+w^2}} 
+= \sum_{n=0}^\infty P_n(z) (-1)^n w^n\]
+
+<p>この2つを比較することで</p>
+
+\[P_n(-z) = (-1)^n P_n(z) \tag{20}\]
+
+<h2 id="ルジャンドルの微分方程式">ルジャンドルの微分方程式</h2>
+
+<p>Legendre多項式が満たす微分方程式を導出しましょう。\(f(z) = (z^2-1)^n\)とすると</p>
+
+\[f' 
+= 2zn (z^2-1)^{n-1} 
+= \frac{2zn}{z^2-1} f\]
+
+\[f'' 
+= 2n(z^2-1)^{n-1} + 4z^2 n (n-1) (z^2-1)^{n-2} 
+= \frac{2n}{z^2-1} f + \frac{2z(n-1)}{z^2-1} f' \ \Longrightarrow \
+(z^2-1) f'' - 2z(n-1) f' -2nf 
+= 0\]
+
+<p>この式の両辺を\(d^n/dz^n\)微分します。このとき</p>
+
+\[\frac{d^n}{dz^n} \{ (z^2-1) f''\} 
+= \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} (z^2-1)\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f'' \right\} 
+= (z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^{n-1}}{dz^{n-1}} f'' + 2\frac{n(n-1)}{2} \frac{d^{n-2}}{dz^{n-2}} f''\]
+
+\[\frac{d^n}{dz^n} (zf') 
+= \sum_{k=0}^n {}_n C_k \left\{ \frac{d^k}{dz^k} z\right\} \left\{ \frac{d^{n-k}}{dz^{n-k}} f' \right\}
+= z \frac{d^n}{dz^n} f' + n \frac{d^{n-1}}{dz^{n-1}} f' 
+= z \frac{d^n}{dz^n} f' + n \frac{d^n}{dz^n} f\]
+
+<p>より</p>
+
+\[(z^2-1) \frac{d^n}{dz^n} f'' + 2zn \frac{d^n }{dz^n} f' + n (n-1) \frac{d^n}{dz^n} f - 2n \frac{d^n}{dz^n} f - 2n (n-1) z \frac{d^n}{dz^n} f' - 2n(n-1) \frac{d^n}{dz^n} f 
+= (z^2-1) \frac{d^2}{dz^2} f^{(n)} + 2z \frac{d}{dz} f^{(n)} - n(n+1) f^{(n)} = 0\]
+
+<p>ここで(10)式より、両辺を\(2^n n!\)で割れば</p>
+
+\[(1-z^2) \frac{d^2}{dz^2} P_n (z) - 2z \frac{d}{dz} P_n (z) + n(n+1) P_n (z) 
+= 0 \tag{21}\]
+
+<p>となります。これをLegendreの微分方程式と呼び、Legendre多項式はこの微分方程式の解となっていることがわかります。</p>
+
+<h2 id="ルジャンドル多項式の直交性">ルジャンドル多項式の直交性</h2>
+
+<p>直交性を証明しましょう。そのためにまずは次の計算を行います。</p>
+
+\[\int_{-1}^1 z^m P_n (z) dz 
+\underbrace{=}_{(10)} \frac{1}{2^n n!} \int_{-1}^1 z^m \frac{d^n}{dz^n} (z^2-1)^n dz 
+= \frac{1}{2^n n!} \left\{ \left[z^m \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right]_{-1}^1 - \int_{-1}^1 m z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n \right\} 
+= - \frac{m}{2^n n!} \int_{-1}^1 z^{m-1} \frac{d^{n-1}}{dz^{n-1}} (z^2-1)^n dz\]
+
+<p>\([\cdots ]\)部分は\(z^2-1\)が必ず1つ残るため、\(z = \pm 1\)で必ず0となります。この作業を\(k\)回\((k \leq n, m)\)回繰り返すと</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^k m!}{(m-k)! 2^n n!} \int_{-1}^1 z^{m-k} \frac{d^{n-k}}{dz^{n-k}} (z^2-1)^n dz\]
+
+<p>を得ます。ここで\(n, m\)について場合分けして考えましょう。</p>
+
+<h3 id="n--mのとき">\(n &gt; m\)のとき</h3>
+
+<p>この作業を\(k=m\)まで行うことができて</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^m m!}{2^n n!} \int_{-1}^1 \frac{d^{n-m}}{dz^{n-m}} (z^2-1)^n dz 
+= \frac{(-1)^m m!}{2^n n!} \left[ \frac{d^{n-m-1}}{dz^{n-m-1}} (z^2-1)^n\right]_{-1}^1 
+= 0\]
+
+<h3 id="m-nのとき">\($m &gt;n\)のとき</h3>
+
+<p>この作業を\(k=n\)まで行うことができて</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \int_{-1}^1 z^{m-n} (z^2-1)^n dz 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \left\{ \left[ \frac{z^{m-n+1}}{m-n+1} (z^2-1)^n\right]_{-1}^1 - \int_{-1}^1 \frac{2n z^{m-n+2}}{m-n+1} (z^2-1)^{n-1} dz \right\} 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{-2n}{m-n+1} \int_{-1}^1 z^{m-n+2} (z^2-1)^{n-1} dz
+= \cdots 
+= \frac{(-1)^n m!}{(m-n)! 2^n n!} \frac{(-2)^n n!}{(m-n+1)(m-n+3) \cdots (m-n+2n+1)} \int_{-1}^1 z^{m-n+2} dz\]
+
+<p>最後の積分部分は\(m-n\)が奇数か偶数かで計算結果が変わります。よって</p>
+
+\[\int_{-1}^1 z^m P_n(z) dz 
+= \left\{ \begin{array}{ll}
+0 &amp; (m-nが奇数)\\
+\frac{2 m! }{(m-n)!} \frac{(m-n-1)(m-n-3) \cdots 1}{(m-n+2n+1) \cdots (m-n+1)(m-n-1) \cdots 1} &amp; (m-nが偶数)
+\end{array} \right.\]
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

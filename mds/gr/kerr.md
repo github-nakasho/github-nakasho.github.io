@@ -238,7 +238,7 @@ $$
 
 $$
 ds^2 
-= - \frac{\Delta -a^2 \sin^2 \theta}{\rho^2} c^2 dt^2 - \frac{2 a r_g \sin^2 \theta}{\rho^2} c dt d\varphi + \frac{(r^2 + a^2)^2 -a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 \tag{16}
+= - \frac{\Delta -a^2 \sin^2 \theta}{\rho^2} c^2 dt^2 - \frac{2 a r_g r \sin^2 \theta}{\rho^2} c dt d\varphi + \frac{(r^2 + a^2)^2 -a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 \tag{16}
 $$
 
 のようになります。$$a$$は距離の次元ですが、自転と結びつけて考えると$$a = J/(Mc)$$となります。$$J$$はブラックホールの自転角運動量です。

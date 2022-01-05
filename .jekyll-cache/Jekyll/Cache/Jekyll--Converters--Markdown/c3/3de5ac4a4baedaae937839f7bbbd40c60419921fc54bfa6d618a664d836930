@@ -1,4 +1,4 @@
-I"
+I"�-
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -7,6 +7,7 @@
   <li><a href="#ルジャンドル陪多項式" id="markdown-toc-ルジャンドル陪多項式">ルジャンドル陪多項式</a>    <ol>
       <li><a href="#ルジャンドル陪多項式が満たす微分方程式" id="markdown-toc-ルジャンドル陪多項式が満たす微分方程式">ルジャンドル陪多項式が満たす微分方程式</a></li>
       <li><a href="#ルジャンドル陪多項式の直交性" id="markdown-toc-ルジャンドル陪多項式の直交性">ルジャンドル陪多項式の直交性</a></li>
+      <li><a href="#ルジャンドル陪多項式の公式" id="markdown-toc-ルジャンドル陪多項式の公式">ルジャンドル陪多項式の公式</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -98,6 +99,14 @@
 
 <p>よって(1)式によって定義されたassociated Legendre多項式は(5)式の微分方程式を満たします。これをassociated Legendre微分方程式と呼びます。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="ルジャンドル陪多項式の直交性">ルジャンドル陪多項式の直交性</h2>
 
 <p>次に直交性を示しましょう。</p>
@@ -133,6 +142,75 @@
 \end{align}\]
 
 <p>となり、Legendre陪多項式の直交性が示されました。</p>
+
+<h2 id="ルジャンドル陪多項式の公式">ルジャンドル陪多項式の公式</h2>
+
+<p><a href="/math/legendre">Legendre多項式</a>において成り立つ公式</p>
+
+\[P_n (-z) 
+= (-1)^n P_n (z) \tag{7}\]
+
+<p>より</p>
+
+\[P_n^m (-z) 
+= (1-z^2)^{m/2} \frac{d^m}{d(-z)^m} P_n(-z) 
+= (1-z^2)^{m/2} (-1)^{m+n} \frac{d^m }{dz^m} P_n(z) 
+= (-1)^{m+n} P_n^m (z) \tag{8}\]
+
+<p>が成り立ちます。そもそものLegendre多項式の総和表現</p>
+
+\[P_n (z) 
+= \frac{1}{2^n} \sum_{k=0}^{[n/2]} \frac{(-1)^k (2n-2k)!}{k! (n-k)! (n-2k)!} z^{n-2k} \tag{9}\]
+
+<p>から、\(P_n(z)\)は\(z^n, z^{n-2}, \cdots\)の足し合わせとわかります。よって(1)式から、Legendre陪多項式は\(n &gt; m\)のときのみ値を持つことがわかります。これを踏まえて\(P_n^{-m}\)を考えましょう。そのために</p>
+
+\[\frac{d^{n+m}}{dz^{n+m}} (1-z^2)^n 
+= \frac{d^{n+m}}{dz^{n+m}} (1-z)^n (1+z)^n 
+= \sum_{\ell=0}^{n+m} {}_{n+m} C_\ell \left\{ \frac{d^\ell}{dz^\ell} (1-z)^n\right\} \left\{ \frac{d^{n+m-\ell}}{dz^{n+m-\ell}} (1+z)^n\right\}\]
+
+<p>を式変形します。</p>
+
+\[\begin{align}
+\frac{d^\ell}{dz^\ell} (1-z)^n 
+&amp;= \frac{d^{\ell-1}}{dz^{\ell-1}} n (-1) (1-z)^{n-1} 
+= \frac{d^{\ell-2}}{dz^{\ell-2}} n (n-1) (-1)^2 (1-z)^{n-2} 
+= \cdots \notag \\
+&amp;= n (n-1) \cdots (n-\ell+1) (-1)^\ell (1-z)^{n-\ell} 
+= \frac{(-1)^\ell n!}{(n-\ell)!} (1-z)^{n-\ell} \tag{10}
+\end{align}\]
+
+<p>同様に</p>
+
+\[\frac{d^{n+m-\ell}}{dz^{n+m-\ell}} (1+z)^n 
+= \frac{n!}{(\ell -m)!} (1+z)^{\ell -m} \tag{11}\]
+
+<p>となります。(9)式の最初の部分は\((1-z)^n\)の\(\ell\)階の微分より、\(\ell&gt;n\)の項は0となります。よって\(\ell &lt; n\)のみ考えれば良いでしょう。さらに後ろの部分は\((1+z)^n\)の\(n+m-\ell\)階の微分より、\(n+m-\ell &gt; n\)の項は0となります。よって\(\ell &gt;m\)のみ考えれば良いとわかります。よって(9)式の和の取り方に注意して、上の2つの変形から</p>
+
+\[\frac{d^{n+m}}{dz^{n+m}} (1-z^2)^n 
+= \sum_{\ell=m}^n {}_{n+m} C_\ell \frac{(-1)^\ell n!}{(n-\ell)!} (1-z)^{n-\ell} \frac{n!}{(\ell-m)!} (1+z)^{\ell-m}\]
+
+<p>となります。わかりやすく式変形を進めるために\(p=\ell-m\)と置くと</p>
+
+\[\begin{align}
+\frac{d^{n+m}}{dz^{n+m}} (1-z^2)^n 
+&amp;= \sum_{p=0}^{n-m} {}_{n+m} C_{p+m} \frac{(-1)^{p+m} n!}{(n-p-m)!} (1-z)^{n-p-m} \frac{n!}{p!} (1+z)^p \notag \\
+&amp;= \sum_{p=0}^{n-m} {}_{n+m} C_{p+m} \frac{(-1)^{p+m} n!}{(n-p-m)!} \frac{(1-z)^{n-p}}{(1-z)^m} \frac{n!}{p!} \frac{(1+z)^{p+m}}{(1+z)^m} \notag \\
+&amp;= \frac{(-1)^m}{(1-z^2)^m} \frac{(n+m)!}{(n-m)!} \sum_{p=0}^{n-m} \frac{(n-m)!}{p! (n-m-p)!} \underbrace{\frac{(-1)^p n!}{(n-p)!} (1-z)^{n-p}}_{(10)} \underbrace{\frac{n!}{(m+p)!} (1+z)^{p+m}}_{(11)} \notag \\
+&amp;= \frac{(-1)^m}{(1-z^2)^m} \frac{(n+m)!}{(n-m)!} \sum_{p=0}^{n-m} {}_{n-m} C_p \left\{ \frac{d^p}{dz^p} (1-z)^n\right\} \left\{ \frac{d^{n-p-m}}{dz^{n-p-m}} (1+z)^n\right\} \notag \\
+&amp;= \frac{(-1)^m}{(1-z^2)^m} \frac{(n+m)!}{(n-m)!} \frac{d^{n-m}}{dz^{n-m}} (1-z^2)^n \notag 
+\end{align}\]
+
+<p>以上より</p>
+
+\[\frac{1}{2^n n!} (1-z^2)^{m/2} \frac{d^{n+m}}{dz^{n+m}} (1-z^2)^n 
+= \frac{(-1)^m}{2^n n!} \frac{(n+m)!}{(n-m)!} (1-z^2)^{-m/2} \frac{d^{n-m}}{dz^{n-m}} (1-z^2)^n\]
+
+<p><a href="/math/legendre">Legendre多項式のRodriguesの公式</a>と(1)式より</p>
+
+\[P_n^m (z) 
+= (-1)^m \frac{(n+m)!}{(n-m)!} P_n^{-m} (z) \tag{12}\]
+
+<p>を得ます。</p>
 
 <h1 id="参考文献">参考文献</h1>
 

@@ -1,0 +1,127 @@
+I",
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ルジャンドル陪多項式" id="markdown-toc-ルジャンドル陪多項式">ルジャンドル陪多項式</a>    <ol>
+      <li><a href="#ルジャンドル陪多項式が満たす微分方程式" id="markdown-toc-ルジャンドル陪多項式が満たす微分方程式">ルジャンドル陪多項式が満たす微分方程式</a></li>
+      <li><a href="#ルジャンドル陪多項式の直交性" id="markdown-toc-ルジャンドル陪多項式の直交性">ルジャンドル陪多項式の直交性</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ルジャンドル陪多項式">ルジャンドル陪多項式</h1>
+
+<p>\(m\)が整数かつ\(-1 &lt; x &lt; 1\)のとき</p>
+
+\[P_n^m (z) 
+\equiv (1-z^2)^{m/2} \frac{d^m P_n (z)}{dz^m} \tag{1}\]
+
+<p>で定義される関数をassociated Legendre多項式と呼びます。</p>
+
+<h2 id="ルジャンドル陪多項式が満たす微分方程式">ルジャンドル陪多項式が満たす微分方程式</h2>
+
+<p>\(P_n (z)\)は<a href="/math/legendre">Legendre多項式</a>です。Legendre多項式はLegendreの微分方程式を満たします。</p>
+
+\[(1-z^2) \frac{d^2 P_n}{dz^2} - 2z \frac{d P_n}{dz} + n(n+1) P_n 
+=0 \tag{2}\]
+
+<p>この式の\(m\)階微分を考えます。</p>
+
+\[\frac{d^m}{dz^m} (zP_n) 
+= \frac{d^{m-1}}{dz^{m-1}} \left( P_n + z \frac{d P_n}{dz} \right) 
+= \frac{d^{m-2}}{dz^{m-2}} \left( 2 \frac{d P_n}{dz} + z \frac{d^2 P_n}{dz^2} \right) 
+= \cdots 
+= m \frac{d^{m-1} P_n}{dz^{m-1}} + z \frac{d^m P_n}{dz^m}\]
+
+\[\begin{aligned}
+\frac{d^m}{dz^m} (z^2 P_n) 
+&amp;= \frac{d^{m-1}}{dz^{m-1}} \left( 2z P_n + z^2 \frac{d P_n}{dz} \right) 
+= \sum_{\ell = 1}^m \frac{d^{m-\ell}}{dz^{m-\ell}} \frac{d^{\ell-1} P_n}{dz^{\ell-1}} + z^2 \frac{d^m P_n}{dz^m} \\
+&amp;= \sum_{\ell=1}^m \left\{ 2(m-\ell) \frac{d^{m-2} P_n}{dz^{m-2}} + 2z \frac{d^{m-1} P_n}{dz^{m-1}}\right\} + z^2 \frac{d^m P_n}{dz^m} 
+= m(m-1) \frac{d^{m-2} P_n}{dz^{m-2}} + 2mz \frac{d^{m-1} P_n}{dz^{m-1}} + z^2 \frac{d^m P_n}{dz^m} 
+\end{aligned}\]
+
+<p>の2つより、(2)式の\(m\)階微分は</p>
+
+\[\begin{align}
+&amp;\frac{d^{m+2} P_n}{dz^{m+2}} - m(m-1) \frac{d^{m} P_n}{dz^{m}} - 2mz \frac{d^{m+1} P_n}{dz^{m+1}} - z^2 \frac{d^{m+2} P_n}{dz^{m+2}} - 2m \frac{d^{m+1} P_n}{dz^{m+1}} - 2z \frac{d^{m+2} P_n}{dz^{m+2}} + n(n+1) \frac{d^m P_n}{dz^m} \notag \\
+&amp;= (1-z^2) \frac{d^{m+2} P_n}{dz^{m+2}} - 2(m+1) z \frac{d^{m+1} P_n}{dz^{m+1}} + \{n(n+1)-m(m+1)\} \frac{d^{m} P_n}{dz^{m}} 
+= 0 \tag{3}
+\end{align}\]
+
+<p>さらに\(v = (1-z^2)^{m/2} \frac{d^m P_n}{dz^m}= (1-z^2)^{m/2} P_n^{(m)}\)とすると</p>
+
+\[\begin{align}
+&amp;\frac{dv}{dz} 
+= -mz (1-z^2)^{m/2-1} P_n^{(m)} + (1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} 
+= -\frac{mz}{1-z^2} v + (1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} \notag \\ 
+&amp;\Longrightarrow \ 
+(1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} = \frac{dv}{dz} + \frac{mz}{1-v^2} v \tag{4}
+\end{align}\]
+
+<p>そして</p>
+
+\[\frac{d^2v}{dz^2} 
+= - \frac{m(1-z^2) -mz(-2z)}{(1-z^2)^2} v- \frac{mz}{1-z^2}\frac{dv}{dz} -\frac{mz}{1-z^2} \underbrace{(1-z^2)^{m/2} \frac{dP_n^{(m)}}{dz}}_{(4)} + (1-z^2)^{m/2} \frac{d^2 P_n^{(m)}}{dz^2} 
+= - \frac{m+mz^2}{(1-z^2)^2} v - \frac{mz}{1-z^2} \frac{dv}{dz} - \frac{mz}{1-z^2} \left( \frac{dv}{dz} + \frac{mz}{1-v^2} v \right)+ (1-z^2)^{m/2} \frac{d^2 P_n^{(m)}}{dz^2} 
+= - \frac{m+mz^2 (1+m)}{(1-z^2)^2} v - \frac{2mz}{1-z^2} \frac{dv}{dz} + (1-z^2)^{m/2} \frac{d^2 P_n^{(m)}}{dz^2} \ \Longrightarrow \ 
+(1-z^2)^{m/2} \frac{d^2 P_n^{(m)}} 
+= \frac{d^2 v}{dz^2} + \frac{m+mz^2 (1+m)}{(1-z^2)^2} v + \frac{2mz}{1-z^2} \frac{dv}{dz}\]
+
+<p>より、(3)式に\((1-z^2)^{m/2}\)をかければ</p>
+
+\[(1-z^2) \frac{d^2 v}{dz^2} + \frac{m + mz^2 + m^2z^2}{1-z^2} v + 2mz \frac{dv}{dz} - 2(m+1)z \frac{dv}{dz} - \frac{2(m+1)mz^2}{1-z^2} v + \{ n(n+1)-m(m+1)\} v 
+= 0 \ \Longrightarrow \ 
+(1-z^2) \frac{d^2 v}{dz^2} - 2z \frac{dv}{dz} + \left\{ n(n+1)- \frac{m^2}{1-z^2} \right\} v 
+= 0 \tag{5}\]
+
+<p>よって(1)式によって定義されたassociated Legendre多項式は(5)式の微分方程式を満たします。これをassociated Legendre微分方程式と呼びます。</p>
+
+<h2 id="ルジャンドル陪多項式の直交性">ルジャンドル陪多項式の直交性</h2>
+
+<p>次に直交性を示しましょう。</p>
+
+\[\int_{-1}^1 P_\ell^m P_n^m dz 
+= \int_{-1}^1 (1-z^2)^m \frac{d^m P_\ell}{dz^m} \frac{d^m P_n}{dz^m} dz 
+= \left[ (1-z^2)^m \frac{d^{m-1} P_\ell}{dz^{m-1}} \frac{d^m P_n}{dz^m}\right]_{-1}^1 - \int_{-1}^1 \frac{d^{m-1} P_\ell}{dz^{m-1}} \frac{d}{dz} \left\{ (1-z^2)^m \frac{d^m P_n}{dz^m}\right\} dz\]
+
+<p>ここで(3)式を\(m \rightarrow m-1\)としたものの両辺に\((1-z^2)^{m-1}\)をかけると</p>
+
+\[(1-z^2)^m \frac{d}{dz} \frac{d^m P_n}{dz^m} -2m(1-z^2)^{m-1} z \frac{d^m P_n}{dz^m} + \{ n(n+1)-m(m-1)\} (1-z^2)^{m-1} \frac{d^{m-1} P_n}{dz^{m-1}}
+= \frac{d}{dz} \left\{ (1-z^2)^{m} \frac{d^{m} P_n}{dz^{m}}\right\} + (n-m+1)(n+m) (1-z^2)^{m-1} \frac{d^{m-1} P_n}{dz^{m-1}} 
+= 0\]
+
+<p>より</p>
+
+\[\int_{-1}^1 P_\ell^m P_n^m dz 
+= \{ n(n+1)-m(m-1)\} \int_{-1}^1 (1-z^2)^{m-1} \frac{d^{m-1}P_n}{dz^{m-1}} \frac{d^{m-1} P_\ell}{dz^{m-1}} dz 
+=\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

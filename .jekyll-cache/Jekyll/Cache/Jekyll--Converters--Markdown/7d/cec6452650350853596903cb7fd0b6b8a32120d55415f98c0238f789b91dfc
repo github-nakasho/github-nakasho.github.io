@@ -1,0 +1,85 @@
+I"M
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ルジャンドル陪関数" id="markdown-toc-ルジャンドル陪関数">ルジャンドル陪関数</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ルジャンドル陪関数">ルジャンドル陪関数</h1>
+
+<p>\(m\)が整数かつ\(-1 &lt; x &lt; 1\)のとき</p>
+
+\[P_n^m (z) 
+\equiv (1-z^2)^{m/2} \frac{d^m P_n (z)}{dz^m} \tag{1}\]
+
+<p>で定義される関数をassociated Legendre関数と呼びます。ここで\(P_n (z)\)は<a href="/math/legendre">Legendre関数</a>です。Legendre関数はLegendreの微分方程式を満たします。</p>
+
+\[(1-z^2) \frac{d^2 P_n}{dz^2} - 2z \frac{d P_n}{dz} + n(n+1) P_n 
+=0 \tag{2}\]
+
+<p>この式の\(m\)階微分を考えます。</p>
+
+\[\frac{d^m}{dz^m} (zP_n) 
+= \frac{d^{m-1}}{dz^{m-1}} \left( P_n + z \frac{d P_n}{dz} \right) 
+= \frac{d^{m-2}}{dz^{m-2}} \left( 2 \frac{d P_n}{dz} + z \frac{d^2 P_n}{dz^2} \right) 
+= \cdots 
+= m \frac{d^{m-1} P_n}{dz^{m-1}} + z \frac{d^m P_n}{dz^m}\]
+
+\[\begin{aligned}
+\frac{d^m}{dz^m} (z^2 P_n) 
+&amp;= \frac{d^{m-1}}{dz^{m-1}} \left( 2z P_n + z^2 \frac{d P_n}{dz} \right) 
+= \sum_{\ell = 1}^m \frac{d^{m-\ell}}{dz^{m-\ell}} \frac{d^{\ell-1} P_n}{dz^{\ell-1}} + z^2 \frac{d^m P_n}{dz^m} \\
+&amp;= \sum_{\ell=1}^m \left\{ 2(m-\ell) \frac{d^{m-2} P_n}{dz^{m-2}} + 2z \frac{d^{m-1} P_n}{dz^{m-1}}\right\} + z^2 \frac{d^m P_n}{dz^m} 
+= m(m-1) \frac{d^{m-2} P_n}{dz^{m-2}} + 2mz \frac{d^{m-1} P_n}{dz^{m-1}} + z^2 \frac{d^m P_n}{dz^m} 
+\end{align}\]
+
+<p>の2つより、(2)式の\(m\)階微分は</p>
+
+\[\begin{align}
+&amp;\frac{d^{m+2} P_n}{dz^{m+2}} - m(m-1) \frac{d^{m} P_n}{dz^{m}} - 2mz \frac{d^{m+1} P_n}{dz^{m+1}} - z^2 \frac{d^{m+2} P_n}{dz^{m+2}} - 2m \frac{d^{m+1} P_n}{dz^{m+1}} - 2z \frac{d^{m+2} P_n}{dz^{m+2}} + n(n+1) \frac{d^m P_n}{dz^m} \\
+&amp;= (1-z^2) \frac{d^{m+2} P_n}{dz^{m+2}} - 2(m+1) z \frac{d^{m+1} P_n}{dz^{m+1}} + \{n(n+1)-m(m+1)\} \frac{d^{m} P_n}{dz^{m}} 
+= 0 \tag{3}\]
+
+<p>さらに\(v = (1-z^2)^{m/2} \frac{d^m P_n}{dz^m}= (1-z^2)^{m/2} P_n^{(m)}\)とすると</p>
+
+\[\begin{aligned}
+&amp;\frac{dv}{dz} 
+= -mz (1-z^2)^{m/2-1} P_n^{(m)} + (1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} 
+= -\frac{mz}{1-z^2} v + (1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} \\ 
+&amp;\Longrightarrow \ 
+(1-z^2)^{m/2} \frac{d P_n^{(m)}}{dz} = \frac{dv}{dz} + \frac{mz}{1-v^2} v
+\end{aligned}\]
+
+<p>そして</p>
+
+\[\frac{d^2v}{dz^2} 
+=\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

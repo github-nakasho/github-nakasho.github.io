@@ -1,0 +1,59 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#線形近似されたアインシュタイン方程式" id="markdown-toc-線形近似されたアインシュタイン方程式">線形近似されたアインシュタイン方程式</a>    <ol>
+      <li><a href="#リーマンテンソルの計算" id="markdown-toc-リーマンテンソルの計算">リーマンテンソルの計算</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="線形近似されたアインシュタイン方程式">線形近似されたアインシュタイン方程式</h1>
+
+<p>質量が存在すると空間に歪みが生じますが、以下ではその質量が小さく、メトリックが</p>
+
+\[g_{\mu \nu} 
+= \eta_{\mu \nu} + h_{\mu \nu} \qquad (|h_{\mu \nu}| \ll 1) \tag{1}\]
+
+<p>のように書けるとしましょう。するとこの逆行列(添字が両方とも上についているもの)は</p>
+
+\[g^{\mu \nu} 
+= (\eta_{\mu \nu} + h_{\mu \nu})^{-1} 
+= \eta^{\mu \nu} - h^{\mu \nu} \tag{2}\]
+
+<p>のようになります。この状況で<a href="/gr/einstein_eq">Einstein方程式</a>がどのように書けるかを見ていきます。</p>
+
+<h2 id="リーマンテンソルの計算">リーマンテンソルの計算</h2>
+
+<p>そのために、まずは<a href="/gr/riemann_tensor">Riemannテンソル</a>の計算を行いましょう。<a href="/gr/christoffel">Christoffel記号</a>は\(g_{\mu \nu, \alpha}\)のような項からなることがわかっています。このとき(1)式から</p>
+
+\[g_{\mu \nu, \alpha} 
+= \underbrace{\eta_{\mu \nu, \alpha}}_{=0} + h_{\mu \nu, \alpha}\]
+
+<p>より、メトリックを微分したものは\(O(h)\)です。よってChristoffel記号も\(\mathcal{O}(h)\)となります。Riemannテンソルにおいて\(\mathcal{O}(h^2)\)は微小量として無視すると</p>
+
+\[R^\alpha_{\ \ \gamma \mu \nu} 
+= \partial_\mu \frac{1}{2} (g^{\ \ \alpha}_{\gamma, \nu} + g^{\alpha}_{\ \ \nu, \gamma} - g^{\ \ \ \ , \alpha}_{\nu \gamma}) - \partial_\nu \frac{1}{2} (g^{\ \ \alpha}_{\gamma \ \ , \mu} + g^{\alpha}_{\ \ \mu , \gamma} - g^{\ \ \ \ , \alpha}_{\mu \gamma}) 
+= \frac{1}{2} (g^{\alpha}_{\ \ \nu , \gamma \mu} - g^{\ \ \ \ , \alpha}_{\nu \gamma \ \ , \mu} + g^{\alpha}_{\ \ \mu , \gamma \nu} - g^{\ \ \ \ , \alpha}_{\mu \gamma \ \ , \nu}) \tag{3}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

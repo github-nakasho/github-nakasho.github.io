@@ -1,4 +1,4 @@
-I"�;
+I"�J
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -16,6 +16,7 @@
           <li><a href="#ルジャンドル多項式の直交性-1" id="markdown-toc-ルジャンドル多項式の直交性-1">ルジャンドル多項式の直交性</a></li>
         </ol>
       </li>
+      <li><a href="#ルジャンドル多項式の概形" id="markdown-toc-ルジャンドル多項式の概形">ルジャンドル多項式の概形</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -331,6 +332,8 @@
 \[\int_{-1}^1 P_m (z) P_n (z) dz 
 = \frac{2}{2n+1} \delta_{mn} \tag{23}\]
 
+<p>という直交性が示されました。</p>
+
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 
 <!-- for_jekyll -->
@@ -339,9 +342,49 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
 
+<h2 id="ルジャンドル多項式の概形">ルジャンドル多項式の概形</h2>
+
+<p>以下にいくつかの\(n\)に対するLegendre多項式を図示するスクリプトを示します。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="n">sc</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set variables
+</span>    <span class="n">ix</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+    <span class="n">xmax</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">nmin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nmax</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="c1"># set x coordinate
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ix</span><span class="p">)</span>
+    <span class="c1"># main loop of plotting Bessel functions
+</span>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nmin</span><span class="p">,</span> <span class="n">nmax</span><span class="p">):</span>
+        <span class="n">ei</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">eval_legendre</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="s">"n={}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ei</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="c1"># make plot window
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>そしてこのスクリプトを用いて図示された結果は以下のようになります。</p>
+
+<p><img src="/assets/images/math/legendre.png" alt="Legendre多項式。" /></p>
+
 <h1 id="参考文献">参考文献</h1>
 
 <p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
 [2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
 [3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 :ET

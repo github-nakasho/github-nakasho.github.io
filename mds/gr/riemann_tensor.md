@@ -99,7 +99,7 @@ $$A^\gamma$$は任意のベクトルなので、恒等的に
 
 $$
 R^\alpha_{\gamma \mu \nu} 
-= \partial_\mu \Gamma^\alpha_{\nu \gamma} + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} – \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma}
+= \partial_\mu \Gamma^\alpha_{\nu \gamma} + \Gamma^\alpha_{\mu \beta} \Gamma^\beta_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} – \Gamma^\alpha_{\nu \beta} \Gamma^\beta_{\mu \gamma}
 $$
 
 が成立します。特に局所慣性系では$$\Gamma = 0$$より

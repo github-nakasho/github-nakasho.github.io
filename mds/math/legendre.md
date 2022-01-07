@@ -388,10 +388,46 @@ $$
 = \frac{2}{2n+1} \delta_{mn} \tag{23}
 $$
 
+という直交性が示されました。
+
 {% include adsense.html %}
+
+## ルジャンドル多項式の概形
+
+以下にいくつかの$$n$$に対するLegendre多項式を図示するスクリプトを示します。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.special as sc
+
+if __name__ == '__main__':
+    # set variables
+    ix = 100
+    xmin = -1.0
+    xmax = 1.0
+    nmin = 0
+    nmax = 5
+    # set x coordinate
+    x = np.linspace(xmin, xmax, ix)
+    # main loop of plotting Bessel functions
+    for n in range(nmin, nmax):
+        ei = sc.eval_legendre(n, x)
+        string = "n={}".format(n)
+        plt.plot(x, ei, label=string)
+        plt.legend()
+    # make plot window
+    plt.show()
+```
+
+そしてこのスクリプトを用いて図示された結果は以下のようになります。
+
+![Legendre多項式。](/assets/images/math/legendre.png)
 
 # 参考文献
 
 [1] 田島, 近藤, "改訂演習工科の数学4, 複素関数"  
 [2] 中山, "裳華房フィジックスライブリー, 物理数学II"  
 [3] 福山, 小形, "基礎物理学シリーズ3, 物理数学I"  
+
+{% include adsense.html %}

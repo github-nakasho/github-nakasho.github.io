@@ -4535,59 +4535,59 @@
     "url": "http://localhost:4000/infostat/random_spin_system",
     "relUrl": "/infostat/random_spin_system"
   },"756": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": " ",
-    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
-    "relUrl": "/gr/redshift#重力赤方偏移"
-  },"757": {
-    "doc": "重力赤方偏移",
-    "title": "計算",
-    "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E8%A8%88%E7%AE%97",
-    "relUrl": "/gr/redshift#計算"
-  },"758": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
-    "relUrl": "/gr/redshift#重力赤方偏移-1"
-  },"759": {
-    "doc": "重力赤方偏移",
-    "title": "積分ザックス・ヴォルフェ効果",
-    "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
-    "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
-  },"760": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
-    "url": "http://localhost:4000/gr/redshift",
-    "relUrl": "/gr/redshift"
-  },"761": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
     "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
     "relUrl": "/cosmo/redshift#赤方偏移"
-  },"762": {
+  },"757": {
     "doc": "赤方偏移",
     "title": "光の経路",
     "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
     "url": "http://localhost:4000/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
     "relUrl": "/cosmo/redshift#光の経路"
-  },"763": {
+  },"758": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
     "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
     "relUrl": "/cosmo/redshift#赤方偏移-1"
-  },"764": {
+  },"759": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
     "url": "http://localhost:4000/cosmo/redshift",
     "relUrl": "/cosmo/redshift"
+  },"760": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": " ",
+    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
+    "relUrl": "/gr/redshift#重力赤方偏移"
+  },"761": {
+    "doc": "重力赤方偏移",
+    "title": "計算",
+    "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E8%A8%88%E7%AE%97",
+    "relUrl": "/gr/redshift#計算"
+  },"762": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
+    "relUrl": "/gr/redshift#重力赤方偏移-1"
+  },"763": {
+    "doc": "重力赤方偏移",
+    "title": "積分ザックス・ヴォルフェ効果",
+    "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
+    "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
+  },"764": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
+    "url": "http://localhost:4000/gr/redshift",
+    "relUrl": "/gr/redshift"
   },"765": {
     "doc": "相対論的ビーミング効果",
     "title": "相対論的ビーミング",
@@ -5371,7 +5371,7 @@
   },"895": {
     "doc": "ゆっくり自転する低質量星が作る時空",
     "title": "カー時空からの接続",
-    "content": "Kerrブラックホールメトリックは以下のように書けました。 . \\[ds^2 = - \\frac{\\Delta - a^2 \\sin^2 \\theta}{\\rho^2} c^2 dt^2 - \\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} c dt d\\varphi + \\frac{(r^2 + a^2)^2 - a^2 \\Delta \\sin^2 \\theta}{\\rho^2} \\sin^2 \\theta d\\varphi^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 \\tag{31}\\] ここで\\(\\rho^2 = r^2 + a^2 \\cos^2 \\theta, \\Delta = r^2 + a^2 - r_g r\\)です。(30), (31)式の\\(cdt d\\varphi\\)項の比較から . \\[\\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} \\underbrace{\\simeq }_{r \\gg 1} \\frac{2 a r_g r \\sin^2 \\theta}{r^2} = 2 \\frac{2GJ \\sin^2 \\theta}{c^3 r} \\ \\Longrightarrow \\ a = \\frac{2 GJ}{c^3 r_g} = \\frac{J}{Mc} \\tag{32}\\] のようになり、Kerrメトリックを求めるときに出現した定数\\(a\\)が求まりました。 . ",
+    "content": "Kerrブラックホールメトリックは以下のように書けました。 . \\[ds^2 = - \\frac{\\Delta - a^2 \\sin^2 \\theta}{\\rho^2} c^2 dt^2 - \\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} c dt d\\varphi + \\frac{(r^2 + a^2)^2 - a^2 \\Delta \\sin^2 \\theta}{\\rho^2} \\sin^2 \\theta d\\varphi^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 \\tag{31}\\] ここで\\(\\rho^2 = r^2 + a^2 \\cos^2 \\theta, \\Delta = r^2 + a^2 - r_g r\\)です。(30), (31)式の\\(cdt d\\varphi\\)項の比較を行います。ここまで求めてきたメトリックは十分遠方\\(r \\gg R\\)という条件で求めてきたので . \\[\\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} \\underbrace{\\simeq }_{r \\gg 1} \\frac{2 a r_g r \\sin^2 \\theta}{r^2} = 2 \\frac{2GJ \\sin^2 \\theta}{c^3 r} \\ \\Longrightarrow \\ a = \\frac{2 GJ}{c^3 r_g} = \\frac{J}{Mc} \\tag{32}\\] のようになり、Kerrメトリックを求めるときに出現した定数\\(a\\)が求まりました。 . ",
     "url": "http://localhost:4000/gr/spinning_weak_gravity#%E3%82%AB%E3%83%BC%E6%99%82%E7%A9%BA%E3%81%8B%E3%82%89%E3%81%AE%E6%8E%A5%E7%B6%9A",
     "relUrl": "/gr/spinning_weak_gravity#カー時空からの接続"
   },"896": {
@@ -6077,300 +6077,336 @@
     "url": "http://localhost:4000/atmos/transition_prob",
     "relUrl": "/atmos/transition_prob"
   },"1013": {
+    "doc": "M1 Macで3画面",
+    "title": "M1 Mac でトリプルディスプレイ環境を構築",
+    "content": " ",
+    "url": "http://localhost:4000/pro/triple_display#m1-mac-%E3%81%A7%E3%83%88%E3%83%AA%E3%83%97%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89",
+    "relUrl": "/pro/triple_display#m1-mac-でトリプルディスプレイ環境を構築"
+  },"1014": {
+    "doc": "M1 Macで3画面",
+    "title": "M1 Macでは1台までしか外部ディスプレイを接続できない？",
+    "content": "デフォルトではM1 Macはサードバーティ製の外部ディスプレイへの出力が1つまでしかできません。つまりこのままでは元のMacの画面+外部ディスプレイ1つのデュアルディスプレイとなります。ではこれを拡張してトリプルディスプレイにする方法はないのでしょうか。ここでは私の備忘録として、M1 Macでトリプルディスプレイをする方法をメモしておきます。 . ",
+    "url": "http://localhost:4000/pro/triple_display#m1-mac%E3%81%A7%E3%81%AF1%E5%8F%B0%E3%81%BE%E3%81%A7%E3%81%97%E3%81%8B%E5%A4%96%E9%83%A8%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%82%92%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84",
+    "relUrl": "/pro/triple_display#m1-macでは1台までしか外部ディスプレイを接続できない"
+  },"1015": {
+    "doc": "M1 Macで3画面",
+    "title": "DisplayLink",
+    "content": "1つではなく複数の外部ディスプレイに出力する方法として、DisplayLinkが開発した技術を用います。これを用いることで、1本のUSBケーブルから複数の外部ディスプレイ装置やマウス・キーボードなどのUSB周辺機器にも接続することが可能になります。 このような理由から、M1 Macトリプルディスプレイ環境の構築には以下のような手順が必要となります。 . | DisplayLink技術に対応したUSB-HDMI変換アダプタを購入する | 用意したUSB-HDMI変換アダプタとM1 Macおよび接続したいディスプレイ群を接続する | DisplayLink社のwebsiteに行き、ドライバをダウンロードする | . ",
+    "url": "http://localhost:4000/pro/triple_display#displaylink",
+    "relUrl": "/pro/triple_display#displaylink"
+  },"1016": {
+    "doc": "M1 Macで3画面",
+    "title": "DisplayLinkドライバのダウンロード",
+    "content": "以下のボタンリンク先からご自分のOSにあったものをダウンロードし、手順にしたがってインストールを行います。01/10/2022現在、対応しているのはWindows, macOS, Android, Chrome OS, Ubuntuのようです。 . DisplayLink . リンクはDisplayLink社の意向により変更される恐れがあります。ご注意ください。 . ",
+    "url": "http://localhost:4000/pro/triple_display#displaylink%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89",
+    "relUrl": "/pro/triple_display#displaylinkドライバのダウンロード"
+  },"1017": {
+    "doc": "M1 Macで3画面",
+    "title": "Macを再起動したらディスプレイが接続されなくなった",
+    "content": "M1 Macの動作が重たくなってきたなどの理由で再起動をしなけらばならない事があります。しかし再び作業しようとしたところ、2つの外部ディスプレイのうちの1つが認識されなくなってしまいました。 解決策としては、/ApplicationsにあるDisplayLink Managerをダブルクリックすることで再起動します。 . ",
+    "url": "http://localhost:4000/pro/triple_display#mac%E3%82%92%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%9F%E3%82%89%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%81%8C%E6%8E%A5%E7%B6%9A%E3%81%95%E3%82%8C%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F",
+    "relUrl": "/pro/triple_display#macを再起動したらディスプレイが接続されなくなった"
+  },"1018": {
+    "doc": "M1 Macで3画面",
+    "title": "M1 Macで3画面",
+    "content": ". | M1 Mac でトリプルディスプレイ環境を構築 . | M1 Macでは1台までしか外部ディスプレイを接続できない？ | DisplayLink | DisplayLinkドライバのダウンロード | Macを再起動したらディスプレイが接続されなくなった | . | . ",
+    "url": "http://localhost:4000/pro/triple_display",
+    "relUrl": "/pro/triple_display"
+  },"1019": {
     "doc": "Time-to-solution",
     "title": "Time to solution (TTS)",
     "content": " ",
     "url": "http://localhost:4000/mo/tts#time-to-solution-tts",
     "relUrl": "/mo/tts#time-to-solution-tts"
-  },"1014": {
+  },"1020": {
     "doc": "Time-to-solution",
     "title": "概念",
     "content": "アニーリングアルゴリズムはどのような計算時間でも何かしらの近似解を算出することができます。しかしいくら計算が速くても、誤った解が求まるようでは意味がありません。そこで自分が必要な確率で最適解が算出されるまでの計算時間を求め、それをアニーリングアルゴリズムの良し悪しを考える指標に用いましょう。 . アニーリングアルゴリズムは複数回行い、その中から最適解を探します。そのため、計算時間を評価するには複数回の実行も考慮に入れる必要があります。 . これらを踏まえた上で、ある確率で最適解を求めるまでにかかる計算時間をTime to solution (TTS)と呼びます。 . ",
     "url": "http://localhost:4000/mo/tts#%E6%A6%82%E5%BF%B5",
     "relUrl": "/mo/tts#概念"
-  },"1015": {
+  },"1021": {
     "doc": "Time-to-solution",
     "title": "計算方法",
     "content": "1回のアニーリング時間を\\(\\tau\\)とし、そのアニーリングで最適解が求まる確率(成功確率)を\\(p_s (\\tau)\\)とします。よって1回のアニーリングで最適解が求まらない確率は\\(1-p_s(\\tau)\\)となります。これを\\(R\\)回繰り返すとき、この\\(R\\)回全てで最適解が求まらない確率は\\((1-p_s (\\tau))^R\\)と計算されます。よって\\(R\\)回のうち、1回でも最適解を得る確率\\(p_R\\)は . \\[p_R = 1- (1-p_s (\\tau))^R\\] この式を\\(R\\)について整理すると . \\[R = \\frac{\\ln (1-p_R)}{\\ln (1-p_s (\\tau))}\\] となります。これに1回のアニーリングにかかる時間\\(\\tau\\)を掛ければ、\\(R\\)回のアニーリングにかかる総計算時間です。 . \\[\\mathrm{TTS} (\\tau, p_R) = \\tau \\frac{\\ln (1-p_R)}{\\ln (1-p_s (\\tau))} \\tag{1}\\] \\(\\mathrm{TTS} (\\tau, p_R)\\)は、1回のアニーリング時間\\(\\tau\\)、最適解が求まる確率\\(p_s (\\tau)\\)のアルゴリズムを用いて最適解が得られるとき、確率\\(p_R\\)で最適解が得られるまでの繰り返し回数も考慮した計算時間です。 . 実際のアルゴリズム評価では、\\(p_R\\)は定数として与えます。研究などで用いられる値としては、\\(p_R=0.99\\)が多いようです。様々なアニーリング時間\\(\\tau\\)のアニーリングを複数回実行することで\\(p_s (\\tau)\\)を計算し、それらを用いて\\(\\mathrm{TTS} (\\tau, p_R)\\)を計算します。 . ",
     "url": "http://localhost:4000/mo/tts#%E8%A8%88%E7%AE%97%E6%96%B9%E6%B3%95",
     "relUrl": "/mo/tts#計算方法"
-  },"1016": {
+  },"1022": {
     "doc": "Time-to-solution",
     "title": "実際のTTSの描画",
     "content": "下図は最適解がわかっているナップサック問題についてのTTSを描画したものです。横軸にアニーリング時間、縦軸に(1)式のTTSを対数スケールで描画しています。 . アニーリング時間を大きくしていくと最適解に到達する確率が上がるため、TTSは小さくなります。しかしアニーリング時間をある値以上にすると、今度は(1)式が\\(\\tau\\)に比例していることから、TTSも大きくなっていきます。一般にTTSは下に凸になるような概形となります。 . ",
     "url": "http://localhost:4000/mo/tts#%E5%AE%9F%E9%9A%9B%E3%81%AEtts%E3%81%AE%E6%8F%8F%E7%94%BB",
     "relUrl": "/mo/tts#実際のttsの描画"
-  },"1017": {
+  },"1023": {
     "doc": "Time-to-solution",
     "title": "参考資料",
     "content": ". | 西森秀稔, 大関真之, 量子アニーリングの基礎 | OpenJijチュートリアル, 2-アニーリングアルゴリズムの評価 | . ※ 2つ目の資料は私が執筆したもので、ほぼ同じ内容です。 . ",
     "url": "http://localhost:4000/mo/tts#%E5%8F%82%E8%80%83%E8%B3%87%E6%96%99",
     "relUrl": "/mo/tts#参考資料"
-  },"1018": {
+  },"1024": {
     "doc": "Time-to-solution",
     "title": "Time-to-solution",
     "content": ". | Time to solution (TTS) . | 概念 | 計算方法 | 実際のTTSの描画 | . | 参考資料 | . ",
     "url": "http://localhost:4000/mo/tts",
     "relUrl": "/mo/tts"
-  },"1019": {
+  },"1025": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "一様磁場中での荷電粒子の運動",
     "content": "\\(z\\)軸方向を向いた一様磁場\\(\\mathbf{B} = (0, 0, B_0)\\)の中で、質量\\(m\\)、電荷\\(q\\)の荷電粒子が行う運動を考えましょう。簡単のため、荷電粒子の初速度は\\(\\mathbf{v} = (0, v_0, 0)\\)とします。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E4%B8%80%E6%A7%98%E7%A3%81%E5%A0%B4%E4%B8%AD%E3%81%A7%E3%81%AE%E8%8D%B7%E9%9B%BB%E7%B2%92%E5%AD%90%E3%81%AE%E9%81%8B%E5%8B%95",
     "relUrl": "/astroelec/uniform_mag#一様磁場中での荷電粒子の運動"
-  },"1020": {
+  },"1026": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "運動方程式とその解",
     "content": "運動方程式 . \\[m \\frac{d \\mathbf{v}}{dt} = q \\frac{\\mathbf{v}}{c} \\times \\mathbf{B}\\] を成分ごとに書くと以下のようになります。 . \\[m \\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) = \\frac{q}{c} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) \\times \\left( \\begin{array}{c} 0 \\\\ 0 \\\\ B_0 \\end{array} \\right) \\ \\Longrightarrow \\ \\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) = \\frac{q}{mc} \\left( \\begin{array}{c} v_y B_0 \\\\ - v_x B_0\\\\ 0 \\end{array} \\right)\\] これをスマートに解くために、\\(Z = v_x + i v_y\\)という複素数を導入して解きます。\\(x, y\\)成分より . \\[\\frac{d Z}{dt} = \\frac{d v_x}{dt} + i \\frac{d v_y}{dt} = \\frac{qB_0}{mc} (v_y -i v_x) = - i \\omega_c Z \\ \\Longrightarrow \\ Z = C_1 e^{-i \\omega_c t}\\] \\(C_1\\)は定数、そして\\(\\omega_c \\equiv \\frac{q B_0}{m c}\\)はサイクロトロン振動数です。初期条件より . \\[0+ i v_0 = Z(t=0) = C_1 \\ \\Longrightarrow \\ C_1 = i v_0\\] \\[\\therefore \\ Z = v_x + i v_y = v_0 \\sin \\omega_c t + i v_0 \\cos \\omega_c t \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{ll} v_x = v_0 \\sin \\omega_c t \\\\ v_y = v_0 \\cos \\omega_c t \\end{array} \\right. \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{ll} x = -\\frac{v_0}{\\omega_c} \\cos \\omega_c t + C_2 \\\\ y = \\frac{v_0}{\\omega_c} \\sin \\omega_c t + C_3 \\end{array} \\right. \\tag{1}\\] \\(C_2, C_3\\)はそれぞれ積分定数です。 \\(z\\)方向の運動は運動方程式より力が働いていないので、等速直線運動をします。さらに初期の\\(z\\)方向の速度がないので、この粒子は\\(z\\)方向には動かず、\\(xy\\)平面内を半径\\(a_L = v_0/\\omega_c\\)の円運動をします。これを Larmor radius (ラーモア半径)と呼びます。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%9D%E3%81%AE%E8%A7%A3",
     "relUrl": "/astroelec/uniform_mag#運動方程式とその解"
-  },"1021": {
+  },"1027": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "反磁性",
     "content": "荷電粒子の円運動によって生じる電流は一様磁場を増やす働きをするか、減らす働きをするかを考察しましょう。以下のように電荷の正負で場合分けします。 . 正電荷の場合 . \\(q &gt; 0\\)のとき(1)式より、この電荷は時計回りに円運動します。この電荷の運動により生じる円電流も時計回りです。この電流により新たに生じる磁場はBiot-Savartの法則より\\(z\\)軸負の向きとわかるため、確かに電荷は磁場を打ち消す方向に運動します。 . 負電荷の場合 . \\(q &lt; 0\\)のとき(1)式より、この電荷は反時計回りに円運動します。この電荷の運動により生じる円電流は、電荷が負であることから時計回りです。この電流により新たに生じる磁場も先ほどと同様に\\(z\\)軸負の向きとなるため、こちらでも同様に電荷は磁場を打ち消す方向に運動することがわかります。 . 上の2つを合わせると、荷電粒子は外部磁場を打ち消す反磁性電流を出現させる方向に運動することがわかります。もし外部磁場を助長する電流を出現させる方向に荷電粒子が運動を行うと、その外部磁場に新たに発生した磁場が加わったことによる全磁場によってさらに磁場を助長する円電流を出現させることになります。これでは有限の外部磁場から無限に磁場のエネルギーを発生させることができるようになり、不自然です。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E5%8F%8D%E7%A3%81%E6%80%A7",
     "relUrl": "/astroelec/uniform_mag#反磁性"
-  },"1022": {
+  },"1028": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "例: 電子の場合",
     "content": "以下では電子の場合を計算しましょう。サイクロトロン振動数は . \\[\\begin{align} \\omega_{ce} &amp;= \\frac{e B_0}{m_e c} \\simeq \\underbrace{\\left( \\frac{e^2}{\\hbar c} \\right)^{1/2}}_{=\\left(\\frac{1}{137}\\right)^{1/2}} \\overbrace{(\\hbar c)^{1/2}}^{(197 \\mathrm{MeV \\cdot fm})^{1/2}} \\frac{c}{\\underbrace{m_e c^2}_{0.511 \\mathrm{MeV}}} B_0 \\simeq \\left(\\frac{200}{140}\\right)^{1/2} \\frac{(1 \\mathrm{fm})^{1/2} \\times 3 \\times 10^{10} \\mathrm{cm \\ s^{-1}}}{ (0.5 \\times 10^6 \\times 1.6 \\times 10^{-19} \\times 10^7 \\mathrm{erg})^{1/2}} B_0 \\notag \\\\ &amp;\\simeq 1.9 \\times 10^7 B_0 \\ [\\mathrm{s}^{-1}] \\notag \\end{align}\\] となります。典型的な星間空間磁場の大きさ\\(B_0 = 1 \\mathrm{\\mu G}\\)を代入すると\\(\\omega_{ce} \\sim 19 [\\mathrm{s}^{-1}]\\)です。途中の計算では微細構造定数\\(\\frac{e^2}{\\hbar c} \\sim \\frac{1}{137}, \\hbar c \\sim 197 \\mathrm{MeV \\cdot fm}\\)、そして電子の静止質量エネルギー\\(m_e c^2 \\sim 511 \\mathrm{keV}\\)を用いました。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E4%BE%8B-%E9%9B%BB%E5%AD%90%E3%81%AE%E5%A0%B4%E5%90%88",
     "relUrl": "/astroelec/uniform_mag#例-電子の場合"
-  },"1023": {
+  },"1029": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "一様磁場中での荷電粒子の運動",
     "content": ". | 一様磁場中での荷電粒子の運動 . | 運動方程式とその解 | 反磁性 . | 正電荷の場合 | 負電荷の場合 | . | 例: 電子の場合 | . | . ",
     "url": "http://localhost:4000/astroelec/uniform_mag",
     "relUrl": "/astroelec/uniform_mag"
-  },"1024": {
+  },"1030": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "一様磁場中で相対論的な運動をする電子",
     "content": " ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E4%B8%80%E6%A7%98%E7%A3%81%E5%A0%B4%E4%B8%AD%E3%81%A7%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E3%81%AA%E9%81%8B%E5%8B%95%E3%82%92%E3%81%99%E3%82%8B%E9%9B%BB%E5%AD%90",
     "relUrl": "/astroelec/uniform_mag_rel#一様磁場中で相対論的な運動をする電子"
-  },"1025": {
+  },"1031": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "運動方程式",
     "content": "電磁場テンソルのページの(5), (6)式において、一様磁場\\(\\mathbf{B} = B_0 \\mathbf{e}_z, \\mathbf{E} = \\mathbf{0}, e \\rightarrow -e\\)とすれば運動方程式が求まります。 . \\[\\frac{d}{dt} (m_e \\gamma c^2) = 0 \\tag{1}\\] \\[\\frac{d}{dt} (m_e \\gamma \\mathbf{v}) = -\\frac{e}{c} \\mathbf{v} \\times \\mathbf{B} \\tag{2}\\] それではこれを解いていきましょう。(1)式より . \\[\\frac{d\\gamma}{dt} = 0 \\ \\Longrightarrow \\  \\gamma = \\mathrm{Const.} \\tag{3}\\] また(2)式に(3)を用いて . \\[\\frac{d \\mathbf{v}}{dt} = -\\frac{e}{m_e \\gamma c} \\mathbf{v} \\times \\mathbf{B} \\tag{4}\\] 簡単のため、電子の速度ベクトルは\\(xy\\)平面内にあるとします。すなわち\\(\\mathbf{v} = (v_x, v_y, 0)\\)とすると . \\[\\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ 0 \\end{array} \\right) = - \\frac{eB_0}{m_e \\gamma c} \\left( \\begin{array}{c} v_y \\\\ -v_x \\\\ 0 \\end{array} \\right)\\] ここで、複素数\\(Z = v_x + i v_y\\)を導入すると . \\[\\begin{align} &amp;\\frac{d Z}{dt} = \\frac{dv_x}{dt} + i \\frac{d v_y}{dt} = - \\frac{eB_0}{m_e \\gamma c} (v_y - i v_x) = i \\frac{eB_0}{m_e \\gamma c} (v_x + i v_y) = i \\frac{eB_0}{m_e \\gamma c} Z \\notag \\\\ &amp;\\Longrightarrow \\ Z = A e^{i \\frac{eB_0}{m_e \\gamma c} t} = A e^{i \\omega_\\mathrm{se} t} \\quad (\\omega_\\mathrm{se} \\equiv \\frac{\\omega_\\mathrm{ce}}{\\gamma} = \\frac{eB_0}{m_e \\gamma c}) \\tag{5} \\end{align}\\] \\[\\therefore \\ \\left\\{ \\begin{array}{c} v_x = A \\cos \\omega_{se} t \\\\ v_y = A \\sin \\omega_{se} t \\end{array} \\right. \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{lll} x = \\frac{A}{\\omega_{se}} \\sin \\omega_{se} t + C_1\\\\ y = - \\frac{A}{\\omega_{se}} \\cos \\omega_{se}t + C_2 \\end{array} \\right. \\ \\ \\ (A, C_1 , C_2 : \\mathrm{const.}) \\tag{6}\\] \\(C_1 = C_2 = 0\\)とすると . \\[x^2 + y^2 = \\left( \\frac{A}{\\omega_\\mathrm{se}}\\right)\\] より、電子は半径\\(A/\\omega_\\mathrm{se}\\)の円運動をすることがわかります。また角周波数は\\(\\omega_\\mathrm{se} = \\omega_\\mathrm{ce}/\\gamma\\)となります。\\(t = 0\\)で\\(\\mathbf{v} = (v_0, 0, 0)\\)とすると、\\(A = v_0\\)より . \\[r_L = \\frac{v_0}{\\omega_\\mathrm{se}} = \\frac{v_0 \\gamma}{\\omega_\\mathrm{ce}} = \\frac{m_e c \\gamma v_0}{e B_0} \\tag{7}\\] です。これはラーモア半径と呼ばれています。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F",
     "relUrl": "/astroelec/uniform_mag_rel#運動方程式"
-  },"1026": {
+  },"1032": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "全放射強度",
     "content": "さらに、ピッチ角(電子の速度ベクトルと磁場のなす角)が\\(\\alpha\\)の電子からの全放射強度を求めましょう。リエナーの式より . \\[P_e = \\frac{2e^2}{3c^3} [ \\gamma^6 (\\dot{v}^2 - |\\dot{\\bf v} \\times \\boldsymbol{\\beta}|^2)]\\] そして(4)式から . \\[\\dot{\\mathbf{v}} = - \\frac{e}{m_e c\\gamma} \\mathbf{v} \\times \\mathbf{B}\\] でした。そしてピッチ角の定義から、この式をさらに変形することができます。 . \\[\\dot{v} = |\\dot{\\mathbf{v}}| = \\frac{e}{m_e c \\gamma} |\\mathbf{v} \\times \\mathbf{B}| = \\frac{e B_0}{m_e c \\gamma} v \\sin \\alpha = \\omega_\\mathrm{se} v \\sin \\alpha\\] 一様磁場中を運動する荷電粒子においては加速度と速度は直交する、すなわち\\(\\dot{\\mathbf{v}} \\perp \\boldsymbol{\\beta}\\)より . \\[|\\dot{\\bf v} \\times \\boldsymbol{\\beta}|^2 = \\dot{v}^2 \\beta^2\\] です。以上より、この電子からの全放射強度は . \\[P_e = \\frac{2e^2}{3c^3} [\\gamma^6 \\{ \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha - \\beta^2 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha \\} ] = \\frac{2e^2}{3c^3} [\\gamma^6 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha (1- \\beta^2)] = \\frac{2e^2}{3c^3} [\\gamma^4 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha]\\] ここで古典電子半径\\(r_0 = \\frac{e^2}{m_e c^2} (\\sim 3 \\mathrm{fm})\\)を用いると . \\[P_e = \\frac{2e^2}{3c^3} [\\gamma^4 (\\frac{eB_0}{m_e c \\gamma})^2 v^2 \\sin^2 \\alpha] = \\frac{2}{3c} r_0^2 [\\gamma^2 B_0^2 v^2 \\sin^2 \\alpha] = \\frac{2c}{3} r_0^2 [\\gamma^2 B_0^2 \\beta^2 \\sin^2 \\alpha] \\tag{8}\\] となります。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E5%85%A8%E6%94%BE%E5%B0%84%E5%BC%B7%E5%BA%A6",
     "relUrl": "/astroelec/uniform_mag_rel#全放射強度"
-  },"1027": {
+  },"1033": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "等方的な電子分布からのシンクロトロン全放射強度",
     "content": "先ほどはピッチ角\\(\\alpha\\)の電子1個からの全放射強度を計算しましたが、これを様々な\\(\\alpha\\)を持つ電子集団について考え、その平均値を求めてみましょう。簡単のため、以下の計算では電子の速度分布が等方的であるとします。 進行方向について平均を取る操作を行いましょう。 . \\[P_\\mathrm{sync} = \\frac{1}{4\\pi} \\int_0^{2\\pi} d \\varphi \\int_0^\\pi d\\alpha \\sin \\alpha P_e = \\frac{c}{3} r_0^2 \\int_0^\\pi d\\alpha [\\gamma^2 B_0^2 \\beta^2 \\sin^3 \\alpha] = \\frac{4}{9} c r_0^2 [\\gamma^2 B_0^2 \\beta^2]\\] です。途中 . \\[\\begin{align} \\sin^3 \\alpha &amp;= \\sin^2 \\alpha \\sin \\alpha = \\frac{1}{2} (1 - \\cos 2\\alpha) \\sin \\alpha = \\frac{1}{2} \\sin \\alpha - \\frac{1}{2} \\cos 2\\alpha \\sin \\alpha \\notag \\\\ &amp;= \\frac{1}{2} \\sin \\alpha - \\frac{1}{4}(\\sin 3\\alpha- \\sin\\alpha) = \\frac{3}{4} \\sin \\alpha - \\frac{1}{4} \\sin 3\\alpha \\tag{9} \\end{align}\\] を用いました。さらにトムソン散乱断面積\\(\\sigma_T = \\frac{8\\pi}{3} r_0^2\\)と磁場のエネルギー密度\\(U_B = \\frac{1}{8\\pi} B^2\\)を用いて整理します。 . \\[P_\\mathrm{sync} = \\frac{4}{9} c \\frac{3}{8\\pi} \\sigma_T[\\gamma^2 8\\pi U_B \\beta^2] = \\frac{4}{3} c \\sigma_T[\\gamma^2 U_B \\beta^2] \\tag{10}\\] これが1個の電子が磁場の周りを運動するときに出す放射、シンクロトロン放射の全放射強度(の電子の速度ベクトル方向に対して平均をとったもの)です。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E7%AD%89%E6%96%B9%E7%9A%84%E3%81%AA%E9%9B%BB%E5%AD%90%E5%88%86%E5%B8%83%E3%81%8B%E3%82%89%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%AF%E3%83%AD%E3%83%88%E3%83%AD%E3%83%B3%E5%85%A8%E6%94%BE%E5%B0%84%E5%BC%B7%E5%BA%A6",
     "relUrl": "/astroelec/uniform_mag_rel#等方的な電子分布からのシンクロトロン全放射強度"
-  },"1028": {
+  },"1034": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "一様磁場中で相対論的な運動をする電子",
     "content": ". | 一様磁場中で相対論的な運動をする電子 . | 運動方程式 | 全放射強度 | 等方的な電子分布からのシンクロトロン全放射強度 | . | . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel",
     "relUrl": "/astroelec/uniform_mag_rel"
-  },"1029": {
+  },"1035": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトル・共変ベクトル",
     "content": "基底ベクトルの変換則 . \\[e'_\\nu = \\frac{\\partial x^\\mu}{\\partial x'^\\nu} e_\\mu\\] は前のメモですでに導出しました。今度はこれと添字が反対の変換則になっている反変なもの . \\[A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu} A'^\\mu\\] そして添字が同じ変換則になっている共変なもの . \\[A_\\nu = \\frac{\\partial x^\\mu}{\\partial x'^\\nu} A'_\\mu\\] のベクトルの導出を行います。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%8F%8D%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%85%B1%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#反変ベクトル共変ベクトル"
-  },"1030": {
+  },"1036": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトル",
     "content": "あるベクトル\\({\\bf A}\\)は . \\[{\\bf A} = A^\\nu {\\bf e}_\\nu = A'^\\mu {\\bf e'}_\\mu\\] のように書くことができます。ここで座標基底の変換則より . \\[{\\bf A} = A'^\\mu \\frac{\\partial x^\\nu}{\\partial x'^\\mu} {\\bf e}_\\nu = A^\\nu {\\bf e}_\\nu \\ \\Longrightarrow \\ \\therefore A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu} A'^\\mu\\] これは座標基底の変換則と添字が分子分母で逆になっています。このことからこれを反変ベクトル(contravariant vector)と呼びます。上述では’のない座標基底から’のついた座標基底への変換を考えました。ではその逆はどうなるでしょうか。 . \\[A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu}A'^\\mu \\ \\Longrightarrow \\ \\frac{\\partial x'^\\alpha}{\\partial x^\\nu}A^\\nu = \\underbrace{\\frac{\\partial x'^\\alpha}{\\partial x^\\nu} \\frac{\\partial x^\\nu}{\\partial x'^\\mu}}_{=\\delta^\\alpha_\\mu}A'^\\mu = A'^\\alpha \\ \\Longrightarrow \\ A'^\\alpha = \\frac{\\partial x'^\\alpha}{\\partial x^\\nu}A^\\nu\\] となり、’系から’のない系への変換もやはり座標基底の変換則の逆になっていることがわかります。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%8F%8D%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#反変ベクトル"
-  },"1031": {
+  },"1037": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "共変ベクトル",
     "content": "\\({\\bf A}\\)の大きさの2乗を考えましょう。 . \\[\\left| {\\bf A} \\right| ^2 = {\\bf A} \\cdot{\\bf A} = A^\\mu {\\bf e}_\\mu \\cdot A^\\nu {\\bf e}_\\nu = g_{\\mu \\nu} A^\\mu A^\\nu\\] 大きさは’系でも’のない系でも変わらないので . \\[\\left| {\\bf A}\\right| ^2 = g'_{\\mu \\nu} A'^\\mu A'^\\nu = \\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma} \\frac{\\partial x'^\\nu}{\\partial x^\\delta} A^\\gamma A^\\delta = \\underbrace{\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma}}_{\\delta^\\alpha_\\gamma} \\underbrace{\\frac{\\partial x^\\beta}{\\partial x'^\\nu} \\frac{\\partial x'^\\nu}{\\partial x^\\delta}}_{\\delta^\\beta_\\delta} g_{\\alpha \\beta} A^\\gamma A^\\delta = g_{\\gamma \\delta} A^\\gamma A^\\delta\\] ここで共変ベクトルを . \\[A_\\nu \\equiv g_{\\mu \\nu} A^\\mu = g_{\\nu \\mu} A^\\mu\\] のように定義します。このベクトルの’系への座標変換を考えましょう。座標基底の変換則から . \\[A'_\\nu = g_{\\mu'\\nu'} A'^\\mu =\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma} A^\\gamma = \\underbrace{\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma}}_{\\delta^\\alpha_\\gamma} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} A^\\gamma = \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} A^\\alpha = \\frac{\\partial x^\\beta}{\\partial x'^\\nu} A_\\beta\\] これは座標基底と同じ変換則です。よってこれを改めて共変ベクトル(covariant vactor)と呼びます。この変換則に従うベクトル(テンソル)を一階の共変テンソルと呼びます。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%85%B1%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#共変ベクトル"
-  },"1032": {
+  },"1038": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "共変テンソル",
     "content": "では二階の共変テンソルとはどのようなものでしょうか。 . \\[A'_\\alpha B'_\\beta = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}} A_\\mu \\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} B_\\nu = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}}\\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} A_\\mu B_\\nu\\] ここで\\(T_{\\mu \\nu} \\equiv A_\\mu B_\\nu\\)と定義しましょう。 . \\[T_{\\alpha'\\beta'} = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}}\\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} T_{\\mu \\nu}\\] こちらを二階の共変テンソルと定義します。途中で\\(x'^\\beta\\)を\\(x^{\\beta'}\\)と表記しました。以降の一般相対論のメモでは特に何もない限りこの表記を使います。 最後に\\(|{\\bf A}|^2\\)をもう一度考えましょう。 . \\[\\left| {\\bf A}\\right| ^2 = {\\bf A} \\cdot {\\bf A} = g_{\\mu \\nu} A^\\mu A^\\nu = A_\\nu A^\\mu\\] さらに . \\[A_{\\mu'} A^{\\nu'} = \\frac{\\partial x^\\alpha}{\\partial x^{\\nu'}} \\frac{\\partial x^{\\nu'}}{\\partial x^{\\beta}} A_\\alpha A^\\beta = \\delta^\\alpha_\\beta A_\\alpha A^\\beta = A_\\alpha A^\\alpha\\] となります。これはベクトルの大きさの二乗が改めてスカラーであり、座標変換に対して不変であることを意味します。これは同時に微小変位ベクトルの大きさの二乗\\(dx^2 = d{\\bf x} \\cdot d{\\bf x}\\)などもスカラーであることを意味します。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%85%B1%E5%A4%89%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB",
     "relUrl": "/gr/vector#共変テンソル"
-  },"1033": {
+  },"1039": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトルと共変ベクトル",
     "content": ". | 反変ベクトル・共変ベクトル . | 反変ベクトル | 共変ベクトル | 共変テンソル | . | . ",
     "url": "http://localhost:4000/gr/vector",
     "relUrl": "/gr/vector"
-  },"1034": {
+  },"1040": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場と輻射場の性質",
     "content": "運動する点電荷が作る電磁場の性質を考えましょう。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E9%80%9F%E5%BA%A6%E5%A0%B4%E3%81%A8%E8%BC%BB%E5%B0%84%E5%A0%B4%E3%81%AE%E6%80%A7%E8%B3%AA",
     "relUrl": "/astroelec/vel_rad#速度場と輻射場の性質"
-  },"1035": {
+  },"1041": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場",
     "content": "電場の式のうちの第一項 . \\[\\mathbf{E} (\\mathbf{r}, t) = q\\left[ \\frac{(1-\\beta^2)(\\mathbf{n}- \\boldsymbol{\\beta})}{\\kappa^3 R^2} \\right] \\tag{1}\\] を速度場と呼びます。点電荷が等速度運動しているときの電場の様子を示してみましょう。 . \\([\\dot{\\boldsymbol{\\beta}}] = \\mathbf{0}\\)のとき、\\(t-t_\\mathrm{ret} = R(t_\\mathrm{ret})/c\\)より点電荷は電磁波が観測者の位置\\(\\mathbf{r}\\)に到達するまでに\\(\\frac{R(t_\\mathrm{ret})}{c} \\mathbf{u}\\)だけ移動します。よって . \\[\\mathbf{R} (t) = \\mathbf{r}- \\mathbf{r}_0 (t) = \\mathbf{r} - \\left( \\mathbf{r}_0(t_\\mathrm{ret}) + \\frac{R(t_\\mathrm{ret})}{c} \\mathbf{u}\\right) = \\mathbf{R}(t_\\mathrm{ret}) -R(t_\\mathrm{ret}) \\boldsymbol{\\beta} = R(t_\\mathrm{ret}) (\\mathbf{n}(t_\\mathrm{ret})- \\boldsymbol{\\beta}) \\underbrace{=}_{等速度より\\boldsymbol{\\beta} = [\\boldsymbol{\\beta}]} [R(\\mathbf{n}- \\boldsymbol{\\beta})]\\] これより . \\[\\mathbf{E} (\\mathbf{r}, t) \\parallel \\mathbf{R}(t)\\] となり、時刻\\(t_\\mathrm{ret}\\)に等速直線運動をする点電荷から発せられた電磁波の電場は、時刻\\(t\\)に電荷がいる位置と観測者を結んだ直線に平行となります。あたかも、速度場が速度無限大で観測者のところまで伝播したかのような(遠隔相互作用のような)錯覚を受けることになります。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E9%80%9F%E5%BA%A6%E5%A0%B4",
     "relUrl": "/astroelec/vel_rad#速度場"
-  },"1036": {
+  },"1042": {
     "doc": "速度場と輻射場の性質",
     "title": "輻射場",
     "content": "電場の式のうち、第二項 . \\[\\mathbf{E} (\\mathbf{r}, t) = \\frac{q}{c} \\left[ \\frac{\\mathbf{n} \\times \\{ (\\mathbf{n} - \\boldsymbol{\\beta}) \\times \\dot{\\boldsymbol{\\beta}}\\}}{\\kappa^3 R}\\right] \\tag{2}\\] を輻射場と呼びます。輻射ばの性質を見ていきましょう。 . 輻射場の向き . (2)式の形から、輻射場ベクトルは\\(\\mathbf{n}, \\mathbf{n}-\\boldsymbol{\\beta} \\times \\dot{\\boldsymbol{\\beta}}\\)に直行します。また非相対論的極限\\(\\boldsymbol{\\beta} = \\mathbf{u}/c \\rightarrow \\mathbf{0}, \\kappa \\rightarrow 1\\)では . \\[\\mathbf{E}(\\mathbf{r}, t) = \\frac{q}{c} \\left[ \\frac{\\mathbf{n} \\times (\\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}})}{R}\\right] = \\frac{q}{c}\\left[ \\frac{(\\mathbf{n} \\cdot \\dot{\\boldsymbol{\\beta}}) \\mathbf{n} - \\dot{\\boldsymbol{\\beta}}}{R}\\right] \\tag{3}\\] よって、非相対論的極限では輻射場ベクトルは\\(\\mathbf{n}, \\dot{\\boldsymbol{\\beta}}\\)の張る平面内にあることがわかります。 . 相対論的速度のときの電場の振幅の距離依存性 . 相対論的な速度で運動する点電荷からの輻射場の振幅が、距離に反比例して減少することを直観的に理解してみましょう。 点電荷が\\(x\\)軸正方向に速度\\(u\\)で等速直線運動をしていると考えます。点電荷が原点に到達したところで一定の加速度で減速し、\\(\\Delta t\\)後に静止したとします。減速を始めてから\\(t\\)後の様子は下図のようになります。 . \\(\\Delta t\\)は\\(t\\)に比べて十分小さいとし、粒子はほぼ原点で静止したとします。半径\\(ct\\)の球面より外側の領域には、粒子が減速を始めたという情報はまだ伝わっておらず、座標\\(ut\\)を中心とした放射状に電気力線が分布した速度場のみが存在することになります。一方半径\\(c(t-\\Delta t)\\)の球面の内側では、粒子が静止したという情報が伝わっており、ここには原点を中心とした放射状の速度場のみ存在することになります。この2つの球面に挟まれた球殻状の領域は、減速が起きている間に生成された電磁場が存在する領域となります。系の対称性から、この領域内の電気力線は同一平面内に存在しなければなりません。またこの点電荷以外に電荷が存在しないことから、電気力線は連続でなければなりません。\\(\\Delta t \\ll t\\)より、厚さ\\(c \\Delta t\\)の球殻内部の電場は、荷電粒子が原点に静止しているときに発した電場にほぼ垂直であると考えられます。このことは輻射場が横波であることに対応しています。球殻内の電場の球面に沿った成分を\\(E_t\\)とし、この紙面に垂直で原点を中心に持つような幅\\(c \\Delta t\\)のリングを考えると、このリングを貫く電場は . \\[\\iint_\\mathrm{ring} \\mathbf{E} \\cdot d\\mathbf{S} \\simeq 2\\pi c t \\Delta t E_t\\] ただし、\\(\\Delta t\\)は微小なのでリング上で\\(E_t = \\mathrm{const}\\)とすることができます。荷電粒子が1つの系を考えているので、この値は電気力線の連続性から保存する(リングを貫く電気力線の本数は、時間が経過してリングの半径が大きくなろうとも保存する)と考えてよいでしょう。よって . \\[2\\pi c t \\Delta t E_t = {\\rm const} \\ \\Longrightarrow \\ E_t \\propto \\frac{1}{ct} = \\frac{1}{R}\\] となります。 . 非相対論的速度のときの電場の振幅 . 電荷の速度が非相対論的な時の輻射場の電場がどのようになるかを計算してみましょう。(3)式より . \\[\\begin{align} E (\\mathbf{r}, t) &amp;= |\\mathbf{E} (\\mathbf{r}, t)| = \\frac{q}{c} \\left[ \\frac{| \\mathbf{n} \\times ( \\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}}) |}{R} \\right] = \\frac{q}{c} \\left[ \\frac{ | \\mathbf{n}| \\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}} | \\sin \\frac{\\pi}{2}}{R} \\right] = \\frac{q}{c} \\left[ \\frac{|\\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}}|}{R} \\right] = \\frac{q}{c} \\left[ \\frac{|\\mathbf{n}|\\dot{\\boldsymbol{\\beta}} | \\sin \\Theta}{R} \\right] \\notag \\\\ &amp;= \\frac{q}{c} \\left[ \\frac{\\dot{\\beta} \\sin \\Theta}{R}\\right] = \\left[ \\frac{q \\dot{u}}{c^2 R} \\sin \\Theta \\right] \\notag \\end{align}\\] となります。これを物理的考察から導いてみましょう。 点電荷が\\(x\\)軸正方向に速度\\(u(\\ll c)\\)で等速直線運動しているとします。点電荷が原点に到達したところで一定の加速度で減速し、微小時間\\(\\Delta t\\)後に静止したとします。減速を始めてから\\(t\\)後の様子は下図のようになります。 . \\(u \\ll c\\)より、半径\\(ct\\)の球面の外側の電場は半径\\(c(t-\\Delta t)\\)の球面の内側の電場と同じような概形をしていると考えることができます。図のように\\(\\Theta\\)をとると、厚さ\\(c \\Delta t\\)の球殻内部での電場の動径成分\\(E_r\\)と接線成分\\(E_t\\)の比は . \\[\\frac{E_r}{E_t} = \\frac{c \\Delta t}{ut \\sin \\Theta}\\] です。\\(E_r\\)の起源は速度場(ただのクーロン電場)であることから . \\[E_r = \\frac{q}{R^2} = \\frac{q}{c^2 t^2}\\] よって . \\[E_t = \\frac{q}{c^3 t} \\frac{u}{\\Delta t} \\sin \\Theta \\ \\stackrel{\\Delta t \\rightarrow 0}{\\longrightarrow} \\frac{q}{c^3 t} \\dot{u} \\sin \\Theta = \\frac{q \\dot{u}}{c^2 R} \\sin \\Theta\\] と求まります。 . ポインティングベクトル . ポインティングベクトルの定義\\(\\mathbf{S} = \\frac{c}{4\\pi} \\mathbf{E} \\times \\mathbf{B}\\)と、輻射場の\\(\\mathbf{E}, \\mathbf{B}\\)より . \\[\\mathbf{S} = \\frac{c}{4\\pi} [E^2 \\mathbf{n}]\\] です。 (2)式より\\(|\\mathbf{S}| \\propto R^{-2}\\)です。電磁場を放出している点電荷を取り囲む十分に大きい閉曲面\\(\\Sigma\\)を考えると、この閉曲面を通過して外に持ち出される単位時間あたりのエネルギー量は . \\[\\Sigma |\\mathbf{S}| \\propto R^2 R^{-2} = \\mathrm{const}\\] となります。点電荷から閉曲面までの距離に依存せず一定となることから、輻射場は無限遠方に電磁場のエネルギーを持ち運べることがわかります。輻射場はこの性質ゆえに、輻射場あるいは電磁波と呼ばれています。 さらに電磁場のエネルギー密度\\(U = \\frac{1}{8\\pi} (E^2 + B^2)\\)より、輻射場のエネルギー密度は\\(U = \\frac{1}{4\\pi} E^2\\)となります。これらから . \\[\\mathbf{S} = c U \\mathbf{n}\\] と書けるため、確かにポインティングベクトルがエネルギー流束になっていることがわかります。 . 運動量密度 . 同様に輻射場の運動量密度を計算しましょう。 . \\[\\mathbf{g} = \\frac{1}{4\\pi c} \\mathbf{E} \\times \\mathbf{B} \\ \\Longrightarrow \\  g = \\frac{1}{4\\pi c} |\\mathbf{E} \\times \\mathbf{B}| = \\frac{1}{4\\pi c} E^2\\] よって . \\[g = \\frac{U}{c}\\] となり、電磁波の運動量はエネルギーの\\(1/c\\)であることがわかります。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E8%BC%BB%E5%B0%84%E5%A0%B4",
     "relUrl": "/astroelec/vel_rad#輻射場"
-  },"1037": {
+  },"1043": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場と輻射場の性質",
     "content": ". | 速度場と輻射場の性質 . | 速度場 | 輻射場 . | 輻射場の向き | 相対論的速度のときの電場の振幅の距離依存性 | 非相対論的速度のときの電場の振幅 | ポインティングベクトル | 運動量密度 | . | . | . ",
     "url": "http://localhost:4000/astroelec/vel_rad",
     "relUrl": "/astroelec/vel_rad"
-  },"1038": {
+  },"1044": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": " ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#固有体積要素"
-  },"1039": {
+  },"1045": {
     "doc": "固有体積要素",
     "title": "固有体積要素とは",
     "content": "局所慣性系での微小変位ベクトルを\\(d\\bar{\\bf x}\\)と書きましょう。これを用いて体積要素を表現すると\\(dV = d\\bar{x}^0d\\bar{x}^1d\\bar{x}^2d\\bar{x}^3\\)と書けます。これを一般座標系での微小変位ベクトル\\(d{\\bf x}\\)で表現すると、ヤコビアンを用いて . \\[dV = {\\rm det} \\left( \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\right) dx^0 dx^1 dx^2 dx^3\\] となります。局所慣性系での計量テンソルはミンコフスキーメトリックなので、一般座標系での計量テンソルは . \\[g_{\\mu \\nu} = \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\frac{\\partial \\bar{x}^\\beta}{\\partial x^\\nu} \\eta_{\\bar{\\alpha} \\bar{\\beta}} = \\Lambda_\\mu^{\\ \\bar{\\alpha}}\\eta_{\\bar{\\alpha} \\bar{\\beta}} \\Lambda_{\\ \\nu}^\\bar{\\beta}\\] よってこれを行列形式で書くと . \\[(g_{\\mu \\nu}) = \\Lambda^\\top \\eta \\Lambda\\] これの行列式は . \\[g \\equiv {\\rm det} (g_{\\mu \\nu}) = {\\rm det}(\\Lambda^\\top) {\\rm det}(\\eta) {\\rm det}(\\Lambda) = - {\\rm det}(\\Lambda)^2 \\ \\Longrightarrow \\ {\\rm det}(\\Lambda) = \\sqrt{-g}\\] となります。よって固有体積要素は . \\[dV = \\sqrt{-g} d^4 x\\] と書けます。 . ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0%E3%81%A8%E3%81%AF",
     "relUrl": "/gr/volume#固有体積要素とは"
-  },"1040": {
+  },"1046": {
     "doc": "固有体積要素",
     "title": "例題: 2次元デカルト座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; 1 \\end{array} \\right| = -1\\] \\[\\therefore \\ dV = 1 dx dy cdt\\] ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元デカルト座標での固有体積要素"
-  },"1041": {
+  },"1047": {
     "doc": "固有体積要素",
     "title": "例題: 2次元極座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; r^2 \\end{array} \\right| = -r^2\\] \\[\\therefore \\ dV = r dr d\\theta cdt\\] . ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E6%A5%B5%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元極座標での固有体積要素"
-  },"1042": {
+  },"1048": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": ". | 固有体積要素 . | 固有体積要素とは | 例題: 2次元デカルト座標での固有体積要素 | 例題: 2次元極座標での固有体積要素 | . | . ",
     "url": "http://localhost:4000/gr/volume",
     "relUrl": "/gr/volume"
-  },"1043": {
+  },"1049": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": "このページでは、一般的な弱重力場中での運動方程式である測地線方程式が、 非相対論的な重力場中での運動方程式(ニュートンの運動方程式)と一致するにはどのような条件が必要かを求めています。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E5%BC%B1%E9%87%8D%E5%8A%9B%E5%A0%B4%E6%A5%B5%E9%99%90",
     "relUrl": "/gr/weakfield#弱重力場極限"
-  },"1044": {
+  },"1050": {
     "doc": "弱重力場極限",
     "title": "ニュートンの運動方程式を導けるか？",
     "content": "弱重力場極限ということで、計量テンソルを . \\[(g_{\\mu \\nu}) = \\left( \\begin{array}{cccc} -1-h_{00} &amp;&amp; &amp;&amp; &amp;&amp; {\\bf 0} \\\\ &amp;&amp; 1+h &amp;&amp; &amp;&amp; \\\\ &amp;&amp; &amp;&amp; 1+h &amp;&amp; \\\\ {\\bf 0} &amp;&amp; &amp;&amp; &amp;&amp; 1+h \\end{array} \\right)\\] のように書きます。ここで\\(\\dot{h}_{00} = \\dot{h} = 0, |h_{00}| \\ll 1, |h| \\ll 1\\)とします。また非相対論的な極限なので\\(v^2/c^2 \\ll 1\\)とし、さらに粒子の軌跡を表現するパラメータであった\\(\\tau\\)も\\(\\tau \\simeq t\\)とします。 \\((g_{ij})\\)の逆行列成分を求めますが、これに関してもテイラー展開から . \\[g^{00} = \\frac{1}{g_{00}} \\simeq -1 + h_{00}\\] \\[g^{ij} = \\frac{1}{g_{ij}} \\simeq (1-h) \\delta^{ij}\\] と近似できるものとします。また4元速度も . \\[u^0 = \\frac{dx^0}{d\\tau} \\sim c, \\ u^i = \\frac{dx^i}{d\\tau} \\simeq v^i\\] と近似できると考えましょう。 重力場中の運動方程式より . \\[\\frac{du^i}{dt} = -\\Gamma^i_{\\alpha \\nu} u^\\alpha u^\\nu\\] \\[\\Gamma^i_{00} = \\frac{1}{2} g^{i\\beta} (\\underbrace{g_{\\beta 0, 0}}_{=0}+ \\underbrace{g_{\\beta 0, 0}}_{= 0} + g_{0 0,\\beta}) = -\\frac{1}{2} g^{ij} g_{00, j} = \\frac{1}{2} (1-h) \\delta^{ij}\\partial_j h_{00} = \\frac{1}{2} \\delta_{ij} h_{00, j}\\] \\[\\Gamma^i_{j0} = \\frac{1}{2} g^{i\\beta} (g_{\\beta j, 0}+ g_{\\beta j, 0} + g_{j 0,\\beta}) = \\frac{1}{2} g^{ik} (\\underbrace{g_{kj, 0}}_{=0} + g_{kj, 0} - g_{j0 , k}) = \\frac{1}{2} g^{ik} (g_{kj, 0} - g_{j0,k}) = 0 = \\Gamma^i_{0j}\\] \\[\\begin{aligned} \\Gamma^i_{jk} &amp;= \\frac{1}{2} g^{i\\beta} (g_{\\beta j, k} + g_{\\beta k, j} - g_{jk, \\beta}) = \\frac{1}{2} g^{i\\ell} (g_{\\ell j, k} + g_{\\ell k, j} - g_{jk, \\ell}) = \\frac{1}{2} \\delta^{i\\ell} (h_{, k} \\delta_{\\ell j} +h_{, j} \\delta_{\\ell k} - h_{, \\ell} \\delta_{jk}) \\\\ &amp;= \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) \\end{aligned}\\] \\[\\therefore \\ \\frac{dv^i}{dt} = - \\frac{1}{2} \\delta^{ij} h_{00, j} c^2 - \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) v^j v^k \\underbrace{\\simeq}_{c^2 \\gg v^2} -\\frac{c^2}{2} \\frac{\\partial h_{00}}{\\partial x^i}\\] これがニュートンの運動方程式と一致して欲しいので、\\(h_{00} = \\frac{2\\Phi}{c^2}\\)であればよいことがわかります。 . \\[\\frac{dv^i}{dt} = - \\frac{\\partial \\Phi}{\\partial x^i}\\] そしてこの式から\\(E = v^2/2 + \\Phi = {\\rm Const}\\)というエネルギー保存則も導くことができます。 エネルギー保存から\\(\\Phi \\simeq v^2\\)くらいの運動となるので、アインシュタイン方程式を導くときに用いた . \\[|h_{00}| = \\left| \\frac{2\\Phi}{c^2} \\right| \\simeq \\left| \\frac{v^2}{c^2}\\right| \\ll 1\\] と置く仮定は間違いではないこともわかります。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E5%B0%8E%E3%81%91%E3%82%8B%E3%81%8B",
     "relUrl": "/gr/weakfield#ニュートンの運動方程式を導けるか"
-  },"1045": {
+  },"1051": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": ". | 弱重力場極限 . | ニュートンの運動方程式を導けるか？ | . | . ",
     "url": "http://localhost:4000/gr/weakfield",
     "relUrl": "/gr/weakfield"
-  },"1046": {
+  },"1052": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     "relUrl": "/nucl/wu#wuの実験"
-  },"1047": {
+  },"1053": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "http://localhost:4000/nucl/wu#who-is-wu",
     "relUrl": "/nucl/wu#who-is-wu"
-  },"1048": {
+  },"1054": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"1049": {
+  },"1055": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     "relUrl": "/nucl/wu#パリティ変換"
-  },"1050": {
+  },"1056": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E4%BE%8B%E9%A1%8C",
     "relUrl": "/nucl/wu#例題"
-  },"1051": {
+  },"1057": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"1052": {
+  },"1058": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     "relUrl": "/nucl/wu#実験結果"
-  },"1053": {
+  },"1059": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"1054": {
+  },"1060": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "http://localhost:4000/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/nucl/wu#参考文献"
-  },"1055": {
+  },"1061": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "http://localhost:4000/nucl/wu",
     "relUrl": "/nucl/wu"
-  },"1056": {
+  },"1062": {
     "doc": "ζ関数",
     "title": "ゼータ関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#%E3%82%BC%E3%83%BC%E3%82%BF%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#ゼータ関数"
-  },"1057": {
+  },"1063": {
     "doc": "ζ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1058": {
+  },"1064": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1059": {
+  },"1065": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1060": {
+  },"1066": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1061": {
+  },"1067": {
     "doc": "ζ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1062": {
+  },"1068": {
     "doc": "ζ関数",
     "title": "ζ関数",
     "content": ". | ゼータ関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

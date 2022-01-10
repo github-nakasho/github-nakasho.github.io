@@ -322,7 +322,7 @@ ds^2
 = - \frac{\Delta - a^2 \sin^2 \theta}{\rho^2} c^2 dt^2 - \frac{2 a r_g r \sin^2 \theta}{\rho^2} c dt d\varphi + \frac{(r^2 + a^2)^2 - a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 \tag{31}
 $$
 
-ここで$$\rho^2 = r^2 + a^2 \cos^2 \theta, \Delta = r^2 + a^2 - r_g r$$です。(30), (31)式の$$cdt d\varphi$$項の比較から
+ここで$$\rho^2 = r^2 + a^2 \cos^2 \theta, \Delta = r^2 + a^2 - r_g r$$です。(30), (31)式の$$cdt d\varphi$$項の比較を行います。ここまで求めてきたメトリックは十分遠方$$r \gg R$$という条件で求めてきたので
 
 $$
 \frac{2 a r_g r \sin^2 \theta}{\rho^2} 

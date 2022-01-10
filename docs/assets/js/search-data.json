@@ -2467,7 +2467,7 @@
   },"411": {
     "doc": "Kerr BH",
     "title": "測地線方程式と粒子のラグランジアン",
-    "content": "ここまではMinkowskiメトリックに座標変換を施しただけであって、質量\\(M\\)の物体による重力場を考慮してはいません。ここでSchwarzschildメトリックを思い出してみると . \\[g_{tt} = - \\left( 1 - \\frac{2GM}{c^2 r}\\right) = - \\frac{r^2 - r_g r}{r^2}\\] のように考えることができます。ここで\\(r_g = 2 GM/c^2\\) (Schwarzschild半径)です。今、\\(r\\)の代わりに\\(\\rho\\)が距離の指標であると考えると(6)式とこれとの比較から、重力の効果を含めた場合を . \\[ds^2 = - \\frac{f(r)}{\\rho^2} db^2 + \\frac{\\rho^2}{f(r)} dr^2 + \\rho^2 d\\theta^2 + \\frac{\\sin^2 \\theta}{\\rho^2} d\\phi \\tag{7}\\] のように書くことができます。ここで\\(f(\\rho)\\)ではなく\\(f(r)\\)としているのは、ここまでの適切な座標変換によって\\(g_{bb}, g_{rr}\\)部分の\\(\\theta\\)依存性は消去され、この座標系においては球対称になっていると考えたためです。 ここから質量\\(m\\)の粒子の測地線方程式を考えましょう。 . \\[m \\frac{dp_\\nu}{d\\tau} = - \\frac{1}{2} g_{\\beta \\mu, \\nu} p^\\mu p^\\beta \\tag{8}\\] ここで\\(p\\)は粒子の4元運動量、\\(\\tau\\)は固有時間を表します。(8)式右辺の\\(g_{\\beta \\mu}\\)の依存性から . \\[\\frac{dp_b}{ d\\tau} = 0 \\ \\Longrightarrow \\ p_b = mE\\] とわかります。ここで\\(E\\)は単位質量あたりのエネルギーを表す定数です。よって . \\[p^b = g^{b \\mu} p_\\mu = g^{bb} p_b = -\\frac{\\rho^2}{f(r)} m E\\] さらに最左辺の運動量は\\(p^b = m v^b = m \\dot{b}\\)と考えれば . \\[\\dot{b} = - \\frac{\\rho^2}{f} E \\tag{9}\\] となります。ここでドットは固有時間\\(\\tau\\)の微分を表します。さらにLagrangianを計算すると . \\[L = \\frac{1}{2} g_{\\alpha \\beta} \\dot{x}^\\alpha \\dot{x}^\\beta = -\\frac{f}{\\rho^2} \\dot{b}^2 + \\frac{\\rho^2}{2f} \\dot{r}^2 \\tag{10}\\] です。ここでは球対称なので\\(\\theta=0, d\\theta=0\\)として計算しました。(9), (10)式より . \\[\\dot{r}^2 = \\frac{f}{\\rho^2} (2L + \\frac{\\rho^2}{f} E^2) \\tag{11}\\] \\(L=1/2, E=0\\)の粒子についてのみ考えると、この粒子においては . \\[\\dot{r}^2 = \\frac{f}{\\rho^2} \\tag{12}\\] と求まります。 . ",
+    "content": "ここまではMinkowskiメトリックに座標変換を施しただけであって、質量\\(M\\)の物体による重力場を考慮してはいません。ここでSchwarzschildメトリックを思い出してみると . \\[g_{tt} = - \\left( 1 - \\frac{2GM}{c^2 r}\\right) = - \\frac{r^2 - r_g r}{r^2}\\] のように考えることができます。ここで\\(r_g = 2 GM/c^2\\) (Schwarzschild半径)です。今、\\(r\\)の代わりに\\(\\rho\\)が距離の指標であると考えると(6)式とこれとの比較から、重力の効果を含めた場合を . \\[ds^2 = - \\frac{f(r)}{\\rho^2} db^2 + \\frac{\\rho^2}{f(r)} dr^2 + \\rho^2 d\\theta^2 + \\frac{\\sin^2 \\theta}{\\rho^2} d\\phi \\tag{7}\\] のように書くことができます。ここで\\(f(\\rho)\\)ではなく\\(f(r)\\)としているのは、ここまでの適切な座標変換によって\\(g_{bb}, g_{rr}\\)部分の\\(\\theta\\)依存性は\\(\\rho^2\\)部分に押し付けられていると考えたためです。 ここから質量\\(m\\)の粒子の測地線方程式を考えましょう。 . \\[m \\frac{dp_\\nu}{d\\tau} = - \\frac{1}{2} g_{\\beta \\mu, \\nu} p^\\mu p^\\beta \\tag{8}\\] ここで\\(p\\)は粒子の4元運動量、\\(\\tau\\)は固有時間を表します。(8)式右辺の\\(g_{\\beta \\mu}\\)の依存性から . \\[\\frac{dp_b}{ d\\tau} = 0 \\ \\Longrightarrow \\ p_b = mE\\] とわかります。ここで\\(E\\)は単位質量あたりのエネルギーを表す定数です。よって . \\[p^b = g^{b \\mu} p_\\mu = g^{bb} p_b = -\\frac{\\rho^2}{f(r)} m E\\] さらに最左辺の運動量は\\(p^b = m v^b = m \\dot{b}\\)と考えれば . \\[\\dot{b} = - \\frac{\\rho^2}{f} E \\tag{9}\\] となります。ここでドットは固有時間\\(\\tau\\)の微分を表します。さらにLagrangianを計算すると . \\[L = \\frac{1}{2} g_{\\alpha \\beta} \\dot{x}^\\alpha \\dot{x}^\\beta = -\\frac{f}{\\rho^2} \\dot{b}^2 + \\frac{\\rho^2}{2f} \\dot{r}^2 \\tag{10}\\] です。ここでは球対称なので\\(\\theta=0, d\\theta=0\\)として計算しました。(9), (10)式より . \\[\\dot{r}^2 = \\frac{f}{\\rho^2} (2L + \\frac{\\rho^2}{f} E^2) \\tag{11}\\] \\(L=1/2, E=0\\)の粒子についてのみ考えると、この粒子においては . \\[\\dot{r}^2 = \\frac{f}{\\rho^2} \\tag{12}\\] と求まります。 . ",
     "url": "http://localhost:4000/gr/kerr#%E6%B8%AC%E5%9C%B0%E7%B7%9A%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E7%B2%92%E5%AD%90%E3%81%AE%E3%83%A9%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B8%E3%82%A2%E3%83%B3",
     "relUrl": "/gr/kerr#測地線方程式と粒子のラグランジアン"
   },"412": {
@@ -2479,7 +2479,7 @@
   },"413": {
     "doc": "Kerr BH",
     "title": "シュバルツシルト時空への接続",
-    "content": "(2)式から\\(a \\rightarrow 0\\)の極限で、これは質量\\(M\\)が作る球対称な重力場、すなわちSchwarzschild時空の3次元極座標表示に一致しなければなりません。このとき\\(\\rho^2 = r^2\\)より . \\[g_{rr} = \\frac{r^2}{r^2 - 2 Dr} = \\frac{1}{1-\\frac{r_g}{r}} \\ \\Longrightarrow \\ D = \\frac{r_g}{2} = \\frac{GM}{c^2}\\] 以上より . \\[ds^2 = - \\frac{\\Delta}{\\rho^2} (cdt - a \\sin^2 \\theta d\\varphi)^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 + \\frac{\\sin^2 \\theta}{\\rho^2} \\{ (r^2 + a^2) d\\varphi - a c dt\\}^2 \\tag{15}\\] と求まります。ここで\\(\\Delta \\equiv r^2 + a^2 - r_g r\\)です。さらに分解すれば . \\[ds^2 = - \\frac{\\Delta -a^2 \\sin^2 \\theta}{\\rho^2} c^2 dt^2 - \\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} c dt d\\varphi + \\frac{(r^2 + a^2)^2 -a^2 \\Delta \\sin^2 \\theta}{\\rho^2} \\sin^2 \\theta d\\varphi^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 \\tag{16}\\] のようになります。\\(a\\)は距離の次元ですが、自転と結びつけて考えると\\(a = J/(Mc)\\)となります。\\(J\\)はブラックホールの自転角運動量です。 . もう少し厳密な自転の導出方法はいつか掲載予定です。 . ",
+    "content": "(2)式から\\(a \\rightarrow 0\\)の極限で、これは質量\\(M\\)が作る球対称な重力場、すなわちSchwarzschild時空の3次元極座標表示に一致しなければなりません。このとき\\(\\rho^2 = r^2\\)より . \\[g_{rr} = \\frac{r^2}{r^2 - 2 Dr} = \\frac{1}{1-\\frac{r_g}{r}} \\ \\Longrightarrow \\ D = \\frac{r_g}{2} = \\frac{GM}{c^2}\\] 以上より . \\[ds^2 = - \\frac{\\Delta}{\\rho^2} (cdt - a \\sin^2 \\theta d\\varphi)^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 + \\frac{\\sin^2 \\theta}{\\rho^2} \\{ (r^2 + a^2) d\\varphi - a c dt\\}^2 \\tag{15}\\] と求まります。ここで\\(\\Delta \\equiv r^2 + a^2 - r_g r\\)です。さらに分解すれば . \\[ds^2 = - \\frac{\\Delta -a^2 \\sin^2 \\theta}{\\rho^2} c^2 dt^2 - \\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} c dt d\\varphi + \\frac{(r^2 + a^2)^2 -a^2 \\Delta \\sin^2 \\theta}{\\rho^2} \\sin^2 \\theta d\\varphi^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 \\tag{16}\\] のようになります。\\(a\\)は距離の次元ですが、自転と結びつけて考えると\\(a = J/(Mc)\\)となります。\\(J\\)はブラックホールの自転角運動量です。この定数\\(a\\)導出についてはゆっくり自転する低質量星が作る時空をご覧ください。 . ",
     "url": "http://localhost:4000/gr/kerr#%E3%82%B7%E3%83%A5%E3%83%90%E3%83%AB%E3%83%84%E3%82%B7%E3%83%AB%E3%83%88%E6%99%82%E7%A9%BA%E3%81%B8%E3%81%AE%E6%8E%A5%E7%B6%9A",
     "relUrl": "/gr/kerr#シュバルツシルト時空への接続"
   },"414": {
@@ -6221,120 +6221,156 @@
     "url": "http://localhost:4000/gr/volume",
     "relUrl": "/gr/volume"
   },"1037": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "ゆっくり自転する低質量星が作る時空",
+    "content": "Einstein方程式によれば、全てのエネルギーが重力源、すなわち時空の歪みを生じさせる源となります。よってここでは質量の小さな球対称星が自転しているときに、周囲にどのような時空の歪みを生むかを考えていきましょう。低質量星の自転軸を\\(z\\)軸にとります。簡単のため低質量星は一様密度\\(\\rho\\)を持ち、角速度\\(\\Omega\\)で剛体回転する球体で、半径\\(R\\)、質量を\\(M\\)とします。低質量星の自転は定常状態にあるとして、メトリックは時間に依存しない形を考えます。今、この星の自転は十分ゆっくりとして\\(\\Omega \\ll 1\\)、また低質量星内部の圧力は静止質量エネルギーより十分小さく(非相対論的)、さらに低質量星の重心は原点に静止しているとします。 また以下の計算は\\((x, y, z)\\)のデカルト座標で行い、最後に極座標に変換してKerrメトリックとの整合性を図ります。 . ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity#%E3%82%86%E3%81%A3%E3%81%8F%E3%82%8A%E8%87%AA%E8%BB%A2%E3%81%99%E3%82%8B%E4%BD%8E%E8%B3%AA%E9%87%8F%E6%98%9F%E3%81%8C%E4%BD%9C%E3%82%8B%E6%99%82%E7%A9%BA",
+    "relUrl": "/gr/spinning_weak_gravity#ゆっくり自転する低質量星が作る時空"
+  },"1038": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "エネルギー運動量テンソル",
+    "content": "低質量星内部の体積素片を考えたとき、その4元速度は以下のようにかけます。 . \\[(U^\\mu) \\simeq (-c, -y \\Omega, x \\Omega, 0) \\tag{1}\\] よってエネルギー運動量テンソルの成分はそれぞれ以下のようになります。メトリックのMinkowskiからのズレは十分小さいとして\\(g^{\\mu \\nu} \\simeq \\eta^{\\mu \\nu}\\)とすると . \\[T^{00} = (\\rho c^2 + P) - P = \\rho c^2 \\tag{2}\\] \\[T^{01} = (\\rho c^2 + P) (-y \\Omega) \\simeq -y\\Omega \\rho c^2 \\tag{3}\\] \\[T^{02} = {\\rho c^2 + P} x \\Omega \\simeq x \\Omega \\rho c^2 \\tag{4}\\] \\[T^{03} = 0 \\tag{5}\\] \\[T^{ij} \\simeq 0 \\qquad (i, j = 1, 2, 3)\\tag{6}\\] 途中、非相対論的として\\(\\rho c^2 \\gg P\\)、さらに自転がゆっくりとして\\(\\Omega^2\\)の項は無視しました。同様に下付き添字の4元速度が . \\[(U_\\mu) = (g_{\\mu \\nu} U^\\nu ) \\simeq (\\eta_{\\mu \\nu} U^\\nu) = (-c, -y \\Omega, x \\Omega, 0) \\tag{7}\\] となることから、下付き添字のエネルギー運動量テンソルについては . \\[T_{00} \\simeq \\rho c^2, \\quad T_{01} \\simeq y \\Omega \\rho c^2, \\quad T_{02} \\simeq - x \\Omega \\rho c^2, \\quad T_{03} = 0, \\quad T_{ij} \\simeq 0 \\ (i, j = 1, 2, 3) \\tag{8}\\] です。 . ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E9%81%8B%E5%8B%95%E9%87%8F%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB",
+    "relUrl": "/gr/spinning_weak_gravity#エネルギー運動量テンソル"
+  },"1039": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "線形化されたアインシュタイン方程式の解",
+    "content": "線形化されたEinstein方程式から . \\[\\Delta \\bar{h}_{00} = - \\frac{16 \\pi G}{c^4} \\rho c^2 \\tag{9}\\] \\[\\Delta \\bar{h}_{01} = - \\frac{16 \\pi G}{c^4} y\\Omega \\rho c^2 \\tag{10}\\] \\[\\Delta \\bar{h}_{02} = \\frac{16 \\pi G}{c^4} x \\Omega \\rho c^2 \\tag{11}\\] \\[\\Delta \\bar{h}_{03} = 0 \\tag{11}\\] \\[\\Delta \\bar{h}_{ij} = 0 \\qquad (i, j = 1, 2, 3) \\tag{12}\\] のようになります。ここで定常状態の仮定から\\(\\Box = \\Delta\\)としました。 . グリーン関数 . これら方程式の解は . \\[\\Delta G(\\mathbf{r}) = \\delta^3 (\\mathbf{r}) \\tag{13}\\] で定義されるGreen関数との畳み込みで表現されます。このFourier変換を\\(\\hat{G}(\\mathbf{k})\\)のように書くと、\\(\\Delta e^{i \\mathbf{k} \\cdot \\mathbf{r}} = -k^2 e^{i \\mathbf{k} \\cdot \\mathbf{r}}\\)より . \\[\\frac{1}{(2\\pi)^3} \\iiint d^3 \\mathbf{k} \\hat{G} (\\mathbf{k}) e^{i \\mathbf{k} \\cdot \\mathbf{r}} = \\frac{1}{(2\\pi)^3} \\iiint d^3 \\mathbf{k} e^{i \\mathbf{k} \\cdot \\mathbf{r}} \\ \\Longrightarrow \\ \\hat{G} (\\mathbf{k}) = - \\frac{1}{k^2} \\tag{14}\\] この逆変換を行います。このとき、\\(\\mathbf{k} \\cdot \\mathbf{r} = r k \\cos \\theta\\)となるように波数ベクトルを定めると . \\[\\begin{align} G(\\mathbf{r}) &amp;= \\frac{1}{(2\\pi)^3} \\int_0^\\infty dk \\int_0^\\pi d\\theta_k \\int_0^{2\\pi} d\\varphi_k \\left( - \\frac{1}{k^2}\\right) k^2 \\sin^2 \\sin \\theta_k e^{i r k \\cos \\theta_k} \\notag \\\\ &amp;\\underbrace{=}_{\\mu = \\cos \\theta_k} - \\frac{1}{(2\\pi)^2} \\int_0^\\infty \\int_{-1}^1 d\\mu e^{irk \\mu} = - \\frac{1}{(2\\pi)^2} \\int_0^\\infty dk \\underbrace{\\frac{e^{irk} - e^{-irk}}{irk}}_{= 2 \\mathrm{sinc} (rk)} \\notag \\\\ &amp;\\underbrace{=}_{rk = a} - \\frac{1}{2\\pi^2 r} \\int_0^\\infty da \\ \\mathrm{sinc}(a) = - \\frac{1}{4\\pi r} \\tag{15} \\end{align}\\] のように計算されます。最後の等式部分にsinc関数の積分値を用いました。 . 方程式の解の計算 . 上で求めたGreen関数を用いて、(9)~(12)の解を求めてみましょう。まずは(9)式からです。 . \\[\\bar{h}_{00} = - \\frac{16 \\pi G}{c^2} \\iiint_{-\\infty}^\\infty d^3 \\mathbf{r} \\left( - \\frac{\\rho}{4\\pi r} \\right) = \\frac{4G}{c^2} \\int_0^\\infty dr \\int_0^\\pi d\\theta \\int_0^{2\\pi} d\\varphi \\frac{\\rho}{|\\mathbf{r}- \\mathbf{r}'|} r'^2 \\sin \\theta\\] この積分において\\(0 &lt; r'&lt;R\\)では\\(\\rho\\)は一様密度、星の外側である\\(r'&gt;R\\)では\\(\\rho=0\\)と考えて計算をします。\\(\\mu = \\cos \\theta\\)のように変数変換して . \\[\\begin{align} \\bar{h}_{00} &amp;= \\frac{8 \\pi G}{c^2} \\rho \\int_0^R dr' \\left[ \\sqrt{r^2 + r'^2 - 2rr' \\mu} \\right]_{-1}^1 \\frac{r'^2}{-rr'} = \\frac{8 \\pi G}{c^2} \\rho \\int_0^R dr' \\frac{\\sqrt{(r-r')^2} - \\sqrt{(r+r')^2}}{- rr'} r'^2 \\notag \\\\ &amp;= \\frac{16 \\pi G}{c^2 r} \\rho \\int_0^R dr' r'^2 = \\frac{16 \\pi G}{3 c^2 r} R^3 \\rho \\underbrace{=}_{M = 4 \\pi R^3 \\rho / 3} \\frac{4GM}{c^2 r} \\tag{16} \\end{align}\\] 続いて(10)式の計算です。以下では\\(r \\gg R\\)(十分遠方)として計算を進めます。 . \\[\\bar{h}_{01} = - \\frac{16\\pi G}{c^2} \\iiint_{-\\infty}^\\infty d^3 \\mathbf{r}' \\left( - \\frac{y' \\Omega \\rho}{4\\pi |\\mathbf{r}-\\mathbf{r}'|}\\right)\\] このとき\\(\\mathbf{r} \\cdot \\mathbf{r}' = r r' \\cos \\theta = xx' + yy' + zz'\\)とすると . \\[\\frac{1}{|\\mathbf{r} - \\mathbf{r}'|} = \\frac{1}{r \\sqrt{1 - \\frac{2 \\mathbf{r} \\cdot \\mathbf{r}'}{r^2} + \\frac{r'^2}{r^2}}} \\simeq \\frac{1}{r} \\frac{1}{\\sqrt{1- 2 \\frac{r'}{r} \\cos \\theta}} \\simeq \\frac{1}{r} \\left( 1- \\frac{r'}{r} \\cos \\theta \\right) = \\frac{1}{r} - \\frac{xx' + yy' + zz'}{r^3}\\] のように近似されます。よって . \\[\\bar{h}_{01} = - \\frac{4G}{c^2} \\iiint_{-\\infty}^\\infty d^3 \\mathbf{r}' \\left( \\frac{1}{r} - \\frac{xx' + yy' + zz'}{r^3} \\right) y' \\Omega \\rho\\] です。ここで\\(x'y' = r'^2 \\sin^2 \\theta^2 \\cos \\varphi' \\sin \\varphi'\\)のようなクロスタームは\\(\\varphi\\)の\\([0, 2\\pi]\\)の積分において0となるため、考えなければならないのは\\(y'^2\\)の項のみであるとわかります。よって . \\[\\begin{aligned} \\bar{h}_{01} &amp;= \\frac{4G \\Omega \\rho}{c^2} \\frac{y}{r^3} \\int_0^R dr' \\int_0^\\pi d\\theta' \\int_0^{2\\pi} d\\varphi' r'^2 \\sin \\theta' r'^2 \\sin^2 \\theta' \\sin^2 \\varphi' \\underbrace{=}_{\\mu = \\cos \\theta'} \\frac{4 G \\Omega \\rho}{c^2} \\frac{y}{r^3} \\frac{R^5}{5} \\int_{-1}^1 d\\mu (1-\\mu^2) \\int_0^{2\\pi} d\\varphi' \\sin^2 \\varphi' \\\\ &amp;= \\frac{4G \\Omega \\rho}{c^2} \\frac{y}{r^3} \\frac{R^5}{5} \\frac{4}{3} \\pi \\end{aligned}\\] ここでこの星の全角運動量 . \\[J = \\int_0^R dr' \\int_0^\\pi d\\theta' \\int_0^{2\\pi} d\\varphi' r'^2 \\sin \\theta' \\ \\rho (x'^2 + y'^2) \\Omega = 2\\pi \\rho \\Omega \\int_0^R dr' r'^4 \\int_0^\\pi d\\theta' \\sin^3 \\theta' = \\frac{2\\pi \\rho \\Omega }{5} R^5 \\frac{4}{3} = \\frac{2}{5} M R^2 \\Omega \\tag{17}\\] より . \\[\\bar{h}_{01} = \\frac{2G Jy}{c^3 r^3} \\tag{18}\\] 同様の方法で(11)の計算を行います。(10), (11)式の比較から、これは(18)式において\\(-y \\rightarrow x\\)のように置き換えたものになるので . \\[\\bar{h}_{02} = - \\frac{2GJx}{c^3 r^3} \\tag{19}\\] このほかについては . \\[\\bar{h}_{03} = \\bar{h}_{ij} = 0 \\tag{20}\\] という自明な解を得ます。これらより、トレース\\(\\bar{h}\\)は . \\[\\bar{h} = \\eta^{\\alpha \\beta} \\bar{h}_{\\alpha \\beta} = - \\bar{h}_{00} = - \\frac{4GM}{c^2 r} \\tag{21}\\] ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity#%E7%B7%9A%E5%BD%A2%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3",
+    "relUrl": "/gr/spinning_weak_gravity#線形化されたアインシュタイン方程式の解"
+  },"1040": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "元のメトリックへ変換と極座標への変換",
+    "content": "ここまでは\\(\\bar{h}\\)という、トレース反転テンソルで計算を行なってきました。よって元のメトリックに戻しましょう。 . \\[h_{00} =\\bar{h}_{00} - \\frac{1}{2} \\eta_{00}\\bar{h} = \\frac{2GM}{c^2 r} \\tag{22}\\] \\[h_{01} = \\bar{h}_{01} = \\frac{2GJy}{c^3 r^3} \\tag{23}\\] \\[h_{02} = \\bar{h}_{02} = - \\frac{2GJx}{c^3 r^3} \\tag{24}\\] \\[h_{03} = \\bar{h}_{03} = 0 \\tag{25}\\] \\[h_{ij} = \\bar{h}_{ij} - \\eta_{ij} \\bar{h} = \\frac{2GM}{c^2 r} \\delta_{ij} \\tag{26}\\] 見通しを良くするため、これを極座標系に変換しましょう。座標変換則より . \\[h_{0r} = \\frac{\\partial x^\\mu}{\\partial r} h_{0\\mu} = \\sin \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + \\sin \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{27}\\] \\[\\begin{align} h_{0\\varphi} &amp;= \\frac{\\partial x^\\mu}{\\partial \\varphi} h_{0\\mu} = - r \\sin \\theta \\sin \\varphi \\frac{2GJy}{c^3 r^3} + r \\sin \\theta \\cos \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) \\notag \\\\ &amp;= - r \\sin \\theta \\frac{2GJ}{c^3 r^3} (y \\sin \\varphi + x \\cos \\varphi) = - \\frac{2GJ}{c^3 r} \\sin^2 \\theta \\tag{28} \\end{align}\\] \\[h_{0\\theta} = \\frac{\\partial x^\\mu}{\\partial \\theta} h_{0 \\mu} = r\\cos \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + r \\cos \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{29}\\] 原点に質量\\(M\\)の星があるときに作られるSchwarzschild時空メトリックと合わせて、ゆっくり回転する低質量星が作る時空は . \\[ds^2 = - \\left( 1- \\frac{r_g}{r}\\right) c^2 dt^2 - 2 \\frac{2GJ}{c^3 r} \\sin^2 \\theta c dt d\\varphi + \\frac{1}{1-r_g/r} dr^2 + r^2 (d\\theta^2 + \\sin^2 \\theta d\\varphi^2) \\tag{30}\\] のようになります。ここで\\(r_g = 2GM/c^2\\)はSchwarzschild半径、そして\\(c dt d\\varphi\\)の間に現れた係数2は、\\(h_{0\\varphi} = h_{\\varphi 0}\\)から出現したものです。 . ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity#%E5%85%83%E3%81%AE%E3%83%A1%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%81%B8%E5%A4%89%E6%8F%9B%E3%81%A8%E6%A5%B5%E5%BA%A7%E6%A8%99%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B",
+    "relUrl": "/gr/spinning_weak_gravity#元のメトリックへ変換と極座標への変換"
+  },"1041": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "カー時空からの接続",
+    "content": "Kerrブラックホールメトリックは以下のように書けました。 . \\[ds^2 = - \\frac{\\Delta - a^2 \\sin^2 \\theta}{\\rho^2} c^2 dt^2 - \\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} c dt d\\varphi + \\frac{(r^2 + a^2)^2 - a^2 \\Delta \\sin^2 \\theta}{\\rho^2} \\sin^2 \\theta d\\varphi^2 + \\frac{\\rho^2}{\\Delta} dr^2 + \\rho^2 d\\theta^2 \\tag{31}\\] ここで\\(\\rho^2 = r^2 + a^2 \\cos^2 \\theta, \\Delta = r^2 + a^2 - r_g r\\)です。(30), (31)式の\\(cdt d\\varphi\\)項の比較から . \\[\\frac{2 a r_g r \\sin^2 \\theta}{\\rho^2} \\underbrace{\\simeq }_{r \\gg 1} \\frac{2 a r_g r \\sin^2 \\theta}{r^2} = 2 \\frac{2GJ \\sin^2 \\theta}{c^3 r} \\ \\Longrightarrow \\ a = \\frac{2 GJ}{c^3 r_g} = \\frac{J}{Mc} \\tag{32}\\] のようになり、Kerrメトリックを求めるときに出現した定数\\(a\\)が求まりました。 . ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity#%E3%82%AB%E3%83%BC%E6%99%82%E7%A9%BA%E3%81%8B%E3%82%89%E3%81%AE%E6%8E%A5%E7%B6%9A",
+    "relUrl": "/gr/spinning_weak_gravity#カー時空からの接続"
+  },"1042": {
+    "doc": "ゆっくり自転する低質量星が作る時空",
+    "title": "ゆっくり自転する低質量星が作る時空",
+    "content": ". | ゆっくり自転する低質量星が作る時空 . | エネルギー運動量テンソル | 線形化されたアインシュタイン方程式の解 . | グリーン関数 | 方程式の解の計算 | . | 元のメトリックへ変換と極座標への変換 | カー時空からの接続 | . | . ",
+    "url": "http://localhost:4000/gr/spinning_weak_gravity",
+    "relUrl": "/gr/spinning_weak_gravity"
+  },"1043": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": "このページでは、一般的な弱重力場中での運動方程式である測地線方程式が、 非相対論的な重力場中での運動方程式(ニュートンの運動方程式)と一致するにはどのような条件が必要かを求めています。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E5%BC%B1%E9%87%8D%E5%8A%9B%E5%A0%B4%E6%A5%B5%E9%99%90",
     "relUrl": "/gr/weakfield#弱重力場極限"
-  },"1038": {
+  },"1044": {
     "doc": "弱重力場極限",
     "title": "ニュートンの運動方程式を導けるか？",
     "content": "弱重力場極限ということで、計量テンソルを . \\[(g_{\\mu \\nu}) = \\left( \\begin{array}{cccc} -1-h_{00} &amp;&amp; &amp;&amp; &amp;&amp; {\\bf 0} \\\\ &amp;&amp; 1+h &amp;&amp; &amp;&amp; \\\\ &amp;&amp; &amp;&amp; 1+h &amp;&amp; \\\\ {\\bf 0} &amp;&amp; &amp;&amp; &amp;&amp; 1+h \\end{array} \\right)\\] のように書きます。ここで\\(\\dot{h}_{00} = \\dot{h} = 0, |h_{00}| \\ll 1, |h| \\ll 1\\)とします。また非相対論的な極限なので\\(v^2/c^2 \\ll 1\\)とし、さらに粒子の軌跡を表現するパラメータであった\\(\\tau\\)も\\(\\tau \\simeq t\\)とします。 \\((g_{ij})\\)の逆行列成分を求めますが、これに関してもテイラー展開から . \\[g^{00} = \\frac{1}{g_{00}} \\simeq -1 + h_{00}\\] \\[g^{ij} = \\frac{1}{g_{ij}} \\simeq (1-h) \\delta^{ij}\\] と近似できるものとします。また4元速度も . \\[u^0 = \\frac{dx^0}{d\\tau} \\sim c, \\ u^i = \\frac{dx^i}{d\\tau} \\simeq v^i\\] と近似できると考えましょう。 重力場中の運動方程式より . \\[\\frac{du^i}{dt} = -\\Gamma^i_{\\alpha \\nu} u^\\alpha u^\\nu\\] \\[\\Gamma^i_{00} = \\frac{1}{2} g^{i\\beta} (\\underbrace{g_{\\beta 0, 0}}_{=0}+ \\underbrace{g_{\\beta 0, 0}}_{= 0} + g_{0 0,\\beta}) = -\\frac{1}{2} g^{ij} g_{00, j} = \\frac{1}{2} (1-h) \\delta^{ij}\\partial_j h_{00} = \\frac{1}{2} \\delta_{ij} h_{00, j}\\] \\[\\Gamma^i_{j0} = \\frac{1}{2} g^{i\\beta} (g_{\\beta j, 0}+ g_{\\beta j, 0} + g_{j 0,\\beta}) = \\frac{1}{2} g^{ik} (\\underbrace{g_{kj, 0}}_{=0} + g_{kj, 0} - g_{j0 , k}) = \\frac{1}{2} g^{ik} (g_{kj, 0} - g_{j0,k}) = 0 = \\Gamma^i_{0j}\\] \\[\\begin{aligned} \\Gamma^i_{jk} &amp;= \\frac{1}{2} g^{i\\beta} (g_{\\beta j, k} + g_{\\beta k, j} - g_{jk, \\beta}) = \\frac{1}{2} g^{i\\ell} (g_{\\ell j, k} + g_{\\ell k, j} - g_{jk, \\ell}) = \\frac{1}{2} \\delta^{i\\ell} (h_{, k} \\delta_{\\ell j} +h_{, j} \\delta_{\\ell k} - h_{, \\ell} \\delta_{jk}) \\\\ &amp;= \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) \\end{aligned}\\] \\[\\therefore \\ \\frac{dv^i}{dt} = - \\frac{1}{2} \\delta^{ij} h_{00, j} c^2 - \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) v^j v^k \\underbrace{\\simeq}_{c^2 \\gg v^2} -\\frac{c^2}{2} \\frac{\\partial h_{00}}{\\partial x^i}\\] これがニュートンの運動方程式と一致して欲しいので、\\(h_{00} = \\frac{2\\Phi}{c^2}\\)であればよいことがわかります。 . \\[\\frac{dv^i}{dt} = - \\frac{\\partial \\Phi}{\\partial x^i}\\] そしてこの式から\\(E = v^2/2 + \\Phi = {\\rm Const}\\)というエネルギー保存則も導くことができます。 エネルギー保存から\\(\\Phi \\simeq v^2\\)くらいの運動となるので、アインシュタイン方程式を導くときに用いた . \\[|h_{00}| = \\left| \\frac{2\\Phi}{c^2} \\right| \\simeq \\left| \\frac{v^2}{c^2}\\right| \\ll 1\\] と置く仮定は間違いではないこともわかります。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E5%B0%8E%E3%81%91%E3%82%8B%E3%81%8B",
     "relUrl": "/gr/weakfield#ニュートンの運動方程式を導けるか"
-  },"1039": {
+  },"1045": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": ". | 弱重力場極限 . | ニュートンの運動方程式を導けるか？ | . | . ",
     "url": "http://localhost:4000/gr/weakfield",
     "relUrl": "/gr/weakfield"
-  },"1040": {
+  },"1046": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     "relUrl": "/nucl/wu#wuの実験"
-  },"1041": {
+  },"1047": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "http://localhost:4000/nucl/wu#who-is-wu",
     "relUrl": "/nucl/wu#who-is-wu"
-  },"1042": {
+  },"1048": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"1043": {
+  },"1049": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     "relUrl": "/nucl/wu#パリティ変換"
-  },"1044": {
+  },"1050": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E4%BE%8B%E9%A1%8C",
     "relUrl": "/nucl/wu#例題"
-  },"1045": {
+  },"1051": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"1046": {
+  },"1052": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     "relUrl": "/nucl/wu#実験結果"
-  },"1047": {
+  },"1053": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"1048": {
+  },"1054": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "http://localhost:4000/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/nucl/wu#参考文献"
-  },"1049": {
+  },"1055": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "http://localhost:4000/nucl/wu",
     "relUrl": "/nucl/wu"
-  },"1050": {
+  },"1056": {
     "doc": "ζ関数",
     "title": "ゼータ関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#%E3%82%BC%E3%83%BC%E3%82%BF%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#ゼータ関数"
-  },"1051": {
+  },"1057": {
     "doc": "ζ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1052": {
+  },"1058": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1053": {
+  },"1059": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1054": {
+  },"1060": {
     "doc": "ζ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1055": {
+  },"1061": {
     "doc": "ζ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1056": {
+  },"1062": {
     "doc": "ζ関数",
     "title": "ζ関数",
     "content": ". | ゼータ関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

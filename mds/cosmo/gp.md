@@ -4,7 +4,7 @@ title: Gunn-Peterson test
 parent: 宇宙論
 math: mathjax3
 permalink: /cosmo/gp
-nav_order: 16
+nav_order: 20
 ---
 
 {: .no_toc }

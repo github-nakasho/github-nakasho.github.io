@@ -1,0 +1,140 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#宇宙年齢" id="markdown-toc-宇宙年齢">宇宙年齢</a>    <ol>
+      <li><a href="#アインシュタインドジッターeds宇宙の場合" id="markdown-toc-アインシュタインドジッターeds宇宙の場合">アインシュタイン・ド・ジッター(EdS)宇宙の場合</a></li>
+      <li><a href="#ダークエネルギーlambda項がある宇宙の場合" id="markdown-toc-ダークエネルギーlambda項がある宇宙の場合">ダークエネルギー(\(\Lambda\)項)がある宇宙の場合</a></li>
+      <li><a href="#宇宙初期かつ平坦な宇宙の場合" id="markdown-toc-宇宙初期かつ平坦な宇宙の場合">宇宙初期かつ平坦な宇宙の場合</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="宇宙年齢">宇宙年齢</h1>
+
+<p>これまでの知識を用いて、現在の宇宙の年齢を計算してみましょう。</p>
+
+\[t 
+= \int_0^t dt 
+= \int_0^a \frac{dt}{da} da 
+= \int_0^a \frac{da}{Ha}\]
+
+<p>最後の等号は<a href="/cosmo/hubble">Hubbleパラメータ</a>より\(H = \left( \frac{da}{dt}\right) / a\)を用いました。<a href="/cosmo/solve_friedmann">Friedmann方程式の変形</a>から</p>
+
+\[H^2 
+= H_0^2 (\Omega_{m, 0}(1+z)^3 + \Omega_{r, 0}(1+z)^4 + \Omega_{\mathrm{DE}, 0}(1+z)^{3(1+w_\mathrm{DE})} + \Omega_{K, 0}(1+z)^2) 
+= H_0^2 E(z)^2 \tag{1}\]
+
+<p>のように書けば</p>
+
+\[t 
+= \frac{1}{H_0} \int_0^a \frac{da}{a E(z)} 
+\underbrace{=}_{1+z = 1/a} \frac{1}{H_0} \int_z^\infty \frac{dz}{(1+z) E(z)} \tag{2}\]
+
+<p>のように書かれます。以下ではそれぞれの宇宙論モデルにおける宇宙年齢を具体的に計算しましょう。</p>
+
+<h2 id="アインシュタインドジッターeds宇宙の場合">アインシュタイン・ド・ジッター(EdS)宇宙の場合</h2>
+
+<p>\(\Omega_{m, 0} = 1, \Omega_{r, 0} = \Omega_{\mathrm{DE}, 0} =\Omega_{K, 0} =  0\)より(1), (2)式から</p>
+
+\[t(z) 
+= \frac{1}{H_0} \int_z^\infty \frac{dz}{(1+z)^{5/2}} 
+= \frac{2}{3H_0} \frac{1}{(1+z)^{3/2}} \tag{3}\]
+
+<p>\(H_0 \sim 67 [\mathrm{km/s/Mpc}]\)という値を用いると、\(z = 0\)で\(t = 2/(3H_0) \sim 10 [\mathrm{Gyr}]\)となります。しかし、球状星団の観測から10Gyr=100億歳以上の球状星団が発見されており、宇宙年齢との間に深刻な矛盾をもたらしてきました。現在では、この問題は宇宙定数の存在によって回避されると考えられています。</p>
+
+<h2 id="ダークエネルギーlambda項がある宇宙の場合">ダークエネルギー(\(\Lambda\)項)がある宇宙の場合</h2>
+
+<p>\(\Omega_{m, 0} + \Omega_\mathrm{DE, 0} = 1, \Omega_{K, 0} = \Omega_{r, 0} = 0\)の場合を考えましょう。またダークエネルギーが<a href="/cosmo/const">ラムダ項(宇宙項)</a>と考え、\(w_\mathrm{DE} = w_\Lambda = -1, \Omega_\mathrm{DE} = \Omega_\Lambda\)のように書くと</p>
+
+\[t (z) 
+= \frac{1}{H_0} \int_z^\infty \frac{dz}{(1+z) \{ \Omega_{m, 0} (1+z)^3 + 1- \Omega_{m, 0} \}^{1/2}}\]
+
+<p>\(\Omega_{m, 0} (1+z_\Lambda)^3 = \Omega_\Lambda\)となる赤方偏移を\(z_\Lambda\)のように書くと</p>
+
+\[t (z) 
+= \frac{1}{H_0 \Omega_{m, 0}^{1/2}} \int_z^\infty \frac{dz}{(1+z) \{ (1+z)^3 + (1+z_\Lambda)^3\}^{1/2}} 
+= \frac{1}{H_0 \Omega_{m, 0}^{1/2}} \int_z^\infty \frac{dz}{(1+z)^{5/2} \left\{ 1 + \left( \frac{1+z_\Lambda}{1+z} \right)^3 \right\}^{1/2}}\]
+
+<p>ここで\(x^2 = \left( \frac{1+z_\Lambda}{1+z}\right)^3\)のように変数変換すると、\(\frac{dz}{1+z} = -\frac{2}{3x} dx\)より</p>
+
+\[t(z) 
+= - \frac{2}{3H_0 (1+z_\Lambda)^{3/2}} \underbrace{\int_{x(z)}^\infty \frac{dx}{\sqrt{1+x^2}}}_{積分公式} 
+= \frac{2}{3H_0 (1+z_\Lambda)^{3/2}} \log (x + \sqrt{1+x^2}) \tag{4}\]
+
+<p>\(z=0\)の場合、\(x = (1+z_\Lambda)^{3/2}\)、さらに\(1+ z_\Lambda = \left( \frac{1-\Omega_{m, 0}}{\Omega_{m, 0}}\right)^{1/3}\)より</p>
+
+\[t(z) 
+= \frac{2}{3 H_0 \sqrt{1- \Omega_{m, 0}}} \ln \left( \frac{1+\sqrt{1-\Omega_{m, 0}}}{\sqrt{\Omega_{m, 0}}}\right) \tag{5}\]
+
+<p>(5)式に\(H_0 \sim 67 [\mathrm{km/s/Mpc}], \Omega_{m, 0} \sim 0.24\)を代入して大雑把に計算するとおよそ\(13 [\mathrm{Gyr}]\)となります。</p>
+
+<h2 id="宇宙初期かつ平坦な宇宙の場合">宇宙初期かつ平坦な宇宙の場合</h2>
+
+<p>宇宙初期なので輻射の影響も考え、\(\Omega_{m, 0} +\Omega_{r, 0} = 1, \Omega_\Lambda = \Omega_K=0\)とします。また\(z \gg z_\Lambda\)とします。</p>
+
+<p>すると</p>
+
+\[t(z) 
+= \frac{1}{H_0} \int_z^\infty \frac{dz}{(1+z) \{ \Omega_{m, 0}(1+z)^3 + \Omega_{r, 0} (1+z)^4 \}^{1/2} }\]
+
+<p>物質と輻射のエネルギーが等しくなるときの赤方偏移を\(z_\mathrm{eq}\)とすると</p>
+
+\[\Omega_{m, 0} (1+ z_\mathrm{eq})^3 
+= \Omega_{r, 0} (1+ z_\mathrm{eq})^4 \ \Longrightarrow \ 
+1 + z_\mathrm{eq} 
+= \frac{\Omega_{m, 0}}{\Omega_{r, 0}}\]
+
+<p>これを用いて式を整理しましょう。</p>
+
+\[\begin{aligned}
+t(z) 
+&amp;= \frac{1}{H_0} \int_{\frac{1+z}{1+z_\mathrm{eq}}}^\infty \frac{d\left( \frac{1+z}{1+z_\mathrm{eq}}\right)}{\frac{1+z}{1+z_\mathrm{eq}} \{ \Omega_{m, 0} (1+z_\mathrm{eq})^3 \left( \frac{1+z}{1+z_\mathrm{eq}}\right)^3 + \Omega_{r, 0} (1+z_\mathrm{eq})^4 \left( \frac{1+z}{1+z_\mathrm{eq}}\right)^4\}^{1/2} } \\
+&amp;= \frac{1}{H_0 (1+z_\mathrm{eq})^{3/2} \sqrt{\Omega_{m, 0}}} \int_x^\infty \frac{dx}{x^{5/2} (1+x)^{1/2}} 
+\end{aligned}\]
+
+<p>ここで\(y = \sqrt{x}\)と変数変換すると</p>
+
+\[t(z) 
+= \frac{2}{H_0 (1+z_\mathrm{eq})^{3/2} \sqrt{\Omega_{m, 0}}} \int_y^\infty \frac{dy}{y^4 (1+y^2)^{3/2}} 
+= \cdots 
+= \frac{2}{H_0 (1+z_\mathrm{eq})^{3/2} \sqrt{\Omega_{m, 0}}} \left\{ \frac{2}{3} + \frac{1}{3} \left( 1 + \frac{1+z_\mathrm{eq}}{1+z}\right)^{3/2} - \left( 1 + \frac{1+z_\mathrm{eq}}{1+z}\right)^{1/2}\right\} \tag{6}\]
+
+<p>のように計算を進めることができます。ここで宇宙初期で\(1+z \gg 1+z_\mathrm{eq}\)として、輻射優勢宇宙を考えてみましょう。Taylor展開から</p>
+
+\[\frac{2}{3} + \frac{1}{3} \left( 1 + \frac{1+z_\mathrm{eq}}{1+z}\right)^{3/2} - \left( 1 + \frac{1+z_\mathrm{eq}}{1+z}\right)^{1/2} 
+\simeq \frac{1}{4} \left( \frac{1+z}{1+z_\mathrm{eq}}\right)^2\]
+
+<p>と計算されることと、<a href="/cosmo/energy_cons">CMB温度への換算</a>として</p>
+
+\[1 + z 
+= \frac{T}{2.72 [\mathrm{K}]}\]
+
+<p>のように書けることを用いると</p>
+
+\[t(T)
+= 23.9 \times 10^{18} \left( \frac{2.72 [\mathrm{K}]}{T} \right)^2 
+\simeq 132 \left( \frac{k_B T}{0.1 [\mathrm{MeV}]}\right)^{-2} \ [\mathrm{s}] \tag{7}\]
+
+<p>のようになります。このように表記しておけば、宇宙の中で生まれる素粒子や関連する現象と宇宙年齢を比較することができて便利です。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

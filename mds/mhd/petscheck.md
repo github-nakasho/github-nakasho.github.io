@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Petscheck reconnection
-parent: 磁気流体力学
+parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/petschek
 nav_order: 7
@@ -18,6 +18,7 @@ nav_order: 7
 {:toc}
 </details>
 
+{% include adsense.html %} 
 
 # ぺチェックの磁気リコネクション
 
@@ -203,5 +204,7 @@ $$
 
 ## 参考文献
 
-シリーズ現代の天文学, 太陽  
-Solar Magnetohydrodynamics, E. R. Priest
+[1] 桜井隆, 小島正宣, 小杉健郎, 柴田一成, "シリーズ現代の天文学 太陽"  
+[2] Priest, "Solar Magnetohydrodynamics"
+
+{% include adsense.html %} 

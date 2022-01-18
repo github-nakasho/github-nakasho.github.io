@@ -1,0 +1,68 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気流体方程式の運動量保存則" id="markdown-toc-磁気流体方程式の運動量保存則">磁気流体方程式の運動量保存則</a>    <ol>
+      <li><a href="#流体要素の運動方程式の変形" id="markdown-toc-流体要素の運動方程式の変形">流体要素の運動方程式の変形</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気流体方程式の運動量保存則">磁気流体方程式の運動量保存則</h1>
+
+<h2 id="流体要素の運動方程式の変形">流体要素の運動方程式の変形</h2>
+
+<p>磁気流体を構成する流体要素の運動方程式は</p>
+
+\[\rho \frac{D \mathbf{v}}{Dt} 
+= - \nabla P + \mathbf{j} \times \frac{\mathbf{B}}{c} + \mathbf{F} \tag{1}\]
+
+<p>のように書かれます。ここで\(\rho \mathbf{v}, P, \mathbf{j}, \mathbf{B}, \mathbf{F}\)はそれぞれ質量密度、流体要素の速度ベクトル、ガス圧、電流密度ベクトル、磁場ベクトル、外力ベクトルを表します。右辺第1項は圧力勾配による力、第2項はLorentz力により加速度がもたらされることを意味する式です。<br />
+左辺の<a href="/mhd/euler_lagrange">Lagrange微分をEuler微分に書き換える</a>と</p>
+
+\[\rho \frac{D \mathbf{v}}{D t} 
+= \rho \left\{ \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} \right\} 
+= \frac{\partial}{\partial t} (\rho \mathbf{v}) - \mathbf{v} \frac{\partial \rho}{\partial t} + \rho \{ (\mathbf{v} \cdot \nabla) \mathbf{v} \}\]
+
+<p>ここで<a href="/mhd/continuity">連続の式</a>よりさらに式変形を行うと</p>
+
+\[\rho \frac{D \mathbf{v}}{D t} 
+= \frac{\partial}{\partial t} (\rho \mathbf{v}) + \mathbf{v} \{ \nabla \cdot (\rho \mathbf{v})\} + \rho \{ (\mathbf{v} \cdot \nabla) \mathbf{v} \}\]
+
+<p>ここで第2, 3項の\(i\)成分のみを計算してみましょう。すると</p>
+
+\[v_i \partial_j (\rho v_j) + \rho (v_j \partial_j) v_i 
+= \partial_j (\rho v_j v_i)\]
+
+<p>のように変形できます。ここで\(\partial_j = \frac{\partial}{\partial x_j}\)、さらに添字の和の記号を省略するEinstein縮約記法を用いました。すると(1)式は</p>
+
+\[\frac{\partial}{\partial t} (\rho \mathbf{v}) + \nabla \cdot (\rho \mathbf{v} \mathbf{v}) 
+= - \nabla P + \mathbf{j} \times \frac{\mathbf{B}}{c} + \mathbf{F} \tag{2}\]
+
+<p>続いて、右辺のLorentz力の項を変形しましょう。Maxwell方程式において変位電流を無視した\(\nabla \times \mathbf{B} = \frac{4\pi}{c} \mathbf{j}\)より</p>
+
+\[\mathbf{j} \times \frac{\mathbf{B}}{c} 
+= \frac{1}{4\pi} (\nabla \times \mathbf{B}) \times \mathbg{B} 
+= \frac{1}{4\pi} \epsilon_{ijk} (\nabla \times \mathbf{B})_j B_k \mathbf{e}_i\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

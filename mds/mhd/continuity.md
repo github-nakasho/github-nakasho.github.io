@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 連続の式
-parent: 磁気流体力学
+parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/continuity
 nav_order: 2
@@ -17,6 +17,8 @@ nav_order: 2
 1. TOC
 {:toc}
 </details>
+
+{% include adsense.html %} 
 
 # 連続の式
 
@@ -64,4 +66,6 @@ $$
 
 ## 参考文献
 
-* E.R.Priest, "Solar Magnetohydrodynamics"
+[1] Priest, "Solar Magnetohydrodynamics"
+
+{% include adsense.html %} 

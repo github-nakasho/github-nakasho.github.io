@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lagrange微分, Euler微分
-parent: 磁気流体力学
+parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/eular_lagrange
 nav_order: 1
@@ -17,6 +17,8 @@ nav_order: 1
 1. TOC
 {:toc}
 </details>
+
+{% include adsense.html %} 
 
 # ラグランジュ微分とオイラー微分
 
@@ -112,5 +114,7 @@ $$
 
 # 参考文献
 
-* 流体力学, 今井功
-* 東北大学天文学コース, 天体物理学実習II, 授業プリント
+[1] 流体力学, 今井功  
+[2] 東北大学天文学コース, 天体物理学実習II, 授業プリント  
+
+{% include adsense.html %} 

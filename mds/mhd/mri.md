@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 磁気回転不安定性
-parent: 磁気流体力学
+parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/mri
 nav_order: 5

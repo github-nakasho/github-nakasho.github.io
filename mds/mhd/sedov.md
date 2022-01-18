@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sedov-Taylor解
-parent: 磁気流体力学
+parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/sedov
 nav_order: 3
@@ -18,6 +18,7 @@ nav_order: 3
 {:toc}
 </details>
 
+{% include adsense.html %} 
 
 # 点源爆発の自己相似解
 
@@ -194,3 +195,6 @@ $$
 
 ![上から順に密度・圧力・動径方向の速度分布](/assets/images/mhd/sedov.png)
 上から順に、密度、圧力、動径方向の速度分布図。
+
+{% include adsense.html %} 
+

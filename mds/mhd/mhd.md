@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 磁気流体力学
+title: 宇宙磁気流体力学
 nav_order: 5
 has_children: true
 permalink: /mhd

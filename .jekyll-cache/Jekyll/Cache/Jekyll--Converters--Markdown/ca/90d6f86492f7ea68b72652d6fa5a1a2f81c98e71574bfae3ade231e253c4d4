@@ -1,0 +1,67 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#一般化されたオームの法則" id="markdown-toc-一般化されたオームの法則">一般化されたオームの法則</a></li>
+</ol>
+
+</details>
+
+<h1 id="一般化されたオームの法則">一般化されたオームの法則</h1>
+
+<p>完全電離した水素ガスを考えましょう。このとき、電子と陽子の数は等しく、この2つの粒子しか存在しないことになります。電子には添字のe, 陽子には添字のpを付けて、2つの粒子について運動方程式を考えると</p>
+
+\[m_e n_e \frac{D \mathbf{v}_e}{Dt} 
+= - \nabla P_e - e n_e \left( \mathbf{E} + \mathbf{v}_e \times \frac{\mathbf{B}}{c} \right) - \frac{n_e m_e}{\tau_{ep}} (\mathbf{v}_e - \mathbf{v}_p) \tag{1}\]
+
+\[m_p n_p \frac{D \mathbf{v}_p}{Dt} 
+= - \nabla P_p + e n_p \left( \mathbf{E} + \mathbf{v}_p \times \frac{\mathbf{B}}{c} \right) + \frac{n_p m_p}{\tau_{ep}} (\mathbf{v}_e - \mathbf{v}_p) \tag{2}\]
+
+<p>ここで\(m_i, n_i, \mathbf{v}_i, P_i, \tau{ij}\)はそれぞれ\(i\)粒子の質量、個数密度、速度ベクトル、圧力、そして\(i\)粒子と\(j\)粒子の衝突時間(運動量を交換するのにかかる大体の時間)です。右辺の第3項は、1個の電子が1個の陽子と一回の衝突で\(m_e (\mathbf{v}_e-\mathbf{v}_p)\)だけ運動量を受け渡すことからくる、衝突項です。<br />
+完全電離した水素ガスより\(n_e = n_p = n\)、さらに\(m_e \ll m_p\)から、単位体積あたりの質量\(\rho\)は</p>
+
+\[\rho \equiv m_e n_e + m_p n_p 
+\simeq m_p n \tag{3}\]
+
+<p>また電子と陽子が混在した流体要素を考えると、その速度は流体要素の中に含まれる電子と陽子の集団の重心の速度と考えることができるので</p>
+
+\[\mathbf{v} 
+= \frac{m_e n \mathbf{v}_e + m_p n \mathbf{v}_p}{m_e n + m_p n} 
+\underbrace{=}_{(3)} \frac{m_e n \mathbf{v}_e + m_p n \mathbf{v}_p}{\rho} \tag{4}\]
+
+<p>(1)式より、\(m_e \ll m_p\)として、左辺の慣性項は無視すると</p>
+
+\[\mathbf{0} 
+= - \nabla P_e - e n\left( \mathbf{E} + \frac{\mathbf{B}}{c} \right) - \frac{m_e n}{\tau_{ep}} (\mathbf{v}_e - \mathbf{v}_p) \ \Longrightarrow \ 
+\mathbf{E} 
+= - \mathbf{v}_e \times \frac{\mathbf{B}}{c} - \frac{1}{en} \nabla P_e - \frac{m_e}{e \tau_{ep}} (\mathbf{v}_e - \mathbf{v}_p) \tag{5}\]
+
+<p>電流密度は</p>
+
+\[\mathbf{j} 
+\equiv e n (\mathbf{v}_p - \mathbf{v}_e) \tag{6}\]
+
+<p>のように定義されるので</p>
+
+\[\mathbf{E} 
+= - \mathbf{v}_e \times \frac{\mathbf{B}}{c} - \frac{1}{en} \nabla P_e - \frac{m_e}{e^2 \tau_{ep} n} \mathbf{j} \tag{7}\]
+
+<p>これを一般化されたOhmの法則と呼びます。また\(\mathbf{j}\)の前の係数を</p>
+
+\[\sigma 
+\equiv \frac{e^2 \tau_{ep} n}{m_e} \tag{8}\]
+
+<p>を電気伝導度と定義します。<br />
+先に述べた通り\(m_e \ll m_p\)より、運動量のほとんどは陽子によるものと考えれば、(4)式から\(\mathbf{v} \simeq \mathbf{v}_p\)としても妥当でしょう。これと(6)式より、\(\mathbf{v}_e\)を\(\mathbf{j}, \mathbf{v}\)で書き換えると</p>
+
+\[\mathbf{E} 
+= - \left( \mathbf{v} - \frac{\mathbf{j}}{en} \right) \times \frac{\mathbf{B}}{c} - \frac{1}{en} \nabla P_e - \frac{\mathbf{j}}{\sigma} 
+= - \mathbf{v} \times \frac{\mathbf{B}}{c} + \frac{\mathbf{j} \times \mathbf{B}}{enc} - \frac{1}{en} \nabla P_E - \frac{\mathbf{j}}{\sigma} \tag{9}\]
+
+<p>最右辺の第2項は、電荷を持った粒子がドリフトすることによって電荷に偏りが生じる効果を表しており、これをHall項と呼びます。第3項は電子ガス圧勾配により生じる(そもそもの電子の分布に偏りがあることに起因する)電場を表し、これをバッテリー項と呼びます。<br />
+Hall項がどの程度の大きさかを見積もってみましょう。</p>
+
+\[\]
+:ET

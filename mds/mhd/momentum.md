@@ -31,7 +31,7 @@ $$
 = - \nabla P + \mathbf{j} \times \frac{\mathbf{B}}{c} + \mathbf{F} \tag{1}
 $$
 
-のように書かれます。ここで$$\rho \mathbf{v}, P, \mathbf{j}, \mathbf{B}, \mathbf{F}$$はそれぞれ質量密度、流体要素の速度ベクトル、ガス圧、電流密度ベクトル、磁場ベクトル、外力ベクトルを表します。右辺第1項は圧力勾配による力、第2項はLorentz力により加速度がもたらされることを意味する式です。  
+のように書かれます。ここで$$\rho, \mathbf{v}, P, \mathbf{j}, \mathbf{B}, \mathbf{F}$$はそれぞれ質量密度、流体要素の速度ベクトル、ガス圧、電流密度ベクトル、磁場ベクトル、外力ベクトルを表します。右辺第1項は圧力勾配による力、第2項はLorentz力により加速度がもたらされることを意味する式です。  
 左辺の[Lagrange微分をEuler微分に書き換える](/mhd/euler_lagrange)と
 
 $$
@@ -51,7 +51,7 @@ $$
 
 $$
 v_i \partial_j (\rho v_j) + \rho (v_j \partial_j) v_i 
-= \partial_j (\rho v_j v_i)
+= \partial_j (\rho v_i v_j)
 $$
 
 のように変形できます。ここで$$\partial_j = \frac{\partial}{\partial x_j}$$、さらに添字の和の記号を省略するEinstein縮約記法を用いました。すると(1)式は
@@ -102,8 +102,8 @@ $$
 \begin{align}
 \partial_j M_{ij} 
 &= \frac{1}{4\pi} \{ B_j (\partial_j B_i) + B_i (\partial_j B_j) \} - \frac{1}{8\pi} \partial_i B^2 \notag \\
-&= \frac{1}{4\pi} \{ (\mathbf{B} \cdot \nabla) B_i + B_i \underbrace{(\nabla \cdot \mathbf{B})}_{=0} \} - \frac{1}{8\pi} \nabla B^2 
-= \frac{1}{4\pi} (\mathbf{B} \cdot \nabla) B_i - \frac{1}{8\pi} \nabla B^2 \tag{5}
+&= \frac{1}{4\pi} \{ (\mathbf{B} \cdot \nabla) B_i + B_i \underbrace{(\nabla \cdot \mathbf{B})}_{=0} \} - \frac{1}{8\pi} ( \nabla B^2)_i 
+= \frac{1}{4\pi} (\mathbf{B} \cdot \nabla) B_i - \frac{1}{8\pi} (\nabla B^2)_i \tag{5}
 \end{align}
 $$
 
@@ -128,5 +128,42 @@ $$
 $$
 
 のように簡潔に表すことができます。
+
+## 各項の意味
+
+以下では$$\rho \mathbf{v} \mathbf{v}, \frac{1}{4\pi} (\mathbf{B} \cdot \nabla) \mathbf{B}, \frac{1}{8\pi} \nabla B^2$$の意味について考えましょう。
+
+### $$\rho \mathbf{v} \mathbf{v}$$の意味
+
+(2)式に現れた$$\{ \nabla \cdot (\rho \mathbf{v} \mathbf{v}) \}_i = \partial_j (\rho v_i v_j)$$について考えましょう。磁場や外力がない場合を考えると
+
+$$
+\frac{\partial}{\partial t} (\rho v_x) 
+= - \nabla \cdot (\rho v_x \mathbf{v})
+$$
+
+となります。ここで$$i=x$$の場合を考えました。さらにわかりやすくするために、これをある座標の体積$$V$$で体積積分しましょう。するとGaussの定理より
+
+$$
+\frac{\partial }{\partial t} \iiint_V \rho v_x dV 
+= - \iint_S \rho v_x \mathbf{v} \cdot d\mathbf{S}
+$$
+
+と書けます。ここで$$S$$は体積$$V$$の表面領域を表します。すると右辺は表面$$S$$を通過して出入りする運動量$$\rho v_x$$の合計を表していることがわかります。よって$$\rho \mathbf{v} \mathbf{v}$$は運動量流束を表しています。  
+$$\rho v_x v_x$$は$$x$$方向の運動量$$\rho v_x$$が$$v_x$$によって単位時間に運ばれる量を表します。$$\rho v_x v_y$$は同様に$$\rho v_x$$が$$v_y$$によって単位時間に運ばれる量を表します。$$\rho v_y v_x$$は$$\rho v_y$$という$$y$$方向の運動量が$$v_x$$によって運ばれることを表しており、$$\rho v_x v_y$$と表記は同じですが意味が異なることに注意してください。
+
+![](/assets/images/mhd/momentum_001.png)
+
+### $$\frac{1}{4\pi} (\mathbf{B} \cdot \nabla) \mathbf{B}$$の意味
+
+次に(3)式の$$\frac{1}{4\pi} (\mathbf{B} \cdot \nabla) \mathbf{B}$$について考えましょう。$$\mathbf{B} \cdot \nabla$$は磁場の方向(磁力線)に沿って微分するという演算子であることがわかります。よって$$(\mathbf{B} \cdot \nabla) \mathbf{B}$$は、磁力線に沿って微小距離$$\Delta$$だけ離れた2つの場所での接ベクトル(すなわち磁場)差をとり、$$\Delta \rightarrow 0$$の極限を計算しなさいということがわかります。下図のように曲がった磁力線が存在しているとすると、この項は磁力線の曲がり具合を減らす方向を向いたベクトルとわかります。
+
+![](/assets/images/mhd/momentum_002.png)
+
+これはゴムひもの張力のような役割をしていることがわかるため、この類推からこれを磁気張力(magnetic tension)と呼びます。なお、磁力線が真っ直ぐの場合には、流体にはこの力は働かないことがわかります。
+
+### $$\frac{1}{8\pi} \nabla B^2$$の意味
+
+(3)式において圧力と同じ働きをしていることから、この項は磁気圧力と呼ばれます。$$\frac{1}{8\pi} \nabla B^2$$は[磁場のエネルギー密度](/astroelec/em_energy_momentum)と見ることもできるため、エネルギー等分配により磁場のエネルギーが局所的に高い部分から低い部分に輸送される様子を表すと見ることもできます。磁力線が混み合っている蜜の部分から疎の部分に向かう方向に力が働くと考えて良いでしょう。
 
 {% include adsense.html %} 

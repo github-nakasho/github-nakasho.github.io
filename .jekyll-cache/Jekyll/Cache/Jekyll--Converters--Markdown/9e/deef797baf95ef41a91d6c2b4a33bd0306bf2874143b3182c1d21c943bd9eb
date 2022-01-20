@@ -1,0 +1,53 @@
+I"
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気流体におけるエネルギー保存則" id="markdown-toc-磁気流体におけるエネルギー保存則">磁気流体におけるエネルギー保存則</a>    <ol>
+      <li><a href="#内部エネルギー" id="markdown-toc-内部エネルギー">内部エネルギー</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気流体におけるエネルギー保存則">磁気流体におけるエネルギー保存則</h1>
+
+<p>磁気流体のエネルギーを考えるには、流体の運動エネルギー・内部エネルギー・電磁場のエネルギーを考えなければなりません。まずは内部エネルギーから見ていいきましょう。</p>
+
+<h2 id="内部エネルギー">内部エネルギー</h2>
+
+<p>\(s\)を流体の単位質量あたりのエントロピーとすると\(T ds = dQ\)より</p>
+
+\[\rho T \frac{Ds}{Dt} 
+= \rho \frac{DQ}{Dt} 
+= - \mathcal{L} \tag{1}\]
+
+<p>ここで\(\mathcal{L}\)はエネルギー損失関数(energy loss function)と呼ばれる量で、ある流体要素の正味のエネルギーの吸い込みやわきだしの量を表します。例えば恒星内部では、核融合反応によりエネルギーが生み出され(わきだし)ていると考えることができます。ここで単位質量あたりの内部エネルギーを\(e\)としましょう。熱力学第一法則より</p>
+
+\[de 
+= dQ - P dV 
+= T ds - P dV \ \Longrightarrow \ 
+\rho \frac{De}{Dt} 
+= \underbrace{\rho T \frac{Ds}{Dt}}_{(1)} - \rho P \frac{DV}{Dt} 
+= - \mathcal{L} - \rho P \frac{DV}{Dt} \tag{2}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

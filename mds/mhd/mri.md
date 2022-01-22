@@ -4,7 +4,7 @@ title: 磁気回転不安定性
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/mri
-nav_order: 5
+nav_order: 7
 ---
 
 {: .no_toc }

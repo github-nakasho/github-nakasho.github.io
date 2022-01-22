@@ -4,7 +4,7 @@ title: Parker不安定性
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/parker
-nav_order: 4
+nav_order: 8
 ---
 
 {: .no_toc }

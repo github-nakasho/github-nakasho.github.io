@@ -4,7 +4,7 @@ title: 一般化されたOhmの法則
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/ohm
-nav_order: 3
+nav_order: 4
 ---
 
 {: .no_toc }

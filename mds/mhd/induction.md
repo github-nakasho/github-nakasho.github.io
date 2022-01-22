@@ -4,7 +4,7 @@ title: 誘導方程式
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/induction
-nav_order: 3
+nav_order: 5
 ---
 
 {: .no_toc }

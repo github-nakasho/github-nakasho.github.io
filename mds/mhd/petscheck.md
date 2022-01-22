@@ -4,7 +4,7 @@ title: Petscheck reconnection
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/petschek
-nav_order: 7
+nav_order: 10
 ---
 
 {: .no_toc }

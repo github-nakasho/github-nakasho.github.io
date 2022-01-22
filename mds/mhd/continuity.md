@@ -34,12 +34,13 @@ $$
 
 ## オイラー微分表現、保存形式表現
 
-上の式でラグランジュ微分をオイラー微分に書き換えましょう。[このページの公式より](/mhd/eular_lagrange)
+上の式でラグランジュ微分をオイラー微分に書き換えましょう。[Lagrange微分とEuler微分の関係式より](/mhd/eular_lagrange)
 
 $$
 \frac{D\rho}{Dt} + \rho (\nabla \cdot {\bf v}) 
 = \frac{\partial \rho}{\partial t} + ({\bf v} \cdot \nabla) \rho + \rho (\nabla \cdot {\bf v}) 
-= \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho {\bf v}) = 0
+= \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho {\bf v}) 
+= 0 \tag{1}
 $$
 
 ## 連続の式の積分系

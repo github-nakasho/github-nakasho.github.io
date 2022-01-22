@@ -4,7 +4,7 @@ title: エネルギー保存則
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/energy
-nav_order: 3
+nav_order: 6
 ---
 
 {: .no_toc }

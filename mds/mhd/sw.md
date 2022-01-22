@@ -4,7 +4,7 @@ title: Sweet-Parker reconnection
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/sw
-nav_order: 6
+nav_order: 9
 ---
 
 {: .no_toc }

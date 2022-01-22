@@ -4,7 +4,7 @@ title: Sedov-Taylor解
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/sedov
-nav_order: 3
+nav_order: 12
 ---
 
 {: .no_toc }

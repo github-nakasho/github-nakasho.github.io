@@ -1,0 +1,174 @@
+I"�#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#衝撃波" id="markdown-toc-衝撃波">衝撃波</a>    <ol>
+      <li><a href="#垂直断熱衝撃波" id="markdown-toc-垂直断熱衝撃波">垂直・断熱衝撃波</a></li>
+      <li><a href="#衝撃波の発生条件" id="markdown-toc-衝撃波の発生条件">衝撃波の発生条件</a>        <ol>
+          <li><a href="#ガスのエントロピー" id="markdown-toc-ガスのエントロピー">ガスのエントロピー</a></li>
+        </ol>
+      </li>
+      <li><a href="#垂直等温衝撃波" id="markdown-toc-垂直等温衝撃波">垂直・等温衝撃波</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="衝撃波">衝撃波</h1>
+
+<p>ここでは磁場を考えない、流体衝撃波(hydrodynamical shock)について考えます。</p>
+
+<h2 id="垂直断熱衝撃波">垂直・断熱衝撃波</h2>
+
+<p>衝撃波面と同じ速度で運動する系で衝撃波を観測してみましょう。簡単のため、衝撃波面は定常・等速度で伝播していくものとし、さらに流体は衝撃波面に対して垂直な方向した運動していないとします。また流体の速度は非相対論的とします。<br />
+以降、衝撃波面を挟んで上流側(pre-shock)の物理量には1、下流側(post-shock)の物理量には2の添字をつけて式変形を考えていきます。<br />
+<a href="/mhd/continuity">質量保存(連続の式)</a>より、衝撃波面を挟んで、その前後では</p>
+
+\[\rho_1 v_1 
+= \rho_2 v_2 \tag{1}\]
+
+<p><a href="/mhd/momentum">運動量保存式</a>より</p>
+
+\[\rho_1 v_1 v_1 + P_1 
+= \rho_2 v_2 v_2 + P_2 \tag{2}\]
+
+<p><a href="/mhd/energy">エネルギー保存式</a>より</p>
+
+\[\left( \frac{1}{2} v^2_1 + e_1 + \frac{P_1}{\rho_1} \right) \rho_1 v_1 
+= \left( \frac{1}{2} v^2_2 + e_2 + \frac{P_2}{\rho_2} \right) \rho_2 v_2 \tag{3}\]
+
+<p>です。ここで\(e\)は単位体積あたりの内部エネルギー\(e = \frac{P}{(\gamma-1) \rho}\)です。以下では</p>
+
+\[\frac{\rho_2}{\rho_1} = \frac{v_1}{v_2} \equiv x, \quad
+\frac{P_2}{P_1} \equiv y \tag{4}\]
+
+<p>のように変数変換をして、式変形を進めましょう。この\(x\)を圧縮率と呼びます。(2)式より</p>
+
+\[\rho_1 v_1^2 + P_1 
+= \rho_1 v_1^2 \frac{\rho_2}{\rho_1} \frac{v_2^2}{v_1^2} P_1 \frac{P_2}{P_1} 
+\underbrace{=}_{(4)} \frac{\rho v_1^2}{x} + P_1 y\]
+
+<p>ここでさらに</p>
+
+\[C_s^2 
+= \frac{\gamma P_1}{\rho_1}, \quad M 
+\equiv \frac{v}{C_s}\]
+
+<p>のように音速とMach数を導入すると</p>
+
+\[\rho_1 v_1^2 + \frac{\rho_1 C_{s1}^2}{\gamma} 
+= \frac{\rho_1 v_1^2}{x} + \frac{\rho_1 C_{s1}^2}{\gamma} y \ \underbrace{\Longrightarrow}_{\times \rho^{-1} C_{s1}^{-2}} \ 
+M_1^2 + \frac{1}{\gamma} 
+= \frac{M_1^2}{x} + \frac{y}{\gamma} \ \Longrightarrow \
+y = 1 + \gamma M_1^2 \left( 1-\frac{1}{x}\right) \tag{5}\]
+
+<p>(1), (3)式より</p>
+
+\[\begin{aligned}
+&amp;\frac{1}{2} v_1^2 + \frac{\gamma}{\gamma-1} \underbrace{\frac{P_1}{\rho_1}}_{= C_{s1}^2/\gamma} 
+= \frac{1}{2} v_2^2 + \frac{\gamma}{\gamma-1} \frac{P_2}{\rho_2} 
+= \frac{1}{2} v_1^2 \frac{v_2^2}{v_1^2} + \frac{\gamma}{\gamma-1} \frac{P_1}{\rho_1} \frac{P_2}{P_1} \frac{\rho_1}{\rho_2} 
+= \frac{1}{2} \frac{v_1^2}{x^2} + \frac{C_{s1}^2}{\gamma-1} \frac{y}{x} \\
+&amp;\Longrightarrow \ 
+\frac{\gamma-1}{2} M_1^2 \left( 1- \frac{1}{x^2} \right) + \left( 1-\frac{y}{x}\right) 
+= 0
+\end{aligned}\]
+
+<p>この両辺に\(x^2\)をかけて、さらに(5)式を用いると</p>
+
+\[\frac{\gamma-1}{2} M_1^2 (x^2-1) + \left\{ x^2 - x - \gamma M_1^2 (x-1) \right\} 
+= 0 \ \Longrightarrow \ 
+(x-1) \left\{ \frac{\gamma-1}{2} M_1^2 (x+1) + x - \gamma M_1^2 \right\} 
+= 0\]
+
+<p>よってこの式には</p>
+
+\[x-1 = 0, \quad
+\frac{\gamma-1}{2} M_1^2 (x+1) + x - \gamma M_1^2 
+= 0\]
+
+<p>の2つの解があることがわかります。最初の\(x=1\)の解は\(\rho_1 = \rho_2, v_1 = v2, P_1 = P_2\)で、衝撃波面を挟んで何も起こっていないような解なので、この解に意味はありません。よって2つ目の解について調べましょう。すると(5)式より</p>
+
+\[x 
+= \frac{\rho_2}{\rho_1} 
+= \frac{v_1}{v_2}
+= \frac{(\gamma+1)M_1^2}{(\gamma-1)M_1^2 + 2}, \quad 
+y 
+= \frac{P_2}{P_1} 
+= 1 + \gamma M_1^2 \left( 1 - \frac{(\gamma-1)M_1^2 + 2}{(\gamma+1)M_1^2}\right) 
+= \frac{2\gamma M_1^2 - \gamma + 1}{\gamma + 1} \tag{6}\]
+
+<p>この衝撃波面前後での物理量のジャンプ条件をRankine-Hugoniot(ランキン・ユゴニオ)の式と呼びます。もし上流側の流体の速度がとても大きい場合、(6)式で\(M_1 \rightarrow \infty\)の極限をとると</p>
+
+\[x 
+\rightarrow \frac{\gamma + 1}{\gamma -1}, \quad y \rightarrow \frac{2\gamma}{\gamma+1} M_1^2\]
+
+<p>のようになります。どんなに流体の速度が大きく強い衝撃波であったとしてもしても、断熱の物理条件では有限の圧縮率になることがわかります。特に理想気体\(\gamma = 5/3\)のときは\(x = 4\)です。断熱の場合、衝撃波で強く圧縮しようとしても圧力上昇からそこまで圧縮することができず、密度圧縮率が有限の値になります。</p>
+
+<h2 id="衝撃波の発生条件">衝撃波の発生条件</h2>
+
+<h3 id="ガスのエントロピー">ガスのエントロピー</h3>
+
+<p>衝撃波の前後で変化が起こる量としてエントロピーがあります。よってここではガスのエントロピーの導出から行いましょう。<a href="/mhd/energy">エネルギー保存則を求める過程で出現した内部エネルギーが満たす式</a>より</p>
+
+\[\rho \frac{De}{Dt} + \rho P \frac{D}{Dt} \left( \frac{1}{\rho} \right) 
+= -\mathcal{L}\]
+
+<p>これと内部エネルギーが\(e = \frac{P}{(\gamma-1) \rho}\)と書かれることより</p>
+
+\[\frac{\rho}{\gamma-1} \frac{D}{Dt} \left( \frac{P}{\rho}\right) - \frac{P}{\rho} \frac{D\rho}{Dt} 
+= \frac{1}{\gamma-1} \frac{DP}{Dt} - \frac{\gamma}{\gamma-1} \frac{P}{\rho} \frac{D\rho}{Dt} 
+= \frac{\rho^\gamma}{\gamma-1} \left( \rho^{-\gamma} \frac{DP}{Dt} - \gamma \rho^{-\gamma-1} \frac{D\rho}{Dt}\right) 
+= \frac{\rho^\gamma}{\gamma-1} \frac{D}{Dt} \left( \frac{P}{\rho^\gamma}\right) 
+= - \mathcal{L}\]
+
+<p>のように整理されます。さらにこの式は<a href="/mhd/energy">定積熱容量</a>を用いると</p>
+
+\[\rho^gamma \frac{\mu}{k_B} C_V \frac{D}{Dt} \left( \frac{P}{\rho^\gamma} \right) 
+= \rho^gamma \frac{\rho T}{P} C_V \frac{D}{Dt} \left( \frac{P}{\rho^\gamma} \right) 
+= \rho C_V T \frac{D}{Dt} \left( \log \frac{P}{\rho^\gamma} \right) 
+= -\mathcal{L}\]
+
+<p>のようになります。</p>
+
+<h2 id="垂直等温衝撃波">垂直・等温衝撃波</h2>
+
+<p>実際の星間空間では衝撃波で加熱された星間ガスは放射を出し、エネルギーを失って冷却されます。冷却時間が着目している物理現象の時間スケールよりも十分に短い場合には、一度衝撃波により加熱されたとしてもすぐに冷却過程が起こります。このような場合、結果として衝撃波の前後で温度の変化が起こらないと見なすことができます。これを等温衝撃波(isothermal shock)と呼びます。以下では等温衝撃波でのジャンプ条件を求めてみましょう。<br />
+質量保存・運動量保存・エネルギー保存((1), (2), (3)式)に変化はなく、唯一変わるのは音速の式です。等温条件から圧力と音速は</p>
+
+\[P_1 
+= \frac{\rho_1}{\mu m_p} k_B T, \quad P_2 
+= \frac{\rho_2}{\mu m_p} k_B T \ \Longrightarrow \ 
+\frac{P_1}{\rho_1} 
+= \frac{P_2}{\rho_2} 
+= \frac{k_B T}{\mu m_p} 
+= C_s^2\]
+
+<p>のようになります。これは先程までの断熱衝撃波で考えた音速において\(\gamma=1\)とした場合と同じです。よって(6)式から、等温衝撃波では</p>
+
+\[x 
+= y
+= M_1^2 \tag{?}\]
+
+<p>となります。断熱の場合と違い、流体の速度が大きくなればなるほど圧縮率が大きくなります。これは先述の通り、衝撃波で圧縮されても温度が上がらないことから圧力上昇が鈍くなり、いくらでも圧縮できることを表しています。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

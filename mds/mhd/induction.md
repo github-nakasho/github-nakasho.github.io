@@ -185,4 +185,26 @@ $$
 
 このことから、流体の運動が磁力線に変形をもたらすため、(4)式の$$\nabla \times (\mathbf{v} \times \mathbf{B})$$のことを対流項と呼ぶこともあります。
 
+## 数値計算しやすい形に変形
+
+$$\nabla \times (\mathbf{v} \times \mathbf{B})$$の形では見通しが悪いので、[運動量保存則](/mhd/momentum)と同様の形に整えましょう。
+
+$$
+\nabla \times (\mathbf{v} \times \mathbf{B}) 
+= \epsilon_{ijk} \partial_j \epsilon_{k\ell m} v_\ell B_m \mathbf{e}_i 
+= \epsilon_{kij} \epsilon_{k \ell m} \partial_j (v_\ell B_m) \mathbf{e}_i 
+= (\delta_{i\ell} \delta_{jm} - \delta_{im} \delta_{j\ell}) \partial_j (v_\ell B_m) \mathbf{e}_i 
+= \partial_j (v_i B_j - B_i v_j) \mathbf{e}_i 
+= \nabla \cdot (\mathbf{v} \mathbf{B} - \mathbf{B} \mathbf{v})
+$$
+
+より
+
+$$
+\frac{\partial \mathbf{B}}{\partial t} + \nabla \cdot (\mathbf{B} \mathbf{v} - \mathbf{v} \mathbf{B}) 
+= \mathbf{0} \tag{9}
+$$
+
+のようになります。
+
 {% include adsense.html %} 

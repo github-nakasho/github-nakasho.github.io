@@ -1,0 +1,78 @@
+I"7
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#様々な波動" id="markdown-toc-様々な波動">様々な波動</a>    <ol>
+      <li><a href="#基礎方程式" id="markdown-toc-基礎方程式">基礎方程式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="様々な波動">様々な波動</h1>
+
+<p>ここでは基礎方程式を線形化するところから出発し、そこから見えてくる波動を考察していきます。</p>
+
+<h2 id="基礎方程式">基礎方程式</h2>
+
+<p>まずは用いる基礎方程式を列挙します。<a href="/mhd/continuity">連続の式</a></p>
+
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) 
+= 0 \tag{1}\]
+
+<p>次は運動量保存則ではなく、ここでは流体要素の運動方程式を考えます。</p>
+
+\[\rho \left\{ \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} \right\} 
+= - \nabla P + \frac{1}{4\pi} (\nabla \times \mathbf{B}) \times \mathbf{B} - \rho g \mathbf{e}_z - 2\rho \boldsymbol{\Omega} \times \mathbf{v} \tag{2}\]
+
+<p>運動方程式において、\(z\)方向に一様な重力と角速度\(\boldsymbol{\Omega}\)での考慮しました。Coriolis力があるのに遠心力の項がないのは、重力の項にそれを組み込んでいるためです。
+その次はエネルギー方程式です。ここでは断熱な流れを考えます。よって</p>
+
+\[\frac{D}{Dt} \left( \frac{P}{\rho^\gamma} \right) 
+= \frac{1}{\rho^\gamma} \frac{DP}{Dt} - \frac{\gamma P}{\rho^{\gamma+1}} \frac{D\rho}{Dt} 
+= 0 \ \Longrightarrow \ 
+\frac{DP}{Dt} - \frac{\gamma P}{\rho} \frac{D\rho}{Dt} 
+= \left\{\frac{\partial P}{\partial t} + (\mathbf{v} \cdot \nabla) P \right\} - \frac{\gamma P}{\rho} \left\{\frac{\partial \rho}{\partial t} + (\mathbf{v} \cdot \nabla) \rho \right\} 
+= 0 \tag{3}\]
+
+<p>となります。断熱の流れを考えているのは、今後考える波動現象の周期を\(\tau\)としたときに、\(\tau \ll P/\mathcal{L}\)が成り立ち、エネルギー損失による流体のエネルギー変化が無視できるような時間スケールを考えるためです。4つ目は理想磁気流体近似を用いた誘導方程式</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) \tag{4}\]
+
+<p>磁場についてのガウスの法則(磁気モノポールがないことを意味する式)</p>
+
+\[\nabla \cdot \mathbf{B} 
+= 0 \tag{5}\]
+
+<p>そしてAmpereの法則</p>
+
+\[\mathbf{j} 
+= \frac{c}{4\pi} \nabla \times \mathbf{B} \tag{6}\]
+
+<p>最後に理想気体の状態方程式</p>
+
+\[P 
+= \frac{\rho}{\mu m_p} k_B T \ \Longrightarrow \ 
+T = \frac{\mu m_p}{k_B} \frac{P}{\rho} \tag{7}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

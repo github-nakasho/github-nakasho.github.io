@@ -8,6 +8,6 @@ permalink: /quantph
 
 {% include adsense.html %} 
 
-# astro-ph読み
+# quant-ph読み
 
 こちらでは日々更新されるarXivのquant-phの中で、個人的に面白かったと思うものをピックアップして掲載します。

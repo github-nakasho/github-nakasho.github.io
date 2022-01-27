@@ -1,0 +1,336 @@
+I"2�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#はじめに" id="markdown-toc-はじめに">はじめに</a></li>
+  <li><a href="#2021年arxiv総括" id="markdown-toc-2021年arxiv総括">2021年arXiv総括</a>    <ol>
+      <li><a href="#量子アルゴリズム分野" id="markdown-toc-量子アルゴリズム分野">量子アルゴリズム分野</a>        <ol>
+          <li><a href="#quantum-algorithm-for-feynman-loop-integrals" id="markdown-toc-quantum-algorithm-for-feynman-loop-integrals">Quantum algorithm for Feynman loop integrals</a></li>
+          <li><a href="#demonstrating-robust-simulation-of-driven-dissipative-problems-on-near-term-quantum-computers" id="markdown-toc-demonstrating-robust-simulation-of-driven-dissipative-problems-on-near-term-quantum-computers">Demonstrating robust simulation of driven-dissipative problems on near-term quantum computers</a></li>
+          <li><a href="#quantum-rounding" id="markdown-toc-quantum-rounding">Quantum Rounding</a></li>
+          <li><a href="#pricing-multi-asset-derivatives-by-finite-difference-method-on-a-quantum-computer" id="markdown-toc-pricing-multi-asset-derivatives-by-finite-difference-method-on-a-quantum-computer">Pricing multi-asset derivatives by finite difference method on a quantum computer</a></li>
+          <li><a href="#conditions-for-advantageous-quantum-bitcoin-mining" id="markdown-toc-conditions-for-advantageous-quantum-bitcoin-mining">Conditions for Advantageous Quantum Bitcoin Mining</a></li>
+          <li><a href="#quantum-algorithm-for-solving-quadratic-nonlinear-system-of-equations" id="markdown-toc-quantum-algorithm-for-solving-quadratic-nonlinear-system-of-equations">Quantum Algorithm for Solving Quadratic Nonlinear System of Equations</a></li>
+          <li><a href="#quantum-interior-point-methods-for-semidefinite-optimization" id="markdown-toc-quantum-interior-point-methods-for-semidefinite-optimization">Quantum Interior Point Methods for Semidefinite Optimization</a></li>
+          <li><a href="#quantum-signal-processing-qsp-for-simulating-cold-plasma-waves" id="markdown-toc-quantum-signal-processing-qsp-for-simulating-cold-plasma-waves">Quantum Signal Processing (QSP) for simulating cold plasma waves</a></li>
+          <li><a href="#deterministic-grover-search-with-a-restricted-oracle" id="markdown-toc-deterministic-grover-search-with-a-restricted-oracle">Deterministic Grover search with a restricted oracle</a></li>
+        </ol>
+      </li>
+      <li><a href="#量子古典ハイブリッド分野" id="markdown-toc-量子古典ハイブリッド分野">量子古典ハイブリッド分野</a>        <ol>
+          <li><a href="#solving-partial-differential-equations-in-quantum-computers" id="markdown-toc-solving-partial-differential-equations-in-quantum-computers">Solving partial differential equations in quantum computers</a></li>
+          <li><a href="#avoiding-local-minima-in-variational-quantum-algorithms-with-neural-networks" id="markdown-toc-avoiding-local-minima-in-variational-quantum-algorithms-with-neural-networks">Avoiding local minima in Variational Quantum Algorithms with Neural Networks</a></li>
+          <li><a href="#quantum-monte-carlo-simulation-of-many-body-dynamics-with-mitigated-error-on-noisy-quantum-computer" id="markdown-toc-quantum-monte-carlo-simulation-of-many-body-dynamics-with-mitigated-error-on-noisy-quantum-computer">Quantum Monte Carlo simulation of many-body dynamics with mitigated error on noisy quantum computer</a></li>
+          <li><a href="#variational-quantum-optimization-with-multi-basis-encodings" id="markdown-toc-variational-quantum-optimization-with-multi-basis-encodings">Variational Quantum Optimization with Multi-Basis Encodings</a></li>
+          <li><a href="#advancing-hybrid-quantum-classical-algorithms-via-mean-operators" id="markdown-toc-advancing-hybrid-quantum-classical-algorithms-via-mean-operators">Advancing Hybrid Quantum-Classical Algorithms via Mean-Operators</a></li>
+          <li><a href="#an-exponentially-more-efficient-optimization-algorithm-for-noisy-quantum-computers" id="markdown-toc-an-exponentially-more-efficient-optimization-algorithm-for-noisy-quantum-computers">An exponentially more efficient optimization algorithm for noisy quantum computers</a></li>
+          <li><a href="#nisq-hhl-portfolio-optimization-for-near-term-quantum-hardware" id="markdown-toc-nisq-hhl-portfolio-optimization-for-near-term-quantum-hardware">NISQ-HHL: Portfolio Optimization for Near-Term Quantum Hardware</a></li>
+          <li><a href="#variational-hamiltonian-ansatz-for-1d-hubbard-chains-in-a-broad-range-of-parameter-values" id="markdown-toc-variational-hamiltonian-ansatz-for-1d-hubbard-chains-in-a-broad-range-of-parameter-values">Variational Hamiltonian Ansatz for 1D Hubbard chains in a broad range of parameter values</a></li>
+          <li><a href="#observing-ground-state-properties-of-the-fermi-hubbard-model-using-a-scalable-algorithm-on-a-quantum-computer" id="markdown-toc-observing-ground-state-properties-of-the-fermi-hubbard-model-using-a-scalable-algorithm-on-a-quantum-computer">Observing ground-state properties of the Fermi-Hubbard model using a scalable algorithm on a quantum computer</a></li>
+          <li><a href="#markov-chain-monte-carlo-enhanced-variational-quantum-algorithms" id="markdown-toc-markov-chain-monte-carlo-enhanced-variational-quantum-algorithms">Markov Chain Monte-Carlo Enhanced Variational Quantum Algorithms</a></li>
+        </ol>
+      </li>
+      <li><a href="#量子機械学習分野" id="markdown-toc-量子機械学習分野">量子機械学習分野</a>        <ol>
+          <li><a href="#towards-understanding-the-power-of-quantum-kernels-in-the-nisq-era" id="markdown-toc-towards-understanding-the-power-of-quantum-kernels-in-the-nisq-era">Towards understanding the power of quantum kernels in the NISQ era</a></li>
+          <li><a href="#drug-discovery-approaches-using-quantum-machine-learning" id="markdown-toc-drug-discovery-approaches-using-quantum-machine-learning">Drug Discovery Approaches using Quantum Machine Learning</a></li>
+          <li><a href="#a-quantum-convolutional-neutral-network-on-nisq-devices" id="markdown-toc-a-quantum-convolutional-neutral-network-on-nisq-devices">A Quantum Convolutional Neutral Network on NISQ Devices</a></li>
+          <li><a href="#negational-symmetry-of-quantum-neural-networks-for-binary-pattern-classification" id="markdown-toc-negational-symmetry-of-quantum-neural-networks-for-binary-pattern-classification">Negational Symmetry of Quantum Neural Networks for Binary Pattern Classification</a></li>
+          <li><a href="#the-inductive-bias-of-quantum-kernels" id="markdown-toc-the-inductive-bias-of-quantum-kernels">The Inductive Bias of Quantum Kernels</a></li>
+          <li><a href="#the-dilemma-of-quantum-neural-networks" id="markdown-toc-the-dilemma-of-quantum-neural-networks">The dilemma of quantum neural networks</a></li>
+          <li><a href="#qfcnn-quantum-fourier-convolutional-neural-network" id="markdown-toc-qfcnn-quantum-fourier-convolutional-neural-network">QFCNN: Quantum Fourier Convolutional Neural Network</a></li>
+          <li><a href="#quantum-continual-learning-overcoming-catastrophic-forgetting" id="markdown-toc-quantum-continual-learning-overcoming-catastrophic-forgetting">Quantum Continual Learning Overcoming Catastrophic Forgetting</a></li>
+          <li><a href="#quantum-reinforcement-learning-the-maze-problem" id="markdown-toc-quantum-reinforcement-learning-the-maze-problem">Quantum Reinforcement Learning: the Maze problem</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#統計情報" id="markdown-toc-統計情報">統計情報</a>    <ol>
+      <li><a href="#近年の登録推移" id="markdown-toc-近年の登録推移">近年の登録推移</a></li>
+      <li><a href="#今年の月別登録推移" id="markdown-toc-今年の月別登録推移">今年の月別登録推移</a></li>
+    </ol>
+  </li>
+  <li><a href="#結言" id="markdown-toc-結言">結言</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="はじめに">はじめに</h1>
+
+<p>こちらは <a href="https://qiita.com/advent-calendar/2021/quantum">Qiitaさんの量子コンピュータアドベントカレンダー Advent Calendar 2021</a> 23日目の「今年のarXiv/quantphチェックで面白かったものをご紹介」の記事です。<br />
+昨年の4月からquantphのチェックを(可能な限り)毎日行い始めました。そしてそれを記録に残すために<a href="https://twitter.com/tweet_nakasho">Twitterでの情報発信</a>並びに<a href="https://github.com/github-nakasho/quantph/issues">GitHubのリポジトリのIssues</a>に登録する作業を行ってきました。今回は2021年にGitHubにissue登録されているものの中から、個人的に特に面白いと思ったものを抽出します。</p>
+
+<p class="label label-yellow">注意: 量子コンピュータについてはまだまだ門外漢のため、間違った解釈をしているものもあるかもしれません。またここに記載されたものが全てではないことにもご留意ください。</p>
+
+<h1 id="2021年arxiv総括">2021年arXiv総括</h1>
+
+<p>特に面白いと感じたもののみを抽出したつもりですが、たくさんあります。</p>
+
+<h2 id="量子アルゴリズム分野">量子アルゴリズム分野</h2>
+
+<p>量子アルゴリズムタグがついたものは174本ありました。</p>
+
+<h3 id="quantum-algorithm-for-feynman-loop-integrals">Quantum algorithm for Feynman loop integrals</h3>
+
+<p>Feynman loop積分を計算する量子アルゴリズムの考案。Groverのアルゴリズムを効率的に修正したものを用いることで、O(1)の反復回数しか必要としない。<br />
+ピックアップ理由: O(1)の反復回数という強力な手法であることと、Feynman積分の計算の幅が広がることからピックアップしました。<br />
+<a href="https://arxiv.org/abs/2105.08703" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="demonstrating-robust-simulation-of-driven-dissipative-problems-on-near-term-quantum-computers">Demonstrating robust simulation of driven-dissipative problems on near-term quantum computers</h3>
+
+<p>量子力学の難問である駆動散逸多体問題を解くアルゴリズムがエラーに対して本質的にロバストであることを示した。ノイズの多いハードウェア上で、散逸問題をシミュレーションするアルゴリズムが非散逸アルゴリズムを凌駕する結果に。<br />
+<img src="/assets/images/quantph/2021/2021_002.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_003.png" alt="" /><br />
+ピックアップ理由: 散逸問題のシミュレータとして、NISQの可能性の1つを提示したすごい論文と感じました。<br />
+<a href="https://arxiv.org/abs/2108.01183" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-rounding">Quantum Rounding</h3>
+
+<p>有限精度の量子演算精度を向上させる丸め込み手法。複数サンプルを用いることで確率的に丸め誤差を抑制。量子レジスタに格納された固定変数乗算において、同じ量子ビット数で2-3倍のゲート数とdepth削減。ゴールドマンサックスの論文。<br />
+ピックアップ理由: 数値計算などで重要な問題となる丸め誤差、それを量子コンピュータ上で考えるという意欲的な研究であることから選出しました。<br />
+<a href="https://arxiv.org/abs/2108.05949" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="pricing-multi-asset-derivatives-by-finite-difference-method-on-a-quantum-computer">Pricing multi-asset derivatives by finite difference method on a quantum computer</h3>
+
+<p>ブラック・ショールズ偏微分方程式を有限差分法で解く量子アルゴリズムの提案。量子線形系アルゴリズムに基づいて微分方程式を解くための量子アルゴリズムを利用しており、次元に対して指数関数的な高速化を達成。大阪大とメルカリの論文。<br />
+ピックアップ理由: 金融工学の基礎となる方程式を解く量子アルゴリズムの考案したもの。しかも指数関数的な高速化を達成しており、今後の量子コンピュータ金融計算に拍車をかける論文としてピックアップしました。<br />
+<a href="https://arxiv.org/abs/2109.12896" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="conditions-for-advantageous-quantum-bitcoin-mining">Conditions for Advantageous Quantum Bitcoin Mining</h3>
+
+<p>量子コンピュータを用いたビットコインマイニング。Q&lt;Crbの場合に量子採掘が古典より効率的になると判明(Q: Groverの反復コスト, C: 古典ハッシュコスト, r:1秒間に行うGrover反復回数, b: 最適なマイニング手順を用いた場合に最大となる定数)<br />
+ピックアップ理由: 最近流行りのビットコイン。現在そのマイニングはGPUなどを用いた並列計算が主流となっていますが、これを量子コンピュータでやろうとしたもの。その話題性からピックアップしました。<br />
+<a href="Conditions for Advantageous Quantum Bitcoin Mining" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-algorithm-for-solving-quadratic-nonlinear-system-of-equations">Quantum Algorithm for Solving Quadratic Nonlinear System of Equations</h3>
+
+<p>n次元の2次非線形方程式を解く量子アルゴリズム。ホモトピー摂動法と線形化手法を用いて有限次元の線型方程式に埋め込み、量子線形系ソルバーを用いてこれを解き、元の非線形方程式の規格化された厳密解に誤差ε, 成功確率Ω(1)で得る。<br />
+ピックアップ理由: 量子コンピュータでここまで複雑な計算ができるようになるとは、という驚きも含めて選出しました。成功確率がちゃんと1のオーダーになることも理由の1つです。<br />
+<a href="https://arxiv.org/abs/2112.01655" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-interior-point-methods-for-semidefinite-optimization">Quantum Interior Point Methods for Semidefinite Optimization</h3>
+
+<p>半正定値最適化問題に対する2つの量子内点法を提案。1. 古典に近い解法で、探索方向が不正確かつ実行可能解のみの探索が保証されない。2. ニュートン線形系のゼロ空間表現を用いて、不正確な探索方向でも実行可能であることを保証する手法。<br />
+ピックアップ理由: 連続最適化のアルゴリズムとして知られる内点法の量子バージョンを考案した論文。私自身が最適化に執心していることもあり選びました(量子古典ハイブリッドタグとも迷いましたが、量子アルゴリズムタグでの選出となりました)。<br />
+<a href="https://arxiv.org/abs/2112.06025" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-signal-processing-qsp-for-simulating-cold-plasma-waves">Quantum Signal Processing (QSP) for simulating cold plasma waves</h3>
+
+<p>冷たいプラズマ中の波、特に非一様な1次元プラズマ中を伝搬するX波について計算する量子アルゴリズムを考案。量子回路エミュレータを用いて計算したところ、従来の古典計算と一致する結果を得た。量子回路でプラズマ計算…めっちゃ気になる！<br />
+<img src="/assets/images/quantph/2021/2021_005.png" alt="" /><br />
+ピックアップ理由: 大学院時代にプラズマ物理を少し学んだことがある経緯から、とても面白そうに見えた論文。今後これが発展し、核融合プラズマを量子コンピュータで計算するような時代がもうすぐそこまで来ているかも？<br />
+<a href="https://arxiv.org/abs/2112.06086" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="deterministic-grover-search-with-a-restricted-oracle">Deterministic Grover search with a restricted oracle</h3>
+
+<p>Groverのアルゴリズムにおいて、量子探索オラクルをユーザが制御することなく正しい結果を確実に返すように改良。オリジナルのGrover探索での最適なステップ回数と比較して、1回以上の追加反復で100%の成功率を達成。<br />
+ピックアップ理由: Groverをさらに高速化したもの。1回以上の追加反復、という強力さから選出しました。<br />
+<a href="https://arxiv.org/abs/2201.00091" class="btn btn-purple">ArXiv</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="量子古典ハイブリッド分野">量子古典ハイブリッド分野</h2>
+
+<p>量子古典ハイブリッドタグがついたものは168本でした。</p>
+
+<h3 id="solving-partial-differential-equations-in-quantum-computers">Solving partial differential equations in quantum computers</h3>
+
+<p>偏微分方程式を解くための変分量子アルゴリズムの考案。対称性のある滑らかな関数を表現するための変分回路をansatzとして実装し、古典optimizerと組み合わせる。論文では1次元調和振動子を3量子ビットで10^-5誤差で計算できたと報告。<br />
+<img src="/assets/images/quantph/2021/2021_008.png" alt="" /><br />
+ピックアップ理由: NISQを用いた数値計算の幅が広がる研究として選出しました。<br />
+<a href="https://arxiv.org/abs/2104.02668" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="avoiding-local-minima-in-variational-quantum-algorithms-with-neural-networks">Avoiding local minima in Variational Quantum Algorithms with Neural Networks</h3>
+
+<p>量子回路から古典ニューラルネットワークにアウトプットすることで、変分量子回路最適化のための勾配ベースアプローチを改善する手法。コスト関数の概形自体を修正することで局所解を回避することができる。<br />
+<img src="/assets/images/quantph/2021/2021_009.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_010.png" alt="" /><br />
+ピックアップ理由: その組合せを上手に用いた改善研究に脱帽しました。量子アニーリングでも同様のことができるのか？とか他にも発展させることができそうです。<br />
+<a href="https://arxiv.org/abs/2104.02955" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-monte-carlo-simulation-of-many-body-dynamics-with-mitigated-error-on-noisy-quantum-computer">Quantum Monte Carlo simulation of many-body dynamics with mitigated error on noisy quantum computer</h3>
+
+<p>量子モンテカルロ法をNISQで高速化するための新アルゴリズム。Fault-tolerant量子コンピュータ上でのアルゴリズムの複雑性は従来のものと同じ多項式、NISQでは誤差軽減をするこのアルゴリズムにより、モンテカルロ法の符号問題を緩和できる。<br />
+<img src="/assets/images/quantph/2021/2021_015.png" alt="" /><br />
+ピックアップ理由: 量子モンテカルロ法で必ず壁となる不符号問題の解決の糸口となるかもしれない、その重要性から選出しました。<br />
+<a href="https://arxiv.org/abs/2106.09880" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="variational-quantum-optimization-with-multi-basis-encodings">Variational Quantum Optimization with Multi-Basis Encodings</h3>
+
+<p>多基底グラフエンコーディングと非線形活性関数を用いることで、非常に回路depthが浅くても既存手法を凌駕する変分量子アルゴリズムの開発。1つのGPUで512頂点(量子ビット)の高連結MaxCut問題を最適化することに成功。NVIDIAなどの研究。<br />
+<img src="/assets/images/quantph/2021/2021_017.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_018.png" alt="" /><br />
+ピックアップ理由: 回路のdepthを大幅に削減した画期的な手法。最近、量子関連でNVIDIAを見かけることも多くなってきました。<br />
+<a href="https://arxiv.org/abs/2106.13304" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="advancing-hybrid-quantum-classical-algorithms-via-mean-operators">Advancing Hybrid Quantum-Classical Algorithms via Mean-Operators</h3>
+
+<p>量子多体系のエンタングルメント計算に必要となる量子ビット・量子演算の膨大な数を解消するためにハイブリッドアルゴリズムと物性物理の平均場理論を組合せた手法。平均演算子により多体状態を準備するための量子演算回数を大幅に減少させた<br />
+<img src="/assets/images/quantph/2021/2021_020.png" alt="" /><br />
+ピックアップ理由: 物性・統計物理の平均場をNISQアルゴリズムに組合わせるという斬新な手法。これからもこのような物理に触発された素晴らしいアルゴリズムの誕生に期待を込めて選出しました。<br />
+<a href="https://arxiv.org/abs/2107.07527" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="an-exponentially-more-efficient-optimization-algorithm-for-noisy-quantum-computers">An exponentially more efficient optimization algorithm for noisy quantum computers</h3>
+
+<p>QAOAに比べて指数関数的に少ない量子ビット数でありながら、MaxCut問題を解くのに必要な量子演算数を大幅に削減した新しい量子最適化アルゴリズム。32ノードグラフを5量子ビットで、グラフ分割などの前処理なしに解くことができた。<br />
+ピックアップ理由: 最適化問題を量子回路で解くQAOAより超効率的な解法。今後の発展や応用に期待を込めて選びました。<br />
+<a href="https://arxiv.org/abs/2110.10788" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="nisq-hhl-portfolio-optimization-for-near-term-quantum-hardware">NISQ-HHL: Portfolio Optimization for Near-Term Quantum Hardware</h3>
+
+<p>NISQで小規模なportfolio最適化問題をend-to-endで実行するハイブリッドHHL, NISQ-HHL. これまでのハイブリッドHHLを拡張して量子ハードウェアの新機能である回路途中の測定・量子条件論理(QCL)・量子ビットリセット・再利用を用いている。<br />
+<img src="/assets/images/quantph/2021/2021_023.png" alt="" /><br />
+ピックアップ理由: 小規模ながら着実にNISQの応用が広がっていることから選出しました。最近の機能を積極的に用いているというのもポイントが高い。<br />
+<a href="https://arxiv.org/abs/2110.15958" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="variational-hamiltonian-ansatz-for-1d-hubbard-chains-in-a-broad-range-of-parameter-values">Variational Hamiltonian Ansatz for 1D Hubbard chains in a broad range of parameter values</h3>
+
+<p>1次元Hubbard鎖の物理は変分ハミルトニアンアンザッツ(VHA)によってどの程度記述できるかを調べた。低fidelityの解でもエネルギーや2重占有サイトの数をよく捉えることができるが、スピン-スピン相関は高fidelityでもあまり捉えられないと判明<br />
+ピックアップ理由: NISQでの量子古典ハイブリッドアルゴリズムではFidelityだけでなく、他の関係量なども考えなければならないことを示したもの。今後のNISQアルゴリズム開発の重要な指針になることからピックアップしました。<br />
+<a href="https://arxiv.org/abs/2111.11996" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="observing-ground-state-properties-of-the-fermi-hubbard-model-using-a-scalable-algorithm-on-a-quantum-computer">Observing ground-state properties of the Fermi-Hubbard model using a scalable algorithm on a quantum computer</h3>
+
+<p>効率的でパラメータ数の少ない低depthの変分量子アルゴリズムが、Fermi-Hubbardモデルの中規模サイズのインスタンスの重要な性質を再現できることを実験的に示した。これは古典で解くことができる1次元のインスタンスを凌駕。Googleなどの研究 
+<img src="/assets/images/quantph/2021/2021_024.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_025.png" alt="" /><br />
+ピックアップ理由: こちらは対照的にNISQの可能性を感じさせる論文。今後も難しい問題が量子コンピュータで解かれていってほしいという期待から選びました。<br />
+<a href="https://arxiv.org/abs/2112.02025" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="markov-chain-monte-carlo-enhanced-variational-quantum-algorithms">Markov Chain Monte-Carlo Enhanced Variational Quantum Algorithms</h3>
+
+<p>古典MCMCを用いて大域最適解に確実に収束する変分量子アルゴリズム。このアルゴリズムの状態空間のエルゴード性から性能が保証されており、時間複雑性が解析的に分かる。MaxCutを用いて実際にこの手法の有効性を検証した。IBMなどの研究。<br />
+<img src="/assets/images/quantph/2021/2021_026.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_027.png" alt="" /><br />
+ピックアップ理由: 大域最適解に確実に収束するという強力性から選びました。<br />
+<a href="https://arxiv.org/abs/2112.02190" class="btn btn-purple">ArXiv</a></p>
+
+<h2 id="量子機械学習分野">量子機械学習分野</h2>
+
+<p>量子機械学習タグがついたものは???本でした。</p>
+
+<h3 id="towards-understanding-the-power-of-quantum-kernels-in-the-nisq-era">Towards understanding the power of quantum kernels in the NISQ era</h3>
+
+<p>量子機械学習における量子カーネルがエラーの多いNISQでも有効かどうか調査。データセットが大きい・測定回数が少ない・システムノイズが大きい場合、量子カーネルの優位性が失われると判明。<br />
+ピックアップ理由: 「結局のところfault tolerant量子コンピュータができないと量子機械学習も機能しないんだな」と再考させられる論文です。<br />
+<a href="https://arxiv.org/abs/2103.16774" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="drug-discovery-approaches-using-quantum-machine-learning">Drug Discovery Approaches using Quantum Machine Learning</h3>
+
+<p>GAN, CNN, 変分auto-encoder(VAE)などの量子機械学習を用いて低分子医薬品の生成・タンパク質の結合ポケット分類・大型医薬品の生成を目指した論文。<br />
+<img src="/assets/images/quantph/2021/2021_028.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_029.png" alt="" /><br />
+ピックアップ理由: 量子機械学習から創薬を目指したもの。量子機械学習の産業応用を加速させそうな論文です。<br />
+<a href="https://arxiv.org/abs/2104.00746" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="a-quantum-convolutional-neutral-network-on-nisq-devices">A Quantum Convolutional Neutral Network on NISQ Devices</h3>
+
+<p>NISQデバイスで、古典よりも計算複雑性を大幅に削減した量子畳み込みニューラルネットワーク(QCNN)。画像認識においてある種のノイズに対して安定で、必要なパラメータが入力サイズに依存しないため、NISQで有効。<br />
+<img src="/assets/images/quantph/2021/2021_031.png" alt="" /><br />
+ピックアップ理由: 量子畳み込みニューラルネットワークをNISQでも実行できるように改良したもの。ますます量子機械学習が身近なものになりました。<br />
+<a href="https://arxiv.org/abs/2104.06918" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="negational-symmetry-of-quantum-neural-networks-for-binary-pattern-classification">Negational Symmetry of Quantum Neural Networks for Binary Pattern Classification</h3>
+
+<p>量子バイナリ分類と量子表現学習におけるQNN(量子neural network)の特性を研究。QNNは2値分類において、量子2値信号とその否定的対応物を区別できないと判明。論文ではこれを否定的対称性と呼んでいる。<br />
+<img src="/assets/images/quantph/2021/2021_032.png" alt="" /><br />
+ピックアップ理由: 量子機械学習が万能ではないことを例から示したもの。これにより量子機械学習の誇大広告が抹消されることを祈ります。<br />
+<a href="https://arxiv.org/abs/2105.09580" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="the-inductive-bias-of-quantum-kernels">The Inductive Bias of Quantum Kernels</h3>
+
+<p>低次元かつ古典的には計算困難な関数を含む再生カーネルヒルベルト空間(RKHS)ならば、量子機械学習が有利になると判明。量子機械学習モデルが高速化できるのは問題に関する知識を量子回路にエンコードできた場合のみ。<br />
+ピックアップ理由: 量子機械学習が有利になる場面が限定的であることを示したもの。結局のところ、問題に関する知識が必要で、それをさらに量子回路に落とし込まなければいけないというエンジニアリング力は必要。<br />
+<a href="https://arxiv.org/abs/2106.03747" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="the-dilemma-of-quantum-neural-networks">The dilemma of quantum neural networks</h3>
+
+<p>実験の結果、現在の量子ニューラルネットワーク(QNN)が古典学習モデルに比べて何の利点ももたらさないことが経験的に観察された。有効なモデル容量が限られることと、QNNの学習可能性が正則化テクニックの影響を受けないことが要因と推察。<br />
+<img src="/assets/images/quantph/2021/2021_033.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_034.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_035.png" alt="" /><br />
+ピックアップ理由: 量子機械学習はまだ発展途上の研究分野であることを示した論文。今後の理論展開に期待です。<br />
+<a href="https://arxiv.org/abs/2106.04975" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="qfcnn-quantum-fourier-convolutional-neural-network">QFCNN: Quantum Fourier Convolutional Neural Network</h3>
+
+<p>新しい量子・古典ハイブリッド回路である量子フーリエ畳み込みネットワーク(QFCNN)の提案。古典CNNに比べて理論的に指数関数的な高速化を達成、既存のQCNNの最良の結果を上回った。ふえぇ…すごいよぉ<br />
+<img src="/assets/images/quantph/2021/2021_036.png" alt="" /><br />
+<img src="/assets/images/quantph/2021/2021_037.png" alt="" /><br />
+ピックアップ理由: 今後の量子機械学習研究に拍車をかけそうなすごい論文です。ちゃんと理解したい。<br />
+<a href="https://arxiv.org/abs/2106.10421" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-continual-learning-overcoming-catastrophic-forgetting">Quantum Continual Learning Overcoming Catastrophic Forgetting</h3>
+
+<p>量子機械学習(QML)におけるcatastrophic forgetting(新しいタスクの学習過程の後に以前の学習タスクの知識を忘れてしまうこと)を研究。古典と同様にQMLでも同様の忘却問題が起こることが判明。<br />
+ピックアップ理由: ノイズの影響云々ではなく、単純に量子機械学習の構造的欠陥を指摘したもの。今後、古典機械学習と同様にこれに対する改善策がさらに出てくることを望みます。<br />
+<a href="https://arxiv.org/abs/2108.02786" class="btn btn-purple">ArXiv</a></p>
+
+<h3 id="quantum-reinforcement-learning-the-maze-problem">Quantum Reinforcement Learning: the Maze problem</h3>
+
+<p>古典的な強化学習の概念の量子版である、量子強化学習(Quantum Reinforcement Learning; QRL)の提案。QRLと古典深層ニューラルネットワークを組み合わせて迷路を解かせたところ、エージェントは古典と量子領域の両方で最適な戦略を学習した。<br />
+<img src="/assets/images/quantph/2021/2021_039.png" alt="" /><br />
+ピックアップ理由: AIが囲碁で人間に勝利したことで注目を集めた強化学習、その量子版。今後の効率化や次世代NISQの主要アルゴリズムとして注目を集めそうなことから選びました。<br />
+<a href="https://arxiv.org/abs/2108.04490" class="btn btn-purple">ArXiv</a></p>
+
+<p>###</p>
+
+<p>{}<br />
+<img src="/assets/images/quantph/2021/2021_???.png" alt="" /><br />
+ピックアップ理由: {}<br />
+<a href="" class="btn btn-purple">ArXiv</a></p>
+
+<p>###</p>
+
+<p>{}<br />
+<img src="/assets/images/quantph/2021/2021_???.png" alt="" /><br />
+ピックアップ理由: {}<br />
+<a href="" class="btn btn-purple">ArXiv</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="統計情報">統計情報</h1>
+
+<p>以下にarXiv/quant-phの登録論文推移を示します。</p>
+
+<h2 id="近年の登録推移">近年の登録推移</h2>
+
+<p><img src="/assets/images/quantph/2021/stat_001.png" alt="" /></p>
+
+<h2 id="今年の月別登録推移">今年の月別登録推移</h2>
+
+<p><img src="/assets/images/quantph/2021/stat_002.png" alt="" /></p>
+
+<h1 id="結言">結言</h1>
+
+<p>2021年はプライベートの忙しさや体調不良などを除いて、毎日arXiv/quant-phのabstractをチェックすることができました。もちろんここに挙げたものだけが全てではありません。私が見逃したものも含めて、もし今年発表された論文で面白いものがございましたら、お教えいただけると助かります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

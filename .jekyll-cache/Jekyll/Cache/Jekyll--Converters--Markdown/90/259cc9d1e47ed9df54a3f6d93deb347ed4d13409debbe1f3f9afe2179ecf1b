@@ -1,0 +1,76 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#アルヴェーン波" id="markdown-toc-アルヴェーン波">アルヴェーン波</a>    <ol>
+      <li><a href="#直感的導出" id="markdown-toc-直感的導出">直感的導出</a>        <ol>
+          <li><a href="#横波" id="markdown-toc-横波">横波</a></li>
+          <li><a href="#縦波" id="markdown-toc-縦波">縦波</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="アルヴェーン波">アルヴェーン波</h1>
+
+<h2 id="直感的導出">直感的導出</h2>
+
+<h3 id="横波">横波</h3>
+
+<p>磁気流体には磁気張力\(B^2/(4\pi)\)が働きます。張力\(T\)が働く線密度\(\rho\)のゴム紐では、横波が位相速度\(v = \sqrt{T/\rho}\)で伝播することからの類推により、磁気流体中を磁場に沿って位相速度</p>
+
+\[v_A 
+= \frac{B}{\sqrt{4\pi \rho}} \tag{1}\]
+
+<p>で伝播する横浪が存在すると考えられます。この速度をAlfvén速度と呼びます。具体的に宇宙物理で用いられる値を使うと</p>
+
+\[v_A 
+= 2.8 \times 10^5 \left( \frac{B}{1\mu \mathrm{G}}\right) \left( \frac{n}{1 \mathrm{cm}^{-3}}\right) \ [\mathrm{cm/s}] \tag{2}\]
+
+<p>のようになります。銀河団プラズマの典型的な値から、銀河団プラズマでは\(v_A \sim 3 \mathrm{km/s}\)となります。</p>
+
+<h3 id="縦波">縦波</h3>
+
+<p>同様に、磁気流体中には磁気圧\(P_m = B^2 / (8\pi)\)も働きます。磁気圧により復元力が生まれ、<a href="/mhd/soud_wave">音波のような縦波</a>が発生することも考えられます。ただし断熱流体の条件\(P/\rho^\gamma = \mathrm{const}\)の\(\gamma\)は、今の場合には<a href="/mhd/induction">磁束保存</a>より</p>
+
+\[\frac{B}{\rho} = \mathrm{const} \ \Longrightarrow \ 
+\frac{P_m}{\rho^2} = \mathrm{const} \tag{3}\]
+
+<p>のようになるため、磁気圧しか働かないような流体は\(\gamma=2\)と見なすことができます。このことから、この波動の位相速度は</p>
+
+\[\sqrt{\frac{2P_m}{\rho}} 
+= \frac{B}{\sqrt{4\pi \rho}} \tag{4}\]
+
+<p>となり、やはりAlfvén速度に一致します。以上の議論から、磁気流体中で磁場を起源として伝播する波には横波と縦波の2つが存在することがわかります。それらの波のイメージを下図に示します。</p>
+
+<p><img src="/assets/images/mhd/alfven_wave_001.png" alt="" /></p>
+
+<p>##</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

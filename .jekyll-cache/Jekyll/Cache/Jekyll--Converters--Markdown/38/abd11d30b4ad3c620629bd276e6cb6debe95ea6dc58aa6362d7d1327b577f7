@@ -1,0 +1,77 @@
+I"]
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ねじれアルヴェーン波" id="markdown-toc-ねじれアルヴェーン波">ねじれアルヴェーン波</a>    <ol>
+      <li><a href="#基礎方程式" id="markdown-toc-基礎方程式">基礎方程式</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ねじれアルヴェーン波">ねじれアルヴェーン波</h1>
+
+<p>普通の有限振幅の波動は時間とともにその形が崩れ、最終的には衝撃波となることが多いです。しかし、有限振幅のAlfvén波はそのままの形で伝播していくことができます。ここでは有限振幅の円偏光Alfvén波(torsional Alfvén wave)がどのような方程式を満たすかを考察しましょう。</p>
+
+<h2 id="基礎方程式">基礎方程式</h2>
+
+<p>以下、外力や粘性等を無視できるような系を考えます。また磁場が支配的であるとして圧力も無視します。するとこの系の流体要素の運動方程式は</p>
+
+\[\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} 
+= - \frac{1}{\rho} \nabla \left( \frac{B^2}{8\pi} \right) + \frac{1}{4 \pi \rho} (\mathbf{B} \cdot \nabla) \mathbf{B} \tag{1}\]
+
+<p>最初、磁場は一様磁場\(\mathbf{B}_0 = B_0 \mathbf{e}_z\)で、流体は静止していたとします。ここに円偏光Alfvén波となるような有限の大きさの摂動を加えます。</p>
+
+\[\mathbf{B} 
+= B_0 \mathbf{e}_z + B_\perp (t, z) \mathbf{e}_+ \tag{2}\]
+
+<p>(2)式のように\(\mathbf{B}_0\)に垂直な方向に\(B_\perp\)が加わったとします。ここで\(\mathbf{e}_+\)は<a href="/astroelec/polarization">ヘリシティが正の偏光ベクトル</a>で</p>
+
+\[\mathbf{e}_+ 
+= \frac{1}{\sqrt{2}} (\mathbf{e}_x + i \mathbf{e}_y) \tag{3}\]
+
+<p>です。</p>
+
+<p class="label label-yellow">注意: プラズマ業界ではヘリシティが正のものを右回りと呼びますが、光学業界ではこれを左回りと呼びます。定義に注意しましょう。</p>
+
+<p>ここで理想磁気流体の状況を考えて、<a href="/mhd/induction">流体は磁場に凍結している</a>とすると</p>
+
+\[\mathbf{v} (t, z) 
+= \mathbf{v}_\perp 
+= v_\perp(t, z) \mathbf{e}_+ \tag{4}\]
+
+<p>のようになります。誘導方程式</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B})\]
+
+<p>から</p>
+
+\[\frac{\partial \mathbf{B}_\perp}{\partial t}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”<br />
+[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

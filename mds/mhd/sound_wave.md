@@ -222,7 +222,7 @@ $$
 
 $$
 \omega^2 \mathbf{v}_1 
-= C_s^2 \mathbf{k} (\mathbf{k} \cdot \mathbf{v}_1) + i (\gamma-1) g (\mathbf{k} \cdot \mathbf{v}_1) \mathbf{e}_z + ig v_{1z} \mathbf{k} - 2i\omega \boldsymbol{\Omega} \times \mathbf{v}_1 + \frac{1}{4\pi \rho_0} [\mathbf{k} \times \{ \mathbf{k} \times (\mathbf{v}_1 \times \mathbf{B})\}] \times \mathbf{B}_0 \tag{20}
+= C_s^2 \mathbf{k} (\mathbf{k} \cdot \mathbf{v}_1) + i (\gamma-1) g (\mathbf{k} \cdot \mathbf{v}_1) \mathbf{e}_z + ig v_{1z} \mathbf{k} - 2i\omega \boldsymbol{\Omega} \times \mathbf{v}_1 + \frac{1}{4\pi \rho_0} [\mathbf{k} \times \{ \mathbf{k} \times (\mathbf{v}_1 \times \mathbf{B}_0)\}] \times \mathbf{B}_0 \tag{20}
 $$
 
 となります。これは$$\mathbf{v}_1$$の固有値方程式なので、$$\mathbf{v}_1 \neq \mathbf{0}$$となる場合を考えて解けば良いでしょう。すると$$\omega = \omega(\mathbf{k})$$の形の方程式が得られます。これを分散関係式(dispersion relation)と呼びます。(20)式は一般的な形なので、解くのは非常に困難です。よって今後は特定の条件下で(20)式を解くことを考えます。

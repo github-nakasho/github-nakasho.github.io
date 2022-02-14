@@ -1,0 +1,64 @@
+I"�
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#慣性波-inertial-waves" id="markdown-toc-慣性波-inertial-waves">慣性波 (inertial waves)</a>    <ol>
+      <li><a href="#直感的な導出" id="markdown-toc-直感的な導出">直感的な導出</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="慣性波-inertial-waves">慣性波 (inertial waves)</h1>
+
+<h2 id="直感的な導出">直感的な導出</h2>
+
+<p>線形化された流体の運動方程式から、回転によって生じるコリオリ力の項のみを考えてみましょう。</p>
+
+\[\frac{\partial \mathbf{v}_1}{\partial t} 
+= - 2 \boldsymbol{\Omega} \times \mathbf{v}_1 \tag{1}\]
+
+<p>さらに角速度ベクトルは\(z\)成分しか持たないとします。すなわち\(\boldsymbol{\Omega} = \Omega \mathbf{e}_z\)と考えると</p>
+
+\[\frac{\partial v_{1x}}{\partial t} = 2 \Omega v_{1y}, \quad 
+\frac{\partial v_{1y}}{\partial t} = -2 \Omega v_{1x} \tag{2}\]
+
+<p>となり、この連立微分方程式の解は</p>
+
+\[v_{1x} 
+= A \cos (kz-2\Omega t), \quad 
+v_{1y}
+= A \sin (kz - 2\Omega t) \tag{3}\]
+
+<p>のような波動解とわかります。これを慣性波(inertial waves)と呼びます。この波動を生み出す復元力はコリオリ力であり、コリオリ力は流体要素に\(xy\)平面内を円運動させるような加速度を生み出します。結果として、回転軸と平行に角速度\(2\Omega\)の波動が伝播していきます。</p>
+
+<p>##</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”<br />
+[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”<br />
+[3] 福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

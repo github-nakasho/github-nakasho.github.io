@@ -228,10 +228,13 @@ $$
 ここで$$\mathbf{B}_0 = \boldsymbol{\Omega} = \mathbf{0}$$とします。(14)式において両辺$$\mathbf{k}$$との内積をとったものを考えると
 
 $$
-\omega^2 (\mathbf{v}_1 \cdot \mathbf{k}) 
-= C_s^2 k^2 (\mathbf{k} \cdot \mathbf{v}_1) + i (\gamma-1) g (\mathbf{k} \cdot \mathbf{v}_1) k_z + ig k^2 v_{1z} \ \Longrightarrow \ 
+\begin{align}
+&\omega^2 (\mathbf{v}_1 \cdot \mathbf{k}) 
+= C_s^2 k^2 (\mathbf{k} \cdot \mathbf{v}_1) + i (\gamma-1) g (\mathbf{k} \cdot \mathbf{v}_1) k_z + ig k^2 v_{1z} \notag \\
+&\Longrightarrow \ 
 i g k^2 v_{1z} 
 = (\mathbf{k} \cdot \mathbf{v}_1) \{ \omega^2 - C_s^2 k^2 - i(\gamma-1) g k_z\} \tag{15}
+\end{align}
 $$
 
 そして(14)式において両辺$$\mathbf{e}_z$$との内積をとったものを考えると

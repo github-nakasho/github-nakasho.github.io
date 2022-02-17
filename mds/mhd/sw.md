@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sweet-Parker reconnection
+title: スウィート・パーカーの磁気リコネクション
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/sw
@@ -20,7 +20,7 @@ nav_order: 9
 
 {% include adsense.html %} 
 
-# スウィート・パーカーの磁気リコネクション
+# スウィート・パーカーの磁気リコネクション (Sweet-Parker reconnection)
 
 以下の図のように、反平行に並んでいる磁力線がinflowによって接近し、リコネクション(磁力線のつなぎ変え)が発生していると考えましょう。
 

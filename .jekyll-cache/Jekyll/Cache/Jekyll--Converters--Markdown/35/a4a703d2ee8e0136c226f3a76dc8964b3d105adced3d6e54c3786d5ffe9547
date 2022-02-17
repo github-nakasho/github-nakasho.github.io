@@ -1,0 +1,88 @@
+I"!
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気流体慣性波-magnetohydrodynamic-inertial-waves" id="markdown-toc-磁気流体慣性波-magnetohydrodynamic-inertial-waves">磁気流体慣性波 (Magnetohydrodynamic inertial waves)</a>    <ol>
+      <li><a href="#omega_a--omega_i-gg-1の場合" id="markdown-toc-omega_a--omega_i-gg-1の場合">\(\omega_A / \omega_I \gg 1\)の場合</a></li>
+      <li><a href="#omega_a--omega_i-ll-1の場合" id="markdown-toc-omega_a--omega_i-ll-1の場合">\(\omega_A / \omega_I \ll 1\)の場合</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気流体慣性波-magnetohydrodynamic-inertial-waves">磁気流体慣性波 (Magnetohydrodynamic inertial waves)</h1>
+
+<p><a href="/mhd/inertial">慣性波の導出</a>では重力と磁場を無視し、流体も非圧縮としました。ここでは磁場の影響も考慮した場合に、どのような波動が伝播するかを考察しましょう。<a href="/mhd/sound_wave">音波の導出部分で用いた(20)式</a>において\(g = \mathbf{k} \cdot \mathbf{v}_1 = 0\)とすると</p>
+
+\[\omega^2 \mathbf{v}_1 
+= -2i\omega \boldsymbol{\Omega} \times \mathbf{v}_1 + v_A^2 [(\mathbf{k} \cdot \hat{\mathbf{B}}_0) \{(\mathbf{k} \cdot \hat{\mathbf{B}}_0) \mathbf{v}_1 - (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0) \mathbf{k}\}]\]
+
+<p>です。ここで\(v_A = B_0 / \sqrt{4\pi \rho_0}\)は<a href="/mhd/alfven_wave">Alfvén速度</a>です。両辺において\(\mathbf{k}\)との外積を取ると</p>
+
+\[\omega^2 \mathbf{k} \times \mathbf{v}_1 
+= -2 i \omega \mathbf{k} \times (\boldsymbol{\Omega} \times \mathbf{v}_1) + \underbrace{v_A^2 (\mathbf{k} \cdot \hat{\mathbf{B}}_0)^2}_{\equiv \omega_A^2} \mathbf{k} \times \mathbf{v}_1 
+= -2i \omega \{ \underbrace{(\mathbf{k} \cdot \mathbf{v}_1)}_{=0} \boldsymbol{\Omega} - (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\} + \omega_A^2 \mathbf{k} \times \mathbf{v}_1\]
+
+<p>と計算できるので、整理すると</p>
+
+\[(\omega^2 - \omega_A^2) \mathbf{k} \times \mathbf{v}_1 
+= 2i \omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\]
+
+<p>この両辺の大きさを取ると\(\mathbf{k} \cdot \mathbf{v}_1=0\)から\(\\| \mathbf{k} \times \mathbf{v}_1\\| = k v_1\)と書けるので</p>
+
+\[(\omega^2 - \omega^2_A) kv_1 
+= \pm 2 \omega (\mathbf{k} \cdot \boldsymbol{\Omega}) v_1 \ \Longrightarrow \ 
+\omega^2 \mp \omega_I \omega - \omega_A^2 
+= 0 \tag{1}\]
+
+<p>ここで\(\omega_I \equiv 2 (\mathbf{k} \cdot \boldsymbol{\Omega}) / k\)は<a href="/mhd/inertial">慣性波の振動数</a>です。(1)式の2次関数を解くにあたり、\(\omega_A, \omega_I\)の大きさで場合分けします。この2つの比は、\(\mathbf{k}, \boldsymbol{\Omega}, \mathbf{B}_0\)が平行なとき</p>
+
+\[\frac{\omega_A}{\omega_I} 
+= \frac{v_A k}{2k\Omega/ k} 
+= \frac{v_A k}{2 \Omega} \tag{2}\]
+
+<h2 id="omega_a--omega_i-gg-1の場合">\(\omega_A / \omega_I \gg 1\)の場合</h2>
+
+<p>太陽の場合、磁場がとても強く\(\omega_A / \omega_I \gg 1\)(磁場が支配的)であることが知られています。すると(1)式の解は</p>
+
+\[\omega^2 
+= \omega_A^2 \left( 1 \pm \frac{\omega_I}{\omega_A} \frac{\omega}{\omega_A} \right) 
+\underbrace{\simeq}_{\omega \simeq \omega_A} \omega_A^2 \left( 1\pm \frac{\omega_I}{\omega_A} \right) \tag{3}\]
+
+<p>のようになります。これはCoriolis力によってAlfvén波のモードがわずかに2つに分裂することを意味します。</p>
+
+<h2 id="omega_a--omega_i-ll-1の場合">\(\omega_A / \omega_I \ll 1\)の場合</h2>
+
+<p>今度は銀河円盤のように\(\omega_A / \omega_I \ll 1\)(回転が支配的)の場合を考えましょう。すると(1)式の解は</p>
+
+\[\omega 
+= \frac{\pm \omega_I \pm \sqrt{\omega_I^2 + 4\omega_A^2}}{2} 
+= \frac{\pm \omega_I \pm \omega_I \sqrt{1 + 4\omega_A^2/\omega_I^2}}{2} 
+\simeq \frac{\omega_I}{2} \left\{ \pm 1 \pm \left( \frac{2\omega_A^2}{\omega_I^2} \right)\right\}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”<br />
+[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

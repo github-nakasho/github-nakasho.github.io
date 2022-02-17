@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Torsional Alfvén波
+title: ねじれアルヴェーン波
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/torsional_alfven
@@ -20,7 +20,7 @@ nav_order: 11
 
 {% include adsense.html %} 
 
-# ねじれアルヴェーン波
+# ねじれアルヴェーン波 (torsional Alfvén waves)
 
 普通の有限振幅の波動は時間とともにその形が崩れ、最終的には衝撃波となることが多いです。しかし、有限振幅のAlfvén波はそのままの形で伝播していくことができます。ここでは有限振幅の円偏光Alfvén波(torsional Alfvén wave)がどのような方程式を満たすかを考察しましょう。
 

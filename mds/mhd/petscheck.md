@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Petscheck reconnection
+title: ぺチェックの磁気リコネクション
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/petschek
@@ -20,7 +20,7 @@ nav_order: 10
 
 {% include adsense.html %} 
 
-# ぺチェックの磁気リコネクション
+# ぺチェックの磁気リコネクション (Petscheck reconnection)
 
 磁力線のつなぎかわりは中心の小さな磁気拡散領域で行い、エネルギーの変換は拡散領域から外側に伸びるスローショック部分で実現しようというモデルです。これによるリコネクション時間スケールは中心の拡散領域のサイズで決定されるので、それを十分小さくすることで短い時間スケールを実現することが可能となりました。
 

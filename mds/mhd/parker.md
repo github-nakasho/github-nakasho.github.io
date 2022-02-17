@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Parker不安定性
+title: パーカー不安定性
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/parker
@@ -20,7 +20,7 @@ nav_order: 8
 
 {% include adsense.html %} 
 
-# パーカー不安定性
+# パーカー不安定性 (Parker instability)
 
 ## パーカー不安定性とは
 

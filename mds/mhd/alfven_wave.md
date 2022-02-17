@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Alfvén波
+title: アルヴェーン波
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/alfven_wave
@@ -20,7 +20,7 @@ nav_order: 11
 
 {% include adsense.html %} 
 
-# アルヴェーン波
+# アルヴェーン波 (Alfvén waves)
 
 ## 直感的導出
 

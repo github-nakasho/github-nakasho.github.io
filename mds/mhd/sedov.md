@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sedov-Taylor解
+title: セドフ・テイラー解
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/sedov
@@ -20,7 +20,7 @@ nav_order: 12
 
 {% include adsense.html %} 
 
-# 点源爆発の自己相似解
+# 点源爆発の自己相似解 (Sedov-Taylor solution)
 
 点源爆発の自己相似解のことをSedov-Taylor解と呼び、厳密解が知られています。中心から爆発によって供給された高音・高圧のガスは周りの低温のガスをかき集めながら膨張します。形成された衝撃波は、衝撃波でのジャンプ条件(ランキン・ユゴニオ条件)を満たしながら広がっていきます。
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 一般化されたOhmの法則
+title: 一般化されたオームの法則
 parent: 宇宙磁気流体力学
 math: mathjax3
 permalink: /mhd/ohm
@@ -20,7 +20,7 @@ nav_order: 4
 
 {% include adsense.html %} 
 
-# 一般化されたオームの法則
+# 一般化されたオームの法則 (generalized Ohm's law)
 
 完全電離した水素ガスを考えましょう。このとき、電子と陽子の数は等しく、この2つの粒子しか存在しないことになります。電子には添字のe, 陽子には添字のpを付けて、2つの粒子について運動方程式を考えると
 

@@ -1,5 +1,4 @@
-I"�
-
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -7,6 +6,7 @@
 <ol id="markdown-toc">
   <li><a href="#慣性波-inertial-waves" id="markdown-toc-慣性波-inertial-waves">慣性波 (inertial waves)</a>    <ol>
       <li><a href="#直感的な導出" id="markdown-toc-直感的な導出">直感的な導出</a></li>
+      <li><a href="#定量的な導出" id="markdown-toc-定量的な導出">定量的な導出</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -45,13 +45,44 @@ v_{1y}
 
 <p>のような波動解とわかります。これを慣性波(inertial waves)と呼びます。この波動を生み出す復元力はコリオリ力であり、コリオリ力は流体要素に\(xy\)平面内を円運動させるような加速度を生み出します。結果として、回転軸と平行に角速度\(2\Omega\)の波動が伝播していきます。</p>
 
-<p>##</p>
+<h2 id="定量的な導出">定量的な導出</h2>
+
+<p>以降では定量的な導出を行いましょう。簡単のため<a href="/mhd/sound_wave">音波の導出の時に示した(20)式</a>において重力と磁場を無視して\(g = 0, \mathbf{B}_0 =\mathbf{0}\)とし、さらに非圧縮(\(\mathbf{k} \cdot \mathbf{v}_1 = 0\)、すなわち横波)を仮定すると</p>
+
+\[\omega^2 \mathbf{v}_1 
+= - 2i \omega \boldsymbol{\Omega} \times \mathbf{v}_1\]
+
+<p>となります。この式の両辺を\(\mathbf{k}\)との外積をとり、式変形を行います。</p>
+
+\[\omega^2 \mathbf{k} \times \mathbf{v}_1 
+= -2i \omega \mathbf{k} \times (\boldsymbol{\Omega} \times \mathbf{v}_1) 
+= -2i \omega \{ \underbrace{(\mathbf{k} \cdot \mathbf{v}_1)}_{=0} \boldsymbol{\Omega} - (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\} 
+= 2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\]
+
+<table>
+  <tbody>
+    <tr>
+      <td>この両辺の大きさを計算することでベクトル量からスカラー量への変換を行い、\(\omega\)の式にします。このとき\(\mathbf{k} \cdot \mathbf{v}_1=0\)より$$</td>
+      <td>\mathbf{k} \times \mathbf{v}_1</td>
+      <td>= k v_1$$と簡単に書くことができるので</td>
+    </tr>
+  </tbody>
+</table>
+
+\[\{\omega^2 (\mathbf{k} \times \mathbf{v}_1)\} \{\omega^2 (\mathbf{k} \times \mathbf{v}_1)\}^\ast 
+= \{2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\} \{2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\}^\ast \ \Longrightarrow \
+\omega^4 k^2 v_1^2 
+= 4\omega^2 (\mathbf{k} \cdot \boldsymbol{\Omega})^2 v_1^2\]
+
+<p>よって</p>
+
+\[\omega 
+= \pm \frac{2(\mathbf{k} \cdot \boldsymbol{\Omega})}{k} \tag{4}\]
 
 <h1 id="参考文献">参考文献</h1>
 
 <p>[1] Priest, “Solar Magnetohydrodynamics”<br />
-[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”<br />
-[3] 福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</p>
+[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

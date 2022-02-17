@@ -51,11 +51,93 @@ $$
 
 ## 定量的な導出
 
+以降では定量的な導出を行いましょう。簡単のため[音波の導出の時に示した(20)式](/mhd/sound_wave)において重力と磁場を無視して$$g = 0, \mathbf{B}_0 =\mathbf{0}$$とし、さらに非圧縮($$\mathbf{k} \cdot \mathbf{v}_1 = 0$$、すなわち横波)を仮定すると
+
+$$
+\omega^2 \mathbf{v}_1 
+= - 2i \omega \boldsymbol{\Omega} \times \mathbf{v}_1 \tag{4}
+$$
+
+となります。この式の両辺を$$\mathbf{k}$$との外積をとり、式変形を行います。
+
+$$
+\omega^2 \mathbf{k} \times \mathbf{v}_1 
+= -2i \omega \mathbf{k} \times (\boldsymbol{\Omega} \times \mathbf{v}_1) 
+= -2i \omega \{ \underbrace{(\mathbf{k} \cdot \mathbf{v}_1)}_{=0} \boldsymbol{\Omega} - (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\} 
+= 2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1 \tag{5}
+$$
+
+この両辺の大きさを計算することでベクトル量からスカラー量への変換を行い、$$\omega$$の式にします。このとき$$\mathbf{k} \cdot \mathbf{v}_1=0$$より$$\\|\mathbf{k} \times \mathbf{v}_1 \\| = k v_1$$と簡単に書くことができるので
+
+$$
+\{\omega^2 (\mathbf{k} \times \mathbf{v}_1)\} \{\omega^2 (\mathbf{k} \times \mathbf{v}_1)\}^\ast 
+= \{2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\} \{2i\omega (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{v}_1\}^\ast \ \Longrightarrow \
+\omega^4 k^2 v_1^2 
+= 4\omega^2 (\mathbf{k} \cdot \boldsymbol{\Omega})^2 v_1^2
+$$
+
+よって
+
+$$
+\omega 
+= \pm \frac{2(\mathbf{k} \cdot \boldsymbol{\Omega})}{k} \tag{6}
+$$
+
+伝播方向$$\mathbf{k}$$と系の回転軸(角速度ベクトル$$\boldsymbol{\Omega}$$)の成す角を$$\theta_\Omega$$と書くと、(6)式より
+
+$$
+\omega 
+= \pm 2 \Omega \cos \theta_\Omega \ \Longrightarrow \ 
+v_p 
+= \pm \frac{2\Omega \cos \theta_\Omega}{k} \tag{7}
+$$
+
+とわかります。また群速度は(6)式より
+
+$$
+\begin{align}
+\mathbf{v}_g 
+&= \frac{\partial \omega}{\partial \mathbf{k}} 
+= \pm 2 \frac{\partial}{\partial k_i} \frac{k_j \Omega_j}{(k_m k_m)^{1/2}} \mathbf{e}_i 
+= \pm 2 \frac{\delta_{ij} \Omega_j (k_m k_m)^{1/2} - \frac{1}{2} (k_m k_m)^{-1/2} 2 k_m \delta_{im} k_j \Omega_j}{k_m k_m} \mathbf{e}_i \notag \\
+&= \pm 2 \frac{k^2 \boldsymbol{\Omega} - (\mathbf{k} \cdot \boldsymbol{\Omega}) \mathbf{k}}{k^3} 
+= \pm \frac{\mathbf{k} \times (2 \boldsymbol{\Omega} \times \mathbf{k})}{k^3} \tag{8}
+\end{align}
+$$
+
+よってその大きさは
+
+$$
+v_g 
+= \frac{2\Omega \sin \theta_\Omega}{k} \tag{9}
+$$
+
+(6), (8)式より
+
+$$
+\sqrt{v_p^2 + v_g^2} 
+= \frac{2\Omega}{k} \tag{10}
+$$
+
+のように整理すると$$\theta_\Omega$$nに依存しない形が出てきます。これは$$\mathbf{v}_p \perp \mathbf{v}_g$$を意味しており、[内部重力波](/mhd/gravity)と同様に、そのエネルギーは波数ベクトルとは垂直な方向に伝播していくとわかります。
+
+## 慣性波のヘリシティ
+
+$$\mathbf{v}_1$$が従う(4)式の形から、$$\mathbf{v}_1$$は波動の伝播に従って円運動を行います。よって慣性波は円偏波です。この波動の渦度ベクトル$$\nabla \times \mathbf{v}_1$$と$$\mathbf{v}_1$$との内積を計算すると
+
+$$
+\mathbf{v}_1 \cdot (\nabla \times \mathbf{v}_1) 
+= \mathbf{v}_1 \cdot (i \mathbf{k} \times \mathbf{v}_1) 
+\underbrace{=}_{(5)} - \mathbf{v}_1 \cdot \frac{2 (\mathbf{k} \cdot \boldsymbol{\Omega})}{\omega} \mathbf{v}_1 
+\underbrace{=}_{(6)} \mp k v_z^2 \tag{11} 
+$$
+
+のようになります。よって渦度ベクトルは$$\mathbf{v}_1$$と平行か反平行であることがわかります。これは[ヘリシティ](/astroelec/polarization)として知られる量です。
+
 # 参考文献
 
 [1] Priest, "Solar Magnetohydrodynamics"  
 [2] 観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"  
-[3] 福江純, 和田圭一, 梅村雅之, "宇宙流体力学の基礎"  
 
 {% include adsense.html %} 
 

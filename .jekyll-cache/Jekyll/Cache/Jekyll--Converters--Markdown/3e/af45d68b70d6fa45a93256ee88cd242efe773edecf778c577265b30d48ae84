@@ -1,0 +1,90 @@
+I"\
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気音波-magnetoacoustic-waves-magnetosonic-waves" id="markdown-toc-磁気音波-magnetoacoustic-waves-magnetosonic-waves">磁気音波 (Magnetoacoustic waves, magnetosonic waves)</a>    <ol>
+      <li><a href="#簡単な導出" id="markdown-toc-簡単な導出">簡単な導出</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気音波-magnetoacoustic-waves-magnetosonic-waves">磁気音波 (Magnetoacoustic waves, magnetosonic waves)</h1>
+
+<p>ここでは圧力を復元力として伝播する<a href="/mhd/sound_wave">音波</a>と<a href="/mhd/alfven_wave">アルヴェーン波</a>がお互いに影響を及ぼし合った場合の波を考えます。</p>
+
+<h2 id="簡単な導出">簡単な導出</h2>
+
+<p><a href="/mhd/sound_wave">音波の導出部分で出てきた分散関係式(20)</a>において重力と回転を無視(\(g =0, \boldsymbol{\Omega}=\mathbf{0}\))し、さらに\(\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B\)であることを用いて整理します。</p>
+
+\[\begin{align}
+\frac{\omega^2}{v_A^2} \mathbf{v}_1 
+&amp;= \frac{C_s^2}{v_A^2} (\mathbf{k} \cdot \mathbf{v}_1) \mathbf{k} + k^2 \cos^2 \theta_B \mathbf{v}_1 + \left\{ (\mathbf{k} \cdot \mathbf{v}_1) - k \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\right\} \mathbf{k} - (\mathbf{k} \cdot \mathbf{v}_1) k \cos \theta_B \hat{\mathbf{B}}_0 \notag \\
+&amp;= k^2 \cos^2 \theta_B \mathbf{v}_1 + \left\{ \left( 1+\frac{C_s^2}{v_A^2} \right)(\mathbf{k} \cdot \mathbf{v}_1) - k \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\right\} \mathbf{k} - k \cos \theta_B (\mathbf{k} \cdot \mathbf{v}_1) \hat{\mathbf{B}}_0 \tag{1}
+\end{align}\]
+
+<p>まず、(1)式と\(\mathbf{k}\)との内積を取ります。</p>
+
+\[\begin{aligned}
+\frac{\omega^2}{v_A^2} \mathbf{v}_1 \cdot \mathbf{k} 
+&amp;= k^2 \cos^2 \theta_B \mathbf{v}_1 \cdot \mathbf{k} + \left\{ \left( 1 + \frac{C_s^2}{v_A^2} \right) (\mathbf{k} \cdot \mathbf{v}_1) - k \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\right\} k^2 - k \cos \theta_B (\mathbf{k} \cdot \mathbf{v}_1) (\mathbf{k} \cdot \hat{\mathbf{B}}_0) \\
+&amp;= \left\{ k^2 \cos^2 \theta_B + k^2 \left( 1+ \frac{C_s^2}{v_A^2} \right) -k^2 \cos^2 \theta_B \right\} (\mathbf{k} \cdot \mathbf{v}_1) - k^3 \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0) \\
+&amp;= k^2 \left( 1+\frac{C_s^2}{v_A^2} \right) \mathbf{k} \cdot \mathbf{v}_1 - k^3 \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0) 
+\end{aligned}\]
+
+<p>これを整理すると</p>
+
+\[\left\{ \frac{\omega^2}{v_A^2} - k^2 \left( 1+\frac{C_s^2}{v_A^2} \right) \right\} (\mathbf{k} \cdot \mathbf{v}_1) 
+= k^3 \cos \theta_B \mathbf{v}_1 \cdot \hat{\mathbf{B}}_0 \tag{2}\]
+
+<p>次に(1)式と\(\hat{\mathbf{B}}_0\)との内積を取ります。</p>
+
+\[\begin{align}
+\frac{\omega^2}{v_A^2} \mathbf{v}_1 \cdot \hat{\mathbf{B}}_0 
+&amp;= k^2 \cos^2 \theta_B \mathbf{v}_1 \cdot \hat{\mathbf{B}}_0 + \left\{ \left( 1+\frac{C_s^2}{v_A^2} \right) (\mathbf{k} \cdot \mathbf{v}_1) - k \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\right\} \mathbf{k} \cdot \hat{\mathbf{B}}_0 - k \cos \theta_B (\mathbf{k} \cdot \mathbf{v}_1) \\
+&amp;= \left( 1 + \frac{C_s^2}{v_A^2}\right) k\cos \theta_B \mathbf{k} \cdot \mathbf{v}_1 - k \cos \theta_B \mathbf{k} \cdot \mathbf{v}_1 
+= \frac{C_s^2}{v_A^2} k \cos \theta_B \mathbf{k} \cdot \mathbf{v}_1 \tag{3}
+\end{align}\]
+
+<p>(2), (3)式から、\(\mathbf{k} \cdot \mathbf{v}_1, \mathbf{v}_1 \cdot \hat{\mathbf{B}}_0\)を消去すると</p>
+
+\[\left\{ \frac{\omega^2}{v_A^2} - k^2 \left( 1 + \frac{C_s^2}{v_A^2} \right) \right\} \frac{v_A^2}{C_s^2 k \cos \theta_B} 
+= k^3 \cos \theta_B \frac{v_A^2}{\omega^2} \ \Longrightarrow \
+\frac{\omega^4}{k^4} - (v_A^2 + C_s^2) \frac{\omega^2}{k^2} - C_s^2 v_A^2 \cos^2 \theta_B 
+= 0\]
+
+<p>となります。この\(\omega^2 / k^2\)に関する2次方程式を解くと</p>
+
+\[\frac{\omega^2}{k^2} 
+= \frac{(v_A^2 + C_s^2) \pm \sqrt{(v_A^2 + C_s^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}}{2} \tag{4}\]
+
+<p>となり、分散関係式を得ます。\(+\)符号の位相速度の大きい波を速い磁気音波(fast-mode)、\(-\)符号の位相速度の小さい波を遅い磁気音波(slow-mode)と呼びます。速い磁気音波と遅い磁気音波における位相速度の背景磁場に対する角度依存性をフリードリックスダイアグラムにまとめると以下のようになります。</p>
+
+<p><img src="/assets/images/mhd/magneto_acoustic_001.png" alt="" /></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”<br />
+[2] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

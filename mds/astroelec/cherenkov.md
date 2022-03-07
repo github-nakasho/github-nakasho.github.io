@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cherenkov放射
+title: チェレンコフ放射
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/cherenkov

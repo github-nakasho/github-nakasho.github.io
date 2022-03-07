@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 逆Compton散乱
+title: 逆コンプトン散乱
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/inv_compton

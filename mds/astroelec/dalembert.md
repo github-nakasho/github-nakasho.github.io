@@ -1,6 +1,6 @@
 ---
 layout: default
-title: d'Alembert方程式の球面波解とその性質
+title: ダランベール方程式の球面波解とその性質
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/dalembert

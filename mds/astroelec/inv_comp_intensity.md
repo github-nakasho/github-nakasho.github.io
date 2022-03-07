@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 逆Compton放射強度
+title: 逆コンプトン放射強度
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/inv_compton_intensity

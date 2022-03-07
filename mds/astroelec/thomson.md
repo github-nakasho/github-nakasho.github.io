@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Thomson散乱
+title: トムソン散乱
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/thomson

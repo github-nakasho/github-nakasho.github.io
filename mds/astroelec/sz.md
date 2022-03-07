@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sunyaev-Zel'dovich効果
+title: スニヤエフ・ゼルドヴィッチ効果
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/sz

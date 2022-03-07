@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lienard-Wiechart potential
+title: リエナー・ブィーヒェルトポテンシャル
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/lienard_wiechart

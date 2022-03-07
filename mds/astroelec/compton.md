@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Compton散乱
+title: コンプトン散乱
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/compton

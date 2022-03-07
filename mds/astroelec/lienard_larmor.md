@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lienardの式とLarmorの式
+title: リエナーの式とラーモアの式
 parent: 宇宙電磁気学
 math: mathjax3
 permalink: /astroelec/lienard_larmor

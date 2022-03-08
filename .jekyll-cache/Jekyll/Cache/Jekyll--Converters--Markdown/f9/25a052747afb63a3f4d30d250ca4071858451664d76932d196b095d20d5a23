@@ -1,4 +1,4 @@
-I"�j
+I"xo
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -24,6 +24,7 @@
       </li>
       <li><a href="#phi_e--phi_b--r--sqrtx2--y2のとき" id="markdown-toc-phi_e--phi_b--r--sqrtx2--y2のとき">\(\Phi_E = \Phi_B = r = \sqrt{x^2 + y^2}\)のとき</a></li>
       <li><a href="#phi_e--phi_b--1r--1sqrtx2--y2のとき" id="markdown-toc-phi_e--phi_b--1r--1sqrtx2--y2のとき">\(\Phi_E = \Phi_B = 1/r = 1/\sqrt{x^2 + y^2}\)のとき</a></li>
+      <li><a href="#結言" id="markdown-toc-結言">結言</a></li>
     </ol>
   </li>
 </ol>
@@ -367,6 +368,14 @@ a_1 = \pm a_2\]
 \[(\partial_x^2 + \partial_y^2) B(\mathbf{x}) 
 = -2\partial_x \partial_y Q(\mathbf{x}) + (\partial_x^2 -  \partial_y^2) U(\mathbf{x}) \tag{12}\]
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="x方向に伝播する単色平面波">\(x\)方向に伝播する単色平面波</h2>
 
 <p>波数が\(\mathbf{k} = (k, 0)\)の単色平面波のみ存在する場合を考えます。このときストークスパラメータは\(Q(x, y)=Q_0 \cos k x, U(x, y)=U_0 \sin kx\)、さらに\(\theta=0\)です。</p>
@@ -574,6 +583,10 @@ U_B = P_{B, y}
 <p>よって、半径上の偏光の様子は次のようになります。</p>
 
 <p><img src="/assets/images/astroelec/e_mode_b_mode_12.png" alt="" /></p>
+
+<h2 id="結言">結言</h2>
+
+<p>今回はCMBを理解する上で大切な要素となるEモード・Bモード偏光についてご紹介しました。Eモード・Bモードは(6), (7)式の定義から分かるように、波数空間で定義されるものです。よくある説明の仕方として「実空間で縦横の偏光はEモード、斜め方向の偏光はBモード」というような文章や図が掲載されていることがあります。しかし、それだけだと人間が見る角度を変えるだけ(今の場合首を斜めに傾けるだけ)でEモードとBモードの区別がつかなくなるため、それは説明不足である(というよりも誤り？)というのが個人的な見解です。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

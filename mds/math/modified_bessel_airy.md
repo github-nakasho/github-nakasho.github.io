@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 修正Bessel関数とAiry関数
+title: 修正ベッセル関数とエアリー関数
 parent: 数学
 math: mathjax3
 permalink: /math/modified_bessel_airy

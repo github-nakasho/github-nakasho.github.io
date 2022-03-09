@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fresnel積分
+title: フレネル積分
 parent: 数学
 math: mathjax3
 permalink: /math/fresnel

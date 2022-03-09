@@ -4,7 +4,7 @@ title: 球面調和関数
 parent: 数学
 math: mathjax3
 permalink: /math/spherical
-nav_order: 15
+nav_order: 16
 ---
 
 {: .no_toc }
@@ -72,8 +72,6 @@ Y_\ell^m (\pi-\theta, \varphi+\pi)
 = (-1)^m Y_\ell^m (\theta, \varphi) \tag{4}
 \end{align}
 $$
-
-{% include adsense.html %}
 
 ## 球面調和関数の加法定理
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Laguerre多項式
+title: ラゲール多項式
 parent: 数学
 math: mathjax3
 permalink: /math/laguerre

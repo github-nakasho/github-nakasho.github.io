@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 球Bessel関数と球Neumann関数
+title: 球ベッセル関数と球ノイマン関数
 parent: 数学
 math: mathjax3
 permalink: /math/sph_bessel

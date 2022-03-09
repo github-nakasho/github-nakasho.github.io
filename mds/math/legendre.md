@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Legendre多項式
+title: ルジャンドル多項式
 parent: 数学
 math: mathjax3
 permalink: /math/legendre

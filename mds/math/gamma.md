@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Γ関数
+title: ガンマ関数
 parent: 数学
 math: mathjax3
 permalink: /math/gamma
@@ -20,7 +20,7 @@ nav_order: 6
 
 {% include adsense.html %}
 
-# ガンマ関数
+# $$\Gamma$$関数
 
 ガンマ関数は1729に数学者レオンハルト・オイラーが、**階乗の一般化のため**に導入したと言われています。このページではその公式や性質を見ていきましょう。
 

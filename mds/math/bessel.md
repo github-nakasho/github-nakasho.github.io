@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bessel関数
+title: ベッセル関数
 parent: 数学
 math: mathjax3
 permalink: /math/bessel

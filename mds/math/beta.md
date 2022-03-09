@@ -1,6 +1,6 @@
 ---
 layout: default
-title: β関数
+title: ベータ関数
 parent: 数学
 math: mathjax3
 permalink: /math/beta
@@ -20,7 +20,7 @@ nav_order: 7
 
 {% include adsense.html %}
 
-# ベータ関数
+# $$\beta$$関数
 
 ベータ関数はアドリアン・マリ・ルジャンドルが用いたのが始まりですが、その名前自体は1990にウィッタカーとワトソンによって命名されました。
 
@@ -142,7 +142,7 @@ $$
 \Gamma(z) \Gamma(1-z) = \frac{\pi}{\sin(z \pi)} \tag{4}
 $$
 
-## $$sin^n$$の定積分公式
+## $$\sin^n$$の定積分公式
 
 (2), (3)式より
 

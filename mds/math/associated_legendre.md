@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Legendre陪関数
+title: ルジャンドル陪関数
 parent: 数学
 math: mathjax3
 permalink: /math/associated_legendre

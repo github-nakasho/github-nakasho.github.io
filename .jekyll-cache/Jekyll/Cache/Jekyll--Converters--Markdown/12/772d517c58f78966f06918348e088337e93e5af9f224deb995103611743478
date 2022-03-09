@@ -1,0 +1,179 @@
+I"�)
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#チェビシェフ多項式" id="markdown-toc-チェビシェフ多項式">チェビシェフ多項式</a>    <ol>
+      <li><a href="#多項式の導出" id="markdown-toc-多項式の導出">多項式の導出</a></li>
+      <li><a href="#漸化式と微分方程式" id="markdown-toc-漸化式と微分方程式">漸化式と微分方程式</a></li>
+      <li><a href="#具体的な形とその性質" id="markdown-toc-具体的な形とその性質">具体的な形とその性質</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="チェビシェフ多項式">チェビシェフ多項式</h1>
+
+<h2 id="多項式の導出">多項式の導出</h2>
+
+<p>突然ですが、以下の積分について考えましょう。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d\theta \qquad (m, n \in \mathbb{Z})\]
+
+<p>これは\(m, n\)によってその積分値が変わるので、場合分けが必要です。まずは\(m \neq n\)の場合について計算しましょう。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d \theta 
+= \frac{1}{\pi} \int_0^\pi \frac{\cos (m+n) \theta + \cos (m-n) \theta}{2} d\theta 
+= \frac{1}{2\pi} \left[ \frac{\sin (m+n) \theta}{m+n} - \frac{\sin (m-n) \theta}{m-n}\right]_0^\pi 
+= 0\]
+
+<p>次に\(m = n\)のときです。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos^2 m \theta d\theta 
+= \frac{1}{\pi} \int_0^\pi \frac{\cos 2m\theta + 1}{2} d\theta 
+= \frac{1}{2\pi} \left[ \frac{\sin 2m\theta}{2m} + \theta\right]_0^\pi 
+= \frac{1}{2}\]
+
+<p>同様に\(n=-m\)のときも</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \underbrace{\cos (-m) \theta}_{=\cos m\theta} d\theta 
+= \frac{1}{2}\]
+
+<p>と計算できます。最後に\(m=n=0\)の場合、すなわちコサインが常に1の場合には、この積分値は1となります。以上から</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d\theta 
+= \frac{\delta_{mn} + \delta_{m, -n}}{2} \tag{1}\]
+
+<p>ここで\(x = \cos \theta \ (d\theta = -dx/ \sqrt{1-x^2})\)のように変数変換を行いましょう。さらに</p>
+
+\[T_m (x) 
+\equiv \cos m \theta 
+= \cos ( m \cos^{-1} x) \tag{2}\]
+
+<p>を定義しておくと、(1)式は</p>
+
+\[\int_{-1}^1 \frac{T_m(x) T_n(x)}{\sqrt{1-x^2}} dx 
+= \left\{ \begin{array}{cc}
+0 &amp; (m \neq n) \\
+\pi / 2 &amp; (m = n &gt; 0) \\
+\pi &amp; (m=n=0)
+\end{array} \right. \tag{3}\]
+
+<p>\(T_{-m}(x) = T_m (x)\)の偶関数性から、(3)式では\(m, n \geq 0\)のみを考えることにしています。(2)式で定義される\(T_m(x)\)を\(m\)次のチェビシェフ多項式と呼びます。また(3)式より関数列\(\{T_m(x)\}\)は\(\sqrt{1-x^2}\)を重みとする直交関数の組であるとわかります。</p>
+
+<h2 id="漸化式と微分方程式">漸化式と微分方程式</h2>
+
+<p>それではこの多項式が満たす漸化式を証明しておきましょう。そこで以下の計算を行います。</p>
+
+\[\begin{aligned}
+e^{i(n+1)\theta} + e^{i(n-1)\theta} 
+&amp;= \cos (n+1) \theta + i \sin (n+1) \theta + \cos (n-1) \theta + i \sin (n-1) \theta \\
+&amp;= \cos n \theta \cos \theta - \sin n \theta \sin \theta + \cos n \theta \cos \theta + \sin n \theta \sin \theta 
++ i (\sin n \theta \cos \theta + \sin \theta \cos n \theta + \sin n \theta \cos \theta - \sin \theta \cos n \theta) 
+= 2 \cos n \theta \cos \theta + 2i \sin n\theta \cos \theta
+\end{aligned}\]
+
+<p>\(x = \cos \theta\)であることに注意しながら、この両辺の実部のみを比較すると</p>
+
+\[T_{n+1} (x) + T_{n-1} (\theta) 
+= 2x T_n(x) \tag{4}\]
+
+<p>という漸化式を得ます。<br />
+チェビシェフ多項式が満たす微分方程式について証明しましょう。\(T_n (x) = \cos n \theta\)より、この多項式は\(\frac{d^2 y}{d\theta^2} + n^2 y = 0\)の解であることを心に留めておくと</p>
+
+\[\frac{d}{d\theta} 
+= \frac{dx}{d\theta} \frac{d}{dx} 
+= -\sin \theta \frac{d}{dx}\]
+
+\[\frac{d^2}{d\theta^2} 
+= \frac{dx}{d\theta} \frac{d}{dx} \left( \frac{dx}{d\theta} \frac{d}{dx} \right) 
+= - \sin \theta \frac{d}{dx} \left( - \sin \theta \frac{d}{dx}\right) 
+= \sin^2 \theta \frac{d^2}{dx^2} + \sin \theta \left( \frac{d}{dx} \sin \theta \right) 
+\underbrace{=}_{\sin \theta = \sqrt{1-x^2}} 
+= (1-x^2) \frac{d^2}{dx^2} - x \frac{d}{dx}\]
+
+<p>より</p>
+
+\[(1-x^2) T_n'' - x T_n' + n^2 T_n 
+= 0 \tag{5}\]
+
+<p>となります。\((1-x^2) y'' - xy' + n^2 y=0\)をチェビシェフの微分方程式と呼びます。さらに\(\frac{d}{dx} = - \frac{1}{\sin \theta} \frac{d}{d\theta}\)より</p>
+
+\[(1-x^2) T_n' 
+= n \sin \theta \sin n\theta 
+= - \frac{n}{2} \{ \cos (n+1) \theta - \cos (n-1) \theta \} 
+= -\frac{n}{2} (T_{n+1} - T_{n-1})\]
+
+<p>です。ここに(4)式を用いると</p>
+
+\[(1-x^2) T_n' 
+= -nx T_n + n T_{n-1} \tag{6}\]
+
+<p>という微分漸化式を満たすことを証明することもできました。</p>
+
+<h2 id="具体的な形とその性質">具体的な形とその性質</h2>
+
+<p>チェビシェフ多項式の具体的な関数形は以下のように表されます。</p>
+
+\[T_0(x) = 1, \quad T_1(x) = x,\]
+
+<p>以下にいくつかの\(n\)に対するチェビシェフ多項式を図示するPythonスクリプトを示します。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="n">sc</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set variables
+</span>    <span class="n">ix</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+    <span class="n">xmax</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">nmin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nmax</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="c1"># set x coordinate
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ix</span><span class="p">)</span>
+    <span class="c1"># main loop of plotting Chebyshev polynomials
+</span>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nmin</span><span class="p">,</span> <span class="n">nmax</span><span class="p">):</span>
+        <span class="n">ei</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">eval_chebyt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="s">"n={}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ei</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="c1"># make plot window
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>このスクリプトによって図示された結果h以下のようになります。</p>
+
+<p><img src="/assets/images/math/chebyshev.png" alt="" /></p>
+
+<p>グラフからわかるように、チェビシェフ多項式はその定義域\([-1, 1]\)において\(\| T_n (x) \| \leq 1\)を満たします。またこの区間において、比較的均一に分布している様子も見て取れます。このため、ある区間で与えられた関数\(f(x)\)を有限のn次までの\(\{ T_n (x)\}\)を用いて多項式展開で近似を行うと、その結果は他の直交多項式を用いて得られたものよりも小さな誤差で済むことが知られています。より詳しくは、\(\{T_n(x)\}\)のn次までにより関数\(f(x)\)を展開近似した\(F_n(x)\)に対して誤差\(\| f(x)-F(x)\|\)の最大値\(\max \| f(x) - F_n(x)\|\)が最小となります。このことから、チェビシェフ多項式により展開近似を行ったものが最良の矜持となり、これをチェビシェフ多項式のミニマックス性と呼びます。このような性質のために、チェビシェフ多項式は数値解析において非常に重要な多項式です。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”<br />
+[4] 伊理 正夫, 藤野 和建, “数値計算の常識”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

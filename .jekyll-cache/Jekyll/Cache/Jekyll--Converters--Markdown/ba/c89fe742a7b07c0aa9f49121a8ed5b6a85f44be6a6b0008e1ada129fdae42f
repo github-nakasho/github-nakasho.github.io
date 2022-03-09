@@ -1,0 +1,85 @@
+I"b
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#チェビシェフ多項式" id="markdown-toc-チェビシェフ多項式">チェビシェフ多項式</a>    <ol>
+      <li><a href="#多項式の導出" id="markdown-toc-多項式の導出">多項式の導出</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="チェビシェフ多項式">チェビシェフ多項式</h1>
+
+<h2 id="多項式の導出">多項式の導出</h2>
+
+<p>突然ですが、以下の積分について考えましょう。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d\theta \qquad (m, n \in \mathbb{Z})\]
+
+<p>これは\(m, n\)によってその積分値が変わるので、場合分けが必要です。まずは\(m \neq n\)の場合について計算しましょう。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d \theta 
+= \frac{1}{\pi} \int_0^\pi \frac{\cos (m+n) \theta + \cos (m-n) \theta}{2} d\theta 
+= \frac{1}{2\pi} \left[ \frac{\sin (m+n) \theta}{m+n} - \frac{\sin (m-n) \theta}{m-n}\right]_0^\pi 
+= 0\]
+
+<p>次に\(m = n\)のときです。</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos^2 m \theta d\theta 
+= \frac{1}{\pi} \int_0^\pi \frac{\cos 2m\theta + 1}{2} d\theta 
+= \frac{1}{2\pi} \left[ \frac{\sin 2m\theta}{2m} + \theta\right]_0^\pi 
+= \frac{1}{2}\]
+
+<p>同様に\(n=-m\)のときも</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \underbrace{\cos (-m) \theta}_{=\cos m\theta} d\theta 
+= \frac{1}{2}\]
+
+<p>と計算できます。最後に\(m=n=0\)の場合、すなわちコサインが常に1の場合には、この積分値は1となります。以上から</p>
+
+\[\frac{1}{\pi} \int_0^\pi \cos m \theta \cos n \theta d\theta 
+= \frac{\delta_{mn} + \delta_{m, -n}}{2} \tag{1}\]
+
+<p>ここで\(x = \cos \theta \ (d\theta = -dx/ \sqrt{1-x^2})\)のように変数変換を行いましょう。さらに</p>
+
+\[T_m (x) 
+\equiv \cos m \theta 
+= \cos ( m \cos^{-1} x) \tag{2}\]
+
+<p>を定義しておくと、(1)式は</p>
+
+\[\int_{-1}^1 \frac{T_m(x) T_n(x)}{\sqrt{1-x^2}} dx 
+= \left\{ \begin{array}{cc}
+0 &amp; (m \neq n) \\
+\pi / 2 &amp; (m = n &gt; 0) \\
+\pi &amp; (m=n=0)
+\end{array} \right. \tag{3}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

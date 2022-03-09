@@ -1,0 +1,11 @@
+--- include/xsimd/config/xsimd_arch.hpp
++++ include/xsimd/config/xsimd_arch.hpp
+@@ -113,7 +113,7 @@
+     {
+         static constexpr bool supported() noexcept { return false; }
+         static constexpr bool available() noexcept { return false; }
+-        static constexpr unsigned version() noexcept { return generic::version(0, 0, 0); }
++        static constexpr unsigned version() noexcept { return 0; }
+         static constexpr std::size_t alignment() noexcept { return 0; }
+         static constexpr bool requires_alignment() noexcept { return false; }
+         static constexpr char const* name() noexcept { return "<none>"; }

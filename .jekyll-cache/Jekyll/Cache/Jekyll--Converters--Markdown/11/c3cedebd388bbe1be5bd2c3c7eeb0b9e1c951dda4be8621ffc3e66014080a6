@@ -1,0 +1,64 @@
+I"]
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#レイリー展開の公式" id="markdown-toc-レイリー展開の公式">レイリー展開の公式</a>    <ol>
+      <li><a href="#ヘルムホルツ方程式からの導出" id="markdown-toc-ヘルムホルツ方程式からの導出">ヘルムホルツ方程式からの導出</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="レイリー展開の公式">レイリー展開の公式</h1>
+
+<h2 id="ヘルムホルツ方程式からの導出">ヘルムホルツ方程式からの導出</h2>
+
+<p>関数\(f(r, \theta, \varphi)\)がヘルムホルツ方程式</p>
+
+\[\nabla^2 f + k^2 f 
+= 0 \tag{1}\]
+
+<p>を満たすとします(\(k \neq 0\))。このとき、関数\(f\)が特殊関数を用いてどのように記述されるかを見てみましょう。<br />
+<a href="/math/laplacian">3次元極座標系でのラプラシアン</a>より</p>
+
+\[\nabla^2 
+= \frac{\partial^2}{\partial r^2} + \frac{2}{r} \frac{\partial }{\partial r} + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta}\right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2}{\partial \varphi^2} \tag{2}\]
+
+<p>ここで関数\(f\)を\(f(r, \theta, \varphi) = R(r) Y(\theta, \varphi)\)のように変数分離します。すると(1), (2)式より</p>
+
+\[Y \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 R Y + R \left\{ \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sing \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} 
+= 0\]
+
+<p>両辺に\(r^2 / (RY)\)をかけると</p>
+
+\[\frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 + \frac{1}{Y} \left\{ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sing \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} 
+= 0\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”<br />
+[4] 伊理 正夫, 藤野 和建, “数値計算の常識”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

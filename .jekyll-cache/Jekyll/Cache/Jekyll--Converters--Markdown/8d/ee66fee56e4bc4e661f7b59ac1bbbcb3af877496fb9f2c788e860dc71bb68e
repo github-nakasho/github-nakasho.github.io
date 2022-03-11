@@ -1,0 +1,142 @@
+I"7
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#レイリー展開の公式" id="markdown-toc-レイリー展開の公式">レイリー展開の公式</a>    <ol>
+      <li><a href="#ヘルムホルツ方程式の解の性質" id="markdown-toc-ヘルムホルツ方程式の解の性質">ヘルムホルツ方程式の解の性質</a></li>
+      <li><a href="#公式の導出" id="markdown-toc-公式の導出">公式の導出</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="レイリー展開の公式">レイリー展開の公式</h1>
+
+<h2 id="ヘルムホルツ方程式の解の性質">ヘルムホルツ方程式の解の性質</h2>
+
+<p>関数\(f(r, \theta, \varphi)\)がヘルムホルツ方程式</p>
+
+\[\nabla^2 f + k^2 f 
+= 0 \tag{1}\]
+
+<p>を満たすとします(\(k \neq 0\))。このとき、関数\(f\)が特殊関数を用いてどのように記述されるかを見てみましょう。<br />
+<a href="/math/laplacian">3次元極座標系でのラプラシアン</a>より</p>
+
+\[\nabla^2 
+= \frac{\partial^2}{\partial r^2} + \frac{2}{r} \frac{\partial }{\partial r} + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta}\right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2}{\partial \varphi^2} \tag{2}\]
+
+<p>ここで関数\(f\)を\(f(r, \theta, \varphi) = R(r) Y(\theta, \varphi)\)のように変数分離します。すると(1), (2)式より</p>
+
+\[Y \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 R Y + R \left\{ \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} 
+= 0\]
+
+<p>両辺に\(r^2 / (RY)\)をかけて整理します。</p>
+
+\[\frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 
+= -\frac{1}{Y} \left\{ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} \tag{3}\]
+
+<p>左辺は\(r\)のみの変数、右辺は\(\theta, \varphi\)のみの変数で構成されているので、これらは定数です。この定数を\(n(n+1)\)と置きましょう(詳細は適当な物理数学の教科書をご参照ください)。すると\(r\)だけから構成される左辺は</p>
+
+\[\frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 
+= n (n+1)\]
+
+<p>のようになります。ここで両辺に\(R / (k^2 r^2)\)をかけ、さらに\(r' = kr\)のように変数変換して式を整理すると</p>
+
+\[\frac{1}{r'^2} \frac{d}{dr'} \left( r'^2 \frac{d R}{dr'} \right) + \left( 1- \frac{n(n+1)}{r'^2}\right) R 
+= 0 \tag{4}\]
+
+<p>のようになります。(4)式は<a href="/math/sph_bessel">球ベッセル関数が満たす微分方程式(10)式</a>に一致するので\(R (kr)= j_n(kr)\)とわかります。<br />
+言わずもがな、(3)式の\(\theta, \varphi\)のみで構成される右辺の部分は<a href="/math/spherical">球面調和関数が満たす微分方程式</a>です。以上の議論から、ヘルムホルツ方程式(1)式の解は一般に</p>
+
+\[f(r, \theta, \varphi) 
+= \sum_{\ell=0}^\infty \sum_{m=-\ell}^\ell A_{\ell m} j_\ell (kr) Y_\ell^m (\theta, \varphi) \tag{5}\]
+
+<p>と記述されることがわかります。ここで\(A_{\ell m}\)は展開係数です。</p>
+
+<p class="label label-yellow">実は球ノイマン関数も(4)式も満たすので、これも含めなくてはいけません。今回は省略します。</p>
+
+<h2 id="公式の導出">公式の導出</h2>
+
+<p>\(f = e^{ikr \cos \theta}\)とすると</p>
+
+\[\nabla^2 e^{ikr \cos \theta}
+= \frac{\partial^2}{\partial r^2} e^{ikr \cos \theta} + \frac{2}{r} \frac{\partial}{\partial r} e^{ikr \cos \theta} + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta}\right) e^{ikr \cos \theta} 
+= -k^2 e^{ikr \cos \theta}\]
+
+<p>よりこの関数は(1)式を満たすので、これは(5)式のように記述できます。ただし\(f = e^{ikr \cos \theta}\)は\(\varphi\)に依存しないので、\(m \neq 0\)では\(A_{\ell m}=0\)でなければなりません。よって</p>
+
+\[e^{ikr \cos \theta} 
+= \sum_{\ell =0}^\infty A_{\ell 0} j_\ell (kr) Y_{\ell 0}\]
+
+<p>\(m=0\)での<a href="/math/spherical">球面調和関数</a>と<a href="/math/associated_legendre">ルジャンドル陪多項式</a>より</p>
+
+\[Y_{\ell 0} 
+= \sqrt{\frac{2\ell + 1}{4\pi}} P_{\ell}^0 (\cos \theta) 
+= \sqrt{\frac{2\ell + 1}{4\pi}} P_{\ell} (\cos \theta)\]
+
+<p>より</p>
+
+\[e^{ikr \cos \theta} 
+= \sum_{\ell =0}^\infty A_{\ell} j_\ell (kr) P_\ell (\cos \theta)\]
+
+<p>係数\(A_\ell\)を求めるために、<a href="/math/legendre">ルジャンドル多項式の直交性(23)式</a>を用います。</p>
+
+\[\begin{align}
+\int_{-1}^1 e^{ikr \cos \theta} P_m (\cos \theta) d \cos \theta 
+&amp;= \sum_{\ell=0}^\infty A_\ell j_\ell (kr) \int_{-1}^1 P_\ell (\cos \theta) P_m (\cos \theta) d \cos \theta 
+= \sum_{\ell=0}^\infty A_\ell j_\ell (kr) \frac{2}{2\ell + 1} \delta_{\ell m} \\
+&amp;= A_m j_m (kr) \frac{2}{2m+1} \tag{6}
+\end{align}\]
+
+<p>ここで<a href="/math/sph_bessel">球ベッセル関数の定義式</a>より</p>
+
+\[j_m (kr) 
+= \frac{\sqrt{\pi}}{2} \sum_{n=0}^\infty \frac{(-1)^n}{\Gamma (m + n + 3/2) n!} \left( \frac{kr}{2}\right)^{m + n}\]
+
+<p>ここで\(kr \rightarrow 0\)の極限を考えます。すると\(n=0\)以外の\(kr\)の高次の項を無視して</p>
+
+\[j_m (kr) 
+\simeq \frac{\sqrt{\pi}}{2} \frac{1}{\Gamma (m + 3/2)} \left( \frac{kr}{2}\right)^{m} 
+= \frac{2^m m!}{(2m + 1)!} (kr)^m\]
+
+<p>と記述されます。途中<a href="/math/gamma">半整数の階乗に関するガンマ関数の公式</a>を用いました。　　
+(6)式から係数\(A_\ell\)を求めるにあたり、(6)式において\(kr \rightarrow 0\)の極限をとった両辺に\(\frac{d^m}{d(kr)^m}\)を作用させたものを考えます。</p>
+
+\[(右辺) 
+= \frac{2 A_m}{2m + 1} \frac{d^m}{d(kr)^m} \left( \lim_{kr \rightarrow 0} j_m (kr) \right)
+= \frac{2 A_m}{2m+1} \frac{2^m m!}{(2m+1)!} m!\]
+
+\[(左辺)
+= \lim_{kr \rightarrow 0} \frac{d^m}{d(kr)^m} \int_{-1}^1 e^{ikr \cos \theta} P_m (\cos \theta) d\cos \theta 
+= \int_{-1}^1 (i \cos \theta)^m P_m (\cos \theta) d\cos \theta\]
+
+<p>ここで<a href="/math/legendre">ルジャンドル多項式の直行性を示す途中で導かれた式</a></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近藤, “改訂演習工科の数学4, 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブリー, 物理数学II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3, 物理数学I”<br />
+[4] 伊理 正夫, 藤野 和建, “数値計算の常識”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

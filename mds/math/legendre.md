@@ -355,7 +355,7 @@ $$
 \int_{-1}^1 z^m P_n(z) dz 
 = \left\{ \begin{array}{ll}
 0 & (m-nが奇数)\\
-\frac{2 m! }{(m-n)!} \frac{(m-n-1)(m-n-3) \cdots 1}{(m-n+2n+1) \cdots (m-n+1)(m-n-1) \cdots 1} & (m-nが偶数)
+\frac{2 \cdot m! }{(m-n)!} \frac{(m-n-1)(m-n-3) \cdots 1}{(m-n+2n+1) \cdots (m-n+1)(m-n-1) \cdots 1} & (m-nが偶数)
 \end{array} \right. \tag{22}
 $$
 

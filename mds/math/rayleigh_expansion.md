@@ -1,6 +1,6 @@
 ---
 layout: default
-title: レイリーの展開公式
+title: レイリーの公式
 parent: 数学
 math: mathjax3
 permalink: /math/rayleigh_expansion
@@ -20,7 +20,7 @@ nav_order: 18
 
 {% include adsense.html %}
 
-# レイリー展開の公式
+# レイリーの公式
 
 ## ヘルムホルツ方程式の解の性質
 
@@ -53,22 +53,21 @@ $$
 = -\frac{1}{Y} \left\{ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} \tag{3}
 $$
 
-左辺は$$r$$のみの変数、右辺は$$\theta, \varphi$$のみの変数で構成されているので、これらは定数です。この定数を$$n(n+1)$$と置きましょう(詳細は適当な物理数学の教科書をご参照ください)。すると$$r$$だけから構成される左辺は
+左辺は$$r$$のみの変数、右辺は$$\theta, \varphi$$のみの変数で構成されているので、これらは定数です。この定数を$$\ell (\ell+1)$$と置きましょう(詳細は適当な物理数学の教科書をご参照ください)。すると$$r$$だけから構成される左辺は
 
 $$
 \frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 
-= n (n+1)
+= \ell (\ell+1)
 $$
 
 のようになります。ここで両辺に$$R / (k^2 r^2)$$をかけ、さらに$$r' = kr$$のように変数変換して式を整理すると
 
 $$
-\frac{1}{r'^2} \frac{d}{dr'} \left( r'^2 \frac{d R}{dr'} \right) + \left( 1- \frac{n(n+1)}{r'^2}\right) R 
+\frac{1}{r'^2} \frac{d}{dr'} \left( r'^2 \frac{d R}{dr'} \right) + \left( 1- \frac{\ell(\ell+1)}{r'^2}\right) R 
 = 0 \tag{4}
 $$
 
-のようになります。(4)式は[球ベッセル関数が満たす微分方程式(10)式](/math/sph_bessel)に一致するので$$R (kr)= j_n(kr)$$とわかります。  
-言わずもがな、(3)式の$$\theta, \varphi$$のみで構成される右辺の部分は[球面調和関数が満たす微分方程式](/math/spherical)です。以上の議論から、ヘルムホルツ方程式(1)式の解は一般に
+のようになります。(4)式は[球ベッセル関数が満たす微分方程式(10)式](/math/sph_bessel)に一致するので$$R (kr)= j_\ell (kr)$$とわかります。そして(3)式の$$\theta, \varphi$$のみで構成される右辺の部分は[球面調和関数が満たす微分方程式](/math/spherical)です。以上の議論から、ヘルムホルツ方程式(1)式の解は一般に
 
 $$
 f(r, \theta, \varphi) 
@@ -77,7 +76,7 @@ $$
 
 と記述されることがわかります。ここで$$A_{\ell m}$$は展開係数です。
 
-実は球ノイマン関数も(4)式も満たすので、これも含めなくてはいけません。今回は省略します。
+実は球ノイマン関数も(4)式も満たすので、これも含めなくてはいけません。ですが今回は省略します。
 {: .label .label-yellow }
 
 ## 公式の導出
@@ -175,13 +174,11 @@ e^{ikr \cos \theta}
 = \sum_{\ell=0}^\infty i^\ell (2\ell + 1) j_\ell (kr) P_\ell (\cos \theta) \tag{7}
 $$
 
-という公式を得ます。これをレイリーの展開公式(Rayleigh's formula)と呼びます。これは波動関数をある角運動量$$\ell$$ごとに展開する方法(部分波展開)に用いられます。
+という公式を得ます。これをレイリーの公式(Rayleigh's formula)と呼びます。これは波動関数をある角運動量$$\ell$$ごとに展開する方法(部分波展開)に用いられます。
 
 # 参考文献
 
-[1] 田島, 近藤, "改訂演習工科の数学4, 複素関数"  
-[2] 中山, "裳華房フィジックスライブリー, 物理数学II"  
-[3] 福山, 小形, "基礎物理学シリーズ3, 物理数学I"  
-[4] 伊理 正夫, 藤野 和建, "数値計算の常識"  
+[1] 辻川信二, "現代の宇宙論"  
+[2] 森口繁一, 宇田川銈久, 一松信, "数学公式III 特殊関数"  
 
 {% include adsense.html %}

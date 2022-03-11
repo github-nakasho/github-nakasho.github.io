@@ -1,4 +1,4 @@
-I"�!
+I"�!
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -47,17 +47,17 @@
 \[\frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 
 = -\frac{1}{Y} \left\{ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2 Y}{\partial \varphi^2}\right\} \tag{3}\]
 
-<p>左辺は\(r\)のみの変数、右辺は\(\theta, \varphi\)のみの変数で構成されているので、これらは定数です。この定数を\(n(n+1)\)と置きましょう(詳細は適当な物理数学の教科書をご参照ください)。すると\(r\)だけから構成される左辺は</p>
+<p>左辺は\(r\)のみの変数、右辺は\(\theta, \varphi\)のみの変数で構成されているので、これらは定数です。この定数を\(\ell (\ell+1)\)と置きましょう(詳細は適当な物理数学の教科書をご参照ください)。すると\(r\)だけから構成される左辺は</p>
 
 \[\frac{r^2}{R} \left( \frac{\partial^2 R}{\partial r^2} + \frac{2}{r} \frac{\partial R}{\partial r} \right) + k^2 r^2 
-= n (n+1)\]
+= \ell (\ell+1)\]
 
 <p>のようになります。ここで両辺に\(R / (k^2 r^2)\)をかけ、さらに\(r' = kr\)のように変数変換して式を整理すると</p>
 
-\[\frac{1}{r'^2} \frac{d}{dr'} \left( r'^2 \frac{d R}{dr'} \right) + \left( 1- \frac{n(n+1)}{r'^2}\right) R 
+\[\frac{1}{r'^2} \frac{d}{dr'} \left( r'^2 \frac{d R}{dr'} \right) + \left( 1- \frac{\ell(\ell+1)}{r'^2}\right) R 
 = 0 \tag{4}\]
 
-<p>のようになります。(4)式は<a href="/math/sph_bessel">球ベッセル関数が満たす微分方程式(10)式</a>に一致するので\(R (kr)= j_n(kr)\)とわかります。<br />
+<p>のようになります。(4)式は<a href="/math/sph_bessel">球ベッセル関数が満たす微分方程式(10)式</a>に一致するので\(R (kr)= j_\ell (kr)\)とわかります。<br />
 言わずもがな、(3)式の\(\theta, \varphi\)のみで構成される右辺の部分は<a href="/math/spherical">球面調和関数が満たす微分方程式</a>です。以上の議論から、ヘルムホルツ方程式(1)式の解は一般に</p>
 
 \[f(r, \theta, \varphi) 

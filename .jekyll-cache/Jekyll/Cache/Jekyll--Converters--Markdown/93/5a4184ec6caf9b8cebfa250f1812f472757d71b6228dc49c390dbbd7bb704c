@@ -1,4 +1,4 @@
-I"C
+I";
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -28,7 +28,7 @@
 
 <h2 id="簡単な導出">簡単な導出</h2>
 
-<p><a href="/mhd/sound_wave">音波の導出部分で出てきた分散関係式(20)</a>において重力と回転を無視(\(g =0, \boldsymbol{\Omega}=\mathbf{0}\))し、さらに\(\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B\)であることを用いて整理します。</p>
+<p><a href="/mhd/sound_wave">音波の導出部分で出てきた分散関係式(20)</a>において重力と回転を無視(\(g =0, \boldsymbol{\Omega}=\mathbf{0}\))し、さらに\(\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B\)であることを用いて整理します。ここで\(\hat{\mathbf{B}}_0 = \mathbf{B}_0 / B_0\)です。</p>
 
 \[\begin{align}
 \frac{\omega^2}{v_A^2} \mathbf{v}_1 
@@ -77,7 +77,24 @@
 
 <h2 id="固有値固有ベクトルを用いた解法">固有値・固有ベクトルを用いた解法</h2>
 
-<p>しかし、上述の議論だけでは実際にこの波動伝播中の流体がどのような振る舞いをしているのかを把握することができません。よって以下では固有値・固有ベクトルの方法を用いて、この分散関係式とその固有ベクトルを求めてみましょう。</p>
+<p>しかし、上述の議論だけでは実際にこの波動伝播中の流体がどのような振る舞いをしているのかを把握することができません。よって以下では固有値・固有ベクトルの方法を用いて、この分散関係式とその固有ベクトルを求めてみましょう。(1)式より</p>
+
+\[\omega^2 \mathbf{v}_1 
+= k^2 v_A^2 \cos^2 \theta_B \mathbf{v}_1 + \{ (v_A^2 + C_s^2) (\mathbf{k} \cdot \mathbf{v}_1) -k v_A^2 \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\} \mathbf{k} - kv_A^2 \cos \theta_B (\mathbf{k} \cdot \mathbf{v}_1) \hat{\mathbf{B}}_0\]
+
+<p>今、背景磁場の方向として\(\hat{\mathbf{B}}_0\)は\(z\)方向を向いているとすると、\(\mathbf{k} \cdot \hat{\mathbf{v}}_0 = k \cos \theta_B\)より\(\mathbf{k} = (k \sin \theta_B, 0, k \cos \theta_B)\)のように書くことができます。規格化された波数ベクトルを\(\hat{\mathbf{k}} = \mathbf{k} / k\)とすると</p>
+
+\[( \omega^2 - k^2 v_A^2 \cos^2 \theta_B) \mathbf{v}_1 
+= k \{ (v_A^2 + C_s^2) (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) - v_A^2 v_{1z} \cos \theta_B \} \mathbf{k} - k^2 v_A^2 \cos \theta_B (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) \hat{\mathbf{B}}_0 
+= k^2 \{ (v_A^2 + C_s^2) v_{1x} \sin \theta_B + C_s^2 v_{1z} \cos \theta_B\} \hat{\mathbf{k}} - k^2 v_A^2 \cos \theta_B (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) \hat{\mathbf{B}}_0\]
+
+<p>以上からこれをベクトルの成分をあらわに書くと</p>
+
+\[\left( \begin{array}{c}
+(k^2 v_A^2 + k^2 C_s^2 \sin^2 \theta_B - \omega^2) v_{1x} + k^2 C_s^2 \sin \theta_B \cos \theta_B v_{1z} \\
+(k^2 v_A^2 \cos^2 \theta_B - \omega^2) v_{1y} \\
+k^2 C_s^2 \sin \theta_B \cos \theta_B v_{1x} + (k^2 C_s^2 \cos^2 \theta_B - \omega^2) v_{1z}
+\end{array} \right)\]
 
 <h1 id="参考文献">参考文献</h1>
 

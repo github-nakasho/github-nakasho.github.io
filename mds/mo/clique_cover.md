@@ -80,5 +80,6 @@ $$
 # 参考文献
 
 [1] [Lucas, 2014, "Ising formulations of many NP problems"](https://www.frontiersin.org/articles/10.3389/fphy.2014.00005/full)  
+[2] [T-Wave website, "クリーク被覆問題をD-Waveマシンで解く"](https://qard.is.tohoku.ac.jp/T-Wave/?p=434)  
 
 {% include adsense.html %}

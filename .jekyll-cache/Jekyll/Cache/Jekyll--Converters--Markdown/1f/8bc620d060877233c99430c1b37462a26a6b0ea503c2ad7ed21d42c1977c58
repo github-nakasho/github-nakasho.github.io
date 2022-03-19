@@ -1,0 +1,60 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#1次元ニューラルネットワークの万能近似定理" id="markdown-toc-1次元ニューラルネットワークの万能近似定理">1次元ニューラルネットワークの万能近似定理</a>    <ol>
+      <li><a href="#問題設定" id="markdown-toc-問題設定">問題設定</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="1次元ニューラルネットワークの万能近似定理">1次元ニューラルネットワークの万能近似定理</h1>
+
+<p>ニューラルネットワークには、どのような関数も近似して表現することができる万能近似定理(univearsal approximation theorem; 普遍性定理とも訳される)があります。以下ではこの証明を追っていきましょう。</p>
+
+<p class="label">以下の説明は”これならわかる機械学習”の4.2.1章部分を分かりやすくするために、自分なりに図の挿入や式変形などを行ったものです。</p>
+
+<h2 id="問題設定">問題設定</h2>
+
+<p>簡単のため入力はスカラー\(x\)ただ一つ、そして隠れ層(入力でも出力でもない中間層)は1層とします。</p>
+
+<p><img src="/assets/images/ml/universal_approximation_01.png" alt="" /></p>
+
+<p>すると1層目の出力は</p>
+
+\[L_i^{(1)} 
+= g(w_i^{(1)} x + b_i^{(1)}) \qquad (i \in [0, 1, \dots, n_\mathrm{unit}-1])\]
+
+<p>のようになります。ここで\(g\)はユニット部分の活性化関数です。今、問題をさらに簡単にするために活性化関数をステップ関数\(g = \sigma_\mathrm{step}\)のようにします。すると出力される値は</p>
+
+\[f(x)\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>[1] 富谷昭夫, “これならわかる機械学習”</li>
+  <li>[2] <a href="http://neuralnetworksanddeeplearning.com/chap4.html">Michael Nielsen, “Neural Networks and Deep Learning” website, Chapter 4</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

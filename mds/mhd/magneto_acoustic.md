@@ -26,7 +26,7 @@ nav_order: 11
 
 ## 簡単な導出
 
-[音波の導出部分で出てきた分散関係式(20)](/mhd/sound_wave)において重力と回転を無視($$g =0, \boldsymbol{\Omega}=\mathbf{0}$$)し、さらに$$\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B$$であることを用いて整理します。
+[音波の導出部分で出てきた分散関係式(20)](/mhd/sound_wave)において重力と回転を無視($$g =0, \boldsymbol{\Omega}=\mathbf{0}$$)し、さらに$$\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B$$であることを用いて整理します。ここで$$\hat{\mathbf{B}}_0 = \mathbf{B}_0 / B_0$$です。
 
 $$
 \begin{align}
@@ -87,8 +87,235 @@ $$
 
 ## 固有値・固有ベクトルを用いた解法
 
-しかし、上述の議論だけでは実際にこの波動伝播中の流体がどのような振る舞いをしているのかを把握することができません。よって以下では固有値・固有ベクトルの方法を用いて、この分散関係式とその固有ベクトルを求めてみましょう。
+しかし、上述の議論だけでは実際にこの波動伝播中の流体がどのような振る舞いをしているのかを把握することができません。よって以下では固有値・固有ベクトルの方法を用いて、この分散関係式とその固有ベクトルを求めてみましょう。(1)式より
 
+$$
+\omega^2 \mathbf{v}_1 
+= k^2 v_A^2 \cos^2 \theta_B \mathbf{v}_1 + \{ (v_A^2 + C_s^2) (\mathbf{k} \cdot \mathbf{v}_1) -k v_A^2 \cos \theta_B (\mathbf{v}_1 \cdot \hat{\mathbf{B}}_0)\} \mathbf{k} - kv_A^2 \cos \theta_B (\mathbf{k} \cdot \mathbf{v}_1) \hat{\mathbf{B}}_0 
+$$
+
+今、背景磁場の方向として$$\hat{\mathbf{B}}_0$$は$$z$$方向を向いているとすると、$$\mathbf{k} \cdot \hat{\mathbf{B}}_0 = k \cos \theta_B$$より$$\mathbf{k} = (k \sin \theta_B, 0, k \cos \theta_B)$$のように書くことができます。規格化された波数ベクトルを$$\hat{\mathbf{k}} = \mathbf{k} / k$$、さらに$$\mathbf{v}_1 = (v_{1x}, v_{1y}, v_{1z})$$から
+
+$$
+\begin{aligned}
+( \omega^2 - k^2 v_A^2 \cos^2 \theta_B) \mathbf{v}_1 
+&= k \{ (v_A^2 + C_s^2) (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) - v_A^2 v_{1z} \cos \theta_B \} \mathbf{k} \\
+& \qquad \qquad - k^2 v_A^2 \cos \theta_B (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) \hat{\mathbf{B}}_0 \\
+&= k^2 \{ (v_A^2 + C_s^2) v_{1x} \sin \theta_B + C_s^2 v_{1z} \cos \theta_B\} \hat{\mathbf{k}} - k^2 v_A^2 \cos \theta_B (v_{1x} \sin \theta_B + v_{1z} \cos \theta_B) \hat{\mathbf{B}}_0
+\end{aligned}
+$$
+
+以上からこれをベクトルの成分をあらわに書くと
+
+$$
+\left( \begin{array}{c}
+(k^2 v_A^2 + k^2 C_s^2 \sin^2 \theta_B - \omega^2) v_{1x} + k^2 C_s^2 \sin \theta_B \cos \theta_B v_{1z} \\
+(k^2 v_A^2 \cos^2 \theta_B - \omega^2) v_{1y} \\
+k^2 C_s^2 \sin \theta_B \cos \theta_B v_{1x} + (k^2 C_s^2 \cos^2 \theta_B - \omega^2) v_{1z}
+\end{array} \right) 
+= \mathbf{0} 
+$$
+
+これを行列を用いて書けば
+
+$$
+\left( \begin{array}{ccc}
+k^2 v_A^2 + k^2 C_s^2 \sin^2 \theta_B - \omega^2 & 0 & k^2 C_s^2 \sin \theta_B \cos \theta_B \\
+0 & k^2 v_A^2 \cos^2 \theta_B - \omega^2 & 0 \\
+k^2 C_s^2 \sin \theta_B \cos \theta_B & 0 & k^2 C_s^2 \cos^2 \theta_B - \omega^2 
+\end{array} \right) 
+\left( \begin{array}{c}
+v_{1x} \\
+v_{1y} \\
+v_{1z}
+\end{array}\right) 
+= \mathbf{0} \tag{5}
+$$
+
+この行列の形から速度の摂動は$$\mathbf{k}, \mathbf{B}_0$$の両方に垂直な方向の変動$$v_{1y}$$の横波と、$$\mathbf{k}, \mathbf{B}_0$$の張る面内での変動$$(v_{1x}, v_{1z})$$とに分けて考えることができます。
+
+### $$y$$方向
+
+$$y$$方向の速度の摂動式は
+
+$$
+(k^2 v_A^2 \cos^2 \theta_B-\omega^2) v_{1y} = 0 
+\ \Longrightarrow \ 
+\omega 
+= kv_A \cos \theta_B \tag{6}
+$$
+
+のように、[シア・アルヴェーン波](/mhd/alfven_wave)の分散関係式を得ます。
+
+### $$x, z$$方向
+
+$$y$$方向とは独立に、$$x, z$$方向について
+
+$$
+\left( \begin{array}{cc}
+k^2 v_A^2 + k^2 C_s^2 \sin^2 \theta_B - \omega^2 & k^2 C_s^2 \sin \theta_B \cos \theta_B \\
+k^2 C_s^2 \sin \theta_B \cos \theta_B & k^2 C_s^2 \cos^2 \theta_B - \omega^2
+\end{array} \right) \left( \begin{array}{c}
+v_{1x} \\
+v_{1z}
+\end{array} \right) 
+= \mathbf{0} \tag{7}
+$$
+
+任意の$$(v_{1x}, v_{1z})$$で(7)式が成り立つためには、係数行列の行列式が0になれば良いでしょう。よって
+
+$$
+\begin{aligned}
+&\left| \begin{array}{cc}
+k^2 v_A^2 + k^2 C_s^2 \sin^2 \theta_B - \omega^2 & k^2 C_s^2 \sin \theta_B \cos \theta_B \\
+k^2 C_s^2 \sin \theta_B \cos \theta_B & k^2 C_s^2 \cos^2 \theta_B - \omega^2
+\end{array} \right| \\
+&= (\omega^2 - k^2 v_A^2 - k^2 C_s^2 \sin^2 \theta_B) (\omega^2 - k^2 C_s^2 \cos^2 \theta_B) - k^4 C_s^4 \sin^2 \theta_B \cos^2 \theta_B \\
+&= \omega^4 - k^2 (v_A^2 + C_s^2) \omega^2 + k^4 v_A^2 C_s^2 \cos^2 \theta_B 
+= 0
+\end{aligned}
+$$
+
+となり、分散関係式
+
+$$
+\omega^2 
+= \frac{1}{2} k^2 \left\{ v_A^2 + C_s^2 \pm \sqrt{(v_A^2 + C_s^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}\right\} \tag{8}
+$$
+
+を得ます。これは(4)式と同じです。  
+このように分散関係式を得るのは簡単ですが、一般の磁場の大きさの場合においてこの波動中の流体の振る舞いを調べるのは簡単ではありません。よって以下ではある条件の下での(7)式の固有ベクトルを算出してみましょう。
+
+### $$C_s^2 \gg v_A^2$$(ガス圧優勢)のとき 
+
+$$\alpha \equiv v_A^2 / C_s^2$$とおくと、(8)式から
+
+$$
+\begin{aligned}
+\omega^2
+&= \frac{1}{2} k^2 C_s^2 \{ \alpha + 1 \pm \sqrt{(\alpha+1)^2 -4\alpha \cos^2 \theta_B} \} 
+\underbrace{\simeq}_{\alpha^2 \sim 0} \frac{1}{2} k^2 C_s^2 \{ \alpha + 1 \pm \sqrt{1 + 2\alpha -4\alpha \cos^2 \theta_B} \} \\
+&\underbrace{\simeq}_{テイラー展開} \frac{1}{2} k^2 C_s^2 [\alpha + 1 \pm \{ 1+ (1-2 \cos^2 \theta_B) \alpha \}]
+\end{aligned}
+$$
+
+**(i). 速い磁気音波**
+
+ここで$$\pm$$部分で$$+$$(速い磁気音波)を考えると
+
+$$
+\omega_+^2 
+= k^2 C_s^2 (1+\alpha \sin^2 \theta_B)
+$$
+
+となります。ここから、(7)式の両辺を$$k^2 C_s^2$$で割ると
+
+$$
+\begin{aligned}
+\left( \begin{array}{cc}
+\alpha + \sin^2 \theta_B - \frac{\omega^2}{k^2 C_s^2} & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & \cos^2 \theta_B - \frac{\omega^2}{k^2 C_s^2}
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+&= \left( \begin{array}{cc}
+\alpha + \sin^2 \theta_B - 1-\alpha \sin^2 \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & \cos^2 \theta_B - 1-\alpha \sin^2 \theta_B
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) \\
+&= \left( \begin{array}{cc}
+- (1-\alpha) \cos^2 \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & - (1+\alpha) \sin^2 \theta_B
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+= \mathbf{0}
+\end{aligned}
+$$
+
+以上の連立方程式から
+
+$$
+\frac{v_{1x}}{v_{1z}} 
+= (1+\alpha) \tan \theta_B \ \Longrightarrow \ 
+\mathbf{v}_1 
+= v_{1} ((1+\alpha)\sin \theta_B, \cos \theta_B)
+$$
+
+ここで$$v_{1} = \\|\mathbf{v}_1\\|$$としました。これより
+
+$$
+\mathbf{v}_1 \cdot \mathbf{k} 
+= v_{1} k (1+\alpha \sin \theta_B) \tag{9}
+$$
+
+$$\alpha \ll 1$$から、(9)式は必ず正の値を取ります。波の進行方向を表す波数ベクトルと流体の速度ベクトルが同じ向きであることから、この場合の速い磁気音波は縦波的(音波的)であるとわかります。
+
+**(ii). 遅い磁気音波**
+
+同様に$$\pm$$で$$-$$(遅い磁気音波)を考えましょう。
+
+$$
+\omega_-^2 
+= k^2 C_s^2 \alpha \cos^2 \theta_B
+$$
+
+です。よって
+
+$$
+\begin{aligned}
+\left( \begin{array}{cc}
+\alpha + \sin^2 \theta_B - \frac{\omega^2}{k^2 C_s^2} & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & \cos^2 \theta_B - \frac{\omega^2}{k^2 C_s^2}
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+&= \left( \begin{array}{cc}
+\alpha + \sin^2 \theta_B - \alpha \cos^2 \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & \cos^2 \theta_B - \alpha \cos^2 \theta_B
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) \\
+&= \left( \begin{array}{cc}
+(1+\alpha) \sin^2 \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B \cos \theta_B & (1-\alpha) \cos^2 \theta_B
+\end{array} \right) 
+\left(\begin{array}{c} 
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+= \mathbf{0}
+\end{aligned}
+$$
+
+となります。以上の連立方程式から
+
+$$
+\frac{v_{1x}}{v_{1z}} 
+= - (1-\alpha) \cot \theta_B \ \Longrightarrow \ 
+\mathbf{v}_1 
+= v_1 (-(1-\alpha) \cos \theta_B, \sin \theta_B)
+$$
+
+これより
+
+$$
+\mathbf{v}_1 \cdot \mathbf{k} 
+= v_1 k \alpha \sin \theta_B \cos \theta_B 
+$$
+
+今、$$\alpha \ll 1$$よりこの値は十分に小さく、よって$$C_s^2 \gg v_A^2$$の極限では遅い磁気音波は横波的であることがわかります。
 
 # 参考文献
 

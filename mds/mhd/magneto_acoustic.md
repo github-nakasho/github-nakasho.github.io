@@ -186,6 +186,8 @@ $$
 を得ます。これは(4)式と同じです。  
 このように分散関係式を得るのは簡単ですが、一般の磁場の大きさの場合においてこの波動中の流体の振る舞いを調べるのは簡単ではありません。よって以下ではある条件の下での(7)式の固有ベクトルを算出してみましょう。
 
+{% include adsense.html %} 
+
 ### $$C_s^2 \gg v_A^2$$(ガス圧優勢)のとき 
 
 $$\alpha \equiv v_A^2 / C_s^2$$とおくと、(8)式から
@@ -316,6 +318,273 @@ $$
 $$
 
 今、$$\alpha \ll 1$$よりこの値は十分に小さく、よって$$C_s^2 \gg v_A^2$$の極限では遅い磁気音波は横波的であることがわかります。
+
+### $$C_s = v_A$$(ガス圧と磁気圧が同程度)のとき 
+
+(8)式より
+
+$$
+\omega^2 
+= \frac{1}{2} k^2 v_A^2 (2 \pm \sqrt{4-4\cos^2 \theta_B}) 
+= k^2 v_A^2 (1 \pm \sin \theta_B) 
+$$
+
+**(i). 速い磁気音波**
+
+速い磁気音波の場合は
+
+$$
+\omega^2_+ 
+= k^2 v_A^2 (1+\sin \theta_B)
+$$
+
+より、(7)式から
+
+$$
+\left( \begin{array}{cc}
+\sin^2 \theta_B - \sin \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B & - \sin^2 \theta_B - \sin \theta_B
+\end{array} \right) 
+\left( \begin{array}{c}
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+= \mathbf{0}
+$$
+
+となります。これより
+
+$$
+\frac{v_{1x}}{v_{1z}} 
+= \frac{\cos \theta_B}{1-\sin \theta_B} 
+= \frac{1 + \sin \theta_B}{\cos \theta_B}
+$$
+
+**(ii). 遅い磁気音波**
+
+遅い磁気音波の場合は
+
+$$
+\omega^2_- 
+= k^2 v_A^2 (1-\sin \theta_B)
+$$
+
+より、(7)式から
+
+$$
+\left( \begin{array}{cc}
+\sin^2 \theta_B + \sin \theta_B & \sin \theta_B \cos \theta_B \\
+\sin \theta_B & - \sin^2 \theta_B + \sin \theta_B
+\end{array} \right) 
+\left( \begin{array}{c}
+v_{1x} \\
+v_{1z} 
+\end{array}\right) 
+= \mathbf{0}
+$$
+
+となります。これより
+
+$$
+\frac{v_{1x}}{v_{1z}} 
+= - \frac{\cos \theta_B}{1+\sin \theta_B} 
+= - \frac{1 - \sin \theta_B}{\cos \theta_B}
+$$
+
+この場合はどの角度かによって$$v_{1x} / v_{1z}$$の値、すなわち$$\mathbf{k} \cdot \mathbf{v}_1$$の結果が変化します。よってこのままでは速い磁気音波・遅い磁気音波共に縦波か横波かを判断することが困難です。よって2つの極限でそれを考えてみましょう。  
+
+$$\theta_B \rightarrow 0$$のとき、すなわち$$z$$方向に波が進行するとき
+
+$$
+\left\{ \begin{array}{l}
+速い磁気音波: \mathbf{v}_{1f} 
+= v_{1} (1, 1)\\
+遅い磁気音波: \mathbf{v}_{1s} 
+= v_1 (-1, 1)
+\end{array} \right. \ \Longrightarrow \ 
+\left\{ \begin{array}{l}
+\mathbf{k} \cdot \mathbf{v}_{1f} 
+= v_1 k \\
+\mathbf{k} \cdot \mathbf{v}_{1s} 
+= v_1 k 
+\end{array} \right.
+$$
+
+となり、どちらも縦波とわかります。次は$$\theta_B \rightarrow \pi/2$$のとき、すなわち$$x$$方向に波が進行するときについてです。
+
+$$
+\left\{ \begin{array}{l}
+速い磁気音波: \mathbf{v}_{1f} 
+= v_1 (1, 0)\\
+遅い磁気音波: \mathbf{v}_{1s} 
+= v_1 (0, 1)
+\end{array} \right. \ \Longrightarrow \ 
+\left\{ \begin{array}{l}
+\mathbf{k} \cdot \mathbf{v}_{1f} 
+= v_1 k \\
+\mathbf{k} \cdot \mathbf{v}_{1s} 
+= 0 
+\end{array} \right.
+$$
+
+となり、速い磁気音波は縦波、そして遅い磁気音波は横波です。
+
+### $$C_s^2 \ll v_A^2$$(磁気圧優勢)のとき 
+
+今度は$$\beta \equiv \frac{C_s^2}{v_A^2}$$のようにおくと、(8)式より
+
+$$
+\begin{aligned}
+\frac{\omega^2}{k^2 v_A^2} 
+&= \frac{1}{2} (1+\beta \pm \sqrt{(1+\beta)^2 - 4\beta \cos^2 \theta_B}) 
+\underbrace{\simeq}_{\beta^2 \sim 0} \frac{1}{2} (1+\beta \pm \sqrt{1+ 2\beta (1-2 \cos^2 \theta_B)}) \\
+&\underbrace{\simeq}_{テイラー展開} \frac{1}{2} [ 1+\beta \pm \{1+ (1-2\cos^2 \theta_B) \beta\} ]
+\end{aligned}
+$$
+
+さらに(7)式の両辺を$$k^2 v_A^2$$で割ったものから
+
+$$
+\left( \begin{array}{cc} 
+1 + \beta \sin^2 \theta_B - \frac{\omega^2}{k^2 v_A^2} & \beta \sin \theta_B \cos \theta_B \\
+\beta \sin \theta_B \cos \theta_B & \beta \cos^2 \theta_B - \frac{\omega^2}{k^2 v_A^2} 
+\end{array}\right) \left( \begin{array}{c}
+v_{1x} \\
+v_{1z}
+\end{array} \right) 
+= \mathbf{0}
+$$
+
+磁気圧が優勢の場合の固有ベクトルを求めることは至難の技です。というのも、理想磁気流体においては[磁束凍結定理](/mhd/induction)から、流体要素の運動は磁場に沿った方向に大きく制限されます。このため、流体の速度が波の進行方向に関係するかどうかは定かではありません。よってここでは固有ベクトルを求めずに
+
+$$
+\left( 1+\beta \sin^2 \theta_B - \frac{\omega^2}{k^2 v_A^2}\right) v_{1x} + \alpha \sin \theta_B \cos \theta_B v_{1z} 
+= 0 \ \Longrightarrow \ 
+\frac{v_{1x}}{v_{1z}} 
+= \frac{\beta \sin \theta_B \cos \theta_B}{\frac{\omega^2}{k^2 v_A^2} - 1 - \beta \sin^2 \theta_B}
+$$
+
+から波動の様子を見てみましょう。
+
+**(i). 速い磁気音波**
+
+$$
+\frac{\omega_+^2}{k^2 v_A^2} 
+= 1 + \beta \sin^2 \theta_B
+$$
+
+の場合、$$v_{1x} / v_{1z} \rightarrow \infty$$となります。すなわち$$v_{1x} = v_1, v_{1z} = 0$$となります。これは$$z$$方向磁場に対して垂直な方向にのみ流体が動くことを示しています。このことから$$\theta_B = 0$$では横波、$$\theta_B= \pi/2$$では縦波となることを意味します。
+
+**(ii). 遅い磁気音波**
+
+$$
+\frac{\omega_-^2}{k^2 v_A^2} 
+= \beta \cos^2 \theta_B
+$$
+
+の場合
+
+$$
+\frac{v_{1x}}{v_{1z}} 
+= \frac{\beta \sin \theta_B \cos \theta_B}{\beta \cos^2 \theta_B - 1 - \beta \sin^2 \theta_B} 
+\ll 1
+$$
+
+となります。すなわち$$v_{1x} = 0, v_{1z} = v_1$$となります。これは$$z$$方向に磁場に対して平行な方向にのみ流体が動くことを示しています。このことから$$\theta_B = 0$$では縦波、$$\theta_B = \pi/2$$では横波となることを意味します。  
+
+長くなりましたが、磁場が弱いときと強いとき、さらには伝播方向の違いで、同一のモードであるにもかかわらず縦波(音波的振動)と横波(アルヴェーン的振動)との入れ替わりが起こることがわかります。これまでの議論をまとめると以下の図に集約されます。
+
+![](/assets/images/mhd/magneto_acoustic_002.png)
+
+{% include adsense.html %} 
+
+## $$C_s \gg v_A$$の場合の物理的解釈
+
+### 速い磁気音波
+
+この状況では速い磁気音波は音波によって駆動されていると考えることができます。このとき、磁場に沿った方向は音波そのままです。しかし、磁場に垂直な方向への波動は、音波の振動から磁場も同じように振動をします。すると下図のように磁力線が密の部分が形成されます。これにより生じる磁気圧勾配力と、音波による圧縮で生じるガス圧勾配力が協力することで、大きな復元力が生まれます。これが速い磁気音波の位相速度が磁場に垂直な方向に大きくなる理由です。
+
+![](/assets/images/mhd/magneto_acoustic_003.png)
+
+### 遅い磁気音波
+
+この状況では遅い磁気音波は横波のアルヴェーン波によって駆動されていると考えることができます。このとき、磁場に沿った方向はアルヴェーン波そのままです。しかし、磁場に垂直な方向へは、磁気張力による(ゴム紐のような)振動は伝播することができません。これが遅い磁気音波の位相速度が磁場に垂直な方向ではゼロになる理由です。
+
+## $$C_s \ll v_A$$の場合の物理的解釈
+
+### 速い磁気音波
+
+この状況では速い磁気音波はアルヴェーン波によって駆動されていると考えることができます。このとき、磁場に沿った方向は横波のアルヴェーン波、そして磁場に垂直な方向へは磁気圧勾配力を復元力とするアルヴェーン波が伝播します。しかし先程と同様に、磁力線が密の部分が作られると同時にガスも圧縮を受けます。磁気圧勾配力で伝播するアルヴェーン波と、それによって生じるガス圧縮によるガス圧勾配力の協力が起きることで、速い磁気音波として波動が伝播します。
+
+### 遅い磁気音波
+
+この状況では遅い磁気音波は音波によって駆動されていると考えることができます。このとき、磁場に沿った方向は音波そのままです。しかし、磁場に垂直な方向への音波の伝播を考えると、今は磁場が強力な場合を考えているため、(まるで磁場の檻に閉じ込められているかのように)流体要素は磁場を横切る方向に振動をすることができません。よってこの場合も遅い磁気音波は、磁場に垂直な方向に伝播することができず、位相速度がゼロとなることがわかります。
+
+## 遅い磁気音波の磁場に沿った方向の位相速度の$$\theta_B \rightarrow \pi/2$$極限
+
+再び(8)式に戻りましょう。ここから遅い磁気音波に対して、その位相速度の磁場に沿った成分を考えると
+
+$$
+\frac{\omega^2_-}{k^2 \cos^2 \theta_B} 
+= \frac{C_s^2 + v_A^2 - \sqrt{(C_s^2 + v_A^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}}{2 \cos^2 \theta_B}
+$$
+
+これの$$\theta_B \rightarrow \pi/2$$極限を考えましょう。これまでの議論から考えると$$\theta_B = \pi/2$$の方向へは遅い磁気音波は伝播しないことになっています。しかし、以下のように厳密に計算すると、磁場に沿った成分が極限として残ります。ロピタルの定理より
+
+$$
+\begin{aligned}
+\lim_{\theta_B \rightarrow \pi/2} \frac{\omega^2_-}{k^2 \cos^2 \theta_B} 
+&= \lim_{\theta_B \rightarrow \pi/2} \frac{- \frac{8C_s^2 v_A^2 \sin \theta_B \cos \theta_B}{\sqrt{(C_s^2+ v_A^2)^2 -4C_s^2 v_A^2 \cos^2 \theta_B}}}{-4 \sin \theta_B \cos \theta_B} 
+= \lim_{\theta_B \rightarrow \pi/2} \frac{C_s^2 v_A^2 \sin 2\theta_B}{\sin 2\theta_B \sqrt{(C_s^2+ v_A^2)^2 -4C_s^2 v_A^2 \cos^2 \theta_B}} \\
+&= \frac{C_s^2 v_A^2}{C_s^2 + v_A^2}
+\end{aligned}
+$$
+
+のようになります。これは破面がつまっていくことにより、それを射影した成分が0ではなく有限の値となることを意味しています。
+
+## 群速度
+
+最後に群速度を計算しましょう。その定義から
+
+$$
+\mathbf{v}_g 
+= \frac{\partial \omega}{\partial \mathbf{k}} 
+= \frac{\partial \omega}{\partial k} \mathbf{e}_k + \frac{1}{k} \frac{\partial \omega}{\partial \theta_B} \mathbf{e}_{\theta_B}
+$$
+
+(8)式より$$\omega \propto k$$から、第1項はそのまま位相速度$$v_p$$になります。第2項の計算は以下のようにして行います。
+
+$$
+\frac{1}{k^2} \frac{\partial \omega^2}{\partial \theta_B} 
+= \frac{2 \omega}{k^2} \frac{\partial \omega}{\partial \theta_B} 
+= \pm \frac{1}{4} \frac{8 C_s^2 v_A^2 \cos \theta_B \sin \theta_B}{\sqrt{(C_s^2 + v_A^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}}
+$$
+
+ここから
+
+$$
+\frac{1}{k} \frac{\partial \omega}{\partial \theta_B} 
+= \frac{k}{\omega} \frac{\pm C_s^2 v_A^2 \cos \theta_B \sin \theta_B}{\sqrt{(C_s^2 + v_A^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}} 
+= \pm \frac{k \cos \theta_B}{\omega} \frac{C_s^2 v_A^2 \sin \theta_B}{\sqrt{(C_s^2 + v_A^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}}
+$$
+
+以上より
+
+$$
+\mathbf{v}_g 
+= v_p \mathbf{e}_k \pm \frac{k \cos \theta_B}{\omega} \frac{C_s^2 v_A^2 \sin \theta_B}{\sqrt{(C_s^2 + v_A^2)^2 - 4 C_s^2 v_A^2 \cos^2 \theta_B}} \mathbf{e}_{\theta_B} \tag{10}
+$$
+
+です。速い磁気音波では$$k/\omega = v_p^{-1}$$はどの$$\theta_B$$方向においても有限の値を持ちます。しかし遅い磁気音波では$$\theta_B \rightarrow \pi/2$$の極限で$$v_p \rightarrow 0, \frac{k \cos \theta_B}{\omega} \rightarrow \frac{\sqrt{C_s^2 + v_A^2}}{C_s v_A}$$のようになるため、特別な値となります。最終的に
+
+$$
+c_T = \frac{C_s v_A}{\sqrt{C_s^2+ v_A^2}} \tag{11}
+$$
+
+のようになり、これをカスプ速度(cusp speed)と呼びます。  
+群速度を図示したものを以下に示します。
+
+![](/assets/images/mhd/magneto_acoustic_004.png)
 
 # 参考文献
 

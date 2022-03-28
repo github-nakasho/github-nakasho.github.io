@@ -590,6 +590,7 @@ $$
 
 [1] Priest, "Solar Magnetohydrodynamics"  
 [2] 観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"  
+[3] 加藤正二, "天体物理学基礎理論"
 
 {% include adsense.html %} 
 

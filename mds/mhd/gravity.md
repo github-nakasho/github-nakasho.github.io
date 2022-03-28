@@ -91,7 +91,7 @@ $$
 
 $$
 g (\delta \rho_0 - \delta \rho) 
-= g\left( \frac{d\rho_0}{dz} + \frac{\rho_0 g}{C_s^2} \right) \delta z 
+= g\left( \frac{1}{\rho_0} \frac{d\rho_0}{dz} + \frac{g}{C_s^2} \right) \delta z 
 = - N^2 \rho_0 \delta z \tag{6}
 $$
 

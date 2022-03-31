@@ -6409,7 +6409,7 @@
   },"1068": {
     "doc": "スピンダウンによる中性子星の年齢推定",
     "title": "回転する中性子星からの放射",
-    "content": "下図のように強磁場を持つ中性子星を磁気モーメントに置き換えて考えます。回転軸に対して\\(\\alpha\\)だけ傾いた中性子星が角速度\\(\\Omega\\)で回転していると考えましょう。その磁気モーメントは、回転軸を\\(z\\)軸に取ると . \\[\\mathbf{m} = m (\\mathbf{e}_x \\sin \\alpha \\cos \\Omega t + \\mathbf{e}_y \\sin \\alpha \\sin \\Omega t + \\mathbf{e}_z \\cos \\alpha)\\] のように書けます。ここで\\(m\\)は磁気モーメントの大きさで、この大きさは時間変化しないとします。これより . \\[\\ddot{\\mathbf{m}} = - m \\Omega^2 (\\mathbf{e}_x \\sin \\alpha \\cos \\Omega t + \\mathbf{e}_y \\sin \\alpha \\sin \\Omega t) \\tag{2}\\] (1), (2)式より . \\[P_m = \\frac{2}{3c^3} \\Omega^4 m^2 \\sin^2 \\alpha \\tag{3}\\] ",
+    "content": "下図のように強磁場を持つ中性子星を磁気モーメントに置き換えて考えます。 . 回転軸に対して\\(\\alpha\\)だけ傾いた中性子星が角速度\\(\\Omega\\)で回転していると考えましょう。その磁気モーメントは、回転軸を\\(z\\)軸に取ると . \\[\\mathbf{m} = m (\\mathbf{e}_x \\sin \\alpha \\cos \\Omega t + \\mathbf{e}_y \\sin \\alpha \\sin \\Omega t + \\mathbf{e}_z \\cos \\alpha)\\] のように書けます。ここで\\(m\\)は磁気モーメントの大きさで、この大きさは時間変化しないとします。これより . \\[\\ddot{\\mathbf{m}} = - m \\Omega^2 (\\mathbf{e}_x \\sin \\alpha \\cos \\Omega t + \\mathbf{e}_y \\sin \\alpha \\sin \\Omega t) \\tag{2}\\] (1), (2)式より . \\[P_m = \\frac{2}{3c^3} \\Omega^4 m^2 \\sin^2 \\alpha \\tag{3}\\] ",
     "url": "http://localhost:4000/compact/spin_down#%E5%9B%9E%E8%BB%A2%E3%81%99%E3%82%8B%E4%B8%AD%E6%80%A7%E5%AD%90%E6%98%9F%E3%81%8B%E3%82%89%E3%81%AE%E6%94%BE%E5%B0%84",
     "relUrl": "/compact/spin_down#回転する中性子星からの放射"
   },"1069": {

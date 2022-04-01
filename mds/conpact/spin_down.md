@@ -43,7 +43,7 @@ $$
 ここから磁気モーメント$$\mathbf{m}$$が時間変化することによる放射を考えます。それは実は$$\mathbf{d} \rightarrow \mathbf{m}$$のように置き換えたものに等しく
 
 $$
-P_e 
+P_m
 = \frac{2}{3c^3} \ddot{\mathbf{m}}^2 \tag{1}
 $$
 

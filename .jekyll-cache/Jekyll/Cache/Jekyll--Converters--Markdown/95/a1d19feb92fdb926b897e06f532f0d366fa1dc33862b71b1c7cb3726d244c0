@@ -1,0 +1,178 @@
+I"�#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力レンズ" id="markdown-toc-重力レンズ">重力レンズ</a>    <ol>
+      <li><a href="#簡単な導出" id="markdown-toc-簡単な導出">簡単な導出</a></li>
+      <li><a href="#厳密な導出" id="markdown-toc-厳密な導出">厳密な導出</a></li>
+      <li><a href="#屈折角の方程式" id="markdown-toc-屈折角の方程式">屈折角の方程式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力レンズ">重力レンズ</h1>
+
+<p>ここでは弱い重力場の極限での光の測地線方程式の空間成分から、重力レンズ効果を導出してみましょう。</p>
+
+<h2 id="簡単な導出">簡単な導出</h2>
+
+<p>メトリックテンソルが弱重力場極限</p>
+
+\[(g^{\mu \nu}) 
+= \left( 
+\begin{array}{cccc}
+-(1-2\Phi / c^2) &amp; &amp; &amp; {\bf 0}\\
+&amp; 1+2\Phi/c^2 &amp; &amp; \\
+&amp; &amp; 1+2\Phi/c^2 &amp; \\
+{\bf 0} &amp; &amp; &amp; 1+2\Phi/c^2
+\end{array}
+\right)\]
+
+<p>で書けるものとします。次に4元共変波数ベクトルを\((k_0, k_1, 0, 0)\)のようにして、光の進行方向を\(x^1\)方向にとります。</p>
+
+\[k^0 = \frac{\partial \bar{x}^0}{\partial x^0}\bar{k}^0 
+= -(1+ \frac{\Phi}{c^2}) \frac{\omega}{c}\]
+
+\[k^1 = \frac{\partial \bar{x}^1}{\partial x^1}\bar{k}^1 
+= (1- \frac{\Phi}{c^2}) k\]
+
+<p>ここで\(k^0 = \eta_{00} k^0 = -\omega /c\)です。時刻\(t\)に位置\(x\)にあった波面が微小時間\(dt\)後に\(x+dx\)に移動したとしましょう。位相一定面\(k^\mu x_\mu = {\rm Const.}\)の方程式は</p>
+
+\[k_0 ct + k_1 x = k_0 c(t+dt) + k_1(x+dx)\]
+
+<p>となります。この式から同位相面が伝搬する速度すなわち位相速度が微小量の一次までの式を構築すると以下のように計算できます。</p>
+
+\[v_p 
+= \frac{dx}{dt} = -c\frac{k_0}{k_1} 
+=(1+\frac{2\Phi}{c^2}) \frac{\omega}{k}\]
+
+<p>最後の式の右辺の\(\omega/k\)は局所慣性系での光の位相速度\(c\)です。よってこの式は、重力場の存在は屈折率</p>
+
+\[n = 1-\frac{2\Phi}{c^2} &gt; 1\]
+
+<p>の媒質と同じ役割を果たすことを意味します。</p>
+
+<p><img src="/assets/images/gr/lensing.png" alt="重力レンズによる光の屈折図" /></p>
+
+<h2 id="厳密な導出">厳密な導出</h2>
+
+<p>メトリックテンソルは上述と同じもので与えられ、\(\Phi\)は時間に陽に依存しないとします。光の4元運動量の空間成分は</p>
+
+\[p^i 
+= \frac{dx^i}{d\lambda} 
+= \frac{dx^0}{d\lambda} \frac{dx^i}{dx^0} 
+= p^0 \gamma^i\]
+
+<p>ここで\(\gamma^i = dx^i / dx^0\)で定義される3次元ベクトル\(\boldsymbol{\gamma}\)は光の進行方向を表すベクトルです。重力場が存在しない時の進行方向ベクトルを\(\bar{\gamma}^i\)とし、重力場の存在によって変更を受けた光の進行方向を\(\delta \gamma^i\)と表現します。\(\delta \gamma^i\)は\(|\Phi/c^2|\)と同じオーダーの微小量です。<br />
+測地線方程式の空間成分より</p>
+
+\[\frac{1}{c} \frac{dp_i}{dt} 
+= \frac{1}{2p^0} (p^0 p^0 g_{00, i} + p^j p^k g_{jk, i})
+= -\frac{p^0}{c^2} (\Phi_{, i} + \underbrace{\delta_{jk} \bar{\gamma}^j \bar{\gamma}^k}_{=1} \Phi_{, i}) 
+= -\frac{2h\nu}{c^3} \Phi_{, i} \tag{1}\]
+
+<blockquote>
+  <p>途中の式は、慣性系では</p>
+
+\[0 
+= \eta_{\mu \nu} \bar{p}^\mu \bar{p}^\nu
+= \eta_{\mu \nu} \frac{d\bar{x}^\mu}{d\lambda} \frac{d\bar{x}^\nu}{d\lambda}
+= -\left( \frac{d\bar{x}^0}{d\lambda}\right)^2 + \delta_{ij} \frac{d\bar{x}^0}{d\lambda} \frac{d\bar{x}^i}{d \bar{x}^0} \frac{d\bar{x}^0}{d\lambda} \frac{d\bar{x}^j}{d\bar{x}^0}
+= \left( \frac{d\bar{x}^0}{d\lambda} \right)^2 (-1 + \delta_{ij} \bar{\gamma}^i \bar{\gamma}^j)\]
+
+  <p>となることから証明されます。</p>
+</blockquote>
+
+<p>ここで</p>
+
+\[p^0 = (1-\frac{\Phi}{c^2}) \frac{h\nu}{c}\]
+
+\[p_i 
+= g_{ij} p^j 
+= (1-\frac{3 \Phi}{c^2}) \frac{h\nu}{c} (\bar{\gamma}^i + \delta \gamma^i) 
+= ((1+ \frac{\Phi}{c^2}) \frac{h\nu}{c}-\frac{4}{c^2} \Phi \frac{h\nu}{c} ) (\bar{\gamma}^i + \delta \gamma^i)\]
+
+<p>です。以上をまとめると</p>
+
+\[\frac{1}{c} \frac{dp_i}{dt} 
+= -\frac{4}{c^2} \bar{\gamma}^i \frac{h\nu}{c} \frac{d\Phi}{dt} + \frac{h\nu}{c} \frac{d \delta \gamma^i}{dt}\]
+
+<p>ここで</p>
+
+\[\frac{d \bar{\gamma}^i}{dt} = 0\]
+
+<p>すなわち0次の光の進行方向は時間変化しないこと、そして光子のエネルギー変化は微小量の1次であることから</p>
+
+\[\frac{d}{dt} ((\Phi)h\nu) 
+= h\nu \frac{d\Phi}{dt}, \ 
+\frac{d}{dt} ((\Phi)h\nu) 
+= h\nu \frac{d\Phi}{dt}\]
+
+<p>と近似できること、さらに重力赤方偏移の式から</p>
+
+\[h\nu (1+\frac{1}{c^2} \frac{\Phi}{dt}) 
+= \frac{2h\nu}{c^2} \frac{\partial \Phi}{\partial t}
+\underbrace{=}_{時間に陽に依存しない} \frac{2h\nu}{c^2} \frac{d \Phi}{d t}\]
+
+<p>より</p>
+
+\[\frac{1}{c} \frac{dp_i}{dt} 
+= -\frac{4}{c^2} \bar{\gamma}^i \frac{h\nu}{c} \frac{d\Phi}{dt} + \frac{h\nu}{c} \frac{d \delta \gamma^i}{dt} 
+= -\frac{4}{c^2} \bar{\gamma}^i \bar{\gamma}^k \frac{h\nu}{c} \Phi_{, k} + \frac{h\nu}{c} \frac{d \delta \gamma^i}{dt} \tag{2}\]
+
+<p>(1), (2)式を比較して</p>
+
+\[\frac{1}{c} \frac{d \delta \gamma^i}{dt} 
+= -\frac{2}{c^2} \Phi_{, i} + 4 \frac{\bar{\gamma}^k}{c} \Phi_{, k} \bar{\gamma}^i \tag{3}\]
+
+<p>を得ます。</p>
+
+<h2 id="屈折角の方程式">屈折角の方程式</h2>
+
+<p>重力場中の光の進行方向を決定する上の方程式をさらに整理して、重力レンズ効果による屈折角を決定する方程式を導出してみましょう。<br />
+\(\boldsymbol{\gamma}\)に直交する単位ベクトルを\(\boldsymbol{\gamma}_{\perp, 1}\)、さらにこの両方に直交する単位ベクトルを\(\boldsymbol{\gamma}_{\perp, 2}\)とします。\(\delta \boldsymbol{\gamma}\)を0次の光の進路に平行な成分\(\delta \gamma_{\parallel}\)とそれに垂直な成分\(\delta \gamma_{\perp, 1}, \delta \gamma_{\perp, 2}\)として、以下のように分解します。</p>
+
+\[\delta \gamma_\parallel = \boldsymbol{\gamma} \cdot \delta \boldsymbol{\gamma}\]
+
+\[\delta \gamma_{\perp, 1} = \boldsymbol{\gamma}_{\perp, 1} \cdot \delta \boldsymbol{\gamma}\]
+
+\[\delta \gamma_{\perp, 2} = \boldsymbol{\gamma}_{\perp, 2} \cdot \delta \boldsymbol{\gamma}\]
+
+<p>これらを用いて、重力場の存在による光の進行方向の変化を記述する方程式(3)に\(\bar{\gamma}^i, \bar{\gamma}^i_{\perp, 1}, \bar{\gamma}^i_{\perp, 2}\)をそれぞれかけて\(i\)で縮約をとり、(3)式を</p>
+
+\[\frac{1}{c} \frac{d \delta \gamma_\parallel}{dt} 
+= -\frac{2}{c^2} \bar{\gamma}^i \Phi_{, i} + 4 \frac{\bar{\gamma}^k}{c} \Phi_{, k}\]
+
+\[\frac{1}{c} \frac{d \delta \boldsymbol{\gamma}_\perp}{dt} 
+= -\frac{2}{c^2} \nabla_{\perp} \Phi \tag{4}\]
+
+<p>ここで\(\delta \boldsymbol{\gamma}_\perp = \delta \gamma_{\perp, 1} \boldsymbol{\gamma}_{\perp, 1} + \delta \gamma_{\perp, 2} \boldsymbol{\gamma}_{\perp, 2}\)です。また\(\nabla_\perp\)は光の0次の経路に垂直な方向への勾配を表しています。<br />
+(4)式が光の進行方向がどのように曲がるかを記述する方程式です。これを0次の光の経路に沿って積分することにより</p>
+
+\[\boldsymbol{\gamma}_\perp 
+= -\int d\ell \frac{2}{c^2} \nabla_{\perp} \Phi\]
+
+<p>これらの結果は、光が伝搬する途中に存在する天体の重力によって、進行方向と垂直な方向に力を受けて光の進行方向が曲がることを示しています。これを<strong>重力レンズ効果</strong>と呼びます。\(\alpha = |\boldsymbol{\gamma}_\perp |\)は光の進行方向が正味曲がった角度を表しており、これを<strong>曲がり角(deflection angle)</strong>と呼びます。<br />
+重力レンズの式は光の波長に依存しないため、重力レンズ効果による天体の見え方も波長に依存しないことがわかります。<br />
+多くの天体の重力レンズ効果により曲がり角は非常に小さく、大きくても\(10^{-4}\)ラジアン程度です。したがって重力レンズによる曲がりが小さいとした上述の積分はよい近似になっていることがわかります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,79 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#quantum-annealing-for-you-03" id="markdown-toc-quantum-annealing-for-you-03">Quantum annealing for you 03</a>    <ol>
+      <li><a href="#ポートフォリオ最適化" id="markdown-toc-ポートフォリオ最適化">ポートフォリオ最適化</a>        <ol>
+          <li><a href="#株価データの読み込み" id="markdown-toc-株価データの読み込み">株価データの読み込み</a></li>
+          <li><a href="#株価データとその計算結果の送受信" id="markdown-toc-株価データとその計算結果の送受信">株価データとその計算結果の送受信</a></li>
+          <li><a href="#共分散行列" id="markdown-toc-共分散行列">共分散行列</a></li>
+          <li><a href="#ポートフォリオ最適化の未定乗数" id="markdown-toc-ポートフォリオ最適化の未定乗数">ポートフォリオ最適化の未定乗数</a></li>
+        </ol>
+      </li>
+      <li><a href="#選択からグループ分けする問題" id="markdown-toc-選択からグループ分けする問題">選択からグループ分けする問題</a></li>
+      <li><a href="#量子アニーリングが使えるところ" id="markdown-toc-量子アニーリングが使えるところ">量子アニーリングが使えるところ</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="quantum-annealing-for-you-03">Quantum annealing for you 03</h1>
+
+<h2 id="ポートフォリオ最適化">ポートフォリオ最適化</h2>
+
+<h3 id="株価データの読み込み">株価データの読み込み</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas_datareader.stooq</span> <span class="k">as</span> <span class="n">stooq</span>
+</code></pre></div></div>
+
+<h3 id="株価データとその計算結果の送受信">株価データとその計算結果の送受信</h3>
+
+<p>D-Waveに計算を送るのは時間がかかる…実はAmazonウェブサービスでOregon regionを選択、そこから計算を送ると如実に高速化できます。</p>
+
+<h3 id="共分散行列">共分散行列</h3>
+
+\[\frac{1}{N} \sum_t (w_{it} - \bar{w}_i)(w_{jt}-\bar{w}_j)\]
+
+<p>平均からどれくらいズレるかを出したのち、それらを違う要素について掛け合わせます。これにより、違う銘柄が同じ傾向にあるのか、違う傾向にあるのかを見ることができます。</p>
+
+<h3 id="ポートフォリオ最適化の未定乗数">ポートフォリオ最適化の未定乗数</h3>
+
+<p>未定乗数が大きすぎる(wが小さすぎる)ため、最適解が出ない。<br />
+量子アニーリングでは\(2^N\)の中から1つの状態を選ぶことが得意…罰金法を使うと精度が下がる(無駄なところを探してしまう)ため、罰金法は量子アニーリングと相性が悪いです。制約条件が多いならば、アニーリングにやらせてはいけません(既存の数理最適化ツールを使うことをお勧めします)。</p>
+
+<h2 id="選択からグループ分けする問題">選択からグループ分けする問題</h2>
+
+<p>2=(0, 1, 0, 0), 3=(0, 0, 1, 0)のようなベクトルに変換をします。このようなOne-hot encodingは効率が悪い(ただし、人間にはわかりやすい)です。器用な古典コンピュータでビット数を削減し、量子アニーリングに入れるというのが良い戦法でしょう。<br />
+最初は罰金法を使って定式化、最後にはそれを無くす手法を考えます。<br />
+\(\sum_{i=1}^N \sum_{k=1}^N \sum_{\ell=1}^N x_{ik} x_{i\ell}\)のような場合には、\(x_{ik}\)を\(i = (1, 2, \dots, N), (N+1, N+2, \dots N+N), (2N+1, 2N+2, \dots, 2N+N)\)のようにして1次元ベクトルに変換します。<br />
+精度を高められるというのはCPUで長い時間使うというのは良いこと。QPUで出した解を参考にCPUで良い解を出す、というのがHybridの解き方です。<br />
+<code class="language-plaintext highlighter-rouge">grobi optimizer</code>という最適化ソルバーがあります。速い。2次形式になるとD-Waveに勝てないものもあります。<br />
+量子アニーリングに解かせやすい定式化、grobiに解かせやすい定式化などがあります。</p>
+
+<h2 id="量子アニーリングが使えるところ">量子アニーリングが使えるところ</h2>
+
+<p>もうすでに最適化されているようなところはやらない方が良いでしょう(すでに高速化・成熟しているため)。今まで最適化・デジタル化されていないようなところを攻めるのが良いでしょう。<br />
+罰金法は使わない方が良いでしょう。<br />
+離散最適化なので、凸ではありません。その時点で難しいです。制約条件(線形和がいくつになる)も加味されるとより難しくなります。grobiなどでは悪い解はすぐ捨てるなどの処理ができるので利点はあります。そこまで制約条件が厳しくないようなものではアニーリングでも高速に解けるでしょう。<br />
+離散最適化問題の場合、勾配がないため一度連続に緩和します。そこから勾配を使って連続最適化問題を解いた後で、離散最適化に持っていきます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,231 @@
+I"�(
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#逆コンプトン散乱の放射強度スペクトル工事中" id="markdown-toc-逆コンプトン散乱の放射強度スペクトル工事中">逆コンプトン散乱の放射強度スペクトル(工事中)</a>    <ol>
+      <li><a href="#偏光ベクトルの向き" id="markdown-toc-偏光ベクトルの向き">偏光ベクトルの向き</a></li>
+      <li><a href="#エネルギーの時間変化" id="markdown-toc-エネルギーの時間変化">エネルギーの時間変化</a></li>
+      <li><a href="#運動方程式" id="markdown-toc-運動方程式">運動方程式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="逆コンプトン散乱の放射強度スペクトル工事中">逆コンプトン散乱の放射強度スペクトル(工事中)</h1>
+
+\[\boldsymbol{\beta}_0 
+= \beta_0 {\bf e}_z \ \Longrightarrow \ 
+{\bf r}_0 (t') = \beta_0 c t' {\bf e}_z\]
+
+\[{\bf n} = (0, \sin \theta, \cos \theta)\]
+
+\[{\bf k}_0 = k_0 (\sin \theta_k \cos \varphi_k, \sin \theta_k \sin \varphi_k, \cos \theta_k)\]
+
+<h2 id="偏光ベクトルの向き">偏光ベクトルの向き</h2>
+
+<p>\(\boldsymbol{\epsilon}_1\): \({\bf e}_z\)をx軸回りに\(-(\frac{\pi}{2} + \theta_k)\)回転したのちに、z軸回りに\(-(\frac{\pi}{2}-\varphi_k)\)回転</p>
+
+\[\boldsymbol{\epsilon}_1 = 
+\left( \begin{array}{ccc}
+\cos (-(\frac{\pi}{2} -\varphi_k)) &amp; - \sin (-(\frac{\pi}{2} -\varphi_k)) &amp; 0 \\
+\sin (-(\frac{\pi}{2} -\varphi_k)) &amp; \cos (-(\frac{\pi}{2} -\varphi_k)) &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array} \right)
+\left( \begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; \cos (-(\frac{\pi}{2} +\theta_k)) &amp; - \sin (-(\frac{\pi}{2} +\theta_k)) \\
+0 &amp; \sin (-(\frac{\pi}{2} +\theta_k)) &amp; \cos (-(\frac{\pi}{2} +\theta_k)) 
+\end{array} \right)
+\left( \begin{array}{c}
+0 \\
+0 \\
+1
+\end{array} \right) 
+= \left( \begin{array}{c}
+\cos \varphi_k \cos \theta_k \\
+\sin \varphi_k \cos \theta_k \\
+-\sin \theta_k
+\end{array} \right)\]
+
+<p>\(\boldsymbol{\epsilon}_2\): \({\bf e}_y\)をz軸回りに\(\varphi_k\)回転</p>
+
+\[\boldsymbol{\epsilon}_2 
+= \left( \begin{array}{c}
+-\sin \varphi_k \\
+\cos \varphi_k \\
+0
+\end{array} \right)\]
+
+<h2 id="エネルギーの時間変化">エネルギーの時間変化</h2>
+
+\[\frac{d}{dt} (\gamma m_e c^2) 
+= -e {\bf E} \cdot {\bf v} \ \Longrightarrow \ 
+\frac{d\gamma}{dt} 
+= -\frac{e}{m_e c^2} {\bf E} \cdot {\bf v}\]
+
+<h2 id="運動方程式">運動方程式</h2>
+
+\[\frac{d}{dt} (\gamma m_e {\bf v}) = -e ({\bf E} + \frac{\bf v}{c} \times {\bf B}) \ \Longrightarrow \ 
+m_e \gamma \frac{d {\bf v}}{dt} + m_e {\bf v} \frac{d\gamma}{dt} 
+= -e ({\bf E} + \frac{\bf v}{c} \times {\bf B})\]
+
+<p>先ほどの式を代入して</p>
+
+\[m_e c \gamma \frac{\boldsymbol{\beta}}{dt} 
+= e({\bf E} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} - e{\bf E} - c \boldsymbol{\beta} \times {\bf B} \ \Longrightarrow \ 
+\frac{d\boldsymbol{\beta}}{dt} 
+= \frac{e}{m_e c\gamma} (({\bf E} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} - {\bf E} - \boldsymbol{\beta} \times {\bf B}) \tag{1}\]
+
+<p>入射電磁波が\(\boldsymbol{\epsilon}_1\)方向に直線偏光しているとき</p>
+
+\[{\bf E} 
+= E \sin (\omega_0 t' - {\bf k}_0 \cdot {\bf r} (t')) \boldsymbol{\epsilon}_1 \\
+{\bf B} 
+= E \sin (\omega_0 t' - {\bf k}_0 \cdot {\bf r} (t')) \boldsymbol{\epsilon}_2\]
+
+<p>ここで\(E=B, \omega_0 = k_0 c\)です。また電磁波の位相の中に現れる電子の軌道を、観測者から天体までの距離が十分遠いとして\({\bf r}_0 (t') \simeq {\bf r} (t')\)とします。これは</p>
+
+\[{\bf k}_0 \cdot {\bf r}(t') 
+\simeq {\bf k}_0 \cdot {\bf r}_0 (t') 
+= k_0 \beta ct' \cos \theta_k\]
+
+<p>より</p>
+
+\[\omega_0 t' - {\bf k}_0 \cdot {\bf r} (t') 
+= \omega_0 t' (1-\beta \cos \theta_k) 
+= \tilde{\omega}_0 t'\]
+
+<p>としたとき、\(\omega_{\rm se} / \tilde{\omega}_0 \ll 1\)で有る限り良い精度の近似になっています。ここで\(\omega_{\rm se} \equiv eE/(\gamma m_e c)\)です。今後のために\(\cos \theta_k \mu_k\)とおくと</p>
+
+\[{\bf E} 
+= E \sin (\omega_0 t' (1-\beta \mu_k)) \boldsymbol{\epsilon}_1
+= E \sin \tilde{\omega}_0 t' \left( \begin{array}{c}
+\cos \theta_k \cos \varphi_k \\
+\cos \theta_k \sin \varphi_k \\
+- \sin \theta_k
+\end{array} \right)\]
+
+\[{\bf B} 
+= E \sin (\omega_0 t' (1-\beta \mu_k)) \boldsymbol{\epsilon}_2
+= E \sin \tilde{\omega}_0 t' \left( \begin{array}{c}
+- \sin \varphi_k \\
+\cos \varphi_k \\
+0
+\end{array} \right)\]
+
+\[(\boldsymbol{\epsilon}_1 \cdot \boldsymbol{\beta} ) \boldsymbol{\beta} 
+= -\sin \theta_k \beta_0 \boldsymbol{\beta} 
+= - \beta_0^2 \sin \theta_k {\bf e}_z\]
+
+\[\boldsymbol{\beta} \times {\bf B} \propto
+\boldsymbol{\beta} \times \boldsymbol{\epsilon}_2 
+= \beta_0 \left( \begin{array}{c}
+0 \\
+0 \\
+1
+\end{array} \right) \times \left( \begin{array}{c}
+-\sin \varphi_k \\
+\cos \varphi_k \\
+0
+\end{array} \right) 
+= \beta_0 \left( \begin{array}{c}
+-\cos \varphi_k \\
+-\sin \varphi_k \\
+0
+\end{array} \right)\]
+
+<p>以上より</p>
+
+\[\begin{aligned}
+\frac{d \boldsymbol{\beta}}{dt} 
+&amp;= \frac{e}{m_e c \gamma} (-\beta_0^2 \sin \theta_k E \sin \tilde{\omega} t' ) {\bf e}_z - \frac{e}{m_e c \gamma} E \sin \tilde{\omega}_0 t' \left( \begin{array}{c}
+\cos \theta_k \cos \varphi_k \\
+\cos \theta_k \sin \varphi_k \\
+- \sin \theta_k
+\end{array} \right) - \frac{e}{m_e c \gamma} E \sin \tilde{\omega} t' \beta_0 \left( \begin{array}{c}
+- \cos \varphi_k \\
+- \sin \varphi_k \\
+0
+\end{array} \right) \\
+&amp;= \omega_{\rm se} \sin \tilde{\omega}_0 t' \left( \begin{array}{c}
+\beta_0 \cos \varphi_k - \cos \theta_k \cos \varphi_k \\
+\beta_9 \sin \varphi_k - \cos \theta_k \sin \varphi_k \\
+\sin \theta_k - \beta_0^2 \sin \theta_k
+\end{array} \right) 
+= \omega_{\rm se} \sin \tilde{\omega}_0 t' \left( \begin{array}{c}
+(\beta_0 -\cos \theta_k) \cos \varphi_k \\
+(\beta_0 - \cos \theta_k) \sin \varphi_k \\
+\gamma^{-2} \sin \theta_k
+\end{array} \right)
+\end{aligned}\]
+
+\[\boldsymbol{\beta} 
+= \boldsymbol{\beta}_0 + \int \frac{d \boldsymbol{\beta}}{dt'} dt' 
+= \beta_0 {\bf e}_z -\frac{\omega_{\rm se}}{\tilde{\omega}_0} \cos \tilde{\omega} t' \left( \begin{array}{c}
+(\beta_0 -\cos \theta_k) \cos \varphi_k \\
+(\beta_0 - \cos \theta_k) \sin \varphi_k \\
+\gamma^{-2} \sin \theta_k
+\end{array} \right)\]
+
+\[{\bf r} 
+=\underbrace{\bf 0}_{初期位置} + c \int \frac{d\boldsymbol{\beta}}{dt'} dt' \ \Longrightarrow \ \frac{\bf r}{c} 
+= \left( \begin{array}{c}
+-\frac{\omega_{\rm se}}{\tilde{\omega}_0^2} \sin \tilde{\omega}_0 t' (\beta_0 - \cos \theta_k) \cos \varphi_k \\
+-\frac{\omega_{\rm se}}{\tilde{\omega}_0^2} \sin \tilde{\omega}_0 t' (\beta_0 - \cos \theta_k) \sin \varphi_k \\
+\beta_0 t' -\frac{\omega_{\rm se}}{\tilde{\omega}_0^2} \sin \tilde{\omega}_0 t' \gamma^{-2} \sin \theta_k
+\end{array} \right)\]
+
+\[[{\bf n} \times ({\bf n} \times \boldsymbol{\beta})]_i 
+= \epsilon_{ijk} n_j \epsilon_{k\ell m} n_\ell \beta_m 
+= \epsilon_{kij} \epsilon_{k \ell m} n_j n_\ell \beta_m 
+= (\delta_{i\ell} \delta_{jm} - \delta_{im} \delta_{j\ell}) n_j n_\ell \beta_m 
+= n_j n_i \beta_j - n_j n_j \beta_i 
+= [({\bf n} \cdot \boldsymbol{\beta}) {\bf n} - \boldsymbol{\beta}]_i\]
+
+\[{\bf n} \cdot \boldsymbol{\beta} 
+= \beta_0 \cos \theta + \frac{\omega_{\rm se}}{\tilde{\omega}_0 } \cos \tilde{\omega}_0 t' ((\cos \theta_k -\beta_0) \sin \theta \sin \varphi_k - \gamma^{-2} \cos \theta \sin \theta_k)\]
+
+\[[{\bf n} \times ({\bf n} \times \boldsymbol{\beta})]_x 
+= -\frac{\omega_{\rm se}}{\tilde{\omega}_0} \cos \tilde{\omega}_0 t' (\cos \theta_k - \beta_0) \cos \varphi_k\]
+
+\[[{\bf n} \times ({\bf n} \times \boldsymbol{\beta})]_y 
+= \frac{1}{2} \beta_0 \sin 2 \theta + \frac{\omega_{\rm se}}{\tilde{\omega}_0} \cos \tilde{\omega}_0 t' (-(\cos \theta_k -\beta_0) \sin \varphi_k \cos^2 \theta - \frac{\sin \theta_k}{2\gamma^2} \sin 2\theta)\]
+
+\[[{\bf n} \times ({\bf n} \times \boldsymbol{\beta})]_z 
+= -\beta_0 \sin^2 \theta + \frac{\omega_{\rm se}}{\tilde{\omega}_0} \cos \tilde{\omega}_0 t' (\frac{1}{2} (\cos \theta_k -\beta_0) \sin 2\theta \sin \varphi_k + \frac{\sin \theta_k}{\gamma^2} \sin^2 \theta)\]
+
+\[t' - \frac{\bf{n} \cdot \bf{r}}{c} 
+= (1-\beta_0 \cos \theta) t' + \frac{\omega_{\rm se}}{\tilde{\omega}_0^2} \sin \tilde{\omega}_0 t' (-\sin \theta (\cos \theta_k - \beta_0) \sin \varphi_k + \cos \theta \frac{\sin \theta_k}{\gamma^2})\]
+
+\[R \hat{\bf E}({\bf r}, \omega) 
+= \frac{i e \omega}{2\pi c} e^{i\varphi} \int_{T'_1}^{T'_2} {\bf n} \times ({\bf n} \times \boldsymbol{\beta}) e^{i\omega (t' - \frac{\bf{n} \cdot \bf{r}}{c})} dt'\]
+
+<p>以上より</p>
+
+\[R \hat{E}_x ({\bf r}, \omega) 
+= \frac{ie \omega}{2\pi c} e^{i\varphi} \int_{T'_1}^{T'_2} (-\frac{\omega_{\rm se}}{\tilde{\omega}_0}\cos \tilde{\omega}_0 t' (\cos \theta_k - \beta_0) \cos \varphi_k) e^{i (1-\beta_0 \cos \theta) \omega t'} e^{i \omega \frac{\omega_{\rm se}}{\tilde{\omega}_0^2} \sin \tilde{\omega}_0 t' (- \sin \theta (\cos \theta_k -\beta_0) \sin \varphi_k + \cos \theta \frac{\sin \theta_k}{\gamma^2})} dt'\]
+
+<p>以降、\(A \equiv \omega \frac{\omega_{\rm se}}{\tilde{\omega}_0^2} (-\sin \theta (\cos \theta_k - \beta_0) \sin \varphi_k + \cos \theta \frac{\sin \theta_k}{\gamma^2})\)とおきます。</p>
+
+\[R \hat{E}_x ({\bf r}, \omega) 
+= \frac{ie \omega}{2\pi c} e^{i\varphi} \int_{T'_1}^{T'_2} (-\frac{\omega_{\rm se}}{\tilde{\omega}_0}\cos \tilde{\omega}_0 t' (\cos \theta_k - \beta_0) \cos \varphi_k) e^{i (1-\beta_0 \cos \theta) \omega t'} e^{i A \sin \tilde{\omega}_0 t'} dt'\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -91,14 +91,14 @@ $$
 
 $$
 H 
-= \hbar \omega_c \left( a^\dagger a + \frac{1}{2}\right) \tag{7}
+= \hbar \omega_c \left( a^\dagger a + \frac{1}{2}\right) \tag{6}
 $$
 
 のように変形されます。このハミルトニアンは調和振動子と同じ形をしているため、エネルギー準位も同様に
 
 $$
 E_n 
-= \hbar \omega_c \left( n + \frac{1}{2} \right) \tag{8}
+= \hbar \omega_c \left( n + \frac{1}{2} \right) \tag{7}
 $$
 
 となります。このエネルギー準位をランダウ準位(Landau level)と呼びます。
@@ -110,11 +110,11 @@ $$
 $$
 \hbar \omega_c 
 \simeq \frac{\hbar c}{c} 1.9 \times 10^7 B [s^{-1}]
-\simeq \frac{200 \mathrm{Mef} \cdot \mathrm{fm}}{3 \times 10^{10} \mathrm{cm/s}} \times 1.9 \times 10^7 B [s^{-1}] 
-\simeq 13 \left( \frac{B}{10^{12} [\mathrm{G}]}\right) \ [\mathrm{keV}] \tag{9}
+\simeq \frac{200 \mathrm{MeV} \cdot \mathrm{fm}}{3 \times 10^{10} \mathrm{cm/s}} \times 1.9 \times 10^7 B [s^{-1}] 
+\simeq 13 \left( \frac{B}{10^{12} [\mathrm{G}]}\right) \ [\mathrm{keV}] \tag{8}
 $$
 
-のようになり計算されます(ちゃんと計算すると11.6程度になります)。このことから、ランダウ準位による共鳴吸収をいくつか観測すれば、中性子星の強磁場を推定することが可能です。
+のようになり計算されます(ちゃんと計算すると11.6程度になります)。このことからランダウ準位による共鳴吸収をいくつか観測し、エネルギー準位間の大きさがわかれば、中性子星の強磁場を推定することが可能です。
 
 # 参考文献
 

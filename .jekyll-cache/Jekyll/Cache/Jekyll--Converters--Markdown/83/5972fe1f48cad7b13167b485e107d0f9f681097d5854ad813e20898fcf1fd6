@@ -1,0 +1,123 @@
+I""
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ジーンズ不安定性" id="markdown-toc-ジーンズ不安定性">ジーンズ不安定性</a>    <ol>
+      <li><a href="#問題設定" id="markdown-toc-問題設定">問題設定</a></li>
+      <li><a href="#基礎方程式の線形化" id="markdown-toc-基礎方程式の線形化">基礎方程式の線形化</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ジーンズ不安定性">ジーンズ不安定性</h1>
+
+<p>宇宙空間には、主に水素を成分とするガスが存在します。そのガスが自己重力で集まることにより、恒星や銀河といった構造が生まれます。ここでは、どれくらいの質量や大きさのガスの塊が自己重力で収縮するのかを見積もるのに使われるジーンズ不安定性(Jeans instability)についてメモしています。</p>
+
+<h2 id="問題設定">問題設定</h2>
+
+<p>無限に一様に広がって静止している流体を考えましょう。このとき系は平衡状態にあり、その時の密度・圧力・速度場、そして自己重力場をそれぞれ</p>
+
+\[\rho = \rho_0 (定数), \quad
+P = P_0 (定数), \quad
+\mathbf{v} = \mathbf{v}_0 = \mathbf{0}, \quad
+\Phi = \Phi_0 (定数)\]
+
+<p>とします。これらは流体の基礎方程式</p>
+
+\[\frac{\partial \rho_0}{\partial t} + \nabla \cdot (\rho_0 \mathbf{v}_0) 
+= \frac{\partial \rho_0}{\partial t} = 0 \tag{1}\]
+
+\[\frac{\partial}{\partial t} (\rho_0 \mathbf{v}_0) + \nabla \cdot (\rho_0 \mathbf{v}_0\mathbf{v}_0) 
+= - \nabla P_0 - \rho_0 \nabla \Phi_0 
+= - \rho_0 \nabla \Phi_0 
+= \mathbf{0} \ \Longrightarrow \ 
+\nabla \Phi_0 = \mathbf{0} \tag{2}\]
+
+\[\nabla^2 \Phi_0 
+= 4\pi G \rho_0 \tag{3}\]
+
+<p>を満たしています。ここに微小な摂動が加わり、物理量がそれぞれ</p>
+
+\[\rho 
+= \rho_0 + \rho_1, \quad
+P
+= P_0 + P_1, \quad
+\mathbf{v} 
+= \mathbf{v}_0 + \mathbf{v}_1 
+= \mathbf{v}_1, \quad
+\Phi 
+= \Phi_0 + \Phi_1 \tag{4}\]
+
+<p>に変化したとしましょう。またこの摂動は断熱的に起こるものとすると</p>
+
+\[P 
+= K \rho^\gamma \ \Longrightarrow \ 
+K 
+= \frac{P_0}{\rho_0^\gamma} 
+= \frac{P_0 + P_1}{(\rho_0+\rho_1)^\gamma} 
+\simeq \frac{P_0 + P_1}{\rho_0^\gamma} \left( 1- \gamma \frac{\rho_1}{\rho_0}\right) 
+\simeq \frac{P_0}{\rho_0^\gamma} + \frac{P_1}{\rho_0^\gamma} - \gamma \frac{P_0}{\rho_0^{\gamma+1}} \rho_1\]
+
+<p>のようになります。途中、\(\rho_1/ \rho_0\)の1次まででテイラー展開を行い、さらに微小量\(P_1\)と\(\rho_1\)をかけあわれたものは無視しました。これより</p>
+
+\[P_1 
+= \frac{\gamma P_0}{\rho_0} \rho_1 
+= C_s^2 \rho_1 \tag{5}\]
+
+<p>となります。\(C_s=\sqrt{\gamma P_0 / \rho_0}\)は<a href="/mhd/sound_wave">音波の伝播速度である音速</a>です。今は\(\rho_0, P_0\)ともに一様なので、この音速の値も定数となります。</p>
+
+<h2 id="基礎方程式の線形化">基礎方程式の線形化</h2>
+
+<p>それでは基礎方程式を、微少量の1次まで考える線形化を行いましょう。連続の式より</p>
+
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) 
+= \frac{\partial }{\partial t} (\rho_0 + \rho_1) + \nabla \cdot (\rho_0 \mathbf{v}_1 + \underbrace{\rho_1 \mathbf{v}_1}_{微少量}) 
+\underbrace{=}_{(1)} \frac{\partial \rho_1}{\partial t} + \nabla \cdot (\rho_0 \mathbf{v}_1) 
+\underbrace{=}_{\rho_0=定数} \frac{\partial \rho_1}{\partial t} + \rho_0 (\nabla \cdot \mathbf{v}_1) \tag{6}
+= 0\]
+
+<p>続いて運動量保存の式を線形化しましょう。</p>
+
+\[\frac{\partial }{\partial t} (\rho_0 \mathbf{v}_1 + \underbrace{\rho_1 \mathbf{v}_1}_{微少量}) + \nabla \cdot \{ (\rho_0 + \rho_1) \underbrace{\mathbf{v}_1 \mathbf{v}_1}_{微少量}\} 
+\underbrace{=}_{(1)} \rho_0 \frac{\partial \mathbf{v}_1}{\partial t} 
+= - \nabla (P_0 + P_1) - (\rho_0 + \rho_1) \nabla (\Phi_0 + \Phi_1) 
+\underbrace{=}_{P_0 = 定数} - \nabla \underbrace{P_1}_{(5)} - \rho_0 \overbrace{\nabla \Phi_0}^{(2)} - \rho_0 \nabla \Phi_1 - \rho_1 \underbrace{\nabla \Phi_0}_{(2)} - \overbrace{\rho_1 \nabla \Phi_1}^{微少量} 
+= - C_s^2 \nabla \rho_1 - \rho_0 \nabla \Phi_1\]
+
+<p>これより</p>
+
+\[\rho_0 \frac{\partial \mathbf{v}_1}{\partial t} 
+= - C_s^2 \nabla \rho_1 - \rho_0 \nabla \Phi_1 \tag{7}\]
+
+<p>最後にポアソン方程式です。</p>
+
+\[\nabla^2 (\Phi_0 + \Phi_1) 
+= 4\pi G (\rho_0 + \rho_1) \ \underbrace{\Longrightarrow}_{(3)} \ 
+\nabla^2 \Phi_1 = 4\pi G \rho_1 \tag{8}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎I”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

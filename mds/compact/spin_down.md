@@ -54,7 +54,7 @@ $$
 
 ## 回転する中性子星からの放射
 
-下図のように強磁場を持つ中性子星を磁気モーメントに置き換えて考えます。
+下図のように強磁場を持つ中性子星を磁気双極子モーメントに置き換えて考えます。
 
 ![](/assets/images/compact/spin_down_001.png)
 
@@ -179,7 +179,7 @@ $$
 
 # 参考文献
 
-[1] [Equilibrium spin pulsars unite neutron stara populations](https://arxiv.org/abs/1311.1969)  
+[1] [Ho et al., 2013, "Equilibrium spin pulsars unite neutron stara populations"](https://arxiv.org/abs/1311.1969)  
 [2] 砂川重信, "理論電磁気学"
 
 {% include adsense.html %}

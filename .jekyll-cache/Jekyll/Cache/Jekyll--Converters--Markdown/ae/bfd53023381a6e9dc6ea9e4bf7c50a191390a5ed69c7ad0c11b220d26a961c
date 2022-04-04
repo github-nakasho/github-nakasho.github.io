@@ -1,4 +1,4 @@
-I"4
+I"T
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -51,7 +51,7 @@
 
 <h2 id="回転する中性子星からの放射">回転する中性子星からの放射</h2>
 
-<p>下図のように強磁場を持つ中性子星を磁気モーメントに置き換えて考えます。</p>
+<p>下図のように強磁場を持つ中性子星を磁気双極子モーメントに置き換えて考えます。</p>
 
 <p><img src="/assets/images/compact/spin_down_001.png" alt="" /></p>
 
@@ -146,7 +146,7 @@
 
 <h1 id="参考文献">参考文献</h1>
 
-<p>[1] <a href="https://arxiv.org/abs/1311.1969">Equilibrium spin pulsars unite neutron stara populations</a><br />
+<p>[1] <a href="https://arxiv.org/abs/1311.1969">Ho et al., 2013, “Equilibrium spin pulsars unite neutron stara populations”</a><br />
 [2] 砂川重信, “理論電磁気学”</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

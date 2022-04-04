@@ -1,4 +1,4 @@
-I"+
+I"�6
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -9,6 +9,7 @@
       <li><a href="#基礎方程式の線形化" id="markdown-toc-基礎方程式の線形化">基礎方程式の線形化</a></li>
       <li><a href="#分散関係式とジーンズ波長" id="markdown-toc-分散関係式とジーンズ波長">分散関係式とジーンズ波長</a></li>
       <li><a href="#直感的な理解" id="markdown-toc-直感的な理解">直感的な理解</a></li>
+      <li><a href="#回転する平板での自己重力不安定性" id="markdown-toc-回転する平板での自己重力不安定性">回転する平板での自己重力不安定性</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -149,8 +150,8 @@ K
 <p>流体が自己重力によって収縮を始めようとするのを、圧力の増加(音波によって密度ムラを抑えようとする効果)によって食い止めることができれば、ジーンズ不安定性は起こらないと考えることができます。よってジーンズ不安定性が起こる条件として</p>
 
 \[\begin{aligned}
-&amp;(重力により1点に集まろうとするのにかかる時間 (\mathrm{free \ fall \ timescale})) \tau_\mathrm{ff} \\
-&amp; \qquad &lt; (音波による振動で系全体の密度ムラを均一にならすのにかかる時間 (\mathrm{sound \ crossing \ timescale})) \tau_\mathrm{sc})  
+&amp;(重力により1点に集まろうとするのにかかる時間 (\mathrm{free \ fall \ timescale}) \tau_\mathrm{ff}) \\
+&amp; \qquad &lt; (音波による振動で系全体の密度ムラを均一にならすのにかかる時間 (\mathrm{sound \ crossing \ timescale}) \tau_\mathrm{sc})  
 \end{aligned}\]
 
 <p>のように捉えることが可能です。それではフリーフォール時間スケールと、サウンドクロッシング時間スケールを大雑把に計算してみましょう。<br />
@@ -183,6 +184,64 @@ K
 R &gt; \sqrt{\frac{C_s^2}{G \rho}} \simeq \lambda_J\]
 
 <p>のようになります。細かな定数などを除けば、先程の厳密な線形解析と同じ結果を導くことができているとわかります。</p>
+
+<h2 id="回転する平板での自己重力不安定性">回転する平板での自己重力不安定性</h2>
+
+<p>今度は\(z=0\)平面にのみガスが分布し、この平板が角速度\(\boldsymbol{\Omega} = \Omega \mathbf{e}_z\)で回転しているとしましょう。面密度や速度場をそれぞれ</p>
+
+\[\Sigma (x, y) 
+= \int \rho(x, y, z) dz, \quad 
+\mathbf{v} (x, y) 
+= \frac{1}{\Sigma} \int \rho(x, y, z) \mathbf{v} (x, y, z) dz \tag{15}\]
+
+<p>のように定義します。以下ではこの回転に乗った系、すなわち回転座標系で物事を考えます。<br />
+初期状態では流体は静止しており、面密度も一様であるとします。すなわち\(\Sigma = \Sigma_0 (定数), P = P_0 (定数), \mathbf{v} = \mathbf{v}_0 = \mathbf{0}, \Phi = \Phi_0\)とすると、連続の式は</p>
+
+\[\frac{\partial \Sigma_0}{\partial t} + \nabla \cdot (\Sigma_0 \mathbf{v}_0) 
+= \frac{\partial \Sigma_0}{\partial t} 
+= 0 \tag{16}\]
+
+<p>そして運動量保存則を表す式は、コリオリ力と遠心力を考慮して</p>
+
+\[\frac{\partial }{\partial t} (\Sigma_0 \mathbf{v}_0) + \nabla \cdot (\Sigma_0 \mathbf{v}_0 \mathbf{v}_0) 
+= - \nabla P_0 - \Sigma \nabla \Phi_0 - 2 \Sigma_0 \boldsymbol{\Omega} \times \mathbf{v}_0 + \Sigma_0 \Omega^2 (x \mathbf{e}_x + y \mathbf{e}_y) 
+= - \Sigma_0 \nabla \Phi_0 + \Sigma_0 \Omega^2 (x \mathbf{e}_x + y \mathbf{e}_y) 
+= \mathbf{0} \tag{17}\]
+
+<p>となります。最後に、重力のポアソン方程式は</p>
+
+\[\nabla^2 \Phi_0 
+= 4\pi G \Sigma_0 \delta(z) \tag{18}\]
+
+<p>(18)式を微小区間\([-\epsilon, \epsilon]\)で積分することで、\(\Phi_0\)を求めましょう。</p>
+
+\[\frac{\partial \Phi_0}{\partial z}(\epsilon) - \frac{\partial \Phi_0}{\partial z}(-\epsilon) 
+= 2\frac{\partial \Phi_0}{\partial z} (\epsilon) 
+= 4\pi G \Sigma_0\]
+
+<p>途中、\(z=0\)を挟んで対称な系であることから\(\partial \Phi_0 / \partial z(-\epsilon) = - \partial \Phi_0 / \partial z(\epsilon)\)を用いました。これをさらに\(z\)方向に積分すると</p>
+
+\[\Phi_0(x, y, z) 
+= 2\pi G \Sigma_0 |z| + (x, y の関数) \tag{19}\]
+
+<p>のように求まります。\(\Phi_0\)は(17)式も満たす必要があるため、最も簡単な形として</p>
+
+\[\Phi_0 (x, y, z) 
+= 2\pi G \Sigma_0 |z| + \frac{\Omega^2}{2} (x^2 + y^2) \tag{20}\]
+
+<p>としておきましょう。ここに微小な摂動が加わり、物理量がそれぞれ</p>
+
+\[\Sigma = \Sigma_0 + \Sigma_1, \quad 
+P = P_0 + P_1, \quad 
+\mathbf{v} = \mathbf{v}_0 + \mathbf{v}_1 = \mathbf{v}_1, \quad
+\Phi = \Phi_0 + \Phi_1\]
+
+<p>のように変化したとしましょう。先程のジーンズ不安定性の時と同様に、この摂動が断熱的に起こっているとすると</p>
+
+\[P_1 
+= C_s^2 \Sigma_1 \tag{21}\]
+
+<p>のように書けます。</p>
 
 <h1 id="参考文献">参考文献</h1>
 

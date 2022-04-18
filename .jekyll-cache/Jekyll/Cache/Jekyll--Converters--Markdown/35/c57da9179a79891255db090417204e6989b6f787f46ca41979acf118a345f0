@@ -1,0 +1,290 @@
+I"�H
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#円筒座標系での磁気流体の運動量保存" id="markdown-toc-円筒座標系での磁気流体の運動量保存">円筒座標系での磁気流体の運動量保存</a>    <ol>
+      <li><a href="#運動量保存と一般座標における表示" id="markdown-toc-運動量保存と一般座標における表示">運動量保存と一般座標における表示</a></li>
+      <li><a href="#piijの変換" id="markdown-toc-piijの変換">\(\pi^{ij}\)の変換</a></li>
+      <li><a href="#テンソルの発散" id="markdown-toc-テンソルの発散">テンソルの発散</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="円筒座標系での磁気流体の運動量保存">円筒座標系での磁気流体の運動量保存</h1>
+
+<h2 id="運動量保存と一般座標における表示">運動量保存と一般座標における表示</h2>
+
+<p><a href="/mhd/momentum">磁気流体の運動方程式を運動量保存則</a>は</p>
+
+\[\frac{\partial}{\partial t} (\rho v^i) + \nabla_j \left\{ \left( P + \frac{1}{8\pi} B^2 \right) \delta^{j}_i + \rho v^i v^j - \frac{1}{4\pi} B^i B^j \right\} 
+= F^i \tag{1}\]
+
+<p>のように書かれました。ここで\(v^i, B^i\)はそれぞれ流体の速度と磁場の\(i\)成分、\(\rho, P\)は質量密度と圧力、そして右辺の\(F^i\)は外力の\(i\)成分です。左辺第2項は運動量流束テンソル(momentum flux tensor)で</p>
+
+\[\pi^{ij} 
+\equiv \underbrace{\left( P + \frac{1}{8\pi} B^2 \right)}_{\equiv P_\mathrm{gm}} \delta_i^j + \rho v^i v^j - \frac{1}{4\pi} B^i B^j \tag{2}\]
+
+<p>です。(1)式を円筒座標系で具体的にどのように書かれるのかを考えましょう。そのためには(1)式をより一般的に、<a href="/gr/derivative">共変微分</a>\(\nabla_\mu\)とエネルギー運動量テンソル\(T^{\mu \nu}\)を用いて</p>
+
+\[\nabla_\mu T^{i\mu} 
+= \nabla_0 T^{i0} + \nabla_j \pi^{ij} 
+= F^i \tag{3}\]
+
+<p>のように書きます。つまり一般座標変換に対して、一般相対論で学んだ共変な形で表現するのです。円筒座標系では\(T^{i0}\)は</p>
+
+\[T^{i0} 
+= (\rho \dot{R}, \rho \dot{\varphi}, \rho \dot{z}) 
+= (\rho v_R, \rho \frac{v_\varphi}{R}, \rho v_z) \tag{4}\]
+
+<p>となります。\(\pi^{ij}\)はエネルギー運動量テンソルの空間部分で、3次元デカルト座標系での具体的な成分は</p>
+
+\[(\pi^{ij}) 
+= \left( \begin{array}{ccc}
+P_\mathrm{gm} + \rho v_x^2 - \frac{1}{4\pi} B_x^2 &amp; \rho v_x v_y - \frac{1}{4\pi} B_x B_y &amp; \rho v_x v_z - \frac{1}{4\pi} B_x B_z \\
+\rho v_y v_x - \frac{1}{4\pi} B_y B_x &amp; P_\mathrm{gm} + \rho v_y^2 - \frac{1}{4\pi} B_y^2 &amp; \rho v_y v_z - \frac{1}{4\pi} B_y B_z \\
+\rho v_z v_x - \frac{1}{4\pi} B_z B_x &amp; \rho v_z v_y - \frac{1}{4\pi} B_z B_y &amp; P_\mathrm{gm} + \rho v_z^2 - \frac{1}{4\pi} B_z^2 
+\end{array} \right) 
+\equiv \left( \begin{array}{ccc}
+\pi^{xx} &amp; \pi^{xy} &amp; \pi^{xz} \\ 
+\pi^{yx} &amp; \pi^{yy} &amp; \pi^{yz} \\ 
+\pi^{zx} &amp; \pi^{zy} &amp; \pi^{zz} 
+\end{array}\right)
+\tag{5}\]
+
+<p>のようになります。</p>
+
+<h2 id="piijの変換">\(\pi^{ij}\)の変換</h2>
+
+<p>\((x, y, z)\)デカルト座標系から\((R, \varphi, z)\)円筒座標系に移ったときの\((\pi^{ij})\)の成分を、同様に\(\pi^{RR}, \pi^{\varphi z}, \pi^{Rz}\)などのように書くことにします。<br />
+デカルト座標で\(\mathbf{v} = (v_x, v_y, v_z), \mathbf{B} = (B_x, B_y, B_z)\)と記述されるベクトルを円筒座標系の成分に書き換えると</p>
+
+\[\left\{ \begin{array}{l}
+v_R = v_x \cos \varphi + v_y \sin \varphi \\
+v_\varphi = -v_x \sin \varphi + v_y \cos \varphi \\
+v_z = v_z
+\end{array} \right., \quad 
+\left\{ \begin{array}{l}
+B_R = B_x \cos \varphi + B_y \sin \varphi \\
+B_\varphi = -B_x \sin \varphi + B_y \cos \varphi \\
+B_z = B_z
+\end{array} \right. \tag{6}\]
+
+<p>のようになります。<br />
+円筒座標での\(\pi^{ij}\)を求める前に以下の量を計算しておきましょう。\((x, y, z)\)と\((R, \varphi, z)\)との間には</p>
+
+\[\left\{ \begin{array}{l}
+x = R \cos \varphi \\
+y = R \sin \varphi \\
+z = z
+\end{array} \right. \ \Longrightarrow \
+\left\{ \begin{array}{l}
+x^2 + y^2 = R^2 \\
+\tan \varphi = \frac{y}{x} \\
+z = z
+\end{array} \right. \tag{7}\]
+
+<p>のような関係があります。これより</p>
+
+\[2 x 
+= 2R \frac{\partial R}{\partial x} \ \Longrightarrow \ 
+\frac{\partial R}{\partial x} 
+= \frac{x}{R} 
+= \cos \varphi \tag{8}\]
+
+\[2 y 
+= 2R \frac{\partial R}{\partial y} \ \Longrightarrow \ 
+\frac{\partial R}{\partial y} 
+= \frac{y}{R} 
+= \sin \varphi \tag{9}\]
+
+\[\frac{1}{\cos^2 \varphi} \frac{\partial \varphi}{\partial x} 
+= - \frac{y}{x^2} 
+= - \frac{R \sin \varphi}{R^2 \cos^2 \varphi} \ \Longrightarrow \ 
+\frac{\partial \varphi}{\partial x} 
+= - \frac{\sin \varphi}{R} \tag{10}\]
+
+\[\frac{1}{\cos^2 \varphi} \frac{\partial \varphi}{\partial y} 
+= \frac{1}{x} 
+= \frac{1}{R \cos \varphi} \ \Longrightarrow \ 
+\frac{\partial \varphi}{\partial y} 
+= - \frac{\cos \varphi}{R} \tag{11}\]
+
+\[\frac{\partial R}{\partial z} 
+= \frac{\partial \varphi}{\partial z} 
+= \frac{\partial z}{\partial x} 
+= \frac{\partial z}{\partial y} 
+= 0 \tag{12}\]
+
+\[\frac{\partial z}{\partial z} 
+= 1 \tag{13}\]
+
+<p>これらを用いて具体的に\(\pi\)の\((R, \varphi, z)\)での形を求めていきましょう。2階のテンソルの成分の変換則は</p>
+
+\[\pi^{i'j'} 
+= \frac{\partial x^{i'}}{\partial x^k} \frac{\partial x^{j'}}{\partial x^\ell} \pi^{k \ell} \tag{14}\]
+
+<p>のように与えられるので</p>
+
+\[\begin{align}
+\pi^{RR} 
+&amp;= \frac{\partial R}{\partial x} \frac{\partial R}{\partial x} \pi^{xx} + \frac{\partial R}{\partial x} \frac{\partial R}{\partial y} \pi^{xy} + \frac{\partial R}{\partial x} \frac{\partial R}{\partial z} \pi^{xz} + \frac{\partial R}{\partial y} \frac{\partial R}{\partial x} \pi^{yx} + \frac{\partial R}{\partial y} \frac{\partial R}{\partial y} \pi^{yy} \notag \\
+&amp; \qquad + \frac{\partial R}{\partial y} \frac{\partial R}{\partial z} \pi^{yz} + \frac{\partial R}{\partial z} \frac{\partial R}{\partial x} \pi^{zx} + \frac{\partial R}{\partial z} \frac{\partial R}{\partial y} \pi^{zy} + \frac{\partial R}{\partial z} \frac{\partial R}{\partial z} \pi^{zz} \notag \\
+&amp;= \pi^{xx} \cos^2 \varphi + \pi^{xy} \cos \varphi \sin \varphi + \pi^{yx} \sin \varphi \cos \varphi + \pi^{yy} \sin^2 \varphi \notag \\
+&amp;= P_\mathrm{gm} + \rho(v_x \cos \varphi + v_y \sin\varphi)^2 - \frac{1}{4\pi} (B_x \cos \varphi + B_y \sin \varphi)^2 
+= P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 \tag{15}
+\end{align}\]
+
+\[\begin{align}
+\pi^{R\varphi} 
+&amp;= \frac{\partial R}{\partial x} \frac{\partial \varphi}{\partial x} \pi^{xx} + \frac{\partial R}{\partial x} \frac{\partial \varphi}{\partial y} \pi^{xy} + \frac{\partial R}{\partial x} \frac{\partial \varphi}{\partial z} \pi^{xz} + \frac{\partial R}{\partial y} \frac{\partial \varphi}{\partial x} \pi^{yx} + \frac{\partial R}{\partial y} \frac{\partial \varphi}{\partial y} \pi^{yy} \notag \\
+&amp; \qquad + \frac{\partial R}{\partial y} \frac{\partial \varphi}{\partial z} \pi^{yz} + \frac{\partial R}{\partial z} \frac{\partial \varphi}{\partial x} \pi^{zx} + \frac{\partial R}{\partial z} \frac{\partial \varphi}{\partial y} \pi^{zy} + \frac{\partial R}{\partial z} \frac{\partial \varphi}{\partial z} \pi^{zz} \notag \\
+&amp;= - \frac{\cos \varphi \sin \varphi}{R} \pi^{xx} + \frac{\cos^2 \varphi}{R} \pi^{xy} - \frac{\sin^2 \varphi}{R} \pi^{yx} + \frac{\sin \varphi \cos \varphi}{R} \pi^{yy} \notag \\
+&amp;= \frac{1}{R} \left\{ \rho v_\varphi (v_x \cos \varphi + v_y \sin \varphi) - \frac{1}{4\pi} B_\varphi (B_x \cos \varphi + B_y \sin \varphi) \right\} 
+= \frac{1}{R} \left( \rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \right) \tag{16}
+\end{align}\]
+
+\[\begin{align}
+\pi^{Rz} 
+&amp;= \frac{\partial R}{\partial x} \frac{\partial z}{\partial x} \pi^{xx} + \frac{\partial R}{\partial x} \frac{\partial z}{\partial y} \pi^{xy} + \frac{\partial R}{\partial x} \frac{\partial z}{\partial z} \pi^{xz} + \frac{\partial R}{\partial y} \frac{\partial z}{\partial x} \pi^{yx} + \frac{\partial R}{\partial y} \frac{\partial z}{\partial y} \pi^{yy} \notag \\
+&amp; \qquad + \frac{\partial R}{\partial y} \frac{\partial z}{\partial z} \pi^{yz} + \frac{\partial R}{\partial z} \frac{\partial z}{\partial x} \pi^{zx} + \frac{\partial R}{\partial z} \frac{\partial z}{\partial y} \pi^{zy} + \frac{\partial R}{\partial z} \frac{\partial z}{\partial z} \pi^{zz} \notag \\
+&amp;= \pi^{xz} \cos \varphi + \pi^{yz} \sin \varphi \notag \\
+&amp;= \rho v_z (v_x \cos \varphi + v_y \sin \varphi) - \frac{1}{4\pi} B_z(B_x \cos \varphi + B_y \sin \varphi) 
+= \rho v_R v_z - \frac{1}{4\pi} B_R B_z \tag{17}
+\end{align}\]
+
+\[\begin{align}
+\pi^{\varphi \varphi} 
+&amp;= \frac{\partial \varphi}{\partial x} \frac{\partial \varphi}{\partial x} \pi^{xx} + \frac{\partial \varphi}{\partial x} \frac{\partial \varphi}{\partial y} \pi^{xy} + \frac{\partial \varphi}{\partial x} \frac{\partial \varphi}{\partial z} \pi^{xz} + \frac{\partial \varphi}{\partial y} \frac{\partial \varphi}{\partial x} \pi^{yx} + \frac{\partial \varphi}{\partial y} \frac{\partial \varphi}{\partial y} \pi^{yy} \notag \\
+&amp; \qquad + \frac{\partial \varphi}{\partial y} \frac{\partial \varphi}{\partial z} \pi^{yz} + \frac{\partial \varphi}{\partial z} \frac{\partial \varphi}{\partial x} \pi^{zx} + \frac{\partial \varphi}{\partial z} \frac{\partial \varphi}{\partial y} \pi^{zy} + \frac{\partial \varphi}{\partial z} \frac{\partial \varphi}{\partial z} \pi^{zz} \notag \\
+&amp;= \frac{\sin^2 \varphi}{R^2} \pi^{xx} - \frac{\sin \varphi \cos \varphi}{R^2} \pi^{xy} - \frac{\cos \varphi \sin \varphi}{R^2} \pi^{yx} + \frac{\cos^2 \varphi}{R^2} \pi^{yy} \notag \\
+&amp;= \frac{1}{R^2} \left\{ P_\mathrm{gm} + (v_x \sin \varphi - v_y \cos \varphi)^2 - \frac{1}{4\pi} (B_x \sin \varphi - B_y \cos \varphi)^2\right\} 
+= \frac{1}{R^2} \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) \tag{18}
+\end{align}\]
+
+\[\begin{align}
+\pi^{\varphi z} 
+&amp;= \frac{\partial \varphi}{\partial x} \frac{\partial z}{\partial x} \pi^{xx} + \frac{\partial \varphi}{\partial x} \frac{\partial z}{\partial y} \pi^{xy} + \frac{\partial \varphi}{\partial x} \frac{\partial z}{\partial z} \pi^{xz} + \frac{\partial \varphi}{\partial y} \frac{\partial z}{\partial x} \pi^{yx} + \frac{\partial \varphi}{\partial y} \frac{\partial z}{\partial y} \pi^{yy} \notag \\
+&amp;\qquad + \frac{\partial \varphi}{\partial y} \frac{\partial z}{\partial z} \pi^{yz} + \frac{\partial \varphi}{\partial z} \frac{\partial z}{\partial x} \pi^{zx} + \frac{\partial \varphi}{\partial z} \frac{\partial z}{\partial y} \pi^{zy} + \frac{\partial \varphi}{\partial z} \frac{\partial z}{\partial z} \pi^{zz} \notag \\
+&amp;= - \frac{\sin \varphi}{R} \pi^{xz} + \frac{\cos \varphi}{R} \pi^{yz} \notag \\
+&amp;= \frac{1}{R} \left( \rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z\right) \tag{19}
+\end{align}\]
+
+<p>\(\pi^{zz}\)は変わらずそのままであること、そして</p>
+
+\[\pi^{\varphi R} 
+= \frac{\partial \varphi}{\partial x^k} \frac{\partial R}{\partial x^\ell} \pi^{k \ell} 
+= \frac{\partial R}{\partial x^\ell} \frac{\partial \varphi}{\partial x^k} \pi^{k \ell} 
+= \frac{\partial R}{\partial x^k} \frac{\partial \varphi}{\partial x^\ell} \underbrace{\pi^{\ell k}}_{(5)より対称テンソル} 
+= \pi^{R\varphi} \tag{20}\]
+
+<p>などより、これらをまとめて</p>
+
+\[(\pi^{ij}) 
+= \left( \begin{array}{ccc}
+\pi^{RR} &amp; \pi^{R\varphi} &amp; \pi^{Rz} \\
+\pi^{\varphi R} &amp; \pi^{\varphi \varphi} &amp; \pi^{\varphi z} \\
+\pi^{zR} &amp; \pi^{z\varphi} &amp; \pi^{zz}
+\end{array}\right) 
+= \left( \begin{array}{ccc}
+P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 &amp; \frac{1}{R} \left( \rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \right) &amp; v_R v_z - \frac{1}{4\pi} B_R B_z \\
+\frac{1}{R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) &amp; \frac{1}{R^2} \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) &amp; \frac{1}{R} \left( \rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z\right) \\
+\rho v_z v_R - \frac{1}{4\pi} B_z B_R &amp; \frac{1}{R} \left( \rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi \right) &amp; P_\mathrm{gm} + \rho v_z^2 - \frac{1}{4\pi} B_z^2
+\end{array} \right) \tag{21}\]
+
+<h2 id="テンソルの発散">テンソルの発散</h2>
+
+<p>(21)式を(3)式に代入して具体的に計算します。このとき、(3)式の\(\nabla_j \pi^{ij}\)部分はただの発散ではなく、テンソルの発散です。よってこの部分はちゃんと<a href="/gr/tensor">テンソルの共変微分</a>を考える必要があります。よって、正しくは</p>
+
+\[\nabla_0 T^{i0} + \nabla_j \pi^{ij} 
+= \frac{\partial}{\partial t} T^{i0} + \partial_j \pi^{ij} + \Gamma^i_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{i\ell} 
+= F^i \tag{22}\]
+
+<p>を計算します。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>第1項の共変微分をただの時間偏微分にしたのは、今の場合には座標基底が時間に依存しないためです。これは具体的にクリストッフェル記号を計算することでも確かめられます。  
+結局、時間に関係する添字を持つクリストッフェル記号は全て0となります。
+</code></pre></div></div>
+
+<p>クリストッフェル記号は</p>
+
+\[\Gamma^i_{jk} 
+= \frac{1}{2} g^{i\ell} (g_{\ell j, k} + g_{\ell k, j} - g_{jk, \ell})\]
+
+<p>です。そして円筒座標系のメトリックテンソルの成分は</p>
+
+\[g_{RR} = g_{zz} = 1, \quad g_{\varphi \varphi} = R^2, \quad 
+g^{RR} = g^{zz} = 1, \quad g^{\varphi \varphi} = \frac{1}{R^2}\]
+
+<p>です。これ以外は0です。またその成分の微分は</p>
+
+\[g_{\varphi \varphi, R} 
+= 2R\]
+
+<p>以外は0であることもわかります。これらより</p>
+
+\[\Gamma^{R}_{\varphi \varphi} 
+= \frac{1}{2} g^{R \ell} (g_{\ell \varphi, \varphi} + g_{\ell \varphi, \varphi} - g_{\varphi \varphi, \ell}) 
+\underbrace{=}_{\ell = Rのみ} - R \tag{23}\]
+
+\[\Gamma^\varphi_{R \varphi} 
+= \frac{1}{2} g^{\varphi \ell} (g_{\ell R, \varphi} + g_{\ell \varphi, R} - g_{R \varphi, \ell})
+\underbrace{=}_{\ell = \varphi のみ} \frac{1}{2} \frac{1}{R^2} 2R 
+= \frac{1}{R} \tag{24}\]
+
+\[\Gamma^\varphi_{\varphi R} 
+= \Gamma^\varphi_{R \varphi} 
+= \frac{1}{R} \tag{25}\]
+
+<p>これ以外の添字の組合せを持つクリトッフェル記号は全て0です。</p>
+
+<p>(4), (21), (25)式を用いて、最終的な円筒座標系での運動量保存を導きましょう。まずは\(R\)成分です。</p>
+
+\[\begin{align}
+&amp;\frac{\partial}{\partial t} (\rho v_R) + \partial_j \pi^{Rj} + \Gamma^R_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{R \ell} 
+= \frac{\partial}{\partial t} (\rho v_R) + \partial_R \pi^{RR} + \partial_\varphi \pi^{R \varphi} + \partial_z \pi^{Rz} - R \pi^{\varphi \varphi} + \frac{1}{R} \pi^{RR} \notag \\
+&amp;= \frac{\partial}{\partial t} (\rho v_R) + \frac{\partial}{\partial R} \left( P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \right) + \frac{\partial}{\partial z} \left( \rho v_R v_z - \frac{1}{4\pi} B_R B_z \right) + \frac{1}{R} \left\{ \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right) - \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2\right)\right\} \tag{26}
+\end{align}\]
+
+<p>続いて\(\varphi\)成分です。</p>
+
+\[\begin{align}
+&amp;\frac{\partial}{\partial t} \left( \rho \frac{v_\varphi}{R} \right) + \partial_j \pi^{\varphi j} + \Gamma^\varphi_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{\varphi \ell} 
+= \frac{1}{R} \frac{\partial}{\partial t} (\rho v_\varphi) + \partial_R \pi^{\varphi R} + \partial_\varphi \pi^{\varphi \varphi} + \partial_z \pi^{\varphi z} + \frac{1}{R} \pi^{\varphi R} + \frac{1}{R} \pi^{R \varphi} + \frac{1}{R} \pi^{\varphi R} \notag \\
+&amp;= \frac{1}{R} \left\{ \frac{\partial}{\partial t}(\rho v_\varphi) + \frac{\partial }{\partial R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) + \frac{\partial}{\partial z} \left( \rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z \right) + \frac{2}{R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right)\right\} \tag{27}
+\end{align}\]
+
+<p>最後に\(z\)成分です。</p>
+
+\[\begin{align}
+&amp;\frac{\partial}{\partial t} (\rho v_z) + \partial_j \pi^{zj} + \Gamma^z_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{z\ell} 
+= \frac{\partial}{\partial t} (\rho v_z) + \partial_R \pi^{zR} + \partial_\varphi \pi^{z\varphi} + \partial_z \pi^{zz} + \frac{1}{R} \pi^{zR} \notag \\
+&amp;= \frac{\partial}{\partial t} (\rho v_z) + \frac{\partial}{\partial R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi \right) + \frac{\partial}{\partial z} \left( P_\mathrm{gm} + v_z^2 - \frac{1}{4\pi} B_z^2 \right) + \frac{1}{R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) \tag{28}
+\end{align}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎I”<br />
+[2] 福江純, 和田桂一, 梅村雅之, “宇宙流体力学の基礎”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

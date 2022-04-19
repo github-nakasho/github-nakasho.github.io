@@ -441,8 +441,31 @@ $$
 = F_z \tag{33}
 $$
 
+よって(31), (32), (33)式を用いて、数値計算を行います。
+
+## 他の方法
+
+運動量保存則の式から直接導くのではなく、運動方程式の形
+
+$$
+\rho \left\{ \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} \right\} 
+= - \nabla P_\mathrm{gm} + \frac{1}{4\pi} (\mathbf{B} \cdot \nabla) \mathbf{B} + \mathbf{F}
+$$
+
+を直接、式変形することで得ることもできます。このとき、円筒座標系の磁気張力や移流項の計算に注意します。例えば
+
+$$
+(\mathbf{B} \cdot \nabla) B_R 
+= B_R \frac{\partial B_R}{\partial R} + \frac{B_\varphi}{R} \frac{\partial B_R}{\partial \varphi} - \frac{B_\varphi^2}{R} + B_z \frac{\partial B_R}{\partial z}
+$$
+
+のようになります。
+
 # 参考文献
 
 [1] 富阪幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"  
+[2] Chandrasekhar, "Hydrodynamic and Hydromagnetic Stability"  
+[3] [Skinner & Ostriker, 2010, "The Athena Astrophysical MHD Code in Cylindrical Geometry"](https://arxiv.org/abs/1004.2487)  
+[4] [Mignone et al., "PLUTO: A Numerical Code for Computational Astrophysics"](https://iopscience.iop.org/article/10.1086/513316)
 
 {% include adsense.html %} 

@@ -1,4 +1,4 @@
-I"�H
+I"�d
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -8,6 +8,8 @@
       <li><a href="#運動量保存と一般座標における表示" id="markdown-toc-運動量保存と一般座標における表示">運動量保存と一般座標における表示</a></li>
       <li><a href="#piijの変換" id="markdown-toc-piijの変換">\(\pi^{ij}\)の変換</a></li>
       <li><a href="#テンソルの発散" id="markdown-toc-テンソルの発散">テンソルの発散</a></li>
+      <li><a href="#保存系にする" id="markdown-toc-保存系にする">保存系にする</a></li>
+      <li><a href="#他の方法" id="markdown-toc-他の方法">他の方法</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -204,6 +206,14 @@ P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 &amp; \frac{1}{R} \left( \rho 
 \rho v_z v_R - \frac{1}{4\pi} B_z B_R &amp; \frac{1}{R} \left( \rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi \right) &amp; P_\mathrm{gm} + \rho v_z^2 - \frac{1}{4\pi} B_z^2
 \end{array} \right) \tag{21}\]
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="テンソルの発散">テンソルの発散</h2>
 
 <p>(21)式を(3)式に代入して具体的に計算します。このとき、(3)式の\(\nabla_j \pi^{ij}\)部分はただの発散ではなく、テンソルの発散です。よってこの部分はちゃんと<a href="/gr/tensor">テンソルの共変微分</a>を考える必要があります。よって、正しくは</p>
@@ -250,20 +260,22 @@ g^{RR} = g^{zz} = 1, \quad g^{\varphi \varphi} = \frac{1}{R^2}\]
 
 <p>これ以外の添字の組合せを持つクリトッフェル記号は全て0です。</p>
 
-<p>(4), (21), (25)式を用いて、最終的な円筒座標系での運動量保存を導きましょう。まずは\(R\)成分です。</p>
+<p>(4), (21)-(25)式を用いて、最終的な円筒座標系での運動量保存を導きましょう。まずは\(R\)成分です。</p>
 
 \[\begin{align}
 &amp;\frac{\partial}{\partial t} (\rho v_R) + \partial_j \pi^{Rj} + \Gamma^R_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{R \ell} 
 = \frac{\partial}{\partial t} (\rho v_R) + \partial_R \pi^{RR} + \partial_\varphi \pi^{R \varphi} + \partial_z \pi^{Rz} - R \pi^{\varphi \varphi} + \frac{1}{R} \pi^{RR} \notag \\
-&amp;= \frac{\partial}{\partial t} (\rho v_R) + \frac{\partial}{\partial R} \left( P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \right) + \frac{\partial}{\partial z} \left( \rho v_R v_z - \frac{1}{4\pi} B_R B_z \right) + \frac{1}{R} \left\{ \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right) - \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2\right)\right\} \tag{26}
+&amp;= \frac{\partial}{\partial t} (\rho v_R) + \frac{\partial}{\partial R} \left( P_\mathrm{gm} + \rho v_R^2 - \frac{1}{4\pi} B_R^2 \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \right) \notag \\
+&amp; \qquad + \frac{\partial}{\partial z} \left( \rho v_R v_z - \frac{1}{4\pi} B_R B_z \right) + \frac{1}{R} \left\{ \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right) - \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2\right)\right\} \tag{26}
 \end{align}\]
 
 <p>続いて\(\varphi\)成分です。</p>
 
 \[\begin{align}
-&amp;\frac{\partial}{\partial t} \left( \rho \frac{v_\varphi}{R} \right) + \partial_j \pi^{\varphi j} + \Gamma^\varphi_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{\varphi \ell} 
-= \frac{1}{R} \frac{\partial}{\partial t} (\rho v_\varphi) + \partial_R \pi^{\varphi R} + \partial_\varphi \pi^{\varphi \varphi} + \partial_z \pi^{\varphi z} + \frac{1}{R} \pi^{\varphi R} + \frac{1}{R} \pi^{R \varphi} + \frac{1}{R} \pi^{\varphi R} \notag \\
-&amp;= \frac{1}{R} \left\{ \frac{\partial}{\partial t}(\rho v_\varphi) + \frac{\partial }{\partial R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) + \frac{\partial}{\partial z} \left( \rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z \right) + \frac{2}{R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right)\right\} \tag{27}
+&amp;\frac{\partial}{\partial t} \left( \rho \frac{v_\varphi}{R} \right) + \partial_j \pi^{\varphi j} + \Gamma^\varphi_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{\varphi \ell} \notag \\
+&amp;= \frac{1}{R} \frac{\partial}{\partial t} (\rho v_\varphi) + \partial_R \pi^{\varphi R} + \partial_\varphi \pi^{\varphi \varphi} + \partial_z \pi^{\varphi z} + \frac{1}{R} \pi^{\varphi R} + \frac{1}{R} \pi^{R \varphi} + \frac{1}{R} \pi^{\varphi R} \notag \\
+&amp;= \frac{1}{R} \left\{ \frac{\partial}{\partial t}(\rho v_\varphi) + \frac{\partial }{\partial R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) \right. \notag \\
+&amp;\qquad \left. + \frac{\partial}{\partial z} \left( \rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z \right) + \frac{2}{R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right)\right\} \tag{27}
 \end{align}\]
 
 <p>最後に\(z\)成分です。</p>
@@ -271,13 +283,114 @@ g^{RR} = g^{zz} = 1, \quad g^{\varphi \varphi} = \frac{1}{R^2}\]
 \[\begin{align}
 &amp;\frac{\partial}{\partial t} (\rho v_z) + \partial_j \pi^{zj} + \Gamma^z_{\ell j} \pi^{\ell j} + \Gamma^j_{\ell j} \pi^{z\ell} 
 = \frac{\partial}{\partial t} (\rho v_z) + \partial_R \pi^{zR} + \partial_\varphi \pi^{z\varphi} + \partial_z \pi^{zz} + \frac{1}{R} \pi^{zR} \notag \\
-&amp;= \frac{\partial}{\partial t} (\rho v_z) + \frac{\partial}{\partial R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi \right) + \frac{\partial}{\partial z} \left( P_\mathrm{gm} + v_z^2 - \frac{1}{4\pi} B_z^2 \right) + \frac{1}{R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) \tag{28}
+&amp;= \frac{\partial}{\partial t} (\rho v_z) + \frac{\partial}{\partial R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi \right) \notag \\
+&amp; \qquad + \frac{\partial}{\partial z} \left( P_\mathrm{gm} + v_z^2 - \frac{1}{4\pi} B_z^2 \right) + \frac{1}{R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R\right) \tag{28}
 \end{align}\]
+
+<p>以上より</p>
+
+\[\begin{align}
+&amp;\frac{\partial}{\partial t} \left( \begin{array}{c} 
+\rho v_R \\
+\rho v_\varphi \\
+\rho v_z
+\end{array}\right) + \frac{\partial}{\partial R} \left( \begin{array}{c}
+\rho v_R^2 - \frac{1}{4\pi} B_R^2 + P_\mathrm{gm} \\
+\rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \\
+\rho v_z v_R - \frac{1}{4\pi} B_z B_R
+\end{array}\right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( \begin{array}{c}
+\rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi \\
+\rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 + P_\mathrm{gm} \\
+\rho v_z v_\varphi - \frac{1}{4\pi} B_z B_\varphi
+\end{array}\right) \notag \\
+&amp; \qquad + \frac{\partial}{\partial z} \left( \begin{array}{c}
+\rho v_R v_z - \frac{1}{4\pi} B_R B_z \\
+\rho v_\varphi v_z - \frac{1}{4\pi} B_\varphi B_z \\
+\rho v_z^2 - \frac{1}{4\pi} B_z^2 + P_\mathrm{gm}
+\end{array}\right) + \left( \begin{array}{c} 
+\frac{1}{R} \left\{ \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2 \right) - \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) \right\}\\
+\frac{2}{R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) \\
+\frac{1}{R} \left( \rho v_z v_R - \frac{1}{4\pi} B_z B_R \right)
+\end{array}\right) 
+= \mathbf{F} \tag{29}
+\end{align}\]
+
+<h2 id="保存系にする">保存系にする</h2>
+
+<p>グリッドを用いた(オイラー的な)磁気流体数値計算においては、グリッドに区切られたセル中心で物理量を定義します。隣のセルから入ってくる物理量を、受け取る側のセルは正しく受け取る必要があります。そのために基礎方程式を、\(\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0\)のような保存系に近い形で書いておきましょう。まずは(29)式の\(R\)方向成分です。</p>
+
+\[\frac{1}{R} \frac{\partial}{\partial R} \left\{ R \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right)\right\} 
+= \frac{1}{R} \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right) + \frac{\partial}{\partial R} \left( \rho v_R^2 - \frac{1}{4\pi} B_R^2\right)\]
+
+<p>と、円筒座標系での発散公式</p>
+
+\[\nabla \cdot \mathbf{A} 
+= \frac{1}{R} \frac{\partial}{\partial R} (R A_R) + \frac{1}{R} \frac{\partial A_\varphi}{\partial \varphi} + \frac{\partial A_z}{\partial z} \tag{30}\]
+
+<p>を用いると</p>
+
+\[\frac{\partial}{\partial t} (\rho v_R) + \nabla \cdot \left( \rho v_R \mathbf{v} - \frac{1}{4\pi} B_R \mathbf{B} + P_\mathrm{gm} \mathbf{e}_R \right) 
+= \frac{1}{R} \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) + F_R \tag{31}\]
+
+<p>のようになります。ここで\(\nabla \cdot (P_\mathrm{gm} \mathbf{e}_R) = (\nabla P_\mathrm{gm})_R\)を用いました。右辺に現れた\(1/R\)に依存する項は遠心力と\(\varphi\)方向磁場による磁気張力に相当する項です(\(\varphi\)方向にしか成分を持たない円形磁場は磁気張力で内側に縮もうとします)。<br />
+次に\(\varphi\)方向成分を計算しましょう。(29)式の\(\varphi\)方向成分では、円筒座標系に移ったことによるコリオリ力のような項が出てきています。これを整理するために両辺に\(R\)をかけて、単位体積あたりの角運動量の\(z\)成分\(L_z = R \rho v_\varphi\)の保存則の式に書き換えます。</p>
+
+\[\begin{aligned}
+&amp;\frac{\partial}{\partial t} (R \rho v_\varphi) + R\frac{\partial}{\partial R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R\right) + \frac{\partial}{\partial \varphi} \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 + P_\mathrm{gm} \right) + \frac{\partial}{\partial z} \left( R \rho v_\varphi v_z  - \frac{R}{4\pi} B_\varphi B_z\right) \\
+&amp;\qquad + 2 (\rho v_R v_\varphi - \frac{1}{4\pi} B_R B_\varphi) 
+= R F_\varphi
+\end{aligned}\]
+
+<p>これと</p>
+
+\[\frac{\partial}{\partial R} \left\{ R \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right)\right\} 
+= \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right) + R \frac{\partial}{\partial R} \left( \rho v_\varphi v_R - \frac{1}{4\pi} B_\varphi B_R \right)\]
+
+<p>より</p>
+
+\[\begin{aligned}
+&amp;\frac{\partial L_z}{\partial t} + \frac{\partial}{\partial R} \left( L_z v_R - \frac{R}{4\pi} B_\varphi B_R\right) + \frac{1}{R} \frac{\partial}{\partial \varphi} \left( L_z v_\varphi - \frac{R}{4\pi} B_\varphi^2 \right) + \frac{\partial}{\partial z} \left( L_z v_z - \frac{R}{4\pi} B_\varphi B_z\right) \\
+&amp;\qquad + \frac{1}{R} \left( L_z v_R - \frac{R}{4\pi} B_R B_\varphi \right) 
+= R F_\varphi
+\end{aligned}\]
+
+<p>これにさらに</p>
+
+\[\frac{1}{R} \frac{\partial}{\partial R} \left\{ R \left( L_z v_R - \frac{R}{4\pi} B_\varphi B_R \right)\right\} 
+= \frac{1}{R} \left( L_z v_R - \frac{R}{4\pi} B_\varphi B_R\right) + \frac{\partial}{\partial R} \left( L_z v_R - \frac{R}{4\pi} B_\varphi B_R\right)\]
+
+<p>と円筒座標系での発散(30)式を用いれば</p>
+
+\[\frac{\partial L_z}{\partial t} + \nabla \cdot \left( L_z \mathbf{v} - \frac{R}{4\pi} B_\varphi \mathbf{B} + R P_\mathrm{gm} \mathbf{e}_\varphi \right) 
+= R F_\varphi \tag{32}\]
+
+<p>のようになります。同様に\(z\)方向についても整理すると</p>
+
+\[\frac{\partial}{\partial t} (\rho v_z) + \nabla \cdot \left( \rho v_z \mathbf{v} - \frac{1}{4\pi} B_z \mathbf{B} + P_\mathrm{gm} \mathbf{e}_z \right) 
+= F_z \tag{33}\]
+
+<p>よって(31), (32), (33)式を用いて、数値計算を行います。</p>
+
+<h2 id="他の方法">他の方法</h2>
+
+<p>運動量保存則の式から直接導くのではなく、運動方程式の形</p>
+
+\[\rho \left\{ \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} \right\} 
+= - \nabla P_\mathrm{gm} + \frac{1}{4\pi} (\mathbf{B} \cdot \nabla) \mathbf{B} + \mathbf{F}\]
+
+<p>を直接、式変形することで得ることもできます。このとき、円筒座標系の磁気張力や移流項の計算に注意します。例えば</p>
+
+\[(\mathbf{B} \cdot \nabla) B_R 
+= B_R \frac{\partial B_R}{\partial R} + \frac{B_\varphi}{R} \frac{\partial B_R}{\partial \varphi} - \frac{B_\varphi^2}{R} + B_z \frac{\partial B_R}{\partial z}\]
+
+<p>のようになります。</p>
 
 <h1 id="参考文献">参考文献</h1>
 
-<p>[1] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎I”<br />
-[2] 福江純, 和田桂一, 梅村雅之, “宇宙流体力学の基礎”</p>
+<p>[1] 富阪幸治, 花輪知幸, 牧野淳一郎, “シミュレーション天文学”<br />
+[2] Chandrasekhar, “Hydrodynamic and Hydromagnetic Stability”<br />
+[3] <a href="https://arxiv.org/abs/1004.2487">Skinner &amp; Ostriker, 2010, “The Athena Astrophysical MHD Code in Cylindrical Geometry”</a><br />
+[4] <a href="https://iopscience.iop.org/article/10.1086/513316">Mignone et al., “PLUTO: A Numerical Code for Computational Astrophysics”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

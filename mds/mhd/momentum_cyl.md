@@ -389,10 +389,10 @@ $$
 
 $$
 \frac{\partial}{\partial t} (\rho v_R) + \nabla \cdot \left( \rho v_R \mathbf{v} - \frac{1}{4\pi} B_R \mathbf{B} + P_\mathrm{gm} \mathbf{e}_R \right) 
-= \frac{1}{R} \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) + F_R \tag{31}
+= \frac{1}{R} \left( \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 + P_\mathrm{gm} \right) + F_R \tag{31}
 $$
 
-のようになります。ここで$$\nabla \cdot (P_\mathrm{gm} \mathbf{e}_R) = (\nabla P_\mathrm{gm})_R $$を用いました。右辺に現れた$$1/R$$に依存する項は遠心力と$$\varphi$$方向磁場による磁気張力に相当する項です($$\varphi$$方向にしか成分を持たない円形磁場は磁気張力で内側に縮もうとします)。  
+のようになります。右辺に現れた$$1/R$$に依存する項は遠心力と$$\varphi$$方向磁場による磁気張力に相当する項です($$\varphi$$方向にしか成分を持たない円形磁場は磁気張力で内側に縮もうとします)。  
 次に$$\varphi$$方向成分を計算しましょう。(29)式の$$\varphi$$方向成分では、円筒座標系に移ったことによるコリオリ力のような項が出てきています。これを整理するために両辺に$$R$$をかけて、単位体積あたりの角運動量の$$z$$成分$$L_z = R \rho v_\varphi$$の保存則の式に書き換えます。
 
 $$

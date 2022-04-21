@@ -1,0 +1,116 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#誘導方程式の変換" id="markdown-toc-誘導方程式の変換">誘導方程式の変換</a>    <ol>
+      <li><a href="#円筒座標系" id="markdown-toc-円筒座標系">円筒座標系</a></li>
+      <li><a href="#3次元極座標系" id="markdown-toc-3次元極座標系">3次元極座標系</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="誘導方程式の変換">誘導方程式の変換</h1>
+
+<p>散逸などのない理想的な磁気流体での誘導方程式</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) \tag{1}\]
+
+<p>を円筒座標と3次元極座標系での表記に書き換えましょう。このとき、この式を他の<a href="/mhd/continuity">質量保存(連続の式)</a>や<a href="/mhd/momentum">運動量保存</a>の形と同じく、発散の形にします。</p>
+
+<h2 id="円筒座標系">円筒座標系</h2>
+
+<p>円筒座標系での回転に注意して</p>
+
+\[\begin{aligned}
+\frac{\partial B_R}{\partial t} 
+&amp;= \frac{1}{R} \frac{\partial}{\partial \varphi} (v_R B_\varphi - B_R v_\varphi) + \frac{\partial}{\partial z} (v_R B_z - B_R v_z) \\
+&amp;= \frac{1}{R} \frac{\partial}{\partial R} \{ R (v_R B_R - B_R v_R)\} + \frac{1}{R} \frac{\partial}{\partial \varphi} (v_R B_\varphi - B_R v_\varphi) + \frac{\partial}{\partial z} (v_R B_z - B_R v_z) \\
+&amp;= - \nabla \cdot (B_R \mathbf{v} - v_R \mathbf{B})
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[\frac{\partial B_R}{\partial t} + \nabla \cdot (B_R \mathbf{v} - v_R \mathbf{B}) 
+= 0 \tag{2}\]
+
+<p>続いて\(B_\varphi\)の時間微分の式です。</p>
+
+\[\begin{aligned}
+\frac{\partial B_\varphi}{\partial t} 
+&amp;= \frac{\partial}{\partial z} (v_\varphi B_z - B_\varphi v_z) + \frac{\partial}{\partial R} (v_\varphi B_R - B_\varphi v_R) \\
+&amp;= \frac{1}{R} \frac{\partial}{\partial R} \{ R(v_\varphi B_R - B_\varphi v_R)\} + \frac{1}{R} \frac{\partial}{\partial \varphi} (v_\varphi B_\varphi - B_\varphi v_\varphi) + \frac{\partial}{\partial z}(v_\varphi B_z - B_\varphi v_z) - \frac{v_\varphi B_R - B_\varphi v_R}{R} \\
+&amp;= - \nabla \cdot (B_\varphi \mathbf{v} - v_\varphi \mathbf{B}) +  \frac{B_\varphi v_R - v_\varphi B_R}{R}
+\end{aligned}\]
+
+<p>よって</p>
+
+\[\frac{\partial B_\varphi}{\partial t} + \nabla \cdot (B_\varphi \mathbf{v} - v_\varphi \mathbf{B}) 
+= \frac{B_\varphi v_R - v_\varphi B_R}{R} \tag{3}\]
+
+<p>となります。円筒座標系での表記による源泉項が登場します。<br />
+最後に\(B_z\)の時間微分です。</p>
+
+\[\begin{aligned}
+\frac{\partial B_z}{\partial t} 
+&amp;= \frac{1}{R} \frac{\partial}{\partial R} \{ R (v_z B_R - B_z v_R)\} + \frac{1}{R} \frac{\partial}{\partial \varphi} (v_z B_\varphi - B_z v_\varphi) \\
+&amp;= \frac{1}{R} \frac{\partial}{\partial R} \{ R (v_z B_R - B_z v_R)\} + \frac{1}{R} \frac{\partial}{\partial \varphi} (v_z B_\varphi - B_z v_\varphi) + \frac{\partial}{\partial z} (v_z B_z - B_z v_z) \\
+&amp;= - \nabla \cdot (B_z \mathbf{v} - v_z \mathbf{B})
+\end{aligned}\]
+
+<p>よって</p>
+
+\[\frac{\partial B_z}{\partial z} + \nabla \cdot (B_z \mathbf{v} - v_z \mathbf{B}) 
+= 0 \tag{4}\]
+
+<p>のようになります。</p>
+
+<h2 id="3次元極座標系">3次元極座標系</h2>
+
+<p>同様に、\((r, \theta \varphi)\)での表記を考えます。</p>
+
+\[\frac{\partial B_r}{\partial t} 
+= \frac{1}{r \sin \theta} \frac{\partial}{\partial \theta} \{ \sin \theta (v_r B_\theta - B_r v_\theta)\} + \frac{1}{r \sin \theta} \frac{\partial}{\partial \varphi} (v_r B_\varphi - B_r v_\varphi) 
+= \frac{1}{r^2} \frac{\partial}{\partial r} \{r^2 (v_r B_r - B_r v_r)\} + \frac{1}{r \sin \theta} \frac{\partial}{\partial \theta} \{ \sin \theta (v_r B_\theta - B_r v_\theta)\} + \frac{1}{r \sin \theta} \frac{\partial}{\partial \varphi} (v_r B_\varphi - B_r v_\varphi) 
+= - \nabla \cdot (B_r \mathbf{v} - v_r \mathbf{B})\]
+
+<p>よって</p>
+
+\[\frac{\partial B_r}{\partial t} + \nabla \cdot (B_r \mathbf{v} - v_r \mathbf{B}) 
+= 0 \tag{5}\]
+
+<p>次は\(B_\theta\)の時間微分です。</p>
+
+\[\frac{\partial B_\theta}{\partial t} 
+= \frac{1}{r \sin \theta} \frac{\partial}{\partial \varphi} (v_\theta B_\varphi - B_\theta v_\varphi) + \frac{1}{r} \frac{\partial}{\partial r} \{ r (v_\theta B_r - B_\theta v_r)\}
+=\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 富阪幸治, 花輪知幸, 牧野淳一郎, “シミュレーション天文学”<br />
+[2] Chandrasekhar, “Hydrodynamic and Hydromagnetic Stability”<br />
+[3] <a href="https://arxiv.org/abs/1004.2487">Skinner &amp; Ostriker, 2010, “The Athena Astrophysical MHD Code in Cylindrical Geometry”</a><br />
+[4] <a href="https://iopscience.iop.org/article/10.1086/513316">Mignone et al., “PLUTO: A Numerical Code for Computational Astrophysics”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

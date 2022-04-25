@@ -147,7 +147,7 @@ $$
 = 0.665 \times 10^{-24} [{\rm cm}^2]
 $$
 
-これは[Rutherford散乱](/ism/rutherford.md)の入射電子の速度を光速度$$c$$で置き換えたときの散乱断面積にほぼ一致しています。
+これは[Rutherford散乱](/astroelec/rutherford)の入射電子の速度を光速度$$c$$で置き換えたときの散乱断面積にほぼ一致しています。
 
 {% include adsense.html %}
 

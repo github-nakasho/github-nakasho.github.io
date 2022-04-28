@@ -1,0 +1,202 @@
+I"�&
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気流体での垂直衝撃波" id="markdown-toc-磁気流体での垂直衝撃波">磁気流体での垂直衝撃波</a>    <ol>
+      <li><a href="#基礎方程式" id="markdown-toc-基礎方程式">基礎方程式</a></li>
+      <li><a href="#式変形と衝撃波の発生条件" id="markdown-toc-式変形と衝撃波の発生条件">式変形と衝撃波の発生条件</a></li>
+      <li><a href="#強い衝撃波極限での圧縮率" id="markdown-toc-強い衝撃波極限での圧縮率">強い衝撃波極限での圧縮率</a></li>
+      <li><a href="#弱い磁場極限での圧縮率" id="markdown-toc-弱い磁場極限での圧縮率">弱い磁場極限での圧縮率</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気流体での垂直衝撃波">磁気流体での垂直衝撃波</h1>
+
+<p><img src="/assets/images/mhd/mhd_shock_perp_001.png" alt="" /></p>
+
+<p><a href="/mhd/shock">磁場のない流体での垂直衝撃波</a>のときと同様に、衝撃波と同じ速度で運動する座標系で衝撃波を観測しましょう。また衝撃波は定常的に存在し、等速で流体中を伝播していくものとします。
+衝撃波面を挟んで上流(pre-shock)側の物理量には1, 下流(post-shock)側の物理量には2の添字をつけて考えます。さらに簡単のため、流体の運動方向は衝撃波面に対して垂直で、磁場の方向は衝撃波面に平行な成分しか存在しないとします。</p>
+
+<h2 id="基礎方程式">基礎方程式</h2>
+
+<p><a href="/mhd/continuity">連続の式</a>、<a href="/mhd/momentum">運動量保存の式</a>、<a href="/mhd/energy">エネルギー保存の式</a>から以下を得ます。</p>
+
+\[\rho_1 v_1 
+= \rho_2 v_2 \tag{1}\]
+
+\[\rho_1 v_1 v_1 + P_1 + \frac{1}{8\pi} B_1^2 
+= \rho_2 v_2 v_2 + P_2 + \frac{1}{8\pi} B_2^2 \tag{2}\]
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \rho_1 e_1 + P_1 \right) v_1 + S_1 
+= \left( \frac{1}{2} \rho_2 v_2^2 + \rho_2 e_2 + P_2 \right) v_2 + S_2 \tag{3}\]
+
+<p>ここで</p>
+
+\[e = \frac{1}{\gamma - 1} \frac{P}{\rho}, \quad 
+\mathbf{S} = \frac{c}{4\pi} \mathbf{E} \times \mathbf{B} \tag{4}\]
+
+<p>などです。さらに<a href="/mhd/ohm">オームの法則</a>から</p>
+
+\[\mathbf{j} 
+= \sigma \left( \mathbf{E} + \mathbf{v} \times \frac{\mathbf{B}}{c} \right) \ \Longrightarrow \ 
+\mathbf{E} 
+= \frac{\mathbf{j}}{\sigma} - \mathbf{v} \times \frac{\mathbf{B}}{c} 
+\underbrace{\simeq}_{\sigma \gg 1} - \mathbf{v} \times \frac{\mathbf{B}}{c} \tag{5}\]
+
+<p>です。(3), (4), (5)式より</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma-1} P_1 \right) v_1 - \frac{1}{4\pi} (\mathbf{v}_1 \times \mathbf{B}_1) \times \mathbf{B}_1
+= \left( \frac{1}{2} \rho_2 v_2^2 + \frac{\gamma}{\gamma-1} P_2 \right) v_2 - \frac{1}{4\pi} (\mathbf{v}_2 \times \mathbf{B}_2) \times \mathbf{B}_2\]
+
+<p>ベクトル解析から</p>
+
+\[[(\mathbf{v} \times \mathbf{B}) \times \mathbf{B}]_i 
+= \epsilon_{ijk} (\mathbf{v} \times \mathbf{B})_j B_k 
+= \epsilon_{ijk} \epsilon_{j\ell m} v_\ell B_m B_k 
+= \epsilon_{jki} \epsilon_{j\ell m} v_\ell B_m B_k 
+= (\delta_{k\ell} \delta_{i m} - \delta_{k m} \delta_{i \ell}) v_\ell B_m B_k 
+= v_k B_i B_k - v_i B_k B_k 
+= [(\mathbf{B} \cdot \mathbf{v}) \mathbf{B} - B^2 \mathbf{v}]_i 
+= - B^2 v_i\]
+
+<p>最後の等号では、今回の問題設定である\(\mathbf{B} \perp \mathbf{v}\)を用いました。以上より</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma-1} P_1 + \frac{1}{4\pi} B_1^2\right) v_1
+= \left( \frac{1}{2} \rho_2 v_2^2 + \frac{\gamma}{\gamma-1} P_2 + \frac{1}{4\pi} B_2^2 \right) v_2 \tag{6}\]
+
+<p>最後に<a href="/mhd/induction">誘導方程式</a>を考えます。定常な流れを考えているので</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) 
+= \mathbf{0}\]
+
+<p>この式を下図のような、一辺の長さ\(\ell\)の正方形で面積積分すると</p>
+
+<p><img src="/assets/images/mhd/mhd_shock_perp_002.png" alt="" /></p>
+
+\[\iint_S \nabla \times (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{S} 
+= \oint_c (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{s} 
+= v_1 B_1 \ell - v_2 B_2 \ell 
+= 0 \ \Longrightarrow \ 
+v_1 B_1 = v_2 B_2 \tag{6}\]
+
+<p>と求まります。</p>
+
+<h2 id="式変形と衝撃波の発生条件">式変形と衝撃波の発生条件</h2>
+
+<p>(1), (10)式から</p>
+
+\[\frac{\rho_2}{\rho_1} 
+= \frac{v_1}{v_2} 
+= \frac{B_2}{B_1} 
+\equiv X \tag{7}\]
+
+<p>さらに</p>
+
+\[\frac{P_2}{P_1} \equiv Y, \quad 
+M_1 = \frac{v_1}{C_{s1}} \tag{8}\]
+
+<p>を定義しておきます。すると(2)式より</p>
+
+\[\rho_1 v_1^2 + P_1 + \frac{1}{8\pi} B_1^2 
+= \rho_1 v_1^2 \frac{1}{X} + P_1 Y + \frac{1}{8\pi} B_1^2 X^2\]
+
+<p>のようになります。この両辺を\(P_1\)で割って整理します。このときプラズマベータ\(\beta \equiv \frac{P}{B^2 / 8\pi}\)を用いると</p>
+
+\[\frac{\rho_1 v_1^1}{P_1} + 1 + \frac{1}{\beta_1} 
+= \frac{\rho_1 v_1^2}{P_1} \frac{1}{X} + Y + \frac{X^2}{\beta_1} \ \Longrightarrow \ 
+Y 
+= 1 + \frac{1}{\beta_1} (1-X^2) + \gamma \underbrace{\frac{\rho_1}{\gamma P_1}}_{= C_s^{-2}} v_1^2 \left( 1 - \frac{1}{X}\right) 
+= 1 + \frac{1}{\beta_1} (1-X^2) + \gamma M_1^2 \left( 1 - \frac{1}{X}\right) \tag{9}\]
+
+<p>のようになります。同様に(6)式から</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma-1} P_1 + \frac{B_1^2}{4\pi} \right) v_1 
+= \left( \frac{1}{2} \rho_1 v_1^2 \frac{1}{X} + \frac{\gamma}{\gamma-1} P_1 Y + \frac{B_1^2}{4\pi} X^2 \right) \frac{v_1}{X}\]
+
+<p>両辺に\(X / \gamma P_1 v_1\)をかけると</p>
+
+\[\left( \frac{1}{2} M_1^2 + \frac{1}{\gamma-1} + \frac{2}{\gamma} \frac{1}{\beta_1}\right) X 
+= \frac{1}{2} M_1^2 \frac{1}{X} + \frac{1}{\gamma-1} Y + \frac{2}{\gamma} \frac{1}{\beta_1} X^2\]
+
+<p>となります。左辺に\(Y\)を持ってくると</p>
+
+\[Y 
+= \frac{2(\gamma-1)}{\gamma \beta_1} X(1-X) + X + \frac{\gamma-1}{2} M_1^2 \left( X - \frac{1}{X}\right) \tag{10}\]
+
+<p>(9), (10)式より</p>
+
+\[- \frac{2(\gamma-1)}{\gamma \beta_1} X^2(X-1) + X^2 + \frac{\gamma-1}{2} M_1^2 \left( X^2 - 1\right) 
+= X - \frac{1}{\beta_1} X(X^2-1) + \gamma M_1^2 \left( X - 1\right) \ \Longrightarrow \ 
+(X-1) \left\{ -\frac{2(\gamma-1)}{\gamma \beta_1} X^2 + X + \frac{\gamma-1}{2} M_1^2 (X+1) + \frac{1}{\beta_1} X (X+1) - \gamma M_1^2\right\} 
+= 0\]
+
+<p>よってこの式を解けば、衝撃波面の前後の物理量の変化がわかります。(7)式より\(X=1\)は\(\rho_1 = \rho_2\)で何も変化がない解です。よって\(\{ \cdots \} = 0\)を解きます。</p>
+
+\[\frac{2(1 -\gamma)}{\gamma \beta_1} X^2 + X + \frac{\gamma-1}{2} M_1^2 (X+1) + \frac{1}{\beta_1} X (X+1) - \gamma M_1^2 
+= 0 \ \Longrightarrow \ 
+\underbrace{2 (2-\gamma) X^2 + \gamma \beta_1 \left\{ 2 + (\gamma-1) M_1^2 + \frac{2}{\beta_1} \right\} - \gamma \beta_1 (\gamma+1) M_1^2}_{\equiv f(X)}
+= 0 \tag{11}\]
+
+<p>比熱比\(\gamma\)は一般に\(1&lt;\gamma&lt;2\)より、関数\(f(X)\)は下に凸な2次関数とわかります。\(X=1\)のとき\(f(1)&lt;0\)であれば、\(X&gt;1\)で\(f(X)=0\)となる解が存在することになるので</p>
+
+\[f(1) 
+= 2(2-\gamma) + \gamma \beta_1 \left\{ 2+(\gamma-1) M_1^2 + \frac{2}{\beta_1} \right\} - \gamma \beta_1 (\gamma+1) M_1^2 &lt; 0 \ \Longrightarrow \ 
+M_1^2 &gt; 1 + \frac{2}{\gamma \beta_1} \tag{12}\]
+
+<p>ここでプラズマベータは</p>
+
+\[\beta = \frac{P}{B^2 / 8\pi} 
+= \frac{\gamma P / rho}{\frac{\gamma}{2} \frac{B^2}{4 \pi \rho}} 
+= \frac{2}{\gamma} \frac{C_s^2}{v_A^2} \tag{13}\]
+
+<p>のようにも書かれます。\(v_A\)は<a href="/mhd/alfven_wave">アルヴェーン速度</a>です。これを用いると(12)式は</p>
+
+\[\frac{v_1^2}{C_{s1}^2} &gt; 1 + \frac{v_{A1}^2}{C_{s1}^2} \ \Longrightarrow \ 
+v_1^2 &gt; C_{s1}^2 + v_{A1}^2 \tag{13}\]
+
+<p>よってこの場合に衝撃波が起こる条件は、上流側の流体の速度が衝撃波面に乗った系からみて<a href="/mhd/magneto_acoustic">速い磁気音波の位相速度</a>よりも大きくなければならないとわかります。</p>
+
+<h2 id="強い衝撃波極限での圧縮率">強い衝撃波極限での圧縮率</h2>
+
+<p>強い衝撃波においては\(M_1^2 \gg 1\)です。この条件と(11)式より</p>
+
+\[\gamma \beta_1 (\gamma-1) M_1^2 X - \gamma \beta_1 (\gamma + 1)M_1^2 = 0 \ \Longrightarrow \ 
+X = \frac{\gamma+1}{\gamma-1} 
+= \frac{\rho_2}{\rho_1} = \frac{B_2}{B_1}\]
+
+<p>となり、<a href="/mhd/shock">磁場のない流体の垂直衝撃波</a>と同様の結果を得ます。</p>
+
+<h2 id="弱い磁場極限での圧縮率">弱い磁場極限での圧縮率</h2>
+
+<p>弱い磁場極限では\(\beta \rightarrow \infty\)です。この条件と(11)式より</p>
+
+\[\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

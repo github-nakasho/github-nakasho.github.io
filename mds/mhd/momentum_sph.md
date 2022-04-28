@@ -38,7 +38,7 @@ $$
 \equiv \underbrace{\left( P + \frac{1}{8\pi} B^2 \right)}_{\equiv P_\mathrm{gm}} \delta_i^j + \rho v^i v^j - \frac{1}{4\pi} B^i B^j \tag{2}
 $$
 
-です。(1)式を円筒座標系で具体的にどのように書かれるのかを考えましょう。そのためには(1)式をより一般的に、[共変微分](/gr/derivative)$$\nabla_\mu$$とエネルギー運動量テンソル$$T^{\mu \nu}$$を用いて
+です。(1)式を3次元極座標系で具体的にどのように書かれるのかを考えましょう。そのためには(1)式をより一般的に、[共変微分](/gr/derivative)$$\nabla_\mu$$とエネルギー運動量テンソル$$T^{\mu \nu}$$を用いて
 
 $$
 \nabla_\mu T^{i\mu} 
@@ -420,7 +420,7 @@ $$
 より(36)式の全ての項に$$r^2$$をかけて
 
 $$
-\frac{\partial L_\varphi}{\partial t} + \nabla \cdot \left( L_\varphi \mathbf{v} - \frac{r}{4\pi} B_\theta \mathbf{B} + r P_\mathrm{gm} \mathbf{e}_\varphi \right) 
+\frac{\partial L_\varphi}{\partial t} + \nabla \cdot \left( L_\varphi \mathbf{v} - \frac{r}{4\pi} B_\theta \mathbf{B} + r P_\mathrm{gm} \mathbf{e}_\theta \right) 
 = \cot \theta \left( P_\mathrm{gm} + \rho v_\varphi^2 - \frac{1}{4\pi} B_\varphi^2 \right) + r F_\theta \tag{39}
 $$
 
@@ -459,7 +459,7 @@ $$
 以上から(37)式の両辺に$$r^2 \sin^2 \theta$$をかけて整理すると
 
 $$
-\frac{\partial L_z}{\partial t} + \nabla \cdot \left( L_z \mathbf{v} - \frac{r\sin \theta}{4\pi} B_\varphi \mathbf{B} + r \sin \theta P_\mathrm{gm} \right) 
+\frac{\partial L_z}{\partial t} + \nabla \cdot \left( L_z \mathbf{v} - \frac{r\sin \theta}{4\pi} B_\varphi \mathbf{B} + r \sin \theta P_\mathrm{gm} \mathbf{e}_\varphi \right) 
 = r \sin \theta F_\varphi \tag{40}
 $$
 

@@ -1,0 +1,220 @@
+I"�)
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気流体での斜め衝撃波" id="markdown-toc-磁気流体での斜め衝撃波">磁気流体での斜め衝撃波</a>    <ol>
+      <li><a href="#基礎方程式" id="markdown-toc-基礎方程式">基礎方程式</a></li>
+      <li><a href="#式変形" id="markdown-toc-式変形">式変形</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気流体での斜め衝撃波">磁気流体での斜め衝撃波</h1>
+
+<h2 id="基礎方程式">基礎方程式</h2>
+
+<p>磁気流体が2次元運動をしており、そこで衝撃波が発生した場合を考えます。下図のように衝撃波面に垂直な方向を\(x\), 衝撃波面に平行な方向を\(y\)にとります。衝撃波面は\(x\)方向に伝播していきますが、ここではすでに衝撃波の伝播速度と同じ速度で運動する系で衝撃波を見ているものとします。そして\(y\)方向に適当に運動する系に移動することで、衝撃波面の上流側では\(\mathbf{v}_1 \parallel \mathbf{B}_1\)のようになっているものとします。</p>
+
+<p><img src="/assets/images/mhd/mhd_shock_oblique_001.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>流体の速度は非相対論的で、流体の運動にのみガリレイ変換が施されたと考えます。
+</code></pre></div></div>
+
+<p>また衝撃波は定常状態にあり、等速度で伝播していくとします。以降、衝撃波面の上流側の物理量には1, 下流側の物理量には2の添字をつけて式変形を行います。<br />
+<a href="/mhd/mhd_shock_perp">磁気流体での垂直衝撃波</a>と同様に、衝撃波面を挟んで成り立つ<a href="/mhd/continuity">質量保存則</a>より</p>
+
+\[\rho_1 v_{1x} 
+= \rho_2 v_{2x} \tag{1}\]
+
+<p>続いて<a href="/mhd/momentum">運動量保存則</a>です。\(x\)方向の運動量保存は</p>
+
+\[\underbrace{\frac{\partial}{\partial}(\rho v_{x})}_{定常より0} + \partial_j \left\{ \rho v_x v_j - \frac{1}{4\pi} B_x B_j + \left( P + \frac{1}{8\pi} \right) \delta_{xj} \right\} 
+= 0\]
+
+<p>から</p>
+
+\[\rho_1 v_{1x} v_{1x} - \frac{1}{4\pi} B_{1x} B_{1x} + P_1 + \frac{1}{8\pi} B_1^2 
+= \rho_2 v_{2x} v_{1x} - \frac{1}{4\pi} B_{2x} B_{2x} + P_2 + \frac{1}{8\pi} B_2^2 \tag{2}\]
+
+<p><a href="/mhd/mhd_shock_perp">垂直衝撃波</a>のときと違い、\(y\)方向の運動量保存も考慮しなければなりません。</p>
+
+\[\rho_1 v_{1y} v_{1x} - \frac{1}{4\pi} B_{1y} B_{1x} 
+= \rho_2 v_{2y} v_{2x} - \frac{1}{4\pi} B_{2y} B_{2x} \tag{3}\]
+
+<p><a href="/mhd/energy">エネルギー保存則</a>より</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \rho_1 e_1 + P_1 \right) v_{1x} + S_{1x} 
+= \left( \frac{1}{2} \rho_2 v_2^2 + \rho_2 e_2 + P_2 \right) v_{2x} + S_{2x} \tag{4}\]
+
+<p>ここで</p>
+
+\[e = \frac{1}{\gamma - 1} \frac{P}{\rho}, \qquad \mathbf{S} = \frac{c}{4\pi} \mathbf{E} \times \mathbf{B} \tag{5}\]
+
+<p>はそれぞれ流体の内部エネルギーと<a href="/astroelec/em_energy_momentum">ポインティングベクトル</a>です。　　
+<a href="/mhd/ohm">オームの法則</a>より、理想磁気流体を考えて電気伝導度が\(\sigma \rightarrow \infty\)とすると</p>
+
+\[\mathbf{j} 
+= \sigma \left( \mathbf{E} + \mathbf{v} \times \frac{\mathbf{B}}{c} \right) \ \Longrightarrow \ 
+\mathbf{E} 
+= \frac{\mathbf{j}}{\sigma} - \mathbf{v} \times \frac{\mathbf{B}}{c} 
+\underbrace{=}_{\sigma \gg 1} - \mathbf{v} \times \frac{\mathbf{B}}{c} \tag{6}\]
+
+<p>以上の(4), (5), (6)式より</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma -1} P_1\right) v_{1x} - \frac{1}{4\pi} [(\mathbf{v}_1 \times \mathbf{B}_1) \times \mathbf{B}_1]_x 
+= \left( \frac{1}{2} \rho_2 v_2^2 + \frac{\gamma}{\gamma -1} P_2\right) v_{2x} - \frac{1}{4\pi} [(\mathbf{v}_2 \times \mathbf{B}_2) \times \mathbf{B}_2]_x\]
+
+<p>ベクトル解析より</p>
+
+\[\begin{aligned}
+[(\mathbf{v} \times \mathbf{B}) \times \mathbf{B}]_i 
+&amp;= \epsilon_{ijk} (\mathbf{v} \times \mathbf{B})_j B_k 
+= \epsilon_{ijk} \epsilon_{k \ell m} v_\ell B_m B_k 
+= \epsilon_{kij} \epsilon_{k \ell m} v_\ell B_m B_k \\
+&amp;= (\delta_{k\ell} \delta_{im} - \delta_{i\ell} \delta_{km}) v_\ell B_m B_k 
+= v_k B_i B_k - v_i B_k B_k 
+= [(\mathbf{v} \cdot \mathbf{B}) \mathbf{B} - B^2 \mathbf{v}]_i
+\end{aligned}\]
+
+<p>から</p>
+
+\[\begin{align}
+&amp;\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma-1} P_1\right) v_{1x} - \frac{1}{4\pi} (v_{1x} B_{1x} + v_{1y} B_{1y}) B_{1x} + \frac{1}{4\pi} B_1^2 v_{1x} \notag \\
+&amp;= \left( \frac{1}{2} \rho_2 v_2^2 + \frac{\gamma}{\gamma-1} P_2\right) v_{2x} - \frac{1}{4\pi} (v_{2x} B_{2x} + v_{2y} B_{2y}) B_{2x} + \frac{1}{4\pi} B_2^2 v_{2x} \tag{7}
+\end{align}\]
+
+<p>となります。<br />
+次に、<a href="/astroelec/em_energy_momentum">磁場のガウス則(磁気単極子がないことを表す式)</a>より</p>
+
+\[\nabla \cdot \mathbf{B} = 0 \ \Longrightarrow \ 
+B_{1x} = B_{2x} \tag{8}\]
+
+<p>が満たされる必要があります。<br />
+そして<a href="/mhd/induction">誘導方程式</a>より</p>
+
+\[\nabla \times (\mathbf{v} \times \mathbf{B}) 
+= \frac{\partial \mathbf{B}}{\partial t} 
+\underbrace{=}_{定常より} \mathbf{0}\]
+
+<p><a href="/mhd/mhd_shock_perp">磁気流体垂直衝撃波</a>のときと同様に、衝撃波面に垂直に交差するような一辺\(\ell\)の正方形で面積積分すると</p>
+
+\[\begin{align}
+&amp; \iint_S \nabla \times (\mathbf{v} \times \mathbf{B}) \cdot d\mathbf{S} 
+= \oint_C (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{s} 
+= (v_{1x} B_{1y}- v_{1y} B_{1x}) \ell - (v_{2x} B_{2y} - v_{2y} B_{2x}) \ell 
+= 0 \notag \\
+&amp; \Longrightarrow \ 
+v_{1x} B_{1y}- v_{1y} B_{1x} = v_{2x} B_{2y} - v_{2y} B_{2x} \tag{9}
+\end{align}\]
+
+<p>先程の\(\mathbf{v}_1 \parallel \mathbf{B}_1\)となるような座標系で衝撃波を観測していることから</p>
+
+\[v_{1y} 
+= \frac{B_{1y}}{B_{1x}} v_{1x} \tag{10}\]
+
+<p>が成立します。(9), (10)式から、実は衝撃波の下流側でも</p>
+
+\[v_{2y} 
+= \frac{B_{2y}}{B_{2x}} v_{2x} \tag{11}\]
+
+<p>すなわち\(\mathbf{v}_2 \parallel \mathbf{B}_2\)が成り立ちます。</p>
+
+<h2 id="式変形">式変形</h2>
+
+<p>(1)式より</p>
+
+\[\frac{\rho_2}{\rho_1} = \frac{v_{1x}}{v_{2x}} 
+\equiv X \tag{12}\]
+
+<p>さらに</p>
+
+\[\frac{P_2}{P_1} \equiv Y, \qquad \frac{B_{2y}}{B_{1y}} \equiv Z \tag{13}\]
+
+<p>を定義します。(8), (10), (11)より</p>
+
+\[\frac{v_{2y}}{v_{1y}} 
+= \frac{\frac{B_{2y}}{B_{2x}} v_{2x}}{\frac{B_{1y}}{B_{1x}} v_{1x}} 
+= \frac{B_{2y}}{B_{1y}} \frac{v_{2x}}{v_{1x}} 
+= \frac{Z}{X} \tag{14}\]
+
+<p>です。これらを用いて基礎方程式を計算していきましょう。(2), (8), (12), (13), (14)式より式より</p>
+
+\[\rho_1 v_{1x}^2 + P_1 + \frac{1}{8\pi} B_{1y}^2 
+= \rho_1 v_{1x}^2 \frac{1}{X} + P_1 Y + \frac{1}{8\pi} B_{1y}^2 Z^2 \ \Longrightarrow \ 
+\rho_1 v_{1x}^2 \left(1-\frac{1}{X} \right) + P_1(1-Y) + \frac{1}{8\pi} B_{1y}^2 (1-Z^2) = 0\]
+
+<p>両辺に\(X / \rho_1\)をかけて<a href="/mhd/sound_wave">音速</a>\(C_s^2 = \gamma P / \rho\)を用いて整理すると</p>
+
+\[v_{1x}^2 (X-1) + \frac{C_s^2}{\gamma} X (1-Y) + \frac{1}{8\pi \rho_1} B_{1y}^2 X(1-Z^2) = 0 \tag{15}\]
+
+<p>続いて(3), (8), (10), (12), (13), (14)式より</p>
+
+\[\rho_{1} v_{1y} v_{1x} - \frac{1}{4\pi} B_{1y} B_{1x} 
+= \rho_1 v_{1y} v_{1x} \frac{Z}{X} - \frac{1}{4\pi} B_{1y} B_{1x} Z\]
+
+<p>これを整理すると</p>
+
+\[Z 
+= \frac{\rho_1 v_{1y} v_{1x} - \frac{1}{4\pi} B_{1y} B_{1x}}{\rho_1 v_{1y} v_{1x} \frac{1}{X} - \frac{1}{4\pi} B_{1y} B_{1x}} 
+\underbrace{=}_{(10)} \frac{v_{1y} v_{1x} - \frac{1}{4\pi \rho_1} \frac{v_{1y}}{v_{1x}} B_{1x}^2}{v_{1y} v_{1x} \frac{1}{X} - \frac{1}{4\pi \rho_1} \frac{v_{1y}}{v_{1x}} B_{1x}^2} 
+= \frac{v_{1x}^2 - \frac{1}{4\pi \rho_1} B_{1x}^2}{v_{1x}^2 - \frac{1}{4\pi \rho_1} B_{1x}^2 X} X\]
+
+<p>となります。今、流体の速度ベクトルと磁場ベクトルが平行な系で考えているので、これは</p>
+
+\[Z 
+= \frac{B_{2y}}{B_{1y}} 
+= \frac{v_1^2 - \frac{1}{4\pi \rho_1} B_1^2}{v_1^2 - \frac{1}{4\pi \rho_1} B_1^2 X} X 
+= \frac{v_1^2 - v_A^2}{v_1^2 - v_A^2 X} X \tag{16}\]
+
+<p>と変形することができます。ここで<a href="/mhd/alfven_wave">アルヴェーン速度</a>を用いました。(14), (16)式より</p>
+
+\[\frac{v_{2y}}{v_{1y}} 
+= \frac{v_1^2 - v_A^2}{v_1^2 - v_A^2 X} \tag{17}\]
+
+<p>最後に(7)式の変形を行います。実は</p>
+
+\[- \frac{1}{4\pi} (v_{1x} B_{1x} + v_{1y} B_{1y}) B_{1x} + \frac{1}{4\pi} B_1^2 v_{1x} 
+= \frac{1}{4\pi} B_{1y}^2 v_{1x} - \frac{1}{4\pi} v_{1y} B_{1y} B_{1x} 
+\underbrace{=}_{10} 0\]
+
+<p>となります。これは\(\mathbf{v} \paralelle \mathbf{B}\)の座標系に移っていることから、\(\mathbf{j} = \mathbf{v} \times \mathbf{B}/c = \mathbf{0}\)に必ずなるためです。よって(7)式は</p>
+
+\[\left( \frac{1}{2} \rho_1 v_1^2 + \frac{\gamma}{\gamma-1}P_1 \right) v_{1x} 
+= \left( \frac{1}{2} \rho_1 v_2^2 X + \frac{\gamma}{\gamma-1}P_1 Y\right) \frac{1}{X} v_{1x} \ \Longrightarrow \ 
+\frac{1}{2} \rho_1 (v_1^2 - v_2^2) X = \frac{\gamma}{\gamma-1} P_1(Y-X)\]
+
+<p>となります。先程と同様に<a href="/mhd/sound_wave">音速</a>\(C_s^2 - \gamma P/\rho\)を用いて整理すると</p>
+
+\[Y = X + \frac{\gamma-1}{2 C_s^2} v_1^2 \left( 1-\frac{v_2^2}{v_1^2}\right) X\]
+
+<p>となります。ここで\(\mathbf{v} = v_1 (\cos \theta, \sin \theta)\)のように書けることを用いると</p>
+
+\[v_{2x}^2 = \frac{v_{2x}^2}{v_{1x}^2} v_{1x}^2 
+\underbrace{=}_{(12)}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Priest, “Solar Magnetohydrodynamics”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

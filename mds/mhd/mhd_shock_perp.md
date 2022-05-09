@@ -106,7 +106,7 @@ $$
 
 $$
 \iint_S \nabla \times (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{S} 
-= \oint_c (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{s} 
+= \oint_C (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{s} 
 = v_1 B_1 \ell - v_2 B_2 \ell 
 = 0 \ \Longrightarrow \ 
 v_1 B_1 = v_2 B_2 \tag{6}
@@ -321,13 +321,13 @@ $$
 \beta_1^{-1} x^2 + (\beta_1^{-1} + 1) x - M_1^2 
 = 0 \ \Longrightarrow \ 
 x 
-= \frac{-(1+\beta_1) \pm \beta_1 \sqrt{\beta_1^2 + (2 + 4M_1^2) \beta_1^{-1} + 1}}{2}
+= \frac{-(1+\beta_1) \pm \beta_1 \sqrt{\beta_1^{-2} + (2 + 4M_1^2) \beta_1^{-1} + 1}}{2}
 $$
 
 圧縮率は必ず正の値を取るので
 
 $$
-x = \frac{-(1+\beta_1) + \beta_1 \sqrt{\beta_1^2 + (2 + 4M_1^2) \beta_1^{-1} + 1}}{2}
+x = \frac{-(1+\beta_1) + \beta_1 \sqrt{\beta_1^{-2} + (2 + 4M_1^2) \beta_1^{-1} + 1}}{2}
 $$
 
 が求めたかった圧縮率となります。弱い磁場の極限、すなわち$$\beta_1^{-1} \rightarrow 0$$では

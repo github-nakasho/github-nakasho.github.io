@@ -250,7 +250,7 @@ $$
 \frac{1}{2} \rho_1 (v_1^2 - v_2^2) X = \frac{\gamma}{\gamma-1} P_1(Y-X)
 $$
 
-となります。先程と同様に[音速](/mhd/sound_wave)$$C_{s1}^2 = \gamma P/\rho$$を用いて整理すると
+となります。先程と同様に[音速](/mhd/sound_wave)$$C_{s}^2 = \gamma P/\rho$$を用いて整理すると
 
 $$
 Y = X + \frac{\gamma-1}{2 C_{s1}^2} v_1^2 \left( 1-\frac{v_2^2}{v_1^2}\right) X
@@ -651,9 +651,11 @@ $$
 最後に(27)式の右辺から、スイッチオン衝撃波での磁力線の折れ曲がり角の最大値を計算しましょう。(27)式右辺を$$g(X)$$とすると
 
 $$
+\begin{align}
 g(X) 
-= - (\gamma - 1) X^2 + 2 \left( \gamma - \frac{C_{s1}^2}{v_{A1}^2}\right) X - \gamma -1 + \frac{2 C_{s1}^2}{v_{A1}^2} 
-= - (\gamma -1) \left( X - \frac{\gamma - \frac{C_{s1}^2}{v_{A1}^2}}{\gamma-1}\right)^2 + \frac{\left( \frac{C_{s1}^2}{v_{A1}^2}-1\right)^2}{\gamma-1} \tag{29}
+&= - (\gamma - 1) X^2 + 2 \left( \gamma - \frac{C_{s1}^2}{v_{A1}^2}\right) X - \gamma -1 + \frac{2 C_{s1}^2}{v_{A1}^2} \notag \\
+&= - (\gamma -1) \left( X - \frac{\gamma - \frac{C_{s1}^2}{v_{A1}^2}}{\gamma-1}\right)^2 + \frac{\left( \frac{C_{s1}^2}{v_{A1}^2}-1\right)^2}{\gamma-1} \tag{29}
+\end{align}
 $$
 
 よってこの式は上に凸の2次関数であり、$$X = \frac{\gamma - \frac{C_{s1}^2}{v_{A1}^2}}{\gamma-1}$$のとき、磁力線の折れ曲がりが最大となることがわかります。

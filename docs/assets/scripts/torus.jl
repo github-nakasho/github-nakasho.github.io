@@ -86,6 +86,6 @@ contour(Rs, zs, rhos, fill=true, linewidth=0, levels=20,
         aspect_ratio=:equal, xlim=[Rmin, Rmax], ylim=[zmin, zmax], xlabel="R", ylabel="z", title="Log(Density)", extend="both")
 savefig("density.png")
 # make magnetic energy contour
-contour(Rs, zs, emags, c=:ice, fill=true, linewidth=0, levels=20, clims=(-6, -5), 
+contour(Rs, zs, emags, c=:ice, fill=true, linewidth=0, levels=20, clims=(-12, -5), 
         aspect_ratio=:equal, xlim=[Rmin, Rmax], ylim=[zmin, zmax], xlabel="R", ylabel="z", title="Log(Magnetic Energy)")
 savefig("magnetic_energy.png")

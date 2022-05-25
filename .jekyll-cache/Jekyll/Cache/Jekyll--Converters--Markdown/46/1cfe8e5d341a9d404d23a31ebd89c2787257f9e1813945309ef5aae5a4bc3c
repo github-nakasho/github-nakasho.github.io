@@ -1,4 +1,4 @@
-I"6�
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -15,6 +15,7 @@
       <li><a href="#磁場なしトーラスの場合" id="markdown-toc-磁場なしトーラスの場合">磁場なしトーラスの場合</a></li>
       <li><a href="#ポロイダル磁場を持つトーラスの場合" id="markdown-toc-ポロイダル磁場を持つトーラスの場合">ポロイダル磁場を持つトーラスの場合</a></li>
       <li><a href="#トーラスの周囲について" id="markdown-toc-トーラスの周囲について">トーラスの周囲について</a></li>
+      <li><a href="#コラム的な-なぜ平衡状態にこだわるのか" id="markdown-toc-コラム的な-なぜ平衡状態にこだわるのか">コラム的な？: なぜ「平衡状態」にこだわるのか？</a></li>
       <li><a href="#トーラスの可視化" id="markdown-toc-トーラスの可視化">トーラスの可視化</a></li>
     </ol>
   </li>
@@ -273,6 +274,14 @@ C_s^2
 
 <p>となります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="ポロイダル磁場を持つトーラスの場合">ポロイダル磁場を持つトーラスの場合</h2>
 
 <p>ポロイダル(\(R, z\)成分しか持たない)磁場をトーラス内部に持つことを考える場合、一般に釣り合いの式を解くことは困難です。このため、よく用いられる磁場の用意手法としては、次のようなものがあります。<br />
@@ -310,9 +319,25 @@ C_s^2
 
 <p>となります。ここで\(\Phi_b = \Phi(R_b, 0)\)です。積分定数をこのように定めておけば、トーラスの最深部\((R_b, 0)\)でのコロナ成分のガス密度が\(\rho_{c, 0}\)であると一眼で判断することができて便利です。</p>
 
+<h2 id="コラム的な-なぜ平衡状態にこだわるのか">コラム的な？: なぜ「平衡状態」にこだわるのか？</h2>
+
+<p>例えば、トーラス中で発生する不安定性(例えば弱磁場により起こる<a href="/mhd/mri">磁気回転不安定性</a>)を数値計算から明らかにしたいと考えたとします。上述の方位角磁場を伴うトーラスの周囲に、静水圧平衡でない破茶滅茶なコロナ成分を置いてシミュレーションを行なったとしましょう。その研究をまとめて論文として提出すると、おそらくレフェリーからはこのようなコメントをいただくことができます。</p>
+
+<p><strong>これは本当にトーラスの中で発生した不安定性なのか？</strong></p>
+
+<p>トーラス成分以外にコロナ成分を加えることで、このコロナも運動を始めます。すると、このコロナの運動がトーラスのダイナミクスに多少なりとも影響を及ぼします。もし破茶滅茶なコロナ成分を置いて数値計算を行えば、それはもはやコロナの運動による影響が支配的な計算を行なったことになり、もはやトーラス中の不安定性を再現したものとは言えないのです。<br />
+このような理由から、数値シミュレーションでは平衡状態を初期条件として用います。あるいは、降着円盤数値計算コードのHARM(<a href="https://github.com/atchekho/harmpi">GitHub</a>, <a href="https://iopscience.iop.org/article/10.1086/374594">論文</a>)ではトーラス周囲の空間に\(\rho_\mathrm{min} = 10^{-4} (r/r_\mathrm{in})^{-3/2}\)のような閾値を用いて埋めるということをしているようです。</p>
+
 <h2 id="トーラスの可視化">トーラスの可視化</h2>
 
-<p>実際に<a href="https://julialang.org/">Julia言語</a>を用いてトーラスのガス密度分布などを計算し、それをカラーコントアとして可視化するソースコードを以下に示します。</p>
+<p>実際に<a href="https://julialang.org/">Julia言語</a>を用いてトーラスのガス密度分布などを計算し、それをカラーコントアとして可視化するソースコードを以下に示します。
+ここではトーラス内には方位角磁場\(B_\varphi\)が存在するとした(12)式を用いました。計算に際して、方程式は全て規格化されているものとして、物理定数\(G, \mu, m_p, k_B\)は全て1としています。またこのときトーラスのパラメータはそれぞれ\(R_b = 5, a = 0, T_b = 0.01, \rho_b = 1, \Gamma = 4/3, \beta_b = 100\)などです。さらにこのトーラスを形成する重力ポテンシャルは<a href="/compact/pseudo_newton">擬ニュートンポテンシャル</a>で与えられるとします。ここで\(r_g\)は<a href="/gr/isco">シュバルツシルト半径</a>で、この可視化では距離も規格化されていると考えて\(r_g = 0.01\)としています。
+さらにトーラス中心の角運動量\(\ell_z\)は、(ガス圧勾配による力を無視した)ニュートンポテンシャルと遠心力の釣り合いから</p>
+
+\[\frac{\ell_z^2}{R_b^3} = \frac{GM}{R_b^2} \ \Longrightarrow \ 
+\ell_z = \sqrt{GM R_b}\]
+
+<p>と定めました。さらにコロナのパラメータは\(\rho_{c, 0} = 10^{-4}, T_c = 5\)としています。</p>
 
 <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Plots</span>
 <span class="n">gr</span><span class="x">()</span>
@@ -409,7 +434,10 @@ C_s^2
 
 <p>これを用いて可視化されたガス密度\(\rho\)、磁場のエネルギー密度(磁気圧)\(\frac{1}{8\pi} B_\varphi^2\)は以下のようになります。</p>
 
-<p><img src="/assets/images/compact/torus_002.png" alt="" /><img src="/assets/images/compact/torus_003.png" alt="" /></p>
+<p><img src="/assets/images/compact/torus_002.png" alt="" />
+<img src="/assets/images/compact/torus_003.png" alt="" /></p>
+
+<p>上述の数値計算コードのパラメータを適当に変化させて遊んでみると良いでしょう。例えばトーラス最深部の温度\(T_b\)を大きくすると、スケールハイトが大きくなることからトーラスが膨張します。</p>
 
 <h1 id="参考文献">参考文献</h1>
 
@@ -417,7 +445,8 @@ C_s^2
 [2] <a href="https://iopscience.iop.org/article/10.1086/381234">Kato et al., 2004, “Magnetohydrodynamic Accretion Flows: Formation of Magnetic Tower Jet and Subsequent Quasi-Steady State”</a><br />
 [3] <a href="https://iopscience.iop.org/article/10.1086/500525">Nishikori et al., 2006, “Global Three-dimensional Magnetohydrodynamic Simulations of Galactic Gaseous Disks. I. Amplification of Mean Magnetic Fields in an Axisymmetric Gravitational Potential”</a><br />
 [4] <a href="https://iopscience.iop.org/article/10.1086/310222">Hayashi et al., 1996, “X-Ray Flares and Mass Outflows Driven by Magnetic Interaction between a Protostar and Its Surrounding Disk”</a><br />
-[5] <a href="https://academic.oup.com/pasj/article/54/2/267/2948808">Kudoh et al., 2002, “Are Jets Ejected from Locally Magnetized Accretion Disks?”</a></p>
+[5] <a href="https://academic.oup.com/pasj/article/54/2/267/2948808">Kudoh et al., 2002, “Are Jets Ejected from Locally Magnetized Accretion Disks?”</a><br />
+[6] <a href="https://iopscience.iop.org/article/10.1086/374594">Gammie et al., 2003, “HARM: A Numerical Scheme for General Relativistic Magnetohydrodynamics”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

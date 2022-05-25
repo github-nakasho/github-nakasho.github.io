@@ -1,0 +1,137 @@
+I"^
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#擬ニュートンポテンシャル-pseudo-newtonian-potential" id="markdown-toc-擬ニュートンポテンシャル-pseudo-newtonian-potential">擬ニュートンポテンシャル (pseudo-Newtonian potential)</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+      <li><a href="#ニュートン擬ニュートン一般相対論の比較" id="markdown-toc-ニュートン擬ニュートン一般相対論の比較">ニュートン、擬ニュートン、一般相対論の比較</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="擬ニュートンポテンシャル-pseudo-newtonian-potential">擬ニュートンポテンシャル (pseudo-Newtonian potential)</h1>
+
+<p>別名、Paczynski-Wiitaポテンシャルとも呼ばれるこのポテンシャルは、一般相対論から導出されるブラックホールの作る重力ポテンシャルの良い近似となるものです。具体的には以下のように書かれます。</p>
+
+\[\Phi_\mathrm{PN}(r) 
+= - \frac{GM}{r-r_g} \tag{1}\]
+
+<p>ここで\(r\)はブラックホールからの距離、そして\(r_g = 2 GM / c^2\)は<a href="/gr/isco">シュバルツシルト半径</a>です。これを求めてみましょう。</p>
+
+<h2 id="導出">導出</h2>
+
+<p><a href="/gr/einstein_eq">アインシュタイン方程式</a>の係数\(\kappa = 8\pi G/c^4\)を求めるときに用いた、弱重力場極限でのメトリック</p>
+
+\[(g_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+-(1+h_{00}) &amp; &amp; &amp; \mathbf{0} \\
+&amp; 1+h &amp; &amp; \\
+&amp; &amp; 1+h &amp; \\
+\mathbf{0} &amp; &amp; &amp; 1+h  
+\end{array} \right) \tag{2}\]
+
+<p>を用います。このとき、<a href="/gr/weakfield">一般相対論の弱重力場極限がニュートン力学を再現するという制約</a>から</p>
+
+\[h_{00} = \frac{2 \Phi_\mathrm{GR}}{c^2} \tag{3}\]
+
+<p>のように求まるのでした。
+さらに<a href="/gr/tov">球対称重力場の時空計量</a>を</p>
+
+\[(g_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+-e^{2\Phi} &amp; &amp; &amp; \mathbf{0} \\
+&amp; e^{2\Lambda} &amp; &amp; \\
+&amp; &amp; r^2 &amp; \\
+\mathbf{0} &amp; &amp; &amp; r^2 \sin^2 \theta  
+\end{array} \right) \tag{4}\]
+
+<p>と仮定して<a href="/gr/schwarzschild">シュバルツシルト時空の計量</a>を求めると</p>
+
+\[\Phi (r) = \frac{1}{2} \ln (1-r_g / r) \tag{5}\]
+
+<p>と求まります。<br />
+(2), (4)式での00成分を比較すると</p>
+
+\[- 1 - \underbrace{h_{00}}_{(3)} 
+= - \left( 1+ \frac{2 \Phi_\mathrm{GR}}{c^2}\right) 
+\underbrace{\simeq}_{\Phi_\mathrm{GR}/c^2 \ll 1} - e^{2\Phi_\mathrm{GR}/c^2} 
+= - e^{2\Phi}\]
+
+<p>ここで、今考えているのはブラックホールの近傍ではなく\(r \gg r_g\)のような十分遠方であり、\(\Phi_\mathrm{GR} / c^2 \ll 1\)の場合を考えました。\(e\)の肩の比較と(5)式より</p>
+
+\[\Phi_\mathrm{GR} 
+= \frac{c^2}{2} \ln (1-r_g/ r) 
+= - \frac{c^2}{2} \ln \frac{r}{r-r_g} 
+= - \frac{c^2}{2} \ln \left( 1 + \frac{r_g}{r - r_g}\right) \tag{6}\]
+
+<p>となります。ここで\(r_g \ll r-r_g\)のようにシュバルツシルト半径よりも十分遠方の領域を考え、対数部分をテイラー展開を考えます。それを擬ニュートンポテンシャルと定義すると</p>
+
+\[\Phi_\mathrm{GR} 
+\simeq - \frac{c^2}{2} \frac{r_g}{r-r_g} 
+= - \frac{GM}{r-r_g} \equiv \Phi_\mathrm{PN}\]
+
+<p>のように、(1)式が求まります。</p>
+
+<h2 id="ニュートン擬ニュートン一般相対論の比較">ニュートン、擬ニュートン、一般相対論の比較</h2>
+
+<p>それぞれのポテンシャルをまとめると以下のようになります。</p>
+
+\[\Phi_\mathrm{N} 
+= - \frac{GM}{r}, \quad \Phi_\mathrm{PN} 
+= - \frac{GM}{r-r_g} , \quad \Phi_\mathrm{GR} 
+= \frac{c^2}{2} \ln (1-r_g/r) \tag{7}\]
+
+<p>これを描画すると、以下のようになります。ここで、この描画のための\(r_g = 2GM/c^2 = 1, GM=1, c^2 = 2\)のように規格化して計算を行いました。</p>
+
+<p><img src="/assets/images/compact/pseudo_newton_01.png" alt="" /></p>
+
+<p>上図の点線はシュバルツシルト半径の位置を表します。ニュートンポテンシャルでは\(r&lt;r_g\)の領域でも有限の値を持ちます。しかし一般相対論からしっかり考えた\(\Phi_\mathrm{GR}\)および、その近似である\(\Phi_\mathrm{PN}\)では\(r = r_g\)でマイナス無限大に発散しています。<br />
+続いて、この中心力ポテンシャル中において角運動量を持つ質点が運動する場合の有効ポテンシャルを見てみましょう。古典力学においては重力ポテンシャルに遠心力\(\ell^2 / 2 r^2\)を加えて</p>
+
+\[\Psi_\mathrm{N} 
+= - \frac{GM}{r} + \frac{\ell^2}{2 r^2} \tag{8}\]
+
+<p>となります。ここで角運動量を\(\ell\)と置きました。続いて擬ニュートンポテンシャル中での運動における有効ポテンシャルです。(8)式からの類推より</p>
+
+\[\Psi_\mathrm{PN} 
+= - \frac{GM}{r-r_g} + \frac{\ell^2}{2 r^2} \tag{9}\]
+
+<p>となります。一般相対論での有効ポテンシャルは<a href="/gr/isco">ISCOを求めたときの途中式</a>より</p>
+
+\[\Psi_\mathrm{GR} 
+= \frac{c^2}{2} \left( 1- \frac{r_g}{r} \right) \left( 1 + \frac{\ell^2}{c^2 r^2}\right) \tag{10}\]
+
+<p>です。これを描画したものが下図です。ここで、描画のために\(r_g = 2 GM/c^2 = 1, GM=1, c^2 = 2\)のように規格化して計算を行いました。</p>
+
+<p><img src="/assets/images/compact/pseudo_newton_02.png" alt="" /></p>
+
+<p>またこのグラフでは角運動量を\(\ell = \sqrt{3} r_g c (= \sqrt{6})\)としています(このとき\(\Psi_\mathrm{GR}\)では、\(r=3r_g\)に<a href="/gr/isco">ISCO</a>が出現します)。さらに縦軸を合わせるために、一般相対論に関しては\(\Psi_\mathrm{GR}-1\)を描画しています。このグラフからわかるように、擬ニュートンポテンシャルはISCOを再現できていません。しかしニュートンポテンシャルとは異なり、\(r=r_g\)付近でブラックホールに(角運動量に関係なく)落ちていく様子が再現されています。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] <a href="https://quasar.cc.osaka-kyoiku.ac.jp/~fukue/RESEARCH/05asj1.pdf">福江純, “らくらく相対論入門 その1: 擬ニュートンポテンシャルの特徴”</a><br />
+[2] <a href="https://www.aanda.org/articles/aa/full_html/2009/22/aa12155-09/aa12155-09.html">Abramowicz, 2009, “The Paczyński-Wiita potential -A step by step derivation”</a><br />
+[3] <a href="https://ui.adsabs.harvard.edu/abs/1980A%26A....88...23P/abstract">Paczyński &amp; Wiita, 1980, “Thick Accretion Disks and Supercritical Luminosities”</a><br />
+[4] <a href="https://www.komazawa-u.ac.jp/~takhshhr/img/takahashi_bh.pdf">高橋博之, “ブラックホール降着円盤入門”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

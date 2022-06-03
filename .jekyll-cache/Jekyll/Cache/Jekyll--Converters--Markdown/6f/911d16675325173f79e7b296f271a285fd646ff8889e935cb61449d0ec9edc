@@ -1,0 +1,73 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#カーブラックホールの特徴" id="markdown-toc-カーブラックホールの特徴">カー・ブラックホールの特徴</a>    <ol>
+      <li><a href="#エルゴ領域" id="markdown-toc-エルゴ領域">エルゴ領域</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="カーブラックホールの特徴">カー・ブラックホールの特徴</h1>
+
+<p>質量\(M\)、自転角運動量\(J\)の<a href="/gr/kerr">カー・ブラックホールの線素</a>は以下のように書けるのでした。</p>
+
+\[ds^2 
+= - \frac{\Delta -a^2 \sin^2 \theta}{\rho^2} c^2 dt^2 - \frac{2 a r_g r \sin^2 \theta}{\rho^2} c dt d\varphi + \frac{(r^2 + a^2)^2 -a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 \tag{1}\]
+
+<p>ここで\(\Delta = r^2 - r_g r + a^2, r_g = 2GM/c^2, a = J / (Mc), \rho^2 = r^2 + a^2\cos^2 \theta\)です。</p>
+
+<p>以下では記述をスッキリさせるために</p>
+
+\[g_{00} = - \frac{\Delta -a^2 \sin^2 \theta}{\rho^2}, \quad
+g_{0\varphi} = - \frac{a r_g r \sin^2 \theta}{\rho^2}, \quad 
+g_{\varphi \varphi} = \frac{(r^2 + a^2)^2 -a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta\]
+
+<p>のように表記します。</p>
+
+<h2 id="エルゴ領域">エルゴ領域</h2>
+
+<p>赤道面、すなわち\(\theta = \pi/2\)の平面を\(r\)一定の縁に接する方向に放たれた光の軌跡を考えましょう。今の問題設定と、光がnull pathを通ることから</p>
+
+\[0 = g_{00} c^2 dt^2 + 2 g_{0\varphi} c dt d \varphi + g_{\varphi \varphi} d\varphi^2\]
+
+<p>これの両辺を\(dt^2\)で割ると</p>
+
+\[g_{\varphi \varphi} \left(\frac{d\varphi}{dt} \right)^2 + 2 g_{0\varphi} c \frac{d\varphi}{dt} + c^2 g_{00} = 0\]
+
+<p>のように、光の\(\varphi\)方向の時間変化、つまり角速度の式になります。2次方程式の解の公式より</p>
+
+\[\frac{d\varphi}{dt} 
+= - \frac{g_{0\varphi}}{g_{\varphi \varphi}} \pm c \sqrt{\left( \frac{g_{0\varphi}}{g_{\varphi \varphi}}\right)^2 - \frac{g_{00}}{g_{\varphi \varphi}}} \tag{2}\]
+
+<p>のようになります。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] Dadhich, 2013, “A novel derivation of the rotating black hole metric”<br />
+[2] Nikolic &amp; Pantic, 2012, “A Possible Intuitive Derivation of Kerr Metric in Orthogonal Form Based On Ellipsoidal Metric Ansatz”<br />
+[3] <a href="https://www.amazon.co.jp/Introducing-Einsteins-Relativity-Ray-DInverno/dp/0198596863">D’Inverno, 1992, “Introducing Einstein’s Relativity”</a><br />
+[4] <a href="https://www.amazon.com/dp/0198503709/ref=cm_sw_em_r_mt_dp_9HPGCYPVZ3NHC6DC30EF">Chandrasekhar, 1998, “The mathematical Theory of Black Holes”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

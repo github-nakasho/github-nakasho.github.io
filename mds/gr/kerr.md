@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kerr BH
+title: カー・ブラックホール
 parent: 一般相対性理論
 math: mathjax3
 permalink: /gr/kerr

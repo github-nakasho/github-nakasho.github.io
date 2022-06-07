@@ -1,0 +1,87 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁気回転不安定性とパーカー不安定性の釣り合い" id="markdown-toc-磁気回転不安定性とパーカー不安定性の釣り合い">磁気回転不安定性とパーカー不安定性の釣り合い</a>    <ol>
+      <li><a href="#磁気回転不安定性の成長率" id="markdown-toc-磁気回転不安定性の成長率">磁気回転不安定性の成長率</a></li>
+      <li><a href="#パーカー不安定性の成長率" id="markdown-toc-パーカー不安定性の成長率">パーカー不安定性の成長率</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁気回転不安定性とパーカー不安定性の釣り合い">磁気回転不安定性とパーカー不安定性の釣り合い</h1>
+
+<p>降着円盤などの差動回転円盤では、<a href="/mhd/mri">磁気回転不安定性</a>が起こります。そのようにして強められた円盤内部の磁束は、<a href="/mhd/parker">パーカー不安定性</a>により円盤上空に運ばれると考えられます。すると磁場を強める効果と磁場を逃して弱める効果の2つの不安定性が存在するため、これらが釣り合い、準平衡状態が実現されることが予想されます。今回はこれらの釣り合いについて考えてみましょう。</p>
+
+<h2 id="磁気回転不安定性の成長率">磁気回転不安定性の成長率</h2>
+
+<p>まずは磁気回転不安定性が起こる条件から考察します。円盤に垂直な方向に波長\(\lambda\)の<a href="/mhd/alfven_wave">アルヴェーン波</a>が伝わっていく状況を考えます。分散関係式より、この波動が磁気張力により振動する時間スケール(あるいは波動が円盤垂直方向に伝播する時間スケール)は</p>
+
+\[v_A = \nu \lambda \ \Longrightarrow \ 
+\tau_A 
+= \frac{1}{\nu} = \frac{\lambda}{v_A}\]
+
+<p>となります。一方、ガス円盤が1回転するのにかかる時間スケールは、円盤の角速度を\(\Omega\)とすると</p>
+
+\[\tau_\mathrm{rotation} = \frac{2\pi}{\Omega}\]
+
+<p>です。磁気張力で振動するよりも高速に円盤が回転すると、それにより磁力線がたなびいて角運動量輸送が起こると考えられます。よって磁気回転不安定性の起こる条件は、大雑把に見積もると</p>
+
+\[\tau_\mathrm{rotation} &lt; \tau_A \ \Longrightarrow \ 
+\lambda &gt; 2\pi \frac{v_A}{\Omega} \equiv \lambda_\mathrm{crit} \tag{1}\]
+
+<p>のようになります。注意すべきは\(\lambda_\mathrm{crit} &gt; H\)(ガス円盤のスケールハイト)のときは、この不安定性は発生しないことです。これは波長が長すぎて、逆に磁気張力がうまく角運動量を輸送できなくなるためです。
+よって以下の議論では\(\lambda_\mathrm{crit} &lt; H\)とします。<br />
+このこれらの条件を満たしているとき、最も成長が早い不安定性はどの波長でしょうか。その答えは単純です。</p>
+
+<ul>
+  <li>波長が\(\lambda_\mathrm{crit}\)以下では磁気張力による振動が支配的になり不安定性が起こらない</li>
+  <li>波長が長すぎると磁気張力が弱くなり、角運動量輸送効率が落ちる</li>
+</ul>
+
+<p>この2つの議論から最も効率よく成長するは、不安定性が成長しかつ磁気張力が最も強く働くであろう\(\lambda_\mathrm{max} \simeq \lambda_\mathrm{crit}\)のときと考えることができます。この波長のとき、磁気回転不安定性の成長率は</p>
+
+\[\nu_\mathrm{MRI} 
+\simeq \frac{v_A}{\lambda_\mathrm{max}} 
+\simeq \frac{\Omega}{2\pi} \tag{2}\]
+
+<p>実際、<a href="/mhd/mri">ケプラー回転しているガス円盤での磁気回転不安定性の成長率はおよそ\(0.75 \Omega\)</a>で、大体のオーダーが一致しています。</p>
+
+<h2 id="パーカー不安定性の成長率">パーカー不安定性の成長率</h2>
+
+<p>同様にパーカー不安定性の成長率についても議論しましょう。<a href="/mhd/parker">浮力と磁気張力によるパーカー不安定性の簡単な見積もり</a>より</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”<br />
+[2] 福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”<br />
+[3] 福井康雄, 犬塚修一郎, 大西利和, 中井直正, 舞原俊憲, 水野亮, “星間物質と星形成”<br />
+[4] S. Chandrasekhar, “Hydrodynamic and Hydromagnetic Stability”<br />
+[5] E. Priest, “Solar MagnetohydroDynamics”<br />
+[6] <a href="https://www.nature.com/articles/s41467-018-03548-7#Sec11">Kuranz et al., 2018, “How high energy fluxes may affect Rayleigh-Taylor instability growth in young supernova remnants”</a><br />
+[7] <a href="https://iopscience.iop.org/article/10.3847/0004-637X/832/1/73">Chen et al., 2016, “Magnetar-Powered Supernovae in Two Dimensions. I. Superluminous Supernovae”</a><br />
+[8] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac3a88">Pasetto et al., 2021, “Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field”</a><br />
+[9] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/789/1/79">Asahina et al., 2014, “Magnetohydrodynamic Simulations of a Jet Drilling an HI Cloud: Shock Induced Formation of Molecular Clouds and Jet Breakup”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

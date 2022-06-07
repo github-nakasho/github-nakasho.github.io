@@ -75,9 +75,8 @@ $$
 
 ここで$$n_e$$は電子の個数密度です。最右辺に現れた$$\Lambda_c = n_e \lambda_D^3$$は、デバイ長を半径とする球内にいる電子の数、すなわちデバイ遮蔽を引き起こす(協調現象をになっている)電子数です。
 
-```
-$$\Lambda_c$$は$$\ln$$内に現れるため、係数などは大雑把に考えています。
-```
+Λcはlog内に現れるため、係数などは大雑把に考えています。
+{: .label .label-yellow }
 
 (1), (3)式より
 
@@ -155,15 +154,37 @@ $$
 $$
 
 です。  
-最後に電子をまとにして陽子が撃ち込まれる場合の衝突頻度を考えましょう。質量$$m_e$$の電子が質量$$m_p$$の陽子のまとにぶつかると、まとにしている陽子の圧倒的な質量から、簡単に運動量が変化します。しかし逆の場合、陽子の質量が遥かに大きいことから、電子に向かって1回ぶつかりに行った程度では運動量変化を感じません。電子と陽子の運動量の大きさはそれぞれ$$m_e v_e, m_p v_p$$なので、運動量交換の起こりやすさの比から
+最後に電子をまとにして陽子が撃ち込まれる場合の衝突頻度を考えましょう。電子が陽子に入射する場合、(1)式の運動量交換断面積の計算では$$1-\cos \theta$$の重み付けをしていました。よって陽子が電子に入射する場合にはここにさらに変更が加わります。熱平衡状態のとき
 
 $$
-\frac{\nu_{pe}}{\nu_{ep}} 
-\simeq \frac{m_p}{m_e} \ \Longrightarrow \ 
-\nu_{pe} \simeq \frac{m_e}{m_p} \nu_{ep} \tag{10}
+\frac{1}{2} m_e v_e^2 
+= \frac{1}{2} m_p v_p^2 = k_B T \ \Longrightarrow \ 
+\frac{v_p}{v_e} 
+= \sqrt{\frac{m_e}{m_p}} \ \Longrightarrow \ 
+\frac{m_p v_p}{m_e v_e} = \sqrt{\frac{m_p}{m_e}}
 $$
 
-と考えることができます。(7), (8), (9), (10)式より
+さらに運動量保存を考え、電子が$$\theta$$方向に散乱されるときに陽子は$$\theta_p$$方向に散乱されるとすると
+
+$$
+m_e v_e - m_p v_p = m_e v_e \cos \theta - m_p v_p \cos \theta_p \ \Longrightarrow \ 
+m_e v_e (1-\cos \theta) = m_p v_p (1-\cos \theta_p)
+$$
+
+ここに先程の式を用いることで
+
+$$
+1-\cos \theta_p 
+= \sqrt{\frac{m_e}{m_p}} (1-\cos \theta)
+$$
+
+のようになります。よって「陽子のまとに電子が撃ち込まれる」場合の重み付けが$$1-\cos \theta$$だったならば、「電子のまとに陽子が撃ち込まれる」場合の重み付けは(10)式でなければなりません。陽子と電子の質量比はおよそ1800倍なので、陽子の運動量変化はわずかです。陽子の運動量は電子の運動量よりもはるかに大きいため、電子によって陽子が散乱を受けても、1回の散乱ではほとんど運動量変化を感じないという直感に一致する結果になっています。よって
+
+$$
+\nu_{pe} = \sqrt{\frac{m_e}{m_p}} \nu_{pp} \tag{10}
+$$
+
+(7), (8), (9), (10)式から、それぞれの運動量交換頻度は
 
 $$
 \nu_{ep} : \nu_{ee} : \nu_{pp} : \nu_{pe} 
@@ -226,6 +247,7 @@ $$
 
 ## 参考文献
 
-[1] [Lyman Spitzer Jr., "Physics of Fully Ionized Gases"](https://www.amazon.co.jp/-/en/Lyman-Spitzer-Jr/dp/0486449823/ref=sr_1_1?dchild=1&keywords=fully+ionized+spitzer&qid=1627335728&s=english-books&sr=1-1)
+* Spitzer, "Physics of Fully Ionized Gases"
+* 田中基彦, 西川恭治, "高音プラズマの物理学"
 
 {% include adsense.html %}

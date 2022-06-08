@@ -1,0 +1,227 @@
+I"m6
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#標準降着円盤" id="markdown-toc-標準降着円盤">標準降着円盤</a>    <ol>
+      <li><a href="#基礎方程式" id="markdown-toc-基礎方程式">基礎方程式</a></li>
+      <li><a href="#円盤を構成するガスの拡散方程式" id="markdown-toc-円盤を構成するガスの拡散方程式">円盤を構成するガスの拡散方程式</a></li>
+      <li><a href="#簡単な初期条件での解析解" id="markdown-toc-簡単な初期条件での解析解">簡単な初期条件での解析解</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="標準降着円盤">標準降着円盤</h1>
+
+<p>連星系中の中性子星や白色矮星など、いわゆるコンパクト天体周辺には降着円盤(accretion disks)と呼ばれる回転ガス円盤が形成されます。伴星表面からのガス物質がコンパクト天体に落下するときに、ガスが持っている角運動量のために自由落下せず、ガス物質の回転運動の遠心力と重力との釣り合いが生まれます。これにより回転ガス円盤が形成されるのです。<br />
+ここでは降着円盤の基本的なモデルである標準降着円盤を考えましょう。「標準」とは</p>
+
+<ul>
+  <li>幾何学的に薄く (geometrically thin)</li>
+  <li>光学的に厚い (optically thick)</li>
+  <li>軸対称な円盤</li>
+</ul>
+
+<p>であることを意味します。平たく潰れたピザのような恒星が、コンパクト天体を中心に回転していると考えれば良いでしょう。</p>
+
+<h2 id="基礎方程式">基礎方程式</h2>
+
+<p>半径\(R\)におけるガス円盤の面密度を</p>
+
+\[\Sigma 
+\equiv \int_{-h}^h \rho dz \tag{1}\]
+
+<p>のように、円盤に垂直な方向に積分したものとして定義します。ここで円盤の厚みを\(2h\)としました。円筒座標系での<a href="/mhd/continuity">質量保存則</a>は、円筒座標系でのベクトルの発散に注意すると</p>
+
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) 
+=  \frac{\partial \rho}{\partial t} + \frac{1}{R} \frac{\partial}{\partial R} (R \rho v_R) = 0\]
+
+<p>です。ここで軸対称性と幾何学的に薄いことから\(\varphi, z\)微分は0としました。この両辺を\(\int_{-h}^h dz\)で積分すれば</p>
+
+\[\frac{\partial \Sigma}{\partial t} + \frac{1}{R} \frac{\partial}{\partial R} (R \Sigma v_R) = 0\tag{2}\]
+
+<p>のようになります。続いて角運動量保存則です。半径\(R\)に位置する幅\(\Delta R\)のリングを考えましょう。このとき、このリングが持つ角運動量は</p>
+
+\[L = 2\pi R \cdot dR \cdot R \Sigma v_\varphi \tag{3}\]
+
+<p>です。\(z\)方向にはあらかじめ積分した形で考えました。この降着円盤は中心のコンパクト天体による重力と遠心力が釣り合った運動をしています。すると</p>
+
+\[\frac{GM}{R^2} = R \Omega_K^2 \ \Longrightarrow \ 
+\Omega_K = \sqrt{\frac{GM}{R^3}} \propto R^{-3/2} \tag{4}\]
+
+<p>のように、内側ほど高速で回転していることがわかります。このような差動回転では速く回転する流体と遅く回転する流体の間に粘性が働くと考えることができます。よって次は\(R\)に垂直な面に働く粘性応力テンソルを考えましょう。今は角運動量保存について着目しているので、中でも\(\varphi\)方向に働く応力に興味があります。よって\(R\)に垂直な面に働く\(\varphi\)方向の応力テンソルの成分を\(\tilde{\sigma}_{R\varphi}\)と書くと、これは</p>
+
+\[\tilde{\sigma}_{R\varphi} 
+= \eta \left( \frac{\partial v_R}{\partial x_\varphi} + \frac{\partial v_\varphi}{\partial x_R}\right) 
+= \eta \left( \frac{1}{R} \frac{\partial v_R}{\partial \varphi} + \frac{\partial v_\varphi}{\partial R} - \frac{v_\varphi}{R}\right) 
+= \rho \nu R \frac{\partial}{\partial R} \left( \frac{v_\varphi}{R}\right) 
+= \rho \nu R \frac{\partial \Omega}{\partial R}\]
+
+<p>のようになります。ここで\(\eta\)は粘性係数、\(\nu = \eta / \rho\)は動粘性係数です。さらに途中、この系は軸対称なので\(\frac{\partial}{\partial \varphi} = 0\)としました。問題設定から応力テンソルの\(R\varphi\)成分のみがゼロでないと考えられるので、半径\(R\)にあるガスリングに働くトルクは</p>
+
+\[N = R \mathbf{e}_R \times \tilde{\sigma}_{R\varphi} \mathbf{e}_\varphi 
+= R \tilde{\sigma}_{R\varphi} \mathbf{e}_z\]
+
+<p>を、円周と円盤に垂直な方向に積分したものとなります。よってガスリングに働く全トルクは</p>
+
+\[G(R, t) = 2\pi R \cdot R \int_{-h}^h \tilde{\sigma}_{R \varphi} dz 
+= 2\pi R^3 \nu \Sigma \frac{\partial \Omega}{\partial R} \tag{5}\]
+
+<p>となります。ガスリングの単位時間あたりの角運動量の変化は</p>
+
+\[\begin{aligned}
+&amp;(ガスリングより外側にいるガスからのトルク) - (ガスリングより内側にいるガスからのトルク) \\
+&amp; \qquad + (単位時間にRから流入するガスの角運動量) - (単位時間にR+\Delta Rから流出するガスの角運動量)
+\end{aligned}\]
+
+<p>と表されます。よって</p>
+
+\[\begin{aligned}
+\frac{\partial L}{\partial t} 
+&amp;= G(R + \Delta R, t) - G(R, t) \\
+&amp; \qquad + R \cdot 2\pi R \Sigma(R, t) v_R(R, t) v_\varphi (R, t) - (R+\Delta R) \cdot 2\pi (R + \Delta R) \Sigma(R + \Delta, t) v_R (R+\Delta R, t) v_\varphi (R +\Delta R, t)
+\end{aligned}\]
+
+<p>(3), (5)式をこの式に代入し、両辺を\(2\pi \Delta R\)で割ります。さらに\(\Delta R \rightarrow 0\)の極限を取ると、微分の定義から</p>
+
+\[\frac{\partial}{\partial t} (R^2 \Sigma v_\varphi) 
+= \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right) - \frac{\partial}{\partial R} (R^2 \Sigma v_R v_\varphi) \tag{6}\]
+
+<p>となります。</p>
+
+<h2 id="円盤を構成するガスの拡散方程式">円盤を構成するガスの拡散方程式</h2>
+
+<p>(6)式を変形します。\(\Omega = v_\varphi / R\)を用いると</p>
+
+\[R^3 \frac{\partial}{\partial t} (\Sigma \Omega) + \Sigma R v_R \frac{\partial}{\partial R} (R^2 \Omega) + R^2\Omega \frac{\partial}{\partial R} (\Sigma R v_R) 
+= \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right)\]
+
+<p>系は定常に回転していると考え、\(\frac{\partial \Omega}{\partial t} = 0\)とします。さらに(2)式を用いると</p>
+
+\[R^3 \Omega \frac{\partial \Sigma}{\partial t} + \Sigma R v_R \frac{\partial}{\partial R} (R^2 \Omega) - R^3 \Omega \frac{\partial \Sigma}{\partial R} 
+= \Sigma R v_R \frac{\partial}{\partial R} (R^2 \Omega) = \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right)\]
+
+<p>を得ます。これより</p>
+
+\[\Sigma R v_R = - \frac{1}{\frac{\partial}{\partial R} (R^2 \Omega)} \frac{\partial}{\partial R} \left\{ R^3 \nu \Sigma \left( - \frac{\partial \Omega}{\partial R} \right)\right\}\]
+
+<p>この両辺を\(R\)で微分すると</p>
+
+\[\frac{\partial}{\partial R} (\Sigma R v_R) 
+\underbrace{=}_{(2)} - R \frac{\partial \Sigma}{\partial t} 
+= - \frac{\partial}{\partial R} \left[ \frac{1}{\frac{\partial}{\partial R} (R^2 \Omega)} \frac{\partial}{\partial R} \left\{ R^3 \nu \Sigma \left( - \frac{\partial \Omega}{\partial R} \right)\right\}\right]\]
+
+<p>となります。ここで\(\nu = (定数)\)、さらに質量\(M\)の中性子星やブラックホールなどの中心天体による重力が存在するとして\(\Omega = \Omega_K\)とすると</p>
+
+\[\begin{aligned}
+\frac{\partial \Sigma}{\partial R} 
+&amp;= \frac{\nu}{R} \frac{\partial}{\partial R} \left\{ \frac{2}{\sqrt{\frac{GM}{R}}} \frac{\partial}{\partial R} \left( \Sigma R^3 \frac{3}{2} \sqrt{\frac{GM}{R^5}}\right)\right\} 
+= \frac{3\nu}{R} \frac{\partial}{\partial R} \left\{ \frac{1}{R \sqrt{\frac{GM}{R^3}}} \frac{\partial}{\partial R} \left( \Sigma R^2 \sqrt{\frac{GM}{R^3}}\right)\right\} \\
+&amp;\underbrace{=}_{(4)} \frac{3\nu}{R} \frac{\partial}{\partial R} \left\{ \frac{1}{R \Omega_K} \frac{\partial}{\partial R} ( \Sigma R^2 \Omega_K )\right\} 
+= \frac{3\nu}{R} \frac{\partial}{\partial R} \left\{ \frac{1}{R\Omega_K} \left( R^2\Omega_K \frac{\partial \Sigma}{\partial R} + 2R\Sigma \Omega_K + R^2 \Sigma \frac{\partial \Omega_K}{\partial R}\right)\right\} \\
+&amp;= \frac{3\nu}{R} \frac{\partial}{\partial R} \left\{ \frac{1}{R\Omega_K} \left( R^2\Omega_K \frac{\partial \Sigma}{\partial R} + 2R\Sigma \Omega_K -\frac{3}{2} R^2 \Sigma \frac{\Omega_K}{R}\right)\right\} 
+= \frac{3\nu}{R} \frac{\partial}{\partial R} \left( R \frac{\partial \Sigma}{\partial R} + \frac{1}{2} \Sigma\right)
+\end{aligned}\]
+
+<p>ここで\(x = 2\sqrt{R}\)のように置換すると</p>
+
+\[R = \frac{x^2}{4}, \quad \frac{\partial}{\partial R} 
+= \frac{\partial x}{\partial R} 
+= \frac{1}{\sqrt{R}} \frac{\partial}{\partial x} 
+= \frac{2}{x} \frac{\partial}{\partial x}\]
+
+<p>より</p>
+
+\[\frac{\partial \Sigma}{\partial t} 
+= \frac{12\nu}{x^2} \frac{2}{x} \frac{\partial}{\partial x} \left( \frac{2}{x} \frac{\partial \Sigma}{\partial x} \frac{x^2}{4} + \frac{1}{2} \Sigma\right) 
+= \frac{12 \nu}{x^3} \frac{\partial^2}{\partial x^2} (x\Sigma)\]
+
+<p>以上より</p>
+
+\[\frac{\partial}{\partial t} (\sqrt{R} \Sigma) 
+= \frac{12\nu}{x^2} \frac{\partial^2}{\partial x^2} (\sqrt{R} \Sigma) \tag{7}\]
+
+<p>を得ます。左辺が時間1階微分、右辺が空間2階微分の形なので、これは拡散方程式を表すことがわかります。粘性の効果を入れているため、それによりガスが拡散していくという直感に一致します。</p>
+
+<h2 id="簡単な初期条件での解析解">簡単な初期条件での解析解</h2>
+
+<p>(7)式において\(\sqrt{R} \Sigma = T(t) S(x)\)のように変数分離を行うと</p>
+
+\[S \frac{\partial T}{\partial t} 
+= T \frac{12\nu}{x^2} \frac{\partial^2 S}{\partial x^2} \ \Longrightarrow \ 
+\frac{1}{T} \frac{\partial T}{\partial t} 
+= \frac{1}{S} \frac{12\nu}{x^2} \frac{\partial^2 S}{\partial x^2}\]
+
+<p>左辺は\(t\)のみの関数、右辺は\(x\)のみの関数なので</p>
+
+\[\frac{1}{T} \frac{\partial T}{\partial t} 
+= \frac{1}{S} \frac{12\nu}{x^2} \frac{\partial^2 S}{\partial x^2} = -\lambda^2\]
+
+<p>のように定数\(-\lambda^2\)を用いて書くことができます。まずは\(T\)について考えてみましょう。</p>
+
+\[\frac{\partial T}{\partial t} = -\lambda^2 T \ \Longrightarrow \ 
+T(t) = T_0 (\lambda) e^{-\lambda^2 t} \tag{8}\]
+
+<p>同様に\(S\)についても考えましょう。</p>
+
+\[\frac{\partial^2 S}{\partial x^2} + \underbrace{\frac{\lambda^2}{12\nu}}_{\equiv \alpha} x^2 S 
+= 0\]
+
+<p>ここで\(S(x) = \sqrt{x} Z(x)\)とおくと</p>
+
+\[\frac{\partial S}{\partial x} 
+= \frac{1}{2 \sqrt{x}} Z + \sqrt{x} \frac{\partial Z}{\partial x}, \quad
+\frac{\partial^2 S}{\partial x^2} 
+= - \frac{1}{4\sqrt{x^3}} Z + \frac{1}{2 \sqrt{x}} \frac{\partial Z}{\partial x} + \frac{1}{2 \sqrt{x}} \frac{\partial Z}{\partial x} + \sqrt{x} \frac{\partial^2 Z}{\partial x^2}\]
+
+<p>より</p>
+
+\[\sqrt{x} \frac{\partial^2 Z}{\partial x^2} + \frac{1}{\sqrt{x}} \frac{\partial Z}{\partial x} - \frac{1}{4\sqrt{x^3}} Z + \alpha \sqrt{x^{5}} Z = 0 \ \Longrightarrow \ 
+\frac{\partial^2 Z}{\partial x^2} + \frac{1}{x} \frac{\partial Z}{\partial x} + \left( -\frac{1}{4 x^2} + \alpha x^2\right) Z = 0\]
+
+<p>です。さらに\(\xi = x^2\)と置換します。</p>
+
+\[\frac{\partial}{\partial x} = \frac{\partial \xi}{\partial x} \frac{\partial}{\partial \xi} = 2x \frac{\partial}{\partial \xi}, \quad 
+\frac{\partial^2}{\partial x^2} 
+= 2 \frac{\partial}{\partial \xi} + 2x \frac{\partial \xi}{\partial x} \frac{\partial}{\partial \xi} \frac{\partial}{\partial \xi} 
+= 2 \frac{\partial}{\partial \xi} + 4 \xi \frac{\partial^2}{\partial \xi^2}\]
+
+<p>より</p>
+
+\[4\xi \frac{\partial^2 Z}{\partial \xi^2} + 2 \frac{\partial Z}{\partial \xi} + 2 \frac{\partial Z}{\partial \xi} + \left( \alhpa \xi - \frac{1}{4\xi}\right) Z = 0 \ \Longrightarrow \ 
+\frac{\partial^2 Z}{\partial \xi^2} + \frac{1}{\xi} \frac{\partial Z}{\partial \xi} + \left( \frac{\alpha}{4} - \frac{1}{16 \xi^2}\right) Z = 0\]
+
+<p>最後に\(\zeta = \sqrt{\alpha} \xi / 2\)と置換して整理すると</p>
+
+\[\frac{4}{\alpha} \frac{\partial^2 Z}{\partial \zeta^2} + \frac{4}{\alpha \zeta} \frac{\partial Z}{\partial \zeta} + \left( \frac{\alpha}{4} - \frac{\alpha/4}{16 \zeta^2}\right) Z = 0 
+\ \Longrightarrow \ 
+\frac{\partial^2 Z}{\partial \zeta^2} + \frac{1}{\zeta} \frac{\partial Z}{\partial \zeta} + \left( 1 - \frac{(1/4)^2}{\zeta^2}\right) Z = 0\]
+
+<p>この方程式は<a href="/math/bessel">ベッセルの微分方程式</a>に一致します。よってこの方程式の解は</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

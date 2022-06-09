@@ -1,4 +1,4 @@
-I"dG
+I"c�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -9,6 +9,7 @@
       <li><a href="#円盤を構成するガスの拡散方程式" id="markdown-toc-円盤を構成するガスの拡散方程式">円盤を構成するガスの拡散方程式</a></li>
       <li><a href="#解析解" id="markdown-toc-解析解">解析解</a></li>
       <li><a href="#簡単な初期条件デルタ関数での計算" id="markdown-toc-簡単な初期条件デルタ関数での計算">簡単な初期条件(デルタ関数)での計算</a></li>
+      <li><a href="#可視化" id="markdown-toc-可視化">可視化</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -80,14 +81,18 @@
 \[G(R, t) = 2\pi R \cdot R \int_{-h}^h \tilde{\sigma}_{R \varphi} dz 
 = 2\pi R^3 \nu \Sigma \frac{\partial \Omega}{\partial R} \tag{5}\]
 
-<p>となります。ガスリングの単位時間あたりの角運動量の変化は</p>
+<p>となります。下図より、ガスリングの単位時間あたりの角運動量の変化は</p>
 
 \[\begin{aligned}
 &amp;(ガスリングより外側にいるガスからのトルク) - (ガスリングより内側にいるガスからのトルク) \\
 &amp; \qquad + (単位時間にRから流入するガスの角運動量) - (単位時間にR+\Delta Rから流出するガスの角運動量)
 \end{aligned}\]
 
-<p>と表されます。よって</p>
+<p>と表されます。</p>
+
+<p><img src="/assets/images/compact/standard_disk_01.png" alt="" /></p>
+
+<p>よって</p>
 
 \[\begin{aligned}
 \frac{\partial L}{\partial t} 
@@ -101,6 +106,10 @@
 = \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right) - \frac{\partial}{\partial R} (R^2 \Sigma v_R v_\varphi) \tag{6}\]
 
 <p>となります。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>もちろん、円筒座標系における[角運動量保存則](/mhd/momentum_cyl)から導くことも可能です。その場合、粘性応力テンソルにより及ぼされる力を(幾何学的な因子も含めて)しっかりと円筒座標系で考える必要があります。
+今回はその難しさを省くためにこのような導出にしました。
+</code></pre></div></div>
 
 <h2 id="円盤を構成するガスの拡散方程式">円盤を構成するガスの拡散方程式</h2>
 
@@ -258,10 +267,13 @@ T(t) = T_0 (\lambda) e^{-\lambda^2 t} \tag{8}\]
 
 <p>とします。両辺に\(R J(\lambda R)\)をかけ、それを\(R\)で積分します。すると</p>
 
-\[R_0 J_\nu(\lambda R_0) 
+\[\begin{align}
+&amp;R_0 J_\nu(\lambda R_0) 
 = \int_0^\infty D(\bar{\lambda}) \underbrace{\left( \int_0^\infty R J_\nu (\bar{\lambda} R) J_\nu (\lambda R) dR\right)}_{(13)} d\bar{\lambda} 
 = \int_0^\infty D(\bar{\lambda}) \frac{\delta (\bar{\lambda}-\lambda)}{\bar{\lambda}} d\bar{\lambda} 
-= \frac{D(\lambda)}{\lambda} \ \Longrightarrow D(\lambda) = \lambda R_0 J_\nu (\lambda R_0) \tag{14}\]
+= \frac{D(\lambda)}{\lambda} \notag \\
+&amp;\Longrightarrow D(\lambda) = \lambda R_0 J_\nu (\lambda R_0) \tag{14}
+\end{align}\]
 
 <p>を得ます。(10)式において\(t=0\)として</p>
 
@@ -287,19 +299,126 @@ T(t) = T_0 (\lambda) e^{-\lambda^2 t} \tag{8}\]
 
 <p>とわかります。これを(10)式に代入すれば</p>
 
-\[\Sigma (R, t) 
-= \frac{mf^2}{2\pi} \left( \frac{R_0}{R}\right)^{1/4} \int_0^\infty e^{-\lambda^2 t} \lambda J_{1/4} (f\lambda R) J_{1/4} (f\lambda R_0) d\lambda 
-= \frac{mf^2}{2\pi} \left( \frac{R_0}{R}\right)^{1/4} \frac{1}{2t} \exp \left( - \frac{f^2 (R^2 + R_0^2)}{4t}\right) I_{1/4} \left( \frac{f^2 RR_0}{2t}\right)\]
+\[\begin{aligned}
+\Sigma (R, t) 
+&amp;= \frac{mf^2}{2\pi} \left( \frac{R_0}{R}\right)^{1/4} \int_0^\infty e^{-\lambda^2 t} \lambda J_{1/4} (f\lambda R) J_{1/4} (f\lambda R_0) d\lambda \\
+&amp;= \frac{mf^2}{2\pi} \left( \frac{R_0}{R}\right)^{1/4} \frac{1}{2t} \exp \left( - \frac{f^2 (R^2 + R_0^2)}{4t}\right) I_{1/4} \left( \frac{f^2 RR_0}{2t}\right)
+\end{aligned}\]
 
 <p>と求まります。ここで以下の積分公式を用いました。</p>
 
 \[\int_0^\infty e^{-a x^2} x J_\nu (px) J_\nu (qx) dx 
-= \frac{1}{2a} \exp \left( - \frac{p^2 + q^2}{4a^2}\right) I_\nu \left(\frac{pq}{2a} \right)\]
+= \frac{1}{2a} \exp \left( - \frac{p^2 + q^2}{4a}\right) I_\nu \left(\frac{pq}{2a} \right)\]
+
+<p>\(I_\nu\)は第一種変形ベッセル関数です。<br />
+拡散の時間スケール\(t_\mathrm{diff} = \frac{R_0^2}{(12\nu)} = R_0^2 f^2 / 4\)を用いて時間を規格化した\(t^\ast = t/ t_\mathrm{diff}\)、そして規格化された長さ\(R^\ast = R / R_0\)を用いて先程の式を書き換えると</p>
+
+\[\Sigma (R^\ast, t^\ast) 
+= \frac{m}{\pi R_0^2} \frac{(R^\ast)^{-1/4}}{t^\ast} \exp \left( - \frac{(R^\ast)^2 + 1}{t^\ast}\right) I_{1/4} \left(\frac{2R^\ast}{t^\ast} \right) \tag{15}\]
+
+<p>のようになります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="可視化">可視化</h2>
+
+<p>(15)式から\(\pi R_0^2 \Sigma /m\)の時間発展を動画にすると、次のようになります。この可視化では\(R_0 = 1.0\)としています。</p>
+
+<p><img src="/assets/images/compact/standard_disk_02.gif" alt="" /></p>
+
+<p>次の図は各時刻でのスナップショットです。紫色から順に、緑色に向かって時間が経過しています。初期にデルタ関数的に分布していたガスは、粘性により角運動量を得るものと失うものとに別れます。角運動量を得たガスは中心天体から離れた距離に移動し、角運動量を失ったガスは\(R=0\)に位置する中心天体に降り注ぎます。</p>
+
+<p><img src="/assets/images/compact/standard_disk_03.png" alt="" /></p>
+
+<p>それぞれの可視化に用いた<a href="https://julialang.org/">Julia言語</a>のソースコードを以下に示します。まずはgif動画を作成するコードです。</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Plots</span>
+<span class="k">using</span> <span class="n">SpecialFunctions</span>
+<span class="k">using</span> <span class="n">Printf</span>
+
+<span class="c"># compute gas density of standard disk</span>
+<span class="k">function</span><span class="nf"> standard_disk</span><span class="x">(</span><span class="n">t</span><span class="x">,</span> <span class="n">R</span><span class="x">)</span>
+  <span class="k">return</span> <span class="n">R</span><span class="o">^</span><span class="x">(</span><span class="o">-</span><span class="mf">0.25</span><span class="x">)</span> <span class="o">/</span> <span class="n">t</span> <span class="o">*</span> <span class="n">exp</span><span class="x">(</span><span class="o">-</span><span class="x">(</span><span class="n">R</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="x">)</span><span class="o">/</span><span class="n">t</span><span class="x">)</span> <span class="o">*</span> <span class="n">besseli</span><span class="x">(</span><span class="mf">0.25</span><span class="x">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="o">/</span><span class="n">t</span><span class="x">)</span>
+<span class="k">end</span>
+
+<span class="c"># set R coordinate</span>
+<span class="n">Rmax</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Rmin</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">nR</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">Rs</span> <span class="o">=</span> <span class="n">range</span><span class="x">(</span><span class="n">Rmin</span><span class="x">,</span> <span class="n">Rmax</span><span class="x">,</span> <span class="n">length</span><span class="o">=</span><span class="n">nR</span><span class="x">)</span>
+<span class="c"># set t</span>
+<span class="n">tmax</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="n">range</span><span class="x">(</span><span class="n">tmin</span><span class="x">,</span> <span class="n">tmax</span><span class="x">,</span> <span class="n">length</span><span class="o">=</span><span class="n">nt</span><span class="x">)</span>
+<span class="c"># initialize animation frame</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Animation</span><span class="x">()</span>
+<span class="c"># set zero vector for filling image</span>
+<span class="n">density0</span> <span class="o">=</span> <span class="n">zeros</span><span class="x">(</span><span class="n">nR</span><span class="x">)</span>
+<span class="c">##### main loop for gif animation start #####</span>
+<span class="k">for</span> <span class="n">t</span> <span class="k">in</span> <span class="n">ts</span>
+  <span class="c"># get gas density</span>
+  <span class="n">density</span> <span class="o">=</span> <span class="n">standard_disk</span><span class="o">.</span><span class="x">(</span><span class="n">t</span><span class="x">,</span> <span class="n">Rs</span><span class="x">)</span>
+  <span class="c"># set label for plot</span>
+  <span class="n">label_string</span> <span class="o">=</span> <span class="n">string</span><span class="x">(</span><span class="s">"t = "</span> <span class="x">,</span> <span class="nd">@sprintf</span><span class="x">(</span><span class="s">"%6.2f"</span><span class="x">,</span> <span class="n">t</span><span class="x">))</span>
+  <span class="c"># make plot</span>
+  <span class="n">p_gif</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">Rs</span><span class="x">,</span> <span class="n">density</span><span class="x">,</span> <span class="n">fillrange</span><span class="o">=</span><span class="n">density0</span><span class="x">,</span> <span class="n">fillalpha</span><span class="o">=</span><span class="mf">0.25</span><span class="x">,</span> <span class="n">xlim</span><span class="o">=</span><span class="x">[</span><span class="n">Rmin</span><span class="x">,</span> <span class="n">Rmax</span><span class="x">],</span> <span class="n">ylim</span><span class="o">=</span><span class="x">[</span><span class="mi">0</span><span class="x">,</span> <span class="mf">1.2</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">legend</span><span class="o">=:</span><span class="n">topright</span><span class="x">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">"R"</span><span class="x">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">"Σ"</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label_string</span><span class="x">)</span>
+  <span class="c"># convert to animation frame</span>
+  <span class="n">frame</span><span class="x">(</span><span class="n">a</span><span class="x">,</span> <span class="n">p_gif</span><span class="x">)</span>
+<span class="k">end</span>
+<span class="c">###### main loop for gif animation end ######</span>
+<span class="c"># convert animation frame to gif</span>
+<span class="n">gif</span><span class="x">(</span><span class="n">a</span><span class="x">,</span> <span class="s">"standard_disk.gif"</span><span class="x">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">30</span><span class="x">)</span>
+</code></pre></div></div>
+
+<p>続いてスナップショットを作成したコードです。</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Plots</span>
+<span class="k">using</span> <span class="n">SpecialFunctions</span>
+
+<span class="c"># compute gas density of standard disk</span>
+<span class="k">function</span><span class="nf"> standard_disk</span><span class="x">(</span><span class="n">t</span><span class="x">,</span> <span class="n">R</span><span class="x">)</span>
+  <span class="k">return</span> <span class="n">R</span><span class="o">^</span><span class="x">(</span><span class="o">-</span><span class="mf">0.25</span><span class="x">)</span> <span class="o">/</span> <span class="n">t</span> <span class="o">*</span> <span class="n">exp</span><span class="x">(</span><span class="o">-</span><span class="x">(</span><span class="n">R</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="x">)</span><span class="o">/</span><span class="n">t</span><span class="x">)</span> <span class="o">*</span> <span class="n">besseli</span><span class="x">(</span><span class="mf">0.25</span><span class="x">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="o">/</span><span class="n">t</span><span class="x">)</span>
+<span class="k">end</span>
+
+<span class="c"># set R coordinate</span>
+<span class="n">Rmax</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">Rmin</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">nR</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">Rs</span> <span class="o">=</span> <span class="n">range</span><span class="x">(</span><span class="n">Rmin</span><span class="x">,</span> <span class="n">Rmax</span><span class="x">,</span> <span class="n">length</span><span class="o">=</span><span class="n">nR</span><span class="x">)</span>
+<span class="c"># set time step list</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="x">[</span><span class="mf">0.05</span><span class="x">,</span> <span class="mf">0.15</span><span class="x">,</span> <span class="mf">0.25</span><span class="x">,</span> <span class="mf">0.35</span><span class="x">,</span> <span class="mf">0.45</span><span class="x">,</span> <span class="mf">0.55</span><span class="x">,</span> <span class="mf">0.65</span><span class="x">]</span>
+<span class="c"># set the number of time step</span>
+<span class="n">nstep</span> <span class="o">=</span> <span class="n">length</span><span class="x">(</span><span class="n">ts</span><span class="x">)</span>
+<span class="c"># make color palette</span>
+<span class="n">color_list</span> <span class="o">=</span> <span class="n">reshape</span><span class="x">(</span><span class="n">range</span><span class="x">(</span><span class="n">colorant</span><span class="s">"purple"</span><span class="x">,</span> <span class="n">stop</span><span class="o">=</span><span class="n">colorant</span><span class="s">"green"</span><span class="x">,</span> <span class="n">length</span><span class="o">=</span><span class="n">nstep</span><span class="x">),</span> <span class="mi">1</span><span class="x">,</span> <span class="n">nstep</span><span class="x">);</span>
+<span class="c"># initialize array of densities and labels</span>
+<span class="n">densities</span> <span class="o">=</span> <span class="x">[]</span>
+<span class="c">##### main loop for snapshot plot start #####</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">nstep</span>
+  <span class="c"># get gas density</span>
+  <span class="n">density</span> <span class="o">=</span> <span class="n">standard_disk</span><span class="o">.</span><span class="x">(</span><span class="n">ts</span><span class="x">[</span><span class="n">n</span><span class="x">],</span> <span class="n">Rs</span><span class="x">)</span>
+  <span class="c"># add to array</span>
+  <span class="n">push!</span><span class="x">(</span><span class="n">densities</span><span class="x">,</span> <span class="n">density</span><span class="x">)</span>
+<span class="k">end</span>
+<span class="c">###### main loop for snapshot plot end ######</span>
+<span class="c"># make plot</span>
+<span class="n">p_snap</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">Rs</span><span class="x">,</span> <span class="n">densities</span><span class="x">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="n">color_list</span><span class="x">,</span> <span class="n">xlim</span><span class="o">=</span><span class="x">[</span><span class="n">Rmin</span><span class="x">,</span> <span class="n">Rmax</span><span class="x">],</span> <span class="n">ylim</span><span class="o">=</span><span class="x">[</span><span class="mi">0</span><span class="x">,</span> <span class="mf">1.2</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">legend</span><span class="o">=:</span><span class="n">topright</span><span class="x">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">"R"</span><span class="x">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">"Σ"</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">false</span><span class="x">)</span>
+<span class="c"># save plot</span>
+<span class="n">savefig</span><span class="x">(</span><span class="n">p_snap</span><span class="x">,</span> <span class="s">"standard_disk_03.png"</span><span class="x">)</span>
+</code></pre></div></div>
 
 <h1 id="参考文献">参考文献</h1>
 
 <ul>
-  <li></li>
+  <li>福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</li>
+  <li>柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙”</li>
 </ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

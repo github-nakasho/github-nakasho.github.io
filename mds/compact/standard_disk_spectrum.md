@@ -122,7 +122,7 @@ $$
 
 $$
 \int_{R_\mathrm{in}}^\infty 2\pi R \bar{\epsilon} dR 
-= - \frac{1}{2} \frac{GM\dot{M}}{2 R_\mathrm{in}} \tag{5}
+= - \frac{1}{2} \frac{GM\dot{M}}{R_\mathrm{in}} \tag{5}
 $$
 
 これは粘性による摩擦熱エネルギーが、粘性がない場合の重力エネルギー$$- \frac{GM \dot{M}}{R_\mathrm{in}}$$の半分であることを意味します。熱エネルギーと重力エネルギーの間にエネルギー等分配が成り立っているとすれば、これは当然の帰結かもしれません。よって半分は輻射として外部に放出、もう半分は重力エネルギーとして中心星に落ちていくことになります。
@@ -164,7 +164,9 @@ $$
 
 ![](/assets/images/compact/standard_disk_spectrum_02.png)
 
-## 数値計算
+{% include adsense.html %}
+
+## 数値計算と簡単な見積もり
 
 中心星の質量$$M$$と中心星への質量降着率$$\dot{M}$$を与えれば、(6)式から半径$$R$$での降着円盤表面温度が分かります。ここから(7)式に従って数値積分を行えば、スペクトルを得ることができます。
 以下では$$\dot{M}=10^{-9} M_\odot [\mathrm{yr}^{-1}], M=1.4M_\odot, x_\mathrm{out} = R_\mathrm{out} / R_\mathrm{in} = 10^4$$という共通の値を用いて、以下の3つの場合に数値計算を行います。
@@ -185,9 +187,171 @@ $$
 ![](/assets/images/compact/standard_disk_spectrum_03.png)
 
 これは各半径(各温度)での黒体放射スペクトルを足し合わせた形をしています。(6)式からわかるように、$$R$$が小さいほど$$T_\mathrm{eff}$$は大きくなります。そのためブラックホールなどのよりコンパクトな天体の方がより高エネルギーのスペクトルの放射を出します。これは$$R$$が小さい場所ほど粘性によるエネルギー散逸$$\epsilon \propto \left( \frac{\partial \Omega_K}{\partial R}\right)^2 \propto R^{-5}$$が大きいことからも類推されます。
+黒体放射のスペクトルはプランクの輻射則より、その温度$$T$$からの放射の単位立体角あたりのエネルギー密度は
 
-グラフの概形は正しそうだけれども、実は縦軸横軸の値が微妙に違う...計算スクリプトのミス？
-{: .label .label-yellow }
+$$
+B_\nu(T) 
+= \frac{2h}{c^3} \frac{\nu^3}{\exp \left( \frac{h\nu}{k_B T}\right)-1}
+$$
+
+で与えられます。この関数が最大となる$$\nu_\mathrm{peak}$$を求めてみましょう。両辺を$$\nu$$で微分すると
+
+$$
+\frac{\partial B_\nu}{\partial \nu} 
+= \frac{2h}{c^3} \frac{3\nu^2( e^{h\nu/k_BT} -1) - \nu^3 e^{h\nu/k_BT} \frac{h}{k_B T}}{(e^{h\nu/k_BT}-1)^2} 
+$$
+
+$$x = \frac{h\nu}{k_BT}$$と置くと、上式が0となるのは
+
+$$
+3(e^x - 1) - xe^x = 0
+$$
+
+この解はニュートン法を用いて数値的に求めることもできますが、解析的にはランベルトの$$W$$関数を用いて
+
+$$
+x = 3 + W(-3/e^3) \sim 2.82
+$$
+
+と求まります。この値を用いて$$h\nu_\mathrm{peak}$$の典型的な値を見積もってみましょう。
+
+$$
+h\nu_\mathrm{peak}  
+\simeq 2.82 k_B T 
+\underbrace{=}_{(6)} 2.82 k_B \left\{ \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}}\right)\right\}^{1/4}
+$$
+
+ここで中心天体は十分コンパクトで、$$R_\mathrm{in} \ll R$$とすると
+
+$$
+\begin{aligned}
+h\nu_\mathrm{peak} 
+&= 2.82 k_B \left( \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \right)^{1/4}
+\underbrace{=}_{R_g = \frac{2GM}{c^2}} 2.82 k_B \left( \frac{3\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \frac{c^2}{2} R_g\right)^{1/4} \\
+&= 2.82 k_B \left( \frac{3\dot{M}}{8\pi \sigma_\mathrm{SB}} \frac{c^2}{2} \frac{c^4}{4 G^2 M^2}\right)^{1/4} \left( \frac{R_g}{R}\right)^{3/4}
+\end{aligned}
+$$
+
+途中、[シュバルツシルト半径](/gr/schwarzschild)を用いて整理しました。さらに太陽質量$$M_\odot = 1.989 \times 10^{33} [\mathrm{g}]$$を用いて整理します。
+
+$$
+\begin{align}
+h\nu_\mathrm{peak}
+&= 2.82 k_B \left( \frac{3 \dot{M}}{8\pi \sigma_\mathrm{SB}} \frac{c^2}{2} \frac{c^4}{4G^2 M_\odot^2} \right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4} \notag \\
+&= 2.82 k_B \left( \frac{3 c^6 \dot{M}}{64\pi \sigma_\mathrm{SB} G^2 M_\odot} \frac{10^{-9}}{1\mathrm{yr}} \right)^{1/4} \left( \frac{\dot{M}}{10^{-9} M_\odot / 1\mathrm{yr}}\right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4} \notag \\
+&\simeq 7 \left( \frac{\dot{M}}{10^{-9} M_\odot / 1\mathrm{yr}}\right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4} \ [\mathrm{keV}] \tag{8}
+\end{align}
+$$
+
+ブラックホールの場合($$R_\mathrm{in} = R_g, M=1.4M_\odot, \dot{M} = 10^{-9} M_\odot [\mathrm{yr}^{-1}]$$)では降着円盤スペクトルのピークはおよそ7keV程度となります。これは先程の数値計算結果の青線のピーク位置にも大体一致しています。
+
+## 計算コード
+
+途中で出てきた降着円盤のスペクトルを計算するコードを以下に示します。
+
+```julia
+include("./const.jl")
+
+using Plots
+
+
+# compute integrand function
+function f(hnu, x, inputs)
+    M, Mdot, Rin = inputs
+    T0 = (3*G*M*Mdot/(8*pi*sb*Rin^3))^0.25
+    Teff = T0 * ((1.0-1.0/sqrt(x))/x^3)^0.25
+    return x / (exp(hnu/(kb*Teff))-1.0)
+end
+
+# compute flux using trapezoidal rule
+function calc_flux(xs, hnus, inputs)
+    fluxs = []
+    nx = length(xs)
+    for hnu in hnus
+        sum = 0.0
+        for i in 1:nx-1
+            sum += (xs[i+1]-xs[i]) * (f(hnu, xs[i+1], inputs)+f(hnu, xs[i], inputs)) / 2.0 
+        end
+        flux = 4 * pi * hnu^3 / (h*c)^2 * sum  
+        push!(fluxs, flux)  
+    end
+    return fluxs
+end
+
+# set range of x (=R/Rin)
+xout = 1.0e+4
+xin = 1.001
+nx = 100000
+xs = range(xin, xout, length=nx)
+# set range of hnu
+hnumax = 2
+hnumin = -6
+hnnu = 100
+hnus = 10.0 .^ range(hnumin, hnumax, length=hnnu) * keV
+# set common variables
+M = 1.4 * Msun
+Mdot = 1.0e-9 * Msun / yr
+# set Black Hole Rin
+Rin_BH = 2.0 * G * M / c^2
+# convert to array
+inputs = [M, Mdot, Rin_BH]
+# compute flux
+fluxs_BH = calc_flux(xs, hnus, inputs)
+# corresponds to value lower threshold
+fluxs_BH = map(x -> ifelse(x>eps(Float64),x,eps(Float64)), fluxs_BH)
+# convert erg to keV
+hnus_kev = hnus / keV
+##### set xticks for plot start #####
+xlab, xval = Float64[], Float64[]
+for i in 1:10
+    for j in hnumin:hnumax
+        push!(xval, i*10.0^j)
+        if i == 1
+            push!(xlab, 10.0^j)
+        end
+    end
+end
+###### set xticks for plot end ######
+# make plot for BH
+plot(hnus_kev, fluxs_BH, linewidth=3, label="Black Hole", legend=:topleft, xlabel="hν [keV]", ylabel="flux", scale=:log10, 
+        xlims=[hnus[1], hnus[hnnu]]/keV, ylims=[1.0e-5, 1.0e+8], xticks=(xval, xlab))
+# set Neutron Star Rin
+Rin_NS = 1.0e+6
+# convert to array
+inputs = [M, Mdot, Rin_NS]
+# compute flux
+fluxs_NS = calc_flux(xs, hnus, inputs)
+# correspond to value lower threshold
+fluxs_NS = map(x -> ifelse(x>eps(Float64),x,eps(Float64)), fluxs_NS)
+# make plot for NS
+plot!(hnus_kev, fluxs_NS, linewidth=3, label="Neutron Star")
+# set White Dwarf Rin
+Rin_WD = 1.0e+9
+# convert to array
+inputs = [M, Mdot, Rin_WD]
+# compute flux
+fluxs_WD = calc_flux(xs, hnus, inputs)
+# correspond to value lower threshold
+fluxs_WD = map(x -> ifelse(x>eps(Float64),x,eps(Float64)), fluxs_WD)
+# make plot for WD
+plot!(hnus_kev, fluxs_WD, linewidth=3, label="White Dwarf")
+# output plot
+savefig("standard_disk_spectrum.png")
+```
+
+最初に読み込んでいる`const.jl`には、以下のように物理定数が記述されています。
+
+```julia
+const G = 6.67e-8
+const Msun = 1.99e+33
+const yr = 365.0 * 24.0 * 60.0 * 60.0
+const sb = 5.67e-5
+const c = 3.0e+10
+const kb = 1.38e-16
+const eV = 1.6e-12
+const keV = eV * 10.0^3
+const h = 6.63e-27
+```
 
 # 参考文献
 

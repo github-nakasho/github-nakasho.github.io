@@ -1,4 +1,4 @@
-I"2
+I"�?
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -8,7 +8,7 @@
       <li><a href="#質量降着率" id="markdown-toc-質量降着率">質量降着率</a></li>
       <li><a href="#粘性によるエネルギー散逸" id="markdown-toc-粘性によるエネルギー散逸">粘性によるエネルギー散逸</a></li>
       <li><a href="#黒体放射による放射スペクトル" id="markdown-toc-黒体放射による放射スペクトル">黒体放射による放射スペクトル</a></li>
-      <li><a href="#数値計算" id="markdown-toc-数値計算">数値計算</a></li>
+      <li><a href="#数値計算と簡単な見積もり" id="markdown-toc-数値計算と簡単な見積もり">数値計算と簡単な見積もり</a></li>
     </ol>
   </li>
   <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -93,7 +93,7 @@ R^3 \Sigma v_R \Omega - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in
 = - \frac{3 GM\dot{M}}{2} \left( - \frac{1}{R} + \frac{2}{3} \sqrt{\frac{R_\mathrm{in}}{R^3}} + \frac{1}{R_\mathrm{in}} - \frac{2}{3 R_\mathrm{in}}\right)
 \end{aligned}\]
 
-<p>となります。積分範囲の\(R_\mathrm{in}\)は、<a href="/gr/isco">ブラックホールの場合は一般相対論的な効果から\(R_\mathrm{in} = R_g\)</a>としたり、中性子星の場合は磁場の強さにより磁極領域への降着が起きる位置から決定されます。</p>
+<p>となります。積分範囲の\(R_\mathrm{in}\)は、<a href="/gr/isco">ブラックホールの場合は一般相対論的な効果から\(R_\mathrm{in} = r_g\)(シュバルツシルト半径)</a>としたり、中性子星の場合は磁場の強さにより磁極領域への降着が起きる位置から決定されます。</p>
 
 <p><img src="/assets/images/compact/standard_disk_spectrum_01.png" alt="" /></p>
 
@@ -107,7 +107,7 @@ R^3 \Sigma v_R \Omega - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in
 <p>です。簡単のため、円盤は無限遠まで広がっていると考えて\(R \rightarrow \infty\)とすると</p>
 
 \[\int_{R_\mathrm{in}}^\infty 2\pi R \bar{\epsilon} dR 
-= - \frac{1}{2} \frac{GM\dot{M}}{2 R_\mathrm{in}} \tag{5}\]
+= - \frac{1}{2} \frac{GM\dot{M}}{R_\mathrm{in}} \tag{5}\]
 
 <p>これは粘性による摩擦熱エネルギーが、粘性がない場合の重力エネルギー\(- \frac{GM \dot{M}}{R_\mathrm{in}}\)の半分であることを意味します。熱エネルギーと重力エネルギーの間にエネルギー等分配が成り立っているとすれば、これは当然の帰結かもしれません。よって半分は輻射として外部に放出、もう半分は重力エネルギーとして中心星に落ちていくことになります。</p>
 
@@ -122,12 +122,12 @@ R^3 \Sigma v_R \Omega - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in
 = \sigma_\mathrm{SB} T_\mathrm{eff}^4 \ \Longrightarrow \ 
 T_\mathrm{eff} (R) 
 = \left\{ \frac{\dot{M}}{6\pi \sigma_\mathrm{SB}} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}} \right) \left( R \frac{\partial \Omega_K}{\partial R}\right)^2\right\}^{1/4} 
-= \left\{ \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB}} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}} \right) \right\}^{1/4} \tag{6}\]
+= \left\{ \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}} \right) \right\}^{1/4} \tag{6}\]
 
 <p>を得ます。ここで\(T_\mathrm{eff} (R)\)は半径\(R\)に位置する降着円盤表面の有効温度です。半径\(R\)の位置にある降着円盤表面からの放射を\(I_\nu (R)\)とすると、これが\(T_\mathrm{eff} (R)\)の<a href="/atmos/radiative_transfer">黒体放射スペクトル</a>で与えられるので</p>
 
 \[I_\nu (R) 
-= B_nu (T_\mathrm{eff} (R)) 
+= B_\nu (T_\mathrm{eff} (R)) 
 = \frac{2h}{c^2} \frac{\nu^3}{\exp \left(\frac{h\nu}{k_B T_\mathrm{eff}(R)}\right) -1}\]
 
 <p>となります。<br />
@@ -141,7 +141,7 @@ T_\mathrm{eff} (R)
 
 <p><img src="/assets/images/compact/standard_disk_spectrum_02.png" alt="" /></p>
 
-<h2 id="数値計算">数値計算</h2>
+<h2 id="数値計算と簡単な見積もり">数値計算と簡単な見積もり</h2>
 
 <p>中心星の質量\(M\)と中心星への質量降着率\(\dot{M}\)を与えれば、(6)式から半径\(R\)での降着円盤表面温度が分かります。ここから(7)式に従って数値積分を行えば、スペクトルを得ることができます。
 以下では\(\dot{M}=10^{-9} M_\odot [\mathrm{yr}^{-1}], M=1.4M_\odot, x_\mathrm{out} = R_\mathrm{out} / R_\mathrm{in} = 10^4\)という共通の値を用いて、以下の3つの場合に数値計算を行います。</p>
@@ -155,18 +155,60 @@ T_\mathrm{eff} (R)
 <p>下図は</p>
 
 \[\bar{F}_\nu 
-= \nu^3 \int_1^{x_\mathrm{out}} \frac{x}{\exp (h\nu / (k_B T_\mathrm{eff}(x))) -1} dx\]
+= \frac{4\pi h\nu^3}{c^2} \int_1^{x_\mathrm{out}} \frac{x}{\exp \left( \frac{h\nu}{k_B T_\mathrm{eff}(x)} \right) -1} dx\]
 
-<p>のように、幾何学的な因子と物理定数を除いた部分を計算し、その概形だけを示しています。</p>
+<p>のように、幾何学的な因子を除いた部分を計算し、その概形を示しています。</p>
 
 <p><img src="/assets/images/compact/standard_disk_spectrum_03.png" alt="" /></p>
+
+<p>これは各半径(各温度)での黒体放射スペクトルを足し合わせた形をしています。(6)式からわかるように、\(R\)が小さいほど\(T_\mathrm{eff}\)は大きくなります。そのためブラックホールなどのよりコンパクトな天体の方がより高エネルギーのスペクトルの放射を出します。これは\(R\)が小さい場所ほど粘性によるエネルギー散逸\(\epsilon \propto \left( \frac{\partial \Omega_K}{\partial R}\right)^2 \propto R^{-5}\)が大きいことからも類推されます。
+黒体放射のスペクトルはプランクの輻射則より、その温度\(T\)からの放射の単位立体角あたりのエネルギー密度は</p>
+
+\[B_\nu(T) 
+= \frac{2h}{c^3} \frac{\nu^3}{\exp \left( \frac{h\nu}{k_B T}\right)-1}\]
+
+<p>で与えられます。この関数が最大となる\(\nu_\mathrm{peak}\)を求めてみましょう。両辺を\(\nu\)で微分すると</p>
+
+\[\frac{\partial B_\nu}{\partial \nu} 
+= \frac{2h}{c^3} \frac{3\nu^2( e^{h\nu/k_BT} -1) - \nu^3 e^{h\nu/k_BT} \frac{h}{k_B T}}{(e^{h\nu/k_BT}-1)^2}\]
+
+<p>\(x = \frac{h\nu}{k_BT}\)と置くと、上式が0となるのは</p>
+
+\[3(e^x - 1) - xe^x = 0\]
+
+<p>この解はニュートン法を用いて数値的に求めることもできますが、解析的にはランベルトの\(W\)関数を用いて</p>
+
+\[x = 3 + W(-3/e^3) \sim 2.82\]
+
+<p>と求まります。この値を用いて\(h\nu_\mathrm{peak}\)の典型的な値を見積もってみましょう。</p>
+
+\[h\nu_\mathrm{peak}  
+\simeq 2.82 k_B T 
+\underbrace{=}_{(6)} 2.82 k_B \left\{ \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}}\right)\right\}^{1/4}\]
+
+<p>ここで中心天体は十分コンパクトで、\(R_\mathrm{in} \ll R\)とすると</p>
+
+\[h\nu_\mathrm{peak} 
+= 2.82 k_B \left( \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \right)^{1/4}
+\underbrace{=}_{R_g = \frac{2GM}{c^2}} 2.82 k_B \left( \frac{3\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \frac{c^2}{2} R_g\right)^{1/4} 
+= 2.82 k_B \left( \frac{3\dot{M}}{8\pi \sigma_\mathrm{SB}} \frac{c^2}{2} \frac{c^4}{4 G^2 M^2}\right)^{1/4} \left( \frac{R_g}{R}\right)^{3/4}\]
+
+<p>途中、<a href="/gr/schwarzschild">シュバルツシルト半径</a>を用いて整理しました。さらに太陽質量\(M_\odot = 1.989 \times 10^{33} [\mathrm{g}]\)を用いて整理します。</p>
+
+\[h\nu_\mathrm{peak}
+= 2.82 k_B \left( \frac{3 \dot{M}}{8\pi \sigma_\mathrm{SB}} \frac{c^2}{2} \frac{c^4}{4G^2 M_\odot^2} \right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4}
+= 2.82 k_B \left( \frac{3 c^6 \dot{M}}{64\pi \sigma_\mathrm{SB} G^2 M_\odot} \frac{10^{-9}}{1\mathrm{yr}} \right)^{1/4} \left( \frac{\dot{M}}{10^(-9) M_\odot / 1\mathrm{yr}}\right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4}
+\simeq 7 \left( \frac{\dot{M}}{10^(-9) M_\odot / 1\mathrm{yr}}\right)^{1/4} \left( \frac{M}{M_\odot}\right)^{-1/2} \left( \frac{R_g}{R}\right)^{3/4} \ [\mathrm{keV}]\]
+
+<p>程度となります。先ほどの数値計算結果の図から、ブラックホールの場合(\(R_\mathrm{in} = R_g, M=1.4M_\odot, \dot{M} = 10^{-9} M_\odot [\mathrm{yr}^{-1}]\))</p>
 
 <h1 id="参考文献">参考文献</h1>
 
 <ul>
+  <li><a href="https://doi.org/10.1051/0004-6361/201731623">Koliopanos &amp; Vasilopoulos, 2018, “Accreting, highly magnetized neutron stars at the Eddington limit: a study of the 2016 outburst of SMC X-3”</a></li>
   <li>福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</li>
   <li>柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙”</li>
-  <li><a href="https://doi.org/10.1051/0004-6361/201731623">Koliopanos &amp; Vasilopoulos, 2018, “Accreting, highly magnetized neutron stars at the Eddington limit: a study of the 2016 outburst of SMC X-3”</a></li>
+  <li>小山勝二, 嶺重慎, “ブラックホールと高エネルギー現象”</li>
 </ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

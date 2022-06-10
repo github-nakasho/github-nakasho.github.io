@@ -107,7 +107,7 @@
 
 <p>となります。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>もちろん、円筒座標系における[角運動量保存則](/mhd/momentum_cyl)から導くことも可能です。その場合、粘性応力テンソルにより及ぼされる力を(幾何学的な因子も含めて)しっかりと円筒座標系で考える必要があります。
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>もちろん、[円筒座標系における角運動量保存則](/mhd/momentum_cyl)から導くことも可能です。その場合、粘性応力テンソルにより及ぼされる力を(幾何学的な因子も含めて)しっかりと円筒座標系で考える必要があります。
 今回はその難しさを省くためにこのような導出にしました。
 </code></pre></div></div>
 

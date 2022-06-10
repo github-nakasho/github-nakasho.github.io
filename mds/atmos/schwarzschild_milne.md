@@ -32,11 +32,11 @@ $$
 のように表されます。$$\mu, t$$の積分順序を交換し、$$w = \pm 1/\mu$$という変数変換を行うと
 
 $$
-\begin{aligned}
+\begin{align}
 J_\nu (\tau_\nu) 
 &= \frac{1}{2} \left\{ \int_{\tau_\nu}^\infty dt S_\nu (t) \int_1^\infty e^{-w (t-\tau_\nu) \frac{dw}{w}} + \int_0^{\tau_\nu} S_\nu (t) \int_1^\infty e^{-w(\tau_\nu -t)} \frac{dw}{w} \right\} \notag \\
 &= \frac{1}{2} \int_0^\infty dt S_\nu (t) \int_1^\infty e^{-w|t-\tau_\nu|} w^{-1} dw \tag{2.37}
-\end{aligned}
+\end{align}
 $$
 
 のように変形されます。$$w$$についての積分の部分は、第1 Exponential integralと呼ばれる積分です。その一般形は

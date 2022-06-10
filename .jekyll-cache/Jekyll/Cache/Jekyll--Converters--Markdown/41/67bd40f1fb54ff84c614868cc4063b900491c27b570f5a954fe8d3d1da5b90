@@ -1,0 +1,95 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#標準降着円盤からのエネルギー放出とそのスペクトル" id="markdown-toc-標準降着円盤からのエネルギー放出とそのスペクトル">標準降着円盤からのエネルギー放出とそのスペクトル</a>    <ol>
+      <li><a href="#質量降着率" id="markdown-toc-質量降着率">質量降着率</a></li>
+      <li><a href="#粘性によるエネルギー散逸" id="markdown-toc-粘性によるエネルギー散逸">粘性によるエネルギー散逸</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="標準降着円盤からのエネルギー放出とそのスペクトル">標準降着円盤からのエネルギー放出とそのスペクトル</h1>
+
+<p><a href="/compact/standard_disk">標準降着円盤</a>とは幾何学的に光学的に厚い、軸対称な円盤でした。以前の記事では定常を仮定して解析を進めましたが、実際には粘性によりガスが降着を起こすため、完全には定常な系ではありません。しかし\(\vert v_R \vert \ll \vert v_\varphi \vert\)のようにとてもゆっくりな降着を考え、定常が成り立っていると考えたのです。<br />
+今回はこのような状況にある降着円盤からの質量降着率を考え、そこからのエネルギー放出量と放射エネルギースペクトルを計算してみましょう。</p>
+
+<h2 id="質量降着率">質量降着率</h2>
+
+<p>系の定常の仮定から、\(\Sigma, v_R\)は定数と考えることができます。よって質量降着率は</p>
+
+\[\dot{M} = - 2\pi R \Sigma v_R = (定数) \tag{1}\]
+
+<p>です。右辺にマイナスがついているのは、\(v_R &lt; 0\)(中心に向かう流れ)のときが質量降着を起こしているときと考えるためです。そしてこの系の角運動量保存則は</p>
+
+\[\frac{\partial}{\partial t} (R^2 \Sigma v_\varphi) 
+= - \frac{\partial}{\partial R} (R^2 \Sigma v_R v_\varphi) + \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right)\]
+
+<p>で与えられるのでした。定常なので左辺の時間微分は0とし、この式の両辺を\(R\)で積分すると</p>
+
+\[\int_{R_\mathrm{in}}^R \frac{\partial }{\partial R} (R^3 \Sigma v_R \Omega) dR 
+= \int_{R_\mathrm{in}}^R \frac{\partial}{\partial R} \left( R^3 \nu \Sigma \frac{\partial \Omega}{\partial R}\right) \ \Longrightarrow \ 
+R^3 \Sigma v_R \Omega - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in}) \Omega (R_\mathrm{in}) 
+= R^3 \nu \Sigma \frac{\partial \Omega}{\partial R} - R_\mathrm{in}^3 \nu \Sigma (R_\mathrm{in}) \left. \frac{\partial \Omega}{\partial R} \right|_{R_\mathrm{in}}\]
+
+<p>です。ここで積分範囲の\(R_\mathrm{in}\)は円盤の最内縁半径です。今、中性子星やブラックホールのような中心星により円盤が形成されているとすると、\(\Omega = \Omega_K = \sqrt{\frac{GM}{R^3}}\)、さらに円盤の最内縁では\(\frac{\partial \Omega}{\partial R} = 0\)の境界条件が成り立つとします。すると</p>
+
+\[R^3 \Sigma v_R \sqrt{\frac{GM}{R^3}} - R_\mathrm{in}^3 \Sigma(R_\mathrm{in}) v_R (R_\mathrm{in}) \sqrt{\frac{GM}{R_\mathrm{in}^3}} = R^3 \nu \Sigma \left( - \frac{3}{2R} \sqrt{\frac{GM}{R^3}}\right) \ \Longrightarrow \ 
+\nu \Sigma 
+= - \frac{2}{3R^2} \left( R^3 \Sigma v_R - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R(R_\mathrm{in}) \sqrt{\frac{R^3}{R_\mathrm{in}^3}}\right)\]
+
+<p>(1)式より、\(R \Sigma v_R = R_\mathrm{in} \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in}) = - \dot{M} / 2\pi = (定数)\)を代入すると</p>
+
+\[\nu \Sigma 
+= \frac{\dot{M}}{3 R^2 \pi} \left( R^2 - R_\mathrm{in}^2 \sqrt{\frac{R^3}{R_\mathrm{in}^3}}\right) 
+= \frac{\dot{M}}{3\pi} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}}\right) \tag{2}\]
+
+<p>となります。</p>
+
+<h2 id="粘性によるエネルギー散逸">粘性によるエネルギー散逸</h2>
+
+<p>粘性は主に流体どうしの摩擦と考えることができます。この摩擦により熱が発生すると考えると、その単位時間単位体積あたりの散逸エネルギーの発生率\(\epsilon\)は</p>
+
+\[\epsilon 
+= \sum_{i, j=1}^3 \tilde{\sigma}_{ij} \frac{\partial v_i}{\partial x_j} 
+= \frac{1}{2\eta} \sum_{i, j=1}^3 \tilde{\sigma}_{ij} \tilde{\sigma}_{ij}\]
+
+<p>で与えられます。ここで\(\tilde{\sigma}\)は粘性応力テンソル、\(i, j = 1, 2, 3\)の添字はそれぞれ\(R, \varphi, z\)に対応します。今、系の対称性から\(R\varphi\)成分のみが\(\tilde{\sigma}_{R\varphi} = \rho \nu R \frac{\partial \Omega}{\partial R} \neq 0\)であり、それ以外の成分は0と考えることができるので</p>
+
+\[\epsilon 
+= \frac{1}{2\nu \rho} (\tilde{\sigma}_{R\varphi}^2 + \underbrace{\tilde{\sigma}_{\varphi R}^2}_{= \tilde{\sigma}_{R\varphi}^2}) 
+= \rho \nu \left( R \frac{\partial \Omega_K}{\partial R}\right)^2\]
+
+<p>これを円盤の厚みと半径\(R\)に位置する幅\(\Delta R\)のリングの面積\(2\pi R dR\)の面積で積分すれば、円盤全体からの散逸エネルギー発生率の総量が算出できます。よって</p>
+
+\[\int_{R_\mathrm{in}}^R 2\pi R \left( \int_{-h}^h \epsilon dz \right) dR 
+= 2\pi \int_{R_\mathrm{in}}^R R \left\{ \int_{-h}^h \rho \nu \left( R \frac{\partial \Omega_K}{\partial R}\right)^2 \right\} dR\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</li>
+  <li>柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙”</li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

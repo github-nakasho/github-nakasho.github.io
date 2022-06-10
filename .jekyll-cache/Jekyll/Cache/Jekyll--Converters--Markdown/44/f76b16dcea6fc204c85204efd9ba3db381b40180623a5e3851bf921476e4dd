@@ -1,0 +1,50 @@
+I"�
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#標準降着円盤からのエネルギー放出とそのスペクトル" id="markdown-toc-標準降着円盤からのエネルギー放出とそのスペクトル">標準降着円盤からのエネルギー放出とそのスペクトル</a>    <ol>
+      <li><a href="#質量降着率" id="markdown-toc-質量降着率">質量降着率</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="標準降着円盤からのエネルギー放出とそのスペクトル">標準降着円盤からのエネルギー放出とそのスペクトル</h1>
+
+<p><a href="/compact/standard_disk">標準降着円盤</a>とは幾何学的に光学的に厚い、軸対称な円盤でした。以前の記事では定常を仮定して解析を進めましたが、実際には粘性によりガスが降着を起こすため、完全には定常な系ではありません。しかし\(\vert v_R \vert \ll \vert v_\varphi \vert\)のようにとてもゆっくりな降着を考え、定常が成り立っていると考えたのです。<br />
+今回はこのような状況にある降着円盤からの質量降着率を考え、そこからのエネルギー放出量と放射エネルギースペクトルを計算してみましょう。</p>
+
+<h2 id="質量降着率">質量降着率</h2>
+
+<p>系の定常の仮定から、\(\Sigma, v_R\)は定数と考えることができます。よって質量降着率は</p>
+
+\[\dot{M} = - 2\pi R \Sigma v_R = (定数) \tag{1}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>福江純, 和田圭一, 梅村雅之, “宇宙流体力学の基礎”</li>
+  <li>柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙”</li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -718,6 +718,69 @@ $$
 
 も成り立ちます。
 
+## ベッセル関数のポアソン表示
+
+(8)式において階乗を[ガンマ関数](/math/gamma)を用いて一般化すると
+
+$$
+J_\nu (z) 
+= \sum_{k=0}^\infty \frac{(-1)^k}{k! \Gamma(\nu+k+1)} \left( \frac{z}{2}\right)^{2k+\nu}
+$$
+
+となります。先に以下の計算を行いましょう。
+
+$$
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \int_{-1}^1 \sum_{n=0}^\infty \frac{(iz)^n}{n!} x^n (1-x^2)^{\nu-1/2} dx
+$$
+
+この$$x^n (1-x^2)^{\nu-1/2}$$は$$n$$が偶数のとき偶関数、奇数のときは奇関数となります。よって$$n = 2m \ (m \in \mathbb{Z})$$の場合だけ考えれば良いとわかります。よって
+
+$$
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(iz)^{2m}}{(2m)!} 2 \int_{0}^1 x^{2m} (1-x^2)^{\nu - 1/2} dx
+$$
+
+ここで$$y = x^2$$と置くと$$dy = 2x dx = 2\sqrt{y} dx$$より
+
+$$
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \int_{0}^1 y^{m-1/2} (1-y)^{\nu - 1/2} dy
+$$
+
+最後の積分部分は[ベータ関数](/math/beta)を用いて
+
+$$
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} B(m+1/2, \nu+1/2) 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(m+1/2) \Gamma(\nu+1/2)}{\Gamma(m+\nu+1)}
+$$
+
+と書き直すことができます。[半整数のガンマ関数](/math/gamma)は
+
+$$
+\Gamma(m+1/2) 
+= \frac{(2m)!}{2^{2m} m!} \sqrt{\pi}
+$$
+
+のように書けるので、
+
+$$
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(\nu+1/2)}{\Gamma(m+\nu+1)} \frac{(2m)!}{2^{2m} m!} \sqrt{\pi} 
+= \sqrt{\pi} \Gamma(\nu+1/2) \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{2^{2m} m! \Gamma(m+\nu+1)} 
+= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} \sum_{m=0}^{\infty} \frac{(-1)^m}{m! \Gamma(m+\nu+1)} \left( \frac{z}{2}\right)^{2m+\nu} 
+= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} J_\nu(z)
+$$
+
+を得ます。よって
+
+$$
+J_\nu (z) = \frac{1}{\sqrt{\pi} \Gamma(\nu+1/2)} \left( \frac{z}{2}\right)^\nu \int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx \tag{19}
+$$
+
+となります。これをベッセル関数のポアソン積分表示と呼びます。
+
 ## ベッセル関数の概形
 
 以下にいくつかの$$n$$に対するベッセル関数を図示するスクリプトを示します。
@@ -754,9 +817,11 @@ if __name__ == '__main__':
 
 # 参考文献
 
-[1] 田島, 近道, "改訂 演習工科の数学4 複素関数"  
-[2] 中山, "裳華房フィジックスライブラリー 物理数学 II"  
-[3] 福山, 小形, "基礎物理学シリーズ3 物理数学 I"  
-[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
+* 田島, 近道, "改訂 演習工科の数学4 複素関数"  
+* 中山, "裳華房フィジックスライブラリー 物理数学 II"  
+* 福山, 小形, "基礎物理学シリーズ3 物理数学 I"  
+* [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
+* [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)
+
 
 {% include adsense.html %}

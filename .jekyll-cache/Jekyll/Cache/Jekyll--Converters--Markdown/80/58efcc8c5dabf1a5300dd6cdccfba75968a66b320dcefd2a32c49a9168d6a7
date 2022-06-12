@@ -1,0 +1,64 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#半整数次のベッセル関数" id="markdown-toc-半整数次のベッセル関数">半整数次のベッセル関数</a>    <ol>
+      <li><a href="#ポアソン積分表示からの変形" id="markdown-toc-ポアソン積分表示からの変形">ポアソン積分表示からの変形</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="半整数次のベッセル関数">半整数次のベッセル関数</h1>
+
+<p>ここでは<a href="/math/bessel">ベッセル関数\(J_n (z) \ (n \in \mathbb{Z})\)</a>をより一般化し、\(n = \nu = \{\pm \frac{1}{2}, \pm \frac{3}{2}, \dots\}\)のように、半整数次のベッセル関数について成り立つ式をメモします。</p>
+
+<h2 id="ポアソン積分表示からの変形">ポアソン積分表示からの変形</h2>
+
+<p>ベッセル関数のポアソン積分表示より</p>
+
+\[J_\nu = \frac{1}{\sqrt{\pi} \Gamma(\nu + 1/2)} \left( \frac{z}{2}\right)^\nu \int_{-1}^1 (1-\xi^2)^{\nu-1/2} e^{iz\xi} d\xi \tag{1}\]
+
+<p>です。これは階乗を一般化した<a href="/math/gamma">ガンマ関数</a>を用いて書かれているため、半整数次の場合にも適用できます。そしてこれは当然、ベッセル関数の満たす漸化式を満たします。よって</p>
+
+\[J_{\nu-1} - J_{\nu+1} 
+= 2J_\nu', \quad J_{\nu-1} + J_{\nu+1} = \frac{2\nu}{z} J_\nu \ \Longrightarrow \
+J_{\nu+1} = -J_\nu' +\frac{\nu}{z} J_\nu\]
+
+<p>両辺に\(z^{-(\nu+1)}\)をかけて整理すると</p>
+
+\[z^{-(\nu+1)} J_{\nu+1} 
+= - z^{-(\nu+1)} J_\nu' + \nu z^{-(\nu+2)} J_\nu 
+= - \frac{1}{z} \frac{d}{dz} \left( z^{-\nu} J_\nu \right) \tag{2}\]
+
+<p>(2)式で\(\nu \rightarrow \nu+1\)とすると</p>
+
+<p>\(z^{-(\nu+2)} J_{\nu+2} 
+= - z^{-(\nu+2)} J_{\nu+1}'\)</p>
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] 田島, 近道, “改訂 演習工科の数学4 複素関数”<br />
+[2] 中山, “裳華房フィジックスライブラリー 物理数学 II”<br />
+[3] 福山, 小形, “基礎物理学シリーズ3 物理数学 I”<br />
+[4] <a href="https://wasan.hatenablog.com/entry/2017/06/03/223531">倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

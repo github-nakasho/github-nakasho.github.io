@@ -1,4 +1,4 @@
-I"K�
+I";�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -112,7 +112,7 @@ R^3 \Sigma v_R \Omega - R_\mathrm{in}^3 \Sigma (R_\mathrm{in}) v_R (R_\mathrm{in
 
 <p>これは粘性による摩擦熱エネルギーが、粘性がない場合の重力エネルギー\(- \frac{GM \dot{M}}{R_\mathrm{in}}\)の半分であることを意味します。熱エネルギーと重力エネルギーの間にエネルギー等分配が成り立っているとすれば、これは当然の帰結かもしれません。よって半分は輻射として外部に放出、もう半分は重力エネルギーとして中心星に落ちていくことになります。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>これはエネルギー交換効率としては50%とという驚異的な値です。これはブラックホール発電などのアイデアにも関連しています。
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>これはエネルギー交換効率としては50%という驚異的な値です。これはブラックホール発電などのアイデアにも関連しています。
 </code></pre></div></div>
 
 <h2 id="黒体放射による放射スペクトル">黒体放射による放射スペクトル</h2>
@@ -125,7 +125,7 @@ T_\mathrm{eff} (R)
 = \left\{ \frac{\dot{M}}{6\pi \sigma_\mathrm{SB}} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}} \right) \left( R \frac{\partial \Omega_K}{\partial R}\right)^2\right\}^{1/4} 
 = \left\{ \frac{3GM\dot{M}}{8\pi \sigma_\mathrm{SB} R^3} \left( 1-\sqrt{\frac{R_\mathrm{in}}{R}} \right) \right\}^{1/4} \tag{6}\]
 
-<p>を得ます。ここで\(T_\mathrm{eff} (R)\)は半径\(R\)に位置する降着円盤表面の有効温度です。半径\(R\)の位置にある降着円盤表面からの放射を\(I_\nu (R)\)とすると、これが\(T_\mathrm{eff} (R)\)の<a href="/atmos/radiative_transfer">黒体放射スペクトル</a>で与えられるので</p>
+<p>を得ます。ここで\(\sigma_\mathrm{SR}\)はステファン・ボルツマン定数、\(T_\mathrm{eff} (R)\)は半径\(R\)に位置する降着円盤表面の有効温度です。半径\(R\)の位置にある降着円盤表面からの放射を\(I_\nu (R)\)とすると、これが\(T_\mathrm{eff} (R)\)の<a href="/atmos/radiative_transfer">黒体放射スペクトル</a>で与えられるので</p>
 
 \[I_\nu (R) 
 = B_\nu (T_\mathrm{eff} (R)) 
@@ -141,6 +141,14 @@ T_\mathrm{eff} (R)
 <p>となります。\(i\)は円盤の傾きと観測者の視線方向が成す角度、\(D\)は観測者と降着円盤までの距離です。</p>
 
 <p><img src="/assets/images/compact/standard_disk_spectrum_02.png" alt="" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="数値計算と簡単な見積もり">数値計算と簡単な見積もり</h2>
 

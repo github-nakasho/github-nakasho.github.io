@@ -1,0 +1,182 @@
+I"�<
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#運動する点電荷が作る電磁場のヘヴィサイドファインマン表現" id="markdown-toc-運動する点電荷が作る電磁場のヘヴィサイドファインマン表現">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現</a>    <ol>
+      <li><a href="#証明" id="markdown-toc-証明">証明</a></li>
+      <li><a href="#直感的理解" id="markdown-toc-直感的理解">直感的理解</a></li>
+      <li><a href="#ジェフィメンコ方程式" id="markdown-toc-ジェフィメンコ方程式">ジェフィメンコ方程式</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="運動する点電荷が作る電磁場のヘヴィサイドファインマン表現">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現</h1>
+
+<p>運動する点電荷が作る電場は、<a href="/astroelec/lienard_wiechart_em">リエナー・ブィーヒェルトポテンシャルから導かれた電磁場の式</a>より</p>
+
+\[\mathbf{E} 
+= q \left[ \frac{(1-\beta^2) (\mathbf{n} - \boldsymbol{\beta})}{\kappa^3 R^2}\right] + \frac{q}{c} \left[ \frac{\mathbf{n} \times \{ (\mathbf{n}-\boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}}\} }{\kappa^3 R}\right] \tag{1}\]
+
+<p>のように表現されるのでした。以降、これをLW表現と呼ぶことにします。\([ \cdots ]\)部分は遅延時間での物理量を表します。これを求めるのに、私たちは<a href="/astroelec/lienard_wiechart">遅延ポテンシャル(LWポテンシャル)</a>を微分したものを計算する必要がありました。しかしファインマン物理学の電磁気学の章には、これを導出するための煩雑な数式変形は掲載されていません。この電磁場は導出するために、ファインマンは以下のような考え方をしたようです。それは、運動していないときに点電荷が作る電場(クーロン電場)に</p>
+
+<ol>
+  <li>点電荷と観測者の相対位置が変化することによる補正</li>
+  <li>点電荷が加速度運動することによる補正</li>
+</ol>
+
+<p>を加えれば良い、というものです。この言葉を数式として表現すると、次元合わせなどを考慮して</p>
+
+\[\mathbf{E} 
+= q \left[ \frac{\mathbf{n}}{R^2}\right] + q \left[ \frac{R}{c} \right] \frac{\partial}{\partial t} \left[ \frac{\mathbf{n}}{R^2}\right] + \frac{q}{c^2} \frac{\partial^2}{\partial t^2} [\mathbf{n}] \tag{2}\]
+
+<p>のように書けます。第1項はクーロン電場、第2項は点電荷が速度を持つことによる補正項、第3項は点電荷が加速度運動することによる補正項です。以降、(2)式をヘヴィサイド・ファインマン(HW)表現と呼ぶことにしましょう。</p>
+
+<h2 id="証明">証明</h2>
+
+<p>(2)式が(1)式と一致することを示しましょう。遅延時間\(t_\mathrm{ret} = t - \vert \mathbf{r} - \mathbf{r}_0 (t_\mathrm{ret})\vert / c\)より</p>
+
+\[\begin{align}
+\frac{\partial}{\partial} \left[ \frac{\mathbf{n}}{R^2}\right] 
+&amp;= \frac{\partial t_\mathrm{ret}}{\partial t} \frac{\partial }{\partial t_\mathrm{ret}} \left[ \frac{\mathbf{n}}{R^2}\right] 
+= \left[ \frac{1}{\kappa} \frac{\partial}{\partial t} \left( \frac{\mathbf{R}}{R^3}\right)\right] 
+= \left[ \frac{1}{\kappa} \left( - \frac{3}{R^4} \frac{\partial R}{\partial t} \mathbf{R} + \frac{1}{R^3} \frac{\partial \mathbf{R}}{\partial t}\right)\right] \notag \\
+&amp;= \left[ \frac{1}{\kappa} \left\{ \frac{3c}{R^4} (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{R} - \frac{c}{R^3} \boldsymbol{\beta}\right\}\right]
+= \left[ \frac{c}{\kappa R^3} \{ 3(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\}\right] \tag{3}
+\end{align}\]
+
+<p>次に\(\frac{\partial^2}{\partial t^2} [\mathbf{n}]\)の計算を行います。</p>
+
+\[[\dot{\mathbf{n}}] 
+= \left[ \frac{\partial \mathbf{n}}{\partial t}\right] 
+= \left[ \frac{\partial}{\partial t} \frac{\mathbf{R}}{R}\right] 
+= \left[ - \frac{1}{R^2} \frac{\partial R}{\partial t} \mathbf{R} + \frac{1}{R} \frac{\partial \mathbf{R}}{\partial t}\right] 
+= \left[ \frac{c (\mathbf{n} \cdot \boldsymbol{\beta})}{R^2} \mathbf{R} - \frac{c}{R} \boldsymbol{\beta}\right] 
+= \left[ \frac{c}{R} \{(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\}\right] \tag{4}\]
+
+\[\begin{align}
+[\ddot{\mathbf{n}}] 
+&amp;= \left[ -\frac{c}{R^2} \frac{\partial R}{\partial t} \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\} + \frac{c}{R} \left\{ (\dot{\mathbf{n}} \cdot \boldsymbol{\beta}) \mathbf{n} + (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} + (\mathbf{n} \cdot \boldsymbol{\beta}) \dot{\mathbf{n}} - \dot{\boldsymbol{\beta}}\right\}\right] \notag \\
+&amp;\underbrace{=}_{(4)} \left[ \frac{c^2}{R^2} (\mathbf{n} \cdot \boldsymbol{\beta}) \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\} + \frac{c^2}{R^2} \{ (\mathbf{n} \cdot \boldsymbol{\beta})^2 - \beta^2\} \mathbf{n} + \frac{c^2}{R^2} \{ (\mathbf{n}\cdot \boldsymbol{\beta})^2 \mathbf{n} - (\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta}\} + \frac{c}{R} \{ (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n}-\dot{\boldsymbol{\beta}}\}\right] \notag \\
+&amp;= \left[ \frac{3 c^2}{R^2} (\mathbf{n} \cdot \boldsymbol{\beta})^2 \mathbf{n} - \frac{2c^2}{R^2} (\mathbf{n}\cdot \boldsymbol{\beta}) \boldsymbol{\beta} - \frac{c^2}{R^2} \beta^2 \mathbf{n} + \frac{c}{R} \{ (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - \dot{\boldsymbol{\beta}}\}\right] \tag{5}
+\end{align}\]
+
+\[[\dot{\kappa}] 
+= \left[ \frac{\partial \kappa}{\partial t}\right] 
+= [-\dot{\mathbf{n}} \cdot \boldsymbol{\beta} - \mathbf{n} \cdot \dot{\boldsymbol{\beta}}] 
+\underbrace{=}_{(4)} \left[ - \frac{c}{R} (\mathbf{n} \cdot \boldsymbol{\beta})^2 + \frac{c}{R} \beta^2 - \mathbf{n} \cdot \dot{\boldsymbol{\beta}} \right] \tag{6}\]
+
+<p>以上より</p>
+
+\[\begin{aligned}
+\frac{\partial^2}{\partial t^2} [\mathbf{n}] 
+&amp;= \frac{\partial}{\partial t} \left( \frac{\partial t_\mathrm{ret}}{\partial t} \frac{\partial}{\partial t_\mathrm{ret}} [\mathbf{n}]\right) 
+= \frac{\partial t_\mathrm{ret}}{\partial t} \frac{\partial}{\partial t_\mathrm{ret}} \left[ \frac{\dot{\mathbf{n}}}{\kappa}\right] 
+= \left[ \frac{1}{\kappa} \left( - \frac{\dot{\kappa}}{\kappa^2} \dot{\mathbf{n}} + \frac{\ddot{n}}{\kappa}\right)\right] \\
+&amp;= \left[ -\frac{c}{\kappa^3 R} \left\{ -\frac{c}{R} (\mathbf{n} \cdot \boldsymbol{\beta})^2 + \frac{c}{R} \beta^2 - \mathbf{n} \cdot \dot{\boldsymbol{\beta}}\right\} \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n}-\boldsymbol{\beta}\} \right. \\
+&amp; \qquad \left. + \frac{1}{\kappa^2} \left( \frac{3c^2}{R^2} (\mathbf{n}\cdot \boldsymbol{\beta})^2 \mathbf{n} - \frac{2c^2}{R^2} (\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} - \frac{c^2}{R^2} \beta^2 \mathbf{n} +\frac{c}{R} \left\{ (\mathbf{n}\cdot \dot{\boldsymbol{\beta}}) \mathbf{n} -\dot{\boldsymbol{\beta}}\right\}\right)\right]
+\end{aligned}\]
+
+<p>となります。よって(2)式は</p>
+
+\[\begin{aligned}
+\mathbf{E} 
+&amp;= q \left[ \frac{\kappa^3}{\kappa^3 R^2} \mathbf{n} + \frac{\kappa^2}{\kappa^3 R^2} \{ 3(\mathbf{n}\cdot \boldsymbol{\beta}) -\boldsymbol{\beta}\} - \frac{1}{\kappa^3 R^2} \{ \beta^2 - (\mathbf{n}\cdot \boldsymbol{\beta})^2\} \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} -\boldsymbol{\beta}\} \right. \\
+&amp;\qquad \left. + \frac{1}{c\kappa^3 R} (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n}-\boldsymbol{\beta}\} + \frac{\kappa}{\kappa^3 R^2} \{ 3(\mathbf{n}\cdot \boldsymbol{\beta})^2 \mathbf{n} - 2(\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} - \beta^2 \mathbf{n}\} + \frac{\kappa}{c\kappa^3 R} \{ (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} -\dot{\boldsymbol{\beta}}\} \right]
+\end{aligned}\]
+
+<p>のように書かれます。全ての項を一度に計算するのは大変なので、(1)式の2つの項を一つずつ計算しましょう。</p>
+
+\[\begin{aligned}
+\left( \frac{1}{\kappa^3 R^2} の分子\right) 
+&amp;= \kappa^3 \mathbf{n} + \kappa^2 \{ 3(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\} - \{ \beta^2 - (\mathbf{n} \cdot \boldsymbol{\beta})^2\} \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} -\boldsymbol{\beta}\} + \kappa \{ 3(\mathbf{n} \cdot \boldsymbol{\beta})^2 -2(\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} -\beta^2 \mathbf{n}\} \\
+&amp;= \mathbf{n} - 3(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} + 3 (\mathbf{n} \cdot \boldsymbol{\beta})^2 \mathbf{n} - (\mathbf{n} \cdot \boldsymbol{\beta})^3 \mathbf{n} + 3(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - 6(\mathbf{n} \cdot \boldsymbol{\beta})^2 \mathbf{n} + 3 (\mathbf{n} \cdot \boldsymbol{\beta})^3 \mathbf{n} - \boldsymbol{\beta} + 2(\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} \\
+&amp; \qquad - (\mathbf{n} \cdot \boldsymbol{\beta})^2 \boldsymbol{\beta} -\beta^2 (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} + \beta^2 \boldsymbol{\beta} + (\mathbf{n} \cdot \boldsymbol{\beta})^3 \mathbf{n} - (\mathbf{n} \cdot \boldsymbol{\beta})^2 \boldsymbol{\beta} + 3 (\mathbf{n} \cdot \boldsymbol{\beta})^2 \mathbf{n} - 2(\mathbf{n} \cdot \boldsymbol{\beta}) \boldsymbol{\beta} - \beta^2 \mathbf{n} \\
+&amp; \qquad - 3 (\mathbf{n} \cdot \boldsymbol{\beta})^3 \mathbf{n} + 2(\mathbf{n} \cdot \boldsymbol{\beta})^2 \boldsymbol{\beta} + (\mathbf{n} \cdot \boldsymbol{\beta}) \beta^2 \mathbf{n} \\
+&amp;= \mathbf{n} - \boldsymbol{\beta} - \beta^2 \mathbf{n} + \beta^2 \boldsymbol{\beta} 
+= (1-\beta^2) (\mathbf{n}-\boldsymbol{\beta})
+\end{aligned}\]
+
+<p>よって、確かに(1)式の第1項(速度場)に一致します。</p>
+
+\[\begin{aligned}
+\left( \frac{1}{c \kappa^3 R}の分子\right) 
+&amp;= (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \{ (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta}\} + \kappa \{ (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} -\dot{\boldsymbol{\beta}}\} \\
+&amp;= (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \boldsymbol{\beta} + (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) (\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} -\dot{\boldsymbol{\beta}} + (\mathbf{n} \cdot \boldsymbol{\beta}) \dot{\boldsymbol{\beta}} \\
+&amp;= (\mathbf{n} \cdot \dot{\beta}) (\mathbf{n}-\boldsymbol{\beta}) - \dot{\boldsymbol{\beta}} + (\mathbf{n}\cdot \boldsymbol{\beta}) \dot{\boldsymbol{\beta}} \\
+&amp;= \mathbf{n} \times \{ (\mathbf{n}-\boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}}\}
+\end{aligned}\]
+
+<p>となり、こちらも(1)式の第2項(輻射場)に一致します。</p>
+
+<h2 id="直感的理解">直感的理解</h2>
+
+<p>(2)式のようなHW表現で表されると、なぜ加速度運動をしたときにのみ電磁波が出現するかを直感的に理解することができます。下図のように等速直線運動していた点電荷に突然ブレーキをかけて減速させることを考えましょう。このブレーキがなければこの点電荷は等速度で直進していたはずですが、突然のブレーキにより電荷が置いてけぼりとなります。その置いてけぼりとなった部分が電磁波という形で放射されるのです。</p>
+
+<p><img src="/assets/images/astroelec/heaviside_feynman_em_01.png" alt="" /></p>
+
+<h2 id="ジェフィメンコ方程式">ジェフィメンコ方程式</h2>
+
+<p>さらに発展させて、任意の電荷分布からの電磁場の放射を考えてみましょう。<a href="/astroelec/lienard_wiechart">リエナー・ブィーヒェルトポテンシャル</a>より1つの点電荷により発生する電磁ポテンシャルは</p>
+
+\[\phi = \left[ \frac{q}{R \kappa}\right], \quad \mathbf{A} = \left[ \frac{q \mathbf{u}}{c \kappa R} \right] \tag{7}\]
+
+<p>のように書かれるのでした。これを電荷密度分布\(\rho\)、電流密度分布\(\mathbf{j}\)の場合に拡張します。分母に出現する\(\kappa R\)は、速度\(\mathbf{u}(t_\mathrm{ret})\)で運動している際に点電荷が運動することにより生まれる、観測者と点電荷の間の距離\(R\)を補正したものです。</p>
+
+<p><img src="/assets/images/astroelec/heaviside_feyman_em_02.png" alt="" /></p>
+
+<p>(7)式を任意の電荷密度分布に対し空間の全領域で積分し重ね合わせたものが、求めたい電荷分布が作る遅延ポテンシャルです。距離が補正されようとも、全領域で積分することに変わりはないので</p>
+
+\[\phi(\mathbf{r}, t) = \iiint \frac{[\rho]}{R} dV, \quad \mathbf{A} (\mathbf{r}, t) = \iiint \frac{[\mathbf{j}]}{cR} dV \tag{8}\]
+
+<p>が求めたい遅延ポテンシャルとなります。これらを</p>
+
+\[\mathbf{E} = - \nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}, \quad \mathbf{B} = \nabla \times \mathbf{A}\]
+
+<p>に代入して計算を行えば電磁場が得られます。</p>
+
+\[\frac{\partial}{\partial r_i} [\rho] 
+= \frac{\partial t_\mathrm{ret}}{\partial r_i} \left[ \frac{\partial \rho}{\partial t}\right] 
+= - \frac{R_i}{cR} \left[ \frac{\partial \rho}{\partial t}\right]\]
+
+<p>より</p>
+
+\[(\nabla \phi)_i 
+= \frac{\partial \phi}{\partial r_i} 
+= \iiint \frac{- \frac{R_i}{cR} \left[ \frac{\partial \rho}{\partial t} \right] R - \rho \frac{R_i}{R}}{R^2} dV 
+= - \iiint \left( \frac{1}{cR} \left[ \frac{\partial \rho}{\partial t} \right] + \frac{\rho}{R^2} \right) n_i dV\]
+
+\[\frac{\partial \mathbf{A}}{\partial t} 
+= \iiint \frac{\partial}{\partial t} \frac{[\mathbf{j}]}{R} dV 
+= \iiint \frac{1}{R} \frac{\partial t_\mathrm{ret}}{\partial t} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV
+= \iiint \frac{1}{\kappa R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV 
+= \iiint \frac{1}{R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV\]
+
+<p>などをあらかじめ計算しておきます。最後の等号では、結局全領域で体積積分するため、\(\kappa R \rightarrow R\)のようにしました。以上より</p>
+
+\[\mathbf{E} 
+= \iiint \left( \frac{[\rho]}{R^2} \mathbf{n} + \frac{1}{cR} \left[ \frac{d\rho}{dt} \right] \mathbf{n} - \frac{1}{c^2 R} \left[ \frac{d\mathbf{j}}{dt}\right] \right) dV \tag{9}\]
+
+\[\mathbf{B} 
+= \iiint \left( \frac{[\mathbf{j}]}{R} \times \mathbf{n} + \frac{1}{cR} \left[ \frac{d\mathbf{j}}{dt} \right] \times \mathbf{n} \right) dV \tag{10}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

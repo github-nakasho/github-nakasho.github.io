@@ -1,10 +1,10 @@
-I"�=
+I"�?
 <details open="">
   <summary class="text-delta">
     Table of contents
   </summary>
 <ol id="markdown-toc">
-  <li><a href="#運動する点電荷が作る電磁場のヘヴィサイドファインマン表現" id="markdown-toc-運動する点電荷が作る電磁場のヘヴィサイドファインマン表現">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現</a>    <ol>
+  <li><a href="#運動する点電荷が作る電磁場のヘヴィサイドファインマン表現とジェフィメンコ方程式" id="markdown-toc-運動する点電荷が作る電磁場のヘヴィサイドファインマン表現とジェフィメンコ方程式">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現とジェフィメンコ方程式</a>    <ol>
       <li><a href="#証明" id="markdown-toc-証明">証明</a></li>
       <li><a href="#直感的理解" id="markdown-toc-直感的理解">直感的理解</a></li>
       <li><a href="#ジェフィメンコ方程式" id="markdown-toc-ジェフィメンコ方程式">ジェフィメンコ方程式</a></li>
@@ -22,7 +22,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
 
-<h1 id="運動する点電荷が作る電磁場のヘヴィサイドファインマン表現">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現</h1>
+<h1 id="運動する点電荷が作る電磁場のヘヴィサイドファインマン表現とジェフィメンコ方程式">運動する点電荷が作る電磁場のヘヴィサイド・ファインマン表現とジェフィメンコ方程式</h1>
 
 <p>運動する点電荷が作る電場は、<a href="/astroelec/lienard_wiechart_em">リエナー・ブィーヒェルトポテンシャルから導かれた電磁場の式</a>より</p>
 
@@ -39,9 +39,9 @@
 <p>を加えれば良い、というものです。この言葉を数式として表現すると、次元合わせなどを考慮して</p>
 
 \[\mathbf{E} 
-= q \left[ \frac{\mathbf{n}}{R^2}\right] + q \left[ \frac{R}{c} \right] \frac{\partial}{\partial t} \left[ \frac{\mathbf{n}}{R^2}\right] + \frac{q}{c^2} \frac{\partial^2}{\partial t^2} [\mathbf{n}] \tag{2}\]
+= q \left[ \frac{\mathbf{n}}{R^2}\right] + q \frac{R}{c} \frac{\partial}{\partial t} \left[ \frac{\mathbf{n}}{R^2}\right] + \frac{q}{c^2} \frac{\partial^2}{\partial t^2} [\mathbf{n}] \tag{2}\]
 
-<p>のように書けます。第1項はクーロン電場、第2項は点電荷が速度を持つことによる補正項、第3項は点電荷が加速度運動することによる補正項です。以降、(2)式をヘヴィサイド・ファインマン(HW)表現と呼ぶことにしましょう。</p>
+<p>のように書けます。第1項はクーロン電場、第2項は点電荷が速度を持つことによる補正項、第3項は点電荷が加速度運動することによる補正項です。以降、(2)式をヘヴィサイド・ファインマン(HF)表現と呼ぶことにしましょう。</p>
 
 <h2 id="証明">証明</h2>
 
@@ -108,7 +108,7 @@
 = (1-\beta^2) (\mathbf{n}-\boldsymbol{\beta})
 \end{aligned}\]
 
-<p>よって、確かに(1)式の第1項(速度場)に一致します。</p>
+<p>よって、確かに(1)式の第1項<a href="/astroelec/vel_rad">(速度場)</a>に一致します。</p>
 
 \[\begin{aligned}
 \left( \frac{1}{c \kappa^3 R}の分子\right) 
@@ -118,23 +118,23 @@
 &amp;= \mathbf{n} \times \{ (\mathbf{n}-\boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}}\}
 \end{aligned}\]
 
-<p>となり、こちらも(1)式の第2項(輻射場)に一致します。</p>
+<p>となり、こちらも(1)式の第2項<a href="/astroelec/vel_rad">(輻射場)</a>に一致します。</p>
 
 <h2 id="直感的理解">直感的理解</h2>
 
-<p>(2)式のようなHW表現で表されると、なぜ加速度運動をしたときにのみ電磁波が出現するかを直感的に理解することができます。下図のように等速直線運動していた点電荷に突然ブレーキをかけて減速させることを考えましょう。このブレーキがなければこの点電荷は等速度で直進していたはずですが、突然のブレーキにより電荷が置いてけぼりとなります。その置いてけぼりとなった部分が電磁波という形で放射されるのです。</p>
+<p>(2)式のようなHF表現で表されると、なぜ加速度運動をしたときにのみ電磁波が出現するかを直感的に理解することができます。下図のように等速直線運動していた点電荷に突然ブレーキをかけて減速させることを考えましょう。このブレーキがなければこの点電荷は等速度で直進していたはずですが、突然のブレーキにより電荷が置いてけぼりとなります。その置いてけぼりとなった部分が電磁波という形で放射されるのです。</p>
 
-<p><img src="/assets/images/astroelec/heaviside_feynman_em_01.png" alt="" /></p>
+<p><img src="/assets/images/astroelec/heaviside_feynman_jefimenko_01.png" alt="" /></p>
 
 <h2 id="ジェフィメンコ方程式">ジェフィメンコ方程式</h2>
 
 <p>さらに発展させて、任意の電荷分布からの電磁場の放射を考えてみましょう。<a href="/astroelec/lienard_wiechart">リエナー・ブィーヒェルトポテンシャル</a>より1つの点電荷により発生する電磁ポテンシャルは</p>
 
-\[\phi = \left[ \frac{q}{R \kappa}\right], \quad \mathbf{A} = \left[ \frac{q \mathbf{u}}{c \kappa R} \right] \tag{7}\]
+\[\phi = \left[ \frac{q}{\kappa R}\right], \quad \mathbf{A} = \left[ \frac{q \mathbf{u}}{c \kappa R} \right] \tag{7}\]
 
 <p>のように書かれるのでした。これを電荷密度分布\(\rho\)、電流密度分布\(\mathbf{j}\)の場合に拡張します。分母に出現する\(\kappa R\)は、速度\(\mathbf{u}(t_\mathrm{ret})\)で運動している際に点電荷が運動することにより生まれる、観測者と点電荷の間の距離\(R\)を補正したものです。</p>
 
-<p><img src="/assets/images/astroelec/heaviside_feyman_em_02.png" alt="" /></p>
+<p><img src="/assets/images/astroelec/heaviside_feynman_jefimenko_02.png" alt="" /></p>
 
 <p>(7)式を任意の電荷密度分布に対し空間の全領域で積分し重ね合わせたものが、求めたい電荷分布が作る遅延ポテンシャルです。距離が補正されようとも、全領域で積分することに変わりはないので</p>
 
@@ -171,7 +171,7 @@
 \[\mathbf{B} 
 = \iiint \left( \frac{[\mathbf{j}]}{R^2} \times \mathbf{n} + \frac{1}{cR} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] \times \mathbf{n} \right) dV \tag{10}\]
 
-<p>と求まります。(9), (10)式をジェフィメンコ方程式(Jefimenko’s equations)と呼びます。(9)式の第1項はクーロンの法則、(10)式の第1項はビオ・サバールの法則を表しています。</p>
+<p>と求まります。(9), (10)式をジェフィメンコ方程式(Jefimenko’s equations)と呼びます。(9)式の第1項はクーロンの法則、(10)式の第1項はビオ・サバールの法則を表しています。これらのよく知られた電磁気の法則を拡張したものがジェフィメンコ方程式です。静電場・静磁場に補正を加えることで得たHF表現と同じような形をしています。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

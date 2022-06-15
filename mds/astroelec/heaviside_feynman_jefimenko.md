@@ -185,24 +185,145 @@ $$
 
 $$
 \frac{\partial \mathbf{A}}{\partial t} 
-= \iiint \frac{\partial}{\partial t} \frac{[\mathbf{j}]}{R} dV 
-= \iiint \frac{1}{R} \frac{\partial t_\mathrm{ret}}{\partial t} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV
-= \iiint \frac{1}{\kappa R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV 
-= \iiint \frac{1}{R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV
+= \iiint \frac{\partial}{\partial t} \frac{[\mathbf{j}]}{cR} dV 
+= \iiint \frac{1}{cR} \frac{\partial t_\mathrm{ret}}{\partial t} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV
+= \iiint \frac{1}{cR} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] dV
 $$
 
-などをあらかじめ計算しておきます。最後の等号では、結局全領域で体積積分するため、$$\kappa R \rightarrow R$$のようにしました。以上より
+などをあらかじめ計算しておきます。ここで$$t_\mathrm{ret} = t - \vert \mathbf{r} -\mathbf{r}_0\vert / c$$より、本来なら$$\mathbf{r}_0$$の時間変化による効果が入りますが、ここでは$$r_0 \ll r$$と近似することで$$\frac{\partial t_\mathrm{ret}}{\partial t} \sim 1$$としました。
 
 $$
 \mathbf{E} 
-= \iiint \left( \frac{[\rho]}{R^2} \mathbf{n} + \frac{1}{cR} \left[ \frac{d\rho}{dt} \right] \mathbf{n} - \frac{1}{c^2 R} \left[ \frac{d\mathbf{j}}{dt}\right] \right) dV \tag{9} 
+= \iiint \left( \frac{[\rho]}{R^2} \mathbf{n} + \frac{1}{cR} \left[ \frac{\partial \rho}{\partial t} \right] \mathbf{n} - \frac{1}{c^2 R} \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \right) dV \tag{9} 
 $$
 
 $$
 \mathbf{B} 
-= \iiint \left( \frac{[\mathbf{j}]}{R^2} \times \mathbf{n} + \frac{1}{cR} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] \times \mathbf{n} \right) dV \tag{10}
+= \iiint \left( \frac{[\mathbf{j}]}{cR^2} \times \mathbf{n} + \frac{1}{c^2R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] \times \mathbf{n} \right) dV \tag{10}
 $$
 
-と求まります。(9), (10)式をジェフィメンコ方程式(Jefimenko's equations)と呼びます。(9)式の第1項はクーロンの法則、(10)式の第1項はビオ・サバールの法則を表しています。これらのよく知られた電磁気の法則を拡張したものがジェフィメンコ方程式です。静電場・静磁場に補正を加えることで得たHF表現と同じような形をしています。
+と求まります。(9), (10)式をジェフィメンコ方程式(Jefimenko's equations)と呼びます。(9)式の第1項はクーロンの法則、(10)式の第1項はビオ・サバールの法則を表しています。これらのよく知られた電磁気の法則を拡張したものがジェフィメンコ方程式です。静電場・静磁場に補正を加えることで得たHF表現と同じような形をしています。  
+さらにこれを解析しやすい形に直しましょう。電荷の位置$$\mathbf{r}_0$$での電流密度$$[\mathbf{j}]$$の発散を計算することを考えます。
+
+$$
+\frac{\partial}{\partial r_{0, i}} 
+= \frac{\partial t_\mathrm{ret}}{\partial r_{0, i}} \frac{\partial }{\partial t_\mathrm{ret}} 
+= \frac{R_i}{cR} \frac{\partial }{\partial t_\mathrm{ret}}
+$$
+
+ですが、実際には$$\mathbf{j}$$は$$t_\mathrm{ret}$$を通じて$$\mathbf{r}$$にも依存しています。よって連鎖律より
+
+$$
+\frac{\partial}{\partial r_{0, i}} 
+= \left( \frac{\partial}{\partial r_{0, i}}\right)_\mathbf{r} + \frac{\mathbf{n}}{c} \frac{\partial}{\partial t_\mathrm{ret}}
+$$
+
+となります。ここで位置$$\mathbf{r}_0$$から観測者のいる$$\mathbf{r}$$の方向を向く単位ベクトルを$$\mathbf{n} = \mathbf{R} / R$$としました。以上から
+
+$$
+\frac{\partial}{\partial r_{0, i}} [j_i] 
+= \left[ \frac{\partial j_i}{\partial r_{0, i}}\right] + \frac{n_i}{c} \left[ \frac{\partial j_i}{\partial t}\right]
+$$
+
+ここで電荷に対する[連続の式](/mhd/continuity)
+
+$$
+\frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{j} = 0
+$$
+
+より
+
+$$
+\nabla \cdot [\mathbf{j}] 
+= -\left[ \frac{\partial \rho}{\partial t} \right] + \frac{\mathbf{n}}{c} \cdot \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \ \underbrace{\Longrightarrow}_{\times \mathbf{n}/cR} \
+\frac{1}{cR} \left[ \frac{\partial \rho}{\partial t}\right] \mathbf{n} 
+= -\frac{1}{cR} (\nabla \cdot [\mathbf{j}]) \mathbf{n} + \left( \frac{\mathbf{n}}{c^2 R} \cdot \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \right) \mathbf{n} 
+$$
+
+以上の変形と(9)式より
+
+$$
+\mathbf{E} 
+= \iiint \left\{ \frac{[\rho]}{R^2} \mathbf{n} - \frac{1}{cR} (\nabla \cdot [\mathbf{j}]) \mathbf{n} + \frac{1}{c^2 R} \left( \mathbf{n} \cdot \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \right) \mathbf{n} - \frac{1}{c^2R} \left[ \frac{\partial \mathbf{j}}{\partial t}\right]\right\} dV \tag{11}
+$$
+
+第2項の$$k$$成分を計算します。
+
+$$
+\frac{1}{cR} \frac{\partial [j_i]}{\partial r_{0, i}} n_k 
+= \frac{1}{cR} \frac{\partial}{\partial r_{0, i}} \left( \frac{[j_i] n_k}{R}\right) - \frac{[j_i]}{c} \frac{\partial}{\partial r_{0, i}} \left( \frac{n_k}{R}\right) 
+= \frac{1}{cR} \frac{\partial}{\partial r_{0, i}} \left( \frac{[j_i] R_k}{R^2}\right) - \frac{[j_i]}{c} \frac{\partial}{\partial r_{0, i}} \left( \frac{R_k}{R^2}\right) 
+$$
+
+$$\mathbf{R} = (x-x_0, y-y_0, z-z_0)$$より
+
+$$
+\frac{\partial}{\partial r_{0, i}} \left( \frac{R_k}{R^2}\right) 
+= \frac{-\delta_{ik} R^2 - R_k (-2R_i)}{R^4}
+$$
+
+のように計算されます。よって最終的に
+
+$$
+\frac{1}{cR} \frac{\partial [j_i]}{\partial r_{0, i}} n_k
+= \frac{1}{c} \frac{\partial}{\partial r_{0, i}} \left( \frac{R_k}{R^2} [j_i]\right) - \frac{-[j_k] + 2([\mathbf{j}] \cdot \mathbf{n}) n_k}{cR^2}
+$$
+
+を得ます。この第一項はベクトルの発散の形で書かれています。これが(9)式の体積積分の中に入っているため、ガウスの定理より表面積分に書き直されます。電荷や電流の存在しない無限遠を表面にとれば、この部分は0になるとわかります。よってこの第二項の計算だけ進めていきましょう。ここでベクトル恒等式より
+
+$$
+\begin{aligned}
+[(\mathbf{a} \times \mathbf{n}) \times \mathbf{n}]_i
+&= \epsilon_{ijk} (\mathbf{a} \times \mathbf{n})_j n_k 
+= \epsilon_{ijk} \epsilon_{j\ell m} a_\ell n_m n_k 
+= \epsilon_{jki} \epsilon_{j \ell m} a_\ell n_m n_k 
+= (\delta_{k\ell} \delta_{im} - \delta_{km} \delta_{i\ell}) a_\ell n_m n_k \\
+&= a_k n_i n_k - a_i n_k n_k 
+= (\mathbf{a} \cdot \mathbf{n}) n_i - a_i
+\end{aligned}
+$$
+
+です。ここで$$n_i = R_i /R$$のように規格化されているとしました。すると
+
+$$
+- \frac{-[\mathbf{j}] + 2([\mathbf{j}] \cdot \mathbf{n}) \mathbf{n}}{cR^2} 
+= - \frac{([\mathbf{j}]  \cdot \mathbf{n}) \mathbf{n} + ([ \mathbf{j}] \times \mathbf{n}) \times \mathbf{n}}{cR^2}
+$$
+
+のようになります。以上から
+
+$$
+\frac{1}{cR} (\nabla \cdot [\mathbf{j}]) \mathbf{n}
+= - \frac{([\mathbf{j}] \cdot \mathbf{n}) \mathbf{n} + ([\mathbf{j}] \times \mathbf{n}) \times \mathbf{n}}{cR} \tag{12}
+$$
+
+さらに(11)式の第3, 4項は、先程のベクトル恒等式を用いれば
+
+$$
+\frac{1}{c^2R} \left\{ \left( \mathbf{n} \cdot \left[ \frac{\partial \mathbf{j}}{\partial t}\right]\right) \mathbf{n} - \left[ \frac{\partial \mathbf{j}}{\partial t}\right]\right\} 
+= \frac{1}{c^2 R} \left( \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \times \mathbf{n}\right) \mathbf{n} \tag{13}
+$$
+
+のように書かれます。(11), (12), (13)式より、最終的に
+
+$$
+\mathbf{E} 
+= \iiint \left\{ \frac{[\rho]}{R^2} \mathbf{n} + \frac{([\mathbf{j}] \cdot \mathbf{n}) \mathbf{n}}{cR^2} + \frac{([\mathbf{j}] \times \mathbf{n}) \times \mathbf{n}}{cR^2} + \frac{1}{c^2 R} \left( \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \times \mathbf{n}\right) \times \mathbf{n} \right\} dV \tag{14}
+$$
+
+(14)式の第1, 2項は$$\mathbf{n}$$に平行な成分、第3, 4項は$$\mathbf{n}$$に垂直な成分です。中でも第4項は$$R^{-1}$$に比例する項なので、$$R \rightarrow \infty$$ではこの項のみが支配的となります。無限遠にもエネルギーを持ち去ることができるこの項が電磁放射に対応します。電磁放射の成分のみを書くと
+
+$$
+\mathbf{E} 
+= \iiint \left\{ \frac{1}{c^2 R} \left( \left[ \frac{\partial \mathbf{j}}{\partial t}\right] \times \mathbf{n}\right) \times \mathbf{n} \right\} dV \tag{15}
+$$
+
+$$
+\mathbf{B} 
+= \iiint \left\{ \frac{1}{c^2R} \left[ \frac{\partial \mathbf{j}}{\partial t} \right] \times \mathbf{n} \right\} dV 
+= \mathbf{n} \times \mathbf{E} \tag{16}
+$$
+
+となります。
 
 {% include adsense.html %} 

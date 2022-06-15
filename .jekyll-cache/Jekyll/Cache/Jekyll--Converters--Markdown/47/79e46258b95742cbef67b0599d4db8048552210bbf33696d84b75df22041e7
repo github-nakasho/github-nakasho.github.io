@@ -1,4 +1,4 @@
-I"XK
+I"aK
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -139,7 +139,7 @@
 \[\mathbf{E} (\mathbf{r}, t) 
 = - \nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t} \tag{9}\]
 
-\[\mathbf{A} (\mathbf{r}, t) 
+\[\mathbf{B} (\mathbf{r}, t) 
 = \nabla \times \mathbf{A} \tag{10}\]
 
 <p>(2)式より</p>
@@ -172,7 +172,7 @@
 <p>また(6)式より</p>
 
 \[\nabla [\kappa R] 
-= \left[ \left\{ \left( \frac{\partial R}{\partial \mathbf{r}} \right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c\kappa} \frac{\partial R}{\partial t}\right\} \kappa + R \left\{ \left( \frac{\partial \kappa}{\partial t}\right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c \kappa} \frac{\partial \kappa}{\partial t}\right\} \right]\]
+= \left[ \left\{ \left( \frac{\partial R}{\partial \mathbf{r}} \right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c\kappa} \frac{\partial R}{\partial t}\right\} \kappa + R \left\{ \left( \frac{\partial \kappa}{\partial \mathbf{r}}\right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c \kappa} \frac{\partial \kappa}{\partial t}\right\} \right]\]
 
 \[\left[ \left( \frac{\partial R}{\partial \mathbf{r}}\right)_{\mathbf{r}_0} \right] 
 = \left[ \frac{\mathbf{R}}{R} \right] 

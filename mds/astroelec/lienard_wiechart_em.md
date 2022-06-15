@@ -154,7 +154,7 @@ $$
 $$
 
 $$
-\mathbf{A} (\mathbf{r}, t) 
+\mathbf{B} (\mathbf{r}, t) 
 = \nabla \times \mathbf{A} \tag{10}
 $$
 
@@ -197,7 +197,7 @@ $$
 
 $$
 \nabla [\kappa R] 
-= \left[ \left\{ \left( \frac{\partial R}{\partial \mathbf{r}} \right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c\kappa} \frac{\partial R}{\partial t}\right\} \kappa + R \left\{ \left( \frac{\partial \kappa}{\partial t}\right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c \kappa} \frac{\partial \kappa}{\partial t}\right\} \right]
+= \left[ \left\{ \left( \frac{\partial R}{\partial \mathbf{r}} \right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c\kappa} \frac{\partial R}{\partial t}\right\} \kappa + R \left\{ \left( \frac{\partial \kappa}{\partial \mathbf{r}}\right)_{\mathbf{r}_0} - \frac{\mathbf{n}}{c \kappa} \frac{\partial \kappa}{\partial t}\right\} \right]
 $$
 
 $$

@@ -142,6 +142,8 @@ $$
 
 ![](/assets/images/astroelec/heaviside_feynman_jefimenko_01.png)
 
+{% include adsense.html %} 
+
 ## ジェフィメンコ方程式
 
 さらに発展させて、任意の電荷分布からの電磁場の放射を考えてみましょう。[リエナー・ブィーヒェルトポテンシャル](/astroelec/lienard_wiechart)より1つの点電荷により発生する電磁ポテンシャルは
@@ -154,7 +156,7 @@ $$
 
 ![](/assets/images/astroelec/heaviside_feynman_jefimenko_02.png)
 
-(7)式を任意の電荷密度分布に対し空間の全領域で積分し重ね合わせたものが、求めたい電荷分布が作る遅延ポテンシャルです。距離が補正されようとも、全領域で積分することに変わりはないので
+(7)式を任意の電荷密度分布に対し空間の全領域で積分し重ね合わせたものが、求めたい電荷分布が作る遅延ポテンシャルです。観測者は十分遠方にいると仮定すると、距離による補正は$$\kappa \sim 1$$のように考えることができます。よって
 
 $$
 \phi(\mathbf{r}, t) = \iiint \frac{[\rho]}{R} dV, \quad \mathbf{A} (\mathbf{r}, t) = \iiint \frac{[\mathbf{j}]}{cR} dV \tag{8}
@@ -225,7 +227,7 @@ $$
 = \left[ \frac{\partial j_i}{\partial r_{0, i}}\right] + \frac{n_i}{c} \left[ \frac{\partial j_i}{\partial t}\right]
 $$
 
-ここで電荷に対する[連続の式](/mhd/continuity)
+ここで電荷分布と電流分布に対する[連続の式](/mhd/continuity)
 
 $$
 \frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{j} = 0

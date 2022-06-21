@@ -1,12 +1,9 @@
 
-using GLMakie
+function just_print(u1)
+  println(u1)
+end
 
-f = Figure()
-Axis3(f[1, 1], aspect=(0.5,0.5,1), perspectiveness=0.75)
+u = [[1, 2, 3], [4, 5, 6]]
+println(u[1])
 
-xs = ys = LinRange(-0.5, 0.5, 100)
-zs = [sqrt(x^2+y^2) for x in xs, y in ys]
-
-contour3d!(xs, ys, -zs, linewidth=2, color=:blue2)
-contour3d!(xs, ys, +zs, linewidth=2, color=:red2)
-save("sandbox.png", f)
+just_print(u[2])

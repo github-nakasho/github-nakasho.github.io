@@ -82,7 +82,7 @@ for z in zs
 end
 ##### main loop end #####
 # make density contour
-contour(Rs, zs, rhos, fill=true, linewidth=0, levels=20,  
+contour(Rs, zs, rhos, fill=true, linewidth=0, levels=20, 
         aspect_ratio=:equal, xlim=[Rmin, Rmax], ylim=[zmin, zmax], xlabel="R", ylabel="z", title="Log(Density)", extend="both")
 savefig("density.png")
 # make magnetic energy contour

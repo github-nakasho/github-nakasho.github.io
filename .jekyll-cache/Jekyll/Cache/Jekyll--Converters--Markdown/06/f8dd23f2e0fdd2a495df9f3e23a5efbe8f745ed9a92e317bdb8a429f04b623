@@ -1,4 +1,4 @@
-I"�X
+I"�Y
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -10,6 +10,7 @@
       <li><a href="#ジェフィメンコ方程式" id="markdown-toc-ジェフィメンコ方程式">ジェフィメンコ方程式</a></li>
     </ol>
   </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ol>
 
 </details>
@@ -269,6 +270,12 @@
 = \mathbf{n} \times \mathbf{E} \tag{16}\]
 
 <p>となります。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>宮島龍興, “ファインマン物理学3 電磁気学”</li>
+</ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

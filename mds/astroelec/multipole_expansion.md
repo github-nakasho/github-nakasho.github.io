@@ -231,7 +231,7 @@ $$
 
 ## 応用: 超変形核
 
-ターゲットとする原子核にビーム原子核をある角度で撃ち込むと、ターゲット原子核と核融合を起こすと同時に角運動量を獲得し、高速回転を始めます。これにより超変形核となります。この場合、原子核の四重極モーメントが0ではなくなり、(12)式で表されるような四重極モーメントの時間変化による電磁放射が生まれます。
+ターゲットとする原子核にビーム原子核をある角度で撃ち込むと、ターゲット原子核と核融合を起こすと同時に角運動量を獲得し、高速回転を始めます。これにより超変形核となります。この場合、原子核の四重極モーメントが0ではなくなり、(12)式で表されるような四重極モーメントの時間変化による電磁放射が生まれます。逆に、この超変形核からの電磁場を検出器で観測し(12)式を解けば、超変形核の四重極モーメントの分布が得られます。
 
 ![](/assets/images/astroelec/multipole_expansion_01.png)
 
@@ -239,6 +239,7 @@ $$
 
 * [Haras, 2007, "Can Maxwell's equations be obtained from the continuity equation?"](https://arxiv.org/abs/0812.4785)
 * [Souza et al., 2009, "Multipole radiation fields from the Jefimenko equation for the magnetic field and the Panofsky-Phillips equation for the electric field"](https://arxiv.org/abs/0812.4679)
+* 中村哲, 須藤彰三, "電磁気学"
 * [東北大学原子核物理グループ](http://lambda.phys.tohoku.ac.jp/)
 * [不安定核の集団現象に対する微視的アプローチ](http://www2.yukawa.kyoto-u.ac.jp/~kenichi.matsuyanagi/JPS06talk.pdf)
 

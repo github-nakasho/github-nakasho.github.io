@@ -131,6 +131,7 @@ for i in 1:15:N
     #                 label=false, legend=:none)
     p_gif = scatter!([X[t_end]], [Y[t_end]], markersize=7, color=:black, label="test particle", legend=:topright)
     p_gif = scatter!([-2/3], [0], markersize=7, color=:white, label="binary star")
+    p_gif = scatter!([-0.24], [0], markersize=7, color=:black, markershape=:cross, label="L1 point")
     frame(a, p_gif)
 end
 gif(a, "roche_trajectory.gif", fps=30)

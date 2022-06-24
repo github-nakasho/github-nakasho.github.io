@@ -8,3 +8,5 @@ const kb = 1.38e-16
 const eV = 1.6e-12
 const keV = eV * 10.0^3
 const h = 6.63e-27
+const mp = 1.67e-24
+const me = 9.11e-28

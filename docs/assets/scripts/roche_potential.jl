@@ -20,7 +20,7 @@ ymax = 2.0
 xs = range(xmin, xmax, length=nx)
 ys = range(ymin, ymax, length=ny)
 # set input parameter 
-q = 0.25
+q = 0.5
 # compute alpha and beta
 alpha = 1.0 / (1.0 + q)
 beta = q / (1.0 + q)
@@ -35,7 +35,7 @@ for y in ys
 end
 ##### main loop end #####
 # make density contour
-pot_min = -4
+pot_min = -4.0
 pot_max = -1.3
 contour(xs, ys, map(x->ifelse(x>pot_min ,x ,pot_min), psis), linewidth=0, levels=20, clims=(pot_min, pot_max), fill=true, 
         aspect_ratio=:equal, xlim=[xmin, xmax], ylim=[ymin, ymax], xlabel="X", ylabel="Y", title="Effective potential")

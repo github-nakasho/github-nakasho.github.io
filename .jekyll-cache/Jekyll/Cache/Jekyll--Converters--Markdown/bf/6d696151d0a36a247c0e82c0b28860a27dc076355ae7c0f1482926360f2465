@@ -1,0 +1,74 @@
+I"C
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#hll法" id="markdown-toc-hll法">HLL法</a>    <ol>
+      <li><a href="#磁気流体方程式群" id="markdown-toc-磁気流体方程式群">磁気流体方程式群</a></li>
+      <li><a href="#流束計算" id="markdown-toc-流束計算">流束計算</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="hll法">HLL法</h1>
+
+<p>ここでは(磁気)流体力学の計算手法であるHarten-Lax-van Leer (略してHLL)法についての勉強メモを記述しています。</p>
+
+<h2 id="磁気流体方程式群">磁気流体方程式群</h2>
+
+<p><a href="/mhd/continuity">質量保存の式(連続の式)</a>、<a href="/mhd/momentum">運動量保存則</a>、<a href="/mhd/energy">エネルギー保存則</a>、<a href="/mhd/induction">誘導方程式</a>を一つにまとめて</p>
+
+\[\frac{\partial \mathbf{U}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} 
+= \mathbf{0} \tag{1}\]
+
+<p>のように書くことができます。ここで</p>
+
+\[\mathbf{U} = \left( \begin{array}{c} 
+\rho \\
+\rho v_x \\
+\rho v_y \\
+\rho v_z \\
+E \\
+B_x \\
+B_y \\
+B_z
+\end{array}\right)\]
+
+<p>は保存量ベクトル、そして</p>
+
+\[\mathbf{F} = \left( \begin{array}{c} 
+\rho v_x \\
+\rho v_x v_x + P_\mathrm{tot} - \frac{1}{4\pi} B_x^2 \\
+\rho v_y v_x - \frac{1}{4\pi} B_y B_x \\
+\rho v_z v_x - \frac{1}{4\pi} B_z B_x \\
+(E + P_\mathrm{tot}) v_x - \frac{1}{4\pi} (\mathbf{B}\cdot \mathbf{v}) B_x \\
+0 \\
+B_y v_x - v_y B_x \\
+B_z v_x - v_z B_x 
+\end{array} \right)\]
+
+<h2 id="流束計算">流束計算</h2>
+
+<p>仕切りを挟んで左側の状態を\(L\)(left)、右側の状態を\(R\)(right)のように記述しましょう。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

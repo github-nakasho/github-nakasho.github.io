@@ -153,7 +153,7 @@ $$
 = \left\{ \begin{array}{ll} 
 \mathbf{F}_L & \mathrm{if} \ S_L > 0 \\
 \mathbf{F}^\ast & \mathrm{if} \ S_L \leq 0 \leq S_R \\
-\mathbf{F}_L & \mathrm{if} \ S_R < 0
+\mathbf{F}_R & \mathrm{if} \ S_R < 0
 \end{array}\right. \tag{10}
 $$
 

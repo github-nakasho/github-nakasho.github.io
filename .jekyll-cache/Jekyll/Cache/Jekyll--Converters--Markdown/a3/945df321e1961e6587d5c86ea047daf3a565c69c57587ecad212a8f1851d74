@@ -1,4 +1,4 @@
-I"#\
+I"d^
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -35,9 +35,8 @@
 
 <h2 id="磁気流体方程式群">磁気流体方程式群</h2>
 
-<p>数値計算のために、<a href="/mhd/continuity">質量保存の式(連続の式)</a>、<a href="/mhd/momentum">運動量保存則</a>、<a href="/mhd/energy">エネルギー保存則</a>、<a href="/mhd/induction">誘導方程式</a>を一つにまとめましょう。
-あらかじめこれらの方程式は規格化されているものとすると
-以下では\(x\)方向の一次元のみを考えることとします。</p>
+<p>数値計算のために、<a href="/mhd/continuity">質量保存の式(連続の式)</a>、<a href="/mhd/momentum">運動量保存則</a>、<a href="/mhd/energy">エネルギー保存則</a>、<a href="/mhd/induction">誘導方程式</a>を一つにまとめましょう。以下では\(x\)方向の一次元のみを考えることとします。
+さらにあらかじめこれらの方程式は規格化されているものとすると</p>
 
 \[\frac{\partial \mathbf{U}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} 
 = \mathbf{0} \tag{1}\]
@@ -143,13 +142,23 @@ B_z v_x - v_z B_x
 = \left\{ \begin{array}{ll} 
 \mathbf{F}_L &amp; \mathrm{if} \ S_L &gt; 0 \\
 \mathbf{F}^\ast &amp; \mathrm{if} \ S_L \leq 0 \leq S_R \\
-\mathbf{F}_L &amp; \mathrm{if} \ S_R &lt; 0
+\mathbf{F}_R &amp; \mathrm{if} \ S_R &lt; 0
 \end{array}\right. \tag{10}\]
 
 <p>のようになります。もしくは\(S_R = \max (S_R, 0), S_L = \min(S_L, 0)\)のように定めておけば</p>
 
 \[\mathbf{F}_\mathrm{HLL} 
-= \frac{S_R \mathbf{F}_L - S_L \mathbf{F}_R + S_R S_L (\mathbf{U}_R - \mathbf{U}_L)}{S_R - S_L}\]
+= \frac{S_R \mathbf{F}_L - S_L \mathbf{F}_R + S_R S_L (\mathbf{U}_R - \mathbf{U}_L)}{S_R - S_L} \tag{11}\]
+
+<p>だけで計算することも可能です。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="発展-中間状態の多重化">発展: 中間状態の多重化</h2>
 
@@ -161,18 +170,18 @@ B_z v_x - v_z B_x
   <li>流体の運動: \(S_M = v_x\)</li>
 </ul>
 
-<p>ここで\(C_s &gt; v_x &gt; 0\)としました。ここからわかるように、左右に速く進む波ともう一つ、流体の運動により伝播する波が存在します。
+<p>ここで簡単のために\(C_s &gt; v_x &gt; 0\)としました。ここからわかるように、左右に速く進む波ともう一つ、流体の運動により伝播する波が存在します。
 この波の波面を挟んで右側と左側でも状態の変化が起こるため、中間状態を1つとした近似よりも、実際には下図のように2つの中間状態を用いた方がより流体力学系を再現できそうです。
-このような手法をHLLC(“C”はcontact, つまり接触不連続面の意味)法と呼びます。</p>
+このような手法をHLLC法(“C”はcontact, つまり接触不連続面の意味)と呼びます。</p>
 
 <p><img src="/assets/images/simulation/hll_05.png" alt="" /></p>
 
-<p>さらに磁気流体に至っては、速い磁気音波・遅い磁気音波、そして普通のアルヴェーン波まで存在します。これらの速度で伝わる波面をはさんだ状態変化を考慮する手法も存在します。
+<p>さらに磁気流体に至っては、<a href="/mhd/magneto_acoustic">速い磁気音波・遅い磁気音波</a>、そして普通の<a href="/mhd/alfven_wave">アルヴェーン波</a>まで存在します。これらの速度で伝わる波面をはさんだ状態変化を考慮する手法も存在します。
 これらについては後ほどご説明したします。</p>
 
 <h2 id="hll流束の計算モジュール">HLL流束の計算モジュール</h2>
 
-<p>以下にJulia言語で実装されたHLL流束計算コードを示します。</p>
+<p>以下にHLL流束計算コードのJulia実装例を示します。</p>
 
 <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">LinearAlgebra</span>    
 <span class="n">include</span><span class="x">(</span><span class="s">"../convert/convert.jl"</span><span class="x">)</span>
@@ -213,7 +222,7 @@ B_z v_x - v_z B_x
 </code></pre></div></div>
 
 <p>あらかじめ保存量ベクトル\(\mathbf{U}\)や基本変数ベクトル\(\mathbf{V}\)から流束ベクトルを計算する<code class="language-plaintext highlighter-rouge">convert.jl</code>などを作成しておきます。
-また<code class="language-plaintext highlighter-rouge">const.jl</code>には比熱比\(\gamma\)などが定義されています。コード途中に出てくる\(Ul, Vl, Fl\)は左側の物理量における保存量、基本変数、流束ベクトルを表し、\(Ur, Vr, Fr\)は右側を意味します。</p>
+また<code class="language-plaintext highlighter-rouge">const.jl</code>には比熱比\(\gamma\)などが定義されています。コード途中に出てくるUl, Vl, Flは左側の物理量における保存量、基本変数、流束ベクトルを表し、Ur, Vr, Frは右側のものを意味します。</p>
 
 <h1 id="参考文献">参考文献</h1>
 

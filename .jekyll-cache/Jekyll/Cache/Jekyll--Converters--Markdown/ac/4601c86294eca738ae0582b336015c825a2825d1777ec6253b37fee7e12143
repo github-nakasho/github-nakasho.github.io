@@ -1,4 +1,4 @@
-I"d^
+I"^
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -36,7 +36,7 @@
 <h2 id="磁気流体方程式群">磁気流体方程式群</h2>
 
 <p>数値計算のために、<a href="/mhd/continuity">質量保存の式(連続の式)</a>、<a href="/mhd/momentum">運動量保存則</a>、<a href="/mhd/energy">エネルギー保存則</a>、<a href="/mhd/induction">誘導方程式</a>を一つにまとめましょう。以下では\(x\)方向の一次元のみを考えることとします。
-さらにあらかじめこれらの方程式は規格化されているものとすると</p>
+さらに<a href="/simulation/normalization">あらかじめこれらの方程式は規格化されている</a>ものとすると</p>
 
 \[\frac{\partial \mathbf{U}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} 
 = \mathbf{0} \tag{1}\]
@@ -114,7 +114,7 @@ B_z v_x - v_z B_x
 
 <h3 id="数学的導出">数学的導出</h3>
 
-<p>波面を通した物理量のやりとりなどを考える必要があるため、少し難解です。よって以下に数学的な証明方法を示します。以下のように時空図上で考えましょう。</p>
+<p>以下では数学的な証明方法を示します。以下のような時空図上で考えましょう。</p>
 
 <p><img src="/assets/images/simulation/hll_02.png" alt="" /></p>
 
@@ -132,7 +132,7 @@ B_z v_x - v_z B_x
 <h2 id="数値計算に用いる">数値計算に用いる</h2>
 
 <p>実際の数値計算では\(S_L, S_R\)の大きさを考慮する必要があります。もし\(S_R &lt; 0\)ならば、仕切りを通過する流束は\(\mathbf{F}_R\)になります。
-同様に\(S_L &gt;0\)ならば、用いる流速は\(\mathbf{F}_L\)でなければなりません。下図は左から順に\(S_R &lt; 0, S_L &gt; 0, S_L \leq 0 \leq S_R\)の場合を図示したものです。</p>
+同様に\(S_L &gt;0\)ならば、用いる流速は\(\mathbf{F}_L\)でなければなりません。下図は左から順に\(S_L &gt; 0, S_L \leq 0 &lt; S_R, S_R \leq 0\)の場合を図示したものです。</p>
 
 <p><img src="/assets/images/simulation/hll_04.png" alt="" /></p>
 
@@ -141,8 +141,8 @@ B_z v_x - v_z B_x
 \[\mathbf{F}_\mathrm{HLL} 
 = \left\{ \begin{array}{ll} 
 \mathbf{F}_L &amp; \mathrm{if} \ S_L &gt; 0 \\
-\mathbf{F}^\ast &amp; \mathrm{if} \ S_L \leq 0 \leq S_R \\
-\mathbf{F}_R &amp; \mathrm{if} \ S_R &lt; 0
+\mathbf{F}^\ast &amp; \mathrm{if} \ S_L \leq 0 &lt; S_R \\
+\mathbf{F}_R &amp; \mathrm{if} \ S_R \leq 0
 \end{array}\right. \tag{10}\]
 
 <p>のようになります。もしくは\(S_R = \max (S_R, 0), S_L = \min(S_L, 0)\)のように定めておけば</p>

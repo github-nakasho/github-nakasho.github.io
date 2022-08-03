@@ -4,7 +4,7 @@ title: HLL法
 parent: 数値計算
 math: mathjax3
 permalink: /simulation/hll
-nav_order: 1
+nav_order: 2
 ---
 
 {: .no_toc }
@@ -27,7 +27,7 @@ nav_order: 1
 ## 磁気流体方程式群
 
 数値計算のために、[質量保存の式(連続の式)](/mhd/continuity)、[運動量保存則](/mhd/momentum)、[エネルギー保存則](/mhd/energy)、[誘導方程式](/mhd/induction)を一つにまとめましょう。以下では$$x$$方向の一次元のみを考えることとします。
-さらにあらかじめこれらの方程式は規格化されているものとすると
+さらに[あらかじめこれらの方程式は規格化されている](/simulation/normalization)ものとすると
 
 $$
 \frac{\partial \mathbf{U}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} 
@@ -121,7 +121,7 @@ $$
 
 ### 数学的導出
 
-波面を通した物理量のやりとりなどを考える必要があるため、少し難解です。よって以下に数学的な証明方法を示します。以下のように時空図上で考えましょう。
+以下では数学的な証明方法を示します。以下のような時空図上で考えましょう。
 
 ![](/assets/images/simulation/hll_02.png)
 
@@ -142,7 +142,7 @@ $$
 ## 数値計算に用いる
 
 実際の数値計算では$$S_L, S_R$$の大きさを考慮する必要があります。もし$$S_R < 0$$ならば、仕切りを通過する流束は$$\mathbf{F}_R$$になります。
-同様に$$S_L >0 $$ならば、用いる流速は$$\mathbf{F}_L$$でなければなりません。下図は左から順に$$S_R < 0, S_L > 0, S_L \leq 0 \leq S_R$$の場合を図示したものです。
+同様に$$S_L >0 $$ならば、用いる流速は$$\mathbf{F}_L$$でなければなりません。下図は左から順に$$S_L > 0, S_L \leq 0 < S_R, S_R \leq 0$$の場合を図示したものです。
 
 ![](/assets/images/simulation/hll_04.png)
 
@@ -152,8 +152,8 @@ $$
 \mathbf{F}_\mathrm{HLL} 
 = \left\{ \begin{array}{ll} 
 \mathbf{F}_L & \mathrm{if} \ S_L > 0 \\
-\mathbf{F}^\ast & \mathrm{if} \ S_L \leq 0 \leq S_R \\
-\mathbf{F}_R & \mathrm{if} \ S_R < 0
+\mathbf{F}^\ast & \mathrm{if} \ S_L \leq 0 < S_R \\
+\mathbf{F}_R & \mathrm{if} \ S_R \leq 0
 \end{array}\right. \tag{10}
 $$
 

@@ -629,6 +629,11 @@ end
 紫線のHLLD法は、$$x = 0.55$$の不連続面を一番正確に捉えられていることができます。さらに$$0.55 \leq x \leq 0.6$$に存在する密度ピークの最大値も、HLLD法が一番大きくなっています。
 このことからわかるように、HLLD法は数値粘性の影響を一番抑えられていることがわかります。
 
+```
+色弱の方には見えにくい配色をしているかもしれない...申し訳ないです。
+近いうちに配色の勉強もしたいかもしれない(2022年8月12日現在)
+```
+
 # 参考文献
 
 * [1] [Miyoshi & Kusano, 2005, "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics"](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)

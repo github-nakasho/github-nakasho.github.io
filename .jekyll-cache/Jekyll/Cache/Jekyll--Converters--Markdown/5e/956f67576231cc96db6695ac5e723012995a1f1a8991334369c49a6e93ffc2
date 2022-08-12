@@ -1,15 +1,13 @@
-I"B	
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
   </summary>
 <ol id="markdown-toc">
   <li><a href="#hllc法" id="markdown-toc-hllc法">HLLC法</a>    <ol>
-      <li><a href="#流体方程式群" id="markdown-toc-流体方程式群">流体方程式群</a>        <ol>
-          <li><a href="#流束計算" id="markdown-toc-流束計算">流束計算</a></li>
-          <li><a href="#数値計算に用いる" id="markdown-toc-数値計算に用いる">数値計算に用いる</a></li>
-        </ol>
-      </li>
+      <li><a href="#流体方程式群" id="markdown-toc-流体方程式群">流体方程式群</a></li>
+      <li><a href="#流束計算" id="markdown-toc-流束計算">流束計算</a></li>
+      <li><a href="#数値計算に用いる" id="markdown-toc-数値計算に用いる">数値計算に用いる</a></li>
       <li><a href="#磁気流体方程式への拡張" id="markdown-toc-磁気流体方程式への拡張">磁気流体方程式への拡張</a>        <ol>
           <li><a href="#b_x--0の場合" id="markdown-toc-b_x--0の場合">\(B_x = 0\)の場合</a></li>
           <li><a href="#b_x-neq-0の場合gurskiの手法" id="markdown-toc-b_x-neq-0の場合gurskiの手法">\(B_x \neq 0\)の場合、Gurskiの手法</a></li>
@@ -58,7 +56,7 @@ E
 
 <p>のように書かれます。</p>
 
-<h3 id="流束計算">流束計算</h3>
+<h2 id="流束計算">流束計算</h2>
 
 <p><a href="/simulation/hll">HLL (Harten-Lax-van Leer)法</a>は、中間状態を1つであると仮定しました。今回は中間状態を下図のように2つとして計算を行います。</p>
 
@@ -85,7 +83,7 @@ E
 
 \[S_M 
 = \frac{(\rho v_x)_\mathrm{HLL}^\ast}{\rho_\mathrm{HLL}^\ast} 
-= \frac{(S_R - v_{x, R}) \rho_R v_{x, R} - (S_L - v_{x, L}) v_{x, L} - P_R + P_L}{(S_R - v_{x, R})\rho_R - -(S_L-v_{x, L}) \rho_L} \tag{4}\]
+= \frac{(S_R - v_{x, R}) \rho_R v_{x, R} - (S_L - v_{x, L}) \rho_L v_{x, L} - P_R + P_L}{(S_R - v_{x, R})\rho_R - (S_L-v_{x, L}) \rho_L} \tag{4}\]
 
 <p>と求まります。次に中間状態の圧力を考えましょう。\(S_\alpha \ (\alpha = L, R)\)の速度で進む波面でのジャンプ条件より</p>
 
@@ -159,7 +157,7 @@ E_\alpha^\ast
 <p>とすることで、求めたかった中間状態の流束を計算することができます。途中で出てきたように、HLLC法は接触不連続面の波の速度\(S_M\)およびそれを境に物理量の変化が起こることを考慮しています。
 HLLCの”C”は、HLLを改良し接触不連続面(contact discontinuity)も捉えられるようにしたことから来るものです。</p>
 
-<h3 id="数値計算に用いる">数値計算に用いる</h3>
+<h2 id="数値計算に用いる">数値計算に用いる</h2>
 
 <p><a href="/simulation/hll">HLL法</a>と同様に、実際の数値計算では\(S_L, S_M, S_R\)の大きさを考慮する必要があります。HLLのときと同様に考えましょう。下図は左上から順に\(S_L &gt; 0, S_L \leq 0 &lt; S_M, S_M \leq 0 &lt;S_R, S_R \leq 0\)の場合を図示したものです。</p>
 
@@ -167,7 +165,7 @@ HLLCの”C”は、HLLを改良し接触不連続面(contact discontinuity)も�
 
 <p>以上より、数値計算を行う場合、その流束の選択は</p>
 
-\[\mathbf{F}_\mathrm{HLL} 
+\[\mathbf{F}_\mathrm{HLLC} 
 = \left\{ \begin{array}{ll} 
 \mathbf{F}_L &amp; \mathrm{if} \ S_L &gt; 0 \\
 \mathbf{F}_L^\ast &amp; \mathrm{if} \ S_L \leq 0 &lt; S_M \\
@@ -342,6 +340,14 @@ v_{y, \alpha}^\ast
 <p>が求まります。HLLC-Lはその求め方からわかるように、リーマンファン内で保存則を満たす手法です。さらにこの手法は\(B_x \rightarrow 0\)としたときに(27), (28)式は(19)式を再現できます。
 しかし、万能というわけではありません。この手法には\(S_M\)に対する考察が含まれていないことから、接触不連続面でのジャンプ条件が保証されていません。
 よってHLLC-Lでは、<a href="#b_x-neq-0の場合gurskiの手法">HLLC-G</a>ではちゃんと計算されていた接触不連続面が正しく分解できないことがあります。さらに(24)式はそのまま用いているため、\(B_y^\ast, B_z^\ast\)に関しては\(B_x \rightarrow 0\)の極限で一致しない問題が残ります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="hllc流束の計算モジュール">HLLC流束の計算モジュール</h2>
 
@@ -530,17 +536,17 @@ Ur, Vr, Frは右側のものを意味します。</p>
             <span class="k">for</span> <span class="n">m</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">8</span>
                 <span class="n">F</span><span class="x">[</span><span class="n">m</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span> <span class="o">=</span> <span class="n">Fl</span><span class="x">[</span><span class="n">m</span><span class="x">]</span>
             <span class="k">end</span>
-        <span class="k">elseif</span> <span class="n">sl</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;=</span> <span class="n">sm</span>
+        <span class="k">elseif</span> <span class="n">sl</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">sm</span>
             <span class="n">Uil</span> <span class="o">=</span> <span class="x">[</span><span class="n">roil</span><span class="x">,</span> <span class="n">roil</span><span class="o">*</span><span class="n">sm</span><span class="x">,</span> <span class="n">roil</span><span class="o">*</span><span class="n">vtil</span><span class="x">,</span> <span class="n">roil</span><span class="o">*</span><span class="n">vuil</span><span class="x">,</span> <span class="n">enil</span><span class="x">,</span> <span class="n">bni</span><span class="x">,</span> <span class="n">bti</span><span class="x">,</span> <span class="n">bui</span><span class="x">]</span>
             <span class="k">for</span> <span class="n">m</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">8</span>
                 <span class="n">F</span><span class="x">[</span><span class="n">m</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span> <span class="o">=</span> <span class="n">Fl</span><span class="x">[</span><span class="n">m</span><span class="x">]</span> <span class="o">+</span> <span class="n">sl</span> <span class="o">*</span> <span class="x">(</span><span class="n">Uil</span><span class="x">[</span><span class="n">m</span><span class="x">]</span><span class="o">-</span><span class="n">Ul</span><span class="x">[</span><span class="n">m</span><span class="x">])</span>
             <span class="k">end</span>
-        <span class="k">elseif</span> <span class="n">sm</span> <span class="o">&lt;</span> <span class="mf">0.0</span> <span class="o">&lt;=</span> <span class="n">sr</span>
+        <span class="k">elseif</span> <span class="n">sm</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">sr</span>
             <span class="n">Uir</span> <span class="o">=</span> <span class="x">[</span><span class="n">roir</span><span class="x">,</span> <span class="n">roir</span><span class="o">*</span><span class="n">sm</span><span class="x">,</span> <span class="n">roir</span><span class="o">*</span><span class="n">vtir</span><span class="x">,</span> <span class="n">roir</span><span class="o">*</span><span class="n">vuir</span><span class="x">,</span> <span class="n">enir</span><span class="x">,</span> <span class="n">bni</span><span class="x">,</span> <span class="n">bti</span><span class="x">,</span> <span class="n">bui</span><span class="x">]</span>
             <span class="k">for</span> <span class="n">m</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">8</span>
                 <span class="n">F</span><span class="x">[</span><span class="n">m</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span> <span class="o">=</span> <span class="n">Fr</span><span class="x">[</span><span class="n">m</span><span class="x">]</span> <span class="o">+</span> <span class="n">sr</span> <span class="o">*</span> <span class="x">(</span><span class="n">Uir</span><span class="x">[</span><span class="n">m</span><span class="x">]</span><span class="o">-</span><span class="n">Ur</span><span class="x">[</span><span class="n">m</span><span class="x">])</span>
             <span class="k">end</span>
-        <span class="k">elseif</span> <span class="n">sr</span> <span class="o">&lt;</span> <span class="mf">0.0</span>
+        <span class="k">elseif</span> <span class="n">sr</span> <span class="o">&lt;=</span> <span class="mf">0.0</span>
             <span class="k">for</span> <span class="n">m</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">8</span>
                 <span class="n">F</span><span class="x">[</span><span class="n">m</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span> <span class="o">=</span> <span class="n">Fr</span><span class="x">[</span><span class="n">m</span><span class="x">]</span>
             <span class="k">end</span>                
@@ -552,6 +558,10 @@ Ur, Vr, Frは右側のものを意味します。</p>
 <p>以下に<a href="/simulation/hll">HLL</a>, <a href="#b_x-neq-0の場合gurskiの手法">HLLC-G</a>, <a href="#b_x-neq-0の場合liの方法">HLLC-L</a>の3手法で、実際に磁気流体衝撃波管問題を解いて得られたガス密度分布を比較した図を示します。</p>
 
 <p><img src="/assets/images/simulation/hllc_03.png" alt="" /></p>
+
+<p>わかりにくいため、下に\(0.5 \leq x \leq 0.75\)の領域部分を拡大してプロットしたものを示します。</p>
+
+<p><img src="/assets/images/simulation/hllc_04.png" alt="" /></p>
 
 <p>今回試した磁気流体衝撃波管問題では、<a href="#b_x-neq-0の場合liの方法">HLLC-L</a>が一番構造をシャープに捉えられていることがわかります。</p>
 

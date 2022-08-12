@@ -1,4 +1,4 @@
-I""
+I"�$
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -6,6 +6,7 @@
 <ol id="markdown-toc">
   <li><a href="#磁気流体方程式の規格化" id="markdown-toc-磁気流体方程式の規格化">磁気流体方程式の規格化</a>    <ol>
       <li><a href="#早速規格化してみましょう" id="markdown-toc-早速規格化してみましょう">早速規格化してみましょう</a></li>
+      <li><a href="#アルヴェーン速度の規格化" id="markdown-toc-アルヴェーン速度の規格化">アルヴェーン速度の規格化</a></li>
       <li><a href="#なぜ規格化をするのか" id="markdown-toc-なぜ規格化をするのか">なぜ規格化をするのか？</a></li>
     </ol>
   </li>
@@ -128,6 +129,17 @@ B_z^\ast v_x^\ast - v_z^\ast B_x^\ast
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2次元や3次元の場合も同様に規格化します。
 </code></pre></div></div>
+
+<h2 id="アルヴェーン速度の規格化">アルヴェーン速度の規格化</h2>
+
+<p>磁気流体で重要な波動伝播である<a href="/mhd/alfven_wave">アルヴェーン速度</a>も同様に規格化しましょう。すると</p>
+
+\[v_A = v_0 v_A^\ast 
+= \frac{\sqrt{4\pi} B_0 B^\ast}{\sqrt{4\pi \rho_0 \rho^\ast}} \ \Longrightarrow \ 
+v_A^\ast 
+= \underbrace{\frac{B_0}{v_0 \sqrt{\rho_0}}}_{(6)} \frac{B}{\sqrt{\rho^\ast}}\]
+
+<p>のように、\(\sqrt{4\pi}\)が消えてスッキリとした形になります。</p>
 
 <h2 id="なぜ規格化をするのか">なぜ規格化をするのか？</h2>
 

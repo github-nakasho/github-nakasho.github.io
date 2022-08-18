@@ -1,0 +1,54 @@
+I"{
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#境界条件" id="markdown-toc-境界条件">境界条件</a>    <ol>
+      <li><a href="#境界条件の定め方" id="markdown-toc-境界条件の定め方">境界条件の定め方</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="境界条件">境界条件</h1>
+
+<p>ここでは、オイラー的な(磁気)流体計算に必要となる境界条件についてメモしています。</p>
+
+<h2 id="境界条件の定め方">境界条件の定め方</h2>
+
+<p>その名の通り、計算領域の端に対して定める条件です。普通は、衝撃波などのドラスティックな物理現象が起こるような、十分解像して調べたい領域から十分離れた場所に境界を設置します。
+<a href="/simulation/hll">HLL法</a>や<a href="/simulation/hlld">HLLD法</a>のような近似リーマン解法の場合、セル中心だけでなく、セルとセルの間の仕切り部分(インターフェース)に対しても境界条件を設定する必要があります。</p>
+
+<p><img src="/assets/images/simulation/boundary_01.png" alt="" /></p>
+
+<p>上図のように、例えば</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>[1] <a href="https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub">Miyoshi &amp; Kusano, 2005, “A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics”</a></li>
+  <li>[2] <a href="https://arxiv.org/abs/astro-ph/9404074">Ryu &amp; Jones, 1994, “Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow”</a></li>
+  <li>[3] <a href="https://iopscience.iop.org/article/10.1086/588755">Stone et al., 2008, “Athena: A New Code for Astrophysical MHD”</a></li>
+  <li>[4] <a href="https://qiita.com/ur_kinsk/items/1893602e2ee73060b207">Qiita記事, 磁気流体の数値計算で遊ぶ</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

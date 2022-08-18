@@ -1,4 +1,4 @@
-I"�
+I"a�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -561,8 +561,12 @@ E_\alpha^{\ast \ast}
 
 <p><img src="/assets/images/simulation/hlld_05.png" alt="" /></p>
 
-<p>HLLD法は、\(x = 0.55\)の不連続面を一番正確に捉えられていることができます。さらに\(0.55 \leq x \leq 0.6\)に存在する密度ピークの最大値も、HLLD法が一番大きくなっています。
+<p>紫線のHLLD法は、\(x = 0.55\)の不連続面を一番正確に捉えられていることができます。さらに\(0.55 \leq x \leq 0.6\)に存在する密度ピークの最大値も、HLLD法が一番大きくなっています。
 このことからわかるように、HLLD法は数値粘性の影響を一番抑えられていることがわかります。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>色弱の方には見えにくい配色をしているかもしれない...申し訳ないです。
+近いうちに配色の勉強もしたいかもしれない(2022年8月12日現在)
+</code></pre></div></div>
 
 <h1 id="参考文献">参考文献</h1>
 

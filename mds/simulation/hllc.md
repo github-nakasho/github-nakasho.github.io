@@ -357,7 +357,7 @@ $$
 
 $$
 \mathbf{F}_\alpha^\ast 
-= F_\alpha + S_\alpha (\mathbf{U}_\alpha^\ast - \mathbf{U}_\alpha) \tag{26}
+= \mathbf{F}_\alpha + S_\alpha (\mathbf{U}_\alpha^\ast - \mathbf{U}_\alpha) \tag{26}
 $$
 
 のようにして$$\mathbf{F}_L^\ast, \mathbf{F}_R^\ast$$を求めることができます。このようにして$$B_x \neq 0$$でのHLLC流束を計算することが可能です。このように定める方法を、開発した[Gurski](https://epubs.siam.org/doi/10.1137/S1064827502407962)の頭文字をとって、以降ではHLLC-Gと呼ぶことにします。

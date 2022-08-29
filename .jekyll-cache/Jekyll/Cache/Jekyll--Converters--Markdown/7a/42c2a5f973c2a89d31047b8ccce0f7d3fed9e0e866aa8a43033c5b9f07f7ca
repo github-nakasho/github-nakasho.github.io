@@ -1,4 +1,4 @@
-I"a�
+I"��
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -571,10 +571,11 @@ E_\alpha^{\ast \ast}
 <h1 id="参考文献">参考文献</h1>
 
 <ul>
-  <li>[1] <a href="https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub">Miyoshi &amp; Kusano, 2005, “A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics”</a></li>
-  <li>[2] <a href="https://arxiv.org/abs/astro-ph/9404074">Ryu &amp; Jones, 1994, “Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow”</a></li>
-  <li>[3] <a href="https://iopscience.iop.org/article/10.1086/588755">Stone et al., 2008, “Athena: A New Code for Astrophysical MHD”</a></li>
-  <li>[4] <a href="https://qiita.com/ur_kinsk/items/1893602e2ee73060b207">Qiita記事, 磁気流体の数値計算で遊ぶ</a></li>
+  <li><a href="https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub">Miyoshi &amp; Kusano, 2005, “A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics”</a></li>
+  <li><a href="https://arxiv.org/abs/astro-ph/9404074">Ryu &amp; Jones, 1994, “Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow”</a></li>
+  <li><a href="https://iopscience.iop.org/article/10.1086/588755">Stone et al., 2008, “Athena: A New Code for Astrophysical MHD”</a></li>
+  <li><a href="https://qiita.com/ur_kinsk/items/1893602e2ee73060b207">Qiita記事, 磁気流体の数値計算で遊ぶ</a></li>
+  <li><a href="http://www.astro.phys.s.chiba-u.ac.jp/cans/doc/riemann.html">CANS+ドキュメント, 磁気流体力学方程式に対する近似リーマン解法</a></li>
 </ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

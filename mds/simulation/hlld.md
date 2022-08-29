@@ -481,7 +481,7 @@ $$
 \end{array}\right. \tag{32}
 $$
 
-## HLLD流束の計算モジュール (工事中)
+## HLLD流束の計算モジュール
 
 以下にHLLD流束計算コードのJulia実装例を示します。
 
@@ -636,9 +636,10 @@ end
 
 # 参考文献
 
-* [1] [Miyoshi & Kusano, 2005, "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics"](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
-* [2] [Ryu & Jones, 1994, "Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow"](https://arxiv.org/abs/astro-ph/9404074)
-* [3] [Stone et al., 2008, "Athena: A New Code for Astrophysical MHD"](https://iopscience.iop.org/article/10.1086/588755)
-* [4] [Qiita記事, 磁気流体の数値計算で遊ぶ](https://qiita.com/ur_kinsk/items/1893602e2ee73060b207)
+* [Miyoshi & Kusano, 2005, "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics"](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
+* [Ryu & Jones, 1994, "Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow"](https://arxiv.org/abs/astro-ph/9404074)
+* [Stone et al., 2008, "Athena: A New Code for Astrophysical MHD"](https://iopscience.iop.org/article/10.1086/588755)
+* [Qiita記事, 磁気流体の数値計算で遊ぶ](https://qiita.com/ur_kinsk/items/1893602e2ee73060b207)
+* [CANS+ドキュメント, 磁気流体力学方程式に対する近似リーマン解法](http://www.astro.phys.s.chiba-u.ac.jp/cans/doc/riemann.html)
 
 {% include adsense.html %} 

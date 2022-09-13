@@ -489,6 +489,115 @@ $$
 using LinearAlgebra    
 include("../convert/convert.jl")
 include("../const/const.jl")
+function hlld_core(rol, vnl, vtl, vul, prl, bnl, btl, bul, ror, vnr, vtr, vur, prr, bnr, btr, bur)
+    # compute B * B at left side
+    bl2 = dot([bnl, btl, bul], [bnl, btl, bul])
+    # compute fast-mode speed at left side
+    gmprl = gm * prl
+    vfl = sqrt(((bl2+gmprl)+sqrt((bl2+gmprl)^2-4*gmprl*bnl^2))/(2*rol))
+    # compute B * B at right side
+    br2 = dot([bnr, btr, bur], [bnr, btr, bur])
+    # compute fast-mode speed at right side
+    gmprr = gm * prr
+    vfr = sqrt(((br2+gmprr)+sqrt((br2+gmprr)^2-4*gmprr*bnr^2))/(2*ror))
+    # compute sl, sr
+    sl = min(vnl, vnr) - max(vfl, vfr)
+    sr = max(vnl, vnr) + max(vfl, vfr)
+    # compute bnc from HLL average
+    bnc = (sr*bnr-sl*bnl) / (sr-sl)
+    # compute pt at left and right sides
+    ptl = prl + 0.5 * bl2
+    ptr = prr + 0.5 * br2
+    # compute sm (=vn) at Riemann fan
+    slvnl = sl - vnl
+    srvnr = sr - vnr
+    rolslvnl = rol * slvnl
+    rorsrvnr = ror * srvnr
+    sm = (rorsrvnr*vnr-rolslvnl*vnl-ptr+ptl) / (rorsrvnr-rolslvnl)
+    # compute pt at riemann fan
+    pti = (rorsrvnr*ptl-rolslvnl*ptr+rolslvnl*rorsrvnr*(vnr-vnl)) / (rorsrvnr-rolslvnl)
+    # compute ro at outer sides in Riemann fan
+    slsm = sl - sm
+    roil = rol * slvnl / slsm
+    srsm = sr - sm
+    roir = ror * srvnr / srsm
+    # compute vy, vz, by, bz at left outer side in Riemann fan
+    smvnl = sm - vnl
+    if abs(rolslvnl*slsm-bnc^2) > 1.0e-10
+        denol = 1.0 / (rolslvnl*slsm-bnc^2)
+        vtil = vtl - btl * bnc * smvnl * denol
+        vuil = vul - bul * bnc * smvnl * denol
+        btil = btl * (rol*slvnl^2-bnc^2) * denol
+        buil = bul * (rol*slvnl^2-bnc^2) * denol
+    else
+        # if denominator == 0, substitute with vy, vz, by, bz at left state 
+        vtil = vtl
+        vuil = vul
+        btil = btl
+        buil = bul
+    end
+    # compute vy, vz, by, bz at right outer side in Riemann fan
+    smvnr = sm - vnr
+    if abs(rorsrvnr*srsm-bnc^2) > 1.0e-10
+        denor = 1.0 / (rorsrvnr*srsm-bnc^2)
+        vtir = vtr - btr * bnc * smvnr * denor
+        vuir = vur - bur * bnc * smvnr * denor
+        btir = btr * (ror*srvnr^2-bnc^2) * denor
+        buir = bur * (ror*srvnr^2-bnc^2) * denor    
+    else
+        # if denominator == 0, substitute with vy, vz, by, bz at right state
+        vtir = vtr
+        vuir = vur
+        btir = btr
+        buir = bur
+    end
+    # compute en at left state
+    vl2 = dot([vnl, vtl, vul], [vnl, vtl, vul])
+    enl = 0.5 * (rol*vl2+bl2) + prl * gm1i
+    # compute en at right state
+    vr2 = dot([vnr, vtr, vur], [vnr, vtr, vur])
+    enr = 0.5 * (ror*vr2+br2) + prr * gm1i
+    # compute en at left outer side in Riemann fan
+    vlbl = dot([vnl, vtl, vul], [bnl, btl, bul])
+    vilbil = dot([sm, vtil, vuil], [bnc, btil, buil])
+    enil = (slvnl*enl-ptl*vnl+pti*sm+bnc*(vlbl-vilbil)) / slsm
+    # compute en at right outer side in Riemann fan
+    vrbr = dot([vnr, vtr, vur], [bnr, btr, bur])
+    virbir = dot([sm, vtir, vuir], [bnc, btir, buir])            
+    enir = (srvnr*enr-ptr*vnr+pti*sm+bnc*(vrbr-virbir)) / srsm
+    # compute ro at inner side in Riemann fan
+    roiil = roil
+    roiir = roir
+    # compute vy, vz, by, bz at inner side in Riemann fan
+    rtroil = sqrt(roil)
+    rtroir = sqrt(roir)
+    denoii = 1.0 / (rtroil+rtroir)
+    signbn = sign(bnc)
+    vtii = (rtroil*vtil+rtroir*vtir+(btir-btil)*signbn) * denoii
+    vuii = (rtroil*vuil+rtroir*vuir+(buir-buil)*signbn) * denoii
+    btii = (rtroil*btir+rtroir*btil+rtroil*rtroir*(vtir-vtil)*signbn) * denoii
+    buii = (rtroil*buir+rtroir*buil+rtroil*rtroir*(vuir-vuil)*signbn) * denoii
+    # compute en at left & right inner side in Riemann fan
+    viibii = dot([sm, vtii, vuii], [bnc, btii, buii])
+    eniil = enil - rtroil * (vilbil-viibii) * signbn
+    eniir = enir + rtroir * (virbir-viibii) * signbn
+    # choose flux
+    if sl > 0.0
+        result = [rol, vnl, vtl, vul, ptl, enl, bnc, btl, bul, vlbl]
+    elseif sl <= 0.0 < sm - abs(bnc) / rtroil
+        result = [roil, sm, vtil, vuil, pti, enil, bnc, btil, buil, vilbil]
+    elseif sm - abs(bnc) / rtroil <= 0.0 < sm
+        result = [roiil, sm, vtii, vuii, pti, eniil, bnc, btii, buii, viibii]
+    elseif sm <= 0.0 < sm + abs(bnc) / rtroir
+        result = [roiir, sm, vtii, vuii, pti, eniir, bnc, btii, buii, viibii]
+    elseif sm + abs(bnc) / rtroir <= 0.0 < sr
+        result = [roir, sm, vtir, vuir, pti, enir, bnc, btir, buir, virbir]
+    else
+        result = [ror, vnr, vtr, vur, ptr, enr, bnc, btr, bur, vrbr]
+    end
+    return result
+end
+
 function hlld!(F::Array{Float64, 2}, Vl::Array{Float64, 2}, Vr::Array{Float64, 2}, nxmax::Int64)
     for i in 1:nxmax-1
         # set primitive variables at left side
@@ -509,116 +618,58 @@ function hlld!(F::Array{Float64, 2}, Vl::Array{Float64, 2}, Vr::Array{Float64, 2
         bnr = Vr[6, i]
         btr = Vr[7, i]
         bur = Vr[8, i]
-        # compute B * B at left side
-        bl2 = dot(Vl[6:8, i], Vl[6:8, i])
-        # compute fast-mode speed at left side
-        gmprl = gm * prl
-        vfl = sqrt(((bl2+gmprl)+sqrt((bl2+gmprl)^2-4*gmprl*bnl^2))/(2*rol))
-        # compute B * B at right side
-        br2 = dot(Vr[6:8, i], Vr[6:8, i])
-        # compute fast-mode speed at right side
-        gmprr = gm * prr
-        vfr = sqrt(((br2+gmprr)+sqrt((br2+gmprr)^2-4*gmprr*bnr^2))/(2*ror))
-        # compute sl, sr
-        sl = min(vnl, vnr) - max(vfl, vfr)
-        sr = max(vnl, vnr) + max(vfl, vfr)
-        # compute pt at left and right sides
-        ptl = prl + 0.5 * bl2
-        ptr = prr + 0.5 * br2
-        # compute sm (=vn) at Riemann fan
-        slvnl = sl - vnl
-        srvnr = sr - vnr
-        rolslvnl = rol * slvnl
-        rorsrvnr = ror * srvnr
-        sm = (rorsrvnr*vnr-rolslvnl*vnl-ptr+ptl) / (rorsrvnr-rolslvnl)
-        # compute pt at riemann fan
-        pti = (rorsrvnr*ptl-rolslvnl*ptr+rolslvnl*rorsrvnr*(vnr-vnl)) / (rorsrvnr-rolslvnl)
-        # compute ro at outer sides in Riemann fan
-        slsm = sl - sm
-        roil = rol * slvnl / slsm
-        srsm = sr - sm
-        roir = ror * srvnr / srsm
-        # compute vy, vz, by, bz at left outer side in Riemann fan
-        smvnl = sm - vnl
-        if abs(slvnl*slsm*rol-bnl^2) > 1.0e-10
-            denol = 1.0 / (slvnl*slsm*rol-bnl^2)
-            vtil = vtl - btl * bnl * smvnl * denol
-            vuil = vul - bul * bnl * smvnl * denol
-            btil = btl * (rol*slvnl^2-bnl^2) * denol
-            buil = bul * (rol*slvnl^2-bnl^2) * denol
-        else
-            # if denominator == 0, substitute with vy, vz, by, bz at left state 
-            vtil = vtl
-            vuil = vul
-            btil = btl
-            buil = bul
-        end
-        # compute vy, vz, by, bz at right outer side in Riemann fan
-        smvnr = sm - vnr
-        if abs(srvnr*srsm*ror-bnr^2) > 1.0e-10
-            denor = 1.0 / (srvnr*srsm*ror-bnr^2)
-            vtir = vtr - btr * bnr * smvnr * denor
-            vuir = vur - bur * bnr * smvnr * denor
-            btir = btr * (ror*srvnr^2-bnr^2) * denor
-            buir = bur * (ror*srvnr^2-bnr^2) * denor    
-        else
-            # if denominator == 0, substitute with vy, vz, by, bz at right state
-            vtir = vtr
-            vuir = vur
-            btir = btr
-            buir = bur
-        end
-        # compute en at left state
-        vl2 = dot(Vl[2:4, i], Vl[2:4, i])
-        enl = 0.5 * (rol*vl2+bl2) + prl * gm1i
-        # compute en at right state
-        vr2 = dot(Vr[2:4, i], Vr[2:4, i])
-        enr = 0.5 * (ror*vr2+br2) + prr * gm1i
-        # compute en at left outer side in Riemann fan
-        vlbl = dot(Vl[2:4, i], Vl[6:8, i])
-        vilbil = dot([sm, vtil, vuil], [bnl, btil, buil])
-        enil = (slvnl*enl-ptl*vnl+pti*sm+bnl*(vlbl-vilbil)) / slsm
-        # compute en at right outer side in Riemann fan
-        vrbr = dot(Vr[2:4, i], Vr[6:8, i])
-        virbir = dot([sm, vtir, vuir], [bnr, btir, buir])            
-        enir = (srvnr*enr-ptr*vnr+pti*sm+bnr*(vrbr-virbir)) / srsm
-        # compute ro at inner side in Riemann fan
-        roiil = roil
-        roiir = roir
-        # compute vy, vz, by, bz at inner side in Riemann fan
-        rtroil = sqrt(roil)
-        rtroir = sqrt(roir)
-        denoii = 1.0 / (rtroil+rtroir)
-        signbn = sign(bnl)
-        vtii = (rtroil*vtil+rtroir*vtir+(btir-btil)*signbn) * denoii
-        vuii = (rtroil*vuil+rtroir*vuir+(buir-buil)*signbn) * denoii
-        btii = (rtroil*btir+rtroir*btil+rtroil*rtroir*(vtir-vtil)*signbn) * denoii
-        buii = (rtroil*buir+rtroir*buil+rtroil*rtroir*(vuir-vuil)*signbn) * denoii
-        # compute en at left & right inner side in Riemann fan
-        viibii = dot([sm, vtii, vuii], [bnl, btii, buii])
-        eniil = enil - rtroil * (vilbil-viibii) * signbn
-        eniir = enir + rtroir * (virbir-viibii) * signbn
-        # choose flux
-        if sl > 0.0
-            result = [rol, vnl, vtl, vul, ptl, enl, bnl, btl, bul, vlbl]
-        elseif sl <= 0.0 < sm - abs(bnl) / rtroil
-            result = [roil, sm, vtil, vuil, pti, enil, bnl, btil, buil, vilbil]
-        elseif sm - abs(bnl) / rtroil <= 0.0 < sm
-            result = [roiil, sm, vtii, vuii, pti, eniil, bnl, btii, buii, viibii]
-        elseif sm <= 0.0 < sm + abs(bnl) / rtroir
-            result = [roiir, sm, vtii, vuii, pti, eniir, bnr, btii, buii, viibii]
-        elseif sm + abs(bnl) / rtroir <= 0.0 < sr
-            result = [roir, sm, vtir, vuir, pti, enir, bnr, btir, buir, virbir]
-        else
-            result = [ror, vnr, vtr, vur, ptr, enr, bnr, btr, bur, vrbr]
-        end
+        # compute HLLD flux 
+        result, tmp = hlld_core(rol, vnl, vtl, vul, prl, bnl, btl, bul, ror, vnr, vtr, vur, prr, bnr, btr, bur)
         # convert flux and input to F
         F[:, i] = Convert.i_to_f(result...)
     end
 end
 ```
 
-そして[HLL](/simulation/hll), [HLLC-G](/simulation/hllc#b_x-neq-0の場合gurskiの手法), [HLLC-L](/simulation/hllc#b_x-neq-0の場合liの方法), HLLDの4手法での、磁気流体衝撃波管問題を解いたときのガス密度分布を比較した図を以下に示します。
+HLLD計算サブルーチンは
+
+* 準備部分
+* コア計算部分 (hlld_core)
+
+の2つに分かれています。これは多次元への拡張を容易にするためのものです。例えば2次元の理想磁気流体方程式を見てみましょう。
+
+$$
+\frac{\partial}{\partial t} 
+\left( \begin{array}{c}
+\rho \\
+\rho v_x \\
+\rho v_y \\
+\rho v_z \\
+E \\
+B_x \\
+B_y \\
+B_z
+\end{array} \right) + \frac{\partial}{\partial x} \underbrace{\left( \begin{array}{c} 
+\rho v_x \\
+\rho v_x v_x + P_\mathrm{tot} - B_x B_x \\
+\rho v_y v_x - B_y B_x \\
+\rho v_z v_x - B_z B_x \\
+(E + P_\mathrm{tot}) v_x - (\mathbf{v} \cdot \mathbf{B}) B_x \\
+0 \\
+B_y v_x - v_y B_x \\
+B_z v_x - v_z B_x \\
+\end{array}\right)}_{= \mathbf{F}}
++ \frac{\partial}{\partial y} \underbrace{\left( \begin{array}{c} 
+\rho v_y \\
+\rho v_x v_y - B_x B_y \\
+\rho v_y v_y + P_\mathrm{tot} - B_y B_y \\
+\rho v_z v_y - B_z B_y \\
+(E + P_\mathrm{tot}) v_y - (\mathbf{v} \cdot \mathbf{B}) B_y \\
+B_x v_y - v_x B_y \\
+0 \\
+B_z v_y - v_z B_y \\
+\end{array}\right)}_{=\mathbf{G}}
+= \mathbf{0} \tag{33}
+$$
+
+$$\mathbf{F}$$を計算する際に利用したサブルーチンにおいて$$v_x \rightarrow v_y, v_y \rightarrow v_z, v_z \rightarrow v_x, B_x \rightarrow B_y, B_y \rightarrow B_z, B_z \rightarrow B_x$$のように変換し、さらに$$F_2 \rightarrow F_3, F_3 \rightarrow F_4, F_4 \rightarrow F_2, F_6 \rightarrow F_7, F_7 \rightarrow F_8, F_8 \rightarrow F_6$$のように変換したものは$$G$$に一致します。このような回転対称性を用いることで、サブルーチンを再利用することが可能となります。
+具体的には上述のhlld_coreでは、$$x$$方向の流束を計算するときには$$v_n = v_x, v_t = v_y, v_u = v_z$$などをインプットとし、$$y$$方向の流束の場合には$$v_n = v_y, v_t = v_z, v_u = v_x$$などをインプットにしており、hlld_core部分を変更することなく多次元計算にも用いることが可能です。  
+[HLL](/simulation/hll), [HLLC-G](/simulation/hllc#b_x-neq-0の場合gurskiの手法), [HLLC-L](/simulation/hllc#b_x-neq-0の場合liの方法), HLLDの4手法での、磁気流体衝撃波管問題を解いたときのガス密度分布を比較した図を以下に示します。
 
 ![](/assets/images/simulation/hlld_04.png)
 

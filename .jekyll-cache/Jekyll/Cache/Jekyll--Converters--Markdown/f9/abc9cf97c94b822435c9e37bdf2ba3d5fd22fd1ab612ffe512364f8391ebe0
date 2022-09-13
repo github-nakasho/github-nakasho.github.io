@@ -1,4 +1,4 @@
-I"�$
+I"J(
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -7,6 +7,7 @@
   <li><a href="#磁気流体方程式の規格化" id="markdown-toc-磁気流体方程式の規格化">磁気流体方程式の規格化</a>    <ol>
       <li><a href="#早速規格化してみましょう" id="markdown-toc-早速規格化してみましょう">早速規格化してみましょう</a></li>
       <li><a href="#アルヴェーン速度の規格化" id="markdown-toc-アルヴェーン速度の規格化">アルヴェーン速度の規格化</a></li>
+      <li><a href="#ガス温度の規格化" id="markdown-toc-ガス温度の規格化">ガス温度の規格化</a></li>
       <li><a href="#なぜ規格化をするのか" id="markdown-toc-なぜ規格化をするのか">なぜ規格化をするのか？</a></li>
     </ol>
   </li>
@@ -137,9 +138,30 @@ B_z^\ast v_x^\ast - v_z^\ast B_x^\ast
 \[v_A = v_0 v_A^\ast 
 = \frac{\sqrt{4\pi} B_0 B^\ast}{\sqrt{4\pi \rho_0 \rho^\ast}} \ \Longrightarrow \ 
 v_A^\ast 
-= \underbrace{\frac{B_0}{v_0 \sqrt{\rho_0}}}_{(6)} \frac{B}{\sqrt{\rho^\ast}}\]
+= \underbrace{\frac{B_0}{v_0 \sqrt{\rho_0}}}_{(6)} \frac{B^\ast}{\sqrt{\rho^\ast}} \tag{11}\]
 
 <p>のように、\(\sqrt{4\pi}\)が消えてスッキリとした形になります。</p>
+
+<h2 id="ガス温度の規格化">ガス温度の規格化</h2>
+
+<p>密度や圧力を規格化したので、それに関連してガス温度も規格化されなければなりません。状態方程式より</p>
+
+\[P 
+= n k_B T 
+= \frac{\rho}{\mu m_p} k_B T\]
+
+<p>です。ここで\(\mu\)は平均分子量、\(m_p\)は陽子質量、\(k_B\)はボルツマン定数です。\(T = T_0 T^\ast\)のように規格化すると</p>
+
+\[P_0 P^\ast 
+= \frac{k_B \rho_0 T_0}{\mu m_p} \rho^\ast T^\ast \ \Longrightarrow \
+P^\ast = \frac{k_B \rho_0 T_0}{\mu m_p P_0} \rho^\ast T^\ast\]
+
+<p>右辺の係数部分が1になるように規格化を行うと</p>
+
+\[T_0 
+= \frac{\mu m_p P_0}{k_B \rho_0} \tag{12}\]
+
+<p>のように規格化定数が求まります。</p>
 
 <h2 id="なぜ規格化をするのか">なぜ規格化をするのか？</h2>
 
@@ -152,7 +174,7 @@ v_A^\ast
 
 <p>ここで\(\mathbf{U}_{i}^{n}\)は、時間ステップ\(n\)における\(i\)番目のグリッドでの\(\mathbf{U}\)の値を表します。\(i+1/2\)番目は\(i\)番目のグリッドと\(i+1\)番目の境目の位置を表します。<br />
 この式を見るとわかるように、時間更新の際には\(\Delta t / \Delta x\)を計算する必要があります。例えば銀河スケールの流体現象をシミュレーションしようと考えた場合、\(\Delta x\)はpc~kpcスケールとなります。
-すると\(\Delta t/ \Delta x\)はとても小さな値となり、桁落ちが発生する可能性も考えられます。数値計算を安全に実行するためにも、方程式を規格化しておくことは非常に重要です。
+すると\(\Delta t/ \Delta x\)はとても小さな値となり、情報落ちが発生する可能性も考えられます。数値計算を安全に実行するためにも、方程式を規格化しておくことは非常に重要です。
 さらに方程式を規格化しスケールフリーな形にしておけば、あとは出力された計算結果に(2)式のような定数をそれぞれかけるだけで、様々な現象を扱うシミュレーションコードにすることが可能です。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

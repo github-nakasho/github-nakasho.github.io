@@ -4,7 +4,7 @@ title: Rusanov法
 parent: 数値計算
 math: mathjax3
 permalink: /simulation/rusanov
-nav_order: 10
+nav_order: 5
 ---
 
 {: .no_toc }

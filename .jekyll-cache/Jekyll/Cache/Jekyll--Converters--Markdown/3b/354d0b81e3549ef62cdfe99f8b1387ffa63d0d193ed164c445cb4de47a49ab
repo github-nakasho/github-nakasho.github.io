@@ -1,4 +1,4 @@
-I"�
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -95,7 +95,7 @@ B_z v_x - v_z B_x
 = P_{\mathrm{tot}, R}^\ast 
 = P_\mathrm{tot}^\ast \tag{7}\]
 
-<p><a href="/simulation/hll">HLLC法の(16)式</a>より</p>
+<p><a href="/simulation/hllc">HLLC法の(16)式</a>より</p>
 
 \[P_\mathrm{tot}^\ast 
 = P_{\mathrm{tot}, R} + \rho_R (S_R - v_{x, R}) (S_M - v_{x, R}) \tag{8}\]

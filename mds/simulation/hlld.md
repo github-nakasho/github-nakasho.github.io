@@ -105,7 +105,7 @@ P_{\mathrm{tot}, L}^\ast
 = P_\mathrm{tot}^\ast \tag{7}
 $$
 
-[HLLC法の(16)式](/simulation/hll)より
+[HLLC法の(16)式](/simulation/hllc)より
 
 $$
 P_\mathrm{tot}^\ast 

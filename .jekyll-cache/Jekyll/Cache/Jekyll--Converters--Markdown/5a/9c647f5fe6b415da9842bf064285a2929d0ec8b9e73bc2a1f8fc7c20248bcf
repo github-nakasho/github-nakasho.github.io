@@ -1,4 +1,4 @@
-I"a�
+I":�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -28,7 +28,7 @@
 
 <h2 id="磁気流体方程式群">磁気流体方程式群</h2>
 
-<p>宇宙空間に存在するガスは圧縮を受けると一時的に高温になりますが、放射冷却などの他の物理過程により素早くエネルギーを失う場合には、圧縮の前後で等温の状態が保たれる場合があります。
+<p>宇宙空間に存在するガスは圧縮を受けると一時的に高温になりますが、<a href="/astroelec/cooling">放射冷却</a>などの他の物理過程により素早くエネルギーを失う場合には、圧縮の前後で等温の状態が保たれる場合があります。
 そのような場合には、エネルギーの方程式を考える必要がなく、1次元の理想磁気流体方程式は以下のようになります。</p>
 
 \[\frac{\partial}{\partial t}\left( \begin{array}{c}
@@ -198,6 +198,14 @@ B_{z, \alpha} v_{x, \alpha} - v_{z, \alpha} B_x
 
 <p>と求まります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="数値計算に用いる">数値計算に用いる</h2>
 
 <p><a href="/simulation/hll">HLL</a>, <a href="/simulation/hllc">HLLC</a>, <a href="/simulation/hlld">断熱HLLD</a>と同様に、実際の数値計算では\(S_L, S_L^\ast, S_R^\ast, S_R\)の大きさに依存して、どの流束を用いるかを決定します。
@@ -342,16 +350,23 @@ B_{z, \alpha} v_{x, \alpha} - v_{z, \alpha} B_x
 \[C_s^2 = \frac{P_\mathrm{gas}}{\rho} \ \Longrightarrow \ 
 P_\mathrm{gas} = C_s^2 \rho \tag{21}\]
 
-<p>等温の場合、<a href="/mhd/sound_wave">音速\(C_s\)</a>は一定・一様な値になります。この値をあらかじめ初期条件として定めておくことで、計算を進めることができます。</p>
+<p>等温の場合、<a href="/mhd/sound_wave">音速\(C_s\)</a>は一定・一様な値になります。この値をあらかじめ初期条件として定めておくことで、計算を進めることができます。<br />
+初期条件として</p>
+
+\[\begin{aligned}
+(\rho_L, v_{x, L}, v_{y, L}, v_{z, L}, B_{x, L}, B_{y, L}, B_{z, L}) = (1.08, 1.2, 0.01, 0.5, 2.0/\sqrt{4\pi}, 3.6/\sqrt{4\pi}, 2.0/\sqrt{4\pi}) \\
+(\rho_R, v_{x, R}, v_{y, R}, v_{z, R}, B_{x, R}, B_{y, R}, B_{z, R}) = (1.0, 0.0, 0.0, 0.0, 2.0/\sqrt{4\pi}, 4.0/\sqrt{4\pi}, 2.0/\sqrt{4\pi})
+\end{aligned}\]
+
+<p>そして\(C_s = 1.0\)とした場合に、上述のJulia実装で計算された等温磁気流体衝撃波の時間発展を以下に示します。</p>
+
+<p><img src="/assets/images/simulation/iso_hlld_03.gif" alt="" /></p>
 
 <h1 id="参考文献">参考文献</h1>
 
 <ul>
-  <li><a href="https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub">Miyoshi &amp; Kusano, 2005, “A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics”</a></li>
-  <li><a href="https://arxiv.org/abs/astro-ph/9404074">Ryu &amp; Jones, 1994, “Numerical Magnetohydrodynamics in Astrophysics: Algorithm and Tests for One-Dimensional Flow”</a></li>
-  <li><a href="https://iopscience.iop.org/article/10.1086/588755">Stone et al., 2008, “Athena: A New Code for Astrophysical MHD”</a></li>
-  <li><a href="https://qiita.com/ur_kinsk/items/1893602e2ee73060b207">Qiita記事, 磁気流体の数値計算で遊ぶ</a></li>
-  <li><a href="http://www.astro.phys.s.chiba-u.ac.jp/cans/doc/riemann.html">CANS+ドキュメント, 磁気流体力学方程式に対する近似リーマン解法</a></li>
+  <li><a href="https://www.sciencedirect.com/science/article/pii/S0021999107000617?via%3Dihub">Mignone, 2007, “A Simple and Accurate Riemann Solver for Isothermal MHD”</a></li>
+  <li><a href="https://github.com/PrincetonUniversity/athena">Athena++, GitHub</a></li>
 </ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

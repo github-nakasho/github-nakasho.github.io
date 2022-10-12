@@ -1,0 +1,225 @@
+I"�/
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビリアル定理" id="markdown-toc-ビリアル定理">ビリアル定理</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+      <li><a href="#ビリアル定理から導かれる重力多体系の安定性" id="markdown-toc-ビリアル定理から導かれる重力多体系の安定性">ビリアル定理から導かれる、重力多体系の安定性</a></li>
+      <li><a href="#応用-銀河団などの質量推定" id="markdown-toc-応用-銀河団などの質量推定">応用: 銀河団などの質量推定</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビリアル定理">ビリアル定理</h1>
+
+<p>ここでは重力多体系を考える上で重要なビリアル定理についてメモしています。</p>
+
+<h2 id="導出">導出</h2>
+
+<p>それぞれの天体の質量を\(m_j\)、位置を\(\mathbf{r}_j\)、運動量を$\mathbf{p}_j$とします。以下の数式を変形していきましょう。</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= \sum_{j} \left\{ \frac{d\mathbf{p}_j}{dt} \cdot \mathbf{r}_j + \mathbf{p}_j \cdot \frac{d \mathbf{r}_j}{dt} \right\} \tag{1}\]
+
+<p>ここでそれぞれの天体に働く力を\(\mathbf{F}_j\)、そして速度を\(\mathbf{v}_j\)とすると、\(\frac{d \mathbf{p}_j}{dt} = \mathbf{F}_j, \frac{d \mathbf{r}_j}{dt} = \mathbf{v}_j\)より</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= \sum_j (\mathbf{F}_j \cdot \mathbf{r}_j + \mathbf{p}_j \cdot \mathbf{v}_j) 
+\underbrace{=}_{\mathbf{p}_j = m_j \mathbf{v}_j} \sum_j \mathbf{F}_j \cdot \mathbf{r}_j + 2 \sum_j \frac{1}{2} m_j \mathbf{v}_j^2 \tag{2}\]
+
+<p>系全体の運動エネルギーを</p>
+
+\[\mathcal{T} 
+= \sum_j \frac{1}{2} m_j \mathbf{v}_j^2 \tag{3}\]
+
+<p>のように書くと、(2)式から</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= 2 \mathcal{T} + \sum_j \mathbf{F}_j \cdot \mathbf{r}_j \tag{4}\]
+
+<p>のようになります。この式の時間平均をとりましょう。</p>
+
+\[(左辺) 
+= \frac{1}{\tau} \int_0^\tau dt \frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= \frac{1}{\tau} \left[ \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right]_0^\tau\]
+
+\[(右辺) 
+= 2 \langle \mathcal{T}\rangle + \langle \sum_j \mathbf{F}_j \cdot \mathbf{r}_j \rangle\]
+
+<p>\(\langle \cdots \rangle\)は時間平均操作を表します。
+ここで、この多体系が常に保たれ続けること(すなわち天体が抜け出したりせず、系全体のエネルギーが有限であり続けると)仮定しましょう。
+この仮定より\(\mathbf{p}_j \mathbf{r}_j\)は全て有限の値を持つと考えて良いので、\(\tau \rightarrow 0\)のとき左辺はゼロになります。以上より</p>
+
+\[2 \langle \mathcal{T}\rangle + \langle \sum_j \mathbf{F}_j \cdot \mathbf{r}_j \rangle 
+= 0 \tag{5}\]
+
+<p>と求まります。さらに系全体のポテンシャルエネルギーを</p>
+
+\[\mathcal{V} 
+= \frac{1}{2} \sum_i \sum_{i\neq j} V (\vert \mathbf{r}_i - \mathbf{r}_j\vert) \tag{6}\]
+
+<p>のように書くことにします。ポテンシャルエネルギーが\(V(\vert \mathbf{r}_i - \mathbf{r}_j \vert) \propto \vert \mathbf{r}_i - \mathbf{r}_j \vert^n\)のように書かれるとき、
+適当な定数\(a\)に対して\(V(a \vert \mathbf{r}_i - \mathbf{r}_j \vert) = a^n V(\vert \mathbf{r}_i - \mathbf{r}_j \vert)\)のように書くことができます。
+これを利用すると、(6)式から</p>
+
+\[\mathcal{V}(a \vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \frac{1}{2} \sum_i \sum_{i\neq j} V(a\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \frac{a^n}{2} \sum_i \sum_{i\neq j} V(\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= a^n \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) \tag{7}\]
+
+<p>のように変形することができます。この式を\(a\)で微分すると</p>
+
+\[(最左辺) 
+= \frac{\partial}{\partial a} \mathcal{V} (a \vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \sum_k \frac{\partial (a \mathbf{r}_k)}{\partial a} \frac{\partial}{\partial (a \mathbf{r}_k)} \mathcal{V} (a \vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \sum_k \mathbf{r}_k \cdot \frac{\partial}{\partial (a \mathbf{r}_k)} \mathcal{V} (a \vert \mathbf{r}_i - \mathbf{r}_j \vert)\]
+
+\[(最右辺) 
+= n a^{n-1} \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert)\]
+
+<p>を得ます。\(a\)は適当な定数であるため、\(a=1\)としても差し支えありません。すると</p>
+
+\[n \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \sum_k \mathbf{r}_k \cdot \frac{\partial}{\partial \mathbf{r}_k} \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) \tag{7}\]
+
+<p>また、ここから</p>
+
+\[\frac{\partial}{\partial \mathbf{r}_k} \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= \frac{1}{2} \frac{\partial}{\partial \mathbf{r}_k} \left\{ \sum_i \sum_{j\neq i} V(\vert \mathbf{r}_i - \mathbf{r}_j \vert) \right\} 
+= \frac{\partial}{\partial \mathbf{r}_k} \sum_{k \neq \ell} V(\vert \mathbf{r}_k - \mathbf{r}_\ell \vert) 
+= - \sum_{\ell \neq k} \mathbf{F}_{k\ell} 
+= - \mathbf{F}_k\]
+
+<p>のように計算されます。\(\mathbf{F}_{k\ell}\)は\(k\)番目の天体が\(\ell\)番目の天体から受ける力です。以上より</p>
+
+\[\frac{\partial}{\partial \mathbf{r}_k} \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= - \mathbf{F}_k \tag{8}\]
+
+<p>となります。(7), (8)式より</p>
+
+\[n \mathcal{V} (\vert \mathbf{r}_i - \mathbf{r}_j \vert) 
+= - \sum_k \mathbf{r}_k \cdot \mathbf{F}_k \tag{9}\]
+
+<p>(9)式を(5)式に代入すれば</p>
+
+\[2 \langle \mathcal{T} \rangle - n \langle \mathcal{V} \rangle 
+= 0 \ \Longrightarrow \ 
+\langle \mathcal{T} \rangle 
+= \frac{n}{2} \langle \mathcal{V} \rangle \tag{10}\]
+
+<p>というビリアル定理 (Virial theorem)を得ることができます。</p>
+
+<h2 id="ビリアル定理から導かれる重力多体系の安定性">ビリアル定理から導かれる、重力多体系の安定性</h2>
+
+<p>(10)式では\(n\)をそのまま残しました。
+これは位置\(\mathbf{r}\)でのポテンシャル\(\mathcal{V} (\mathbf{r})\)が\(\vert \mathbf{r} \vert^n\)に比例するとしたときの\(n\)です。
+重力ポテンシャルの場合、その依存性は\(n = -1\)となります。ここではその\(n\)によって系がどのように振る舞うかを見てみましょう。
+系全体のエネルギーの長時間平均は</p>
+
+\[\langle E \rangle 
+= \langle \mathcal{T} \rangle + \langle \mathcal{V} \rangle \tag{11}\]
+
+<p>なので、(10), (11)式より</p>
+
+\[\langle E \rangle 
+= \left(1 + \frac{2}{n} \right) \langle \mathcal{T} \rangle \tag{12}\]
+
+<p>\(\langle \mathcal{T} \rangle\)は運動エネルギーであるため、常に0以上の値を持ちます。
+よって\(n &lt; -2\)のとき\(\langle E\rangle &gt; 0\)となり、これはこの系のポテンシャルから抜け出して無限遠に飛び去ることができる(ポテンシャルエネルギーが0となる無限遠でも、ゼロでない運動エネルギーを持つ)ことを意味します。
+よって\(n &lt; -2\)のポテンシャルが作る多体系は、系として安定に存在することができません。
+一方、重力ポテンシャルの場合、\(n = -1\)から、安定に存在することができます。</p>
+
+<h2 id="応用-銀河団などの質量推定">応用: 銀河団などの質量推定</h2>
+
+<p>ビリアル定理を用いて、実際の重力多体系の総質量を推定する方法をご紹介します。銀河団などの天体が生まれてから十分時間が経過しており、系が安定な状態に落ち着いていると仮定すると</p>
+
+\[\langle \mathcal{T} \rangle 
+\simeq \mathcal{T} 
+= \frac{1}{2} \sum_j m_j v_j^2 \tag{13}\]
+
+<p>が成り立っていると考えて良いでしょう。銀河団を構成する銀河の速度の2乗質量平均(速度分散)</p>
+
+\[\bar{v^2} 
+= \frac{\sum_j m_j v_j^2}{\sum_j m_j} \tag{14}\]
+
+<p>と銀河団の総質量\(M = \sum_j m_j\)を用いると、(13)式は</p>
+
+\[\langle \mathcal{T} \rangle 
+\simeq \frac{1}{2} M \bar{v^2} \tag{15}\]
+
+<p>のように書き換えることができます。一方、系全体の重力ポテンシャルエネルギーは、系の典型的な半径を\(R\)とすれば</p>
+
+\[\langle V \rangle 
+\simeq - \frac{GM^2}{R} \tag{16}\]
+
+<p>程度と考えることができます。</p>
+
+<p>(15), (16)式、そして(10)式に\(n = -1\)を代入したものを用いると</p>
+
+\[\frac{1}{2} M \bar{v^2} 
+= \frac{1}{2} \frac{G M^2}{R} \ \Longrightarrow \ 
+\bar{v^2} 
+= \frac{GM}{R} \ \Longrightarrow \ 
+M_V 
+= \frac{R \bar{v}^2}{G} \tag{17}\]
+
+<p>と求まります。このように、ビリアル定理を利用して求められる重力多体系の質量をビリアル質量\(M_V\)と呼びます。
+観測から\(M_V\)を求めるには\(R, \bar{v}^2\)を求める必要があります。例えば遠くの銀河団の場合には、下図のような状況を考えます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>分光観測から<a href="/cosmo/redshift">赤方偏移\(z\)</a>を決定することで、銀河団全体が遠ざかる速度\(v\)が得られます。すると<a href="/cosmo/hubble">ハッブルの法則</a>より、距離\(d\)が求まります。
+この値と、銀河団を見込む角度\(\theta\)を利用すれば、銀河団の半径\(R\)が計算されます。
+さらに分光観測から個々の銀河の速度を一つ一つ測定することで、銀河の速度の2乗質量平均(速度分散)\(\bar{v^2}\)が求まります。
+ただし、個々の銀河を観測したときに求まるのは、視線方向の速度分散\(\bar{v_r^2}\)のみです。
+速度分散の他の方向成分をそれぞれ\(\bar{v_\theta^2}, \bar{v_\varphi^2}\)と書き、さらに系が球対称で等方的に運動していると仮定すると</p>
+
+\[\bar{v^2} 
+= \bar{v_r^2} + \bar{v_\theta^2} + \bar{v_\varphi^2} 
+= 3 \bar{v_r^2}\]
+
+<p>から、(17)式は</p>
+
+\[M_V 
+= \frac{3 R \bar{v_r^2}}{G} \tag{18}\]
+
+<p>これらを用いることで\(M_V\)を求めることが可能です。<br />
+もしも近傍にある球状星団などで\(M_V\)を求める場合には、<a href="/cosmo/hubble">ハッブルの法則</a>のような宇宙論的な効果を用いることができません。よって系の半径は別の方法で求める必要があります。
+実は天球面上に投影された見かけの大きさ\(R_\mathrm{proj}\)と、その天体の半径\(R\)の間には</p>
+
+\[\frac{R}{R_\mathrm{proj}} 
+= \frac{\pi}{2} \tag{19}\]
+
+<p>という関係が一般に成り立ちます。これを用いれば、(18)式は</p>
+
+\[M_V 
+= \frac{3 \pi R_\mathrm{proj} \bar{v_r^2}}{2G} \tag{20}\]
+
+<p>となります。よって、撮像観測から見かけの大きさ\(R_\mathrm{proj}\)と、分光観測から個々の天体の視線方向の速度分散\(\bar{v_r^2}\)を求めれば、\(M_V\)の推定が可能です。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>谷口義明, 岡村定矩, 祖父江義明, “銀河 I”　　</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

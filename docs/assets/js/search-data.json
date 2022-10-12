@@ -4459,129 +4459,129 @@
   },"743": {
     "doc": "機械学習",
     "title": "機械学習 (Machine Learning)",
-    "content": " ",
-    "url": "http://localhost:4000/infostat/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
-    "relUrl": "/infostat/ml#機械学習-machine-learning"
-  },"744": {
-    "doc": "機械学習",
-    "title": "教師あり学習 (Supervised learning)",
-    "content": "まず、入出力関係を定義しましょう。 . \\[y = f(\\mathbf{x}) \\tag{4.1}\\] ここで\\(\\mathbf{x}\\)は入力(Input)、\\(y\\)は出力(Output)です。例えば、入力が画像データ、出力がその画像に写っている動物とすると、この関数\\(f\\)は動物を判定するための関数であることがわかります。この分類を機械に任せたいというのが、機械学習の目標です。言い換えれば、関数\\(f\\)を真似した人工的な関数\\(g\\)を作ることが目標となります。 . \\[y \\simeq g(\\mathbf{x}) (\\simeq f(\\mathbf{x})) \\tag{4.2}\\] 関数\\(f\\)を真似するために\\(g\\)を様々変化させることを、機械学習で行います。しかし真の\\(f\\)はわからないので、その指標として入力と出力の結果(やその関係性)を用います。真似るための指標(教師)として、データセットを最初に提供します。 . \\[D = (\\mathbf{x}_\\mu, y_\\mu) \\qquad (\\mu = 1, 2, \\cdots , M) \\tag{4.3}\\] ",
-    "url": "http://localhost:4000/infostat/ml#%E6%95%99%E5%B8%AB%E3%81%82%E3%82%8A%E5%AD%A6%E7%BF%92-supervised-learning",
-    "relUrl": "/infostat/ml#教師あり学習-supervised-learning"
-  },"745": {
-    "doc": "機械学習",
-    "title": "Loss function (error, 損失関数、誤差関数)",
-    "content": "機械学習の結果が間違っているかどうかを、人間側が指導する必要があります。これをLoss functionと呼びます。これには決まった定義はなく、最終的に答えを出す人間が適切に決定します。例として、以下のようなものがあります。 . \\[\\min_{g} \\left\\{ \\frac{1}{2} \\sum_{\\mu = 1}^2 (y_\\mu - g(\\mathbf{x}_\\mu))^2 \\right\\} \\tag{4.4}\\] データセットとして与えられている答え\\(y_\\mu\\)と機械が予測した結果\\(g(\\mathbf{x}_\\mu)\\)の差を全ての添字に対して和を撮ったものが、最小になるように関数\\(g\\)を最適化することが、機械学習の目標となります。関数\\(f\\)は皆目見当がつかないものですが、とりあえず\\(g\\)をモデルとして用意して後から結果に合うように\\(g\\)を合わせます。 . 変える余地のある(パラメータを多数持つような)関数を最適化するのが深層学習です。厳密な物理・数学の世界からみたら愚の骨頂？ . 深層学習を用いて問題を解くことで、我々は賢くなったのでしょうか？答えは否。ただし深層学習を用いて出てきた結果を考察することで次のステップに行くことができます。どんな関数なら上手くいくのかを解析することもできるでしょう。これはデータサイエンス研究手法の新しい形です。 . 上述のように、機械学習は1. \\(g(\\mathbf{x})\\)を定義する、2. Loss functionを定義する、3. 最適化する、という手順で行います。 . ",
-    "url": "http://localhost:4000/infostat/ml#loss-function-error-%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0%E8%AA%A4%E5%B7%AE%E9%96%A2%E6%95%B0",
-    "relUrl": "/infostat/ml#loss-function-error-損失関数誤差関数"
-  },"746": {
-    "doc": "機械学習",
-    "title": "Perceptron (パーセプトロン)",
-    "content": "最初のstepとして、パーセプトロンを考えましょう。これは統計力学におけるIsing modelのように、機械学習や人工知能におけるトイモデルとして広く知られています。 . \\[y_\\mu = f(\\mathbf{x}_\\mu) \\qquad (y \\in \\{ -1, +1\\}) \\tag{4.5}\\] を真似るものとして . \\[y_\\mu \\simeq \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) \\tag{4.6}\\] を考えます。これは以下のように入力層と出力層で図示することができます。 . 機械学習で行っているのは入力データに対して線形変換と非線形変換を繰り返しです。これにより複雑な関数を形成することができます。 次に(4.5), (4.6)式がどれくらい似ているかを決めましょう。一例として、以下のようなものが考えられます。 . \\[\\min_{\\mathbf{w}} \\left\\{ - \\sum_\\mu y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu )\\right\\} \\tag{4.7}\\] \\(y_\\mu\\)の符号と\\(\\mathrm{sign} (\\cdots)\\)の符号が一致していれば良いので、これの和にマイナスをつけたものが最小となるように最適化すれば良いことがわかります。 これを見てわかるように、このLoss functionは物理学で言うところのエネルギー\\(E(\\mathbf{w})\\)と見なすことができます。\\(\\mathbf{w}\\)は物理系の自由度を表現していると言えるでしょう。その意味では機械学習の系を最適化することは、我々のコンピュータを冷凍機としてその人工的な系のエネルギーを最小化することと同義です。このような理由から低温物理学や統計物理学とのアナロジーが使えることがわかります。 . 同様の考え方から、量子機械学習を考えるのは至極当然の流れと言えるでしょう。 . ",
-    "url": "http://localhost:4000/infostat/ml#perceptron-%E3%83%91%E3%83%BC%E3%82%BB%E3%83%97%E3%83%88%E3%83%AD%E3%83%B3",
-    "relUrl": "/infostat/ml#perceptron-パーセプトロン"
-  },"747": {
-    "doc": "機械学習",
-    "title": "Statistical Mechanics",
-    "content": "以下では単純に入力データがガウス分布に従うとしましょう。 . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right) \\tag{4.8}\\] ここで\\(N\\)はベクトルの成分の数、\\(M\\)はデータの数です。そして、\\(y_\\mu\\)は{-1, 1}の分布しか持たないような分布を考えます。 . \\[P(y_\\mu) = \\frac{1}{2} \\{\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) \\} \\tag{4.9}\\] 今、考えているのは(4.7)式のように大きさを考えない系なので、\\(\\mathbf{w}^2 = N\\)のように規格化されているものとして以降の計算を行います。すると分配関数は . \\[Z = \\int d\\mathbf{w} \\delta (\\mathbf{w}^T \\mathbf{w}-N) \\exp \\left( \\sum_{\\mu = 1}^M \\beta y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.10}\\] \\(y, x\\)を固定した(quench randomnesした)元で\\(w\\)について最適化することを考えます(\\(y, x\\)は教師データなので予め与えられたものであることから)。すると\\(x, y\\)は固定されたスピンと考えることができるので、これはスピングラスの理論(レプリカ法)で計算を進めることができます。 . このような系はquenched系ですが、y, w, xが全て同時に動く場合にはannealed系です。前者はデータを与えきった後に学習を行う「オフライン学習」、後者はデータを与えるたびに$$w$$が変化するような学習を「オンライン学習」に対応します。計算したい系によって計算テクニックを使い分けます。 . ではレプリカ法を用いて計算を行っていきましょう。 . \\[[Z^n]_D = \\prod_a \\int d\\mathbf{w}_a \\delta (\\mathbf{w}_a^T \\mathbf{w}_a -N) \\prod_{\\mu=1}^M \\left[ \\exp (\\beta y_\\mu \\mathrm{sign} (\\mathbf{w}_a^T \\mathbf{x}_\\mu)) \\right]_{y_\\mu, \\mathbf{x}_\\mu} \\tag{4.11}\\] ",
-    "url": "http://localhost:4000/infostat/ml#statistical-mechanics",
-    "relUrl": "/infostat/ml#statistical-mechanics"
-  },"748": {
-    "doc": "機械学習",
-    "title": "\\(u_\\mu^{a=1, 2, \\cdots, n}\\) property",
-    "content": "ここで\\(u_\\mu^a \\equiv \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)を定義します。この変数が従う確率分布を計算してみましょう。 . \\[P (\\mathbf{u}_\\mu) = \\int d\\mathbf{x}_\\mu P(\\mathbf{x}_\\mu) \\prod_a \\delta (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu) = \\int d\\mathbf{x}_\\mu \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu + i \\sum \\tilde{u}_\\mu^a (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.12}\\] \\(e\\)の肩を計算しましょう。 . \\[-\\frac{N}{2} \\left( \\mathbf{x}_\\mu-i \\sum_a \\tilde{u}_\\mu^a \\frac{\\mathbf{w}_a}{N} \\right)^2 - \\frac{1}{2N} \\left( \\sum_a \\tilde{u}_\\mu^a \\mathbf{w}_a \\right)^2\\] より、(4.12)式は\\(\\mathbf{x}_\\mu\\)での積分が実行できて . \\[P(\\mathbf{u}_\\mu) \\propto \\int \\tilde{u}_\\mu^a \\exp \\left( -\\frac{1}{2N} \\sum_{a, b} \\tilde{u}_\\mu^a (\\mathbf{w}_a^T \\mathbf{w}_b) \\tilde{u}_\\mu^b + i \\sum_a u_\\mu^a \\tilde{u}_\\mu^a \\right) \\propto \\exp \\left( - \\frac{1}{2} \\sum_{a, b} u_\\mu^a (Q^{-1})_{ab} u_\\mu^b \\right) \\tag{4.13}\\] ここで\\(q_{ab} \\equiv \\frac{1}{N} \\mathbf{w}_a^T \\mathbf{w}_b\\)はこの系のスピングラス秩序パラメータ、\\(Q = (q_{ab})\\)はその行列です。(4.13)式の形から、\\(u_\\mu^a\\)は平均0、分散\\(q_{ab}\\)のガウス分布に従うことがわかります。これは中心極限定理と同じ形です。 . ",
-    "url": "http://localhost:4000/infostat/ml#u_mua1-2-cdots-n-property",
-    "relUrl": "/infostat/ml#u_mua1-2-cdots-n-property"
-  },"749": {
-    "doc": "機械学習",
-    "title": "Equivalence representation",
-    "content": "等価定理による表現は以下のようなものでした。 . \\[[f(\\mathbf{u}_\\mu)]_{\\mathbf{x}_\\mu, y_\\mu} = \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) f(\\mathbf{u}_\\mu) \\right]\\] これより . \\[[Z] = \\int dQ \\prod_a \\int d\\mathbf{w}_a \\prod_\\mu \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_a \\exp (\\beta y_\\mu \\mathrm{sign}(u_\\mu^a))\\right]_{y_\\mu} \\times \\prod_{a, b} \\delta (N q^{ab} - \\mathbf{w}_a \\cdot \\mathbf{w}_b) \\tag{4.14}\\] このようにすることで\\(u\\)の積分と\\(w\\)の積分に分けることができます。すると\\(\\prod_a \\int d\\mathbf{w}_a \\prod_{a, b} \\delta(Nq^{ab}-\\mathbf{w}_a \\cdot \\mathbf{w}_b)\\)の部分は、これまで計算してきたものと同じくエントロピーを表しているとわかります。これまでの計算と違いが現れているのは\\([\\cdots]_{y_\\mu}\\)の部分のみです。エネルギーの部分を\\(e^{-N\\beta e(Q)}\\)、エントロピー部分を\\(e^{NS(Q)}\\)とおくと . \\[[Z] = \\int dQ \\exp (-N \\beta e(Q) + N S(Q))\\] となります。 . ",
-    "url": "http://localhost:4000/infostat/ml#equivalence-representation",
-    "relUrl": "/infostat/ml#equivalence-representation"
-  },"750": {
-    "doc": "機械学習",
-    "title": "エネルギーの計算",
-    "content": "それではエネルギーの計算を進めていきましょう。 . \\[-\\beta e(Q) = \\frac{1}{N} \\log \\prod_{\\mu} \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_{a=1}^n e^{\\beta y_\\mu \\mathrm{sign} (u_\\mu^a)} \\right]_{y_\\mu} \\tag{4.15}\\] ここで\\(u_\\mu^a\\)の平均が0, 分散が\\(q^{ab} = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)ということと、レプリカ対称性 . \\[Q = \\left( \\begin{array}{cccc} 1 &amp; q &amp; \\cdots &amp; q \\\\ q &amp; 1 &amp; \\ddots &amp; \\vdots \\\\ \\vdots &amp; \\ddots &amp; \\ddots &amp; q\\\\ q &amp; \\cdots &amp; q&amp; 1 \\end{array} \\right)\\] より\\(u_\\mu^a = \\sqrt{q} z + \\sqrt{1-q} x_a\\)と表現することができます。ここで\\(z, x_a\\)は(0,1)のガウス分布に従う変数です。すると . \\[[u_\\mu^a] = 0\\] \\[\\begin{aligned} [u_\\mu^a u_\\mu^b] &amp;= [(\\sqrt{q} z + \\sqrt{1-q} x_a)(\\sqrt{q} z + \\sqrt{1-q} x_b)] = [q z^2] + \\sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] \\\\ &amp;= q + (1-q) \\delta_{ab} \\end{aligned}\\] となります。よって\\(u_\\mu^a\\)を\\(z, x_a\\)で書き換えましょう。 . \\[-\\beta e(Q) = \\frac{M}{N} \\log \\left[ \\int D_z \\left( \\int D_x \\exp (\\beta y_\\mu \\mathrm{sign}(\\sqrt{q}z + \\sqrt{1-q}x))\\right)^n \\right]_{y_\\mu} \\tag{4.16}\\] \\(n\\)乗は\\(a = 1, 2, \\cdots, n\\)の場合の計算が全て一致することから出てきます。 機械学習の一般形として、エネルギーを\\(e^{-\\beta f(\\mathbf{w} \\cdot \\mathbf{x}_\\mu)}\\)と書くことができます。これは線形変換と非線形変換を施した形になっているため、これが一般形になっていることがわかります。これまでの議論から\\(u_\\mu^a = \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)と書け、これはさらに等価定理で\\(z, x_a\\)で表現することができます…という議論の進め方を(公式のように)覚えてしまえば、あとは手を動かすだけで研究ができます。 (4.18)式の変形をさらに進めます。 . \\[\\begin{align} -\\beta e(Q) &amp;= \\frac{M}{N} \\log \\left[ \\int D_z e^{\\log (\\cdots)^n} \\right] = \\frac{M}{N} \\log \\left[ \\int D_z e^{n \\log (\\cdots)} \\right] \\notag \\\\ &amp;\\xrightarrow{n \\rightarrow 0} \\frac{M}{N} \\log \\left[ \\int D_z (1 + n \\log (\\cdots)) \\right] = \\frac{M}{N} \\log \\left[ 1 + n \\int D_z \\log (\\cdots) \\right] \\notag \\\\ &amp;\\simeq \\frac{M}{N} \\log \\left[ e^{n \\int D_z \\log (\\cdots)} \\right] = \\frac{M}{N} n \\int D_z \\log (\\cdots) \\tag{4.17} \\end{align}\\] \\((\\cdots)\\)の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。 . \\[\\int_{-\\infty}^{-\\sqrt{\\frac{q}{1-q}} z} D_x e^{-\\beta y_\\mu} + \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_x e^{\\beta y_\\mu} \\tag{4.18}\\] 相補誤差関数 . \\[H(x) = \\int_x^\\infty D_z \\tag{4.19}\\] を用いると . \\[H(-x) = \\int_{-x}^\\infty D_z = \\int_{-\\infty}^\\infty D_z - \\int_{-\\infty}^{-x} D_z \\underbrace{=}_{z \\rightarrow -z} 1 + \\int_\\infty^x D_x = 1 - H(x) \\tag{4.20}\\] より . \\[\\begin{align} (4.18) &amp;= e^{\\beta y_\\mu} H \\left( - \\sqrt{\\frac{q}{1-q}} z\\right) + \\left( \\int_{-\\infty}^\\infty D_z - \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_z\\right) e^{-\\beta y_\\mu} \\notag \\\\ &amp;= e^{\\beta y_\\mu} H \\left( -\\sqrt{\\frac{q}{1-q}} z \\right) + e^{-\\beta y_\\mu} \\left( 1- H \\left( -\\sqrt{\\frac{q}{1-q}} z\\right)\\right) \\notag \\\\ &amp;= e^{\\beta y_\\mu} \\left( 1- H \\left( \\sqrt{\\frac{q}{1-q}} z\\right)\\right) + e^{-\\beta y_\\mu} H\\left( \\sqrt{\\frac{q}{1-q}} z\\right) \\tag{4.21} \\end{align}\\] となります。以上より . \\[-\\beta e(Q) = \\alpha n \\left[ \\int D_z \\log (e^{-\\beta y_\\mu} H + e^{\\beta y_\\mu} (1-H)) \\right]_{y_\\mu} \\tag{4.22}\\] ここで\\(\\alpha \\equiv M/N, H \\equiv H (\\sqrt{\\frac{q}{1-q}} z)\\)です。 . ",
-    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
-    "relUrl": "/infostat/ml#エネルギーの計算"
-  },"751": {
-    "doc": "機械学習",
-    "title": "エントロピーの計算",
-    "content": "残りのエントロピーの計算を行いましょう。 . \\[\\begin{align} &amp;\\prod_{a=1}^n \\int d\\mathbf{w}_a \\prod_{a\\neq b} \\delta (Nq - \\mathbf{w}_a^T \\mathbf{w}_b) \\prod_a \\delta (N- \\mathbf{w}_a^T \\mathbf{w}_a) \\notag \\\\ &amp;= \\prod_a \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( \\frac{1}{2} \\tilde{Q} \\sum_a (N-\\mathbf{w}_a \\mathbf{w}_a)\\right) \\exp \\left( -\\frac{\\tilde{q}}{2} \\sum_{a\\neq b} (Nq - \\mathbf{w}_a \\cdot \\mathbf{w}_b)\\right) \\tag{4.23} \\end{align}\\] \\(e\\)の肩の部分を整理すると . \\[\\frac{1}{2} nN \\tilde{Q} - \\frac{1}{2} \\tilde{q} q N n(n-1) - \\frac{\\tilde{Q}}{2} \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\frac{\\tilde{q}}{2} \\sum_{a \\neq b} \\mathbf{w}_a \\cdot \\mathbf{w}_b \\tag{4.24}\\] 最後の項を整理すると . \\[\\frac{\\tilde{q}}{2} \\left\\{ \\left( \\sum_a \\mathbf{w}_a\\right)^2 - \\sum_a \\mathbf{w}_a^2\\right\\} \\tag{4.25}\\] この\\((\\sum_a \\mathbf{w}_a)^2\\)の部分にHubbard-Stratonovich変換をして\\(\\sqrt{\\tilde{q}}\\mathbf{z} \\sum_a \\mathbf{w}_a\\)とすると . \\[(4.23) = \\int D_z \\prod_{a=1}^n \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( nN \\left( \\frac{1}{2} \\tilde{Q} + \\frac{1}{2} q \\tilde{q} \\right) \\right) \\exp \\left( -\\frac{1}{2} (\\tilde{Q} + \\tilde{q}) \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\sqrt{\\tilde{q}} \\mathbf{z} \\sum_a \\mathbf{w}_a \\right) \\tag{4.26}\\] 上式において\\(\\prod_a \\int d\\mathbf{w}_a \\exp (\\cdots)\\)の部分でガウス積分を実行すると\\(\\left( \\sqrt{\\frac{2\\pi}{\\tilde{Q} + \\tilde{q}}} \\exp \\left( \\frac{\\tilde{q} \\mathbf{z}^2}{2(\\tilde{Q} + \\tilde(q))}\\right)\\right)^{nN}\\)となります。計算していくと . \\[S(Q) = \\frac{1}{N} \\log \\prod_a \\int d\\mathbf{w}_a \\cdots = \\frac{n}{2} (\\tilde{Q} + q \\tilde{q}) - \\frac{n}{2} \\log(\\tilde{Q} + \\tilde{q}) + \\frac{n}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} \\tag{4.27}\\] ",
-    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
-    "relUrl": "/infostat/ml#エントロピーの計算"
-  },"752": {
-    "doc": "機械学習",
-    "title": "エントロピーに鞍点法を適用",
-    "content": "\\[\\frac{\\partial S}{\\partial \\tilde{Q}} = \\frac{1}{2} - \\frac{1}{2} \\frac{1}{\\tilde{Q} + \\tilde{q}} - \\frac{1}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} = 0 \\ \\Longrightarrow \\  \\therefore \\ 1 = \\frac{1}{\\tilde{Q} + \\tilde{q}} + \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.28}\\] \\[\\frac{\\partial S}{\\partial \\tilde{q}} = \\frac{1}{2} q - \\frac{\\tilde{q}}{2 (\\tilde{Q} + \\tilde{q})^2} = 0 \\ \\Longrightarrow \\  \\therefore \\ q = \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.29}\\] 以上より . \\[1-q = \\frac{1}{\\tilde{Q} + \\tilde{q}}, \\ q = (1-q^2) \\tilde{q} \\tag{4.30}\\] という恒等式を得ます。 . ",
-    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
-    "relUrl": "/infostat/ml#エントロピーに鞍点法を適用"
-  },"753": {
-    "doc": "機械学習",
-    "title": "エネルギーに鞍点法を適用",
-    "content": "(4.21)式よりエネルギーは以下のように書けたのでした。 . \\[-\\beta e(Q) = \\alpha n \\int D_z \\log(e^{-\\beta} H + e^{\\beta}(1-H))\\] ここで\\(H = H (\\sqrt{\\frac{q}{1-q}}z)\\)です。logの中身を\\(Y\\)と定義すると、エントロピー項から\\(\\frac{1}{2} q \\tilde{q}\\)が出てくることを合わせて . \\[\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\alpha \\int D_z \\frac{1}{Y} \\left[ e^{-\\beta} - e^\\beta \\right] H' \\left( \\frac{1}{2} \\frac{z}{\\sqrt{q} \\sqrt{1-q}} + \\frac{1}{2} \\frac{\\sqrt{q}z}{(1-q)^{3/2}}\\right) = 0 \\tag{4.31}\\] ここで . \\[\\int D_z z f(az) = \\int D_z a f'(az)\\] を用いると . \\[\\begin{align} &amp;\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\frac{\\alpha}{2} \\int D_z \\left[ \\frac{e^{-\\beta}-e^\\beta}{Y} H'' \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right) - \\frac{1}{Y^2} (e^{-\\beta} -e^\\beta)^2 (H')^2 \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right)\\right] = 0 \\notag \\\\ &amp;\\Longrightarrow \\  \\tilde{q} = - \\frac{\\alpha}{(1-q)^2} \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.32} \\end{align}\\] (4.30), (4.32)式より . \\[q = -\\alpha \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.33}\\] これは\\(q\\)についての自己無撞着方程式になっています。この式において\\(\\beta \\rightarrow \\infty\\)を考えましょう。すると\\(Y = e^{-\\beta} H + e^\\beta (1-H)\\)より . \\[q \\rightarrow \\alpha \\int D_z \\left( \\frac{H''}{1-H} - \\left( \\frac{H'}{1-H}\\right)^2\\right) \\tag{4.34}\\] となります。\\(\\beta \\rightarrow \\infty\\)極限の\\(q\\)を横軸\\(\\alpha\\)で図示すると以下のようになります。 . この図の再現ができない...どこかで計算ミス？それとも作成したスクリプトのアルゴリズムの問題？ . この図から、\\(\\alpha &gt; 2\\)でスピン秩序パラメータが\\(q=1\\)に凍結することを表しています。ここで\\(q = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)です。この意味を考えるために、2種類のデータを分類することを考えましょう。\\(\\alpha = M/N\\)より、\\(\\alpha\\)はデータの数に比例しています。これが大きいとデータ分類の境界線がある狭い領域にのみ現れるようになり、同じ答えしか出せなくなります。これはパーセプトロンの性能限界を表していることがわかります。 . ",
-    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
-    "relUrl": "/infostat/ml#エネルギーに鞍点法を適用"
-  },"754": {
-    "doc": "機械学習",
-    "title": "Hidden Manifold Model (arXiv: 2002.09339)",
-    "content": "これまで行ってきた計算には実は大問題があります。 . ",
-    "url": "http://localhost:4000/infostat/ml#hidden-manifold-model-arxiv-200209339",
-    "relUrl": "/infostat/ml#hidden-manifold-model-arxiv-200209339"
-  },"755": {
-    "doc": "機械学習",
-    "title": "古典的なモデル",
-    "content": "入力データがガウス分布に従っているとして . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( - \\frac{1}{2N} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right)\\] さらに出力は . \\[P(y_\\mu) = \\frac{1}{2} (\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) ) \\ \\mathrm{or} \\  y_\\mu = \\left\\{ \\begin{array}{ll} \\mathrm{sign} (\\mathbf{w}_0^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Teacher}) \\\\ \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Student}) \\end{array} \\right.\\] のように、教師モデルを模倣して生徒もモデルを考えます。これは古典的なモデルとして、1990年代にたくさん計算されました。 . ",
-    "url": "http://localhost:4000/infostat/ml#%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
-    "relUrl": "/infostat/ml#古典的なモデル"
-  },"756": {
-    "doc": "機械学習",
-    "title": "現実的なモデル",
-    "content": "しかし、現実は異なります。古典的な方法論に従って、複雑なモデルがたくさん生み出されました。しかし、それはこの機械学習の本質ではなく、これは現実を表すための重要な側面とは言えませんでした。重要なのはデータです。これまでの計算で用いられてきたランダムな分布のデータというものは本来ありえません(例えば、猫の画像は猫の構造を持っており、その時点でランダムではありません)。 \\(x, y\\)は何かしらの相関を持っており、そのような関係性がないデータを学習しても意味がありません。Hidden Manifold Modelとは\\(x, y\\)が何かしらの鍵を用いて生成されていると考えます。 . 簡単なものとして以下のようなものがあります。入力は . \\[\\mathbf{x}_\\mu = \\sigma \\left( \\frac{1}{\\sqrt{d}}F \\cdot \\mathbf{C}_\\mu \\right) \\qquad (F \\in \\mathbb{R}^{d \\times \\rho}, \\mathbf{C} \\in \\mathbb{R}^\\rho) \\tag{4.35}\\] そして出力は、入力と相関する形として . \\[y_\\mu = f\\left( \\frac{1}{\\sqrt{d}} \\mathbf{C}_\\mu^T \\mathbf{w}_0 \\right) \\tag{4.36}\\] 本質的なものは深い複雑な構造にあるのではなくて、データの相関にあるということを覚えておきましょう。 . 機械学習が上手くその性能を発揮しない背景には、入力と出力の相関が無いようなデータを持ってきていることが挙げられます。 深層学習の構造はどのような関数も近似できる(Universal approximator)ので、原理的にはどのような問題も最適化できるはずです。 . ",
-    "url": "http://localhost:4000/infostat/ml#%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
-    "relUrl": "/infostat/ml#現実的なモデル"
-  },"757": {
-    "doc": "機械学習",
-    "title": "Statistical Mechanics",
-    "content": "以降の文章は未完です。そのうち、授業で紹介された論文を読みつつ式を追います。 . (4.34), (4.35)から分配関数を計算します。 . \\[Z = \\int d\\mathbf{w} \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right)\\] ここでエネルギー部分に . \\[E(\\mathbf{w}) = \\frac{1}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x})^2 + \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w}\\] のように余分な項を付け足すことで過適合(overfitting)を避けます。レプリカ法を用いて . \\[[Z^n]_{\\mathbf{C}} = \\prod_a \\int d\\mathbf{w} \\left[ \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right) \\right]_{\\mathbf{C}} \\exp \\left( - \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w} \\right)\\] この計算においては\\(y\\)も\\(C\\)と\\(w\\)の内積になっているので、注意が必要です。ここではGaussian Equivalent Theorem(GET)という計算テクニックを用います。 . \\[\\lambda_\\mu^a = \\frac{1}{\\sqrt{d}} \\mathbf{w}_a^T \\sigma (\\frac{1}{\\sqrt{d}} F^T \\mathbf{C}_\\mu^T)\\] これから . \\[P(\\mathbb{\\lambda}_\\mu, \\nu_\\mu) \\propto \\exp \\left( -\\frac{1}{2} \\sum_{a, b} \\lambda_\\mu^a (A_\\mu^{-1})_{ab} \\lambda_\\mu^b- \\frac{1}{2} \\nu_\\mu A_0^{-1} \\nu_\\mu - \\frac{1}{2} \\sum_a \\nu_\\mu \\mathbf{B}_\\mu^T \\mathbf{\\lambda}_\\mu^a\\right)\\] ここで\\(A_n = \\frac{a^2}{d} \\mathbf{w}^a \\mathbf{w}^b+ \\frac{b^2}{d}\\mathbf{s}^a \\mathbf{s}^b, A_0 = \\frac{1}{d} \\mathbf{w}_0^T \\mathbf{w}_0, \\mathbf{B}_n = \\frac{b}{d} \\mathbf{s}^a \\cdot \\mathbf{w}_0\\)などです。 . ",
-    "url": "http://localhost:4000/infostat/ml#statistical-mechanics-1",
-    "relUrl": "/infostat/ml#statistical-mechanics-1"
-  },"758": {
-    "doc": "機械学習",
-    "title": "Appendix 1: \\(0&lt;n&lt;1\\)の系",
-    "content": "以前の講義で\\(n=0\\)はquenched系、\\(n=1\\)のannealed系に対応すると学びました。しかし、\\(0 &lt; n &lt;1\\)の系も存在します。これをpartial annealed系と呼びます。どちらの変数も動くが、動くスピードが違う(ゆっくり動く)とイメージできます。データを変えながら最適化を行う場合には、このような中途半端な\\(n\\)の値の系が実際の機械学習の系ではないかとされています。 . ",
-    "url": "http://localhost:4000/infostat/ml#appendix-1-0n1%E3%81%AE%E7%B3%BB",
-    "relUrl": "/infostat/ml#appendix-1-0n1の系"
-  },"759": {
-    "doc": "機械学習",
-    "title": "Appendix 2: レプリカ法のアプリケーション例",
-    "content": "量子アニーリングを用いて最適化問題を解く(イジングの基底状態を求める)という応用例があることから、量子ゆらぎの計算を導入します。その時の計算方法にレプリカ法が用いられます。最近ではAdS/CFT対応の文脈でもレプリカ法が用いられており、論文数が増えていると言われています。 . ",
-    "url": "http://localhost:4000/infostat/ml#appendix-2-%E3%83%AC%E3%83%97%E3%83%AA%E3%82%AB%E6%B3%95%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%BE%8B",
-    "relUrl": "/infostat/ml#appendix-2-レプリカ法のアプリケーション例"
-  },"760": {
-    "doc": "機械学習",
-    "title": "参考文献及びリンク",
-    "content": ". | [1] 大関真之 YouTube動画 “Statistical physics and information processing vol. 3 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】” | . ",
-    "url": "http://localhost:4000/infostat/ml#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E3%81%B3%E3%83%AA%E3%83%B3%E3%82%AF",
-    "relUrl": "/infostat/ml#参考文献及びリンク"
-  },"761": {
-    "doc": "機械学習",
-    "title": "機械学習",
-    "content": ". | 機械学習 (Machine Learning) . | 教師あり学習 (Supervised learning) | Loss function (error, 損失関数、誤差関数) | Perceptron (パーセプトロン) | Statistical Mechanics | \\(u_\\mu^{a=1, 2, \\cdots, n}\\) property | Equivalence representation | エネルギーの計算 | エントロピーの計算 | エントロピーに鞍点法を適用 | エネルギーに鞍点法を適用 | . | Hidden Manifold Model (arXiv: 2002.09339) . | 古典的なモデル | 現実的なモデル | Statistical Mechanics | . | Appendix 1: \\(0&lt;n&lt;1\\)の系 | Appendix 2: レプリカ法のアプリケーション例 | 参考文献及びリンク | . ",
-    "url": "http://localhost:4000/infostat/ml",
-    "relUrl": "/infostat/ml"
-  },"762": {
-    "doc": "機械学習",
-    "title": "機械学習 (Machine Learning)",
     "content": "ここでは機械学習の勉強メモを掲載していきます。 . ",
     "url": "http://localhost:4000/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
     "relUrl": "/ml#機械学習-machine-learning"
-  },"763": {
+  },"744": {
     "doc": "機械学習",
     "title": "機械学習",
     "content": ". ",
     "url": "http://localhost:4000/ml",
     "relUrl": "/ml"
+  },"745": {
+    "doc": "機械学習",
+    "title": "機械学習 (Machine Learning)",
+    "content": " ",
+    "url": "http://localhost:4000/infostat/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
+    "relUrl": "/infostat/ml#機械学習-machine-learning"
+  },"746": {
+    "doc": "機械学習",
+    "title": "教師あり学習 (Supervised learning)",
+    "content": "まず、入出力関係を定義しましょう。 . \\[y = f(\\mathbf{x}) \\tag{4.1}\\] ここで\\(\\mathbf{x}\\)は入力(Input)、\\(y\\)は出力(Output)です。例えば、入力が画像データ、出力がその画像に写っている動物とすると、この関数\\(f\\)は動物を判定するための関数であることがわかります。この分類を機械に任せたいというのが、機械学習の目標です。言い換えれば、関数\\(f\\)を真似した人工的な関数\\(g\\)を作ることが目標となります。 . \\[y \\simeq g(\\mathbf{x}) (\\simeq f(\\mathbf{x})) \\tag{4.2}\\] 関数\\(f\\)を真似するために\\(g\\)を様々変化させることを、機械学習で行います。しかし真の\\(f\\)はわからないので、その指標として入力と出力の結果(やその関係性)を用います。真似るための指標(教師)として、データセットを最初に提供します。 . \\[D = (\\mathbf{x}_\\mu, y_\\mu) \\qquad (\\mu = 1, 2, \\cdots , M) \\tag{4.3}\\] ",
+    "url": "http://localhost:4000/infostat/ml#%E6%95%99%E5%B8%AB%E3%81%82%E3%82%8A%E5%AD%A6%E7%BF%92-supervised-learning",
+    "relUrl": "/infostat/ml#教師あり学習-supervised-learning"
+  },"747": {
+    "doc": "機械学習",
+    "title": "Loss function (error, 損失関数、誤差関数)",
+    "content": "機械学習の結果が間違っているかどうかを、人間側が指導する必要があります。これをLoss functionと呼びます。これには決まった定義はなく、最終的に答えを出す人間が適切に決定します。例として、以下のようなものがあります。 . \\[\\min_{g} \\left\\{ \\frac{1}{2} \\sum_{\\mu = 1}^2 (y_\\mu - g(\\mathbf{x}_\\mu))^2 \\right\\} \\tag{4.4}\\] データセットとして与えられている答え\\(y_\\mu\\)と機械が予測した結果\\(g(\\mathbf{x}_\\mu)\\)の差を全ての添字に対して和を撮ったものが、最小になるように関数\\(g\\)を最適化することが、機械学習の目標となります。関数\\(f\\)は皆目見当がつかないものですが、とりあえず\\(g\\)をモデルとして用意して後から結果に合うように\\(g\\)を合わせます。 . 変える余地のある(パラメータを多数持つような)関数を最適化するのが深層学習です。厳密な物理・数学の世界からみたら愚の骨頂？ . 深層学習を用いて問題を解くことで、我々は賢くなったのでしょうか？答えは否。ただし深層学習を用いて出てきた結果を考察することで次のステップに行くことができます。どんな関数なら上手くいくのかを解析することもできるでしょう。これはデータサイエンス研究手法の新しい形です。 . 上述のように、機械学習は1. \\(g(\\mathbf{x})\\)を定義する、2. Loss functionを定義する、3. 最適化する、という手順で行います。 . ",
+    "url": "http://localhost:4000/infostat/ml#loss-function-error-%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0%E8%AA%A4%E5%B7%AE%E9%96%A2%E6%95%B0",
+    "relUrl": "/infostat/ml#loss-function-error-損失関数誤差関数"
+  },"748": {
+    "doc": "機械学習",
+    "title": "Perceptron (パーセプトロン)",
+    "content": "最初のstepとして、パーセプトロンを考えましょう。これは統計力学におけるIsing modelのように、機械学習や人工知能におけるトイモデルとして広く知られています。 . \\[y_\\mu = f(\\mathbf{x}_\\mu) \\qquad (y \\in \\{ -1, +1\\}) \\tag{4.5}\\] を真似るものとして . \\[y_\\mu \\simeq \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) \\tag{4.6}\\] を考えます。これは以下のように入力層と出力層で図示することができます。 . 機械学習で行っているのは入力データに対して線形変換と非線形変換を繰り返しです。これにより複雑な関数を形成することができます。 次に(4.5), (4.6)式がどれくらい似ているかを決めましょう。一例として、以下のようなものが考えられます。 . \\[\\min_{\\mathbf{w}} \\left\\{ - \\sum_\\mu y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu )\\right\\} \\tag{4.7}\\] \\(y_\\mu\\)の符号と\\(\\mathrm{sign} (\\cdots)\\)の符号が一致していれば良いので、これの和にマイナスをつけたものが最小となるように最適化すれば良いことがわかります。 これを見てわかるように、このLoss functionは物理学で言うところのエネルギー\\(E(\\mathbf{w})\\)と見なすことができます。\\(\\mathbf{w}\\)は物理系の自由度を表現していると言えるでしょう。その意味では機械学習の系を最適化することは、我々のコンピュータを冷凍機としてその人工的な系のエネルギーを最小化することと同義です。このような理由から低温物理学や統計物理学とのアナロジーが使えることがわかります。 . 同様の考え方から、量子機械学習を考えるのは至極当然の流れと言えるでしょう。 . ",
+    "url": "http://localhost:4000/infostat/ml#perceptron-%E3%83%91%E3%83%BC%E3%82%BB%E3%83%97%E3%83%88%E3%83%AD%E3%83%B3",
+    "relUrl": "/infostat/ml#perceptron-パーセプトロン"
+  },"749": {
+    "doc": "機械学習",
+    "title": "Statistical Mechanics",
+    "content": "以下では単純に入力データがガウス分布に従うとしましょう。 . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right) \\tag{4.8}\\] ここで\\(N\\)はベクトルの成分の数、\\(M\\)はデータの数です。そして、\\(y_\\mu\\)は{-1, 1}の分布しか持たないような分布を考えます。 . \\[P(y_\\mu) = \\frac{1}{2} \\{\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) \\} \\tag{4.9}\\] 今、考えているのは(4.7)式のように大きさを考えない系なので、\\(\\mathbf{w}^2 = N\\)のように規格化されているものとして以降の計算を行います。すると分配関数は . \\[Z = \\int d\\mathbf{w} \\delta (\\mathbf{w}^T \\mathbf{w}-N) \\exp \\left( \\sum_{\\mu = 1}^M \\beta y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.10}\\] \\(y, x\\)を固定した(quench randomnesした)元で\\(w\\)について最適化することを考えます(\\(y, x\\)は教師データなので予め与えられたものであることから)。すると\\(x, y\\)は固定されたスピンと考えることができるので、これはスピングラスの理論(レプリカ法)で計算を進めることができます。 . このような系はquenched系ですが、y, w, xが全て同時に動く場合にはannealed系です。前者はデータを与えきった後に学習を行う「オフライン学習」、後者はデータを与えるたびに$$w$$が変化するような学習を「オンライン学習」に対応します。計算したい系によって計算テクニックを使い分けます。 . ではレプリカ法を用いて計算を行っていきましょう。 . \\[[Z^n]_D = \\prod_a \\int d\\mathbf{w}_a \\delta (\\mathbf{w}_a^T \\mathbf{w}_a -N) \\prod_{\\mu=1}^M \\left[ \\exp (\\beta y_\\mu \\mathrm{sign} (\\mathbf{w}_a^T \\mathbf{x}_\\mu)) \\right]_{y_\\mu, \\mathbf{x}_\\mu} \\tag{4.11}\\] ",
+    "url": "http://localhost:4000/infostat/ml#statistical-mechanics",
+    "relUrl": "/infostat/ml#statistical-mechanics"
+  },"750": {
+    "doc": "機械学習",
+    "title": "\\(u_\\mu^{a=1, 2, \\cdots, n}\\) property",
+    "content": "ここで\\(u_\\mu^a \\equiv \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)を定義します。この変数が従う確率分布を計算してみましょう。 . \\[P (\\mathbf{u}_\\mu) = \\int d\\mathbf{x}_\\mu P(\\mathbf{x}_\\mu) \\prod_a \\delta (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu) = \\int d\\mathbf{x}_\\mu \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu + i \\sum \\tilde{u}_\\mu^a (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.12}\\] \\(e\\)の肩を計算しましょう。 . \\[-\\frac{N}{2} \\left( \\mathbf{x}_\\mu-i \\sum_a \\tilde{u}_\\mu^a \\frac{\\mathbf{w}_a}{N} \\right)^2 - \\frac{1}{2N} \\left( \\sum_a \\tilde{u}_\\mu^a \\mathbf{w}_a \\right)^2\\] より、(4.12)式は\\(\\mathbf{x}_\\mu\\)での積分が実行できて . \\[P(\\mathbf{u}_\\mu) \\propto \\int \\tilde{u}_\\mu^a \\exp \\left( -\\frac{1}{2N} \\sum_{a, b} \\tilde{u}_\\mu^a (\\mathbf{w}_a^T \\mathbf{w}_b) \\tilde{u}_\\mu^b + i \\sum_a u_\\mu^a \\tilde{u}_\\mu^a \\right) \\propto \\exp \\left( - \\frac{1}{2} \\sum_{a, b} u_\\mu^a (Q^{-1})_{ab} u_\\mu^b \\right) \\tag{4.13}\\] ここで\\(q_{ab} \\equiv \\frac{1}{N} \\mathbf{w}_a^T \\mathbf{w}_b\\)はこの系のスピングラス秩序パラメータ、\\(Q = (q_{ab})\\)はその行列です。(4.13)式の形から、\\(u_\\mu^a\\)は平均0、分散\\(q_{ab}\\)のガウス分布に従うことがわかります。これは中心極限定理と同じ形です。 . ",
+    "url": "http://localhost:4000/infostat/ml#u_mua1-2-cdots-n-property",
+    "relUrl": "/infostat/ml#u_mua1-2-cdots-n-property"
+  },"751": {
+    "doc": "機械学習",
+    "title": "Equivalence representation",
+    "content": "等価定理による表現は以下のようなものでした。 . \\[[f(\\mathbf{u}_\\mu)]_{\\mathbf{x}_\\mu, y_\\mu} = \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) f(\\mathbf{u}_\\mu) \\right]\\] これより . \\[[Z] = \\int dQ \\prod_a \\int d\\mathbf{w}_a \\prod_\\mu \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_a \\exp (\\beta y_\\mu \\mathrm{sign}(u_\\mu^a))\\right]_{y_\\mu} \\times \\prod_{a, b} \\delta (N q^{ab} - \\mathbf{w}_a \\cdot \\mathbf{w}_b) \\tag{4.14}\\] このようにすることで\\(u\\)の積分と\\(w\\)の積分に分けることができます。すると\\(\\prod_a \\int d\\mathbf{w}_a \\prod_{a, b} \\delta(Nq^{ab}-\\mathbf{w}_a \\cdot \\mathbf{w}_b)\\)の部分は、これまで計算してきたものと同じくエントロピーを表しているとわかります。これまでの計算と違いが現れているのは\\([\\cdots]_{y_\\mu}\\)の部分のみです。エネルギーの部分を\\(e^{-N\\beta e(Q)}\\)、エントロピー部分を\\(e^{NS(Q)}\\)とおくと . \\[[Z] = \\int dQ \\exp (-N \\beta e(Q) + N S(Q))\\] となります。 . ",
+    "url": "http://localhost:4000/infostat/ml#equivalence-representation",
+    "relUrl": "/infostat/ml#equivalence-representation"
+  },"752": {
+    "doc": "機械学習",
+    "title": "エネルギーの計算",
+    "content": "それではエネルギーの計算を進めていきましょう。 . \\[-\\beta e(Q) = \\frac{1}{N} \\log \\prod_{\\mu} \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_{a=1}^n e^{\\beta y_\\mu \\mathrm{sign} (u_\\mu^a)} \\right]_{y_\\mu} \\tag{4.15}\\] ここで\\(u_\\mu^a\\)の平均が0, 分散が\\(q^{ab} = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)ということと、レプリカ対称性 . \\[Q = \\left( \\begin{array}{cccc} 1 &amp; q &amp; \\cdots &amp; q \\\\ q &amp; 1 &amp; \\ddots &amp; \\vdots \\\\ \\vdots &amp; \\ddots &amp; \\ddots &amp; q\\\\ q &amp; \\cdots &amp; q&amp; 1 \\end{array} \\right)\\] より\\(u_\\mu^a = \\sqrt{q} z + \\sqrt{1-q} x_a\\)と表現することができます。ここで\\(z, x_a\\)は(0,1)のガウス分布に従う変数です。すると . \\[[u_\\mu^a] = 0\\] \\[\\begin{aligned} [u_\\mu^a u_\\mu^b] &amp;= [(\\sqrt{q} z + \\sqrt{1-q} x_a)(\\sqrt{q} z + \\sqrt{1-q} x_b)] = [q z^2] + \\sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] \\\\ &amp;= q + (1-q) \\delta_{ab} \\end{aligned}\\] となります。よって\\(u_\\mu^a\\)を\\(z, x_a\\)で書き換えましょう。 . \\[-\\beta e(Q) = \\frac{M}{N} \\log \\left[ \\int D_z \\left( \\int D_x \\exp (\\beta y_\\mu \\mathrm{sign}(\\sqrt{q}z + \\sqrt{1-q}x))\\right)^n \\right]_{y_\\mu} \\tag{4.16}\\] \\(n\\)乗は\\(a = 1, 2, \\cdots, n\\)の場合の計算が全て一致することから出てきます。 機械学習の一般形として、エネルギーを\\(e^{-\\beta f(\\mathbf{w} \\cdot \\mathbf{x}_\\mu)}\\)と書くことができます。これは線形変換と非線形変換を施した形になっているため、これが一般形になっていることがわかります。これまでの議論から\\(u_\\mu^a = \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)と書け、これはさらに等価定理で\\(z, x_a\\)で表現することができます…という議論の進め方を(公式のように)覚えてしまえば、あとは手を動かすだけで研究ができます。 (4.18)式の変形をさらに進めます。 . \\[\\begin{align} -\\beta e(Q) &amp;= \\frac{M}{N} \\log \\left[ \\int D_z e^{\\log (\\cdots)^n} \\right] = \\frac{M}{N} \\log \\left[ \\int D_z e^{n \\log (\\cdots)} \\right] \\notag \\\\ &amp;\\xrightarrow{n \\rightarrow 0} \\frac{M}{N} \\log \\left[ \\int D_z (1 + n \\log (\\cdots)) \\right] = \\frac{M}{N} \\log \\left[ 1 + n \\int D_z \\log (\\cdots) \\right] \\notag \\\\ &amp;\\simeq \\frac{M}{N} \\log \\left[ e^{n \\int D_z \\log (\\cdots)} \\right] = \\frac{M}{N} n \\int D_z \\log (\\cdots) \\tag{4.17} \\end{align}\\] \\((\\cdots)\\)の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。 . \\[\\int_{-\\infty}^{-\\sqrt{\\frac{q}{1-q}} z} D_x e^{-\\beta y_\\mu} + \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_x e^{\\beta y_\\mu} \\tag{4.18}\\] 相補誤差関数 . \\[H(x) = \\int_x^\\infty D_z \\tag{4.19}\\] を用いると . \\[H(-x) = \\int_{-x}^\\infty D_z = \\int_{-\\infty}^\\infty D_z - \\int_{-\\infty}^{-x} D_z \\underbrace{=}_{z \\rightarrow -z} 1 + \\int_\\infty^x D_x = 1 - H(x) \\tag{4.20}\\] より . \\[\\begin{align} (4.18) &amp;= e^{\\beta y_\\mu} H \\left( - \\sqrt{\\frac{q}{1-q}} z\\right) + \\left( \\int_{-\\infty}^\\infty D_z - \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_z\\right) e^{-\\beta y_\\mu} \\notag \\\\ &amp;= e^{\\beta y_\\mu} H \\left( -\\sqrt{\\frac{q}{1-q}} z \\right) + e^{-\\beta y_\\mu} \\left( 1- H \\left( -\\sqrt{\\frac{q}{1-q}} z\\right)\\right) \\notag \\\\ &amp;= e^{\\beta y_\\mu} \\left( 1- H \\left( \\sqrt{\\frac{q}{1-q}} z\\right)\\right) + e^{-\\beta y_\\mu} H\\left( \\sqrt{\\frac{q}{1-q}} z\\right) \\tag{4.21} \\end{align}\\] となります。以上より . \\[-\\beta e(Q) = \\alpha n \\left[ \\int D_z \\log (e^{-\\beta y_\\mu} H + e^{\\beta y_\\mu} (1-H)) \\right]_{y_\\mu} \\tag{4.22}\\] ここで\\(\\alpha \\equiv M/N, H \\equiv H (\\sqrt{\\frac{q}{1-q}} z)\\)です。 . ",
+    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
+    "relUrl": "/infostat/ml#エネルギーの計算"
+  },"753": {
+    "doc": "機械学習",
+    "title": "エントロピーの計算",
+    "content": "残りのエントロピーの計算を行いましょう。 . \\[\\begin{align} &amp;\\prod_{a=1}^n \\int d\\mathbf{w}_a \\prod_{a\\neq b} \\delta (Nq - \\mathbf{w}_a^T \\mathbf{w}_b) \\prod_a \\delta (N- \\mathbf{w}_a^T \\mathbf{w}_a) \\notag \\\\ &amp;= \\prod_a \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( \\frac{1}{2} \\tilde{Q} \\sum_a (N-\\mathbf{w}_a \\mathbf{w}_a)\\right) \\exp \\left( -\\frac{\\tilde{q}}{2} \\sum_{a\\neq b} (Nq - \\mathbf{w}_a \\cdot \\mathbf{w}_b)\\right) \\tag{4.23} \\end{align}\\] \\(e\\)の肩の部分を整理すると . \\[\\frac{1}{2} nN \\tilde{Q} - \\frac{1}{2} \\tilde{q} q N n(n-1) - \\frac{\\tilde{Q}}{2} \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\frac{\\tilde{q}}{2} \\sum_{a \\neq b} \\mathbf{w}_a \\cdot \\mathbf{w}_b \\tag{4.24}\\] 最後の項を整理すると . \\[\\frac{\\tilde{q}}{2} \\left\\{ \\left( \\sum_a \\mathbf{w}_a\\right)^2 - \\sum_a \\mathbf{w}_a^2\\right\\} \\tag{4.25}\\] この\\((\\sum_a \\mathbf{w}_a)^2\\)の部分にHubbard-Stratonovich変換をして\\(\\sqrt{\\tilde{q}}\\mathbf{z} \\sum_a \\mathbf{w}_a\\)とすると . \\[(4.23) = \\int D_z \\prod_{a=1}^n \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( nN \\left( \\frac{1}{2} \\tilde{Q} + \\frac{1}{2} q \\tilde{q} \\right) \\right) \\exp \\left( -\\frac{1}{2} (\\tilde{Q} + \\tilde{q}) \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\sqrt{\\tilde{q}} \\mathbf{z} \\sum_a \\mathbf{w}_a \\right) \\tag{4.26}\\] 上式において\\(\\prod_a \\int d\\mathbf{w}_a \\exp (\\cdots)\\)の部分でガウス積分を実行すると\\(\\left( \\sqrt{\\frac{2\\pi}{\\tilde{Q} + \\tilde{q}}} \\exp \\left( \\frac{\\tilde{q} \\mathbf{z}^2}{2(\\tilde{Q} + \\tilde(q))}\\right)\\right)^{nN}\\)となります。計算していくと . \\[S(Q) = \\frac{1}{N} \\log \\prod_a \\int d\\mathbf{w}_a \\cdots = \\frac{n}{2} (\\tilde{Q} + q \\tilde{q}) - \\frac{n}{2} \\log(\\tilde{Q} + \\tilde{q}) + \\frac{n}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} \\tag{4.27}\\] ",
+    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
+    "relUrl": "/infostat/ml#エントロピーの計算"
+  },"754": {
+    "doc": "機械学習",
+    "title": "エントロピーに鞍点法を適用",
+    "content": "\\[\\frac{\\partial S}{\\partial \\tilde{Q}} = \\frac{1}{2} - \\frac{1}{2} \\frac{1}{\\tilde{Q} + \\tilde{q}} - \\frac{1}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} = 0 \\ \\Longrightarrow \\  \\therefore \\ 1 = \\frac{1}{\\tilde{Q} + \\tilde{q}} + \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.28}\\] \\[\\frac{\\partial S}{\\partial \\tilde{q}} = \\frac{1}{2} q - \\frac{\\tilde{q}}{2 (\\tilde{Q} + \\tilde{q})^2} = 0 \\ \\Longrightarrow \\  \\therefore \\ q = \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.29}\\] 以上より . \\[1-q = \\frac{1}{\\tilde{Q} + \\tilde{q}}, \\ q = (1-q^2) \\tilde{q} \\tag{4.30}\\] という恒等式を得ます。 . ",
+    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
+    "relUrl": "/infostat/ml#エントロピーに鞍点法を適用"
+  },"755": {
+    "doc": "機械学習",
+    "title": "エネルギーに鞍点法を適用",
+    "content": "(4.21)式よりエネルギーは以下のように書けたのでした。 . \\[-\\beta e(Q) = \\alpha n \\int D_z \\log(e^{-\\beta} H + e^{\\beta}(1-H))\\] ここで\\(H = H (\\sqrt{\\frac{q}{1-q}}z)\\)です。logの中身を\\(Y\\)と定義すると、エントロピー項から\\(\\frac{1}{2} q \\tilde{q}\\)が出てくることを合わせて . \\[\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\alpha \\int D_z \\frac{1}{Y} \\left[ e^{-\\beta} - e^\\beta \\right] H' \\left( \\frac{1}{2} \\frac{z}{\\sqrt{q} \\sqrt{1-q}} + \\frac{1}{2} \\frac{\\sqrt{q}z}{(1-q)^{3/2}}\\right) = 0 \\tag{4.31}\\] ここで . \\[\\int D_z z f(az) = \\int D_z a f'(az)\\] を用いると . \\[\\begin{align} &amp;\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\frac{\\alpha}{2} \\int D_z \\left[ \\frac{e^{-\\beta}-e^\\beta}{Y} H'' \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right) - \\frac{1}{Y^2} (e^{-\\beta} -e^\\beta)^2 (H')^2 \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right)\\right] = 0 \\notag \\\\ &amp;\\Longrightarrow \\  \\tilde{q} = - \\frac{\\alpha}{(1-q)^2} \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.32} \\end{align}\\] (4.30), (4.32)式より . \\[q = -\\alpha \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.33}\\] これは\\(q\\)についての自己無撞着方程式になっています。この式において\\(\\beta \\rightarrow \\infty\\)を考えましょう。すると\\(Y = e^{-\\beta} H + e^\\beta (1-H)\\)より . \\[q \\rightarrow \\alpha \\int D_z \\left( \\frac{H''}{1-H} - \\left( \\frac{H'}{1-H}\\right)^2\\right) \\tag{4.34}\\] となります。\\(\\beta \\rightarrow \\infty\\)極限の\\(q\\)を横軸\\(\\alpha\\)で図示すると以下のようになります。 . この図の再現ができない...どこかで計算ミス？それとも作成したスクリプトのアルゴリズムの問題？ . この図から、\\(\\alpha &gt; 2\\)でスピン秩序パラメータが\\(q=1\\)に凍結することを表しています。ここで\\(q = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)です。この意味を考えるために、2種類のデータを分類することを考えましょう。\\(\\alpha = M/N\\)より、\\(\\alpha\\)はデータの数に比例しています。これが大きいとデータ分類の境界線がある狭い領域にのみ現れるようになり、同じ答えしか出せなくなります。これはパーセプトロンの性能限界を表していることがわかります。 . ",
+    "url": "http://localhost:4000/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
+    "relUrl": "/infostat/ml#エネルギーに鞍点法を適用"
+  },"756": {
+    "doc": "機械学習",
+    "title": "Hidden Manifold Model (arXiv: 2002.09339)",
+    "content": "これまで行ってきた計算には実は大問題があります。 . ",
+    "url": "http://localhost:4000/infostat/ml#hidden-manifold-model-arxiv-200209339",
+    "relUrl": "/infostat/ml#hidden-manifold-model-arxiv-200209339"
+  },"757": {
+    "doc": "機械学習",
+    "title": "古典的なモデル",
+    "content": "入力データがガウス分布に従っているとして . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( - \\frac{1}{2N} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right)\\] さらに出力は . \\[P(y_\\mu) = \\frac{1}{2} (\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) ) \\ \\mathrm{or} \\  y_\\mu = \\left\\{ \\begin{array}{ll} \\mathrm{sign} (\\mathbf{w}_0^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Teacher}) \\\\ \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Student}) \\end{array} \\right.\\] のように、教師モデルを模倣して生徒もモデルを考えます。これは古典的なモデルとして、1990年代にたくさん計算されました。 . ",
+    "url": "http://localhost:4000/infostat/ml#%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
+    "relUrl": "/infostat/ml#古典的なモデル"
+  },"758": {
+    "doc": "機械学習",
+    "title": "現実的なモデル",
+    "content": "しかし、現実は異なります。古典的な方法論に従って、複雑なモデルがたくさん生み出されました。しかし、それはこの機械学習の本質ではなく、これは現実を表すための重要な側面とは言えませんでした。重要なのはデータです。これまでの計算で用いられてきたランダムな分布のデータというものは本来ありえません(例えば、猫の画像は猫の構造を持っており、その時点でランダムではありません)。 \\(x, y\\)は何かしらの相関を持っており、そのような関係性がないデータを学習しても意味がありません。Hidden Manifold Modelとは\\(x, y\\)が何かしらの鍵を用いて生成されていると考えます。 . 簡単なものとして以下のようなものがあります。入力は . \\[\\mathbf{x}_\\mu = \\sigma \\left( \\frac{1}{\\sqrt{d}}F \\cdot \\mathbf{C}_\\mu \\right) \\qquad (F \\in \\mathbb{R}^{d \\times \\rho}, \\mathbf{C} \\in \\mathbb{R}^\\rho) \\tag{4.35}\\] そして出力は、入力と相関する形として . \\[y_\\mu = f\\left( \\frac{1}{\\sqrt{d}} \\mathbf{C}_\\mu^T \\mathbf{w}_0 \\right) \\tag{4.36}\\] 本質的なものは深い複雑な構造にあるのではなくて、データの相関にあるということを覚えておきましょう。 . 機械学習が上手くその性能を発揮しない背景には、入力と出力の相関が無いようなデータを持ってきていることが挙げられます。 深層学習の構造はどのような関数も近似できる(Universal approximator)ので、原理的にはどのような問題も最適化できるはずです。 . ",
+    "url": "http://localhost:4000/infostat/ml#%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
+    "relUrl": "/infostat/ml#現実的なモデル"
+  },"759": {
+    "doc": "機械学習",
+    "title": "Statistical Mechanics",
+    "content": "以降の文章は未完です。そのうち、授業で紹介された論文を読みつつ式を追います。 . (4.34), (4.35)から分配関数を計算します。 . \\[Z = \\int d\\mathbf{w} \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right)\\] ここでエネルギー部分に . \\[E(\\mathbf{w}) = \\frac{1}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x})^2 + \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w}\\] のように余分な項を付け足すことで過適合(overfitting)を避けます。レプリカ法を用いて . \\[[Z^n]_{\\mathbf{C}} = \\prod_a \\int d\\mathbf{w} \\left[ \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right) \\right]_{\\mathbf{C}} \\exp \\left( - \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w} \\right)\\] この計算においては\\(y\\)も\\(C\\)と\\(w\\)の内積になっているので、注意が必要です。ここではGaussian Equivalent Theorem(GET)という計算テクニックを用います。 . \\[\\lambda_\\mu^a = \\frac{1}{\\sqrt{d}} \\mathbf{w}_a^T \\sigma (\\frac{1}{\\sqrt{d}} F^T \\mathbf{C}_\\mu^T)\\] これから . \\[P(\\mathbb{\\lambda}_\\mu, \\nu_\\mu) \\propto \\exp \\left( -\\frac{1}{2} \\sum_{a, b} \\lambda_\\mu^a (A_\\mu^{-1})_{ab} \\lambda_\\mu^b- \\frac{1}{2} \\nu_\\mu A_0^{-1} \\nu_\\mu - \\frac{1}{2} \\sum_a \\nu_\\mu \\mathbf{B}_\\mu^T \\mathbf{\\lambda}_\\mu^a\\right)\\] ここで\\(A_n = \\frac{a^2}{d} \\mathbf{w}^a \\mathbf{w}^b+ \\frac{b^2}{d}\\mathbf{s}^a \\mathbf{s}^b, A_0 = \\frac{1}{d} \\mathbf{w}_0^T \\mathbf{w}_0, \\mathbf{B}_n = \\frac{b}{d} \\mathbf{s}^a \\cdot \\mathbf{w}_0\\)などです。 . ",
+    "url": "http://localhost:4000/infostat/ml#statistical-mechanics-1",
+    "relUrl": "/infostat/ml#statistical-mechanics-1"
+  },"760": {
+    "doc": "機械学習",
+    "title": "Appendix 1: \\(0&lt;n&lt;1\\)の系",
+    "content": "以前の講義で\\(n=0\\)はquenched系、\\(n=1\\)のannealed系に対応すると学びました。しかし、\\(0 &lt; n &lt;1\\)の系も存在します。これをpartial annealed系と呼びます。どちらの変数も動くが、動くスピードが違う(ゆっくり動く)とイメージできます。データを変えながら最適化を行う場合には、このような中途半端な\\(n\\)の値の系が実際の機械学習の系ではないかとされています。 . ",
+    "url": "http://localhost:4000/infostat/ml#appendix-1-0n1%E3%81%AE%E7%B3%BB",
+    "relUrl": "/infostat/ml#appendix-1-0n1の系"
+  },"761": {
+    "doc": "機械学習",
+    "title": "Appendix 2: レプリカ法のアプリケーション例",
+    "content": "量子アニーリングを用いて最適化問題を解く(イジングの基底状態を求める)という応用例があることから、量子ゆらぎの計算を導入します。その時の計算方法にレプリカ法が用いられます。最近ではAdS/CFT対応の文脈でもレプリカ法が用いられており、論文数が増えていると言われています。 . ",
+    "url": "http://localhost:4000/infostat/ml#appendix-2-%E3%83%AC%E3%83%97%E3%83%AA%E3%82%AB%E6%B3%95%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%BE%8B",
+    "relUrl": "/infostat/ml#appendix-2-レプリカ法のアプリケーション例"
+  },"762": {
+    "doc": "機械学習",
+    "title": "参考文献及びリンク",
+    "content": ". | [1] 大関真之 YouTube動画 “Statistical physics and information processing vol. 3 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】” | . ",
+    "url": "http://localhost:4000/infostat/ml#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E3%81%B3%E3%83%AA%E3%83%B3%E3%82%AF",
+    "relUrl": "/infostat/ml#参考文献及びリンク"
+  },"763": {
+    "doc": "機械学習",
+    "title": "機械学習",
+    "content": ". | 機械学習 (Machine Learning) . | 教師あり学習 (Supervised learning) | Loss function (error, 損失関数、誤差関数) | Perceptron (パーセプトロン) | Statistical Mechanics | \\(u_\\mu^{a=1, 2, \\cdots, n}\\) property | Equivalence representation | エネルギーの計算 | エントロピーの計算 | エントロピーに鞍点法を適用 | エネルギーに鞍点法を適用 | . | Hidden Manifold Model (arXiv: 2002.09339) . | 古典的なモデル | 現実的なモデル | Statistical Mechanics | . | Appendix 1: \\(0&lt;n&lt;1\\)の系 | Appendix 2: レプリカ法のアプリケーション例 | 参考文献及びリンク | . ",
+    "url": "http://localhost:4000/infostat/ml",
+    "relUrl": "/infostat/ml"
   },"764": {
     "doc": "数理最適化",
     "title": "数理最適化 (Mathematical Optimization)",
@@ -8826,305 +8826,353 @@
     "relUrl": "/galady/twobody#応用-連星の観測"
   },"1471": {
     "doc": "2体問題",
+    "title": "参考文献",
+    "content": "野本憲一, 定金晃三, 佐藤勝彦, “恒星” . ",
+    "url": "http://localhost:4000/galady/twobody#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    "relUrl": "/galady/twobody#参考文献"
+  },"1472": {
+    "doc": "2体問題",
     "title": "2体問題",
-    "content": ". | 2体問題 . | 相対座標による表現 | 極座標での表現 | 変数変換 | 楕円軌道 | 軌道長半径を求める | ケプラーの第二法則の導出 | ケプラーの第三法則の導出 | 応用: 連星の観測 . | 実視連星 | 分光連星 | . | . | . ",
+    "content": ". | 2体問題 . | 相対座標による表現 | 極座標での表現 | 変数変換 | 楕円軌道 | 軌道長半径を求める | ケプラーの第二法則の導出 | ケプラーの第三法則の導出 | 応用: 連星の観測 . | 実視連星 | 分光連星 | . | . | 参考文献 | . ",
     "url": "http://localhost:4000/galady/twobody",
     "relUrl": "/galady/twobody"
-  },"1472": {
+  },"1473": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "一様磁場中での荷電粒子の運動",
     "content": "\\(z\\)軸方向を向いた一様磁場\\(\\mathbf{B} = (0, 0, B_0)\\)の中で、質量\\(m\\)、電荷\\(q\\)の荷電粒子が行う運動を考えましょう。簡単のため、荷電粒子の初速度は\\(\\mathbf{v} = (0, v_0, 0)\\)とします。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E4%B8%80%E6%A7%98%E7%A3%81%E5%A0%B4%E4%B8%AD%E3%81%A7%E3%81%AE%E8%8D%B7%E9%9B%BB%E7%B2%92%E5%AD%90%E3%81%AE%E9%81%8B%E5%8B%95",
     "relUrl": "/astroelec/uniform_mag#一様磁場中での荷電粒子の運動"
-  },"1473": {
+  },"1474": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "運動方程式とその解",
     "content": "運動方程式 . \\[m \\frac{d \\mathbf{v}}{dt} = q \\frac{\\mathbf{v}}{c} \\times \\mathbf{B}\\] を成分ごとに書くと以下のようになります。 . \\[m \\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) = \\frac{q}{c} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) \\times \\left( \\begin{array}{c} 0 \\\\ 0 \\\\ B_0 \\end{array} \\right) \\ \\Longrightarrow \\ \\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ v_z \\end{array} \\right) = \\frac{q}{mc} \\left( \\begin{array}{c} v_y B_0 \\\\ - v_x B_0\\\\ 0 \\end{array} \\right)\\] これをスマートに解くために、\\(Z = v_x + i v_y\\)という複素数を導入して解きます。\\(x, y\\)成分より . \\[\\frac{d Z}{dt} = \\frac{d v_x}{dt} + i \\frac{d v_y}{dt} = \\frac{qB_0}{mc} (v_y -i v_x) = - i \\omega_c Z \\ \\Longrightarrow \\ Z = C_1 e^{-i \\omega_c t}\\] \\(C_1\\)は定数、そして\\(\\omega_c \\equiv \\frac{q B_0}{m c}\\)はサイクロトロン振動数です。初期条件より . \\[0+ i v_0 = Z(t=0) = C_1 \\ \\Longrightarrow \\ C_1 = i v_0\\] \\[\\therefore \\ Z = v_x + i v_y = v_0 \\sin \\omega_c t + i v_0 \\cos \\omega_c t \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{ll} v_x = v_0 \\sin \\omega_c t \\\\ v_y = v_0 \\cos \\omega_c t \\end{array} \\right. \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{ll} x = -\\frac{v_0}{\\omega_c} \\cos \\omega_c t + C_2 \\\\ y = \\frac{v_0}{\\omega_c} \\sin \\omega_c t + C_3 \\end{array} \\right. \\tag{1}\\] \\(C_2, C_3\\)はそれぞれ積分定数です。 \\(z\\)方向の運動は運動方程式より力が働いていないので、等速直線運動をします。さらに初期の\\(z\\)方向の速度がないので、この粒子は\\(z\\)方向には動かず、\\(xy\\)平面内を半径\\(a_L = v_0/\\omega_c\\)の円運動をします。これを Larmor radius (ラーモア半径)と呼びます。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%9D%E3%81%AE%E8%A7%A3",
     "relUrl": "/astroelec/uniform_mag#運動方程式とその解"
-  },"1474": {
+  },"1475": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "反磁性",
     "content": "荷電粒子の円運動によって生じる電流は一様磁場を増やす働きをするか、減らす働きをするかを考察しましょう。以下のように電荷の正負で場合分けします。 . 正電荷の場合 . \\(q &gt; 0\\)のとき(1)式より、この電荷は時計回りに円運動します。この電荷の運動により生じる円電流も時計回りです。この電流により新たに生じる磁場はBiot-Savartの法則より\\(z\\)軸負の向きとわかるため、確かに電荷は磁場を打ち消す方向に運動します。 . 負電荷の場合 . \\(q &lt; 0\\)のとき(1)式より、この電荷は反時計回りに円運動します。この電荷の運動により生じる円電流は、電荷が負であることから時計回りです。この電流により新たに生じる磁場も先ほどと同様に\\(z\\)軸負の向きとなるため、こちらでも同様に電荷は磁場を打ち消す方向に運動することがわかります。 . 上の2つを合わせると、荷電粒子は外部磁場を打ち消す反磁性電流を出現させる方向に運動することがわかります。もし外部磁場を助長する電流を出現させる方向に荷電粒子が運動を行うと、その外部磁場に新たに発生した磁場が加わったことによる全磁場によってさらに磁場を助長する円電流を出現させることになります。これでは有限の外部磁場から無限に磁場のエネルギーを発生させることができるようになり、不自然です。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E5%8F%8D%E7%A3%81%E6%80%A7",
     "relUrl": "/astroelec/uniform_mag#反磁性"
-  },"1475": {
+  },"1476": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "例: 電子の場合",
     "content": "以下では電子の場合を計算しましょう。サイクロトロン振動数は . \\[\\begin{align} \\omega_{ce} &amp;= \\frac{e B_0}{m_e c} \\simeq \\underbrace{\\left( \\frac{e^2}{\\hbar c} \\right)^{1/2}}_{=\\left(\\frac{1}{137}\\right)^{1/2}} \\overbrace{(\\hbar c)^{1/2}}^{(197 \\mathrm{MeV \\cdot fm})^{1/2}} \\frac{c}{\\underbrace{m_e c^2}_{0.511 \\mathrm{MeV}}} B_0 \\simeq \\left(\\frac{200}{140}\\right)^{1/2} \\frac{(1 \\mathrm{fm})^{1/2} \\times 3 \\times 10^{10} \\mathrm{cm \\ s^{-1}}}{ (0.5 \\times 10^6 \\times 1.6 \\times 10^{-19} \\times 10^7 \\mathrm{erg})^{1/2}} B_0 \\notag \\\\ &amp;\\simeq 1.9 \\times 10^7 B_0 \\ [\\mathrm{s}^{-1}] \\notag \\end{align}\\] となります。典型的な星間空間磁場の大きさ\\(B_0 = 1 \\mathrm{\\mu G}\\)を代入すると\\(\\omega_{ce} \\sim 19 [\\mathrm{s}^{-1}]\\)です。途中の計算では微細構造定数\\(\\frac{e^2}{\\hbar c} \\sim \\frac{1}{137}, \\hbar c \\sim 197 \\mathrm{MeV \\cdot fm}\\)、そして電子の静止質量エネルギー\\(m_e c^2 \\sim 511 \\mathrm{keV}\\)を用いました。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag#%E4%BE%8B-%E9%9B%BB%E5%AD%90%E3%81%AE%E5%A0%B4%E5%90%88",
     "relUrl": "/astroelec/uniform_mag#例-電子の場合"
-  },"1476": {
+  },"1477": {
     "doc": "一様磁場中での荷電粒子の運動",
     "title": "一様磁場中での荷電粒子の運動",
     "content": ". | 一様磁場中での荷電粒子の運動 . | 運動方程式とその解 | 反磁性 . | 正電荷の場合 | 負電荷の場合 | . | 例: 電子の場合 | . | . ",
     "url": "http://localhost:4000/astroelec/uniform_mag",
     "relUrl": "/astroelec/uniform_mag"
-  },"1477": {
+  },"1478": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "一様磁場中で相対論的な運動をする電子",
     "content": " ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E4%B8%80%E6%A7%98%E7%A3%81%E5%A0%B4%E4%B8%AD%E3%81%A7%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E3%81%AA%E9%81%8B%E5%8B%95%E3%82%92%E3%81%99%E3%82%8B%E9%9B%BB%E5%AD%90",
     "relUrl": "/astroelec/uniform_mag_rel#一様磁場中で相対論的な運動をする電子"
-  },"1478": {
+  },"1479": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "運動方程式",
     "content": "電磁場テンソルのページの(5), (6)式において、一様磁場\\(\\mathbf{B} = B_0 \\mathbf{e}_z, \\mathbf{E} = \\mathbf{0}, e \\rightarrow -e\\)とすれば運動方程式が求まります。 . \\[\\frac{d}{dt} (m_e \\gamma c^2) = 0 \\tag{1}\\] \\[\\frac{d}{dt} (m_e \\gamma \\mathbf{v}) = -\\frac{e}{c} \\mathbf{v} \\times \\mathbf{B} \\tag{2}\\] それではこれを解いていきましょう。(1)式より . \\[\\frac{d\\gamma}{dt} = 0 \\ \\Longrightarrow \\  \\gamma = \\mathrm{Const.} \\tag{3}\\] また(2)式に(3)を用いて . \\[\\frac{d \\mathbf{v}}{dt} = -\\frac{e}{m_e \\gamma c} \\mathbf{v} \\times \\mathbf{B} \\tag{4}\\] 簡単のため、電子の速度ベクトルは\\(xy\\)平面内にあるとします。すなわち\\(\\mathbf{v} = (v_x, v_y, 0)\\)とすると . \\[\\frac{d}{dt} \\left( \\begin{array}{c} v_x \\\\ v_y \\\\ 0 \\end{array} \\right) = - \\frac{eB_0}{m_e \\gamma c} \\left( \\begin{array}{c} v_y \\\\ -v_x \\\\ 0 \\end{array} \\right)\\] ここで、複素数\\(Z = v_x + i v_y\\)を導入すると . \\[\\begin{align} &amp;\\frac{d Z}{dt} = \\frac{dv_x}{dt} + i \\frac{d v_y}{dt} = - \\frac{eB_0}{m_e \\gamma c} (v_y - i v_x) = i \\frac{eB_0}{m_e \\gamma c} (v_x + i v_y) = i \\frac{eB_0}{m_e \\gamma c} Z \\notag \\\\ &amp;\\Longrightarrow \\ Z = A e^{i \\frac{eB_0}{m_e \\gamma c} t} = A e^{i \\omega_\\mathrm{se} t} \\quad (\\omega_\\mathrm{se} \\equiv \\frac{\\omega_\\mathrm{ce}}{\\gamma} = \\frac{eB_0}{m_e \\gamma c}) \\tag{5} \\end{align}\\] \\[\\therefore \\ \\left\\{ \\begin{array}{c} v_x = A \\cos \\omega_{se} t \\\\ v_y = A \\sin \\omega_{se} t \\end{array} \\right. \\ \\Longrightarrow \\ \\left\\{ \\begin{array}{lll} x = \\frac{A}{\\omega_{se}} \\sin \\omega_{se} t + C_1\\\\ y = - \\frac{A}{\\omega_{se}} \\cos \\omega_{se}t + C_2 \\end{array} \\right. \\ \\ \\ (A, C_1 , C_2 : \\mathrm{const.}) \\tag{6}\\] \\(C_1 = C_2 = 0\\)とすると . \\[x^2 + y^2 = \\left( \\frac{A}{\\omega_\\mathrm{se}}\\right)\\] より、電子は半径\\(A/\\omega_\\mathrm{se}\\)の円運動をすることがわかります。また角周波数は\\(\\omega_\\mathrm{se} = \\omega_\\mathrm{ce}/\\gamma\\)となります。\\(t = 0\\)で\\(\\mathbf{v} = (v_0, 0, 0)\\)とすると、\\(A = v_0\\)より . \\[r_L = \\frac{v_0}{\\omega_\\mathrm{se}} = \\frac{v_0 \\gamma}{\\omega_\\mathrm{ce}} = \\frac{m_e c \\gamma v_0}{e B_0} \\tag{7}\\] です。これはラーモア半径と呼ばれています。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F",
     "relUrl": "/astroelec/uniform_mag_rel#運動方程式"
-  },"1479": {
+  },"1480": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "全放射強度",
     "content": "さらに、ピッチ角(電子の速度ベクトルと磁場のなす角)が\\(\\alpha\\)の電子からの全放射強度を求めましょう。リエナーの式より . \\[P_e = \\frac{2e^2}{3c^3} [ \\gamma^6 (\\dot{v}^2 - |\\dot{\\bf v} \\times \\boldsymbol{\\beta}|^2)]\\] そして(4)式から . \\[\\dot{\\mathbf{v}} = - \\frac{e}{m_e c\\gamma} \\mathbf{v} \\times \\mathbf{B}\\] でした。そしてピッチ角の定義から、この式をさらに変形することができます。 . \\[\\dot{v} = |\\dot{\\mathbf{v}}| = \\frac{e}{m_e c \\gamma} |\\mathbf{v} \\times \\mathbf{B}| = \\frac{e B_0}{m_e c \\gamma} v \\sin \\alpha = \\omega_\\mathrm{se} v \\sin \\alpha\\] 一様磁場中を運動する荷電粒子においては加速度と速度は直交する、すなわち\\(\\dot{\\mathbf{v}} \\perp \\boldsymbol{\\beta}\\)より . \\[|\\dot{\\bf v} \\times \\boldsymbol{\\beta}|^2 = \\dot{v}^2 \\beta^2\\] です。以上より、この電子からの全放射強度は . \\[P_e = \\frac{2e^2}{3c^3} [\\gamma^6 \\{ \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha - \\beta^2 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha \\} ] = \\frac{2e^2}{3c^3} [\\gamma^6 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha (1- \\beta^2)] = \\frac{2e^2}{3c^3} [\\gamma^4 \\omega_\\mathrm{se}^2 v^2 \\sin^2 \\alpha]\\] ここで古典電子半径\\(r_0 = \\frac{e^2}{m_e c^2} (\\sim 3 \\mathrm{fm})\\)を用いると . \\[P_e = \\frac{2e^2}{3c^3} [\\gamma^4 (\\frac{eB_0}{m_e c \\gamma})^2 v^2 \\sin^2 \\alpha] = \\frac{2}{3c} r_0^2 [\\gamma^2 B_0^2 v^2 \\sin^2 \\alpha] = \\frac{2c}{3} r_0^2 [\\gamma^2 B_0^2 \\beta^2 \\sin^2 \\alpha] \\tag{8}\\] となります。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E5%85%A8%E6%94%BE%E5%B0%84%E5%BC%B7%E5%BA%A6",
     "relUrl": "/astroelec/uniform_mag_rel#全放射強度"
-  },"1480": {
+  },"1481": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "等方的な電子分布からのシンクロトロン全放射強度",
     "content": "先ほどはピッチ角\\(\\alpha\\)の電子1個からの全放射強度を計算しましたが、これを様々な\\(\\alpha\\)を持つ電子集団について考え、その平均値を求めてみましょう。簡単のため、以下の計算では電子の速度分布が等方的であるとします。 進行方向について平均を取る操作を行いましょう。 . \\[P_\\mathrm{sync} = \\frac{1}{4\\pi} \\int_0^{2\\pi} d \\varphi \\int_0^\\pi d\\alpha \\sin \\alpha P_e = \\frac{c}{3} r_0^2 \\int_0^\\pi d\\alpha [\\gamma^2 B_0^2 \\beta^2 \\sin^3 \\alpha] = \\frac{4}{9} c r_0^2 [\\gamma^2 B_0^2 \\beta^2]\\] です。途中 . \\[\\begin{align} \\sin^3 \\alpha &amp;= \\sin^2 \\alpha \\sin \\alpha = \\frac{1}{2} (1 - \\cos 2\\alpha) \\sin \\alpha = \\frac{1}{2} \\sin \\alpha - \\frac{1}{2} \\cos 2\\alpha \\sin \\alpha \\notag \\\\ &amp;= \\frac{1}{2} \\sin \\alpha - \\frac{1}{4}(\\sin 3\\alpha- \\sin\\alpha) = \\frac{3}{4} \\sin \\alpha - \\frac{1}{4} \\sin 3\\alpha \\tag{9} \\end{align}\\] を用いました。さらにトムソン散乱断面積\\(\\sigma_T = \\frac{8\\pi}{3} r_0^2\\)と磁場のエネルギー密度\\(U_B = \\frac{1}{8\\pi} B^2\\)を用いて整理します。 . \\[P_\\mathrm{sync} = \\frac{4}{9} c \\frac{3}{8\\pi} \\sigma_T[\\gamma^2 8\\pi U_B \\beta^2] = \\frac{4}{3} c \\sigma_T[\\gamma^2 U_B \\beta^2] \\tag{10}\\] これが1個の電子が磁場の周りを運動するときに出す放射、シンクロトロン放射の全放射強度(の電子の速度ベクトル方向に対して平均をとったもの)です。 . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel#%E7%AD%89%E6%96%B9%E7%9A%84%E3%81%AA%E9%9B%BB%E5%AD%90%E5%88%86%E5%B8%83%E3%81%8B%E3%82%89%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%AF%E3%83%AD%E3%83%88%E3%83%AD%E3%83%B3%E5%85%A8%E6%94%BE%E5%B0%84%E5%BC%B7%E5%BA%A6",
     "relUrl": "/astroelec/uniform_mag_rel#等方的な電子分布からのシンクロトロン全放射強度"
-  },"1481": {
+  },"1482": {
     "doc": "一様磁場中で相対論的な運動をする電子",
     "title": "一様磁場中で相対論的な運動をする電子",
     "content": ". | 一様磁場中で相対論的な運動をする電子 . | 運動方程式 | 全放射強度 | 等方的な電子分布からのシンクロトロン全放射強度 | . | . ",
     "url": "http://localhost:4000/astroelec/uniform_mag_rel",
     "relUrl": "/astroelec/uniform_mag_rel"
-  },"1482": {
+  },"1483": {
     "doc": "万能近似定理",
     "title": "1次元ニューラルネットワークの万能近似定理",
     "content": "ニューラルネットワークには、どのような関数も近似して表現することができる万能近似定理(univearsal approximation theorem; 普遍性定理とも訳される)があります。以下ではこの証明を追っていきましょう。 . 以下の説明は”これならわかる機械学習”の4.2.1章部分を分かりやすくするために、自分なりに図の挿入や式変形などを行ったものです。 . ",
     "url": "http://localhost:4000/ml/universal_approximation#1%E6%AC%A1%E5%85%83%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AE%E4%B8%87%E8%83%BD%E8%BF%91%E4%BC%BC%E5%AE%9A%E7%90%86",
     "relUrl": "/ml/universal_approximation#1次元ニューラルネットワークの万能近似定理"
-  },"1483": {
+  },"1484": {
     "doc": "万能近似定理",
     "title": "問題設定",
     "content": "簡単のため入力はスカラー\\(x\\)ただ一つ、そして隠れ層(入力でも出力でもない中間層)は1層とします。 . すると1層目の出力は . \\[L_i^{(1)} = g(w_i^{(1)} x + b_i^{(1)}) \\qquad (i \\in [0, 1, \\dots, n_\\mathrm{unit}-1]) \\tag{1}\\] のようになります。ここで\\(g\\)はユニット部分の活性化関数です。今、問題をさらに簡単にするために活性化関数をステップ関数\\(g = \\sigma_\\mathrm{step}\\)のようにします。すると出力される値は . \\[f(x) = \\sum_{i=0}^{n_\\mathrm{unit}-1} w_i^{(2)} L_i^{(1)} + b^{(2)} = \\sum_{i=0}^{n_\\mathrm{unit}-1} w_i^{(2)} \\sigma_\\mathrm{step} \\left( w_{i}^{(1)} x + b_i^{(1)} \\right)+ b^{(2)} \\tag{2}\\] となります。 . ",
     "url": "http://localhost:4000/ml/universal_approximation#%E5%95%8F%E9%A1%8C%E8%A8%AD%E5%AE%9A",
     "relUrl": "/ml/universal_approximation#問題設定"
-  },"1484": {
+  },"1485": {
     "doc": "万能近似定理",
     "title": "各層で何が起こるのか",
     "content": "いきなり出力された(2)式から何が起こっているのかを判断するのは難しいため、1層目と2層目で何が起こっているのかを\\(n_\\mathrm{unit}=1\\)の場合に見てみましょう。このとき1層目から出力されるのは、(1)式より . \\[L_0^{(1)} (x) = \\sigma_\\mathrm{step} (w_0^{(1)} x + b_0^{(1)})\\] です。ここで\\(w_0^{(1)} \\neq 0\\)とすると . \\[L_0^{(1)} (x) = \\sigma_\\mathrm{step} (w_0^{(1)} (x- \\tilde{b}_0^{(1)})) \\qquad (\\tilde{b}_0^{(1)} \\equiv - b_0^{(1)} / w_0^{(1)})\\] のように変形することができます。よって\\(\\tilde{b}_0^{(1)}\\)の値によって、ステップの場所を任意に定めることが可能です。 . ここにさらに\\(w_0^{(2)}\\)をかけた . \\[w_0^{(2)} \\sigma_\\mathrm{step} \\left(w_0^{(1)}(x - \\tilde{b}_0^{(1)}) \\right)\\] は\\(w_0^{(2)}\\)によってステップの高さを自由に調整できる関数であり、そしてここにバイアスを追加した . \\[f(x) = w_0^{(2)} \\sigma_\\mathrm{step} \\left(w_0^{(1)}(x - \\tilde{b}_0^{(1)}) \\right) + b^{(2)}\\] はステップ全体の値を変えることが可能であることがわかります。 . このようにして自由にステップの始まる高さやステップそれ自体の高さ、そしてステップ全体の値を設定できることから、\\(n_\\mathrm{unit}\\)を増やすことで任意の関数を近似的に表現することができるようになるとわかります。 . ",
     "url": "http://localhost:4000/ml/universal_approximation#%E5%90%84%E5%B1%A4%E3%81%A7%E4%BD%95%E3%81%8C%E8%B5%B7%E3%81%93%E3%82%8B%E3%81%AE%E3%81%8B",
     "relUrl": "/ml/universal_approximation#各層で何が起こるのか"
-  },"1485": {
+  },"1486": {
     "doc": "万能近似定理",
     "title": "ユニットを増やす",
     "content": "例えば\\(n_\\mathrm{unit}=2\\)としてみましょう。先程と同様に\\(\\tilde{b}_i^{(1)} = -b_i^{(1)} / w_i^{(1)} \\ (i = 0, 1)\\)とすると . \\[f(x) = w_0^{(2)}\\sigma_\\mathrm{step} (w_0^{(1)}(x-\\tilde{b}_0^{(1)})) + w_1^{(2)}\\sigma_\\mathrm{step} (w_1^{(1)}(x-\\tilde{b}_1^{(1)})) + b^{(2)} \\tag{3}\\] のようになります。ここで例えば\\(w_0^{(1)} = w_1^{(1)} = 1, \\tilde{b}_0^{(1)} = 0.5, \\tilde{b}_1^{(1)} = -0.5, w_0^{(2)} = -1, w_1^{(2)} = 1, b^{(2)} = 0\\)のように定めれば . \\[f(x) = \\left\\{ \\begin{array}{cl} 1 &amp; (-0.5 \\leq x \\leq 0.5) \\\\ 0 &amp; (\\mathrm{otherwise}) \\end{array} \\right.\\] のような矩形関数を描くことができます。2つのユニットから矩形を1つ作ることができるので、これを増やしていけばどのような関数でも近似することができます。このような理由から1次元ニューラルネットワークは任意の連続関数を望む精度で表現することが可能です。 . ",
     "url": "http://localhost:4000/ml/universal_approximation#%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%82%92%E5%A2%97%E3%82%84%E3%81%99",
     "relUrl": "/ml/universal_approximation#ユニットを増やす"
-  },"1486": {
+  },"1487": {
     "doc": "万能近似定理",
     "title": "参考文献",
     "content": ". | [1] 富谷昭夫, “これならわかる機械学習” | [2] Michael Nielsen, “Neural Networks and Deep Learning” website, Chapter 4 | . ",
     "url": "http://localhost:4000/ml/universal_approximation#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/ml/universal_approximation#参考文献"
-  },"1487": {
+  },"1488": {
     "doc": "万能近似定理",
     "title": "万能近似定理",
     "content": ". | 1次元ニューラルネットワークの万能近似定理 . | 問題設定 | 各層で何が起こるのか | ユニットを増やす | . | 参考文献 | . ",
     "url": "http://localhost:4000/ml/universal_approximation",
     "relUrl": "/ml/universal_approximation"
-  },"1488": {
+  },"1489": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトル・共変ベクトル",
     "content": "基底ベクトルの変換則 . \\[e'_\\nu = \\frac{\\partial x^\\mu}{\\partial x'^\\nu} e_\\mu\\] は前のメモですでに導出しました。今度はこれと添字が反対の変換則になっている反変なもの . \\[A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu} A'^\\mu\\] そして添字が同じ変換則になっている共変なもの . \\[A_\\nu = \\frac{\\partial x^\\mu}{\\partial x'^\\nu} A'_\\mu\\] のベクトルの導出を行います。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%8F%8D%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%85%B1%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#反変ベクトル共変ベクトル"
-  },"1489": {
+  },"1490": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトル",
     "content": "あるベクトル\\({\\bf A}\\)は . \\[{\\bf A} = A^\\nu {\\bf e}_\\nu = A'^\\mu {\\bf e'}_\\mu\\] のように書くことができます。ここで座標基底の変換則より . \\[{\\bf A} = A'^\\mu \\frac{\\partial x^\\nu}{\\partial x'^\\mu} {\\bf e}_\\nu = A^\\nu {\\bf e}_\\nu \\ \\Longrightarrow \\ \\therefore A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu} A'^\\mu\\] これは座標基底の変換則と添字が分子分母で逆になっています。このことからこれを反変ベクトル(contravariant vector)と呼びます。上述では’のない座標基底から’のついた座標基底への変換を考えました。ではその逆はどうなるでしょうか。 . \\[A^\\nu = \\frac{\\partial x^\\nu}{\\partial x'^\\mu}A'^\\mu \\ \\Longrightarrow \\ \\frac{\\partial x'^\\alpha}{\\partial x^\\nu}A^\\nu = \\underbrace{\\frac{\\partial x'^\\alpha}{\\partial x^\\nu} \\frac{\\partial x^\\nu}{\\partial x'^\\mu}}_{=\\delta^\\alpha_\\mu}A'^\\mu = A'^\\alpha \\ \\Longrightarrow \\ A'^\\alpha = \\frac{\\partial x'^\\alpha}{\\partial x^\\nu}A^\\nu\\] となり、’系から’のない系への変換もやはり座標基底の変換則の逆になっていることがわかります。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%8F%8D%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#反変ベクトル"
-  },"1490": {
+  },"1491": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "共変ベクトル",
     "content": "\\({\\bf A}\\)の大きさの2乗を考えましょう。 . \\[\\left| {\\bf A} \\right| ^2 = {\\bf A} \\cdot{\\bf A} = A^\\mu {\\bf e}_\\mu \\cdot A^\\nu {\\bf e}_\\nu = g_{\\mu \\nu} A^\\mu A^\\nu\\] 大きさは’系でも’のない系でも変わらないので . \\[\\left| {\\bf A}\\right| ^2 = g'_{\\mu \\nu} A'^\\mu A'^\\nu = \\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma} \\frac{\\partial x'^\\nu}{\\partial x^\\delta} A^\\gamma A^\\delta = \\underbrace{\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma}}_{\\delta^\\alpha_\\gamma} \\underbrace{\\frac{\\partial x^\\beta}{\\partial x'^\\nu} \\frac{\\partial x'^\\nu}{\\partial x^\\delta}}_{\\delta^\\beta_\\delta} g_{\\alpha \\beta} A^\\gamma A^\\delta = g_{\\gamma \\delta} A^\\gamma A^\\delta\\] ここで共変ベクトルを . \\[A_\\nu \\equiv g_{\\mu \\nu} A^\\mu = g_{\\nu \\mu} A^\\mu\\] のように定義します。このベクトルの’系への座標変換を考えましょう。座標基底の変換則から . \\[A'_\\nu = g_{\\mu'\\nu'} A'^\\mu =\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma} A^\\gamma = \\underbrace{\\frac{\\partial x^\\alpha}{\\partial x'^\\mu} \\frac{\\partial x'^\\mu}{\\partial x^\\gamma}}_{\\delta^\\alpha_\\gamma} \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} A^\\gamma = \\frac{\\partial x^\\beta}{\\partial x'^\\nu} g_{\\alpha \\beta} A^\\alpha = \\frac{\\partial x^\\beta}{\\partial x'^\\nu} A_\\beta\\] これは座標基底と同じ変換則です。よってこれを改めて共変ベクトル(covariant vactor)と呼びます。この変換則に従うベクトル(テンソル)を一階の共変テンソルと呼びます。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%85%B1%E5%A4%89%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB",
     "relUrl": "/gr/vector#共変ベクトル"
-  },"1491": {
+  },"1492": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "共変テンソル",
     "content": "では二階の共変テンソルとはどのようなものでしょうか。 . \\[A'_\\alpha B'_\\beta = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}} A_\\mu \\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} B_\\nu = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}}\\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} A_\\mu B_\\nu\\] ここで\\(T_{\\mu \\nu} \\equiv A_\\mu B_\\nu\\)と定義しましょう。 . \\[T_{\\alpha'\\beta'} = \\frac{\\partial x^\\mu}{\\partial x^{\\alpha'}}\\frac{\\partial x^\\nu}{\\partial x^{\\beta'}} T_{\\mu \\nu}\\] こちらを二階の共変テンソルと定義します。途中で\\(x'^\\beta\\)を\\(x^{\\beta'}\\)と表記しました。以降の一般相対論のメモでは特に何もない限りこの表記を使います。 最後に\\(|{\\bf A}|^2\\)をもう一度考えましょう。 . \\[\\left| {\\bf A}\\right| ^2 = {\\bf A} \\cdot {\\bf A} = g_{\\mu \\nu} A^\\mu A^\\nu = A_\\nu A^\\mu\\] さらに . \\[A_{\\mu'} A^{\\nu'} = \\frac{\\partial x^\\alpha}{\\partial x^{\\nu'}} \\frac{\\partial x^{\\nu'}}{\\partial x^{\\beta}} A_\\alpha A^\\beta = \\delta^\\alpha_\\beta A_\\alpha A^\\beta = A_\\alpha A^\\alpha\\] となります。これはベクトルの大きさの二乗が改めてスカラーであり、座標変換に対して不変であることを意味します。これは同時に微小変位ベクトルの大きさの二乗\\(dx^2 = d{\\bf x} \\cdot d{\\bf x}\\)などもスカラーであることを意味します。 . ",
     "url": "http://localhost:4000/gr/vector#%E5%85%B1%E5%A4%89%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB",
     "relUrl": "/gr/vector#共変テンソル"
-  },"1492": {
+  },"1493": {
     "doc": "反変ベクトルと共変ベクトル",
     "title": "反変ベクトルと共変ベクトル",
     "content": ". | 反変ベクトル・共変ベクトル . | 反変ベクトル | 共変ベクトル | 共変テンソル | . | . ",
     "url": "http://localhost:4000/gr/vector",
     "relUrl": "/gr/vector"
-  },"1493": {
+  },"1494": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場と輻射場の性質",
     "content": "運動する点電荷が作る電磁場の性質を考えましょう。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E9%80%9F%E5%BA%A6%E5%A0%B4%E3%81%A8%E8%BC%BB%E5%B0%84%E5%A0%B4%E3%81%AE%E6%80%A7%E8%B3%AA",
     "relUrl": "/astroelec/vel_rad#速度場と輻射場の性質"
-  },"1494": {
+  },"1495": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場",
     "content": "電場の式のうちの第一項 . \\[\\mathbf{E} (\\mathbf{r}, t) = q\\left[ \\frac{(1-\\beta^2)(\\mathbf{n}- \\boldsymbol{\\beta})}{\\kappa^3 R^2} \\right] \\tag{1}\\] を速度場と呼びます。点電荷が等速度運動しているときの電場の様子を示してみましょう。 . \\([\\dot{\\boldsymbol{\\beta}}] = \\mathbf{0}\\)のとき、\\(t-t_\\mathrm{ret} = R(t_\\mathrm{ret})/c\\)より点電荷は電磁波が観測者の位置\\(\\mathbf{r}\\)に到達するまでに\\(\\frac{R(t_\\mathrm{ret})}{c} \\mathbf{u}\\)だけ移動します。よって . \\[\\mathbf{R} (t) = \\mathbf{r}- \\mathbf{r}_0 (t) = \\mathbf{r} - \\left( \\mathbf{r}_0(t_\\mathrm{ret}) + \\frac{R(t_\\mathrm{ret})}{c} \\mathbf{u}\\right) = \\mathbf{R}(t_\\mathrm{ret}) -R(t_\\mathrm{ret}) \\boldsymbol{\\beta} = R(t_\\mathrm{ret}) (\\mathbf{n}(t_\\mathrm{ret})- \\boldsymbol{\\beta}) \\underbrace{=}_{等速度より\\boldsymbol{\\beta} = [\\boldsymbol{\\beta}]} [R(\\mathbf{n}- \\boldsymbol{\\beta})]\\] これより . \\[\\mathbf{E} (\\mathbf{r}, t) \\parallel \\mathbf{R}(t)\\] となり、時刻\\(t_\\mathrm{ret}\\)に等速直線運動をする点電荷から発せられた電磁波の電場は、時刻\\(t\\)に電荷がいる位置と観測者を結んだ直線に平行となります。あたかも、速度場が速度無限大で観測者のところまで伝播したかのような(遠隔相互作用のような)錯覚を受けることになります。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E9%80%9F%E5%BA%A6%E5%A0%B4",
     "relUrl": "/astroelec/vel_rad#速度場"
-  },"1495": {
+  },"1496": {
     "doc": "速度場と輻射場の性質",
     "title": "輻射場",
     "content": "電場の式のうち、第二項 . \\[\\mathbf{E} (\\mathbf{r}, t) = \\frac{q}{c} \\left[ \\frac{\\mathbf{n} \\times \\{ (\\mathbf{n} - \\boldsymbol{\\beta}) \\times \\dot{\\boldsymbol{\\beta}}\\}}{\\kappa^3 R}\\right] \\tag{2}\\] を輻射場と呼びます。輻射ばの性質を見ていきましょう。 . 輻射場の向き . (2)式の形から、輻射場ベクトルは\\(\\mathbf{n}, \\mathbf{n}-\\boldsymbol{\\beta} \\times \\dot{\\boldsymbol{\\beta}}\\)に直行します。また非相対論的極限\\(\\boldsymbol{\\beta} = \\mathbf{u}/c \\rightarrow \\mathbf{0}, \\kappa \\rightarrow 1\\)では . \\[\\mathbf{E}(\\mathbf{r}, t) = \\frac{q}{c} \\left[ \\frac{\\mathbf{n} \\times (\\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}})}{R}\\right] = \\frac{q}{c}\\left[ \\frac{(\\mathbf{n} \\cdot \\dot{\\boldsymbol{\\beta}}) \\mathbf{n} - \\dot{\\boldsymbol{\\beta}}}{R}\\right] \\tag{3}\\] よって、非相対論的極限では輻射場ベクトルは\\(\\mathbf{n}, \\dot{\\boldsymbol{\\beta}}\\)の張る平面内にあることがわかります。 . 相対論的速度のときの電場の振幅の距離依存性 . 相対論的な速度で運動する点電荷からの輻射場の振幅が、距離に反比例して減少することを直観的に理解してみましょう。 点電荷が\\(x\\)軸正方向に速度\\(u\\)で等速直線運動をしていると考えます。点電荷が原点に到達したところで一定の加速度で減速し、\\(\\Delta t\\)後に静止したとします。減速を始めてから\\(t\\)後の様子は下図のようになります。 . \\(\\Delta t\\)は\\(t\\)に比べて十分小さいとし、粒子はほぼ原点で静止したとします。半径\\(ct\\)の球面より外側の領域には、粒子が減速を始めたという情報はまだ伝わっておらず、座標\\(ut\\)を中心とした放射状に電気力線が分布した速度場のみが存在することになります。一方半径\\(c(t-\\Delta t)\\)の球面の内側では、粒子が静止したという情報が伝わっており、ここには原点を中心とした放射状の速度場のみ存在することになります。この2つの球面に挟まれた球殻状の領域は、減速が起きている間に生成された電磁場が存在する領域となります。系の対称性から、この領域内の電気力線は同一平面内に存在しなければなりません。またこの点電荷以外に電荷が存在しないことから、電気力線は連続でなければなりません。\\(\\Delta t \\ll t\\)より、厚さ\\(c \\Delta t\\)の球殻内部の電場は、荷電粒子が原点に静止しているときに発した電場にほぼ垂直であると考えられます。このことは輻射場が横波であることに対応しています。球殻内の電場の球面に沿った成分を\\(E_t\\)とし、この紙面に垂直で原点を中心に持つような幅\\(c \\Delta t\\)のリングを考えると、このリングを貫く電場は . \\[\\iint_\\mathrm{ring} \\mathbf{E} \\cdot d\\mathbf{S} \\simeq 2\\pi c t \\Delta t E_t\\] ただし、\\(\\Delta t\\)は微小なのでリング上で\\(E_t = \\mathrm{const}\\)とすることができます。荷電粒子が1つの系を考えているので、この値は電気力線の連続性から保存する(リングを貫く電気力線の本数は、時間が経過してリングの半径が大きくなろうとも保存する)と考えてよいでしょう。よって . \\[2\\pi c t \\Delta t E_t = {\\rm const} \\ \\Longrightarrow \\ E_t \\propto \\frac{1}{ct} = \\frac{1}{R}\\] となります。 . 非相対論的速度のときの電場の振幅 . 電荷の速度が非相対論的な時の輻射場の電場がどのようになるかを計算してみましょう。(3)式より . \\[\\begin{align} E (\\mathbf{r}, t) &amp;= |\\mathbf{E} (\\mathbf{r}, t)| = \\frac{q}{c} \\left[ \\frac{| \\mathbf{n} \\times ( \\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}}) |}{R} \\right] = \\frac{q}{c} \\left[ \\frac{ | \\mathbf{n}| \\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}} | \\sin \\frac{\\pi}{2}}{R} \\right] = \\frac{q}{c} \\left[ \\frac{|\\mathbf{n} \\times \\dot{\\boldsymbol{\\beta}}|}{R} \\right] = \\frac{q}{c} \\left[ \\frac{|\\mathbf{n}|\\dot{\\boldsymbol{\\beta}} | \\sin \\Theta}{R} \\right] \\notag \\\\ &amp;= \\frac{q}{c} \\left[ \\frac{\\dot{\\beta} \\sin \\Theta}{R}\\right] = \\left[ \\frac{q \\dot{u}}{c^2 R} \\sin \\Theta \\right] \\notag \\end{align}\\] となります。これを物理的考察から導いてみましょう。 点電荷が\\(x\\)軸正方向に速度\\(u(\\ll c)\\)で等速直線運動しているとします。点電荷が原点に到達したところで一定の加速度で減速し、微小時間\\(\\Delta t\\)後に静止したとします。減速を始めてから\\(t\\)後の様子は下図のようになります。 . \\(u \\ll c\\)より、半径\\(ct\\)の球面の外側の電場は半径\\(c(t-\\Delta t)\\)の球面の内側の電場と同じような概形をしていると考えることができます。図のように\\(\\Theta\\)をとると、厚さ\\(c \\Delta t\\)の球殻内部での電場の動径成分\\(E_r\\)と接線成分\\(E_t\\)の比は . \\[\\frac{E_r}{E_t} = \\frac{c \\Delta t}{ut \\sin \\Theta}\\] です。\\(E_r\\)の起源は速度場(ただのクーロン電場)であることから . \\[E_r = \\frac{q}{R^2} = \\frac{q}{c^2 t^2}\\] よって . \\[E_t = \\frac{q}{c^3 t} \\frac{u}{\\Delta t} \\sin \\Theta \\ \\stackrel{\\Delta t \\rightarrow 0}{\\longrightarrow} \\frac{q}{c^3 t} \\dot{u} \\sin \\Theta = \\frac{q \\dot{u}}{c^2 R} \\sin \\Theta\\] と求まります。 . ポインティングベクトル . ポインティングベクトルの定義\\(\\mathbf{S} = \\frac{c}{4\\pi} \\mathbf{E} \\times \\mathbf{B}\\)と、輻射場の\\(\\mathbf{E}, \\mathbf{B}\\)より . \\[\\mathbf{S} = \\frac{c}{4\\pi} [E^2 \\mathbf{n}]\\] です。 (2)式より\\(|\\mathbf{S}| \\propto R^{-2}\\)です。電磁場を放出している点電荷を取り囲む十分に大きい閉曲面\\(\\Sigma\\)を考えると、この閉曲面を通過して外に持ち出される単位時間あたりのエネルギー量は . \\[\\Sigma |\\mathbf{S}| \\propto R^2 R^{-2} = \\mathrm{const}\\] となります。点電荷から閉曲面までの距離に依存せず一定となることから、輻射場は無限遠方に電磁場のエネルギーを持ち運べることがわかります。輻射場はこの性質ゆえに、輻射場あるいは電磁波と呼ばれています。 さらに電磁場のエネルギー密度\\(U = \\frac{1}{8\\pi} (E^2 + B^2)\\)より、輻射場のエネルギー密度は\\(U = \\frac{1}{4\\pi} E^2\\)となります。これらから . \\[\\mathbf{S} = c U \\mathbf{n}\\] と書けるため、確かにポインティングベクトルがエネルギー流束になっていることがわかります。 . 運動量密度 . 同様に輻射場の運動量密度を計算しましょう。 . \\[\\mathbf{g} = \\frac{1}{4\\pi c} \\mathbf{E} \\times \\mathbf{B} \\ \\Longrightarrow \\  g = \\frac{1}{4\\pi c} |\\mathbf{E} \\times \\mathbf{B}| = \\frac{1}{4\\pi c} E^2\\] よって . \\[g = \\frac{U}{c}\\] となり、電磁波の運動量はエネルギーの\\(1/c\\)であることがわかります。 . ",
     "url": "http://localhost:4000/astroelec/vel_rad#%E8%BC%BB%E5%B0%84%E5%A0%B4",
     "relUrl": "/astroelec/vel_rad#輻射場"
-  },"1496": {
+  },"1497": {
     "doc": "速度場と輻射場の性質",
     "title": "速度場と輻射場の性質",
     "content": ". | 速度場と輻射場の性質 . | 速度場 | 輻射場 . | 輻射場の向き | 相対論的速度のときの電場の振幅の距離依存性 | 非相対論的速度のときの電場の振幅 | ポインティングベクトル | 運動量密度 | . | . | . ",
     "url": "http://localhost:4000/astroelec/vel_rad",
     "relUrl": "/astroelec/vel_rad"
-  },"1497": {
+  },"1498": {
+    "doc": "ビリアル定理",
+    "title": "ビリアル定理",
+    "content": "ここでは重力多体系を考える上で重要なビリアル定理についてメモしています。 . ",
+    "url": "http://localhost:4000/galady/virial#%E3%83%93%E3%83%AA%E3%82%A2%E3%83%AB%E5%AE%9A%E7%90%86",
+    "relUrl": "/galady/virial#ビリアル定理"
+  },"1499": {
+    "doc": "ビリアル定理",
+    "title": "導出",
+    "content": "それぞれの天体の質量を\\(m_j\\)、位置を\\(\\mathbf{r}_j\\)、運動量を$\\mathbf{p}_j$とします。以下の数式を変形していきましょう。 . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\sum_{j} \\left\\{ \\frac{d\\mathbf{p}_j}{dt} \\cdot \\mathbf{r}_j + \\mathbf{p}_j \\cdot \\frac{d \\mathbf{r}_j}{dt} \\right\\} \\tag{1}\\] ここでそれぞれの天体に働く力を\\(\\mathbf{F}_j\\)、そして速度を\\(\\mathbf{v}_j\\)とすると、\\(\\frac{d \\mathbf{p}_j}{dt} = \\mathbf{F}_j, \\frac{d \\mathbf{r}_j}{dt} = \\mathbf{v}_j\\)より . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\sum_j (\\mathbf{F}_j \\cdot \\mathbf{r}_j + \\mathbf{p}_j \\cdot \\mathbf{v}_j) \\underbrace{=}_{\\mathbf{p}_j = m_j \\mathbf{v}_j} \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j + 2 \\sum_j \\frac{1}{2} m_j \\mathbf{v}_j^2 \\tag{2}\\] 系全体の運動エネルギーを . \\[\\mathcal{T} = \\sum_j \\frac{1}{2} m_j \\mathbf{v}_j^2 \\tag{3}\\] のように書くと、(2)式から . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = 2 \\mathcal{T} + \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\tag{4}\\] のようになります。この式の時間平均をとりましょう。 . \\[(左辺) = \\frac{1}{\\tau} \\int_0^\\tau dt \\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\frac{1}{\\tau} \\left[ \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right]_0^\\tau\\] \\[(右辺) = 2 \\langle \\mathcal{T}\\rangle + \\langle \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\rangle\\] \\(\\langle \\cdots \\rangle\\)は時間平均操作を表します。 ここで、この多体系が常に保たれ続けること(すなわち天体が抜け出したりせず、系全体のエネルギーが有限であり続けると)仮定しましょう。 この仮定より\\(\\mathbf{p}_j \\mathbf{r}_j\\)は全て有限の値を持つと考えて良いので、\\(\\tau \\rightarrow 0\\)のとき左辺はゼロになります。以上より . \\[2 \\langle \\mathcal{T}\\rangle + \\langle \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\rangle = 0 \\tag{5}\\] と求まります。さらに系全体のポテンシャルエネルギーを . \\[\\mathcal{V} = \\frac{1}{2} \\sum_i \\sum_{j\\neq i} V (\\vert \\mathbf{r}_i - \\mathbf{r}_j\\vert) \\tag{6}\\] のように書くことにします。ポテンシャルエネルギーが\\(V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\propto \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert^n\\)のように書かれるとき、 適当な定数\\(a\\)に対して\\(V(a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = a^n V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\)のように書くことができます。 これを利用すると、(6)式から . \\[\\mathcal{V}(a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{1}{2} \\sum_i \\sum_{j\\neq i} V(a\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{a^n}{2} \\sum_i \\sum_{j\\neq i} V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = a^n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\tag{7}\\] のように変形することができます。この式を\\(a\\)で微分すると . \\[(最左辺) = \\frac{\\partial}{\\partial a} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\frac{\\partial (a \\mathbf{r}_k)}{\\partial a} \\frac{\\partial}{\\partial (a \\mathbf{r}_k)} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\mathbf{r}_k \\cdot \\frac{\\partial}{\\partial (a \\mathbf{r}_k)} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\] \\[(最右辺) = n a^{n-1} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\] を得ます。\\(a\\)は適当な定数であるため、\\(a=1\\)としても差し支えありません。すると . \\[n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\mathbf{r}_k \\cdot \\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\tag{7}\\] また、ここから . \\[\\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{1}{2} \\frac{\\partial}{\\partial \\mathbf{r}_k} \\left\\{ \\sum_i \\sum_{j\\neq i} V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\right\\} = \\frac{\\partial}{\\partial \\mathbf{r}_k} \\sum_{k \\neq \\ell} V(\\vert \\mathbf{r}_k - \\mathbf{r}_\\ell \\vert) = - \\sum_{\\ell \\neq k} \\mathbf{F}_{k\\ell} = - \\mathbf{F}_k\\] のように計算されます。\\(\\mathbf{F}_{k\\ell}\\)は\\(k\\)番目の天体が\\(\\ell\\)番目の天体から受ける力です。以上より . \\[\\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = - \\mathbf{F}_k \\tag{8}\\] となります。(7), (8)式より . \\[n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = - \\sum_k \\mathbf{r}_k \\cdot \\mathbf{F}_k \\tag{9}\\] (9)式を(5)式に代入すれば . \\[2 \\langle \\mathcal{T} \\rangle - n \\langle \\mathcal{V} \\rangle = 0 \\ \\Longrightarrow \\ \\langle \\mathcal{T} \\rangle = \\frac{n}{2} \\langle \\mathcal{V} \\rangle \\tag{10}\\] というビリアル定理 (Virial theorem)を得ることができます。 . ",
+    "url": "http://localhost:4000/galady/virial#%E5%B0%8E%E5%87%BA",
+    "relUrl": "/galady/virial#導出"
+  },"1500": {
+    "doc": "ビリアル定理",
+    "title": "ビリアル定理から導かれる、重力多体系の安定性",
+    "content": "(10)式では\\(n\\)をそのまま残しました。 これは位置\\(\\mathbf{r}\\)でのポテンシャル\\(\\mathcal{V} (\\mathbf{r})\\)が\\(\\vert \\mathbf{r} \\vert^n\\)に比例するとしたときの\\(n\\)です。 重力ポテンシャルの場合、その依存性は\\(n = -1\\)となります。ここではその\\(n\\)によって系がどのように振る舞うかを見てみましょう。 系全体のエネルギーの長時間平均は . \\[\\langle E \\rangle = \\langle \\mathcal{T} \\rangle + \\langle \\mathcal{V} \\rangle \\tag{11}\\] なので、(10), (11)式より . \\[\\langle E \\rangle = \\left(1 + \\frac{2}{n} \\right) \\langle \\mathcal{T} \\rangle \\tag{12}\\] \\(\\langle \\mathcal{T} \\rangle\\)は運動エネルギーであるため、常に0以上の値を持ちます。 よって\\(n &lt; -2\\)のとき\\(\\langle E\\rangle &gt; 0\\)となり、これはこの系のポテンシャルから抜け出して無限遠に飛び去ることができる(ポテンシャルエネルギーが0となる無限遠でも、ゼロでない運動エネルギーを持つ)ことを意味します。 よって\\(n &lt; -2\\)のポテンシャルが作る多体系は、系として安定に存在することができません。 一方、重力ポテンシャルの場合、\\(n = -1\\)から、安定に存在することができます。 . ",
+    "url": "http://localhost:4000/galady/virial#%E3%83%93%E3%83%AA%E3%82%A2%E3%83%AB%E5%AE%9A%E7%90%86%E3%81%8B%E3%82%89%E5%B0%8E%E3%81%8B%E3%82%8C%E3%82%8B%E9%87%8D%E5%8A%9B%E5%A4%9A%E4%BD%93%E7%B3%BB%E3%81%AE%E5%AE%89%E5%AE%9A%E6%80%A7",
+    "relUrl": "/galady/virial#ビリアル定理から導かれる重力多体系の安定性"
+  },"1501": {
+    "doc": "ビリアル定理",
+    "title": "応用: 銀河団などの質量推定",
+    "content": "ビリアル定理を用いて、実際の重力多体系の総質量を推定する方法をご紹介します。銀河団などの天体が生まれてから十分時間が経過しており、系が安定な状態に落ち着いていると仮定すると . \\[\\langle \\mathcal{T} \\rangle \\simeq \\mathcal{T} = \\frac{1}{2} \\sum_j m_j v_j^2 \\tag{13}\\] が成り立っていると考えて良いでしょう。銀河団を構成する銀河の速度の2乗質量平均(速度分散) . \\[\\bar{v^2} = \\frac{\\sum_j m_j v_j^2}{\\sum_j m_j} \\tag{14}\\] と銀河団の総質量\\(M = \\sum_j m_j\\)を用いると、(13)式は . \\[\\langle \\mathcal{T} \\rangle \\simeq \\frac{1}{2} M \\bar{v^2} \\tag{15}\\] のように書き換えることができます。一方、系全体の重力ポテンシャルエネルギーは、系の典型的な半径を\\(R\\)とすれば . \\[\\langle V \\rangle \\simeq - \\frac{GM^2}{R} \\tag{16}\\] 程度と考えることができます。 . (15), (16)式、そして(10)式に\\(n = -1\\)を代入したものを用いると . \\[\\frac{1}{2} M \\bar{v^2} = \\frac{1}{2} \\frac{G M^2}{R} \\ \\Longrightarrow \\ \\bar{v^2} = \\frac{GM}{R} \\ \\Longrightarrow \\ M_V = \\frac{R \\bar{v}^2}{G} \\tag{17}\\] と求まります。このように、ビリアル定理を利用して求められる重力多体系の質量をビリアル質量\\(M_V\\)と呼びます。 観測から\\(M_V\\)を求めるには\\(R, \\bar{v}^2\\)を求める必要があります。例えば遠くの銀河団の場合には、下図のような状況を考えます。 . 分光観測から赤方偏移\\(z\\)を決定することで、銀河団全体が遠ざかる速度\\(v\\)が得られます。するとハッブルの法則より、距離\\(d\\)が求まります。 この値と、銀河団を見込む角度\\(\\theta\\)を利用すれば、銀河団の半径\\(R\\)が計算されます。 さらに分光観測から個々の銀河の速度を一つ一つ測定することで、銀河の速度の2乗質量平均(速度分散)\\(\\bar{v^2}\\)が求まります。 ただし、個々の銀河を観測したときに求まるのは、視線方向の速度分散\\(\\bar{v_r^2}\\)のみです。 速度分散の他の方向成分をそれぞれ\\(\\bar{v_\\theta^2}, \\bar{v_\\varphi^2}\\)と書き、さらに系が球対称で等方的に運動していると仮定すると . \\[\\bar{v^2} = \\bar{v_r^2} + \\bar{v_\\theta^2} + \\bar{v_\\varphi^2} = 3 \\bar{v_r^2}\\] から、(17)式は . \\[M_V = \\frac{3 R \\bar{v_r^2}}{G} \\tag{18}\\] これらを用いることで\\(M_V\\)を求めることが可能です。 もしも近傍にある球状星団などで\\(M_V\\)を求める場合には、ハッブルの法則のような宇宙論的な効果を用いることができません。よって系の半径は別の方法で求める必要があります。 実は天球面上に投影された見かけの大きさ\\(R_\\mathrm{proj}\\)と、その天体の半径\\(R\\)の間には . \\[\\frac{R}{R_\\mathrm{proj}} = \\frac{\\pi}{2} \\tag{19}\\] という関係が一般に成り立ちます。これを用いれば、(18)式は . \\[M_V = \\frac{3 \\pi R_\\mathrm{proj} \\bar{v_r^2}}{2G} \\tag{20}\\] となります。よって、撮像観測から見かけの大きさ\\(R_\\mathrm{proj}\\)と、分光観測から個々の天体の視線方向の速度分散\\(\\bar{v_r^2}\\)を求めれば、\\(M_V\\)の推定が可能です。 . ",
+    "url": "http://localhost:4000/galady/virial#%E5%BF%9C%E7%94%A8-%E9%8A%80%E6%B2%B3%E5%9B%A3%E3%81%AA%E3%81%A9%E3%81%AE%E8%B3%AA%E9%87%8F%E6%8E%A8%E5%AE%9A",
+    "relUrl": "/galady/virial#応用-銀河団などの質量推定"
+  },"1502": {
+    "doc": "ビリアル定理",
+    "title": "ダークマターの発見",
+    "content": "1933年、Zwickyはかみのけ座銀河団(Coma cluster)に含まれる銀河の運動を観測し、そこから得た速度分散と上述のビリアル定理を用いることで、かみのけ座銀河団の総質量を推定しました。 するとバリオンの総質量(銀河団に含まれる銀河の総質量と、X線を放出している高温の銀河団プラズマ質量の合計)より一桁大きい結果となります。 このことは、我々人類が電磁波では見ることができない質量が存在することを示唆しており、これを今日ではダークマター(dark matter: 暗黒物質)と呼びます。 . ダークマターの存在を示唆する他の観測としては、例えば銀河の回転曲線を利用したものがあります。 . ",
+    "url": "http://localhost:4000/galady/virial#%E3%83%80%E3%83%BC%E3%82%AF%E3%83%9E%E3%82%BF%E3%83%BC%E3%81%AE%E7%99%BA%E8%A6%8B",
+    "relUrl": "/galady/virial#ダークマターの発見"
+  },"1503": {
+    "doc": "ビリアル定理",
+    "title": "参考文献",
+    "content": "谷口義明, 岡村定矩, 祖父江義明, “銀河 I” 鶴剛, 宇宙物理学入門講義資料, 第3章: ビリアル定理と自己重力系 . ",
+    "url": "http://localhost:4000/galady/virial#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    "relUrl": "/galady/virial#参考文献"
+  },"1504": {
+    "doc": "ビリアル定理",
+    "title": "ビリアル定理",
+    "content": ". | ビリアル定理 . | 導出 | ビリアル定理から導かれる、重力多体系の安定性 | 応用: 銀河団などの質量推定 | ダークマターの発見 | . | 参考文献 | . ",
+    "url": "http://localhost:4000/galady/virial",
+    "relUrl": "/galady/virial"
+  },"1505": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": " ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#固有体積要素"
-  },"1498": {
+  },"1506": {
     "doc": "固有体積要素",
     "title": "固有体積要素とは",
     "content": "局所慣性系での微小変位ベクトルを\\(d\\bar{\\bf x}\\)と書きましょう。これを用いて体積要素を表現すると\\(dV = d\\bar{x}^0d\\bar{x}^1d\\bar{x}^2d\\bar{x}^3\\)と書けます。これを一般座標系での微小変位ベクトル\\(d{\\bf x}\\)で表現すると、ヤコビアンを用いて . \\[dV = {\\rm det} \\left( \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\right) dx^0 dx^1 dx^2 dx^3\\] となります。局所慣性系での計量テンソルはミンコフスキーメトリックなので、一般座標系での計量テンソルは . \\[g_{\\mu \\nu} = \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\frac{\\partial \\bar{x}^\\beta}{\\partial x^\\nu} \\eta_{\\bar{\\alpha} \\bar{\\beta}} = \\Lambda_\\mu^{\\ \\bar{\\alpha}}\\eta_{\\bar{\\alpha} \\bar{\\beta}} \\Lambda_{\\ \\nu}^\\bar{\\beta}\\] よってこれを行列形式で書くと . \\[(g_{\\mu \\nu}) = \\Lambda^\\top \\eta \\Lambda\\] これの行列式は . \\[g \\equiv {\\rm det} (g_{\\mu \\nu}) = {\\rm det}(\\Lambda^\\top) {\\rm det}(\\eta) {\\rm det}(\\Lambda) = - {\\rm det}(\\Lambda)^2 \\ \\Longrightarrow \\ {\\rm det}(\\Lambda) = \\sqrt{-g}\\] となります。よって固有体積要素は . \\[dV = \\sqrt{-g} d^4 x\\] と書けます。 . ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0%E3%81%A8%E3%81%AF",
     "relUrl": "/gr/volume#固有体積要素とは"
-  },"1499": {
+  },"1507": {
     "doc": "固有体積要素",
     "title": "例題: 2次元デカルト座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; 1 \\end{array} \\right| = -1\\] \\[\\therefore \\ dV = 1 dx dy cdt\\] ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元デカルト座標での固有体積要素"
-  },"1500": {
+  },"1508": {
     "doc": "固有体積要素",
     "title": "例題: 2次元極座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; r^2 \\end{array} \\right| = -r^2\\] \\[\\therefore \\ dV = r dr d\\theta cdt\\] . ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E6%A5%B5%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元極座標での固有体積要素"
-  },"1501": {
+  },"1509": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": ". | 固有体積要素 . | 固有体積要素とは | 例題: 2次元デカルト座標での固有体積要素 | 例題: 2次元極座標での固有体積要素 | . | . ",
     "url": "http://localhost:4000/gr/volume",
     "relUrl": "/gr/volume"
-  },"1502": {
+  },"1510": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": "このページでは、一般的な弱重力場中での運動方程式である測地線方程式が、 非相対論的な重力場中での運動方程式(ニュートンの運動方程式)と一致するにはどのような条件が必要かを求めています。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E5%BC%B1%E9%87%8D%E5%8A%9B%E5%A0%B4%E6%A5%B5%E9%99%90",
     "relUrl": "/gr/weakfield#弱重力場極限"
-  },"1503": {
+  },"1511": {
     "doc": "弱重力場極限",
     "title": "ニュートンの運動方程式を導けるか？",
     "content": "弱重力場極限ということで、計量テンソルを . \\[(g_{\\mu \\nu}) = \\left( \\begin{array}{cccc} -1-h_{00} &amp;&amp; &amp;&amp; &amp;&amp; {\\bf 0} \\\\ &amp;&amp; 1+h &amp;&amp; &amp;&amp; \\\\ &amp;&amp; &amp;&amp; 1+h &amp;&amp; \\\\ {\\bf 0} &amp;&amp; &amp;&amp; &amp;&amp; 1+h \\end{array} \\right)\\] のように書きます。ここで\\(\\dot{h}_{00} = \\dot{h} = 0, |h_{00}| \\ll 1, |h| \\ll 1\\)とします。また非相対論的な極限なので\\(v^2/c^2 \\ll 1\\)とし、さらに粒子の軌跡を表現するパラメータであった\\(\\tau\\)も\\(\\tau \\simeq t\\)とします。 \\((g_{ij})\\)の逆行列成分を求めますが、これに関してもテイラー展開から . \\[g^{00} = \\frac{1}{g_{00}} \\simeq -1 + h_{00}\\] \\[g^{ij} = \\frac{1}{g_{ij}} \\simeq (1-h) \\delta^{ij}\\] と近似できるものとします。また4元速度も . \\[u^0 = \\frac{dx^0}{d\\tau} \\sim c, \\ u^i = \\frac{dx^i}{d\\tau} \\simeq v^i\\] と近似できると考えましょう。 重力場中の運動方程式より . \\[\\frac{du^i}{dt} = -\\Gamma^i_{\\alpha \\nu} u^\\alpha u^\\nu\\] \\[\\Gamma^i_{00} = \\frac{1}{2} g^{i\\beta} (\\underbrace{g_{\\beta 0, 0}}_{=0}+ \\underbrace{g_{\\beta 0, 0}}_{= 0} + g_{0 0,\\beta}) = -\\frac{1}{2} g^{ij} g_{00, j} = \\frac{1}{2} (1-h) \\delta^{ij}\\partial_j h_{00} = \\frac{1}{2} \\delta_{ij} h_{00, j}\\] \\[\\Gamma^i_{j0} = \\frac{1}{2} g^{i\\beta} (g_{\\beta j, 0}+ g_{\\beta j, 0} + g_{j 0,\\beta}) = \\frac{1}{2} g^{ik} (\\underbrace{g_{kj, 0}}_{=0} + g_{kj, 0} - g_{j0 , k}) = \\frac{1}{2} g^{ik} (g_{kj, 0} - g_{j0,k}) = 0 = \\Gamma^i_{0j}\\] \\[\\begin{aligned} \\Gamma^i_{jk} &amp;= \\frac{1}{2} g^{i\\beta} (g_{\\beta j, k} + g_{\\beta k, j} - g_{jk, \\beta}) = \\frac{1}{2} g^{i\\ell} (g_{\\ell j, k} + g_{\\ell k, j} - g_{jk, \\ell}) = \\frac{1}{2} \\delta^{i\\ell} (h_{, k} \\delta_{\\ell j} +h_{, j} \\delta_{\\ell k} - h_{, \\ell} \\delta_{jk}) \\\\ &amp;= \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) \\end{aligned}\\] \\[\\therefore \\ \\frac{dv^i}{dt} = - \\frac{1}{2} \\delta^{ij} h_{00, j} c^2 - \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) v^j v^k \\underbrace{\\simeq}_{c^2 \\gg v^2} -\\frac{c^2}{2} \\frac{\\partial h_{00}}{\\partial x^i}\\] これがニュートンの運動方程式と一致して欲しいので、\\(h_{00} = \\frac{2\\Phi}{c^2}\\)であればよいことがわかります。 . \\[\\frac{dv^i}{dt} = - \\frac{\\partial \\Phi}{\\partial x^i}\\] そしてこの式から\\(E = v^2/2 + \\Phi = {\\rm Const}\\)というエネルギー保存則も導くことができます。 エネルギー保存から\\(\\Phi \\simeq v^2\\)くらいの運動となるので、アインシュタイン方程式を導くときに用いた . \\[|h_{00}| = \\left| \\frac{2\\Phi}{c^2} \\right| \\simeq \\left| \\frac{v^2}{c^2}\\right| \\ll 1\\] と置く仮定は間違いではないこともわかります。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E5%B0%8E%E3%81%91%E3%82%8B%E3%81%8B",
     "relUrl": "/gr/weakfield#ニュートンの運動方程式を導けるか"
-  },"1504": {
+  },"1512": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": ". | 弱重力場極限 . | ニュートンの運動方程式を導けるか？ | . | . ",
     "url": "http://localhost:4000/gr/weakfield",
     "relUrl": "/gr/weakfield"
-  },"1505": {
+  },"1513": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     "relUrl": "/nucl/wu#wuの実験"
-  },"1506": {
+  },"1514": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "http://localhost:4000/nucl/wu#who-is-wu",
     "relUrl": "/nucl/wu#who-is-wu"
-  },"1507": {
+  },"1515": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"1508": {
+  },"1516": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     "relUrl": "/nucl/wu#パリティ変換"
-  },"1509": {
+  },"1517": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E4%BE%8B%E9%A1%8C",
     "relUrl": "/nucl/wu#例題"
-  },"1510": {
+  },"1518": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"1511": {
+  },"1519": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     "relUrl": "/nucl/wu#実験結果"
-  },"1512": {
+  },"1520": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"1513": {
+  },"1521": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "http://localhost:4000/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/nucl/wu#参考文献"
-  },"1514": {
+  },"1522": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "http://localhost:4000/nucl/wu",
     "relUrl": "/nucl/wu"
-  },"1515": {
+  },"1523": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#zeta%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#zeta関数"
-  },"1516": {
+  },"1524": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1517": {
+  },"1525": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1518": {
+  },"1526": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1519": {
+  },"1527": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1520": {
+  },"1528": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1521": {
+  },"1529": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

@@ -1,0 +1,61 @@
+I"
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビリアル定理" id="markdown-toc-ビリアル定理">ビリアル定理</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビリアル定理">ビリアル定理</h1>
+
+<p>ここでは重力多体系を考える上で重要なビリアル定理についてメモしています。</p>
+
+<h2 id="導出">導出</h2>
+
+<p>それぞれの天体の質量を\(m_j\)、位置を\(\mathbf{r}_j\)、運動量を$\mathbf{p}_j$とします。以下の数式を変形していきましょう。</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= \sum_{j} \left\{ \frac{d\mathbf{p}_j}{dt} \cdot \mathbf{r}_j + \mathbf{p}_j \cdot \frac{d \mathbf{r}_j}{dt} \right\} \tag{1}\]
+
+<p>ここでそれぞれの天体に働く力を\(\mathbf{F}_j\)、そして速度を\(\mathbf{v}_j\)とすると、\(\frac{d \mathbf{p}_j}{dt} = \mathbf{F}_j, \frac{d \mathbf{r}_j}{dt} = \mathbf{v}_j\)より</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= \sum_j (\mathbf{F}_j \cdot \mathbf{r}_j + \mathbf{p}_j \cdot \mathbf{v}_j) 
+\underbrace{=}_{\mathbf{p} = m \mathbf{v}} \sum_j \mathbf{F}_j \cdot \mathbf{r}_j + \frac{1}{2} \sum_j \frac{1}{2} m_j \mathbf{v}_j^2 \tag{2}\]
+
+<p>系全体の運動エネルギーを</p>
+
+\[\mathcal{T} 
+= \sum_j \frac{1}{2} m_j \mathbf{v}_j^2 \tag{3}\]
+
+<p>のように書くと、(2)式から</p>
+
+\[\frac{d}{dt} \left( \sum_j \mathbf{p}_j \cdot \mathbf{r}_j \right) 
+= 2 \mathcal{T} + \sum_j \mathbf{F}_j \cdot \mathbf{r}_j \tag{4}\]
+
+<p>のようになります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

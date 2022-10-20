@@ -3,7 +3,7 @@ layout: default
 title: 2体緩和
 parent: 銀河のダイナミクス
 math: mathjax3
-permalink: /galady/relaxation_time
+permalink: /galady/twobody_relaxation
 nav_order: 3
 ---
 

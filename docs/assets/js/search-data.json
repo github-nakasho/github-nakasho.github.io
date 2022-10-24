@@ -3023,35 +3023,35 @@
     "url": "http://localhost:4000/astroelec/ics_spectrum",
     "relUrl": "/astroelec/ics_spectrum"
   },"504": {
-    "doc": "ホーム",
-    "title": "宇宙物理メモ",
-    "content": "このwebsiteはgithub-nakashoが運営するwebsiteです。 主に物理、宇宙物理、数学、プログラミングの勉強メモを掲載しています。 . ",
-    "url": "http://localhost:4000/#%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E3%83%A1%E3%83%A2",
-    "relUrl": "/#宇宙物理メモ"
-  },"505": {
-    "doc": "ホーム",
-    "title": "CV(?)",
-    "content": "GitHub . github-nakasho . Twitter . @tweet_nakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Education . | 2008-2010. 東北大学理学部宇宙地球物理学科天文学コース | 2010-2012. 東北大学大学院理学研究科天文学専攻修士課程 | 2012-2016. 東北大学大学院理学研究科天文学専攻博士課程 | . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C言語 | OpenMP, MPIなどの並列化プログラミング | Python | Git (GitHub, Bitbucket) | Website制作 | Illustrator, Photoshopで簡単なイラスト作成 | . For fun . | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 海外旅行 | 自転車 | 寺社仏閣巡り | アニメ・ゲーム | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | Just Danceでエキササイズ | 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング | . ",
-    "url": "http://localhost:4000/#cv",
-    "relUrl": "/#cv"
-  },"506": {
-    "doc": "ホーム",
-    "title": "ホーム",
-    "content": ". ",
-    "url": "http://localhost:4000/",
-    "relUrl": "/"
-  },"507": {
     "doc": "一般相対性理論",
     "title": "一般相対性理論",
     "content": "ここでは宇宙物理を理解するために必要となる、一般相対論についてメモしていきます。 . 数学的に厳密な議論を欠いている部分もあります。ご容赦ください。 . ",
     "url": "http://localhost:4000/gr#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96",
     "relUrl": "/gr#一般相対性理論"
-  },"508": {
+  },"505": {
     "doc": "一般相対性理論",
     "title": "一般相対性理論",
     "content": ". ",
     "url": "http://localhost:4000/gr",
     "relUrl": "/gr"
+  },"506": {
+    "doc": "ホーム",
+    "title": "宇宙物理メモ",
+    "content": "このwebsiteはgithub-nakashoが運営するwebsiteです。 主に物理、宇宙物理、数学、プログラミングの勉強メモを掲載しています。 . ",
+    "url": "http://localhost:4000/#%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E3%83%A1%E3%83%A2",
+    "relUrl": "/#宇宙物理メモ"
+  },"507": {
+    "doc": "ホーム",
+    "title": "CV(?)",
+    "content": "GitHub . github-nakasho . Twitter . @tweet_nakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Education . | 2008-2010. 東北大学理学部宇宙地球物理学科天文学コース | 2010-2012. 東北大学大学院理学研究科天文学専攻修士課程 | 2012-2016. 東北大学大学院理学研究科天文学専攻博士課程 | . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C言語 | OpenMP, MPIなどの並列化プログラミング | Python | Git (GitHub, Bitbucket) | Website制作 | Illustrator, Photoshopで簡単なイラスト作成 | . For fun . | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 海外旅行 | 自転車 | 寺社仏閣巡り | アニメ・ゲーム | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | Just Danceでエキササイズ | 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング | . ",
+    "url": "http://localhost:4000/#cv",
+    "relUrl": "/#cv"
+  },"508": {
+    "doc": "ホーム",
+    "title": "ホーム",
+    "content": ". ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
   },"509": {
     "doc": "誘導方程式",
     "title": "磁気流体における誘導方程式",
@@ -6449,59 +6449,59 @@
     "url": "http://localhost:4000/math/rayleigh_expansion",
     "relUrl": "/math/rayleigh_expansion"
   },"1075": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": " ",
-    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
-    "relUrl": "/gr/redshift#重力赤方偏移"
-  },"1076": {
-    "doc": "重力赤方偏移",
-    "title": "計算",
-    "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E8%A8%88%E7%AE%97",
-    "relUrl": "/gr/redshift#計算"
-  },"1077": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
-    "relUrl": "/gr/redshift#重力赤方偏移-1"
-  },"1078": {
-    "doc": "重力赤方偏移",
-    "title": "積分ザックス・ヴォルフェ効果",
-    "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
-    "url": "http://localhost:4000/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
-    "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
-  },"1079": {
-    "doc": "重力赤方偏移",
-    "title": "重力赤方偏移",
-    "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
-    "url": "http://localhost:4000/gr/redshift",
-    "relUrl": "/gr/redshift"
-  },"1080": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
     "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
     "relUrl": "/cosmo/redshift#赤方偏移"
-  },"1081": {
+  },"1076": {
     "doc": "赤方偏移",
     "title": "光の経路",
     "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
     "url": "http://localhost:4000/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
     "relUrl": "/cosmo/redshift#光の経路"
-  },"1082": {
+  },"1077": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
     "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
     "relUrl": "/cosmo/redshift#赤方偏移-1"
-  },"1083": {
+  },"1078": {
     "doc": "赤方偏移",
     "title": "赤方偏移",
     "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
     "url": "http://localhost:4000/cosmo/redshift",
     "relUrl": "/cosmo/redshift"
+  },"1079": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": " ",
+    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
+    "relUrl": "/gr/redshift#重力赤方偏移"
+  },"1080": {
+    "doc": "重力赤方偏移",
+    "title": "計算",
+    "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E8%A8%88%E7%AE%97",
+    "relUrl": "/gr/redshift#計算"
+  },"1081": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
+    "relUrl": "/gr/redshift#重力赤方偏移-1"
+  },"1082": {
+    "doc": "重力赤方偏移",
+    "title": "積分ザックス・ヴォルフェ効果",
+    "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
+    "url": "http://localhost:4000/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
+    "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
+  },"1083": {
+    "doc": "重力赤方偏移",
+    "title": "重力赤方偏移",
+    "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
+    "url": "http://localhost:4000/gr/redshift",
+    "relUrl": "/gr/redshift"
   },"1084": {
     "doc": "相対論的ビーミング効果",
     "title": "相対論的ビーミング",
@@ -9053,186 +9053,252 @@
     "url": "http://localhost:4000/astroelec/vel_rad",
     "relUrl": "/astroelec/vel_rad"
   },"1509": {
+    "doc": "激しい緩和",
+    "title": "激しい緩和 (Violent relaxation)",
+    "content": "2体緩和で、私たちは銀河のような質量・恒星数の重力多体系は宇宙年齢以上の時間をかけなければ緩和しないことを学びました。 しかし、実際の楕円銀河では緩和が完了していると考えられており、2体緩和以外の別の緩和過程が考えれています。 2体緩和より素早く起こるこの過程を、激しい緩和と呼びます。ここでは激しい緩和について学びましょう。 . ",
+    "url": "http://localhost:4000/galady/violent_relaxation#%E6%BF%80%E3%81%97%E3%81%84%E7%B7%A9%E5%92%8C-violent-relaxation",
+    "relUrl": "/galady/violent_relaxation#激しい緩和-violent-relaxation"
+  },"1510": {
+    "doc": "激しい緩和",
+    "title": "直感的理解",
+    "content": "激しい緩和過程は、重力ポテンシャルが時間に依存して変化する場合に起こりえます。 ここでは重力多体系において、位置\\(\\mathbf{x}\\)にある恒星が感じる重力ポテンシャルを\\(\\Phi(\\mathbf{x}, t)\\)のように、時間に陽に依存して書くことにしましょう。 するとこの恒星の全エネルギー\\(E = \\frac{1}{2} v^2 + \\Phi\\)の時間変化は . \\[\\frac{dE}{dt} = \\mathbf{v} \\cdot \\underbrace{\\frac{d \\mathbf{v}}{dt}}_{= -\\frac{\\partial \\Phi}{\\partial \\mathbf{x}}} + \\frac{\\partial \\Phi}{\\partial \\mathbf{x}} \\cdot \\underbrace{\\frac{d\\mathbf{x}}{dt}}_{=\\mathbf{v}} + \\frac{\\partial \\Phi}{\\partial t} = \\frac{\\partial \\Phi}{\\partial t} \\tag{5}\\] のように書かれます。このことから、恒星の全エネルギーははポテンシャルの時間変化に応じて時間変化することがわかります。 これは下図のように考えることができます。全ての粒子が一定の速度\\(v\\)を持つ重力多体系を考えましょう。 この多体系の重力ポテンシャルエネルギーが時間変化を起こさなければ、エネルギー保存則から、左から重力ポテンシャルの谷底に入った粒子は同じエネルギーで右側に到達します(上パネル)。 しかし物質やダークマターが集まるなどして、重力ポテンシャルの谷底が深くなった場合には、左から谷底に入ったときに比べて低いエネルギーで右側に到達します(中パネル)。 同様に物質が恒星風や超新星爆発などで吹き飛ばされ、重力ポテンシャルの谷底が浅くなった場合には、左から谷底に入ったときに比べて高いエネルギーで右側に到達します(下パネル)。 . このようにして、一定の速度\\(v\\)でいたはずの多体系は様々なエネルギーを持つ系に緩和されていくことがわかります。これが激しい緩和の直感的な理解です。 . ",
+    "url": "http://localhost:4000/galady/violent_relaxation#%E7%9B%B4%E6%84%9F%E7%9A%84%E7%90%86%E8%A7%A3",
+    "relUrl": "/galady/violent_relaxation#直感的理解"
+  },"1511": {
+    "doc": "激しい緩和",
+    "title": "もう少し詳しい解析",
+    "content": "それでは激しい緩和過程を導出していきましょう。そのためには、以下のような時間を定義します。 . \\[t_\\mathrm{vr} \\equiv \\left\\{ \\frac{\\left( \\frac{dE}{dt} \\right)^2 }{E^2}\\right\\}^{-1/2} \\tag{6}\\] これはエネルギーが時間変化する典型的なタイムスケールを表現したものです。2乗になっているのは、\\(\\frac{dE}{dt}\\)が負になる可能性も考慮しているためです。 全エネルギーは . \\[E = \\frac{1}{2} m \\sum_i \\mathbf{v}_i^2 + \\frac{1}{2} m \\sum_i \\sum_{j\\neq i}\\Phi_{ij} = \\mathcal{T} + \\mathcal{V} \\tag{7}\\] と書けます。ここで\\(\\Phi_{ij}\\)は\\(i\\)番目の粒子が\\(j\\)番目の粒子から感じる重力ポテンシャルです。 また簡単のため、この多体系を構成する粒子の質量は全て等しく\\(m\\)としました。 この両辺を時間で微分すると . \\[\\begin{align} \\frac{dE}{dt} &amp;= m \\sum_i \\mathbf{v}_i \\cdot \\underbrace{\\frac{d\\mathbf{v}_i}{dt}}_{= - \\frac{\\partial }{\\partial \\mathbf{x}_i} \\sum_{j\\neq i} \\Phi_{ij}} + \\frac{1}{2} m \\sum_i \\sum_{j\\neq i} \\frac{\\partial}{\\partial \\mathbf{x}_i} (\\Phi_{ij} + \\underbrace{\\Phi_{ji}}_{=\\Phi_{ij}})\\cdot \\underbrace{\\frac{d \\mathbf{x}_i}{d t}}_{= \\mathbf{v}_i} + \\frac{1}{2} m \\sum_i \\sum_{j\\neq i} \\frac{\\partial \\Phi_{ij}}{\\partial t} \\notag \\\\ &amp;= \\frac{1}{2} m \\sum_i \\sum_{j\\neq i} \\frac{\\partial \\Phi_{ij}}{\\partial t} = \\dot{\\Phi} \\tag{8} \\end{align}\\] ここで系の全重力ポテンシャルエネルギーを\\(\\Phi \\equiv \\frac{1}{2} m \\sum_i \\sum_{j\\neq i} \\Phi_{ij}\\)のように置きました。 さらに重力多体系で成り立つビリアル定理より . \\[2 \\mathcal{T} + \\mathcal{V} = 0 \\ \\Longrightarrow \\ m \\sum_i \\mathbf{v}_i^2 = - \\frac{1}{2} m \\sum_i \\sum_{j\\neq i} \\frac{\\partial \\Phi_{ij}}{\\partial t} \\tag{9}\\] です。ここから、全エネルギーは . \\[E = \\frac{1}{4} m \\sum_i \\sum_{j \\neq i} \\Phi_{ij} = \\frac{1}{2} \\Phi \\tag{10}\\] のように計算されます。(6), (8), (10)式より . \\[t_\\mathrm{vr} = \\frac{1}{2} \\left\\{ \\frac{\\dot{\\Phi}^2}{\\Phi^2}\\right\\}^{-1/2} \\tag{11}\\] のように書けます。 . Lynden-Bellの原論文では前の係数が3/4になっている...どこか計算ミスがある？まぁオーダーが一緒なのでとりあえずﾖｼ(๑˃̵ᴗ˂̵)و . (5)式や(11)式の出現した\\(\\dot{\\Phi}\\)は、系の全重力ポテンシャルエネルギーの時間変化を表します。 この時間変化のタイムスケールは\\(t_\\mathrm{cross}\\)程度と考えることができるため、結局\\(t_\\mathrm{vr}\\)も\\(t_\\mathrm{cross}\\)と同じオーダーとなります。 ここで2体緩和で緩和までにかかる時間\\(t_\\mathrm{relax}\\)との比較をしてみましょう。すると . \\[t_\\mathrm{vr} \\simeq t_\\mathrm{cross} \\ll \\frac{N}{6 \\ln N} t_\\mathrm{cross} \\tag{12}\\] となり、系の粒子数\\(N\\)が大きい場合には、\\(t_\\mathrm{relax}\\)より大分短いことがわかります。このことから、この現象を激しい緩和と呼びます。 . ",
+    "url": "http://localhost:4000/galady/violent_relaxation#%E3%82%82%E3%81%86%E5%B0%91%E3%81%97%E8%A9%B3%E3%81%97%E3%81%84%E8%A7%A3%E6%9E%90",
+    "relUrl": "/galady/violent_relaxation#もう少し詳しい解析"
+  },"1512": {
+    "doc": "激しい緩和",
+    "title": "実際に激しい緩和は起こっているのか？",
+    "content": "ここまでくると「宇宙にある銀河や球状星団は2体緩和ではなく激しい緩和により、ある平衡状態に落ち着いている！」と考えてしまうかもしれません。 実際、楕円銀河の表面輝度分布はドゥ・ボークルール則 (de Vaucouleurs’s law)に従うことが知られています。 2体緩和では銀河のような系は緩和するまでに宇宙年齢以上の時間がかかります。 楕円銀河でこのような普遍的な構造を得るためには、2体緩和とは別のメカニズムで緩和していなければならないと考えるのが普通です。 しかし、この激しい緩和過程には疑問が残ります。例えば、重力収縮により銀河が形成されていく過程を考えましょう。 初期には重力によってダークマターや物質が集まり、重力ポテンシャルの底が時間とともに深くなっていくことから、激しい緩和が進むことが考えられます。 しかし一度力学平衡に落ち着いてしまうと、そこからエネルギーの変化は起こらなくなり、激しい緩和は止まるはずです。 リンデンベル (Lynden-Bell)が1967年に激しい緩和を提唱してから今日に至るまでに、計算機の発展とともに様々な数値実験が行われてきました。 現在では、初期条件によって終状態は様々であり、ある一つの緩和した状態に向かうとは到底言えないというのが共通認識として知られています。 では2体緩和が正しいということになるのでしょうか。 2体緩和は、重力相互作用により速度の変化が起こることで緩和へと向かう過程です。 するとエネルギー等分配により、運動エネルギーが全ての粒子で同じ程度になるくらいまで系が進化していきます。 すると\\(\\frac{1}{2} m v^2 \\sim (定数)\\)のようになるため、質量の大きい粒子ほど速度は遅くなり、重力多体系の中心部に落ちていきます。 結果として、外側には比較的質量の軽い粒子が、そして内側には質量の重たい粒子が集まることになります(下図参照)。 このような現象を質量分離 (mass segregation)と呼びます。 . 一方、激しい緩和過程では . \\[m \\frac{d\\mathbf{v}}{dt} = - m \\frac{\\partial \\Phi}{\\partial \\mathbf{x}} \\ \\Longrightarrow \\ \\frac{d\\mathbf{v}}{dt} = - \\frac{\\partial \\Phi}{\\partial \\mathbf{x}}\\] から、(重力の等価性より)質量に依存せず、等しくポテンシャルの時間変化を感じることができます。よって2体緩和のような質量分離は起こりません。 星団を観測し、質量分離が起こっているかどうかを判定することで、2体緩和が優先的に起こっているのか、それとも激しい緩和が起こっているのかを知ることができます。 実際の(球状・散開を含む)星団のシミュレーションと観測では、質量分離の度合いは様々なようです。 「質量分離を起こしている証拠はない」とする論文もあれば、「質量分離の具合から星団の進化がわかる」とする論文も見られ、現在でもそう単純にどちらが支配的かを決定するのは難しいとされています。 また星団の中にさらに小さな集団(subcluster)が存在するような系も発見されており、星団の緩和過程は今なお最先端の研究分野となっています。 また質量分離から重たい恒星が中心部に集まれば、そこで重たい恒星どうしが連星系を成し、最終的にブラックホール連星になることが予想されます。 このように、星団からの重力波の検出を目指す研究も盛んに行われています。 . ",
+    "url": "http://localhost:4000/galady/violent_relaxation#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%BF%80%E3%81%97%E3%81%84%E7%B7%A9%E5%92%8C%E3%81%AF%E8%B5%B7%E3%81%93%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B",
+    "relUrl": "/galady/violent_relaxation#実際に激しい緩和は起こっているのか"
+  },"1513": {
+    "doc": "激しい緩和",
+    "title": "参考文献",
+    "content": ". | Lynden-Bell, 1967, “Statistical Mechanics of Violent Relaxation in Stellar Systems” | Frank van den Bosch, Lecture Note | 激しい緩和, 天文学辞典 | 祖父江義明, 有本信雄, 家正則, “銀河II -銀河系 シリーズ現代の天文学” | 郷田直輝, “重力多体系での自己組織化” | Ascenso et al., 2009, “No evidence of mass segregation in massive young clusters” | Evans &amp; Oh, 2022, “Mass segregation in the Hyades cluster” | Kumamoto et al., 2020, “Merger rate density of binary black holes formed in open clusters” | Chatterjee et al., 2017, “Binary Black Holes in Dense Star Clusters: Exploring the Theoretical Uncertainties” | . ",
+    "url": "http://localhost:4000/galady/violent_relaxation#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    "relUrl": "/galady/violent_relaxation#参考文献"
+  },"1514": {
+    "doc": "激しい緩和",
+    "title": "激しい緩和",
+    "content": ". | 激しい緩和 (Violent relaxation) . | 直感的理解 | もう少し詳しい解析 | 実際に激しい緩和は起こっているのか？ | . | 参考文献 | . ",
+    "url": "http://localhost:4000/galady/violent_relaxation",
+    "relUrl": "/galady/violent_relaxation"
+  },"1515": {
     "doc": "ビリアル定理",
     "title": "ビリアル定理",
     "content": "ここでは重力多体系を考える上で重要なビリアル定理についてメモしています。 . ",
     "url": "http://localhost:4000/galady/virial#%E3%83%93%E3%83%AA%E3%82%A2%E3%83%AB%E5%AE%9A%E7%90%86",
     "relUrl": "/galady/virial#ビリアル定理"
-  },"1510": {
+  },"1516": {
     "doc": "ビリアル定理",
     "title": "導出",
     "content": "それぞれの天体の質量を\\(m_j\\)、位置を\\(\\mathbf{r}_j\\)、運動量を\\(\\mathbf{p}_j\\)とします。以下の数式を変形していきましょう。 . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\sum_{j} \\left\\{ \\frac{d\\mathbf{p}_j}{dt} \\cdot \\mathbf{r}_j + \\mathbf{p}_j \\cdot \\frac{d \\mathbf{r}_j}{dt} \\right\\} \\tag{1}\\] ここでそれぞれの天体に働く力を\\(\\mathbf{F}_j\\)、そして速度を\\(\\mathbf{v}_j\\)とすると、\\(\\frac{d \\mathbf{p}_j}{dt} = \\mathbf{F}_j, \\frac{d \\mathbf{r}_j}{dt} = \\mathbf{v}_j\\)より . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\sum_j (\\mathbf{F}_j \\cdot \\mathbf{r}_j + \\mathbf{p}_j \\cdot \\mathbf{v}_j) \\underbrace{=}_{\\mathbf{p}_j = m_j \\mathbf{v}_j} \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j + 2 \\sum_j \\frac{1}{2} m_j \\mathbf{v}_j^2 \\tag{2}\\] 系全体の運動エネルギーを . \\[\\mathcal{T} = \\sum_j \\frac{1}{2} m_j \\mathbf{v}_j^2 \\tag{3}\\] のように書くと、(2)式から . \\[\\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = 2 \\mathcal{T} + \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\tag{4}\\] のようになります。この式の時間平均をとりましょう。 . \\[(左辺) = \\frac{1}{\\tau} \\int_0^\\tau dt \\frac{d}{dt} \\left( \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right) = \\frac{1}{\\tau} \\left[ \\sum_j \\mathbf{p}_j \\cdot \\mathbf{r}_j \\right]_0^\\tau\\] \\[(右辺) = 2 \\langle \\mathcal{T}\\rangle + \\langle \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\rangle\\] \\(\\langle \\cdots \\rangle\\)は時間平均操作を表します。 ここで、この多体系が常に保たれ続けること(すなわち天体が抜け出したりせず、系全体のエネルギーが有限であり続けると)仮定しましょう。 この仮定より\\(\\mathbf{p}_j, \\mathbf{r}_j\\)は全て有限の値を持つと考えて良いので、\\(\\tau \\rightarrow \\infty\\)のとき左辺はゼロになります。以上より . \\[2 \\langle \\mathcal{T}\\rangle + \\langle \\sum_j \\mathbf{F}_j \\cdot \\mathbf{r}_j \\rangle = 0 \\tag{5}\\] と求まります。さらに系全体のポテンシャルエネルギーを . \\[\\mathcal{V} = \\frac{1}{2} \\sum_i \\sum_{j\\neq i} V (\\vert \\mathbf{r}_i - \\mathbf{r}_j\\vert) \\tag{6}\\] のように書くことにします。ポテンシャルエネルギーが\\(V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\propto \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert^n\\)のように書かれるとき、 適当な定数\\(a\\)に対して\\(V(a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = a^n V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\)のように書くことができます。 これを利用すると、(6)式から . \\[\\mathcal{V}(a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{1}{2} \\sum_i \\sum_{j\\neq i} V(a\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{a^n}{2} \\sum_i \\sum_{j\\neq i} V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = a^n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\tag{7}\\] のように変形することができます。この式を\\(a\\)で微分すると . \\[(最左辺) = \\frac{\\partial}{\\partial a} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\frac{\\partial (a \\mathbf{r}_k)}{\\partial a} \\frac{\\partial}{\\partial (a \\mathbf{r}_k)} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\mathbf{r}_k \\cdot \\frac{\\partial}{\\partial (a \\mathbf{r}_k)} \\mathcal{V} (a \\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\] \\[(最右辺) = n a^{n-1} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert)\\] を得ます。\\(a\\)は適当な定数であるため、\\(a=1\\)としても差し支えありません。すると . \\[n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\sum_k \\mathbf{r}_k \\cdot \\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\tag{7}\\] また、ここから . \\[\\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = \\frac{1}{2} \\frac{\\partial}{\\partial \\mathbf{r}_k} \\left\\{ \\sum_i \\sum_{j\\neq i} V(\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) \\right\\} = \\frac{\\partial}{\\partial \\mathbf{r}_k} \\sum_{k \\neq \\ell} V(\\vert \\mathbf{r}_k - \\mathbf{r}_\\ell \\vert) = - \\sum_{\\ell \\neq k} \\mathbf{F}_{k\\ell} = - \\mathbf{F}_k\\] のように計算されます。\\(\\mathbf{F}_{k\\ell}\\)は\\(k\\)番目の天体が\\(\\ell\\)番目の天体から受ける力です。以上より . \\[\\frac{\\partial}{\\partial \\mathbf{r}_k} \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = - \\mathbf{F}_k \\tag{8}\\] となります。(7), (8)式より . \\[n \\mathcal{V} (\\vert \\mathbf{r}_i - \\mathbf{r}_j \\vert) = - \\sum_k \\mathbf{r}_k \\cdot \\mathbf{F}_k \\tag{9}\\] (9)式を(5)式に代入すれば . \\[2 \\langle \\mathcal{T} \\rangle - n \\langle \\mathcal{V} \\rangle = 0 \\ \\Longrightarrow \\ \\langle \\mathcal{T} \\rangle = \\frac{n}{2} \\langle \\mathcal{V} \\rangle \\tag{10}\\] というビリアル定理 (Virial theorem)を得ることができます。 . ",
     "url": "http://localhost:4000/galady/virial#%E5%B0%8E%E5%87%BA",
     "relUrl": "/galady/virial#導出"
-  },"1511": {
+  },"1517": {
     "doc": "ビリアル定理",
     "title": "ビリアル定理から導かれる、重力多体系の安定性",
     "content": "(10)式では\\(n\\)をそのまま残しました。 これは位置\\(\\mathbf{r}\\)でのポテンシャル\\(\\mathcal{V} (\\mathbf{r})\\)が\\(\\vert \\mathbf{r} \\vert^n\\)に比例するとしたときの\\(n\\)です。 重力ポテンシャルの場合、その依存性は\\(n = -1\\)となります。ここではその\\(n\\)によって系がどのように振る舞うかを見てみましょう。 系全体のエネルギーの長時間平均は . \\[\\langle E \\rangle = \\langle \\mathcal{T} \\rangle + \\langle \\mathcal{V} \\rangle \\tag{11}\\] なので、(10), (11)式より . \\[\\langle E \\rangle = \\left(1 + \\frac{2}{n} \\right) \\langle \\mathcal{T} \\rangle \\tag{12}\\] \\(\\langle \\mathcal{T} \\rangle\\)は運動エネルギーであるため、常に0以上の値を持ちます。 よって\\(n &lt; -2\\)のとき\\(\\langle E\\rangle &gt; 0\\)となり、これはこの系のポテンシャルから抜け出して無限遠に飛び去ることができる(ポテンシャルエネルギーが0となる無限遠でも、ゼロでない運動エネルギーを持つ)ことを意味します。 よって\\(n &lt; -2\\)のポテンシャルが作る多体系は、系として安定に存在することができません。 一方、重力ポテンシャルの場合、\\(n = -1\\)から、安定に存在することができます。 . ",
     "url": "http://localhost:4000/galady/virial#%E3%83%93%E3%83%AA%E3%82%A2%E3%83%AB%E5%AE%9A%E7%90%86%E3%81%8B%E3%82%89%E5%B0%8E%E3%81%8B%E3%82%8C%E3%82%8B%E9%87%8D%E5%8A%9B%E5%A4%9A%E4%BD%93%E7%B3%BB%E3%81%AE%E5%AE%89%E5%AE%9A%E6%80%A7",
     "relUrl": "/galady/virial#ビリアル定理から導かれる重力多体系の安定性"
-  },"1512": {
+  },"1518": {
     "doc": "ビリアル定理",
     "title": "応用: 銀河団などの質量推定",
     "content": "ビリアル定理を用いて、実際の重力多体系の総質量を推定する方法をご紹介します。銀河団などの天体が生まれてから十分時間が経過しており、系が安定な状態に落ち着いていると仮定すると . \\[\\langle \\mathcal{T} \\rangle \\simeq \\mathcal{T} = \\frac{1}{2} \\sum_j m_j v_j^2 \\tag{13}\\] が成り立っていると考えて良いでしょう。銀河団を構成する銀河の速度の2乗質量平均(速度分散) . \\[\\bar{v^2} = \\frac{\\sum_j m_j v_j^2}{\\sum_j m_j} \\tag{14}\\] と銀河団の総質量\\(M = \\sum_j m_j\\)を用いると、(13)式は . \\[\\langle \\mathcal{T} \\rangle \\simeq \\frac{1}{2} M \\bar{v^2} \\tag{15}\\] のように書き換えることができます。一方、系全体の重力ポテンシャルエネルギーは、系の典型的な半径を\\(R\\)とすれば . \\[\\langle V \\rangle \\simeq - \\frac{GM^2}{R} \\tag{16}\\] 程度と考えることができます。 . (15), (16)式、そして(10)式に\\(n = -1\\)を代入したものを用いると . \\[\\frac{1}{2} M \\bar{v^2} = \\frac{1}{2} \\frac{G M^2}{R} \\ \\Longrightarrow \\ \\bar{v^2} = \\frac{GM}{R} \\ \\Longrightarrow \\ M_V = \\frac{R \\bar{v}^2}{G} \\tag{17}\\] と求まります。このように、ビリアル定理を利用して求められる重力多体系の質量をビリアル質量\\(M_V\\)と呼びます。 観測から\\(M_V\\)を求めるには\\(R, \\bar{v}^2\\)を求める必要があります。例えば遠くの銀河団の場合には、下図のような状況を考えます。 . 分光観測から赤方偏移\\(z\\)を決定することで、銀河団全体が遠ざかる速度\\(v\\)が得られます。するとハッブルの法則より、距離\\(d\\)が求まります。 この値と、銀河団を見込む角度\\(\\theta\\)を利用すれば、銀河団の半径\\(R\\)が計算されます。 さらに分光観測から個々の銀河の速度を一つ一つ測定することで、銀河の速度の2乗質量平均(速度分散)\\(\\bar{v^2}\\)が求まります。 ただし、個々の銀河を観測したときに求まるのは、視線方向の速度分散\\(\\bar{v_r^2}\\)のみです。 速度分散の他の方向成分をそれぞれ\\(\\bar{v_\\theta^2}, \\bar{v_\\varphi^2}\\)と書き、さらに系が球対称で等方的に運動していると仮定すると . \\[\\bar{v^2} = \\bar{v_r^2} + \\bar{v_\\theta^2} + \\bar{v_\\varphi^2} = 3 \\bar{v_r^2}\\] から、(17)式は . \\[M_V = \\frac{3 R \\bar{v_r^2}}{G} \\tag{18}\\] これらを用いることで\\(M_V\\)を求めることが可能です。 もしも近傍にある球状星団などで\\(M_V\\)を求める場合には、ハッブルの法則のような宇宙論的な効果を用いることができません。よって系の半径は別の方法で求める必要があります。 実は天球面上に投影された見かけの大きさ\\(R_\\mathrm{proj}\\)と、その天体の半径\\(R\\)の間には . \\[\\frac{R}{R_\\mathrm{proj}} = \\frac{\\pi}{2} \\tag{19}\\] という関係が一般に成り立ちます。これを用いれば、(18)式は . \\[M_V = \\frac{3 \\pi R_\\mathrm{proj} \\bar{v_r^2}}{2G} \\tag{20}\\] となります。よって、撮像観測から見かけの大きさ\\(R_\\mathrm{proj}\\)と、分光観測から個々の天体の視線方向の速度分散\\(\\bar{v_r^2}\\)を求めれば、\\(M_V\\)の推定が可能です。 . ダークマターの発見 . 1933年、Zwickyはかみのけ座銀河団(Coma cluster)に含まれる銀河の運動を観測し、そこから得た速度分散と上述のビリアル定理を用いることで、かみのけ座銀河団の総質量を推定しました。 するとバリオンの総質量(銀河団に含まれる銀河の総質量と、X線を放出している高温の銀河団プラズマ質量の合計)より一桁大きい結果となります。 このことは、我々人類が電磁波では見ることができない質量が存在することを示唆しており、これを今日ではダークマター(dark matter: 暗黒物質)と呼びます。 . ダークマターの存在を示唆する他の観測としては、例えば銀河の回転曲線を利用したものがあります。 . 天の川銀河中心に存在する巨大質量の発見 . 2020年のノーベル物理学賞に、ブラックホールの理論からはペンローズ博士、そして天の川銀河中心の超巨大コンパクト天体の観測からゲンツェル博士とゲーズ博士が選ばれました。 特に観測の2人は1990年代に天の川銀河中心部の星団(Nuclear Star Cluster: NSC)の観測を行い、その星団のメンバーである恒星の固有運動の速度分散を求めました。 その値を(20)式などに代入することで、銀河中心の数pc領域に\\(10^6M_\\odot\\)の質量が存在することを求めました。天の川銀河中心については以下の記事もご覧ください。 . 一般相対性理論番外編、天の川銀河中心の超巨大質量コンパクトオブジェクトの発見 . ",
     "url": "http://localhost:4000/galady/virial#%E5%BF%9C%E7%94%A8-%E9%8A%80%E6%B2%B3%E5%9B%A3%E3%81%AA%E3%81%A9%E3%81%AE%E8%B3%AA%E9%87%8F%E6%8E%A8%E5%AE%9A",
     "relUrl": "/galady/virial#応用-銀河団などの質量推定"
-  },"1513": {
+  },"1519": {
     "doc": "ビリアル定理",
     "title": "参考文献",
     "content": "谷口義明, 岡村定矩, 祖父江義明, “銀河 I” 鶴剛, 宇宙物理学入門講義資料, 第3章: ビリアル定理と自己重力系 . ",
     "url": "http://localhost:4000/galady/virial#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/galady/virial#参考文献"
-  },"1514": {
+  },"1520": {
     "doc": "ビリアル定理",
     "title": "ビリアル定理",
     "content": ". | ビリアル定理 . | 導出 | ビリアル定理から導かれる、重力多体系の安定性 | 応用: 銀河団などの質量推定 . | ダークマターの発見 | 天の川銀河中心に存在する巨大質量の発見 | . | . | 参考文献 | . ",
     "url": "http://localhost:4000/galady/virial",
     "relUrl": "/galady/virial"
-  },"1515": {
+  },"1521": {
+    "doc": "ブラソフ方程式",
+    "title": "ブラソフ方程式 (Vlasov equation)",
+    "content": "ここでは2体緩和が無視できるような、無衝突重力多体系を記述するのに必要となるブラソフ方程式(Vlasov equation)を導出します。 これはボルツマン方程式(Boltzmann equation)の衝突項を無視したものとして知られており、またの名を無衝突ボルツマン方程式(collisionless Boltzmann equation)とも呼ばれています。 非常に多数の粒子系を扱う場合には、それらを一点ずつ表現するのではなく、ある分布関数に従うものとして表現する方が便利です。 ブラソフ方程式は、無衝突系での分布関数の時間発展を記述しています。 . ",
+    "url": "http://localhost:4000/galady/vlasov#%E3%83%96%E3%83%A9%E3%82%BD%E3%83%95%E6%96%B9%E7%A8%8B%E5%BC%8F-vlasov-equation",
+    "relUrl": "/galady/vlasov#ブラソフ方程式-vlasov-equation"
+  },"1522": {
+    "doc": "ブラソフ方程式",
+    "title": "リウビルの定理 (Liouville’s theorem)",
+    "content": "まずは方程式を導出するために必要となる定理を導出しましょう。 \\(N\\)個の粒子が存在する力学系を考え、それらは一つ一つが位置\\(\\mathbf{q}_i = (q_{i1}, q_{i2}, q_{i3})\\)と運動量\\(\\mathbf{p}_i = (p_{i1}, p_{i2}, p_{i3})\\)のような自由度を持つとします。 以下では座標と運動量をまとめて\\(\\mathbf{q} = (\\mathbf{q}_1, \\mathbf{q}_2, \\dots, \\mathbf{q}_N), \\mathbf{p} = (\\mathbf{p}_1, \\mathbf{p}_2, \\dots, \\mathbf{p}_N)\\) 運動エネルギーは位置と運動量に依存するため\\(T(\\mathbf{q}, \\mathbf{p})\\)のような関数系で書かれ、さらに系のポテンシャルエネルギーを\\(W(\\mathbf{q})\\)のように書くと、この系のハミルトニアンは . \\[H(q, p) = T(q, p) + W(q) \\tag{1}\\] のようになります。すると、ハミルトンの運動方程式は . \\[\\frac{dq_{ij}}{dt} = \\frac{\\partial H}{\\partial p_{ij}} (\\mathbf{q}, \\mathbf{p}), \\quad \\frac{dp_{ij}}{dt} = - \\frac{\\partial H}{\\partial q_{ij}} (\\mathbf{q}, \\mathbf{p}) \\quad (i = \\{1, 2, \\dots, N\\}, j = \\{1, 2, 3\\} ) \\tag{2}\\] のようになります。この\\(N\\)粒子系について、位相空間上で考えてみましょう。\\(N\\)個の粒子が位置と運動量について6つの自由度を持つため、この系の自由度は\\(6N\\)です。 よって位相空間は\\(6N\\)次元となります。しかしここでは簡単のため、\\(i\\)番目の粒子の\\(j\\)方向に対する位置と運動量、すなわち\\((q_{ij}, p_{ij})\\)平面を切り出して考えてみましょう。 . この位相空間上の平面内において、粒子が上図のように面積\\(S = \\Delta q_{ij} \\Delta p_{ij}\\)を形成しているとします。ここで\\(\\Delta q_{ij}, \\Delta p_{ij} \\ll 1\\)とします。 今、\\(v_2 = \\dot{q}_{ij} (q_{ij}), v_1 = \\dot{q}_{ij} (q_{ij} + \\Delta q_{ij})\\)のように位相空間上で運動をしたとします。するとその速度の差分は . \\[\\Delta v \\equiv v_1 - v_2 = \\dot{q}_{ij} (q_{ij} + \\Delta q_{ij}) - \\dot{q}_{ij} (q_{ij}) \\underbrace{\\simeq}_{\\Delta q_{ij} \\ll 1} \\dot{q}_{ij} (q_{ij}) + \\frac{\\partial \\dot{q}_{ij}}{\\partial q_{ij}} \\Delta q_{ij} - \\dot{q}_{ij} (q_{ij}) = \\frac{\\partial \\dot{q}_{ij}}{\\partial q_{ij}} \\Delta q_{ij} \\tag{3}\\] のように計算されます。ここから上図の面積\\(S\\)の、\\(q_{ij}\\)方向の長さの変化は . \\[\\delta (\\Delta q_{ij}) = \\Delta v \\delta t = \\frac{\\partial \\dot{q}_{ij}}{\\partial q_{ij}} \\Delta q_{ij} \\delta t \\tag{4}\\] 同じように\\(p_{ij}\\)方向についても考えれば、\\(p_{ij}\\)方向の長さの変化は . \\[\\delta (\\Delta p_{ij}) = \\frac{\\partial \\dot{p}_{ij}}{\\partial p_{ij}} \\Delta p_{ij} \\delta t \\tag{5}\\] となります。この2つから、面積\\(S\\)の変化分は . \\[\\begin{align} \\Delta S &amp;= \\left\\{ \\Delta q_{ij} + \\delta (\\Delta q_{ij})\\right\\}\\left\\{ \\Delta p_{ij} + \\delta (\\Delta p_{ij})\\right\\} - \\Delta q_{ij} \\Delta p_{ij} = \\Delta q_{ij} \\delta (\\Delta p_{ij}) + \\Delta p_{ij} \\delta (\\Delta q_{ij}) + \\delta (\\Delta q_{ij}) \\delta (\\Delta p_{ij}) \\notag \\\\ &amp;\\simeq \\Delta q_{ij} \\frac{\\partial \\dot{p}_{ij}}{\\partial p_{ij}} \\Delta p_{ij} \\delta t + \\Delta p_{ij} \\frac{\\partial \\dot{q}_{ij}}{\\partial q_{ij}} \\Delta q_{ij} \\delta t = \\Delta q_{ij} \\Delta p_{ij} \\delta t \\left( \\frac{\\partial \\dot{q}_{ij}}{\\partial q_{ij}} + \\frac{\\partial \\dot{p}_{ij}}{\\partial p_{ij}}\\right) \\tag{6} \\end{align}\\] のように計算されます。ここで\\(\\delta t \\ll 1\\)とし、\\(\\delta t\\)の一次までを考えました。この式に(2)式を適用すると . \\[\\Delta S = \\Delta q_{ij} \\Delta p_{ij} \\delta t \\left\\{ \\frac{\\partial}{\\partial q_{ij}} \\left( \\frac{\\partial H}{\\partial p_{ij}}\\right)+ \\frac{\\partial}{\\partial p_{ij}} \\left( - \\frac{\\partial H}{\\partial q_{ij}}\\right) \\right\\} = 0 \\tag{6}\\] のようになります。これは位相空間内で粒子の分布が作る面積(厳密には\\(6N\\)次元なので、体積)は不変であることを意味します。これをリウビルの定理と呼びます。 . ",
+    "url": "http://localhost:4000/galady/vlasov#%E3%83%AA%E3%82%A6%E3%83%93%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86-liouvilles-theorem",
+    "relUrl": "/galady/vlasov#リウビルの定理-liouvilles-theorem"
+  },"1523": {
+    "doc": "ブラソフ方程式",
+    "title": "ブラソフ方程式の導出",
+    "content": "リウビルの定理は、位相空間内の流れ(運動の軌跡)に沿って分布関数\\(f(\\mathbf{q}, \\mathbf{p}, t)\\)の占める体積は不変である、ということを言っています。 このことから、微小時間\\(\\Delta t\\)経過後の分布関数\\(f(\\mathbf{q} + \\dot{q}\\Delta, \\mathbf{p} + \\dot{p} \\Delta t, t + \\Delta t)\\)との間に . \\[f(\\mathbf{q}, \\mathbf{p}, t) = f(\\mathbf{q} + \\dot{\\mathbf{q}}\\Delta t, \\mathbf{p} + \\dot{\\mathbf{p}} \\Delta t, t + \\Delta t) \\tag{7}\\] が成り立ちます。右辺を\\(\\Delta t\\)の一次まででテイラー展開すると . \\[f(\\mathbf{q}, \\mathbf{p}, t) = f(\\mathbf{q}, \\mathbf{p}, t) + \\frac{\\partial f}{\\partial t} \\Delta t + \\frac{\\partial f}{\\partial \\mathbf{q}} \\cdot \\dot{\\mathbf{q}} \\Delta t + \\frac{\\partial f}{\\partial \\mathbf{p}} \\cdot \\dot{\\mathbf{p}} \\Delta t \\ \\Longrightarrow \\ \\frac{\\partial f}{\\partial t} + \\frac{\\partial f}{\\partial \\mathbf{q}} \\cdot \\dot{\\mathbf{q}} + \\frac{\\partial f}{\\partial \\mathbf{p}} \\cdot \\dot{\\mathbf{p}} = 0 \\tag{8}\\] ここまでは\\(\\mathbf{q}, \\mathbf{p}\\)については、その形については特に触れてきませんでした。ここではさらに扱いやすいように、\\(\\mathbf{q} \\rightarrow \\mathbf{x}\\)(普通の3次元座標)、\\(\\mathbf{p} \\rightarrow \\dot{\\mathbf{x}} = \\mathbf{v}\\)(単位質量あたりの運動量)のようにしましょう。すると、重力多体系においては . \\[\\dot{\\mathbf{p}} = \\ddot{\\mathbf{x}} = - \\frac{\\partial \\Phi}{\\partial \\mathbf{x}} \\tag{9}\\] のようになります。ここで\\(\\Phi\\)は重力ポテンシャルです。以上より、\\(f(\\mathbf{q}, \\mathbf{p}, t)\\)を\\(f(\\mathbf{x}, \\mathbf{v}, t)\\)のように関数形を書き直せば . \\[\\frac{\\partial f}{\\partial t} + \\mathbf{v} \\cdot \\nabla f - \\nabla \\Phi \\cdot \\frac{\\partial f}{\\partial \\mathbf{v}} = 0 \\tag{10}\\] のようになります。(10)式をブラソフ方程式と呼びます。 . 衝突がある場合には右辺に衝突に由来する項が入ります。 . ",
+    "url": "http://localhost:4000/galady/vlasov#%E3%83%96%E3%83%A9%E3%82%BD%E3%83%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B0%8E%E5%87%BA",
+    "relUrl": "/galady/vlasov#ブラソフ方程式の導出"
+  },"1524": {
+    "doc": "ブラソフ方程式",
+    "title": "余談: 無衝突プラズマ系のブラソフ方程式",
+    "content": "(10)式は重力多体系について成り立つ方程式でしたが、その前の(8)式は無衝突であればどのような系でも成り立ちます。 有名なものとしては無衝突プラズマがあります。無衝突プラズマにおいては(9)式の力が . \\[\\dot{\\mathbf{p}} = \\ddot{\\mathbf{x}} = \\frac{q}{m} \\left( \\mathbf{E} + \\frac{\\mathbf{v}}{c} \\times \\mathbf{B} \\right) \\tag{11}\\] となります。最終的に . \\[\\frac{\\partial f}{\\partial t} + \\mathbf{v} \\cdot \\frac{\\partial f}{\\partial \\mathbf{x}} + \\frac{q}{m} \\left( \\mathbf{E} + \\frac{\\mathbf{v}}{c} \\times \\mathbf{B} \\right) \\cdot \\frac{\\partial f}{\\partial \\mathbf{v}} = 0 \\tag{12}\\] を得ます。実際にこれを数値計算で解くときには、分布関数\\(f\\)の時間発展と同時に、電場・磁場の時間発展をマクスウェル方程式 . \\[\\frac{\\partial \\mathbf{E}}{\\partial t} = c \\nabla \\times \\mathbf{B} - 4\\pi \\mathbf{j} \\tag{13}\\] \\[\\frac{\\partial \\mathbf{B}}{\\partial t} = - c \\nabla \\times \\mathbf{E} \\tag{14}\\] \\[\\nabla \\cdot \\mathbf{E} = 4\\pi \\rho \\tag{15}\\] \\[\\nabla \\cdot \\mathbf{B} = 0 \\tag{16}\\] も解いていきます。 . ",
+    "url": "http://localhost:4000/galady/vlasov#%E4%BD%99%E8%AB%87-%E7%84%A1%E8%A1%9D%E7%AA%81%E3%83%97%E3%83%A9%E3%82%BA%E3%83%9E%E7%B3%BB%E3%81%AE%E3%83%96%E3%83%A9%E3%82%BD%E3%83%95%E6%96%B9%E7%A8%8B%E5%BC%8F",
+    "relUrl": "/galady/vlasov#余談-無衝突プラズマ系のブラソフ方程式"
+  },"1525": {
+    "doc": "ブラソフ方程式",
+    "title": "ブラソフ方程式",
+    "content": ". | ブラソフ方程式 (Vlasov equation) . | リウビルの定理 (Liouville’s theorem) | ブラソフ方程式の導出 | 余談: 無衝突プラズマ系のブラソフ方程式 | . | . ",
+    "url": "http://localhost:4000/galady/vlasov",
+    "relUrl": "/galady/vlasov"
+  },"1526": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": " ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#固有体積要素"
-  },"1516": {
+  },"1527": {
     "doc": "固有体積要素",
     "title": "固有体積要素とは",
     "content": "局所慣性系での微小変位ベクトルを\\(d\\bar{\\bf x}\\)と書きましょう。これを用いて体積要素を表現すると\\(dV = d\\bar{x}^0d\\bar{x}^1d\\bar{x}^2d\\bar{x}^3\\)と書けます。これを一般座標系での微小変位ベクトル\\(d{\\bf x}\\)で表現すると、ヤコビアンを用いて . \\[dV = {\\rm det} \\left( \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\right) dx^0 dx^1 dx^2 dx^3\\] となります。局所慣性系での計量テンソルはミンコフスキーメトリックなので、一般座標系での計量テンソルは . \\[g_{\\mu \\nu} = \\frac{\\partial \\bar{x}^\\alpha}{\\partial x^\\mu}\\frac{\\partial \\bar{x}^\\beta}{\\partial x^\\nu} \\eta_{\\bar{\\alpha} \\bar{\\beta}} = \\Lambda_\\mu^{\\ \\bar{\\alpha}}\\eta_{\\bar{\\alpha} \\bar{\\beta}} \\Lambda_{\\ \\nu}^\\bar{\\beta}\\] よってこれを行列形式で書くと . \\[(g_{\\mu \\nu}) = \\Lambda^\\top \\eta \\Lambda\\] これの行列式は . \\[g \\equiv {\\rm det} (g_{\\mu \\nu}) = {\\rm det}(\\Lambda^\\top) {\\rm det}(\\eta) {\\rm det}(\\Lambda) = - {\\rm det}(\\Lambda)^2 \\ \\Longrightarrow \\ {\\rm det}(\\Lambda) = \\sqrt{-g}\\] となります。よって固有体積要素は . \\[dV = \\sqrt{-g} d^4 x\\] と書けます。 . ",
     "url": "http://localhost:4000/gr/volume#%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0%E3%81%A8%E3%81%AF",
     "relUrl": "/gr/volume#固有体積要素とは"
-  },"1517": {
+  },"1528": {
     "doc": "固有体積要素",
     "title": "例題: 2次元デカルト座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; 1 \\end{array} \\right| = -1\\] \\[\\therefore \\ dV = 1 dx dy cdt\\] ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元デカルト座標での固有体積要素"
-  },"1518": {
+  },"1529": {
     "doc": "固有体積要素",
     "title": "例題: 2次元極座標での固有体積要素",
     "content": "\\[{\\rm det} (g_{\\mu \\nu}) = \\left| \\begin{array}{ccc} -1 &amp; &amp; {\\bf 0}\\\\ &amp; 1 &amp;\\\\ {\\bf 0}&amp; &amp; r^2 \\end{array} \\right| = -r^2\\] \\[\\therefore \\ dV = r dr d\\theta cdt\\] . ",
     "url": "http://localhost:4000/gr/volume#%E4%BE%8B%E9%A1%8C-2%E6%AC%A1%E5%85%83%E6%A5%B5%E5%BA%A7%E6%A8%99%E3%81%A7%E3%81%AE%E5%9B%BA%E6%9C%89%E4%BD%93%E7%A9%8D%E8%A6%81%E7%B4%A0",
     "relUrl": "/gr/volume#例題-2次元極座標での固有体積要素"
-  },"1519": {
+  },"1530": {
     "doc": "固有体積要素",
     "title": "固有体積要素",
     "content": ". | 固有体積要素 . | 固有体積要素とは | 例題: 2次元デカルト座標での固有体積要素 | 例題: 2次元極座標での固有体積要素 | . | . ",
     "url": "http://localhost:4000/gr/volume",
     "relUrl": "/gr/volume"
-  },"1520": {
+  },"1531": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": "このページでは、一般的な弱重力場中での運動方程式である測地線方程式が、 非相対論的な重力場中での運動方程式(ニュートンの運動方程式)と一致するにはどのような条件が必要かを求めています。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E5%BC%B1%E9%87%8D%E5%8A%9B%E5%A0%B4%E6%A5%B5%E9%99%90",
     "relUrl": "/gr/weakfield#弱重力場極限"
-  },"1521": {
+  },"1532": {
     "doc": "弱重力場極限",
     "title": "ニュートンの運動方程式を導けるか？",
     "content": "弱重力場極限ということで、計量テンソルを . \\[(g_{\\mu \\nu}) = \\left( \\begin{array}{cccc} -1-h_{00} &amp;&amp; &amp;&amp; &amp;&amp; {\\bf 0} \\\\ &amp;&amp; 1+h &amp;&amp; &amp;&amp; \\\\ &amp;&amp; &amp;&amp; 1+h &amp;&amp; \\\\ {\\bf 0} &amp;&amp; &amp;&amp; &amp;&amp; 1+h \\end{array} \\right)\\] のように書きます。ここで\\(\\dot{h}_{00} = \\dot{h} = 0, |h_{00}| \\ll 1, |h| \\ll 1\\)とします。また非相対論的な極限なので\\(v^2/c^2 \\ll 1\\)とし、さらに粒子の軌跡を表現するパラメータであった\\(\\tau\\)も\\(\\tau \\simeq t\\)とします。 \\((g_{ij})\\)の逆行列成分を求めますが、これに関してもテイラー展開から . \\[g^{00} = \\frac{1}{g_{00}} \\simeq -1 + h_{00}\\] \\[g^{ij} = \\frac{1}{g_{ij}} \\simeq (1-h) \\delta^{ij}\\] と近似できるものとします。また4元速度も . \\[u^0 = \\frac{dx^0}{d\\tau} \\sim c, \\ u^i = \\frac{dx^i}{d\\tau} \\simeq v^i\\] と近似できると考えましょう。 重力場中の運動方程式より . \\[\\frac{du^i}{dt} = -\\Gamma^i_{\\alpha \\nu} u^\\alpha u^\\nu\\] \\[\\Gamma^i_{00} = \\frac{1}{2} g^{i\\beta} (\\underbrace{g_{\\beta 0, 0}}_{=0}+ \\underbrace{g_{\\beta 0, 0}}_{= 0} + g_{0 0,\\beta}) = -\\frac{1}{2} g^{ij} g_{00, j} = \\frac{1}{2} (1-h) \\delta^{ij}\\partial_j h_{00} = \\frac{1}{2} \\delta_{ij} h_{00, j}\\] \\[\\Gamma^i_{j0} = \\frac{1}{2} g^{i\\beta} (g_{\\beta j, 0}+ g_{\\beta j, 0} + g_{j 0,\\beta}) = \\frac{1}{2} g^{ik} (\\underbrace{g_{kj, 0}}_{=0} + g_{kj, 0} - g_{j0 , k}) = \\frac{1}{2} g^{ik} (g_{kj, 0} - g_{j0,k}) = 0 = \\Gamma^i_{0j}\\] \\[\\begin{aligned} \\Gamma^i_{jk} &amp;= \\frac{1}{2} g^{i\\beta} (g_{\\beta j, k} + g_{\\beta k, j} - g_{jk, \\beta}) = \\frac{1}{2} g^{i\\ell} (g_{\\ell j, k} + g_{\\ell k, j} - g_{jk, \\ell}) = \\frac{1}{2} \\delta^{i\\ell} (h_{, k} \\delta_{\\ell j} +h_{, j} \\delta_{\\ell k} - h_{, \\ell} \\delta_{jk}) \\\\ &amp;= \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) \\end{aligned}\\] \\[\\therefore \\ \\frac{dv^i}{dt} = - \\frac{1}{2} \\delta^{ij} h_{00, j} c^2 - \\frac{1}{2} (h_{, k} \\delta^i_j +h_{, j} \\delta^i_{k} - h_{, \\ell} \\delta^{i\\ell} \\delta_{jk}) v^j v^k \\underbrace{\\simeq}_{c^2 \\gg v^2} -\\frac{c^2}{2} \\frac{\\partial h_{00}}{\\partial x^i}\\] これがニュートンの運動方程式と一致して欲しいので、\\(h_{00} = \\frac{2\\Phi}{c^2}\\)であればよいことがわかります。 . \\[\\frac{dv^i}{dt} = - \\frac{\\partial \\Phi}{\\partial x^i}\\] そしてこの式から\\(E = v^2/2 + \\Phi = {\\rm Const}\\)というエネルギー保存則も導くことができます。 エネルギー保存から\\(\\Phi \\simeq v^2\\)くらいの運動となるので、アインシュタイン方程式を導くときに用いた . \\[|h_{00}| = \\left| \\frac{2\\Phi}{c^2} \\right| \\simeq \\left| \\frac{v^2}{c^2}\\right| \\ll 1\\] と置く仮定は間違いではないこともわかります。 . ",
     "url": "http://localhost:4000/gr/weakfield#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E5%B0%8E%E3%81%91%E3%82%8B%E3%81%8B",
     "relUrl": "/gr/weakfield#ニュートンの運動方程式を導けるか"
-  },"1522": {
+  },"1533": {
     "doc": "弱重力場極限",
     "title": "弱重力場極限",
     "content": ". | 弱重力場極限 . | ニュートンの運動方程式を導けるか？ | . | . ",
     "url": "http://localhost:4000/gr/weakfield",
     "relUrl": "/gr/weakfield"
-  },"1523": {
+  },"1534": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     "relUrl": "/nucl/wu#wuの実験"
-  },"1524": {
+  },"1535": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "http://localhost:4000/nucl/wu#who-is-wu",
     "relUrl": "/nucl/wu#who-is-wu"
-  },"1525": {
+  },"1536": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"1526": {
+  },"1537": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "http://localhost:4000/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     "relUrl": "/nucl/wu#パリティ変換"
-  },"1527": {
+  },"1538": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "http://localhost:4000/nucl/wu#%E4%BE%8B%E9%A1%8C",
     "relUrl": "/nucl/wu#例題"
-  },"1528": {
+  },"1539": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "http://localhost:4000/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"1529": {
+  },"1540": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     "relUrl": "/nucl/wu#実験結果"
-  },"1530": {
+  },"1541": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "http://localhost:4000/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"1531": {
+  },"1542": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "http://localhost:4000/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/nucl/wu#参考文献"
-  },"1532": {
+  },"1543": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "http://localhost:4000/nucl/wu",
     "relUrl": "/nucl/wu"
-  },"1533": {
+  },"1544": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#zeta%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#zeta関数"
-  },"1534": {
+  },"1545": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1535": {
+  },"1546": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1536": {
+  },"1547": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1537": {
+  },"1548": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1538": {
+  },"1549": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1539": {
+  },"1550": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

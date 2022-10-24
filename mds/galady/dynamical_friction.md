@@ -4,7 +4,7 @@ title: 動的摩擦
 parent: 銀河のダイナミクス
 math: mathjax3
 permalink: /galady/dynamical_friction
-nav_order: 4
+nav_order: 5
 ---
 
 {: .no_toc }

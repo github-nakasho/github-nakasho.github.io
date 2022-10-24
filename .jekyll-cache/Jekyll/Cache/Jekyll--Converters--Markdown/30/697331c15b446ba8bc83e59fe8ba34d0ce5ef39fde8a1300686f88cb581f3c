@@ -1,0 +1,42 @@
+I"Z	
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ブラソフ方程式-vlasov-equation" id="markdown-toc-ブラソフ方程式-vlasov-equation">ブラソフ方程式 (Vlasov equation)</a>    <ol>
+      <li><a href="#リューヴィユの定理-liouvilles-theorem" id="markdown-toc-リューヴィユの定理-liouvilles-theorem">リューヴィユの定理 (Liouville’s theorem)</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ブラソフ方程式-vlasov-equation">ブラソフ方程式 (Vlasov equation)</h1>
+
+<p>ここでは<a href="/galady/twobody_relaxation">2体緩和</a>が無視できるような、無衝突重力多体系を記述するのに必要となるブラソフ方程式(Vlasov equation)を導出します。
+これはボルツマン方程式(Boltzmann equation)の衝突項を無視したものとして知られており、またの名を無衝突ボルツマン方程式(collisionless Boltzmann equation)とも呼ばれています。
+非常に多数の粒子系を扱う場合には、それらを一点ずつ表現するのではなく、ある分布関数に従うものとして表現する方が便利です。
+ブラソフ方程式は、無衝突系での分布関数の時間発展を記述しています。</p>
+
+<h2 id="リューヴィユの定理-liouvilles-theorem">リューヴィユの定理 (Liouville’s theorem)</h2>
+
+<p>方程式を導出するために必要となる定理を導出しましょう。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

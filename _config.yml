@@ -5,7 +5,7 @@ github_username:  github-nakasho
 ga_tracking: G-C550SVR5KQ
 ga_tracking_anonymize_ip: true
 theme: "just-the-docs"
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.3.3
 plugins:
   - jekyll-feed
 souce: ./mds
@@ -19,4 +19,3 @@ footer_content: "Copyright &copy; Sho NAKAMURA"
 last_edit_timestamp: true
 last_edit_time_format: "%b %e %Y at %I:%M %p"
 color_scheme: for_astrophysics
-

@@ -35,8 +35,8 @@ $$N$$個の粒子が存在する力学系を考え、それらは一つ一つが
 運動エネルギーは位置と運動量に依存するため$$T(\mathbf{q}, \mathbf{p})$$のような関数系で書かれ、さらに系のポテンシャルエネルギーを$$W(\mathbf{q})$$のように書くと、この系のハミルトニアンは
 
 $$
-H(q, p) 
-= T(q, p) + W(q) \tag{1}
+H(\mathbf{q}, \mathbf{p}) 
+= T(\mathbf{q}, \mathbf{p}) + W(\mathbf{q}) \tag{1}
 $$
 
 のようになります。すると、ハミルトンの運動方程式は
@@ -53,8 +53,8 @@ $$
 
 ![](/assets/images/galady/vlasov_01.png)
 
-この位相空間上の平面内において、粒子が上図のように面積$$S = \Delta q_{ij} \Delta p_{ij}$$を形成しているとします。ここで$$\Delta q_{ij}, \Delta p_{ij} \ll 1$$とします。
-今、$$v_2 = \dot{q}_{ij} (q_{ij}), v_1 = \dot{q}_{ij} (q_{ij} + \Delta q_{ij})$$のように位相空間上で運動をしたとします。するとその速度の差分は
+この位相空間上の平面内において、粒子群が上図のように面積$$S = \Delta q_{ij} \Delta p_{ij}$$を形成しているとします。ここで$$\Delta q_{ij}, \Delta p_{ij} \ll 1$$とします。
+今、この面積が、$$v_2 = \dot{q}_{ij} (q_{ij}), v_1 = \dot{q}_{ij} (q_{ij} + \Delta q_{ij})$$のように位相空間上で運動をしたと考えましょう。するとその速度の差分は
 
 $$
 \Delta v 
@@ -99,7 +99,7 @@ $$
 = 0 \tag{6}
 $$
 
-のようになります。これは位相空間内で粒子の分布が作る面積(厳密には$$6N$$次元なので、体積)は不変であることを意味します。これをリウビルの定理と呼びます。
+のようになります。これは位相空間内で粒子の分布が作る面積($$6N$$次元なので、厳密には体積)は不変であることを意味します。これをリウビルの定理と呼びます。
 
 ## ブラソフ方程式の導出
 
@@ -142,6 +142,33 @@ $$
 衝突がある場合には右辺に衝突に由来する項が入ります。
 ```
 
+## 直感的な導出
+
+ここまでリウビルの定理などを用いて数学的に導出してきましたが、以下のように直感的に考えることもできます。
+アナロジーとして非圧縮性流体を考えましょう。流体の密度を$$\rho$$とすると、この状況では$$\frac{D\rho}{Dt} = 0$$、すなわち流れに沿って流体要素の密度が不変と言えます。
+同様のことを6次元位相空間で考えます。無衝突の場合、6次元位相空間上の移動に沿って突然粒子数が増減することはなく、常に一定であるはずです。
+このことから
+
+$$
+\frac{Df}{Dt} 
+= \frac{\partial f}{\partial t} + \sum_{i=1}^6 v_i \frac{\partial f}{\partial x_i} 
+= 0 \tag{11}
+$$
+
+流体力学の[ラグランジュ微分](/mhd//mhd/euler_lagrange)と違うのは、第二項の微分の部分です。
+流体力学では$$x, y, z$$の空間3成分のみを考えれば大丈夫でしたが、今は$$x, y, z, v_x, v_y, v_z$$の位相空間の6成分で考えなければなりません。
+よって(11)式においては、$$x_1 = x, x_2 = y, x_3 = z$$は3次元空間の座標に対応し、$$x_4 = v_x, x_5 = v_y, x_6 = v_z$$はそれぞれその方向に対する速度となります。
+同様に$$v_1 = v_x, v_2 = v_y, v_3 = v_z, v_4 = a_x, v_5 = a_y, v_6 = a_z$$となります。ここで$$a_x, a_y, a_z$$はそれぞれ$$x, y, z$$方向の加速度です。
+重力多体系の場合、加速度は重力による力、すなわち$$- \frac{\partial \Phi}{\partial \mathbf{x}}$$のように書くことができます。
+よって第二項を分離して
+
+$$
+\frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla f - \nabla \Phi \cdot \frac{\partial f}{\partial \mathbf{v}}
+= 0 \tag{12}
+$$
+
+のように書けば、(10)式と同じものを得ることができます。
+
 ## 余談: 無衝突プラズマ系のブラソフ方程式
 
 (10)式は重力多体系について成り立つ方程式でしたが、その前の(8)式は無衝突であればどのような系でも成り立ちます。
@@ -150,36 +177,36 @@ $$
 $$
 \dot{\mathbf{p}} 
 = \ddot{\mathbf{x}} 
-= \frac{q}{m} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} \right) \tag{11}
+= \frac{q}{m} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} \right) \tag{13}
 $$
 
 となります。最終的に
 
 $$
 \frac{\partial f}{\partial t} + \mathbf{v} \cdot \frac{\partial f}{\partial \mathbf{x}} + \frac{q}{m} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} \right) \cdot \frac{\partial f}{\partial \mathbf{v}} 
-= 0 \tag{12}
+= 0 \tag{14}
 $$
 
 を得ます。実際にこれを数値計算で解くときには、分布関数$$f$$の時間発展と同時に、電場・磁場の時間発展を[マクスウェル方程式](/astroelec/em_energy_momentum)
 
 $$
 \frac{\partial \mathbf{E}}{\partial t} 
-= c \nabla \times \mathbf{B} - 4\pi \mathbf{j} \tag{13}
+= c \nabla \times \mathbf{B} - 4\pi \mathbf{j} \tag{15}
 $$
 
 $$
 \frac{\partial \mathbf{B}}{\partial t} 
-= - c \nabla \times \mathbf{E} \tag{14}
+= - c \nabla \times \mathbf{E} \tag{16}
 $$
 
 $$
 \nabla \cdot \mathbf{E} 
-= 4\pi \rho \tag{15}
+= 4\pi \rho \tag{17}
 $$
 
 $$
 \nabla \cdot \mathbf{B} 
-= 0 \tag{16}
+= 0 \tag{18}
 $$
 
 も解いていきます。

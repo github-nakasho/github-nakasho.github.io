@@ -1,0 +1,63 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#運動の積分とジーンズの定理" id="markdown-toc-運動の積分とジーンズの定理">運動の積分とジーンズの定理</a>    <ol>
+      <li><a href="#運動の積分-integrals-of-motions" id="markdown-toc-運動の積分-integrals-of-motions">運動の積分 (integrals of motions)</a></li>
+      <li><a href="#ジーンズの定理-jeans-theorem" id="markdown-toc-ジーンズの定理-jeans-theorem">ジーンズの定理 (Jeans theorem)</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="運動の積分とジーンズの定理">運動の積分とジーンズの定理</h1>
+
+<p>ここでは、<a href="/galady/vlasov">ブラソフ方程式(無衝突ボルツマン方程式)</a>の定常解において成り立つ定理をメモしておきます。</p>
+
+<h2 id="運動の積分-integrals-of-motions">運動の積分 (integrals of motions)</h2>
+
+<p>運動の積分とは、現在の位相空間の位置\((\mathbf{x}, \mathbf{v})\)にのみ依存する(時間\(t\)には依存しない)、運動の軌道に沿って保存される任意の量\(I(\mathbf{x}. \mathbf{v})\)のことです。
+軌道に沿った微分(<a href="/mhd//mhd/euler_lagrange">ラグランジュ微分</a>)から</p>
+
+\[\frac{DI}{Dt} 
+= \underbrace{\frac{\partial I}{\partial t}}_{=0} + \frac{\partial I}{\partial \mathbf{x}} \cdot \underbrace{\frac{d \mathbf{x}}{d t}}_{= \mathbf{v}} + \frac{\partial I}{\partial \mathbf{v}} \cdot \underbrace{\frac{d \mathbf{v}}{dt}}_{= -\frac{\partial \Phi}{\partial \mathbf{x}}} 
+= \mathbf{v} \cdot \nabla I - \nabla \Phi \cdot \frac{\partial I}{\partial \mathbf{v}} 
+= 0 \tag{1}\]
+
+<p>となります。</p>
+
+<h2 id="ジーンズの定理-jeans-theorem">ジーンズの定理 (Jeans theorem)</h2>
+
+<p>ここで、定常状態になった位相空間上の分布関数\(f(\mathbf{x}, \mathbf{v})\)について考えてみましょう。\(f\)は時間に依存しないことから、<a href="/galady/vlasov">ブラソフ方程式</a>は</p>
+
+\[\underbrace{\frac{\partial f}{\partial t}}_{=0} + \mathbf{v} \cdot \nabla f - \nabla \Phi \cdot \frac{\partial f}{\partial \mathbf{v}} 
+= 0 \tag{2}\]
+
+<p>のように、(1)式と全く同じ形となります。このことから、運動の積分が定常ブラソフ方程式の解となっていることがわかります。
+以上より、以下の定理が成り立ちます。</p>
+
+<p><strong>ジーンズの定理: 運動の積分\(I_1, I_2, \dots, I_n\)の任意関数は、定常ブラソフ方程式の解である</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>実はこれは必要十分条件の必要性の部分しか証明していません。真にこれを言いたければ、分布関数の全微分を$$I_k$$で書き下し、それぞれの項が0となることを示します。
+</code></pre></div></div>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

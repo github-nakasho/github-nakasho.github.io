@@ -1,0 +1,132 @@
+I"V>
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ポアソン方程式-poisso-equation" id="markdown-toc-ポアソン方程式-poisso-equation">ポアソン方程式 (Poisso equation)</a>    <ol>
+      <li><a href="#普通のポアソン方程式の導出" id="markdown-toc-普通のポアソン方程式の導出">普通のポアソン方程式の導出</a></li>
+      <li><a href="#分布関数を用いた表現" id="markdown-toc-分布関数を用いた表現">分布関数を用いた表現</a></li>
+      <li><a href="#自己整合性-self-consistency" id="markdown-toc-自己整合性-self-consistency">自己整合性 (self-consistency)</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ポアソン方程式-poisso-equation">ポアソン方程式 (Poisso equation)</h1>
+
+<p>ここでは分布関数\(f(\mathbf{x}, \mathbf{v})\)を用いて、重力場を決定する方程式であるポアソン方程式を導出しましょう。</p>
+
+<h2 id="普通のポアソン方程式の導出">普通のポアソン方程式の導出</h2>
+
+<p><img src="/assets/images/galady/poisson_01.png" alt="" /></p>
+
+<p>上図のように、位置\(\mathbf{x}'\)にある質量密度\(\rho(\mathbf{x}')\)が、位置\(\mathbf{x}\)に作る重力ポテンシャルは</p>
+
+\[\Phi (\mathbf{x}) 
+= - G \int \frac{\rho(\mathbf{x}')}{\vert \mathbf{x}' - \mathbf{x} \vert} d\mathbf{x}' \tag{1}\]
+
+<p>のように書かれます。これの勾配は</p>
+
+\[\frac{\partial \Phi}{\partial \mathbf{x}} 
+= - G \int \rho(\mathbf{x}') \frac{\partial}{\partial \mathbf{x}} \left( \frac{1}{\vert \mathbf{x}' - \mathbf{x} \vert} \right) d\mathbf{x}' 
+= - G \int \rho(\mathbf{x}') \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} d\mathbf{x}' 
+= - \mathbf{F} \tag{2}\]
+
+<p>のように計算されます。
+最後の\(\mathbf{F} = - \frac{\partial \Phi}{\partial \mathbf{x}}\)は重力により位置\(\mathbf{x}\)に働く力を表します。
+さらにこれの発散を取ると</p>
+
+\[\nabla \cdot \mathbf{F} 
+= \nabla \cdot \left( - \frac{\partial \Phi}{\partial \mathbf{x}}\right) 
+= - \nabla^2 \Phi
+= G \int \rho(\mathbf{x}') \frac{\partial}{\partial \mathbf{x}} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d\mathbf{x}' \tag{3}\]
+
+<p>この式の\(\mathbf{x}'\)での積分を実行しましょう。\(\mathbf{x}' \neq \mathbf{x}\)のときには、この積分値は0となります。
+\(\mathbf{x}' = \mathbf{x}\)の積分値を求めるために、\(\mathbf{x}'\)が\(\mathbf{x}\)近傍の範囲\(h\)の中のみを考えましょう。
+このとき\(\rho (\mathbf{x}') \simeq \rho (\mathbf{x}) = (一定)\)と考えることができます。よって</p>
+
+\[\nabla^2 \Phi
+= - G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert \leq h} \frac{\partial}{\partial \mathbf{x}} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d\mathbf{x}'
+= G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert \leq h} \frac{\partial}{\partial \mathbf{x}'} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d \mathbf{x}' \tag{4}\]
+
+<p>のように変形することができます。ここでガウスの定理を用いて、体積積分を表面での面積分にします。</p>
+
+\[\nabla^2 \Phi
+= G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert = h} \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} \cdot d \mathbf{S}' \tag{5}\]
+
+<p>さらに微小面積要素\(d\mathbf{S}'\)は、その微小面積要素を見込む微小立体角\(d\Omega\)を用いて</p>
+
+\[d\mathbf{S}' 
+= (\mathbf{x}' - \mathbf{x}) h d\Omega \ \Longrightarrow \ 
+\vert d \mathbf{S}'\vert 
+= \underbrace{\vert \mathbf{x}'-\mathbf{x}\vert}_{=h} h d\Omega 
+= h^2 d\Omega \equiv dS' \tag{6}\]
+
+<p>のように変形することができます。</p>
+
+<p><img src="/assets/images/galady/poisson_02.png" alt="" /></p>
+
+<p>よって(5)式の面積分は立体角での積分に置き換えることができます。すると</p>
+
+\[\nabla^2 \Phi
+= G \rho (\mathbf{x}) \int_{4\pi} \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} \cdot (\mathbf{x}' - \mathbf{x}) h d\Omega 
+= G \rho (\mathbf{x}) \int_{4\pi} d\Omega 
+= 4\pi G \rho (\mathbf{x}) \tag{7}\]
+
+<p>と求まります。これが導出したかったポアソン方程式です。</p>
+
+<h2 id="分布関数を用いた表現">分布関数を用いた表現</h2>
+
+<p>ここまでは質量密度\(\rho (\mathbf{x})\)での表現でした。
+実は分布関数\(f(\mathbf{x}, \mathbf{v})\)と\(\rho (\mathbf{x})\)との間には</p>
+
+\[\rho (\mathbf{x}) 
+= m \int f(\mathbf{x}, \mathbf{v}) d\mathbf{x} \tag{8}\]
+
+<p>のような関係があります。
+\(f\)は位置\(\mathbf{x}\)にいる速度\(\mathbf{v}\)の粒子の数密度を表します。
+よってこれを全速度で積分すれば、それは位置\(\mathbf{x}\)にいる粒子の数にとなります。
+これを用いれば、ポアソン方程式は</p>
+
+\[\nabla^2 \Phi 
+= 4\pi G m \int f (\mathbf{x}, \mathbf{v}) d \mathbf{v} \tag{9}\]
+
+<p>のように書かれます。</p>
+
+<h2 id="自己整合性-self-consistency">自己整合性 (self-consistency)</h2>
+
+<p>力学平衡にある重力多体系は、自己整合性を持つことで知られています。
+例えば質量密度\(\rho(\mathbf{x})\)が与えられたとしましょう。
+ポアソン方程式(8)から、重力ポテンシャル\(\Phi(\mathbf{x})\)が求まります。
+この重力ポテンシャルから、働く重力が求まり、その多体系での運動が決定されます。
+すると運動の様子を記述する、<a href="/galady/jeans_theorem">運動の積分\(I_1, I_2, \dots, I_n\)</a>が求まります。
+ここまでくれば<a href="/galady/jeans_theorem">ジーンズの定理</a>から、分布関数\(f(I_1, I_2, \dots, I_n)\)が求まります。
+ここまでの手続きで求まった分布関数を速度で積分することで、\(\rho\)が求められます。
+こうして求めた\(\rho\)は最初に与えられた\(\rho\)と一致するはずです。このようにして、計算された結果に矛盾がないか(整合性が取れているか)を確かめることができます。</p>
+
+<div class="jekyll-diagrams diagrams mermaid">
+  <svg id="mermaid-1666985807416" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" style="max-width:450px;" viewBox="-50 -10 450 231"><style>#mermaid-1666985807416 .label{font-family:trebuchet ms,verdana,arial;color:#333}#mermaid-1666985807416 .node circle,#mermaid-1666985807416 .node ellipse,#mermaid-1666985807416 .node polygon,#mermaid-1666985807416 .node rect{fill:#ececff;stroke:#9370db;stroke-width:1px}#mermaid-1666985807416 .node.clickable{cursor:pointer}#mermaid-1666985807416 .arrowheadPath{fill:#333}#mermaid-1666985807416 .edgePath .path{stroke:#333;stroke-width:1.5px}#mermaid-1666985807416 .edgeLabel{background-color:#e8e8e8}#mermaid-1666985807416 .cluster rect{fill:#ffffde!important;stroke:#aa3!important;stroke-width:1px!important}#mermaid-1666985807416 .cluster text{fill:#333}#mermaid-1666985807416 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:trebuchet ms,verdana,arial;font-size:12px;background:#ffffde;border:1px solid #aa3;border-radius:2px;pointer-events:none;z-index:100}#mermaid-1666985807416 .actor{stroke:#ccf;fill:#ececff}#mermaid-1666985807416 text.actor{fill:#000;stroke:none}#mermaid-1666985807416 .actor-line{stroke:grey}#mermaid-1666985807416 .messageLine0{marker-end:"url(#arrowhead)"}#mermaid-1666985807416 .messageLine0,#mermaid-1666985807416 .messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#mermaid-1666985807416 #arrowhead{fill:#333}#mermaid-1666985807416 #crosshead path{fill:#333!important;stroke:#333!important}#mermaid-1666985807416 .messageText{fill:#333;stroke:none}#mermaid-1666985807416 .labelBox{stroke:#ccf;fill:#ececff}#mermaid-1666985807416 .labelText,#mermaid-1666985807416 .loopText{fill:#000;stroke:none}#mermaid-1666985807416 .loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#ccf}#mermaid-1666985807416 .note{stroke:#aa3;fill:#fff5ad}#mermaid-1666985807416 .noteText{fill:#000;stroke:none;font-family:trebuchet ms,verdana,arial;font-size:14px}#mermaid-1666985807416 .section{stroke:none;opacity:.2}#mermaid-1666985807416 .section0{fill:rgba(102,102,255,.49)}#mermaid-1666985807416 .section2{fill:#fff400}#mermaid-1666985807416 .section1,#mermaid-1666985807416 .section3{fill:#fff;opacity:.2}#mermaid-1666985807416 .sectionTitle0,#mermaid-1666985807416 .sectionTitle1,#mermaid-1666985807416 .sectionTitle2,#mermaid-1666985807416 .sectionTitle3{fill:#333}#mermaid-1666985807416 .sectionTitle{text-anchor:start;font-size:11px;text-height:14px}#mermaid-1666985807416 .grid .tick{stroke:#d3d3d3;opacity:.3;shape-rendering:crispEdges}#mermaid-1666985807416 .grid path{stroke-width:0}#mermaid-1666985807416 .today{fill:none;stroke:red;stroke-width:2px}#mermaid-1666985807416 .task{stroke-width:2}#mermaid-1666985807416 .taskText{text-anchor:middle;font-size:11px}#mermaid-1666985807416 .taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}#mermaid-1666985807416 .taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}#mermaid-1666985807416 .taskText0,#mermaid-1666985807416 .taskText1,#mermaid-1666985807416 .taskText2,#mermaid-1666985807416 .taskText3{fill:#fff}#mermaid-1666985807416 .task0,#mermaid-1666985807416 .task1,#mermaid-1666985807416 .task2,#mermaid-1666985807416 .task3{fill:#8a90dd;stroke:#534fbc}#mermaid-1666985807416 .taskTextOutside0,#mermaid-1666985807416 .taskTextOutside1,#mermaid-1666985807416 .taskTextOutside2,#mermaid-1666985807416 .taskTextOutside3{fill:#000}#mermaid-1666985807416 .active0,#mermaid-1666985807416 .active1,#mermaid-1666985807416 .active2,#mermaid-1666985807416 .active3{fill:#bfc7ff;stroke:#534fbc}#mermaid-1666985807416 .activeText0,#mermaid-1666985807416 .activeText1,#mermaid-1666985807416 .activeText2,#mermaid-1666985807416 .activeText3{fill:#000!important}#mermaid-1666985807416 .done0,#mermaid-1666985807416 .done1,#mermaid-1666985807416 .done2,#mermaid-1666985807416 .done3{stroke:grey;fill:#d3d3d3;stroke-width:2}#mermaid-1666985807416 .doneText0,#mermaid-1666985807416 .doneText1,#mermaid-1666985807416 .doneText2,#mermaid-1666985807416 .doneText3{fill:#000!important}#mermaid-1666985807416 .crit0,#mermaid-1666985807416 .crit1,#mermaid-1666985807416 .crit2,#mermaid-1666985807416 .crit3{stroke:#f88;fill:red;stroke-width:2}#mermaid-1666985807416 .activeCrit0,#mermaid-1666985807416 .activeCrit1,#mermaid-1666985807416 .activeCrit2,#mermaid-1666985807416 .activeCrit3{stroke:#f88;fill:#bfc7ff;stroke-width:2}#mermaid-1666985807416 .doneCrit0,#mermaid-1666985807416 .doneCrit1,#mermaid-1666985807416 .doneCrit2,#mermaid-1666985807416 .doneCrit3{stroke:#f88;fill:#d3d3d3;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}#mermaid-1666985807416 .activeCritText0,#mermaid-1666985807416 .activeCritText1,#mermaid-1666985807416 .activeCritText2,#mermaid-1666985807416 .activeCritText3,#mermaid-1666985807416 .doneCritText0,#mermaid-1666985807416 .doneCritText1,#mermaid-1666985807416 .doneCritText2,#mermaid-1666985807416 .doneCritText3{fill:#000!important}#mermaid-1666985807416 .titleText{text-anchor:middle;font-size:18px;fill:#000}#mermaid-1666985807416 g.classGroup text{fill:#9370db;stroke:none;font-family:trebuchet ms,verdana,arial;font-size:10px}#mermaid-1666985807416 g.classGroup rect{fill:#ececff;stroke:#9370db}#mermaid-1666985807416 g.classGroup line{stroke:#9370db;stroke-width:1}#mermaid-1666985807416 .classLabel .box{stroke:none;stroke-width:0;fill:#ececff;opacity:.5}#mermaid-1666985807416 .classLabel .label{fill:#9370db;font-size:10px}#mermaid-1666985807416 .relation{stroke:#9370db;stroke-width:1;fill:none}#mermaid-1666985807416 #compositionEnd,#mermaid-1666985807416 #compositionStart{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-1666985807416 #aggregationEnd,#mermaid-1666985807416 #aggregationStart{fill:#ececff;stroke:#9370db;stroke-width:1}#mermaid-1666985807416 #dependencyEnd,#mermaid-1666985807416 #dependencyStart,#mermaid-1666985807416 #extensionEnd,#mermaid-1666985807416 #extensionStart{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-1666985807416 .branch-label,#mermaid-1666985807416 .commit-id,#mermaid-1666985807416 .commit-msg{fill:#d3d3d3;color:#d3d3d3}</style><style>#mermaid-1666985807416 {
+    color: rgb(0, 0, 0);
+    font: normal normal 400 normal 16px / normal "Times New Roman";
+  }</style><g></g><g><line id="actor0" x1="75" y1="5" x2="75" y2="220" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="75" dy="0">John</tspan></text></g><g><line id="actor1" x1="275" y1="5" x2="275" y2="220" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="275" dy="0">Alice</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><g><text x="175" y="93" class="messageText" style="text-anchor: middle;">Hello John, how are you?</text><line x1="275" y1="100" x2="75" y2="100" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="128" class="messageText" style="text-anchor: middle;">Great!</text><line x1="75" y1="135" x2="275" y2="135" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="0" y="155" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="187.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="75" dy="0">John</tspan></text></g><g><rect x="200" y="155" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="187.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="275" dy="0">Alice</tspan></text></g></svg>
+</div>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

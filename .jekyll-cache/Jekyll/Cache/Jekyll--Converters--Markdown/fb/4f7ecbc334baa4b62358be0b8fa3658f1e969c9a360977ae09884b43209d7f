@@ -1,4 +1,4 @@
-I"1
+I"31
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -53,7 +53,7 @@
 <p><img src="/assets/images/galady/vlasov_01.png" alt="" /></p>
 
 <p>この位相空間上の平面内において、粒子群が上図のように面積\(S = \Delta q_{ij} \Delta p_{ij}\)を形成しているとします。ここで\(\Delta q_{ij}, \Delta p_{ij} \ll 1\)とします。
-今、\(v_2 = \dot{q}_{ij} (q_{ij}), v_1 = \dot{q}_{ij} (q_{ij} + \Delta q_{ij})\)のように位相空間上で運動をしたとします。するとその速度の差分は</p>
+今、この面積が、\(v_2 = \dot{q}_{ij} (q_{ij}), v_1 = \dot{q}_{ij} (q_{ij} + \Delta q_{ij})\)のように位相空間上で運動をしたと考えましょう。するとその速度の差分は</p>
 
 \[\Delta v 
 \equiv v_1 - v_2 
@@ -88,7 +88,7 @@
 = \Delta q_{ij} \Delta p_{ij} \delta t \left\{ \frac{\partial}{\partial q_{ij}} \left( \frac{\partial H}{\partial p_{ij}}\right)+ \frac{\partial}{\partial p_{ij}} \left( - \frac{\partial H}{\partial q_{ij}}\right) \right\}
 = 0 \tag{6}\]
 
-<p>のようになります。これは位相空間内で粒子の分布が作る面積(厳密には\(6N\)次元なので、体積)は不変であることを意味します。これをリウビルの定理と呼びます。</p>
+<p>のようになります。これは位相空間内で粒子の分布が作る面積(\(6N\)次元なので、厳密には体積)は不変であることを意味します。これをリウビルの定理と呼びます。</p>
 
 <h2 id="ブラソフ方程式の導出">ブラソフ方程式の導出</h2>
 

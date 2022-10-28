@@ -1,0 +1,172 @@
+I"�-
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ポアソン方程式-poisso-equation" id="markdown-toc-ポアソン方程式-poisso-equation">ポアソン方程式 (Poisso equation)</a>    <ol>
+      <li><a href="#普通のポアソン方程式の導出" id="markdown-toc-普通のポアソン方程式の導出">普通のポアソン方程式の導出</a></li>
+      <li><a href="#分布関数を用いた表現" id="markdown-toc-分布関数を用いた表現">分布関数を用いた表現</a></li>
+      <li><a href="#自己整合性-self-consistency" id="markdown-toc-自己整合性-self-consistency">自己整合性 (self-consistency)</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ポアソン方程式-poisso-equation">ポアソン方程式 (Poisso equation)</h1>
+
+<p>ここでは分布関数\(f(\mathbf{x}, \mathbf{v})\)を用いて、重力場を決定する方程式であるポアソン方程式を導出しましょう。</p>
+
+<h2 id="普通のポアソン方程式の導出">普通のポアソン方程式の導出</h2>
+
+<p><img src="/assets/images/galady/poisson_01.png" alt="" /></p>
+
+<p>上図のように、位置\(\mathbf{x}'\)にある質量密度\(\rho(\mathbf{x}')\)が、位置\(\mathbf{x}\)に作る重力ポテンシャルは</p>
+
+\[\Phi (\mathbf{x}) 
+= - G \int \frac{\rho(\mathbf{x}')}{\vert \mathbf{x}' - \mathbf{x} \vert} d\mathbf{x}' \tag{1}\]
+
+<p>のように書かれます。これの勾配は</p>
+
+\[\frac{\partial \Phi}{\partial \mathbf{x}} 
+= - G \int \rho(\mathbf{x}') \frac{\partial}{\partial \mathbf{x}} \left( \frac{1}{\vert \mathbf{x}' - \mathbf{x} \vert} \right) d\mathbf{x}' 
+= - G \int \rho(\mathbf{x}') \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} d\mathbf{x}' 
+= - \mathbf{F} \tag{2}\]
+
+<p>のように計算されます。
+最後の\(\mathbf{F} = - \frac{\partial \Phi}{\partial \mathbf{x}}\)は重力により位置\(\mathbf{x}\)に働く力を表します。
+さらにこれの発散を取ると</p>
+
+\[\nabla \cdot \mathbf{F} 
+= \nabla \cdot \left( - \frac{\partial \Phi}{\partial \mathbf{x}}\right) 
+= - \nabla^2 \Phi
+= G \int \rho(\mathbf{x}') \frac{\partial}{\partial \mathbf{x}} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d\mathbf{x}' \tag{3}\]
+
+<p>この式の\(\mathbf{x}'\)での積分を実行しましょう。\(\mathbf{x}' \neq \mathbf{x}\)のときには、この積分値は0となります。
+\(\mathbf{x}' = \mathbf{x}\)の積分値を求めるために、\(\mathbf{x}'\)が\(\mathbf{x}\)近傍の範囲\(h\)の中のみを考えましょう。
+このとき\(\rho (\mathbf{x}') \simeq \rho (\mathbf{x}) = (一定)\)と考えることができます。よって</p>
+
+\[\nabla^2 \Phi
+= - G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert \leq h} \frac{\partial}{\partial \mathbf{x}} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d\mathbf{x}'
+= G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert \leq h} \frac{\partial}{\partial \mathbf{x}'} \cdot \left( \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3}\right) d \mathbf{x}' \tag{4}\]
+
+<p>のように変形することができます。ここでガウスの定理を用いて、体積積分を表面での面積分にします。</p>
+
+\[\nabla^2 \Phi
+= G \rho (\mathbf{x}) \int_{\vert \mathbf{x}' - \mathbf{x}\vert = h} \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} \cdot d \mathbf{S}' \tag{5}\]
+
+<p>さらに微小面積要素\(d\mathbf{S}'\)は、その微小面積要素を見込む微小立体角\(d\Omega\)を用いて</p>
+
+\[d\mathbf{S}' 
+= (\mathbf{x}' - \mathbf{x}) h d\Omega \ \Longrightarrow \ 
+\vert d \mathbf{S}'\vert 
+= \underbrace{\vert \mathbf{x}'-\mathbf{x}\vert}_{=h} h d\Omega 
+= h^2 d\Omega \equiv dS' \tag{6}\]
+
+<p>のように変形することができます。</p>
+
+<p><img src="/assets/images/galady/poisson_02.png" alt="" /></p>
+
+<p>よって(5)式の面積分は立体角での積分に置き換えることができます。すると</p>
+
+\[\nabla^2 \Phi
+= G \rho (\mathbf{x}) \int_{4\pi} \frac{\mathbf{x}' - \mathbf{x}}{\vert \mathbf{x}' - \mathbf{x} \vert^3} \cdot (\mathbf{x}' - \mathbf{x}) h d\Omega 
+= G \rho (\mathbf{x}) \int_{4\pi} d\Omega 
+= 4\pi G \rho (\mathbf{x}) \tag{7}\]
+
+<p>と求まります。これが導出したかったポアソン方程式です。</p>
+
+<h2 id="分布関数を用いた表現">分布関数を用いた表現</h2>
+
+<p>ここまでは質量密度\(\rho (\mathbf{x})\)での表現でした。
+実は分布関数\(f(\mathbf{x}, \mathbf{v})\)と\(\rho (\mathbf{x})\)との間には</p>
+
+\[\rho (\mathbf{x}) 
+= m \int f(\mathbf{x}, \mathbf{v}) d\mathbf{x} \tag{8}\]
+
+<p>のような関係があります。
+\(f\)は位置\(\mathbf{x}\)にいる速度\(\mathbf{v}\)の粒子の数密度を表します。
+よってこれを全速度で積分すれば、それは位置\(\mathbf{x}\)にいる粒子の数にとなります。
+これを用いれば、ポアソン方程式は</p>
+
+\[\nabla^2 \Phi 
+= 4\pi G m \int f (\mathbf{x}, \mathbf{v}) d \mathbf{v} \tag{9}\]
+
+<p>のように書かれます。</p>
+
+<h2 id="自己整合性-self-consistency">自己整合性 (self-consistency)</h2>
+
+<p>力学平衡にある重力多体系は、自己整合性を持つことで知られています。
+例えば質量密度\(\rho(\mathbf{x})\)が与えられたとしましょう。
+ポアソン方程式(7)から、重力ポテンシャル\(\Phi(\mathbf{x})\)が求まります。
+この重力ポテンシャルから、働く重力が求まり、その多体系での運動が決定されます。
+すると運動の様子を記述する、<a href="/galady/jeans_theorem">運動の積分\(I_1, I_2, \dots, I_n\)</a>が求まります。
+ここまでくれば<a href="/galady/jeans_theorem">ジーンズの定理</a>から、分布関数\(f(I_1, I_2, \dots, I_n)\)が求まります。
+ここまでの手続きで求まった分布関数を速度で積分することで、\(\rho\)が求められます。
+こうして求めた\(\rho\)は最初に与えられた\(\rho\)と一致するはずです。このようにして、計算された結果に矛盾がないか(整合性が取れているか)を確かめることができます。</p>
+
+<div class="jekyll-diagrams diagrams mermaid">
+  Rendering Failed: mmdc --puppeteerConfigFile /Users/nakasho/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/jekyll-diagrams-0.10.0/vendor/mermaid_puppeteer_config.json --input /var/folders/q2/l118jmf92md30jwcnjd38vbw0000gn/T/input20221028-22030-tyy00z --output /var/folders/q2/l118jmf92md30jwcnjd38vbw0000gn/T/output20221028-22030-anpi83.svg: node:internal/process/promises:289
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: Evaluation failed: Error: Parse error on line 2:
+...ph LR;    A[密度]--&gt;|(7)|B[重力ポテンシャル];   
+----------------------^
+Expecting 'SPACE', 'GRAPH', 'DIR', 'TAGEND', 'TAGSTART', 'UP', 'DOWN', 'subgraph', 'end', 'MINUS', '--', '==', 'STR', 'STYLE', 'LINKSTYLE', 'CLASSDEF', 'CLASS', 'CLICK', 'DEFAULT', 'NUM', 'PCT', 'COMMA', 'ALPHA', 'COLON', 'BRKT', 'DOT', 'PUNCTUATION', 'UNICODE_TEXT', 'PLUS', 'EQUALS', 'MULT', got 'PS'
+    at Yt.parseError (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:1:486512)
+    at Yt.parse (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:1:487678)
+    at Object.e.getClasses (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:1:749437)
+    at Object.render (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:1:759998)
+    at s (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:8:233)
+    at Object.init (file:///Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/mermaid.min.js:8:318)
+    at __puppeteer_evaluation_script__:17:20
+    at ExecutionContext._evaluateInternal (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/ExecutionContext.js:122:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/ExecutionContext.js:48:12)
+    at async ElementHandle.evaluate (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/JSHandle.js:55:12)
+    at async ElementHandle.$eval (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/JSHandle.js:478:20)
+  -- ASYNC --
+    at ExecutionContext.<anonymous> (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/helper.js:111:15)
+    at ElementHandle.evaluate (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/JSHandle.js:55:42)
+    at ElementHandle.<anonymous> (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/helper.js:112:23)
+    at ElementHandle.$eval (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/JSHandle.js:478:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+  -- ASYNC --
+    at ElementHandle.<anonymous> (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/helper.js:111:15)
+    at DOMWorld.$eval (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/DOMWorld.js:156:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+  -- ASYNC --
+    at Frame.<anonymous> (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/helper.js:111:15)
+    at Page.$eval (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/Page.js:347:29)
+    at Page.<anonymous> (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/node_modules/puppeteer/lib/helper.js:112:23)
+    at /Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/index.bundle.js:83:14
+    at Generator.next (<anonymous>)
+    at step (/Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/index.bundle.js:4:191)
+    at /Users/nakasho/.nodebrew/node/v19.0.0/lib/node_modules/mermaid.cli/index.bundle.js:4:361
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+Node.js v19.0.0
+
+
+&lt;/div&gt;
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+<!-- for_jekyll -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+ 
+</anonymous></anonymous></anonymous></anonymous></anonymous></anonymous></div>
+:ET

@@ -211,4 +211,8 @@ $$
 
 も解いていきます。
 
+# 参考文献
+
+* 牧野淳一郎, ["理論物理学特論I"](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics_2004/note1/note1-e.html)
+
 {% include adsense.html %} 

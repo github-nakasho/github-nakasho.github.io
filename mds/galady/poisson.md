@@ -130,12 +130,6 @@ $$
 最後に分布関数を速度で積分することで、$$\rho$$が求められます。
 こうして求めた$$\rho$$は最初に与えられた$$\rho$$と一致するはずです。このようにして、計算された結果に矛盾がないか(整合性が取れているか)を確かめることができます。
 
-{% mermaid %}
-graph LR;
-    A[密度]-->|Poisson eq|B[重力ポテンシャル];
-    B-->C[運動の積分];
-    C-->|Jeans theorem|D[分布関数];
-    D-->|eq. 8|A;
-{% endmermaid %}
+![](/assets/images/galady/poisson_03.png)
 
 {% include adsense.html %} 

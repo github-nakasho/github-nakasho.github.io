@@ -1,0 +1,81 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#宇宙線-cosmic-rays-crs" id="markdown-toc-宇宙線-cosmic-rays-crs">宇宙線 (Cosmic Rays: CRs)</a>    <ol>
+      <li><a href="#相対論的陽子のラーモア半径と運動エネルギー" id="markdown-toc-相対論的陽子のラーモア半径と運動エネルギー">相対論的陽子のラーモア半径と運動エネルギー</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="宇宙線-cosmic-rays-crs">宇宙線 (Cosmic Rays: CRs)</h1>
+
+<p><a href="/astroelec/accelerator">円形加速器</a>では、磁場(と電場)を巧みに用いることで荷電粒子を高エネルギーまで加速することができます。
+宇宙にもあまねく磁場が存在し、その環境次第では高エネルギー粒子の生成現場となっているような天体があります。
+ここではそれらの天体がどの程度まで陽子を加速できるかを推定し、それが地球に飛来できるのかどうかを見積もってみましょう。</p>
+
+<h2 id="相対論的陽子のラーモア半径と運動エネルギー">相対論的陽子のラーモア半径と運動エネルギー</h2>
+
+<p>ここでは大雑把な推定のために、ある天体が一様磁場を持っているとします。
+この一様磁場中を相対論的速度を持つ陽子が、一様磁場に垂直な方向に運動している場合を考えましょう(もし水平成分を持っていたとしてもその方向には等速度で運動をするだけなので、問題には特に影響しません)。
+さらに大雑把に考えるために、以下では磁場の強度を\(1 \mu \mathrm{G}\)とします。
+すると、この相対論的陽子の円運動の半径は、<a href="/astroelec/uniform_mag_rel">ラーモア半径</a>より</p>
+
+\[r_L 
+= \frac{v}{\omega_\mathrm{se}} 
+= \frac{m_p \gamma c}{e B} v 
+= \underbrace{\frac{m_p c}{eB}}_{\equiv \alpha^{-1}} \frac{cv}{c^2 - v^2} \ \Longrightarrow \ 
+\alpha^2 r_L^2 
+= \frac{c^2 v^2}{c^2 - v^2} \ \Longrightarrow \ 
+(c^2 + \alpha^2 r_L^2) v^2 
+= \alpha^2 r_L^2 c^2 \ \Longrightarrow \ 
+\beta^2 
+= \left( \frac{v}{c}\right)^2 
+= \frac{\alpha^2 r_L^2}{c^2 + \alpha^2 r_L^2} \tag{1}\]
+
+<p>この式から、ローレンツ因子\(\gamma\)が<a href="/astroelec/uniform_mag_rel">ラーモア半径\(r_L\)</a>と</p>
+
+\[\gamma 
+= \frac{1}{\sqrt{1-(v/c)^2}} 
+= \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{2}\]
+
+<p>のような関係にあることがわかります。
+相対論より、陽子の運動エネルギーは\(T = m_p \gamma c^2\)のように書けるので</p>
+
+\[T = m_p c^2 \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{3}\]
+
+<p>のように表されます。
+ここで、途中で定義した\(\alpha\)を計算しておきましょう。</p>
+
+\[\alpha^2 
+= \frac{e^2 B^2}{m_p^2 c^2} 
+= \underbrace{\frac{e^2}{\hbar c}}_{=1/137} \frac{\overbrace{\hbar c}^{=197 \mathrm{MeV} \cdot \mathrm{fm}} c^2}{\underbrace{(m_p c^2)^2}_{(938 \mathrm{MeV})^2}} B^2 
+\simeq \frac{2 \times 10^{-11}}{140} \frac{9 \times 10^{20}}{10^6 \mathrm{MeV}} B^2 
+\simeq \frac{9}{70} \frac{10^3}{1 \mathrm{MeV}} B^2 
+\simeq \frac{9}{70} \frac{10^3}{10^6 \times 1.6 \times 10^{-12}} B^2 
+\simeq \frac{9}{112} \times 10^9 \left( \frac{B}{1 \mu \mathrm{G}}\right)^2 10^{-12} 
+\simeq 8 \times 10^{-5} \left( \frac{B}{1 \mu \mathrm{G}}\right)^2 \tag{4}\]
+
+<p>相対論的</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

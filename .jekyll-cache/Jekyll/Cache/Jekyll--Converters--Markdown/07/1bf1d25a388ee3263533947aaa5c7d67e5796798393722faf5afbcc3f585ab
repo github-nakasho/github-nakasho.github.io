@@ -1,4 +1,4 @@
-I"At
+I"�v
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -516,6 +516,26 @@ F \mathcal{E}^{n-\frac{3}{2}} &amp; (\mathcal{E} \geq 0) \\
 実際の研究で観測データにキングモデルを適用した場合の論文などでは、これをパラメータとして記述することが多いようです。</p>
 
 <h2 id="ハーンキストモデル-hernquist-model">ハーンキストモデル (Hernquist model)</h2>
+
+<p>(準備中…)</p>
+
+<!-- ハーンキストモデルとは、以下のような密度分布のモデルを指します。
+
+$$
+\rho (r) 
+= \frac{M}{2\pi} \frac{a}{r} \frac{1}{(r+a)^3} \tag{53}
+$$
+
+ここで$$a$$は系の典型的な長さ(scale length)、そして$$M$$は系の全質量です。
+この密度分布の場合に、半径$$r$$の球の内側に存在する質量$$M(r)$$は
+
+$$
+M(r) 
+= 4\pi \int_0^r \frac{M}{2\pi} \frac{a}{r} \frac{1}{(r+a)^3} r^2 dr 
+= M \int_0^r \frac{2ar}{(r+a)^3} 
+= M \left[ 2ar \left( -\frac{1}{2} (r+a)^{-2} \right) \right]_0^r - M \int_0^r \frac{-a}{(r+a)^2} dr 
+= M \left[ \frac{-ar}{(r+a)^2} \right]_0^r + M 
+$$ -->
 
 <h1 id="参考文献">参考文献</h1>
 

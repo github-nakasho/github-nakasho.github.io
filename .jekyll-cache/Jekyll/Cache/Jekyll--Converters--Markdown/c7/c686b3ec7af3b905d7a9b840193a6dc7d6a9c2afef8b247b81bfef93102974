@@ -1,4 +1,4 @@
-I"�"
+I"�#
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -60,7 +60,7 @@
 = \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{2}\]
 
 <p>のような関係にあることがわかります。
-相対論より、陽子の運動エネルギーは\(T = m_p \gamma c^2\)のように書けるので</p>
+相対論より、超相対論的な陽子\((\gamma \gg 1)\)の運動エネルギーは\(T = m_p \gamma c^2\)のように書けるので</p>
 
 \[T = m_p c^2 \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{3}\]
 
@@ -136,6 +136,7 @@ T
 
 <ol>
   <li><a href="https://doi.org/10.48550/arXiv.astro-ph/0607109">Hillas, 2006, “Cosmic Rays: Recent Progress and some Current Questions”</a></li>
+  <li><a href="https://masterclass.icecube.wisc.edu/en/analyses/cosmic-ray-energy-spectrum">The IceCube Masterclass website</a></li>
 </ol>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>

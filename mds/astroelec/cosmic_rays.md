@@ -58,7 +58,7 @@ $$
 $$
 
 のような関係にあることがわかります。
-相対論より、陽子の運動エネルギーは$$T = m_p \gamma c^2$$のように書けるので
+相対論より、超相対論的な陽子$$(\gamma \gg 1)$$の運動エネルギーは$$T = m_p \gamma c^2$$のように書けるので
 
 $$
 T = m_p c^2 \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{3}
@@ -139,7 +139,8 @@ $$
 
 # 参考文献
 
-1. [Hillas, 2006, "Cosmic Rays: Recent Progress and some Current Questions"](https://doi.org/10.48550/arXiv.astro-ph/0607109)
-2. [The IceCube Masterclass website](https://masterclass.icecube.wisc.edu/en/analyses/cosmic-ray-energy-spectrum)
+[1] [Hillas, 2006, "Cosmic Rays: Recent Progress and some Current Questions"](https://doi.org/10.48550/arXiv.astro-ph/0607109)  
+[2] [The IceCube Masterclass website](https://masterclass.icecube.wisc.edu/en/analyses/cosmic-ray-energy-spectrum)  
+[3] [FAST Project website](https://www.fast-project.org/)
 
 {% include adsense.html %} 

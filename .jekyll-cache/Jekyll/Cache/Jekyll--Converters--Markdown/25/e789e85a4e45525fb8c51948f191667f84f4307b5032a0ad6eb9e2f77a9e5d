@@ -1,4 +1,4 @@
-I"_
+I"�#
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -13,6 +13,7 @@
       <li><a href="#宇宙線スペクトル" id="markdown-toc-宇宙線スペクトル">宇宙線スペクトル</a></li>
     </ol>
   </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ol>
 
 </details>
@@ -59,7 +60,7 @@
 = \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{2}\]
 
 <p>のような関係にあることがわかります。
-相対論より、陽子の運動エネルギーは\(T = m_p \gamma c^2\)のように書けるので</p>
+相対論より、超相対論的な陽子\((\gamma \gg 1)\)の運動エネルギーは\(T = m_p \gamma c^2\)のように書けるので</p>
 
 \[T = m_p c^2 \sqrt{1 + (r_L / c)^2 \alpha^2} \tag{3}\]
 
@@ -69,10 +70,10 @@
 \[\begin{align}
 \alpha^2 
 &amp;= \frac{e^2 B^2}{m_p^2 c^2} 
-= \underbrace{\frac{e^2}{\hbar c}}_{=1/137} \frac{\overbrace{\hbar c}^{=197 \mathrm{MeV} \cdot \mathrm{fm}} c^2}{\underbrace{(m_p c^2)^2}_{(938 \mathrm{MeV})^2}} B^2 \notag \\
-&amp;\simeq \frac{2 \times 10^{-11}}{140} \frac{9 \times 10^{20}}{10^6 \mathrm{MeV}} B^2 
-\simeq \frac{9}{70} \frac{10^3}{1 \mathrm{MeV}} B^2 
-\simeq \frac{9}{70} \frac{10^3}{10^6 \times 1.6 \times 10^{-12}} B^2 
+= \underbrace{\frac{e^2}{\hbar c}}_{=1/137} \frac{\overbrace{\hbar c}^{=197 \mathrm{MeV} \cdot \mathrm{fm}} c^2}{\underbrace{(m_p c^2)^2}_{(938 \mathrm{MeV})^2}} B^2
+\simeq \frac{2 \times 10^{-11}}{140} \frac{9 \times 10^{20}}{10^6 \mathrm{MeV}} B^2 
+\simeq \frac{9}{70} \frac{10^3}{1 \mathrm{MeV}} B^2 \notag \\
+&amp;\simeq \frac{9}{70} \frac{10^3}{10^6 \times 1.6 \times 10^{-12}} B^2 
 \simeq \frac{9}{112} \times 10^9 \left( \frac{B}{1 \mu \mathrm{G}}\right)^2 10^{-12} 
 \simeq 8 \times 10^{-5} \left( \frac{B}{1 \mu \mathrm{G}}\right)^2 \tag{4}
 \end{align}\]
@@ -95,11 +96,13 @@
 
 <p>\(r_L = 1 \mathrm{pc} \sim 3 \times 10^{18} \mathrm{cm}\)のとき</p>
 
-\[T 
-\sim 938 \mathrm{MeV} \times \sqrt{1 + \left(\frac{3 \times 10^{18}}{3 \times 10^{10}} \times 8 \times 10^{-5} \right)^2} 
-\sim 938 \times \sqrt{8 \times 10^{11}} [\mathrm{MeV}]
-\sim 9.38 \times 2\sqrt{2} \times 10 \times 10^7 [\mathrm{MeV}] 
-\sim 8 \times 10^{5} [\mathrm{GeV}] \tag{5}\]
+\[\begin{align}
+T 
+&amp;\sim 938 \mathrm{MeV} \times \sqrt{1 + \left(\frac{3 \times 10^{18}}{3 \times 10^{10}} \times 8 \times 10^{-5} \right)^2} 
+\sim 938 \times \sqrt{8 \times 10^{11}} [\mathrm{MeV}] \notag \\
+&amp;\sim 9.38 \times 2\sqrt{2} \times 10 \times 10^7 [\mathrm{MeV}] 
+\sim 8 \times 10^{5} [\mathrm{GeV}] \tag{5}
+\end{align}\]
 
 <p>およそ\(10^{6} \mathrm{GeV}\)となることがわかります。</p>
 
@@ -123,7 +126,17 @@
 
 <p>上図は縦軸が単位時間・単位立体角・単位面積・単位エネルギーあたりに飛来する宇宙線の頻度にエネルギーの2乗を掛けたもの、そして横軸は宇宙線のエネルギーです。
 宇宙線の飛来頻度にエネルギーの2乗をかけることで、エネルギーが増加するにつれて急激に減少するグラフを見やすくしています。
-上図を見ると、\(10^6\mathrm{GeV}\)あたり</p>
+上図を見ると、\(10^6\mathrm{GeV}\)あたりと\(10^{9-10}\mathrm{GeV}\)のあたりにわずかながら折れ曲がりを見ることができます。
+このグラフを人間の足に見立てて、前者を膝”knee”、そして後者を足首”ankle”と呼びます。
+先程の2つの大雑把な見積もりから、この2つの折れ曲がり部分は宇宙線の加速現場の違いを反映していると推察することができます。
+すなわちkneeより低エネルギー側は超新星残骸やそれより小さな天体が起源、そしてkneeより大きくankleより小さいエネルギーの宇宙線は天の川銀河起源であると言えます。
+それよりも高エネルギーのものはより大きなスケール、すなわち銀河系外から飛来してきているものと考えることができます。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] <a href="https://doi.org/10.48550/arXiv.astro-ph/0607109">Hillas, 2006, “Cosmic Rays: Recent Progress and some Current Questions”</a><br />
+[2] <a href="https://masterclass.icecube.wisc.edu/en/analyses/cosmic-ray-energy-spectrum">The IceCube Masterclass website</a><br />
+[3] <a href="https://www.fast-project.org/">FAST Project website</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

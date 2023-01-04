@@ -1,0 +1,85 @@
+I"^
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#湯川型ポテンシャルの導出" id="markdown-toc-湯川型ポテンシャルの導出">湯川型ポテンシャルの導出</a>    <ol>
+      <li><a href="#フーリエ変換による方法" id="markdown-toc-フーリエ変換による方法">フーリエ変換による方法</a></li>
+      <li><a href="#複素平面上での積分" id="markdown-toc-複素平面上での積分">複素平面上での積分</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="湯川型ポテンシャルの導出">湯川型ポテンシャルの導出</h1>
+
+<p><a href="/plasma/debye_huckel">デバイ・ヒュッケルの理論</a>で出現した以下のポテンシャルを、もとの方程式から求めてみましょう。
+ここでは\(\mu = 1/\lambda_D\)とした、以下の方程式の解を求めます。</p>
+
+\[\left( \Delta - \mu^2 \right) \phi 
+= - 4\pi q_0 \delta^3(\mathbf{r}) \tag{1}\]
+
+<h2 id="フーリエ変換による方法">フーリエ変換による方法</h2>
+
+<p>今回はフーリエ変換の方法を用いて解きます。
+左辺の\(\phi\)の逆フーリエ変換を考えると</p>
+
+\[(\Delta - \mu^2) \iiint_{-\infty}^\infty \hat{\phi}(\mathbf{k}) e^{i \mathbf{r} \cdot \mathbf{k}} d^3 \mathbf{k} 
+= \iiint_{-\infty}^\infty \hat{\phi} (\mathbf{k}) (\Delta-\mu^2) e^{i \mathbf{r} \cdot \mathbf{k}} d^3 \mathbf{k} 
+= \iiint_{-\infty}^\infty \hat{\phi} (\mathbf{k}) (-k^2-\mu^2) e^{i \mahtbf{r} \cdot \mathbf{k}} d^3 \mathbf{k} \tag{2}\]
+
+<p>これと、右辺のデルタ関数の積分表示より</p>
+
+\[\iiint_{-\infty}^\infty \hat{\phi} (\mathbf{k}) (-k^2-\mu^2) e^{i \mahtbf{r} \cdot \mathbf{k}} d^3 \mathbf{k} 
+= - \frac{4\pi q_0}{(2\pi)^3} \iiint_{-\infty}^\infty e^{i \mathbf{r} \cdot \mathbf{k}} d^3 \mathbf{k} \tag{3}\]
+
+<p>両辺を比較することで</p>
+
+\[\hat{\phi} (\mathbf{k}) 
+= \frac{q_0}{2\pi^2} \frac{1}{k^2 + \mu^2} \tag{4}\]
+
+<p>を得ます。
+逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。
+積分の取り方としては、\(\mathbf{r} \cdot \mathbf{k} = rk \cos \theta\)のように、\(\mathbf{r}\)からの偏角を用いた極座標設定にすると計算が便利です。</p>
+
+\[\phi(\mathbf{r}) 
+= \frac{q_0}{2\pi^2} \iiint_{-\infty}^\infty \frac{e^{i\mathbf{r} \cdot \mathbf{k}}}{k^2 + \mu^2} d^3 \mathbf{k} 
+\underbrace{=}_{d^3 \mathbf{k}= k^2 \sin \theta dk d\theta d\varphi} \frac{q_0}{2\pi^2} \int_0^\infty dk \int_0^\pi \int_0^{2\pi} d\varphi e^{ikr \cos \theta} \frac{k^2}{k^2 + \mu^2} \sin \theta 
+\underbrace{=}_{\nu = \cos \theta} \frac{q_0}{\pi} \int_0^\infty dk \int_{-1}^1 d\nu e^{irk\nu} \frac{k^2}{k^2 + \mu^2} 
+= \frac{q_0}{\pi} \int_0^\infty \frac{k^2}{k^2 + \mu^2} \frac{e^{irk} - e^{-irk}}{irk} dk 
+= \frac{2q_0}{\pi r} \int_0^\infty \frac{k \sin rk}{k^2 + \mu^2} dk \tag{5}\]
+
+<p>最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。</p>
+
+\[\phi (\mathbf{r}) 
+= \frac{q_0}{\pi r} \int_{-\infty}^\infty \frac{k \sin rk}{k^2 + \mu^2} dk 
+= \frac{q_0}{2i \pi r} \int_{-\infty}^\infty \frac{k}{k^2 + \mu^2} (e^{irk} - e^{-irk}) dk \tag{6}\]
+
+<h2 id="複素平面上での積分">複素平面上での積分</h2>
+
+<p>(6)式の積分を計算するために</p>
+
+\[f(z) 
+= \frac{z}{z^2 + \mu^2} e^{irz} \quad (z = x+ iy) \tag{7}\]
+
+<p>を、次の複素数平面上の閉曲路で積分することを考えましょう。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

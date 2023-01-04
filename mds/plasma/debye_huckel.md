@@ -171,7 +171,7 @@ $$
 = - 4\pi q_0 \delta^3 (\mathbf{r}) - 4\pi (en_p - en_e(\mathbf{r})) 
 \simeq - 4\pi q_0 \delta^3 (\mathbf{r}) + 4\pi e n_p \frac{e\phi (\mathbf{r})}{k_B T} \notag \\
 &\Longrightarrow \ 
-\left( \Delta - \frac{1}{\lambda_D} \right) \phi 
+\left( \Delta - \frac{1}{\lambda_D^2} \right) \phi 
 = - 4\pi q_0 \delta^3 (\mathbf{r}) \tag{18}
 \end{align}
 $$
@@ -192,7 +192,7 @@ $$
 $$
 
 のようになります。
-さらに、(18)式の解は以下のように求まります(導出は後日掲載予定)。
+さらに、(18)式の解は以下のように求まります(導出は[湯川型ポテンシャルの導出ページ](/plasma/yukawa_pot)を参照)。
 
 $$
 \phi (r)

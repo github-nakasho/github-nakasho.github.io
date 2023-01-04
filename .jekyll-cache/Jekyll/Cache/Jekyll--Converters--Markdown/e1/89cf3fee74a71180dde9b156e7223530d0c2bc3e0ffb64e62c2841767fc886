@@ -1,4 +1,4 @@
-I"!&
+I"�B
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -6,7 +6,8 @@
 <ol id="markdown-toc">
   <li><a href="#デバイヒュッケルの理論-debye-hückel-theory" id="markdown-toc-デバイヒュッケルの理論-debye-hückel-theory">デバイ・ヒュッケルの理論 (Debye-Hückel theory)</a>    <ol>
       <li><a href="#デバイ長-debye-length" id="markdown-toc-デバイ長-debye-length">デバイ長 (Debye length)</a></li>
-      <li><a href="#デバイ遮蔽" id="markdown-toc-デバイ遮蔽">デバイ遮蔽</a></li>
+      <li><a href="#デバイ遮蔽-debye-shielding" id="markdown-toc-デバイ遮蔽-debye-shielding">デバイ遮蔽 (Debye shielding)</a></li>
+      <li><a href="#コラム的な-湯川型ポテンシャル" id="markdown-toc-コラム的な-湯川型ポテンシャル">コラム的な？: 湯川型ポテンシャル</a></li>
     </ol>
   </li>
 </ol>
@@ -141,7 +142,7 @@ n_e (\mathbf{r})
 = - 4\pi q_0 \delta^3 (\mathbf{r}) - 4\pi (en_p - en_e(\mathbf{r})) 
 \simeq - 4\pi q_0 \delta^3 (\mathbf{r}) + 4\pi e n_p \frac{e\phi (\mathbf{r})}{k_B T} \notag \\
 &amp;\Longrightarrow \ 
-\left( \Delta - \frac{1}{\lambda_D} \right) \phi 
+\left( \Delta - \frac{1}{\lambda_D^2} \right) \phi 
 = - 4\pi q_0 \delta^3 (\mathbf{r}) \tag{18}
 \end{align}\]
 
@@ -159,7 +160,7 @@ n_e (\mathbf{r})
 \end{align}\]
 
 <p>のようになります。
-さらに、(18)式の解は以下のように求まります。</p>
+さらに、(18)式の解は以下のように求まります(導出は<a href="/plasma/yukawa_pot">湯川型ポテンシャルの導出ページ</a>を参照)。</p>
 
 \[\phi (r)
 = \frac{q_0}{r} e^{-r/\lambda_D} \tag{20}\]
@@ -167,9 +168,111 @@ n_e (\mathbf{r})
 <p>この結果は、プラズマの存在により点電荷からデバイ長以上離れると、静電ポテンシャルが急激に減少することを表しています。
 これは中心の電荷によるクーロン力の到達距離が\(r &lt; \lambda_D\)に限られる、と言い換えることもできます。</p>
 
-<h2 id="デバイ遮蔽">デバイ遮蔽</h2>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 
-<p>(20)式でポテンシャルが表される現象を詳細に見てみましょう。</p>
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="デバイ遮蔽-debye-shielding">デバイ遮蔽 (Debye shielding)</h2>
+
+<p>(20)式でポテンシャルが表される現象を詳細に見てみましょう。
+そのために、まずは空間でのプラズマの全電荷を調べてみます。</p>
+
+\[\begin{align}
+\int_{+0}^\infty 4\pi r^2 e(n_p - n_e(\mathbf{r})) 
+&amp;= - \int_{+0}^\infty 4\pi r^2 e^2 \frac{\phi (\mathbf{r})}{k_B T} dr
+= - \int_{+0}^\infty r q_0 e^{-r/\lambda_D} \underbrace{\frac{4\pi n_{e0} e^2}{k_B T}}_{=1/ \lambda_D^2} \notag \\
+&amp;= - q_0 \int_{+0}^\infty \frac{r}{\lambda_D} e^{-r/\lambda_D} \frac{dr}{\lambda_D} 
+= - q_0 \tag{21}
+\end{align}\]
+
+<p>これは中心に置いた点電荷の電荷を打ち消す量になっていることが分かります。
+もともと電気的中性が保たれていたプラズマから全電荷が\(-q_0\)が発生したようにも見えるかもしれませんが、これは中心の電荷\(q_0\)をイオンの一部を寄せ集めて作ったものと考えれば良いでしょう。
+電子分布の一様分布からのズレができたことで、中心にできた電荷の偏りと打ち消しあい、遠方にいる観測者にとっては電気的中性が保たれているように見えます。
+この電荷の遮蔽現象をデバイ遮蔽(Debye shielding)と呼びます。
+デバイ長は電子の平均間隔より十分大きく、中心の電荷からデバイ長を半径とする球内に入っている電子の数は</p>
+
+\[\Lambda_c 
+\equiv \frac{4\pi}{3} \lambda_D^3 n_e 
+\simeq 1 \times 10^9 \left( \frac{T}{10^4 \mathrm{K}}\right)^{3/2} \left( \frac{n_e}{1 \mathrm{cm}^{-3}}\right)^{-3/2} \tag{22}\]
+
+<p>のようになり、非常に多いことが分かります。
+このことから電荷の遮蔽現象は、非常に多数の電子によって行われていると理解できます。
+一方、デバイ長は電子の平均自由行程と比べると十分短く、デバイ遮蔽を引き起こす電子と電子どうしあるいはイオンとの衝突は無視できます。
+このことから、デバイ遮蔽は無衝突プラズマの特徴的現象であると分かります。
+例えば\(q_0&gt;0\)の場合を考えましょう。
+このときの静電ポテンシャルは\(\phi &gt; 0\)より、中心部に負の電荷を持つ電子が偏って分布していることになります。
+これは以下のようにして起こります。
+中心に電荷がないときは直進していたはずの電子の軌道は、電荷の存在により中心に惹きつけられて少し曲がります。
+軌道の変化が少量であることは、弱結合プラズマであることから保証されます。
+一つの電子の軌道の変化による遮蔽効果は非常に小さいですが、多数の電子に同様の軌道変化が起きることで、デバイ波長程度離れると中心においた電荷がほぼ遮蔽されるのです。
+無衝突なのに個々の電子が協調的に振る舞うことで、集団で一つの現象を引き起こすプラズマ現象の典型的な例です。
+現実世界でも同様の例を見つけることができます。
+アイドルが人の多い場所に突然現れたとしましょう。
+すると周囲にいる人々はアイドルに握手やサインを求めます。
+またある人はアイドルを一目見ようと距離を縮めたり、その姿をスマホカメラに収めようとします。
+アイドルを一目見ることができて目的を達成した人はその場から離れていきます。
+このように、人だかりを構成する人は入れ替わり立ち替わりが変わっていきいますが、中心にいるアイドルの周囲には常に人だかりが維持されます。
+プラズマも人間も、集団的振る舞いという意味では同じ性質を持っているのかも知れません。</p>
+
+<p><img src="/assets/images/plasma/debye_huckel_01.png" alt="" /></p>
+
+<p>最後に、<a href="/plasma/parameter">弱結合プラズマ</a>の条件を、デバイ長を用いて書き換えてみましょう。
+粒子間の静電ポテンシャルと熱運動エネルギーの比は</p>
+
+\[\begin{align}
+\Gamma 
+&amp;= \frac{e^2 n_{e0}^{1/3}}{\frac{3}{2} k_B T} 
+= \frac{2}{3} \underbrace{\frac{4\pi e^2 n_{e0}}{k_B T}}_{\lambda_D^{-2}} \frac{1}{4\pi n_{e0}^{2/3}} 
+= \frac{1}{6\pi} \frac{1}{\lambda_D^2 n_{e0}^{2/3}} 
+= \frac{1}{6\pi} \underbrace{\left( \frac{4\pi}{3} \lambda_D^3 n_{e0} \right)^{-2/3}}_{=\Lambda_c^{-2/3}} \left( \frac{4\pi}{3}\right)^{2/3} \notag \\
+&amp;\simeq \frac{1}{\Lambda_c^{2/3}} \tag{23}
+\end{align}\]
+
+<p>のようになります。
+この式からも、プラズマが弱結合であるということとデバイ遮蔽に関わる電子数が非常に多数であることが関係していると分かります。<br />
+電子がイオンにより散乱される平均自由行程\(\lambda_e\)についても考察しましょう。
+<a href="/astroelec/rutherford">ラザフォード散乱の散乱断面積</a>より</p>
+
+\[\sigma_R 
+= \pi \left( \frac{e^2}{m_e v_0^2} \right)^2 
+\simeq \pi \left( \frac{e^2}{3k_B T}\right)^2 \tag{24}\]
+
+<p>途中、\(\frac{1}{2} m_e v_0^2 \simeq \frac{3}{2} k_B T\)を用いました。
+平均自由行程の定義より</p>
+
+\[\begin{align}
+&amp;\lambda_e 
+= \frac{1}{\sigma_R n_p} 
+= \frac{9}{\pi n_e} \left( \frac{k_B T}{e^2} \right)^2 
+\underbrace{=}_{(19)} 9 \times 16 \pi n_e \lambda_D^4 \notag \\
+&amp;\Longrightarrow \ 
+\frac{\lambda_D}{\lambda_e} 
+= \frac{1}{9 \times 4 \times 3 \frac{4\pi}{3} n_e \lambda_D^3} 
+\underbrace{\simeq}_{(22)} \frac{1}{\Lambda_c} \tag{25}
+\end{align}\]
+
+<p>と計算されます。(23), (25)式より</p>
+
+\[\Gamma 
+\simeq \frac{1}{\Lambda_c^{2/3}} 
+\simeq \left( \frac{\lambda_D}{\lambda_e} \right)^{2/3} \tag{26}\]
+
+<p>と求まります。
+ここから、デバイ長スケールではプラズマは無衝突プラズマとして扱えることが、改めて確認できました。</p>
+
+<h2 id="コラム的な-湯川型ポテンシャル">コラム的な？: 湯川型ポテンシャル</h2>
+
+<p>デバイ・ヒュッケルの理論のデバイ長を、\(\pi\)中間子のコンプトン波長\(\lambda_\pi = \frac{\hbar}{m_\pi c} \sim 1 \mathrm{fm}\)、\(q_0\)を強い力のチャージ\(q_\mathrm{strong}\)に置き換えると、強い力のポテンシャルが得られます。
+これは湯川秀樹により初めて提案された理論で</p>
+
+\[\phi 
+= \frac{q_\mathrm{strong}}{r} e^{-r / \lambda_\pi} \tag{27}\]
+
+<p>の形のポテンシャルが有名になったため、このタイプのポテンシャルを湯川ポテンシャルあるいは湯川型と呼ぶことがあります。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

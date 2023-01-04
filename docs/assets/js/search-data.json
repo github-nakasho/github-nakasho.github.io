@@ -1543,7 +1543,7 @@
   },"257": {
     "doc": "デバイ・ヒュッケルの理論",
     "title": "デバイ長 (Debye length)",
-    "content": "電気的に中性で無限に広がった電子・陽子からなる完全電離水素ガスの弱結合プラズマ中に、点電荷\\(q_0\\)を加えたときの静電場の様子を調べましょう。 ただし陽子の質量は電子よりも非常に大きく、点電荷が加わったとしても影響を受けないとして、ここでは電子のみを考えます。 統計力学によると、温度\\(T\\)で熱平衡にある粒子系では、粒子のエネルギーが\\(E \\sim E + dE\\)の範囲にある確率は . \\[P(E) dE \\propto e^{-E/k_B T} dE \\tag{3}\\] で与えられます。 特に自由な非相対論的運動をしている粒子系では、速度が\\(\\mathbf{v} = (v_x, v_y, v_z) \\sim \\mathbf{v} + d\\mathbf{v} = (v_x + dv_x, v_y + dv_y, v_z + dv_z)\\)の範囲にある確率は . \\[P(\\mathbf{v}) dv_x dv_y dv_z = \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} e^{-mv^2 / 2 k_B T} dv_x dv_y dv_z \\tag{4}\\] のように与えられます。 これをマクスウェル・ボルツマン分布(Maxwell-Boltzmann distribution: Maxwellian)と呼びます。 ここで\\(m\\)は粒子系を構成する粒子の質量、そして\\(v^2 = v_x^2 + v_y^2 + v_z^2\\)です。 電子が存在する領域の体積を\\(V\\)、そして電子がこの体積内に一様に分布しているとしましょう。 電子のクーロンポテンシャルエネルギー\\(-e \\phi(\\mathbf{r})\\)が存在するとき、電子のエネルギーは . \\[E = \\frac{1}{2} m_e v^2 - e\\phi(\\mathbf{r}) \\tag{5}\\] で与えられます。 ある位置\\(\\mathbf{r} \\sim \\mathbf{r} + d\\mathbf{r}\\)で速度が\\(\\mathbf{v} \\sim \\mathbf{v} + d\\mathbf{v}\\)の範囲の電子が見つかる確率は . \\[P(\\mathbf{r}) P(\\mathbf{v}) d^3 \\mathbf{r} d^3 \\mathbf{v} = C_1 e^{\\frac{-m_e v^2 / 2 + e \\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} d^3 \\mathbf{v} \\tag{6}\\] のようになります。 ここで\\(C_1\\)は規格化定数です。 この両辺を、まず全速度空間で体積積分しましょう。 . \\[\\begin{align} \\underbrace{\\iiint_{-\\infty}^\\infty P(\\mathbf{v}) d^3 \\mathbf{v}}_{=1} P(\\mathbf{r}) d^3 \\mathbf{r} &amp;= C_1 e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\int_{-\\infty}^\\infty dv_x \\int_{-\\infty}^\\infty dv_y \\int_{-\\infty}^\\infty dv_z e^{-\\frac{m_e (v_x^2 + v_y^2 + v_z^2)}{k_B T}} \\notag \\\\ &amp;= C_1 e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\left( \\int_{-\\infty}^\\infty dv_x e^{-\\frac{m_e v_x^2}{k_B T}}\\right)^3 \\tag{7} \\end{align}\\] ガウス積分の公式より . \\[\\int_{-\\infty}^\\infty dv_x e^{-\\frac{m_e v_x^2}{k_B T}} = \\sqrt{\\frac{2k_B T \\pi}{m_e}} \\tag{8}\\] と計算できるので . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = C_1 \\left( \\frac{2\\pi k_B T}{m_e}\\right)^{3/2} e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\tag{9}\\] となります。 この両辺をさらに体積\\(V\\)で積分しましょう。 . \\[\\underbrace{\\iiint_V P(\\mathbf{r}) d^3 \\mathbf{r}}_{=1} = C_1 \\left( \\frac{2\\pi k_B T}{m_e}\\right)^{3/2} \\underbrace{\\iiint_V e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r}}_{\\equiv C_2} \\ \\Longrightarrow \\ C_1 = \\left( \\frac{m_e}{2\\pi k_B T}\\right)^{3/2} \\frac{1}{C_2} \\tag{10}\\] 途中、体積積分部分は計算ができそうにないため、適当な定数\\(C_2\\)としました。 このようにして規格化定数\\(C_1\\)が求まったため、(9)式より . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = \\frac{1}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\tag{11}\\] ここで\\(V \\rightarrow \\infty\\)の極限を考え、無限遠方では\\(\\phi (\\mathbf{r}) \\rightarrow 0\\)とします。 そして無限遠での電子数密度を\\(n_{e0}\\)、任意の位置\\(\\mathbf{r}\\)での電子の数密度を\\(n_e (\\mathbf{r})\\)のようにしましょう。 ある微小領域\\(\\mathbf{r} \\sim \\mathbf{r} + d\\mathbf{r}\\)に電子が存在する確率は . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = \\frac{d^3 \\mathbf{r}内にいる電子数}{全電子数} = \\frac{n_e (\\mathbf{r}) d^3 \\mathbf{r}}{N} \\tag{12}\\] と書くことができます。 この式と(11)式より . \\[\\frac{n_e (\\mathbf{r}) d^3 \\mathbf{r}}{N} = \\frac{1}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\ \\Longrightarrow \\ n_e (\\mathbf{r}) = \\frac{N}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} \\tag{13}\\] \\(\\vert \\mathbf{r} \\vert \\rightarrow \\infty\\)では、点電荷によるポテンシャルの影響はなくなり\\(n_e \\rightarrow n_{e0}\\)になるという境界条件から、電子数密度が . \\[n_e (\\mathbf{r}) = n_{e0} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} \\tag{14}\\] で与えられることが分かります。 この結果を見ると、ポテンシャルエネルギー\\(-e\\phi\\)がより低いところ(\\(\\phi\\)の値が大きなところ)に電子が集まることが分かります。 元々の問題に立ち返ると、今は電子と陽子からなる完全電離水素ガスを考えているのでした。 よって無限遠方では電子と陽子の密度が等しくなっているはずです。 そして最初に述べたように、陽子は電子に比べて非常に重たく、電荷が加わったとしても至るところで一様に分布していると考えることができるため、陽子の数密度分布は\\(n_p = n_{e0}\\)と与えることができます。 ここで弱結合プラズマという条件を導入しましょう。 するとこれは . \\[\\left| \\frac{e\\phi (\\mathbf{r})}{k_B T} \\right| \\ll 1 \\tag{15}\\] の条件が成り立つことを意味します。 ここから、(14)式の電子数密度分布をテイラー展開すると . \\[n_e(\\mathbf{r}) \\simeq n_{p} \\left( 1 + \\frac{e\\phi(\\mathbf{r})}{k_B T}\\right) \\tag{16}\\] と求まります。 中心に置いた電荷\\(q_0\\)が作る静電ポテンシャルは、電磁ポテンシャルを求める方程式にローレンツゲージを課したものより . \\[\\Delta \\phi (\\mathbf{r}) = -4\\pi \\rho \\tag{17}\\] から求めることができます。 ここで系は一定の状態に落ち着いていると考えて\\(\\frac{\\partial}{\\partial t} = 0\\)としました。 右辺の\\(\\rho\\)は電荷密度です。 以上から、一様プラズマの原点に点電荷\\(q_0\\)を置いたときのポアソン方程式は . \\[\\begin{align} &amp;\\Delta \\phi (\\mathbf{r}) = - 4\\pi q_0 \\delta^3 (\\mathbf{r}) - 4\\pi (en_p - en_e(\\mathbf{r})) \\simeq - 4\\pi q_0 \\delta^3 (\\mathbf{r}) + 4\\pi e n_p \\frac{e\\phi (\\mathbf{r})}{k_B T} \\notag \\\\ &amp;\\Longrightarrow \\ \\left( \\Delta - \\frac{1}{\\lambda_D} \\right) \\phi = - 4\\pi q_0 \\delta^3 (\\mathbf{r}) \\tag{18} \\end{align}\\] のようになります。 ここで\\(\\lambda_D\\)はデバイ長(Debye length)と呼ばれる長さの次元を持った量です。 具体的に評価すると . \\[\\begin{align} \\lambda_D &amp;\\equiv \\sqrt{\\frac{k_B T}{4\\pi e^2 n_e}} \\simeq \\sqrt{\\frac{\\left( \\frac{T}{10^4 \\mathrm{K}}\\right) \\mathrm{eV}}{4\\pi \\frac{e^2}{\\hbar c} \\hbar c n_e}} \\simeq \\sqrt{\\frac{T}{10^4 \\mathrm{K}} \\mathrm{eV} \\frac{1}{\\frac{4\\pi n_e}{137} 197 \\mathrm{MeV} \\cdot \\mathrm{fm}}} \\notag \\\\ &amp;\\simeq \\sqrt{\\frac{T}{10^4 \\mathrm{K}} \\frac{1}{\\frac{120}{7} \\times 10^{-7} n_e}} \\simeq 7 \\times 10^2 \\left( \\frac{T}{10^4 \\mathrm{K}}\\right)^{1/2} \\left( \\frac{n_e}{1 \\mathrm{cm}^{-3}}\\right)^{-1/2} \\quad [\\mathrm{cm}] \\tag{19} \\end{align}\\] のようになります。 さらに、(18)式の解は以下のように求まります(導出は後日掲載予定)。 . \\[\\phi (r) = \\frac{q_0}{r} e^{-r/\\lambda_D} \\tag{20}\\] この結果は、プラズマの存在により点電荷からデバイ長以上離れると、静電ポテンシャルが急激に減少することを表しています。 これは中心の電荷によるクーロン力の到達距離が\\(r &lt; \\lambda_D\\)に限られる、と言い換えることもできます。 . ",
+    "content": "電気的に中性で無限に広がった電子・陽子からなる完全電離水素ガスの弱結合プラズマ中に、点電荷\\(q_0\\)を加えたときの静電場の様子を調べましょう。 ただし陽子の質量は電子よりも非常に大きく、点電荷が加わったとしても影響を受けないとして、ここでは電子のみを考えます。 統計力学によると、温度\\(T\\)で熱平衡にある粒子系では、粒子のエネルギーが\\(E \\sim E + dE\\)の範囲にある確率は . \\[P(E) dE \\propto e^{-E/k_B T} dE \\tag{3}\\] で与えられます。 特に自由な非相対論的運動をしている粒子系では、速度が\\(\\mathbf{v} = (v_x, v_y, v_z) \\sim \\mathbf{v} + d\\mathbf{v} = (v_x + dv_x, v_y + dv_y, v_z + dv_z)\\)の範囲にある確率は . \\[P(\\mathbf{v}) dv_x dv_y dv_z = \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} e^{-mv^2 / 2 k_B T} dv_x dv_y dv_z \\tag{4}\\] のように与えられます。 これをマクスウェル・ボルツマン分布(Maxwell-Boltzmann distribution: Maxwellian)と呼びます。 ここで\\(m\\)は粒子系を構成する粒子の質量、そして\\(v^2 = v_x^2 + v_y^2 + v_z^2\\)です。 電子が存在する領域の体積を\\(V\\)、そして電子がこの体積内に一様に分布しているとしましょう。 電子のクーロンポテンシャルエネルギー\\(-e \\phi(\\mathbf{r})\\)が存在するとき、電子のエネルギーは . \\[E = \\frac{1}{2} m_e v^2 - e\\phi(\\mathbf{r}) \\tag{5}\\] で与えられます。 ある位置\\(\\mathbf{r} \\sim \\mathbf{r} + d\\mathbf{r}\\)で速度が\\(\\mathbf{v} \\sim \\mathbf{v} + d\\mathbf{v}\\)の範囲の電子が見つかる確率は . \\[P(\\mathbf{r}) P(\\mathbf{v}) d^3 \\mathbf{r} d^3 \\mathbf{v} = C_1 e^{\\frac{-m_e v^2 / 2 + e \\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} d^3 \\mathbf{v} \\tag{6}\\] のようになります。 ここで\\(C_1\\)は規格化定数です。 この両辺を、まず全速度空間で体積積分しましょう。 . \\[\\begin{align} \\underbrace{\\iiint_{-\\infty}^\\infty P(\\mathbf{v}) d^3 \\mathbf{v}}_{=1} P(\\mathbf{r}) d^3 \\mathbf{r} &amp;= C_1 e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\int_{-\\infty}^\\infty dv_x \\int_{-\\infty}^\\infty dv_y \\int_{-\\infty}^\\infty dv_z e^{-\\frac{m_e (v_x^2 + v_y^2 + v_z^2)}{k_B T}} \\notag \\\\ &amp;= C_1 e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\left( \\int_{-\\infty}^\\infty dv_x e^{-\\frac{m_e v_x^2}{k_B T}}\\right)^3 \\tag{7} \\end{align}\\] ガウス積分の公式より . \\[\\int_{-\\infty}^\\infty dv_x e^{-\\frac{m_e v_x^2}{k_B T}} = \\sqrt{\\frac{2k_B T \\pi}{m_e}} \\tag{8}\\] と計算できるので . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = C_1 \\left( \\frac{2\\pi k_B T}{m_e}\\right)^{3/2} e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\tag{9}\\] となります。 この両辺をさらに体積\\(V\\)で積分しましょう。 . \\[\\underbrace{\\iiint_V P(\\mathbf{r}) d^3 \\mathbf{r}}_{=1} = C_1 \\left( \\frac{2\\pi k_B T}{m_e}\\right)^{3/2} \\underbrace{\\iiint_V e^{\\frac{e\\phi (\\mathbf{r})}{k_B T}} d^3 \\mathbf{r}}_{\\equiv C_2} \\ \\Longrightarrow \\ C_1 = \\left( \\frac{m_e}{2\\pi k_B T}\\right)^{3/2} \\frac{1}{C_2} \\tag{10}\\] 途中、体積積分部分は計算ができそうにないため、適当な定数\\(C_2\\)としました。 このようにして規格化定数\\(C_1\\)が求まったため、(9)式より . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = \\frac{1}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\tag{11}\\] ここで\\(V \\rightarrow \\infty\\)の極限を考え、無限遠方では\\(\\phi (\\mathbf{r}) \\rightarrow 0\\)とします。 そして無限遠での電子数密度を\\(n_{e0}\\)、任意の位置\\(\\mathbf{r}\\)での電子の数密度を\\(n_e (\\mathbf{r})\\)のようにしましょう。 ある微小領域\\(\\mathbf{r} \\sim \\mathbf{r} + d\\mathbf{r}\\)に電子が存在する確率は . \\[P(\\mathbf{r}) d^3 \\mathbf{r} = \\frac{d^3 \\mathbf{r}内にいる電子数}{全電子数} = \\frac{n_e (\\mathbf{r}) d^3 \\mathbf{r}}{N} \\tag{12}\\] と書くことができます。 この式と(11)式より . \\[\\frac{n_e (\\mathbf{r}) d^3 \\mathbf{r}}{N} = \\frac{1}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} d^3 \\mathbf{r} \\ \\Longrightarrow \\ n_e (\\mathbf{r}) = \\frac{N}{C_2} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} \\tag{13}\\] \\(\\vert \\mathbf{r} \\vert \\rightarrow \\infty\\)では、点電荷によるポテンシャルの影響はなくなり\\(n_e \\rightarrow n_{e0}\\)になるという境界条件から、電子数密度が . \\[n_e (\\mathbf{r}) = n_{e0} e^{\\frac{e\\phi(\\mathbf{r})}{k_B T}} \\tag{14}\\] で与えられることが分かります。 この結果を見ると、ポテンシャルエネルギー\\(-e\\phi\\)がより低いところ(\\(\\phi\\)の値が大きなところ)に電子が集まることが分かります。 元々の問題に立ち返ると、今は電子と陽子からなる完全電離水素ガスを考えているのでした。 よって無限遠方では電子と陽子の密度が等しくなっているはずです。 そして最初に述べたように、陽子は電子に比べて非常に重たく、電荷が加わったとしても至るところで一様に分布していると考えることができるため、陽子の数密度分布は\\(n_p = n_{e0}\\)と与えることができます。 ここで弱結合プラズマという条件を導入しましょう。 するとこれは . \\[\\left| \\frac{e\\phi (\\mathbf{r})}{k_B T} \\right| \\ll 1 \\tag{15}\\] の条件が成り立つことを意味します。 ここから、(14)式の電子数密度分布をテイラー展開すると . \\[n_e(\\mathbf{r}) \\simeq n_{p} \\left( 1 + \\frac{e\\phi(\\mathbf{r})}{k_B T}\\right) \\tag{16}\\] と求まります。 中心に置いた電荷\\(q_0\\)が作る静電ポテンシャルは、電磁ポテンシャルを求める方程式にローレンツゲージを課したものより . \\[\\Delta \\phi (\\mathbf{r}) = -4\\pi \\rho \\tag{17}\\] から求めることができます。 ここで系は一定の状態に落ち着いていると考えて\\(\\frac{\\partial}{\\partial t} = 0\\)としました。 右辺の\\(\\rho\\)は電荷密度です。 以上から、一様プラズマの原点に点電荷\\(q_0\\)を置いたときのポアソン方程式は . \\[\\begin{align} &amp;\\Delta \\phi (\\mathbf{r}) = - 4\\pi q_0 \\delta^3 (\\mathbf{r}) - 4\\pi (en_p - en_e(\\mathbf{r})) \\simeq - 4\\pi q_0 \\delta^3 (\\mathbf{r}) + 4\\pi e n_p \\frac{e\\phi (\\mathbf{r})}{k_B T} \\notag \\\\ &amp;\\Longrightarrow \\ \\left( \\Delta - \\frac{1}{\\lambda_D^2} \\right) \\phi = - 4\\pi q_0 \\delta^3 (\\mathbf{r}) \\tag{18} \\end{align}\\] のようになります。 ここで\\(\\lambda_D\\)はデバイ長(Debye length)と呼ばれる長さの次元を持った量です。 具体的に評価すると . \\[\\begin{align} \\lambda_D &amp;\\equiv \\sqrt{\\frac{k_B T}{4\\pi e^2 n_e}} \\simeq \\sqrt{\\frac{\\left( \\frac{T}{10^4 \\mathrm{K}}\\right) \\mathrm{eV}}{4\\pi \\frac{e^2}{\\hbar c} \\hbar c n_e}} \\simeq \\sqrt{\\frac{T}{10^4 \\mathrm{K}} \\mathrm{eV} \\frac{1}{\\frac{4\\pi n_e}{137} 197 \\mathrm{MeV} \\cdot \\mathrm{fm}}} \\notag \\\\ &amp;\\simeq \\sqrt{\\frac{T}{10^4 \\mathrm{K}} \\frac{1}{\\frac{120}{7} \\times 10^{-7} n_e}} \\simeq 7 \\times 10^2 \\left( \\frac{T}{10^4 \\mathrm{K}}\\right)^{1/2} \\left( \\frac{n_e}{1 \\mathrm{cm}^{-3}}\\right)^{-1/2} \\quad [\\mathrm{cm}] \\tag{19} \\end{align}\\] のようになります。 さらに、(18)式の解は以下のように求まります(導出は湯川型ポテンシャルの導出ページを参照)。 . \\[\\phi (r) = \\frac{q_0}{r} e^{-r/\\lambda_D} \\tag{20}\\] この結果は、プラズマの存在により点電荷からデバイ長以上離れると、静電ポテンシャルが急激に減少することを表しています。 これは中心の電荷によるクーロン力の到達距離が\\(r &lt; \\lambda_D\\)に限られる、と言い換えることもできます。 . ",
     "url": "http://localhost:4000/plasma/debye_huckel#%E3%83%87%E3%83%90%E3%82%A4%E9%95%B7-debye-length",
     "relUrl": "/plasma/debye_huckel#デバイ長-debye-length"
   },"258": {
@@ -1555,7 +1555,7 @@
   },"259": {
     "doc": "デバイ・ヒュッケルの理論",
     "title": "コラム的な？: 湯川型ポテンシャル",
-    "content": "デバイ・ヒュッケルの理論のデバイ長を、\\(\\pi\\)中間子のコンプトン波長\\(\\lambda_\\pi = \\frac{\\hbar}{m_\\pi c} \\sim 1 \\mathrm{fm}\\)、\\(q_0\\)を強い力のチャージ\\(q_\\mathrm{strong}\\)に置き換えると、強い力のポテンシャルが得られます。 これは湯川秀樹により初めて提案された理論で . \\[\\phi = \\frac{q_0}{r} e^{-r / \\lambda_\\pi} \\tag{27}\\] の形のポテンシャルが有名になったため、このタイプのポテンシャルを湯川ポテンシャルあるいは湯川型と呼ぶことがあります。 . ",
+    "content": "デバイ・ヒュッケルの理論のデバイ長を、\\(\\pi\\)中間子のコンプトン波長\\(\\lambda_\\pi = \\frac{\\hbar}{m_\\pi c} \\sim 1 \\mathrm{fm}\\)、\\(q_0\\)を強い力のチャージ\\(q_\\mathrm{strong}\\)に置き換えると、強い力のポテンシャルが得られます。 これは湯川秀樹により初めて提案された理論で . \\[\\phi = \\frac{q_\\mathrm{strong}}{r} e^{-r / \\lambda_\\pi} \\tag{27}\\] の形のポテンシャルが有名になったため、このタイプのポテンシャルを湯川ポテンシャルあるいは湯川型と呼ぶことがあります。 . ",
     "url": "http://localhost:4000/plasma/debye_huckel#%E3%82%B3%E3%83%A9%E3%83%A0%E7%9A%84%E3%81%AA-%E6%B9%AF%E5%B7%9D%E5%9E%8B%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB",
     "relUrl": "/plasma/debye_huckel#コラム的な-湯川型ポテンシャル"
   },"260": {
@@ -3113,35 +3113,35 @@
     "url": "http://localhost:4000/astroelec/ics_spectrum",
     "relUrl": "/astroelec/ics_spectrum"
   },"519": {
-    "doc": "一般相対性理論",
-    "title": "一般相対性理論",
-    "content": "ここでは宇宙物理を理解するために必要となる、一般相対論についてメモしていきます。 . 数学的に厳密な議論を欠いている部分もあります。ご容赦ください。 . ",
-    "url": "http://localhost:4000/gr#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96",
-    "relUrl": "/gr#一般相対性理論"
-  },"520": {
-    "doc": "一般相対性理論",
-    "title": "一般相対性理論",
-    "content": ". ",
-    "url": "http://localhost:4000/gr",
-    "relUrl": "/gr"
-  },"521": {
     "doc": "ホーム",
     "title": "宇宙物理メモ",
     "content": "このwebsiteはgithub-nakashoが運営するwebsiteです。 主に物理、宇宙物理、数学、プログラミングの勉強メモを掲載しています。 . ",
     "url": "http://localhost:4000/#%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E3%83%A1%E3%83%A2",
     "relUrl": "/#宇宙物理メモ"
-  },"522": {
+  },"520": {
     "doc": "ホーム",
     "title": "CV(?)",
     "content": "GitHub . github-nakasho . Twitter . @tweet_nakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Education . | 2008-2010. 東北大学理学部宇宙地球物理学科天文学コース | 2010-2012. 東北大学大学院理学研究科天文学専攻修士課程 | 2012-2016. 東北大学大学院理学研究科天文学専攻博士課程 | . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C言語 | OpenMP, MPIなどの並列化プログラミング | Python | Git (GitHub, Bitbucket) | Website制作 | Illustrator, Photoshopで簡単なイラスト作成 | . For fun . | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 海外旅行 | 自転車 | 寺社仏閣巡り | アニメ・ゲーム | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | Just Danceでエキササイズ | 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング | . ",
     "url": "http://localhost:4000/#cv",
     "relUrl": "/#cv"
-  },"523": {
+  },"521": {
     "doc": "ホーム",
     "title": "ホーム",
     "content": ". ",
     "url": "http://localhost:4000/",
     "relUrl": "/"
+  },"522": {
+    "doc": "一般相対性理論",
+    "title": "一般相対性理論",
+    "content": "ここでは宇宙物理を理解するために必要となる、一般相対論についてメモしていきます。 . 数学的に厳密な議論を欠いている部分もあります。ご容赦ください。 . ",
+    "url": "http://localhost:4000/gr#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96",
+    "relUrl": "/gr#一般相対性理論"
+  },"523": {
+    "doc": "一般相対性理論",
+    "title": "一般相対性理論",
+    "content": ". ",
+    "url": "http://localhost:4000/gr",
+    "relUrl": "/gr"
   },"524": {
     "doc": "誘導方程式",
     "title": "磁気流体における誘導方程式",
@@ -6635,59 +6635,59 @@
     "url": "http://localhost:4000/math/rayleigh_expansion",
     "relUrl": "/math/rayleigh_expansion"
   },"1106": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
-    "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
-    "relUrl": "/cosmo/redshift#赤方偏移"
-  },"1107": {
-    "doc": "赤方偏移",
-    "title": "光の経路",
-    "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
-    "url": "http://localhost:4000/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
-    "relUrl": "/cosmo/redshift#光の経路"
-  },"1108": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
-    "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
-    "relUrl": "/cosmo/redshift#赤方偏移-1"
-  },"1109": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
-    "url": "http://localhost:4000/cosmo/redshift",
-    "relUrl": "/cosmo/redshift"
-  },"1110": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": " ",
     "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
     "relUrl": "/gr/redshift#重力赤方偏移"
-  },"1111": {
+  },"1107": {
     "doc": "重力赤方偏移",
     "title": "計算",
     "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
     "url": "http://localhost:4000/gr/redshift#%E8%A8%88%E7%AE%97",
     "relUrl": "/gr/redshift#計算"
-  },"1112": {
+  },"1108": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
     "url": "http://localhost:4000/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
     "relUrl": "/gr/redshift#重力赤方偏移-1"
-  },"1113": {
+  },"1109": {
     "doc": "重力赤方偏移",
     "title": "積分ザックス・ヴォルフェ効果",
     "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
     "url": "http://localhost:4000/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
     "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
-  },"1114": {
+  },"1110": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
     "url": "http://localhost:4000/gr/redshift",
     "relUrl": "/gr/redshift"
+  },"1111": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
+    "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
+    "relUrl": "/cosmo/redshift#赤方偏移"
+  },"1112": {
+    "doc": "赤方偏移",
+    "title": "光の経路",
+    "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
+    "url": "http://localhost:4000/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
+    "relUrl": "/cosmo/redshift#光の経路"
+  },"1113": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
+    "url": "http://localhost:4000/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
+    "relUrl": "/cosmo/redshift#赤方偏移-1"
+  },"1114": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
+    "url": "http://localhost:4000/cosmo/redshift",
+    "relUrl": "/cosmo/redshift"
   },"1115": {
     "doc": "相対論的ビーミング効果",
     "title": "相対論的ビーミング",
@@ -9509,42 +9509,66 @@
     "url": "http://localhost:4000/nucl/wu",
     "relUrl": "/nucl/wu"
   },"1585": {
+    "doc": "湯川型ポテンシャルの導出",
+    "title": "湯川型ポテンシャルの導出",
+    "content": "デバイ・ヒュッケルの理論で出現した以下のポテンシャルを、もとの方程式から求めてみましょう。 ここでは\\(\\mu = 1/\\lambda_D\\)とした、以下の方程式の解を求めます。 . \\[\\left( \\Delta - \\mu^2 \\right) \\phi = - 4\\pi q_0 \\delta^3(\\mathbf{r}) \\tag{1}\\] ",
+    "url": "http://localhost:4000/plasma/yukawa_pot#%E6%B9%AF%E5%B7%9D%E5%9E%8B%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%81%AE%E5%B0%8E%E5%87%BA",
+    "relUrl": "/plasma/yukawa_pot#湯川型ポテンシャルの導出"
+  },"1586": {
+    "doc": "湯川型ポテンシャルの導出",
+    "title": "フーリエ変換による方法",
+    "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mahtbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mahtbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\phi(\\mathbf{r}) = \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk = \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (\\mathbf{r}) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] ",
+    "url": "http://localhost:4000/plasma/yukawa_pot#%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AB%E3%82%88%E3%82%8B%E6%96%B9%E6%B3%95",
+    "relUrl": "/plasma/yukawa_pot#フーリエ変換による方法"
+  },"1587": {
+    "doc": "湯川型ポテンシャルの導出",
+    "title": "複素平面上での積分",
+    "content": "(6)式の積分を計算するために . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} \\quad (z = x+ iy) \\tag{7}\\] を、次の複素数平面上の閉曲路で積分することを考えましょう。 . ",
+    "url": "http://localhost:4000/plasma/yukawa_pot#%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2%E4%B8%8A%E3%81%A7%E3%81%AE%E7%A9%8D%E5%88%86",
+    "relUrl": "/plasma/yukawa_pot#複素平面上での積分"
+  },"1588": {
+    "doc": "湯川型ポテンシャルの導出",
+    "title": "湯川型ポテンシャルの導出",
+    "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | . | . ",
+    "url": "http://localhost:4000/plasma/yukawa_pot",
+    "relUrl": "/plasma/yukawa_pot"
+  },"1589": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#zeta%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#zeta関数"
-  },"1586": {
+  },"1590": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1587": {
+  },"1591": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1588": {
+  },"1592": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1589": {
+  },"1593": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1590": {
+  },"1594": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1591": {
+  },"1595": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

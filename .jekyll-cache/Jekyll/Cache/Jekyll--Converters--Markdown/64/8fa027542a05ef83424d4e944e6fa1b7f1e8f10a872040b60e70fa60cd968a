@@ -1,0 +1,174 @@
+I"�&
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#電磁波の複素数表示と円偏光の偏光ベクトル" id="markdown-toc-電磁波の複素数表示と円偏光の偏光ベクトル">電磁波の複素数表示と円偏光の偏光ベクトル</a>    <ol>
+      <li><a href="#電場の振幅の2乗の計算" id="markdown-toc-電場の振幅の2乗の計算">電場の振幅の2乗の計算</a></li>
+      <li><a href="#円偏光の偏光ベクトル" id="markdown-toc-円偏光の偏光ベクトル">円偏光の偏光ベクトル</a></li>
+      <li><a href="#円偏光ベクトルで成り立つ関係式" id="markdown-toc-円偏光ベクトルで成り立つ関係式">円偏光ベクトルで成り立つ関係式</a></li>
+      <li><a href="#円偏光ベクトルによる書き換え" id="markdown-toc-円偏光ベクトルによる書き換え">円偏光ベクトルによる書き換え</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="電磁波の複素数表示と円偏光の偏光ベクトル">電磁波の複素数表示と円偏光の偏光ベクトル</h1>
+
+<p>電磁波の進行方向の単位ベクトルを\(\mathbf{n}\)、そしてそれに互いに直交するように2つの偏光ベクトル\(\boldsymbol{\epsilon}_1, \boldsymbol{\epsilon}_2\)を定めます。</p>
+
+<p><img src="/assets/images/astroelec/complex_circular_01.png" alt="" /></p>
+
+<p>実部が実際の電磁波の成分を表すと約束して、電場成分を</p>
+
+\[\mathbf{E} 
+= a_1 e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \boldsymbol{\epsilon}_1 + a_2 e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_2)} \boldsymbol{\epsilon}_2
+= (a_1 \boldsymbol{\epsilon}_1 + a_2 e^{-i\delta} \boldsymbol{\epsilon}_2) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \quad (\delta \equiv \delta_2 - \delta_1) \tag{1}\]
+
+<p>のように書くことにします。
+ただし\(a_1, a_2\)は実数です。</p>
+
+<h2 id="電場の振幅の2乗の計算">電場の振幅の2乗の計算</h2>
+
+<p>唐突ですが、\(\mathbf{E}\)と\(\mathbf{E}^\ast\)の内積を計算してみましょう。
+(1)式より</p>
+
+\[\mathbf{E} \cdot \mathbf{E}^\ast 
+= (a_1 \boldsymbol{\epsilon}_1 + a_2 e^{-i\delta} \boldsymbol{\epsilon}_2) \cdot (a_1 \boldsymbol{\epsilon}_1 + a_2 e^{i\delta} \boldsymbol{\epsilon}_2)
+= a_1^2 + a_2^2 \tag{2}\]
+
+<p>となります。
+さらに(1)式の実部を見てみると</p>
+
+\[\mathrm{Re} (\mathbf{E}) 
+= a_1 \cos (\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1) \boldsymbol{\epsilon}_1 + a_2 \cos (\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_2) \boldsymbol{\epsilon}_2 \tag{3}\]
+
+<p>のようになります。
+すると、この電磁波において<a href="/astroelec/stokes">ストークスパラメータ \(I\)</a>は\(I = a_1^2 + a_2^2\)です。
+よって電場の振幅の2乗が\(\mathbf{E} \cdot \mathbf{E}^\ast\)で計算できることがわかりました。</p>
+
+<h2 id="円偏光の偏光ベクトル">円偏光の偏光ベクトル</h2>
+
+<p>円偏光のとき、\(a_1 = a_2 = E_0\)です。
+そして円偏光には右回り\(\delta = \pi/2\)のときと、左回り\(\delta = -\pi/2\)が存在します。
+それぞれについて、電場がどのように書けるかを見てみましょう。
+(1)式から、右回り円偏光の場合は</p>
+
+\[\begin{align}
+\mathbf{E} 
+&amp;= E_0 (\boldsymbol{\epsilon}_1 + e^{-i\pi/2} \boldsymbol{\epsilon}_2) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} 
+= E_0 (\boldsymbol{\epsilon}_1 - i \boldsymbol{\epsilon}_2) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \notag \\
+&amp;= \sqrt{2} E_0 e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \boldsymbol{\epsilon}_- 
+\quad \left( \boldsymbol{\epsilon}_- \equiv \frac{1}{\sqrt{2}} (\boldsymbol{\epsilon}_1 - i \boldsymbol{\epsilon}_2)\right) \tag{4}
+\end{align}\]
+
+<p>のように書くことができます。
+同様に左回り円偏光の場合は</p>
+
+\[\begin{align}
+\mathbf{E} 
+&amp;= E_0 (\boldsymbol{\epsilon}_1 + e^{i\pi/2} \boldsymbol{\epsilon}_2) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} 
+= E_0 (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \notag \\
+&amp;= \sqrt{2} E_0 e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r} + \delta_1)} \boldsymbol{\epsilon}_+ 
+\quad \left( \boldsymbol{\epsilon}_+ \equiv \frac{1}{\sqrt{2}} (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2)\right) \tag{5}
+\end{align}\]
+
+<p>のようになります。
+途中で定義された\(\boldsymbol{\epsilon}_+, \boldsymbol{\epsilon}_-\)はそれぞれ、ヘリシティが正・負の円偏光を表す偏光ベクトルです。</p>
+
+<h2 id="円偏光ベクトルで成り立つ関係式">円偏光ベクトルで成り立つ関係式</h2>
+
+<p>先ほど定義された\(\boldsymbol{\epsilon}_+, \boldsymbol{\epsilon}_-\)について成り立つ関係式を証明していきましょう。</p>
+
+\[\boldsymbol{\epsilon}_+ \cdot \boldsymbol{\epsilon}_+^\ast 
+= \frac{1}{2} (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2) \cdot (\boldsymbol{\epsilon}_1 - i \boldsymbol{\epsilon}_2) 
+= \frac{1}{2} (\boldsymbol{\epsilon}_1 \cdot \boldsymbol{\epsilon}_1 - i^2 \boldsymbol{\epsilon}_2 \cdot \boldsymbol{\epsilon}_2) 
+= 1 \tag{6}\]
+
+\[\boldsymbol{\epsilon}_- \cdot \boldsymbol{\epsilon}_-^\ast 
+= 1 \tag{7}\]
+
+\[\boldsymbol{\epsilon}_+ \cdot \boldsymbol{\epsilon}_-^\ast 
+= \frac{1}{2} (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2) \cdot (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2) 
+= \frac{1}{2} (\boldsymbol{\epsilon}_1 \cdot \boldsymbol{\epsilon}_1 + i^2 \boldsymbol{\epsilon}_2 \cdot \boldsymbol{\epsilon}_2) 
+= \frac{1}{2} (1-1) 
+= 0 \tag{8}\]
+
+\[\boldsymbol{\epsilon}_- \cdot \boldsymbol{\epsilon}_+^\ast 
+= 0 \tag{9}\]
+
+\[\mathbf{n} \times \boldsymbol{\epsilon}_+^\ast 
+= \frac{1}{\sqrt{2}} (\mathbf{n} \times \boldsymbol{\epsilon}_1 - i \mathbf{n} \times \boldsymbol{\epsilon}_2) 
+= \frac{1}{\sqrt{2}} \{ \boldsymbol{\epsilon}_2 -i (-\boldsymbol{\epsilon}_1)\} 
+= i \boldsymbol{\epsilon}_- 
+= i \boldsymbol{\epsilon}_+^\ast \tag{10}\]
+
+\[\mathbf{n} \times \boldsymbol{\epsilon}_-^\ast 
+= \frac{1}{\sqrt{2}} (\mathbf{n} \times \boldsymbol{\epsilon}_1 + i \mathbf{n} \times \boldsymbol{\epsilon}_2) 
+= \frac{1}{\sqrt{2}} \{ \boldsymbol{\epsilon}_2 + i(-\boldsymbol{\epsilon}_1)\} 
+= -i \boldsymbol{\epsilon}_+ 
+= -i \boldsymbol{\epsilon}_-^\ast \tag{11}\]
+
+<h2 id="円偏光ベクトルによる書き換え">円偏光ベクトルによる書き換え</h2>
+
+<p>任意の電磁波の電場成分は、直交する2つの直線偏光の重ね合わせとして(1)式のように書くことができるのでした。
+これを右回り・左回り円偏光の重ね合わせとして、以下のように表現できることを証明しましょう。</p>
+
+\[\mathbf{E} 
+= (E_+ \boldsymbol{\epsilon}_+ + E_- \boldsymbol{\epsilon}_-) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r})} \tag{12}\]
+
+<p>天下り的ですが、(12)式に\(\boldsymbol{\epsilon}_+, \boldsymbol{\epsilon}_-\)の定義を代入すると</p>
+
+\[\begin{align}
+\mathbf{E} 
+&amp;= \left\{ \frac{E_+}{\sqrt{2}} (\boldsymbol{\epsilon}_1 + i \boldsymbol{\epsilon}_2) + \frac{E_-}{\sqrt{2}} (\boldsymbol{\epsilon}_1 - i \boldsymbol{\epsilon}_2) \right\} e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r})} \notag \\
+&amp;= \left\{ \frac{1}{\sqrt{2}} (E_+ + E_-) \boldsymbol{\epsilon}_1 + \frac{i}{\sqrt{2}} (E_+ - E_-) \boldsymbol{\epsilon}_2 \right\} e^{-i\omega t - \mathbf{k} \cdot \mathbf{r}} \tag{13}
+\end{align}\]
+
+<p>この式と(1)式を比較すると</p>
+
+\[\begin{align}
+&amp;\frac{1}{\sqrt{2}} (E_+ + E_-) = a_1 e^{-i\delta_1}, \quad \frac{1}{\sqrt{2}} (E_+ - E_-) = a_2 e^{-i\delta_2} \notag \\
+&amp;\Longrightarrow \ 
+E_+ = \frac{1}{\sqrt{2}} (a_1 e^{-i\delta_1} - i a_2 e^{-i\delta_2}), \quad E_- = \frac{1}{\sqrt{2}} (a_1 e^{-i\delta_1} + i a_2 e^{-i\delta_2}) \tag{14}
+\end{align}\]
+
+<p>のようになります。
+よって(14)式のように\(E_+, E_-\)を取ることで、任意の電磁波を円偏光の重ね合わせて表現することができます。
+例として、\(\boldsymbol{\epsilon}_1\)方向に直線偏光した電磁波を、右回り・左回りの2つの円偏光の重ね合わせで表現してみましょう。
+\(\boldsymbol{\epsilon}_1\)方向に直線偏光した電磁波では、\(a_2=0\)より</p>
+
+\[\frac{1}{\sqrt{2}} (E_+ - E_-) 
+= 0 \ \Longrightarrow \ 
+E_+ = E_- = E_0 \tag{15}\]
+
+<p>です。
+よってこれを(12)式に代入すれば</p>
+
+\[\mathbf{E} 
+= E_0 (\boldsymbol{\epsilon}_+ + \boldsymbol{\epsilon}_-) e^{-i(\omega t - \mathbf{k} \cdot \mathbf{r})} \tag{16}\]
+
+<p>のようになります。
+同じ振幅の右回り・左回り円偏光を同位相で重ね合わせると、下図のようにある方向の直線偏光になることを表しています。</p>
+
+<p><img src="/assets/images/astroelec/complex_circular_02.png" alt="" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

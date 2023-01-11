@@ -145,7 +145,10 @@ $$
 
 $$
 \omega_\mathrm{pe} 
-\equiv \sqrt{\frac{4\pi e^2 n}{m_e}} \tag{14}
+\equiv \sqrt{\frac{4\pi e^2 n}{m_e}} 
+= \sqrt{\frac{4\pi}{m_e c^2} \frac{e^2}{\hbar c} \hbar c c^2} n_e^{1/2} 
+\simeq \sqrt{\frac{12}{0.5} \frac{1}{140} 200 \times 10^{-13} \times (3 \times 10^{10})^2 } n_e^{1/2}
+\simeq 6 \times 10^4 n_e^{1/2} \tag{14}
 $$
 
 を定義しました。
@@ -186,6 +189,8 @@ $$
 である必要があります。
 このようにしてプラズマ中を伝播する電磁波の分散関係式を得ることができました。
 
+{% include adsense.html %} 
+
 ## 伝播する電磁波の位相速度と進入長
 
 (18)式から、この系を伝播する電磁波の[位相速度](/mhd/sound_wave)を求めてみましょう。
@@ -225,58 +230,13 @@ $$
 
 ![](/assets/images/plasma/propagation_cold_01.png)
 
-例えば、地球高層大気に存在する電離層の電子数密度$$n = 10^5 \mathrm{cm}^{-3}$$を代入すると、プラズマ振動数は3MHz程度になります。
+例えば、地球高層大気に存在する電離層の電子数密度$$n = 10^5 \mathrm{cm}^{-3}$$を代入すると、プラズマ振動数$$\nu_\mathrm{pe} = \omega_\mathrm{pe}/2\pi$$は3MHz程度になります。
 したがって、3MHz以下の低周波電磁波を宇宙に向けて放射すると、電離層の表面で反射されます。
 地球の裏側との交信に、この物理現象を利用していたこともあります。
 
 ![](/assets/images/plasma/propagation_cold_02.png)
 
-## 分散量度 (Dispersion Measure: DM)
-
-最後に、プラズマ中の電磁波による情報伝搬について議論していきましょう。
-先程までは位相速度を考えていましたが、情報伝搬の速度は[群速度](/mhd/sound_wave)で与えられます。
-(19)式より
-
-$$
-v_g 
-= \frac{d\omega}{dk} 
-= c \sqrt{1 - \frac{\omega_\mathrm{pe}^2}{\omega^2}} 
-\underbrace{\simeq}_{\omega \gg \omega_\mathrm{pe}} c \left( 1- \frac{\omega_\mathrm{pe}^2}{2 \omega^2}\right) < c \tag{22}
-$$
-
-を得ます。
-ここから、天体から放射されたパルスが観測者に到達するまでにかかる時間$$t_p$$を計算しましょう。
-天体から観測者までの距離を$$d$$とすると
-
-$$
-t_p 
-= \int_0^d \frac{ds}{v_p} 
-\simeq \frac{d}{c} + \frac{1}{2c\omega^2} \int_0^d \omega_\mathrm{pe}^2 ds 
-= \frac{d}{c} + \frac{2\pi e^2}{m_e c\omega^2} \int_0^d n_e ds \tag{23}
-$$
-
-のように計算されます。
-第一項の$$d/c$$は距離$$d$$を光の速度で伝搬した場合にかかる時間です。
-第二項は電子密度$$n_e$$のプラズマが存在することによるパルスの到達の遅れを表します。
-そこで、この部分を以下のように表記しましょう。
-
-$$
-\Delta t_p 
-= \frac{2\pi e^2}{m_e c \omega^2} \mathrm{DM}
-\quad \left( \mathrm{DM} 
-\equiv \int_0^d n_e ds \right) \tag{24}
-$$
-
-このDMは、宇宙物理研究では通常$$\mathrm{pc} \ \mathrm{cm}^{-3}$$という単位で表され、これを分散量度 (Dispersion Measure: DM)と呼びます。
-これは$$1 \mathrm{cm}^{-3}$$のプラズマ中をDM pcだけ伝搬してきたことを表す量です。
-プラズマの電子数密度が既知である場合、時間の遅れを測定することでDMを求め、天体までの距離$$d$$の測定を行うことができます。
-(24)式から、時間の遅れは電磁波の周波数の2乗に逆比例しています。
-これを利用し、複数の周波数でパルス放射の到達時間を測定すれば、DMを測定することが可能です。  
-最近、高速電波バースト(Fast Radio Burst: FRB)が多数報告されるようになりました。
-この現象の発生原因は未だ解明されていませんが、この電波パルスを用いてDMを測定することで、FRBが発生した周囲のプラズマの情報を得る研究がされています。
-FRBが生まれる天体はどのような姿をしているのか、その発生源を探るためにも、その周囲の環境について精査することは非常に重要な研究と位置付けられています。
-
-## プラズマの屈折率に関する話題
+## プラズマの屈折率を利用した観測
 
 星間物質の電子数密度のゆらぎにより、伝播する電磁波の屈折角にもゆらぎが生じます。
 天体の大きさが非常に小さい(点源)ときは、天体から異なる方向に放出された光線が観測者の位置で再び交差し、干渉縞を形成します。
@@ -308,9 +268,6 @@ FRBが生まれる天体はどのような姿をしているのか、その発�
 
 ## 参考文献
 
-[1] [Zhang et al., 2022, "Distribution of fast radio burst dispersion measures in CHIME/FRB Catalog 1: implications on the origin of FRBs
-"](https://arxiv.org/abs/2212.13148)  
-[2] [Goodman, 1997, "Radio scintillation of gamma-ray-burst afterglows"](https://www.sciencedirect.com/science/article/abs/pii/S1384107697000316?via%3Dihub)
+[1] [Goodman, 1997, "Radio scintillation of gamma-ray-burst afterglows"](https://www.sciencedirect.com/science/article/abs/pii/S1384107697000316?via%3Dihub)
 
 {% include adsense.html %} 
-

@@ -39,20 +39,20 @@ permalink: /
 * 組合せ最適化
 * 量子アニーリング
 * 量子回路
-* スーパーコンピュータによるシミュレーション  
+* スーパーコンピュータによるシミュレーション
 
 ### Skills
 
 * Mac, Linux
-* C言語
-* OpenMP, MPIなどの並列化プログラミング
-* Python
+* C, Python, Julia
+* OpenMP, MPI並列化
 * Git (GitHub, Bitbucket)
 * Website制作
-* Illustrator, Photoshopで簡単なイラスト作成
+* Illustrator, Photoshopを用いた簡単なイラスト作成
 
 ### For fun
 
+* 子育て (2022年末より)
 * 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること
 * 海外旅行
 * 自転車
@@ -65,5 +65,10 @@ permalink: /
 * [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/quantph/issues)
 * [Just Dance](https://justdancenow.com/)でエキササイズ
 * 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング
+
+## ほしいものリストなど
+
+* [日本アマゾン](https://www.amazon.co.jp/hz/wishlist/ls/1Q60HHRFW2CGR/ref=nav_wishlist_lists_1)  
+* [アメリカアマゾン](https://www.amazon.com/hz/wishlist/ls/2SW3UR2VPITV4/ref=nav_wishlist_lists_2)  
 
 {% include adsense.html %} 

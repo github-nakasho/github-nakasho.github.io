@@ -1,4 +1,4 @@
-I"uC
+I""F
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -128,7 +128,11 @@
 <p>途中</p>
 
 \[\omega_\mathrm{pe} 
-\equiv \sqrt{\frac{4\pi e^2 n}{m_e}} \tag{14}\]
+\equiv \sqrt{\frac{4\pi e^2 n}{m_e}} 
+= \sqrt{\frac{4\pi}{m_e c^2} \frac{e^2}{\hbar c} \hbar c c^2} n_e^{1/2} 
+\simeq \sqrt{\frac{12}{0.5} \frac{1}{140} 200 \times 10^{-13} \times (3 \times 10^{10})^2 } n_e^{1/2}
+\simeq \sqrt{24 \times \frac{10}{7} \times 9 \times 10^7 } n_e^{1/2} 
+\simeq \tag{14}\]
 
 <p>を定義しました。
 これは電子プラズマ振動数と呼ばれるもので、電磁波の入射により生じた電荷分布の偏りから発生した電場を復元力とする振動の振動数です。
@@ -198,6 +202,14 @@
 地球の裏側との交信に、この物理現象を利用していたこともあります。</p>
 
 <p><img src="/assets/images/plasma/propagation_cold_02.png" alt="" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="分散量度-dispersion-measure-dm">分散量度 (Dispersion Measure: DM)</h2>
 

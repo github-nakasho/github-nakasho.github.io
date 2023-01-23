@@ -1,0 +1,93 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#分散量度-dispersion-measure-dm" id="markdown-toc-分散量度-dispersion-measure-dm">分散量度 (Dispersion Measure: DM)</a>    <ol>
+      <li><a href="#実際にfrbまでの距離を求めてみよう" id="markdown-toc-実際にfrbまでの距離を求めてみよう">実際にFRBまでの距離を求めてみよう</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="分散量度-dispersion-measure-dm">分散量度 (Dispersion Measure: DM)</h1>
+
+<p>冷たい等方プラズマ中の電磁波による情報伝搬について議論していきましょう。
+情報伝搬の速度は<a href="/mhd/sound_wave">群速度</a>で与えられます。
+すると<a href="/plasma/propagation_cold">冷たい等方プラズマ中の電磁波の伝播ページの(19)式</a>より</p>
+
+\[v_g 
+= \frac{d\omega}{dk} 
+= c \sqrt{1 - \frac{\omega_\mathrm{pe}^2}{\omega^2}} 
+\underbrace{\simeq}_{\omega \gg \omega_\mathrm{pe}} c \left( 1- \frac{\omega_\mathrm{pe}^2}{2 \omega^2}\right) &lt; c \tag{1}\]
+
+<p>を得ます。
+ここから、天体から放射されたパルスが観測者に到達するまでにかかる時間\(t_p\)を計算しましょう。
+天体から観測者までの距離を\(d\)とすると</p>
+
+\[t_p 
+= \int_0^d \frac{ds}{v_p} 
+\simeq \frac{d}{c} + \frac{1}{2c\omega^2} \int_0^d \omega_\mathrm{pe}^2 ds 
+= \frac{d}{c} + \frac{2\pi e^2}{m_e c\omega^2} \int_0^d n_e ds \tag{2}\]
+
+<p>のように計算されます。
+第一項の\(d/c\)は距離\(d\)を光の速度で伝搬した場合にかかる時間です。
+第二項は電子密度\(n_e\)のプラズマが存在することによるパルスの到達の遅れを表します。
+そこで、この部分を以下のように表記しましょう。</p>
+
+\[\begin{align}
+\Delta t_p 
+&amp;= \frac{2\pi e^2}{m_e c \omega^2} \mathrm{DM} 
+= \frac{e^2}{\hbar c} \hbar c \frac{c}{m_e c^2} \frac{1}{(2\pi \nu)^2} \mathrm{DM} \notag \\
+&amp;\simeq \frac{1}{140} 200 \mathrm{MeV \cdot fm} \frac{3 \times 10^{10} \mathrm{cm \cdot s^{-1}}}{0.5 \mathrm{MeV}} 10^{-12} {\frac{1}{6^2} \left(\frac{\nu}{1 \mathrm{MHz}} \right)^{-2} 3 \times 10^{18} \left( \frac{\mathrm{DM}}{1 \mathrm{pc \cdot cm}^{-3}} \right)
+\end{align}\]
+
+<p>このDMは、宇宙物理研究では通常\(\mathrm{pc} \ \mathrm{cm}^{-3}\)という単位で表され、これを分散量度 (Dispersion Measure: DM)と呼びます。
+これは\(1 \mathrm{cm}^{-3}\)のプラズマ中をDM pcだけ伝搬してきたことを表す量です。
+プラズマの電子数密度が既知である場合、時間の遅れを測定することでDMを求め、天体までの距離\(d\)の測定を行うことができます。
+(24)式から、時間の遅れは電磁波の周波数の2乗に逆比例しています。
+これを利用し、複数の周波数でパルス放射の到達時間を測定すれば、DMを測定することが可能です。<br />
+最近、高速電波バースト(Fast Radio Burst: FRB)が多数報告されるようになりました。
+この現象の発生原因は未だ解明されていませんが、この電波パルスを用いてDMを測定することで、FRBが発生した周囲のプラズマの情報を得る研究がされています。
+FRBが生まれる天体はどのような姿をしているのか、その発生源を探るためにも、その周囲の環境について精査することは非常に重要な研究と位置付けられています。</p>
+
+<h2 id="実際にfrbまでの距離を求めてみよう">実際にFRBまでの距離を求めてみよう</h2>
+
+<p>以下では観測結果をもとに、実際にFRBまでの距離を推定してみましょう。
+下図はFRBの最初の発見報告である、<a href="https://www.science.org/doi/10.1126/science.1147532">Lorimer et al., 2007</a>から抜粋した電波観測結果です。</p>
+
+<p><img src="/assets/images/plasma/dispersion_measure_01.png" alt="" /></p>
+
+<p>この図は縦軸に周波数(GHz)、横軸にパルスの到達時間をとったものです。
+図の黒い線がシグナルであり、例えば1.4GHzのチャンネルではある時刻から約200ms後にシグナルを受け取ったことを表しています。
+(3)式から高周波ほど到達時間が早いため、この図は上に行くほど周波数が大きいこともわかります。<br />
+この図を見ると、1.4GHzでは約200msで到達しているのに対し、約1.3GHzでは300msで到達しているとわかります。
+このことから、この二つの周波数での時間差はは100msです。
+これを利用して、(3)式からDMを求めてみましょう。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://arxiv.org/abs/2212.13148">Zhang et al., 2022, “Distribution of fast radio burst dispersion measures in CHIME/FRB Catalog 1: implications on the origin of FRBs
+“</a><br />
+[2] <a href="https://www.science.org/doi/10.1126/science.1147532">Lorimer et al., 2007, “A Bright Millisecond Radio Burst of Extragalactic Origin”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

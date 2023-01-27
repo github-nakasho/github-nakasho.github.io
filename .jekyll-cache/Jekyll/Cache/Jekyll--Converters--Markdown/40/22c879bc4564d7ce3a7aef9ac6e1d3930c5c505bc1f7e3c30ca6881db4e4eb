@@ -1,4 +1,4 @@
-I"H
+I"�"
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -50,8 +50,8 @@
 \Delta t_p 
 &amp;= \frac{2\pi e^2}{m_e c \omega^2} \mathrm{DM} 
 = \frac{e^2}{\hbar c} \hbar c \frac{c}{m_e c^2} \frac{1}{(2\pi \nu)^2} \mathrm{DM} \notag \\
-&amp;\simeq \frac{200 \mathrm{MeV \cdot fm}}{140} \frac{3 \times 10^{10} \mathrm{cm \cdot s^{-1}}}{0.5 \mathrm{MeV}} \frac{10^{-12}}{6} \left(\frac{\nu}{1 \mathrm{MHz}} \right)^{-2} 3 \times 10^{18} \left( \frac{\mathrm{DM}}{1 \mathrm{pc \cdot cm}^{-3}} \right) \notag \\
-&amp;\simeq 4 \times 10^3 \left( \frac{\nu}{1 \mathrm{MHz}}\right)^{-2} \left( \frac{\mathrm{DM}}{1 \mathrm{pc \cdot cm^{-3}}} \right) 
+&amp;\simeq \frac{200 \mathrm{MeV \cdot fm}}{140} \frac{3 \times 10^{10} \mathrm{cm \cdot s^{-1}}}{0.5 \mathrm{MeV}} \frac{10^{-18}}{6} \left(\frac{\nu}{1 \mathrm{GHz}} \right)^{-2} 3 \times 10^{18} \left( \frac{\mathrm{DM}}{1 \mathrm{pc \cdot cm}^{-3}} \right) \notag \\
+&amp;\simeq 4 \left( \frac{\nu}{1 \mathrm{GHz}}\right)^{-2} \left( \frac{\mathrm{DM}}{1 \mathrm{pc \cdot cm^{-3}}} \right) \ [\mathrm{ms}]
 \quad \left( \mathrm{DM} \equiv \int_0^d n_e ds \right) \tag{3}
 \end{align}\]
 
@@ -61,7 +61,7 @@
 (24)式から、時間の遅れは電磁波の周波数の2乗に逆比例しています。
 これを利用し、複数の周波数でパルス放射の到達時間を測定すれば、DMを測定することが可能です。<br />
 最近、高速電波バースト(Fast Radio Burst: FRB)が多数報告されるようになりました。
-この現象の発生原因は未だ解明されていませんが、この電波パルスを用いてDMを測定することで、FRBが発生した周囲のプラズマの情報を得る研究がされています。
+この現象の発生原因は未だ解明されていませんが、この電波パルスを用いてDMと距離を測定することで、FRBが発生した周囲のプラズマの情報を得る研究がされています。
 FRBが生まれる天体はどのような姿をしているのか、その発生源を探るためにも、その周囲の環境について精査することは非常に重要な研究と位置付けられています。</p>
 
 <h2 id="実際にfrbまでの距離を求めてみよう">実際にFRBまでの距離を求めてみよう</h2>
@@ -80,21 +80,42 @@ FRBが生まれる天体はどのような姿をしているのか、その発�
 
 \[\Delta 
 \equiv \Delta t_p(\nu_1) - \Delta t_p(\nu_2) 
-= 4 \times 10^3 \left\{ \left( \frac{\nu_1}{1 \mathrm{MHz}} \right)^{-2} - \left( \frac{\nu_2}{1 \mathrm{MHz}} \right)^{-2} \right\} \mathrm{DM} \tag{4}\]
+= 4 \left\{ \left( \frac{\nu_1}{1 \mathrm{GHz}} \right)^{-2} - \left( \frac{\nu_2}{1 \mathrm{GHz}} \right)^{-2} \right\} \mathrm{DM} \tag{4}\]
 
-<p>から、DMを求めることができます。</p>
+<p>から、DMを求めることができます。よって</p>
 
-\[100 \times 10^{-3} 
-= 4 \times 10^3 \left\{ \left( \frac{1}{1.3 \times 10^3} \right)^2 - \left( \frac{1}{1.4 \times 10^3} \right)^2 \right\} \mathrm{DM} \ \Longrightarrow \
+\[100
+= 4 \left\{ \left( \frac{1}{1.3} \right)^2 - \left( \frac{1}{1.4} \right)^2 \right\} \mathrm{DM} \ \Longrightarrow \
 \mathrm{DM} 
-\sim 3 \times 10^2 \ [\mathrm{pc \cdot cm}^{-3}]\]
+\sim 3 \times 10^2 \ [\mathrm{pc \cdot cm}^{-3}] \tag{5}\]
+
+<p>と計算されます。
+<a href="https://www.science.org/doi/10.1126/science.1147532">Lorimer et al., 2007</a>の論文では\(375 \mathrm{pc \cdot cm}^{-3}\)と求めており、これと大体同じ値が求まっていることがわかります。
+さらに天の川銀河内の星間空間の平均電子数密度\(n_e \sim 0.03 \mathrm{cm}^{-3}\)を用いて、距離を推定してみましょう。
+簡単のため、この宇宙空間がどこまでもこの電子数密度で満たされているものとします。すると</p>
+
+\[\mathrm{DM} 
+= n_e d \ \Longrightarrow \ 
+d 
+= \frac{\mathrm{DM}}{n_e} 
+= 10 \ [\mathrm{kpc}] \tag{6}\]
+
+<p>のように求まります。
+実はこの推定は大雑把すぎて、少々距離が近く求まっています。
+<a href="https://www.science.org/doi/10.1126/science.1147532">Lorimer et al., 2007</a>では電子数密度により厳密なモデルを用い、さらにパルスを放射している天体までの距離が宇宙論的な場合のDMを用いることで、その距離を1Gpc以内としています。
+いずれにしても、このFRBが近傍で発生したものであることは間違いないようです。
+ちなみに、最近までに発見されているFRBの中で最も近傍にあるとされているのは、M81の方向から発生したものです。
+M81は渦巻銀河であり、その距離は3.6Mpcとされています。
+それに付随する球状星団内で繰り返し起こるFRBを検出したという論文が、最近Natureから出版されました。</p>
 
 <h2 id="参考文献">参考文献</h2>
 
 <p>[1] <a href="https://arxiv.org/abs/2212.13148">Zhang et al., 2022, “Distribution of fast radio burst dispersion measures in CHIME/FRB Catalog 1: implications on the origin of FRBs
 “</a><br />
 [2] <a href="https://www.science.org/doi/10.1126/science.1147532">Lorimer et al., 2007, “A Bright Millisecond Radio Burst of Extragalactic Origin”</a><br />
-[3] <a href="https://casper.astro.berkeley.edu/astrobaki/index.php/Dispersion_measure">AstroBaki, Dispersion measure</a></p>
+[3] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/abeaa6">Bhardwaj et al., 2021, “A Nearby Repeating Fast Radio Burst in the Direction of M81”</a><br />
+[4] <a href="https://www.nature.com/articles/s41586-021-04354-w">Kirsten et al., 2022, “A repeating fast radio burst source in a globular cluster”</a><br />
+[5] <a href="https://casper.astro.berkeley.edu/astrobaki/index.php/Dispersion_measure">AstroBaki, Dispersion measure</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 分散度量
+title: 分散量度
 parent: プラズマ物理学
 math: mathjax3
 permalink: /plasma/dispersion_measure

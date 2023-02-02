@@ -1,4 +1,4 @@
-I"�c
+I" g
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -191,6 +191,14 @@ E_-
 
 <p>のようになります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="位相差の計算">位相差の計算</h2>
 
 <p>これまでの議論で求まった分散関係式を変形し、波数および位相速度を求めてみましょう。
@@ -276,6 +284,14 @@ k_\pm
 
 <p>例えば、観測から\(\Delta \theta\)が測定され、さらに別の観測などから<a href="/plasma/dispersion_measure">DM(分散量度)</a>が求まっていれば、\(\Delta \theta/ \mathrm{DM}\)から\(B_\parallel\)の平均的な値を算出することができます。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="宇宙に一様な磁場は存在するか">宇宙に一様な磁場は存在するか？</h2>
 
 <h3 id="宇宙スケールの磁場">宇宙スケールの磁場</h3>
@@ -336,7 +352,7 @@ B_\parallel \sim 4 \ [\mathrm{nG}] \tag{28}
 <p><img src="/assets/images/plasma/faraday_rotation_05.png" alt="" /></p>
 
 <p>このことから、その高密度領域には1Mpc/hにわたってコヒーレントな磁場が存在し、その大きさが30nGであると結論づけました。
-宇宙大規模構造に大局的な磁場が存在することが示唆されました。</p>
+ファラデー回転を用いた観測から、宇宙大規模構造に大局的な磁場が存在することが示唆されたのです。</p>
 
 <h2 id="参考文献">参考文献</h2>
 

@@ -59,11 +59,7 @@ $$
 
 $$
 t 
-= t' + \frac{R(t')}{c}
-$$
-
-$$
-t+dt
+= t' + \frac{R(t')}{c}, \quad t+dt
 =t'+dt' +\frac{R(t'+dt')}{c}
 $$
 
@@ -76,12 +72,13 @@ dt
 $$
 
 途中、$$dt, dt' \ll 1$$としました。
+これより
 
 $$
 \frac{\partial R}{\partial t'}
  = \frac{\partial}{\partial t'} |\mathbf{r}- \mathbf{r}_0(t')| 
  = \frac{\mathbf{r}- \mathbf{r}_0(t')}{|\mathbf{r}- \mathbf{r}_0(t')|} \cdot \left(-\frac{\partial \mathbf{r}_0}{\partial t'} \right) 
- = -\mathbf{n} \cdot \mathbf{u}
+ = -\mathbf{n} \cdot \mathbf{u} 
 $$
 
 よって
@@ -142,7 +139,7 @@ $$
 
 計算を進めるために$$\mathbf{u}$$を$$z$$軸にとります。また$$\dot{\mathbf{u}}$$が$$xz$$平面内に来るような座標を設定し、$$\mathbf{u}$$とのなす角を$$i$$とします。また観測者は$$\mathbf{n} = (\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta)$$方向にいるとします。  
 
-![積分の座標設定](/assets/images/astroelec/lienard_larmor.png)
+![積分の座標設定](/assets/images/astroelec/lienard_larmor_01.png)
 
 $$x, y, z$$方向の単位ベクトルをそれぞれ$$\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z$$とします。先ほどの座標設定より$$\boldsymbol{\beta} = \beta \mathbf{e}_z, \dot{\boldsymbol{\beta}} = \dot{\beta}(\sin i \mathbf{e}_x+\cos i \mathbf{e}_z), \mathbf{n} = \sin \theta \cos \phi \mathbf{e}_x + \sin \theta \sin \phi \mathbf{e}_y + \cos \theta \mathbf{e}_z$$となります。これらより
 
@@ -367,7 +364,9 @@ P_e
 = \frac{2q^2}{3c^3}\left[ \gamma^6 (\dot{u}^2 - \left| \dot{\bf u} \times \boldsymbol{\beta} \right|^2)\right] \tag{28}
 $$
 
-これをLiénardの式と呼びます。
+これをリエナー(Liénard)の式と呼びます。
+
+{% include adsense.html %}
 
 ## 非相対論的極限
 
@@ -378,6 +377,105 @@ P_e
 = \frac{2q^2}{3c^3} \dot{u}^2 \tag{29}
 $$
 
-これはLarmorの式と呼ばれるものです。
+これはラーモア(Larmor)の式と呼ばれるものです。　　
+非相対論的な場合の輻射場の詳細を調べましょう。
+非相対論的であるため、$$\beta \sim 0$$として、輻射場を$$\beta$$の一次までで近似すると
+
+$$
+\mathbf{E}_\mathrm{rad} 
+= \left[ \frac{q}{c^2 R} \mathbf{n} \times (\mathbf{n} \times \dot{\mathbf{u}})\right]tag{30}
+$$
+
+のようになります。
+このとき、$$\mathbf{n}, \mathbf{E}_\mathrm{rad}, \dot{\mathbf{u}}$$の向きの関係を図示すると、以下のようになります。
+
+![](/assets/images/astroelec/lienard_larmor_02.png)
+
+上図のように$$\mathbf{n}, \dot{\mathbf{u}}$$の成す角を$$\Theta$$とすると、電場・磁場の大きさは
+
+$$
+\mathbf{E}_\mathrm{rad} 
+= \mathbf{B}_\mathrm{rad} 
+= \left[ \frac{q\dot{u}}{c^2 R} \sin \Theta \right] \tag{31}
+$$
+
+これらを(4)式に代入すれば
+
+$$
+\frac{dP}{d\Omega} 
+= \frac{dW}{dt d\Omega} 
+= [R^2 S] 
+= \left[ \frac{q^2 \dot{u}^2}{4\pi c^3} \sin^2 \Theta\right] \tag{32}
+$$
+
+のように求まります。  
+次に、放射の周波数分布を求めましょう。
+この系の双極子モーメントを$$\mathbf{d}(t') = q \mathbf{r}_0(t')$$とすれば、(31)式より輻射場の電場の振幅は
+
+$$
+E(t) 
+= \frac{\ddot{d}(t') \sin \Theta}{c^2 R} \tag{33}
+$$
+
+のように書けます。
+ここで双極子モーメントを以下のようにフーリエ積分表示すると、その2階微分は
+
+$$
+d(t) 
+= \int_{-\infty}^\infty \hat{d}(\omega) e^{-i\omega t} d\omega \ \Longrightarrow \ 
+\ddot{d} (t) 
+= \int_{-\infty}^\infty (-\omega^2) \hat{d} (\omega) e^{-i\omega t} d\omega \tag{34}
+$$
+
+と計算されます。
+さらに左辺の電場振幅も
+
+$$
+E(t) 
+= \int_{-\infty}^\infty \hat{E}(\omega) e^{-i\omega t} d\omega \tag{35}
+$$
+
+のようにフーリエ積分表示の形に書き、両辺を見比べれば
+
+$$
+\hat{E} (\omega) 
+= -\frac{\omega^2 \hat{d}(\omega)}{c^2 R} \sin \Theta \tag{36}
+$$
+
+のように書くことができます。
+ここで、荷電粒子は十分遠くにあるとし、$$R$$の時間変化を無視しました。
+(36)式は、非相対論的な運動をする荷電粒子からの輻射の周波数は、粒子の振動の周波数と同じであることを意味します。
+このことは、荷電粒子の運動が非相対論的であるとして、輻射場を$$\beta$$の最低次までしか残さない近似をしたことに関係します。
+実際には輻射場の式(1)を$$\beta$$でテイラー展開すると、$$\beta^2$$のような高次の項が出現します。
+簡単のため荷電粒子が振動数$$\omega_0$$で振動している場合を考えると、例えば2次の項は
+
+$$
+\beta \dot{\beta} 
+\propto \cos \omega_0 t \sin \omega_0 t 
+\propto \sin 2 \omega_0 t \tag{37}
+$$
+
+という寄与をもたらすことになります。
+このことから、2次の項は$$\omega = 2\omega_0$$の2倍の周波数を持つ電磁波の生成に結びつきます。
+さらに高次の項を考慮すれば、さらに高調波が生まれます。  
+横道に逸れましたが、(36)式より単位周波数あたりの全放射エネルギーの角度分布は
+
+$$
+\frac{dW}{d\omega d\Omega} 
+= c R^2 \left| \hat{E} (\omega) \right|^2 
+= \frac{\omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \sin^2 \Theta \tag{38}
+$$
+
+となり、さらに単位周波数あたりの全放射エネルギーはこれを全立体角積分することで
+
+$$
+\frac{dW}{d\omega} 
+= \frac{\omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int \sin^2 \Theta d\Omega 
+= \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_0^\pi (1-\cos^2 \Theta) \sin \Theta d \Theta 
+\underbrace{=}_{\mu = \cos \Theta} \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_{-1}^1 (1-\mu^2) d\mu 
+= \frac{8\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{3c^3} \tag{39}
+$$
+
+のように求まります。
 
 {% include adsense.html %}

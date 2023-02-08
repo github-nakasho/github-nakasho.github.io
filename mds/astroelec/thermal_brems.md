@@ -109,7 +109,7 @@ $$
 
 と求まります。
 
-![](/assets/images/astroelec/thermal_brems_01.md)
+![](/assets/images/astroelec/thermal_brems_01.png)
 
 衝突パラメータを$$b$$とし、ここから、衝突時間を$$\tau = b/v$$のように定めましょう。
 これは電子が陽子のクーロン力の影響を強く受けて加速度運動している期間は、最も陽子に近づいた地点を中心として、衝突パラメータ程度の距離を運動している間であることを意味します。
@@ -153,7 +153,7 @@ $$
 今、小角度散乱を考えているため、軌道に沿った方向の速度は陽子のそばを通り過ぎる前と通り過ぎた後で打ち消しあうと考えられます。
 よって、結局は速度の変化は軌道と垂直方向にのみ起こると仮定しても差し支えないでしょう。
 
-![](/assets/images/astroelec/thermal_brems_02.md)
+![](/assets/images/astroelec/thermal_brems_02.png)
 
 上図のような座標系で考えると、軌道に垂直な方向の電子の運動方程式は
 
@@ -309,7 +309,7 @@ $$
 (20)式から、高温プラズマからの熱制動放射のスペクトルについて、次のような特徴がわかります。
 $$e^{-h\nu / k_B T}$$の因子のために、$$h\nu > k_B T$$となる高周波領域では、熱制動放射強度が急激に減少します。
 これは$$k_B T$$のエネルギーを超える光子を放射するには、当然ですが電子の運動エネルギーが$$k_B T$$を超えている必要があるためです。
-下図のように、熱平衡分布ではそのような電子の数が指数的に減少することに起因します。
+これは熱平衡(マクスウェル・ボルツマン)分布では、高いエネルギーの電子数が指数的に減少することに起因します。
 さらに$$h\nu \ll k_B T$$の低周波領域では、強度は周波数に依存せず一定となります。
 さらにこの強度は電子数密度の2乗に比例します。
 これは制動放射が電子とイオンの衝突過程で放射されるためであり、衝突の確率が電子・イオンの数密度の席に比例するためです。
@@ -321,14 +321,174 @@ $$e^{-h\nu / k_B T}$$の因子のために、$$h\nu > k_B T$$となる高周波�
 
 などの利点があります。
 
-## 放射率 (emissivity)
+## 放射率 (emissivity) と 全輝度 (bolometric luminosity)
 
-工事中...
+(20)式で与えられる単位周波数・単位体積・単位時間あたりの放射強度を制動放射の放射率(emissivity)と呼び、$$\epsilon_\nu^{ff}$$と定義します。
+このとき、(20)式の係数部分を詳細に計算し、どの程度の大きさなのかを見積もってみましょう。
+
+$$
+\begin{align}
+\frac{2^5 \pi e^6}{3 c^3 m_e} \sqrt{\frac{2\pi}{3 m_e}} 
+&= \frac{2^{11/2} \pi^{3/2}}{3^{3/2}} \left\{ \frac{e^2}{\hbar c} (\hbar c) \right\}^3 \frac{1}{(m_e c^2)^{3/2}} 
+\sim \frac{2^{11/2} \pi^{3/2}}{3^{3/2}} \left( \frac{200 \mathrm{MeV \cdot fm}}{140}\right)^3 \frac{1}{(0.5 \mathrm{MeV})^{3/2}} \notag \\
+&\sim \frac{2^{11/2} \pi^{3/2}}{3^{3/2}} \frac{10^3}{7^3} 1 \mathrm{MeV}^{3/2} \cdot 1\mathrm{fm}^3 \cdot 2^{3/2} \tag{21}
+\end{align}
+$$
+
+これと、(20)式において温度と電子数密度を$$k_B T = 10 \mathrm{keV}, n_e = 10^{-3} \mathrm{cm}^{-3}$$のように典型的な銀河団プラズマの値で規格化すれば
+
+$$
+\begin{align}
+\epsilon_\nu^{ff} 
+&\simeq \frac{2^7 \pi^{3/2}}{3^{3/2}} \frac{10^3}{7^3} 1 \mathrm{MeV}^{3/2} \cdot 1 \mathrm{fm}^3 \times 10^{-6} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \times (10^{-2} \mathrm{MeV})^{-1/2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} e^{-h\nu/k_B T} \notag \\
+&\simeq \frac{2^7 \cdot 10^{-2} \pi^{3/2}}{3^{3/2} \cdot 7^3} 1 \mathrm{MeV} \cdot 1 \mathrm{fm}^3 \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} e^{-h\nu/k_B T} \notag \\
+&\simeq \frac{2^7 \cdot 10^{-2} \pi^{3/2}}{3^{3/2} \cdot 7^3} (10^6 \times 1.6 \times 10^{-12}) \cdot (10^{-13})^3 \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} e^{-h\nu/k_B T} \notag \\
+&\simeq \frac{2^11 \pi^{3/2}}{3^{3/2} \cdot 7^3} \times 10^{-48} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} e^{-h\nu/k_B T} \notag \\
+&\simeq 6.4 \times 10^{-48} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} e^{-h\nu/k_B T} \ [\mathrm{erg \cdot s^{-1} \cdot \mathrm{Hz}^{-1} \cdot cm^{-3}}] \tag{22}
+\end{align}
+$$
+
+のようになります。
+
+```
+もう少し厳密に計算すると、係数は6.3程度となります。
+```
+
+これを全周波数と放射を出している全領域体積で積分しましょう。
+このとき、観測している天体は電子数密度と温度が一様な天体であるとすると
+
+$$
+\begin{align}
+L 
+&\equiv \frac{dW}{dt} 
+= \int dV \int_0^\infty d\nu \epsilon_\nu^{ff} \notag \\
+&= 6.4 \times 10^{-48} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} V \int_0^\infty e^{-h\nu/k_B T} d\nu \notag \\
+&= 6.4 \times 10^{-48} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} \tilde{g}_{ff} V \frac{k_B T}{h} \tag{23}
+\end{align}
+$$
+
+のように簡単に計算することができます。
+ここで体積$$V$$を典型的な銀河団の大きさ、すなわち半径1Mpcの球形であるとしましょう。
+
+$$
+V 
+= \left( \frac{V}{\frac{4\pi}{3} (1\mathrm{Mpc})^3} \right) \frac{4\pi}{3} (1\mathrm{Mpc})^3
+\simeq 4\pi \times 3^2 \times 10^{72} \left( \frac{V}{\frac{4\pi}{3} (1\mathrm{Mpc})^3} \right) \tag{24}
+$$
+
+そして積分からもう一つ$$k_B T$$が出現したので
+
+$$
+\left(\frac{k_B T}{10 \mathrm{keV}} \right)^{-1/2} k_B T
+= \left( \frac{k_B T}{10 \mathrm{keV}} \right)^{1/2} 10 \mathrm{keV} 
+\simeq 1.6 \times 10^{-8} \left( \frac{k_B T}{10 \mathrm{keV}} \right)^{1/2} \tag{25}
+$$
+
+のように計算し、最後にプランク定数$$h = 6.6 \times 10^{-27} \ [\mathrm{erg \cdot s}]$$を用いれば
+
+$$
+\begin{align}
+L 
+&\simeq \frac{6.4 \times 1.6 \times 4\pi \times 3^2}{6.6} \times 10^{43}  \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{1/2} \left( \frac{V}{\frac{4\pi}{3} (1\mathrm{Mpc})^3} \right) \tilde{g}_{ff} \notag \\
+&\simeq 1.7 \times 10^{45} \left( \frac{n_e}{10^{-3} \mathrm{cm}^{-3}}\right)^{2} \left(\frac{k_B T}{10 \mathrm{keV}} \right)^{1/2} \left( \frac{V}{\frac{4\pi}{3} (1\mathrm{Mpc})^3} \right) \tilde{g}_{ff} \ [\mathrm{erg \cdot s^{-1}}] \tag{26}
+\end{align}
+$$
+
+のように求まります。
+これを熱制動放射の全輝度(bolometric luminosity)と呼びます。
+電子数密度の2乗、そして温度のルートに比例するのは、衝突頻度が$$v n_e n_p (\propto T^{-1/2}n_e^2)$$に比例することからくるものです。
 
 ## 実際の銀河団プラズマ観測
 
-工事中...
+宇宙に存在する銀河団プラズマが熱制動放射で観測されるとき、実際にはどのように見えるでしょうか。
+まずは偏光状態について考えてみましょう。
+制動放射の原理を見てみると、電子はその軌道を少し曲げることにより放射を出します。
+従って、この放射は下図のように、縦に振動する直線偏光電磁波として観測されます。
 
-![](/assets/images/astroelec/thermal_brems_03.md)
+![](/assets/images/astroelec/thermal_brems_03.png)
+
+しかし、銀河団プラズマのように多数の電子からなる系を見てみると、電子の運動方向はみなランダムであると考えることができます。
+ここから、銀河団プラズマを観測した場合には、これらが全て重ね合わさったものとして観測されるため、結局は無偏光状態として観測されるとわかります。  
+
+ここまでの議論は、実は光学的に薄いことを仮定しています。
+もし光学的に厚ければ、奥側から出た制動放射は途中のプラズマ粒子に散乱され、そのスペクトルが変化するはずです。
+よって、まずは銀河団が光学的に薄いことを示してみましょう。
+[トムソン散乱の散乱断面積](/astroelec/thomson)より、光学的厚み$$\tau$$は
+
+$$
+\tau 
+= \sigma_T n_e \ell 
+= \frac{8\pi}{3} \left( \frac{e^2}{m_e c^2}\right)^2 n_e \ell 
+\simeq n_e \ell \cdot \frac{2}{3} \mathrm{barn} 
+\simeq n_e \ell \cdot \frac{2}{3} \times 10^{-24} \mathrm{cm}^2 \tag{27}
+$$
+
+のように計算されます。
+ここに銀河団プラズマの典型的な値である$$n_e \sim 10^{-3} \mathrm{cm}^{-3}, \ell = 1 \mathrm{Mpc} \sim 3 \times 10^{24} \mathrm{cm}$$を代入すると
+
+$$
+\tau 
+\sim 2 \times 10^{-3} \ll 1 \tag{28}
+$$
+
+と求まります。
+よって銀河団は光学的に薄いことがわかりました。
+ここから、銀河団プラズマを観測するときには、散乱を気にすることなく熱制動放射を観測できることがわかります。
+実際に面積$$1 \mathrm{cm}^2$$の検出器を用意したときに、単位時間あたりに半径1Mpc, 電子数密度$$n_e \sim 1 \mathrm{cm}^{-3}$$, 温度$$k_B T \sim 10 \mathrm{keV}$$の銀河団から到来する1keV以上のエネルギーを持った光子数を求めてみましょう。
+ただし銀河団までの距離を$$R$$、そして簡単のために$$\tilde{g}_{ff} \sim 1$$とします。
+(22)式より、$$\epsilon_\nu^{ff}$$は単位時間・単位体積・単位周波数あたりに熱制動放射により放出される電磁波のエネルギーです。
+これを光子一個あたりのエネルギー$$h\nu$$で割ることで、単位時間・単位体積・単位周波数あたりに放出される光子数に変換することができます。
+
+$$
+\frac{\epsilon_\nu^{ff}}{h \nu} 
+= \frac{6.4 \times 10^{-48}}{h\nu} e^{-h\nu / 10 \mathrm{keV}} \tag{29}
+＄＄
+
+これを$$1 \mathrm{keV}/h \sim \infty$$の周波数で積分することで、単位時間・単位体積あたりに放出される1keV以上のエネルギーを持つ光子数を求めましょう。
+
+$$
+n
+= \int_{1\mathrm{keV} / h}^\infty n d\nu 
+= \frac{6.4 \times 10^{-48}}{h} \int_{1\mathrm{keV} / h}^\infty \frac{d\nu}{\nu} e^{-h\nu / 10 \mathrm{keV}} 
+\underbrace{=}_{\frac{h\nu}{10 \mathrm{keV}} = x} \frac{6.4 \times 10^{-48}}{h} \int_{0.1}^\infty \frac{e^{-x}}{x} dx \tag{30}
+$$
+
+
+最後の積分部分は[第一exponential integral](/atmos/schwarzschild_milne)と呼ばれるものです。
+数表や数値積分結果から$$\int_{0.1}^\infty e^{-x}/x \sim 1.82$$という値を拝借しましょう。
+すると銀河団から距離$$R$$にある検出器に、単位時間あたりにやってくる光子数は
+
+$$
+\frac{\frac{4\pi}{3} (1 \mathrm{Mpc})^3 n}{4\pi R^2} 
+\simeq \frac{(3 \times 10^{24})^3}{3 R^2} \frac{6.4 \times 10^{-48}}{6.6 \times 10^{-27}} \times 1.82 
+\simeq \frac{1.7 \times 10^{52}}{R^2} \ [\mathrm{s}^{-1}] \tag{31}
+$$
+
+のように求まります。
+ちなみに、この検出器に単位時間あたりに1個の光子が届くような距離は
+
+$$
+R \sim
+\sqrt{1.7 \times 10^{52}} 
+\sim 1.3 \times 10^{26} \ [\mathrm{cm}] 
+\sim 40 \ [\mathrm{Mpc}] \tag{32}
+$$
+
+のようになります。
+実際の銀河団からの熱制動放射由来のX線光子は、1秒間に1個くるか来ないか程度とされています。
+光子が飛来した部分は明るい点として表現されることから、観測結果はポチポチと点描のようなものになります。
+
+![](/assets/images/astroelec/thermal_brems_04.png)
+
+上図はチャンドラX線衛星で観測された、ペルセウス座銀河団の中心部の様子です。
+ペルセウス座銀河団は73.6Mpcの距離にあります。
+先程の見積もりから、この銀河団からの熱制動放射光子は1秒間に1個も到達しません。
+[Fabian et al., 2003](https://doi.org/10.1046/j.1365-8711.2003.06902.x)では、露出時間を95ks(およそ10万秒=28時間程度)としています。
+そのような長時間観測を行なって、ようやく先程のような銀河団のX線写真が撮れるのです。
+
+## 参考文献
+
+[1] 観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎II"  
+[2] [Fabian et al., 2003, "A deep Chandra observation of the Perseus cluster: shocks and ripples"](https://doi.org/10.1046/j.1365-8711.2003.06902.x)
 
 {% include adsense.html %} 

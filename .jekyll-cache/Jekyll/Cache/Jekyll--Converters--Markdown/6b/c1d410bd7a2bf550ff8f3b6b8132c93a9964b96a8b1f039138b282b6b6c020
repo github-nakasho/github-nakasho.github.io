@@ -1,0 +1,82 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#熱制動吸収-thermal-free-free-absorption" id="markdown-toc-熱制動吸収-thermal-free-free-absorption">熱制動吸収 (Thermal free-free absorption)</a>    <ol>
+      <li><a href="#吸収係数" id="markdown-toc-吸収係数">吸収係数</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="熱制動吸収-thermal-free-free-absorption">熱制動吸収 (Thermal free-free absorption)</h1>
+
+<p><a href="/astroelec/ssa">シンクロトロン自己吸収</a>のときと同様に、<a href="/astroelec/thermal_brems">熱制動放射</a>を出す天体についても、逆過程となる吸収が存在します。
+今回は<a href="/astroelec/thermal_brems">熱制動放射</a>で輝いて見える天体について、その吸収係数やこの吸収過程によるスペクトル変化を求めてみましょう。</p>
+
+<h2 id="吸収係数">吸収係数</h2>
+
+<p><a href="/atmos/radiative_transfer#発光係数-emission-coefficient">吸収係数の定義、そして熱制動放射を求めるときに用いた熱平衡の仮定</a>より</p>
+
+\[\eta_\nu 
+= \kappa_\nu^{ff} B_\nu (T) \tag{1}\]
+
+<p>左辺の\(\eta_\nu\)は発光係数、そして右辺の\(\kappa_\nu, B_\nu (T)\)はそれぞれ吸収係数と<a href="/atmos/radiative_transfer#発光係数-emission-coefficient">プランク関数</a>です。
+この関係式をキルヒホッフの関係式と呼びます。
+\(B_\nu (T)\)は単位時間・単位面積・単位立体角あたりに通過する光のエネルギーです。
+今、\(\eta_\nu\)を<a href="/astroelec/thermal_brems">熱制動放射</a>による発光と考えると</p>
+
+\[\eta_\nu = \frac{1}{4\pi} \epsilon_\nu^{ff} \tag{2}\]
+
+<p>のように書けます。
+ここで\(1/4\pi\)は単位立体角あたりの量に直すためのものです。
+この2つの式より</p>
+
+\[\begin{align}
+\kappa_\nu^{ff} 
+&amp;= \frac{\epsilon_\nu^{ff}}{4\pi B_\nu(T)} 
+= \frac{1}{4\pi} \frac{2^5\pi e^6}{3 m_e c^3} \sqrt{\frac{2\pi}{3m_e k_B}} n_e^2 T^{-1/2} \tilde{g}_{ff} e^{-h\nu / k_B T} \frac{c^2}{2h\nu^3} (e^{h\nu/k_B T} -1) \notag \\
+&amp;= \frac{4 e^6}{3 m_e hc} \sqrt{\frac{2\pi}{3m_e k_B}} \tilde{g}_{ff} n_e^2 T^{-1/2} \nu^{-3} (1-e^{-h\nu/k_B T}) \tag{3}
+\end{align}\]
+
+<p>のように、吸収係数が求まります。
+ではこの吸収が観測で効いてくるのは、どのような振動数\(\nu\)のときでしょうか。
+(3)式から、\(h \nu \gg k_B T\)の高周波の場合には\(\nu^{-3} \ll 1, e^{-h\nu / k_B T} \ll 1\)より、\(\kappa_\nu^{ff} \ll 1\)となります。
+よって高周波の観測では吸収は無視して良いでしょう。
+逆に\(h \nu \ll k_B T\)の低周波領域の場合、すなわちレイリー・ジーンズ側においては</p>
+
+\[\begin{align}
+\kappa_\nu^{ff} 
+&amp;\simeq \frac{4 e^6}{3 m_e hc} \sqrt{\frac{2\pi}{3m_e k_B}} \tilde{g}_{ff} n_e^2 T^{-1/2} \nu^{-3} \left\{ 1- \left( 1- \frac{h\nu}{k_B T} \right) \right\} 
+\simeq \frac{4 e^6}{3 m_e c k_B} \sqrt{\frac{2\pi}{3m_e k_B}} \tilde{g}_{ff} n_e^2 T^{-3/2} \nu^{-2} \notag \\
+&amp;\simeq \left( \frac{e^3}{\hbar c} \right)^3 (\hbar c)^3 \frac{c^2}{(m_e c^2)^{3/2}} \frac{1}{c} \frac{10^6}{(k_B 10^4)^{3/2}} \frac{2^{5/2} \pi^{1/2}}{3^{3/2}} \tilde{g}_{ff} n_e^2 T^{-3/2} \nu^{-2} \notag \\
+&amp;\simeq \left( \frac{200 \mathrm{MeV \cdot fm}}{140} \right)^3 \frac{(3 \times 10^{10})^2}{(0.5 \mathrm{MeV})^{3/2}} \frac{10^6}{(10^{-6} \mathrm{MeV})^{3/2}} \frac{2^{5/2} \pi^{1/2}}{3^{3/2}} \tilde{g}_{ff} n_e^2 T^{-3/2} \nu^{-2} \notag \\
+&amp;\simeq \left( \frac{10^{-12}}{7} \right)^3 (3 \times 10^{10})^2 2^{3/2} \times 10^6 \times 10^9 \frac{2^{5/2} \pi^{1/2}}{3^{3/2}} \tilde{g}_{ff} n_e^2 T^{-3/2} \nu^{-2} \notag \\
+&amp;\simeq 0.014 \tilde{g}_{ff} n_e^2 T^{-3/2} \nu^{-2} \tag{4}
+\end{align}\]
+
+<p>のように求まります。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>もう少ししっかり計算を行うと、前の係数はおよそ0.018程度になります。
+</code></pre></div></div>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

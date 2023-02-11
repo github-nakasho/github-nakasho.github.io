@@ -1,0 +1,54 @@
+I"�
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#熱制動吸収-thermal-free-free-absorption" id="markdown-toc-熱制動吸収-thermal-free-free-absorption">熱制動吸収 (Thermal free-free absorption)</a>    <ol>
+      <li><a href="#吸収係数" id="markdown-toc-吸収係数">吸収係数</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="熱制動吸収-thermal-free-free-absorption">熱制動吸収 (Thermal free-free absorption)</h1>
+
+<p><a href="/astroelec/ssa">シンクロトロン自己吸収</a>のときと同様に、<a href="/astroelec/thermal_brems">熱制動放射</a>を出す天体についても、逆過程となる吸収が存在します。
+今回は<a href="/astroelec/thermal_brems">熱制動放射</a>で輝いて見える天体について、その吸収係数やこの吸収過程によるスペクトル変化を求めてみましょう。</p>
+
+<h2 id="吸収係数">吸収係数</h2>
+
+<p><a href="/atmos/radiative_transfer">吸収係数の定義、そして熱制動放射を求めるときに用いた熱平衡の仮定</a>より</p>
+
+\[\eta_\nu = \kappa_\nu B_\nu (T) \tag{1}\]
+
+<p>左辺の\(\eta_\nu\)は発光係数、そして右辺の\(\kappa_\nu, B_\nu (T)\)はそれぞれ吸収係数とプランク関数です。
+この関係式をキルヒホッフの関係式と呼びます。
+\(B_\nu (T)\)は単位時間・単位面積・単位立体角あたりに通過する光のエネルギーです。
+今、\(\eta_\nu\)を<a href="/astroelec/thermal_brems">熱制動放射</a>による発光と考えると</p>
+
+\[\eta_\nu = \frac{1}{4\pi} \epsilon_\nu^{ff} \tag{2}\]
+
+<p>のように書けます。
+ここで\(1/4\pi\)は単位立体角あたりの量に直すためのものです。
+この二式より</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,129 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力波の振幅四重極公式" id="markdown-toc-重力波の振幅四重極公式">重力波の振幅、四重極公式</a>    <ol>
+      <li><a href="#計算" id="markdown-toc-計算">計算</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力波の振幅四重極公式">重力波の振幅、四重極公式</h1>
+
+<p>重力波の振幅はどの程度のものなのかをこのページにまとめました。途中でダランベール方程式の解の導出(後日掲載予定)を用いています。</p>
+
+<h2 id="計算">計算</h2>
+
+<p>時空に摂動が加わり、計量テンソルが</p>
+
+\[g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}\]
+
+\[(\eta_{\mu \nu}) = \left( \begin{array}{cccc}
+-1 &amp; &amp; &amp; {\bf 0} \\    
+&amp; 1 &amp; &amp; \\
+&amp; &amp; 1 &amp; \\
+{\bf 0} &amp; &amp; &amp; 1 
+\end{array} \right), 
+(h_{\mu \nu}) = \left( \begin{array}{cccc}
+0 &amp; &amp; &amp; {\bf 0} \\    
+&amp; E_+ &amp; &amp; \\
+&amp; &amp; -E_+ &amp; \\
+{\bf 0} &amp; &amp; &amp; 0
+\end{array} \right)\]
+
+<p>のように変化したとします。ただし\(\| E_+ \| \ll 1\)です。重力波の伝搬速度を求める部分とアインシュタイン方程式より</p>
+
+\[\frac{1}{2} \left(\frac{1}{c^2} \frac{\partial^2}{\partial t^2} - \nabla^2 \right) h_{\mu \nu} 
+= \frac{8\pi G}{c^4} T_{\mu \nu} \ \Longrightarrow \ 
+\Box h_{\mu \nu} = - \frac{16\pi G}{c^4} T_{\mu \nu}\]
+
+<p>ここで\(\Box\)はダランベール演算子です。ダランベール方程式の解より</p>
+
+\[h_{\mu \nu} 
+= -\frac{1}{4\pi} (-\frac{16\pi G}{c^4}) \iiint_{V'} \frac{[T_{\mu\nu}]}{|{\bf r}-{\bf r}'|} dV' 
+= \frac{4G}{c^4} \iiint_{V'} \frac{[T_{\mu\nu}]}{|{\bf r}-{\bf r}'|} dV'\]
+
+<p>さらに\([T_{\mu\nu}] \equiv T_{\mu \nu} ({\bf r}', t-\| {\bf r}-{\bf r}' \| /c)\)であり、遅延時刻(retarded time)での物理量を[]で表します。<br />
+考えている重力波源の大きさ\(R\)に比べて、重力波源の位置は観測者から十分に遠いと仮定します。すなわち\(r = \| {\bf r} \| \gg R\)とすると</p>
+
+\[|{\bf r}-{\bf r}'| = r-\frac{\bf{r} \cdot \bf{r}'}{r} + \cdots\]
+
+<p>と展開できます。これより</p>
+
+\[T_{\mu \nu} ({\bf r}', t-\frac{|{\bf r}-{\bf r}'|}{c}) 
+= T_{\mu \nu} ({\bf r}', t-\frac{r}{c}) + \frac{\bf{r} \cdot \bf{r}'}{r} \frac{1}{c} \frac{\partial }{\partial t} T_{\mu \nu} (\bf{r}', t-\frac{r}{c}) + \cdots\]
+
+<p>この式の第2項の大きさを見積もりましょう。先ほどの重力波源の位置が観測者から十分に遠いという仮定から\({\bf r} \cdot {\bf r}' \gg 1\)であることと、天体の運動時間(時間変動)が十分ゆっくりであるというスローモーション近似\(\partial / \partial t \sim 0\)と考えると、第2項は十分小さいと考えられます。よって</p>
+
+\[h_{\mu \nu} 
+\simeq \frac{4G}{c^4 r} \iiint_{V'} T_{\mu \nu} ({\bf r}', t-\frac{r}{c}) dV'\]
+
+<p>と書けます。重力波の成分は空間成分にしか依存しないため、以降は\(h_{ij}\)のみを考えましょう。唐突ですが</p>
+
+\[(T^{\alpha \beta} x'_i x'_j)_{, \alpha \beta}
+= (T^{\alpha \beta}_{\ \ , \alpha} x'_i x'_j + T^{\alpha \beta} \delta_{i\alpha} x'_j + T^{\alpha \beta}  x'_i \delta_{j\alpha} )_{, \beta}\]
+
+<p>という量を考えます。完全流体のエネルギー・運動量テンソルは保存則\(T^{\alpha \beta}_{\ \ , \alpha} = 0\)を満たすので</p>
+
+\[(T^{\alpha \beta} x'_i x'_j)_{, \alpha \beta}
+= (T^{\ \beta}_{i} x'_j + T^{\ \beta}_{j}  x'_i)_{, \beta}
+= T^{\ \beta}_i \delta_{j\beta} + T^{\ \beta}_{j} \delta_{i \beta} 
+= 2 T_{ij}\]
+
+<p>です。一方、</p>
+
+\[\begin{aligned}
+\iiint_{V'} (T^{\alpha \beta} x'_i x'_j)_{, \alpha \beta} dV' 
+&amp;= \iiint_{V'} ((T^{0 \beta} x'_i x'_j)_{,0 \beta} + (T^{k \beta} x'_i x'_j)_{,k \beta}) dV' \\
+&amp;= \iiint_{V'} ((T^{0 0} x'_i x'_j)_{,0 0} + (T^{0 \ell} x'_i x'_j)_{,0 \ell}) + (T^{k \beta} x'_i x'_j)_{,k \beta} )dV' \\
+&amp;= \iiint_{V'} (T^{00} x'_i x'_j)_{, 00} dV' + \iint_{S'} (T^{0\ell} x'_i x'_j)_{, 0} dS_{\ell} + \iint_{S'} (T^{k\beta}  x'_i x'_j)_{, \beta} dS_k \\
+&amp;= \iiint_{V'} (T^{00} x'_i x'_j)_{, 00} dV' 
+= \frac{1}{c^2} \frac{\partial^2 }{\partial t^2 } \iiint_{V'} \rho c^2 x'_i x'_j dV' \\
+&amp;= \frac{\partial^2 }{\partial t^2 } \iiint_{V'} \rho x'_i x'_j dV' 
+\end{aligned}\]
+
+<p>と計算されます。途中、ガウスの定理と無限遠での面積分は0であること、そして\(T^{00} = \rho c^2\)を用いました。以上より</p>
+
+\[h_{ij} \simeq \frac{2G}{c^4 r} \frac{\partial^2 }{\partial t^2 } \iiint_{V'} \rho x'_i x'_j dV'\]
+
+<p>ここで四重極モーメント</p>
+
+\[D_{ij} = \iiint_{V'} \rho x'_i x'_j dV'\]
+
+<p>を用いて</p>
+
+\[h_{ij} \simeq \frac{2G}{c^4 r} \ddot{D}_{ij} (t-r/c)\]
+
+<p>となります。電磁放射の場合、双極子放射が最低次であったのに対し、重力波は四重極放射が最低次となります。これは次のように解釈できます。<br />
+電磁気学では磁気単極子が存在しない(\(\nabla \cdot {\bf B} = 0\))ため、電磁放射は双極子成分から始まります。<br />
+重力理論では、質量単極子にあたる成分は質力保存則、質量双極子にあたる成分は運動量保存則になるため、重力波放射は四重極成分から始まると考えることができます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<ul>
+  <li>[1] 川村, 重力波天文学の最前線</li>
+  <li>[2] 平松, 宇宙論的起源の背景重力波による余剰次元の探求</li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

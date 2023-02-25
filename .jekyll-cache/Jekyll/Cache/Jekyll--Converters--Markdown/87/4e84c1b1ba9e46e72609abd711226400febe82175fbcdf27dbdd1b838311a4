@@ -1,4 +1,4 @@
-I"�8
+I"@F
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -16,7 +16,7 @@
       <li><a href="#ストークスパラメータの意味" id="markdown-toc-ストークスパラメータの意味">ストークスパラメータの意味</a></li>
       <li><a href="#完全部分無偏光と偏光度" id="markdown-toc-完全部分無偏光と偏光度">完全・部分・無偏光と偏光度</a></li>
       <li><a href="#電磁波とストークスパラメータの複素数表現" id="markdown-toc-電磁波とストークスパラメータの複素数表現">電磁波とストークスパラメータの複素数表現</a></li>
-      <li><a href="#ストークスパラメータの座標変換" id="markdown-toc-ストークスパラメータの座標変換">ストークスパラメータの座標変換</a></li>
+      <li><a href="#ストークスパラメータの回転座標変換" id="markdown-toc-ストークスパラメータの回転座標変換">ストークスパラメータの回転座標変換</a></li>
     </ol>
   </li>
 </ol>
@@ -41,9 +41,9 @@ E_y &amp;= a_2 \cos (\tau + \delta_2) \notag
 = a_2 \cos (\tau + \delta_1 + \delta)
 \end{align} \tag{1}\]
 
-<p>で表されるとします。ここで\(\delta=\delta_2- \delta_1\)です。</p>
-
-<p>偏光の状態は通常、ストークスパラメータ(Stokes parameters)と呼ばれる以下の式で定義される4つの物理量で表されます。</p>
+<p>で表されるとします。
+ここで\(\delta=\delta_2- \delta_1\)、さらに\(\tau \equiv \omega t - k_z z\)などのように書きました。 
+偏光の状態は通常、ストークスパラメータ(Stokes parameters)と呼ばれる以下の式で定義される4つの物理量で表されます。</p>
 
 \[I 
 = a_1^2 + a_2^2 \tag{2}\]
@@ -148,6 +148,14 @@ a_1 = \pm a_2\]
 
 <p>偏光度が0のときは無偏光、1のときは完全偏光、そして\(0&lt;\Pi&lt;1\)の時は部分偏光となります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="電磁波とストークスパラメータの複素数表現">電磁波とストークスパラメータの複素数表現</h2>
 
 <p>電磁波を三角関数で表記すると計算が煩雑になるため、電磁波を以下のように複素数表記し、実際に観測される電場としてはその実部を取ることにします。
@@ -176,11 +184,11 @@ a_1 = \pm a_2\]
 
 <p>のように書き換えることができます。</p>
 
-<h2 id="ストークスパラメータの座標変換">ストークスパラメータの座標変換</h2>
+<h2 id="ストークスパラメータの回転座標変換">ストークスパラメータの回転座標変換</h2>
 
 <p>もう一つ、偏光方向についての式も導出してみましょう。
 \(x, y\)座標系においてストークスパラメータ\(I, Q, U, V\)を持つ偏光電磁波を考えます。
-それとは別に角度\(\chi\)だけ回転された座標系\(x', y'\)で、この偏光電磁波を観測することを考えましょう。
+それとは別に角度\(\theta\)だけ回転された座標系\(x', y'\)で、この偏光電磁波を観測することを考えましょう。
 これは私たち観測者は飛来する電磁波の偏光方向を事前に知ることはできないため、電磁波を放射した粒子系で偏光を考えた座標と、設置した観測装置の検出座標の違いを表しています。</p>
 
 <p><img src="/assets/images/astroelec/stokes_05.png" alt="" /></p>
@@ -192,8 +200,8 @@ a_1 = \pm a_2\]
 \mathcal{E}_{y'} 
 \end{array} \right) 
 = \left( \begin{array}{cc}
- \cos \chi &amp; - \sin \chi \\
- \sin \chi &amp; \cos \chi
+ \cos \theta &amp; - \sin \theta \\
+ \sin \theta &amp; \cos \theta
 \end{array}\right) \left( \begin{array}{c}
 \mathcal{E}_{x} \\
 \mathcal{E}_{y} 
@@ -205,8 +213,8 @@ a_1 = \pm a_2\]
 \[\begin{align}
 I' 
 &amp;= \mathcal{E}_{x'} \mathcal{E}_{x'}^\ast + \mathcal{E}_{y'} \mathcal{E}_{y'}^\ast \notag \\
-&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \cos^2 \chi - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \chi \sin \chi + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin^2 \chi \notag \\
-&amp; \qquad + \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin^2 \chi + (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \sin \chi \cos \chi + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \cos^2 \chi \notag \\
+&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \cos^2 \theta - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \theta \sin \theta + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin^2 \theta \notag \\
+&amp; \qquad + \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin^2 \theta + (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \sin \theta \cos \theta + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \cos^2 \theta \notag \\
 &amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast + \mathcal{E}_{y} \mathcal{E}_{y}^\ast 
 = I \tag{14}
 \end{align}\]
@@ -214,26 +222,26 @@ I'
 \[\begin{align}
 Q' 
 &amp;= \mathcal{E}_{x'} \mathcal{E}_{x'}^\ast - \mathcal{E}_{y'} \mathcal{E}_{y'}^\ast \notag \\
-&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \cos^2 \chi - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \chi \sin \chi + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin^2 \chi \notag \\
-&amp; \qquad - \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin^2 \chi - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \sin \chi \cos \chi - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \cos^2 \chi \notag \\
-&amp;= (\mathcal{E}_{x} \mathcal{E}_{x}^\ast - \mathcal{E}_{y} \mathcal{E}_{y}^\ast) (\cos^2 \chi - \sin^2 \chi) - 2 (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \chi \sin \chi 
-= Q \cos 2\chi - U \sin 2\chi \tag{15}
+&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \cos^2 \theta - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \theta \sin \theta + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin^2 \theta \notag \\
+&amp; \qquad - \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin^2 \theta - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \sin \theta \cos \theta - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \cos^2 \theta \notag \\
+&amp;= (\mathcal{E}_{x} \mathcal{E}_{x}^\ast - \mathcal{E}_{y} \mathcal{E}_{y}^\ast) (\cos^2 \theta - \sin^2 \theta) - 2 (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast) \cos \theta \sin \theta 
+= Q \cos 2\theta - U \sin 2\theta \tag{15}
 \end{align}\]
 
 \[\begin{align}
 U' 
 &amp;= \mathcal{E}_{x'} \mathcal{E}_{y'}^\ast + \mathcal{E}_{x'}^\ast \mathcal{E}_{y'} \notag \\
-&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin \chi \cos \chi + \mathcal{E}_{x} \mathcal{E}_{y}^\ast \cos^2 \chi - \mathcal{E}_{x}^\ast \mathcal{E}_{y} \sin^2 \chi - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \chi \cos \chi \notag \\
-&amp; \qquad + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos \chi \sin \chi + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos^2 \chi - \mathcal{E}_{y}^\ast \mathcal{E}_{x} \sin^2 \chi - \mathcal{E}_{y}^\ast \mathcal{E}_{x} \sin \chi \cos \chi \notag \\
-&amp;= (\mathcal{E}_{x} \mathcal{E}_{x}^\ast - \mathcal{E}_{y} \mathcal{E}_{y}^\ast) \sin 2\chi + (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{x}^\ast \mathcal{E}_{y}) \cos 2\chi 
-= Q \sin 2\chi + U \cos 2\chi \tag{16}
+&amp;= \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin \theta \cos \theta + \mathcal{E}_{x} \mathcal{E}_{y}^\ast \cos^2 \theta - \mathcal{E}_{x}^\ast \mathcal{E}_{y} \sin^2 \theta - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \theta \cos \theta \notag \\
+&amp; \qquad + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos \theta \sin \theta + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos^2 \theta - \mathcal{E}_{y}^\ast \mathcal{E}_{x} \sin^2 \theta - \mathcal{E}_{y}^\ast \mathcal{E}_{x} \sin \theta \cos \theta \notag \\
+&amp;= (\mathcal{E}_{x} \mathcal{E}_{x}^\ast - \mathcal{E}_{y} \mathcal{E}_{y}^\ast) \sin 2\theta + (\mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{x}^\ast \mathcal{E}_{y}) \cos 2\theta 
+= Q \sin 2\theta + U \cos 2\theta \tag{16}
 \end{align}\]
 
 \[\begin{align}
 V' 
 &amp;= - (\mathcal{E}_{x'} \mathcal{E}_{y'}^\ast - \mathcal{E}_{x'}^\ast \mathcal{E}_{y'}) \notag \\
-&amp;= - \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin \chi \cos \chi - \mathcal{E}_{x} \mathcal{E}_{y}^\ast \cos^2 \chi + \mathcal{E}_{y} \mathcal{E}_{x}^\ast \sin^2 \chi + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \chi \cos \chi \notag \\
-&amp; \qquad + \mathcal{E}_{x}^\ast \mathcal{E}_{x} \cos \chi \sin \chi + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos^2 \chi - \mathcal{E}_{x} \mathcal{E}_{y}^\ast \sin^2 \chi - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \chi \cos \chi \notag \\
+&amp;= - \mathcal{E}_{x} \mathcal{E}_{x}^\ast \sin \theta \cos \theta - \mathcal{E}_{x} \mathcal{E}_{y}^\ast \cos^2 \theta + \mathcal{E}_{y} \mathcal{E}_{x}^\ast \sin^2 \theta + \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \theta \cos \theta \notag \\
+&amp; \qquad + \mathcal{E}_{x}^\ast \mathcal{E}_{x} \cos \theta \sin \theta + \mathcal{E}_{x}^\ast \mathcal{E}_{y} \cos^2 \theta - \mathcal{E}_{x} \mathcal{E}_{y}^\ast \sin^2 \theta - \mathcal{E}_{y} \mathcal{E}_{y}^\ast \sin \theta \cos \theta \notag \\
 &amp;= - \mathcal{E}_{x} \mathcal{E}_{y}^\ast + \mathcal{E}_{y} \mathcal{E}_{x}^\ast 
 = V \tag{17}
 \end{align}\]
@@ -248,8 +256,8 @@ V
 \end{array} \right) 
 = \left( \begin{array}{cccc}
 1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \cos 2\chi &amp; -\sin 2\chi &amp; 0 \\
-0 &amp; \sin 2\chi &amp; \cos 2\chi &amp; 0 \\
+0 &amp; \cos 2\theta &amp; -\sin 2\theta &amp; 0 \\
+0 &amp; \sin 2\theta &amp; \cos 2\theta &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1  
 \end{array}\right) \left( \begin{array}{c}
 I' \\
@@ -257,6 +265,71 @@ Q' \\
 U' \\
 V'
 \end{array} \right) \tag{18}\]
+
+<p>\(I\)は電磁波の振幅に対応するものであるため、回転変換に対しては不変です。
+また\(V\)は円偏光に関連するパラメータであるため、これも変化はありません。
+よって直線偏光に関するパラメータである\(Q, V\)だけが影響を受けることがわかります。
+\(\theta\)の回転座標変換に対して\(2\theta\)の角度が現れるのは、電磁波がスピン2であることに対応します(下図のように、直線偏光の矢印が2\(\pi\)の回転の間に2回もとに戻ることからわかります。)</p>
+
+<p><img src="/assets/images/astroelec/stokes_06.png" alt="" /></p>
+
+<p>(18)式から、\(Q, U\)の部分だけを取り出しましょう。</p>
+
+\[\left( \begin{array}{c}
+Q' \\
+U'
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\cos 2\theta &amp; -\sin 2\theta \\
+\sin 2\theta &amp; \cos 2\theta
+\end{array} \right) \left( \begin{array}{c}
+Q \\
+U
+\end{array} \right) \tag{19}\]
+
+<p>この変換から、実空間上で直線偏光の向きを\(\theta\)回転させる変換は、\(Q, U\)平面上で\(2\theta\)回転させることに対応します。
+そして回転であることから、\(Q^2 + U^2\) (下図のベクトルの長さの2乗)は変化しないことがわかります。</p>
+
+<p><img src="/assets/images/astroelec/stokes_07.png" alt="" /></p>
+
+<p>元々のストークスパラメータ\(Q, U\)の値により表現される直線偏光の角度が\(\chi\)であったとしましょう。
+ここまでの議論から、実空間上での偏光角\(\chi\)は、\(Q, U\)平面では\(2\chi\)の角度を持つことに対応します。
+よって</p>
+
+\[\tan 2\chi 
+= \frac{U}{Q} \ \Longrightarrow \ 
+\chi 
+= \frac{1}{2} \tan^{-1} \frac{U}{Q} \tag{20}\]
+
+<p>と求まります。
+これは検出器を用意し、ストークスパラメータ\(Q, U\)を測定すれば、偏光角\(\chi\)を推定することができることを表す式です。<br />
+ここまでの議論から</p>
+
+\[U = \sqrt{Q^2 + U^2} \cos 2\chi, \quad 
+Q = \sqrt{Q^2 + U^2} \sin 2\chi \tag{21}\]
+
+<p>のように書くことができます。
+もし観測している電磁波に円偏光成分がなく\(V = 0\)で、さらに偏光度が1であるならば</p>
+
+\[\Pi 
+= \frac{\sqrt{Q^2 + U^2}}{I} 
+= 1 \ \Longrightarrow \ 
+\sqrt{Q^2 + U^2} 
+= I \tag{22}\]
+
+<p>となることから、(21)式は</p>
+
+\[U = I \cos 2\chi, \quad 
+Q = I \sin 2\chi \tag{23}\]
+
+<p>と表記できます。
+さらに便利にするために、この直線偏光を以下のような複素数で特徴づけることにしましょう。</p>
+
+\[P \equiv I e^{i 2\chi} 
+= U + i Q \tag{24}\]
+
+<p>これを複素偏光強度と呼びます。
+このようにしておくことで、直線偏光に関する計算の取り扱いが楽になります。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

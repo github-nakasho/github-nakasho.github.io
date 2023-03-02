@@ -20,7 +20,7 @@ nav_order: 108
 
 {% include adsense.html %}
 
-# ファラデートモグラフィ
+# ファラデートモグラフィ (工事中、随時更新いたします)
 
 ここでは近年の電波観測の発展に伴って注目されつつある、新しい宇宙物理解析手法のファラデートモグラフィ (Faraday tomography)についてご紹介します。
 
@@ -86,8 +86,8 @@ P (\lambda^2)
 $$
 
 のように特徴づけることができます。
-ここで$$p$$は部分偏光を表す変数で、完全偏光の場合には$$p=1$$となるようなものです。
-またこれらは観測波長$$\lambda$$に依存しますが、(2)式と合わせるため、そして波長は常に正の値しか取らないことから、$$\lambda^2$$の関数であるとしています。
+ここで$$p$$は部分偏光を表す変数で、無偏光の場合には$$p=0$$、完全偏光の場合には$$p=1$$となるようなものです。
+またこれらは観測波長$$\lambda$$に依存しますが、(2)式と合わせるため、そして波長は常に正の値しか取らないことから、$$\lambda^2$$の関数であるとしています(後述も参照。)
 
 ### Faraday Dispersion Function (FDF: ファラデー分散関数)
 
@@ -100,6 +100,99 @@ $$
 
 ここで出てきた$$F(\phi)$$をファラデー分散関数と呼びます。
 これは$$\phi$$空間における複素偏光強度の分布を表しています。
+$$\lambda^2 < 0$$のとき、すなわち波長が複素数であるような場合には$$P(\lambda^2)$$は物理的な意味を持ちません。
+よって$$P(\lambda^2)$$は$$\lambda^2 \geq 0$$の場合のみ、意味を持つ物理量です。
+当然ながら$$\lambda^2 < 0$$での$$P(\lambda^2)$$は観測ができないため、$$\lambda^2 \geq 0$$における$$P(\lambda^2)$$の値から何かしらの仮定を置いて予測することで、始めて(4)式の逆変換を考えることができます。
+用いられる仮定の例として$$P$$がエルミート、すなわち$$P = P^\dagger$$などがあります。
+この仮定は$$F(\phi)$$が実数であることに対応します。
+
+### 観測による制限: 窓関数の導入による一般化
+
+(4)式の$$P(\lambda^2)$$は、実際には観測波長域によって制限されます。
+そこで
+
+$$
+\widetilde{P}(\lambda^2) 
+= W(\lambda^2) P(\lambda^2) \tag{5}
+$$
+
+のような窓関数(あるいはサンプリング関数とも呼ばれる)$$W(\lambda^2)$$を導入しましょう。
+これは観測する波長域では値をもち、それ以外ではゼロとなるような関数です。
+以降、$$\widetilde{P}$$のようにチルダのついた物理量は、観測による制限を受けたものを意味します。
+すると(4)式から
+
+$$
+\widetilde{P}(\lambda^2) 
+= W(\lambda^2) \int_{-\infty}^\infty F(\phi) e^{2i \phi \lambda^2} d\phi \tag{6}
+$$
+
+です。
+以降の逆変換で係数$$1/\pi$$による煩雑化を避けるために、$$\lambda^2 = \pi u$$のように変数変換を施しましょう。
+すると
+
+$$
+\widetilde{P}(\pi u) 
+= W(\pi u) \int_{-\infty}^\infty F(\phi) e^{2 \pi i \phi u} d\phi \tag{6}
+$$
+
+ここでさらに
+
+$$
+R(\phi) 
+\equiv \frac{\int_{-\infty}^\infty W(\pi u) e^{-2\pi i \phi u} du}{\int_{-\infty}^\infty W(\pi u) du} \tag{7}
+$$
+
+を定義しましょう。
+これは窓関数$$W(\pi u)$$をフーリエ逆変換したものを、$$\phi = 0$$の値で規格化したものです。
+(7)式の逆変換より
+
+$$
+W(\pi u) 
+= \left( \int_{-\infty}^\infty W(\pi u) du \right) \int_{-\infty}^\infty R(\phi) e^{2\pi i \phi u} d\phi \tag{8}
+$$
+
+です。
+これと(6)式より
+
+$$
+\widetilde{P}(\pi u) 
+= \left( \int_{-\infty}^\infty W(\pi u') du' \right) \left( \int_{-\infty}^\infty R(\phi') e^{2\pi i \phi' u} d\phi' \right) \left( \int_{-\infty}^\infty F(\phi'') e^{2\pi i \phi'' u} d\phi'' \right) \tag{9}
+$$
+
+を得ます。
+さらに逆変換を考えれば
+
+$$
+\begin{align}
+\frac{\int_{-\infty}^\infty \widetilde{P}(\pi u) e^{-2\pi i \phi u} du}{\int_{-\infty}^\infty W(\pi u') du'} 
+&= \int_{-\infty}^\infty \left( \int_{-\infty}^\infty  R(\phi') e^{2\pi i \phi' u} d\phi' \right) \left( \int_{-\infty}^\infty F(\phi'') e^{2\pi i \phi'' u} d\phi'' \right) e^{-2\pi i \phi u} du \notag \\
+&= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \left( \int_{-\infty}^\infty e^{2\pi i(\phi'+\phi''-\phi) u} du \right) d\phi'' \right) d\phi' \notag \\
+&= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \delta(\phi'+\phi''-\phi) d\phi'' \right) d\phi' \notag \\
+&= \int_{-\infty}^\infty R(\phi') F(\phi - \phi') d\phi' 
+= R(\phi) \ast F(\phi) \tag{10}
+\end{align}
+$$
+
+のようになります。
+最後の$$\ast$$は畳み込みを表すものです。
+そして$$u = \lambda^2 / \pi$$として元に戻せば
+
+$$
+\widetilde{F}(\phi) 
+= F(\phi) * R(\phi) 
+= K \int_{-\infty}^\infty \widetilde{P}(\lambda^2) e^{-2\pi i \lambda^2} d\lambda^2 \quad 
+\left( K = \left( \int_{-\infty}^\infty W(\lambda^2) d\lambda^2 \right)^{-1}\right) \tag{11}
+$$
+
+のように、窓関数を考慮した$$\widetilde{F}(\phi)$$が求まります。
+ここで、この$$R(\phi)$$はRotation Measure Spread Function (RMSF: 回転量度の広がり関数)と呼ばれるものです。
+窓関数$$W(\lambda^2)$$を適用した結果、$$R(\phi)$$により元々のファラデースペクトル$$F(\phi)$$が修正を受けます。
+このことから$$\widetilde{F}(\phi)$$のことを、"dirty Faraday spectrum" (汚染されたファラデースペクトル)と呼ぶこともあります。
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-I"@F
+I"�J
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -17,6 +17,8 @@
       <li><a href="#完全部分無偏光と偏光度" id="markdown-toc-完全部分無偏光と偏光度">完全・部分・無偏光と偏光度</a></li>
       <li><a href="#電磁波とストークスパラメータの複素数表現" id="markdown-toc-電磁波とストークスパラメータの複素数表現">電磁波とストークスパラメータの複素数表現</a></li>
       <li><a href="#ストークスパラメータの回転座標変換" id="markdown-toc-ストークスパラメータの回転座標変換">ストークスパラメータの回転座標変換</a></li>
+      <li><a href="#偏光角の計算" id="markdown-toc-偏光角の計算">偏光角の計算</a></li>
+      <li><a href="#複素偏光強度" id="markdown-toc-複素偏光強度">複素偏光強度</a></li>
     </ol>
   </li>
 </ol>
@@ -123,6 +125,14 @@ a_1 = \pm a_2\]
 
 <p><img src="/assets/images/astroelec/stokes_04.png" alt="" /></p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="ストークスパラメータの意味">ストークスパラメータの意味</h2>
 
 <p>以上の4つの対応から、直線偏光のときは\(V=0\)であり、\(V\)は円偏光を特徴付ける量です。一方、円偏光の時は\(Q=U=0\)であることから、これら2つは直線偏光を特徴付ける量と言えます。\(I\)は強度と等価な量ですが、正確には平均強度の2倍の量です。</p>
@@ -147,14 +157,6 @@ a_1 = \pm a_2\]
 \equiv \frac{\sqrt{Q^2 + U^2 + V^2}}{I} \tag{7}\]
 
 <p>偏光度が0のときは無偏光、1のときは完全偏光、そして\(0&lt;\Pi&lt;1\)の時は部分偏光となります。</p>
-
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
 
 <h2 id="電磁波とストークスパラメータの複素数表現">電磁波とストークスパラメータの複素数表現</h2>
 
@@ -183,6 +185,14 @@ a_1 = \pm a_2\]
 = - (\mathcal{E}_{x} \mathcal{E}_{y}^\ast - \mathcal{E}_{x}^\ast \mathcal{E}_{y}) \tag{12}\]
 
 <p>のように書き換えることができます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="ストークスパラメータの回転座標変換">ストークスパラメータの回転座標変換</h2>
 
@@ -292,6 +302,16 @@ U
 
 <p><img src="/assets/images/astroelec/stokes_07.png" alt="" /></p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="偏光角の計算">偏光角の計算</h2>
+
 <p>元々のストークスパラメータ\(Q, U\)の値により表現される直線偏光の角度が\(\chi\)であったとしましょう。
 ここまでの議論から、実空間上での偏光角\(\chi\)は、\(Q, U\)平面では\(2\chi\)の角度を持つことに対応します。
 よって</p>
@@ -302,14 +322,17 @@ U
 = \frac{1}{2} \tan^{-1} \frac{U}{Q} \tag{20}\]
 
 <p>と求まります。
-これは検出器を用意し、ストークスパラメータ\(Q, U\)を測定すれば、偏光角\(\chi\)を推定することができることを表す式です。<br />
-ここまでの議論から</p>
+これは検出器を用意し、ストークスパラメータ\(Q, U\)を測定すれば、偏光角\(\chi\)を推定することができることを表す式です。</p>
+
+<h2 id="複素偏光強度">複素偏光強度</h2>
+
+<p>ここまでの議論から</p>
 
 \[U = \sqrt{Q^2 + U^2} \cos 2\chi, \quad 
 Q = \sqrt{Q^2 + U^2} \sin 2\chi \tag{21}\]
 
 <p>のように書くことができます。
-もし観測している電磁波に円偏光成分がなく\(V = 0\)で、さらに偏光度が1であるならば</p>
+もし観測している電磁波に円偏光成分がなく\(V = 0\)で、さらに偏光度が1であるならば、(7)式より</p>
 
 \[\Pi 
 = \frac{\sqrt{Q^2 + U^2}}{I} 

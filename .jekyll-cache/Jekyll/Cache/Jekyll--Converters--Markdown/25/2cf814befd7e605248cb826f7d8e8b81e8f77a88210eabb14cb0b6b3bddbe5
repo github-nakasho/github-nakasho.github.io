@@ -1,17 +1,22 @@
-I"�.
+I"�;
 <details open="">
   <summary class="text-delta">
     Table of contents
   </summary>
 <ol id="markdown-toc">
-  <li><a href="#ファラデートモグラフィ" id="markdown-toc-ファラデートモグラフィ">ファラデートモグラフィ</a>    <ol>
+  <li><a href="#ファラデートモグラフィ-工事中随時更新いたします" id="markdown-toc-ファラデートモグラフィ-工事中随時更新いたします">ファラデートモグラフィ (工事中、随時更新いたします)</a>    <ol>
       <li><a href="#トモグラフィとは" id="markdown-toc-トモグラフィとは">トモグラフィとは</a></li>
       <li><a href="#ファラデートモグラフィ-faraday-tomography" id="markdown-toc-ファラデートモグラフィ-faraday-tomography">ファラデートモグラフィ (Faraday tomography)</a></li>
-      <li><a href="#ファラデートモグラフィの原理" id="markdown-toc-ファラデートモグラフィの原理">ファラデートモグラフィの原理</a>        <ol>
+    </ol>
+  </li>
+  <li><a href="#ファラデートモグラフィの代表的手法" id="markdown-toc-ファラデートモグラフィの代表的手法">ファラデートモグラフィの代表的手法</a>    <ol>
+      <li><a href="#rm-synthesisの原理" id="markdown-toc-rm-synthesisの原理">RM synthesisの原理</a>        <ol>
           <li><a href="#faraday-dispersion-function-fdf-ファラデー分散関数" id="markdown-toc-faraday-dispersion-function-fdf-ファラデー分散関数">Faraday Dispersion Function (FDF: ファラデー分散関数)</a></li>
           <li><a href="#観測による制限-窓関数の導入による一般化" id="markdown-toc-観測による制限-窓関数の導入による一般化">観測による制限: 窓関数の導入による一般化</a></li>
         </ol>
       </li>
+      <li><a href="#qu-fitting" id="markdown-toc-qu-fitting">QU-fitting</a></li>
+      <li><a href="#fphi-rightarrow-fxへの変換" id="markdown-toc-fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</a></li>
     </ol>
   </li>
 </ol>
@@ -26,7 +31,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
 
-<h1 id="ファラデートモグラフィ">ファラデートモグラフィ</h1>
+<h1 id="ファラデートモグラフィ-工事中随時更新いたします">ファラデートモグラフィ (工事中、随時更新いたします)</h1>
 
 <p>ここでは近年の電波観測の発展に伴って注目されつつある、新しい宇宙物理解析手法のファラデートモグラフィ (Faraday tomography)についてご紹介します。</p>
 
@@ -67,17 +72,32 @@ X線CTや地震波トモグラフィなどが有名な応用例として知ら�
 よって複雑に\(n_e, B_\parallel\)が変化する乱流のような場合や、複数の天体が視線方向に存在するような場合には、このような直線の推定は困難となります。
 このような複雑な構造の場合にも、磁場の構造や電子数密度の情報を正確に求めるために開発された技術が、ファラデートモグラフィです。</p>
 
-<h2 id="ファラデートモグラフィの原理">ファラデートモグラフィの原理</h2>
+<h1 id="ファラデートモグラフィの代表的手法">ファラデートモグラフィの代表的手法</h1>
+
+<p>ファラデートモグラフィの最終的な目的は、<a href="/plasma/faraday_rotation">ファラデー回転</a>の観測結果から磁場などの空間情報を引き出すことです。
+この目的を叶える主要な手法は大きく分けて2つあります。</p>
+
+<ul>
+  <li>RM synthesis (回転度量合成)</li>
+  <li>QU-fitting</li>
+</ul>
+
+<p>以下では、この代表的な2つの手法についてご説明します。</p>
+
+<h2 id="rm-synthesisの原理">RM synthesisの原理</h2>
 
 <p>ここまでRMを用いてきましたが、以降ではこれを\(\phi\)のように表記し、これをファラデー深度(Faraday depth)と呼ぶことにしましょう。
 深度と言っていますが、これは正負どちらもとることが出来る量です。
 ファラデー深度が正の場合、磁場は観測者に向かう方向を持ち、負ならば遠ざかる方向の磁場を意味します。
 またここからFaraday thin, Faraday thickなどの概念も考えることができます。
-Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)のように、<a href="/plasma/faraday_rotation">ファラデー回転</a>による偏光角の変化が無視できるような場合を意味します。
+Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)のように、<a href="/plasma/faraday_rotation">ファラデー回転</a>による偏光角の変化がとても小さい場合を意味します。
 ここで\(\Delta \phi\)は\(\phi\)空間において天体の広がりを表しています。
 もしFaraday thinならば、下図のようにデルタ関数的に近似することができるでしょう。
-逆にFaraday thickとは\(\lambda^2 \Delta \phi \gg 1\)であり、これは\(\phi\)空間において広がりのある天体を意味します。<br />
-直線偏光の偏光角を考えるため、以下では円偏光は考えないものとします。
+逆にFaraday thickとは\(\lambda^2 \Delta \phi \gg 1\)であり、これは\(\phi\)空間において広がりのある天体を意味します。</p>
+
+<p><img src="/assets/images/astroelec/faraday_tomography_02.png" alt="" /></p>
+
+<p>直線偏光の偏光角を考えるため、以下では円偏光は考えないものとします。
 すなわち、<a href="/astroelec/stokes">ストークスパラメータ</a>において\(V = 0\)とします。
 すると<a href="/astroelec/stokes#複素偏光強度">複素偏光強度</a>から、この直線偏光を</p>
 
@@ -121,7 +141,7 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 = W(\lambda^2) \int_{-\infty}^\infty F(\phi) e^{2i \phi \lambda^2} d\phi \tag{6}\]
 
 <p>です。
-以降の逆変換で係数\(1/2\pi\)による煩雑化を避けるために、\(\lambda^2 = \pi u\)のように変数変換を施しましょう。
+以降の逆変換で係数\(1/\pi\)による煩雑化を避けるために、\(\lambda^2 = \pi u\)のように変数変換を施しましょう。
 すると</p>
 
 \[\widetilde{P}(\pi u) 
@@ -146,14 +166,16 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 = \left( \int_{-\infty}^\infty W(\pi u') du' \right) \left( \int_{-\infty}^\infty R(\phi') e^{2\pi i \phi' u} d\phi' \right) \left( \int_{-\infty}^\infty F(\phi'') e^{2\pi i \phi'' u} d\phi'' \right) \tag{9}\]
 
 <p>を得ます。
-さらに、(6)式の逆変換を考えれば</p>
+さらに逆変換を考えれば</p>
 
-\[\frac{\int_{-\infty}^\infty \widetilde{P}(\pi u) e^{-2\pi i \phi u} du}{\int_{-\infty}^\infty W(\pi u) du} 
-= \int_{-\infty}^\infty \left( \int_{-\infty}^\infty  R(\phi') e^{2\pi i \phi' u} d\phi' \right) \left( \int_{-\infty}^\infty F(\phi'') e^{2\pi i \phi'' u} d\phi'' \right) e^{-2\pi i \phi u} du 
-= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \left( \int_{-\infty}^\infty e^{2\pi i(\phi'+\phi''-\phi) u} du \right) d\phi'' \right) d\phi' 
-= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \delta(\phi'+\phi''-\phi) d\phi'' \right) d\phi' 
-= \int_{-\infty}^\infty R(\phi') F(\phi - \phi') d\phi' 
-= R(\phi) \ast F(\phi) \tag{10}\]
+\[\begin{align}
+\frac{\int_{-\infty}^\infty \widetilde{P}(\pi u) e^{-2\pi i \phi u} du}{\int_{-\infty}^\infty W(\pi u') du'} 
+&amp;= \int_{-\infty}^\infty \left( \int_{-\infty}^\infty  R(\phi') e^{2\pi i \phi' u} d\phi' \right) \left( \int_{-\infty}^\infty F(\phi'') e^{2\pi i \phi'' u} d\phi'' \right) e^{-2\pi i \phi u} du \notag \\
+&amp;= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \left( \int_{-\infty}^\infty e^{2\pi i(\phi'+\phi''-\phi) u} du \right) d\phi'' \right) d\phi' \notag \\
+&amp;= \int_{-\infty}^\infty R(\phi') \left( \int_{-\infty}^\infty F(\phi'') \delta(\phi'+\phi''-\phi) d\phi'' \right) d\phi' \notag \\
+&amp;= \int_{-\infty}^\infty R(\phi') F(\phi - \phi') d\phi' 
+= R(\phi) \ast F(\phi) \tag{10}
+\end{align}\]
 
 <p>のようになります。
 最後の\(\ast\)は畳み込みを表すものです。
@@ -162,7 +184,26 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 \[\widetilde{F}(\phi) 
 = F(\phi) * R(\phi) 
 = K \int_{-\infty}^\infty \widetilde{P}(\lambda^2) e^{-2\pi i \lambda^2} d\lambda^2 \quad 
-\left( K = \left( \int_{-\infty}^\infty W(\lambda^2) d\lambda^2 \right)^{-1}\right)\]
+\left( K = \left( \int_{-\infty}^\infty W(\lambda^2) d\lambda^2 \right)^{-1}\right) \tag{11}\]
+
+<p>のように、窓関数を考慮した\(\widetilde{F}(\phi)\)が求まります。
+ここで、この\(R(\phi)\)はRotation Measure Spread Function (RMSF: 回転量度の広がり関数)と呼ばれるものです。
+窓関数\(W(\lambda^2)\)を適用した結果、\(R(\phi)\)により元々のファラデースペクトル\(F(\phi)\)が修正を受けます。
+このことから\(\widetilde{F}(\phi)\)のことを、”dirty Faraday spectrum” (汚染されたファラデースペクトル)と呼ぶこともあります。<br />
+観測から\(P(\lambda^2)\)を様々な波長域で観測し、その逆変換を行うことで、\(F(\phi)\)を求めることができます。</p>
+
+<h2 id="qu-fitting">QU-fitting</h2>
+
+<p>先程は観測された\(P(\lambda^2)\)から\(F(\phi)\)を求めましたが、もう一つの求め方として、まず\(F(\phi)\)をモデルとして仮定します。
+このモデルから(4)式を通して\(P(\lambda^2)\)を計算し、実際の観測量\(P(\lambda^2) = Q(\lambda^2) + i U(\lambda^2)\)とフィッティングを行います。
+このようにして、観測を再現する\(F(\phi)\)を求める方法を、QU-fittingと呼びます。
+モデルパラメータのフィッティングにはマルコフ連鎖モンテカルロ法(MCMC)などの統計技術が用いられます。</p>
+
+<h2 id="fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</h2>
+
+<p>ここまで、ファラデー深度\(\phi\)における複素偏光強度分布\(F(\phi)\)を求める手法を紹介してきました。
+このようにして得られた結果から、観測者からの距離\(x\)に位置する場所での複素偏光強度分布、すなわち\(F(x)\)を求めることができれば、そこからさらに視線方向の磁場や電子数密度の情報を引き出すことができます。
+しかしこれまで考えてきたファラデー深度\(\phi\)と観測者からの距離\(x\)は一対一対応になっていないため、\(F(\phi) \rightarrow F(x)\)の構築は最先端の研究分野となっています。</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

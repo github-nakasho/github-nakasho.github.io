@@ -1,4 +1,4 @@
-I"xD
+I"�J
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -18,6 +18,7 @@
       </li>
       <li><a href="#qu-fitting" id="markdown-toc-qu-fitting">QU-fitting</a></li>
       <li><a href="#fphi-rightarrow-fxへの変換" id="markdown-toc-fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
 </ol>
@@ -43,7 +44,7 @@ X線CTや地震波トモグラフィなどが有名な応用例として知ら�
 例えばX線CTでは、発生器から放射されるX線を様々な角度から人体に照射します。
 その反対側にX線検出器を置き、X線がどの程度吸収されたか、あるいは吸収されずに透過してきたかを観測します。
 検出器が受け取る信号の情報は一次元に圧縮されたものです。
-例えば、下図のように、半分のX線強度が観測されたとしましょう。
+例えば、X線源から放射された強度の半分が観測されたとしましょう。
 すると半分のX線は吸収されたと考えられるわけですが、それには下図のようにいくつもの組合せが考えられます。</p>
 
 <p><img src="/assets/images/astroelec/faraday_tomography_01.png" alt="" /></p>
@@ -75,7 +76,7 @@ X線CTや地震波トモグラフィなどが有名な応用例として知ら�
 
 <h1 id="ファラデートモグラフィの代表的手法">ファラデートモグラフィの代表的手法</h1>
 
-<p>ファラデートモグラフィの最終的な目的は、<a href="/plasma/faraday_rotation">ファラデー回転</a>の観測結果から磁場などの空間情報を引き出すことです。
+<p>ファラデートモグラフィの最終的な目的は、<a href="/plasma/faraday_rotation">ファラデー回転</a>の観測結果から磁場と偏波源などの空間情報(正確には視線方向分布)を引き出すことです。
 この目的を叶える主要な手法は大きく分けて2つあります。</p>
 
 <ul>
@@ -93,12 +94,9 @@ X線CTや地震波トモグラフィなどが有名な応用例として知ら�
 またここからFaraday thin, Faraday thickなどの概念も考えることができます。
 Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)のように、<a href="/plasma/faraday_rotation">ファラデー回転</a>による偏光角の変化がとても小さい場合を意味します。
 ここで\(\Delta \phi\)は\(\phi\)空間において天体の広がりを表しています。
-もしFaraday thinならば、下図のようにデルタ関数的に近似することができるでしょう。
-逆にFaraday thickとは\(\lambda^2 \Delta \phi \gg 1\)であり、これは\(\phi\)空間において広がりのある天体を意味します。</p>
-
-<p><img src="/assets/images/astroelec/faraday_tomography_02.png" alt="" /></p>
-
-<p>直線偏光の偏光角を考えるため、以下では円偏光は考えないものとします。
+もしFaraday thinならば、デルタ関数的に近似することができるでしょう。
+逆にFaraday thickとは\(\lambda^2 \Delta \phi \gg 1\)であり、これは\(\phi\)空間において広がりのある天体を意味します。<br />
+直線偏光の偏光角を考えるため、以下では円偏光は考えないものとします。
 すなわち、<a href="/astroelec/stokes">ストークスパラメータ</a>において\(V = 0\)とします。
 すると<a href="/astroelec/stokes#複素偏光強度">複素偏光強度</a>から、この直線偏光を</p>
 
@@ -119,7 +117,15 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 
 <p>ここで出てきた\(F(\phi)\)をファラデー分散関数と呼びます。
 これは\(\phi\)空間における複素偏光強度の分布を表しています。
-\(\lambda^2 &lt; 0\)のとき、すなわち波長が複素数であるような場合には\(P(\lambda^2)\)は物理的な意味を持ちません。
+下図は、例えば遠方の電波源から偏波を観測した場合の\(F(\phi)\)を簡略化して描いたものです。
+簡単のため、偏波源から天の川銀河までの間の空間には、磁場やプラズマは存在しないとしています。
+偏波源から出た電磁波はある偏光角で放出されると考えられるため、ある\(\phi\)にデルタ関数的なピークを持ちます。
+しかし、天の川銀河のような磁場を含む星間物質が存在する箇所では、偏波は<a href="/plasma/faraday_rotation">ファラデー回転</a>を受けます。
+これによりある\(\phi\)の領域にも\(F(\phi)\)が存在するような関数形となります。</p>
+
+<p><img src="/assets/images/astroelec/faraday_tomography_02.png" alt="" /></p>
+
+<p>\(\lambda^2 &lt; 0\)のとき、すなわち波長が複素数であるような場合には\(P(\lambda^2)\)は物理的な意味を持ちません。
 よって\(P(\lambda^2)\)は\(\lambda^2 \geq 0\)の場合のみ、意味を持つ物理量です。
 当然ながら\(\lambda^2 &lt; 0\)での\(P(\lambda^2)\)は観測ができないため、\(\lambda^2 \geq 0\)における\(P(\lambda^2)\)の値から何かしらの仮定を置いて予測することで、始めて(4)式の逆変換を考えることができます。
 用いられる仮定の例として\(P\)がエルミート、すなわち\(P = P^\dagger\)などがあります。
@@ -195,12 +201,13 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 
 <h3 id="rm-synthesisの欠点">RM synthesisの欠点</h3>
 
-<p>矩形の窓関数をフーリエ変換すると、<a href="/math/sinc">sinc関数</a>になることが知られています。</p>
+<p>例えば矩形の窓関数について考えましょう。
+これをフーリエ変換すると、<a href="/math/sinc">sinc関数</a>になることが知られています。
+この簡単な例からもわかるように、窓関数を通して得られた\(\widetilde{F}(\phi)\)は、元々の\(F(\phi)\)に比べて広がり(サイドローブ)を持つようになります。</p>
 
 <p><img src="/assets/images/astroelec/faraday_tomography_03.png" alt="" /></p>
 
-<p>このことからわかるように、窓関数を通して得られた\(\widetilde{F}(\phi)\)は、元々の\(F(\phi)\)に比べて広がり(サイドローブ)を持つようになります。
-このサイドローブを除去し、真の\(F(\phi)\)に近いものを得る手法も開発されています。
+<p>このサイドローブを除去し、真の\(F(\phi)\)に近いものを得る手法も開発されています。
 良く知られている手法としてはRM CLEANと呼ばれるものがあります。</p>
 
 <h2 id="qu-fitting">QU-fitting</h2>
@@ -246,13 +253,24 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
   </tbody>
 </table>
 
-<p>\(\bigcirc, \triangle, \times\)はそれぞれ、良い・普通・悪いを表す記号です。</p>
+<p>\(\bigcirc, \triangle, \times\)はそれぞれ、良い・普通・悪いを表す記号です。
+QU-fittingにはMCMCを用いるなどして計算コストを削減することが試みられていますが、それでもまだ計算量が高価なものと考えられています。</p>
 
 <h2 id="fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</h2>
 
 <p>ここまで、ファラデー深度\(\phi\)における複素偏光強度分布\(F(\phi)\)を求める手法を紹介してきました。
 このようにして得られた結果から、観測者からの距離\(x\)に位置する場所での複素偏光強度分布、すなわち\(F(x)\)を求めることができれば、そこからさらに視線方向の磁場や電子数密度の情報を引き出すことができます。
-しかしこれまで考えてきたファラデー深度\(\phi\)と観測者からの距離\(x\)は一対一対応になっていないため、\(F(\phi) \rightarrow F(x)\)の構築は最先端の研究分野となっています。</p>
+しかしこれまで考えてきたファラデー深度\(\phi\)と観測者からの距離\(x\)は一対一対応になっていません。</p>
+
+<p><img src="/assets/images/astroelec/faraday_tomography_05.png" alt="" /></p>
+
+<p>ではファラデースペクトル\(F(\phi)\)は物理的な情報を持たないのでしょうか。
+上図を見ればわかるように、例えば星間乱流のモデルを変えると、磁場の向きなども変化するため、\(F(\phi)\)の形状も変化します。
+このことから\(F(\phi)\)は物理的な情報を含んではいるのですが、それを正しく引き出す研究は、今も精力的に行われています。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1]</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

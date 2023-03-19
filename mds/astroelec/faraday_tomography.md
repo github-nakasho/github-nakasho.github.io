@@ -65,6 +65,8 @@ $$
 よって複雑に$$n_e, B_\parallel$$が変化する乱流のような場合や、複数の天体が視線方向に存在するような場合には、このような直線の推定は困難となります。
 このような複雑な構造の場合にも、磁場の構造や電子数密度の情報を正確に求めるために開発された技術が、ファラデートモグラフィです。
 
+{% include adsense.html %}
+
 # ファラデートモグラフィの代表的手法
 
 ファラデートモグラフィの最終的な目的は、[ファラデー回転](/plasma/faraday_rotation)の観測結果から磁場と偏波源などの空間情報(正確には視線方向分布)を引き出すことです。
@@ -210,22 +212,23 @@ $$
 
 ### RM synthesisの欠点
 
-矩形の窓関数をフーリエ変換すると、[sinc関数](/math/sinc)になることが知られています。
-このことからわかるように、窓関数を通して得られた$$\widetilde{F}(\phi)$$は、元々の$$F(\phi)$$に比べて広がり(サイドローブ)を持つようになります。
+例えば矩形の窓関数について考えましょう。
+これをフーリエ変換すると、[sinc関数](/math/sinc)になることが知られています。
+この簡単な例からもわかるように、窓関数を通して得られた$$\widetilde{F}(\phi)$$は、元々の$$F(\phi)$$に比べて広がり(サイドローブ)を持つようになります。
 
 ![](/assets/images/astroelec/faraday_tomography_03.png)
 
 このサイドローブを除去し、真の$$F(\phi)$$に近いものを得る手法も開発されています。
 良く知られている手法としてはRM CLEANと呼ばれるものがあります。
 
+{% include adsense.html %}
+
 ## QU-fitting
 
 先程は観測された$$P(\lambda^2)$$から$$F(\phi)$$を求めましたが、もう一つの求め方として、まず$$F(\phi)$$をモデルとして仮定します。
 このモデルから(4)式を通して$$P(\lambda^2)$$を計算し、実際の観測量$$P(\lambda^2) = Q(\lambda^2) + i U(\lambda^2)$$とフィッティングを行います。
 このようにして、観測を再現する$$F(\phi)$$を求める方法を、QU-fittingと呼びます。
-モデルパラメータのフィッティングにはマルコフ連鎖モンテカルロ法(MCMC)などの統計技術が用いられます。
-
-![](/assets/images/astroelec/faraday_tomography_04.png)
+モデルパラメータのフィッティングにはマルコフ連鎖モンテカルロ法(MCMC)などの統計技術が用いられます。  
 
 RM synthesis + RM CLEAN と QU-fittingの2つの手法を比較した表を、下に示します。
 
@@ -237,7 +240,7 @@ RM synthesis + RM CLEAN と QU-fittingの2つの手法を比較した表を、�
 | 計算コスト         | $$\bigcirc$$ 低い                    | $$\times$$ 高い                                     |
 
 $$\bigcirc, \triangle, \times$$はそれぞれ、良い・普通・悪いを表す記号です。
-QU-fittingにはMCMCを用いるなどして計算コストを削減することが試みられていますが、それでもまだ
+QU-fittingにはMCMCを用いるなどして計算コストを削減することが試みられていますが、それでもまだ計算量が高価なものと考えられています。
 
 ## $$F(\phi) \rightarrow F(x)$$への変換
 
@@ -247,12 +250,29 @@ QU-fittingにはMCMCを用いるなどして計算コストを削減すること
 
 ![](/assets/images/astroelec/faraday_tomography_05.png)
 
+上左図は、横軸を観測者からの距離$$x$$としたときに、どのように$$\phi(x)$$が推移するかを表現したものです。
+左上パネルには観測者の視線方向1, 2が描かれており、その視線方向に磁場を伴うプラズマ領域がいくつか存在します。
+そして一番上の矢印が$$n_e B_\parallel$$を表しています。
+視線方向1, 2では見ている領域が異なるために、$$\phi(x)$$のグラフに違いが現れています。
+また薄く色付けされた領域A, Bは放射を出しながらも、[ファラデー回転](/plasma/faraday_rotation)を伴う領域です。
+さらに領域Cは放射のみを出し、[ファラデー回転](/plasma/faraday_rotation)は伴わないような狭い領域を指します。
+これらの領域の放射から$$F(\phi)$$を計算し、これを横軸$$\phi$$のグラフとして描くと右図のようになります。
+右図上パネルが視線方向1, そして下パネルが視線方向2の$$F(\phi)$$を表したものです。
+特に、同じ領域Cから来る放射でも$$F(\phi)$$の位置が変化していることがわかります。  
 ではファラデースペクトル$$F(\phi)$$は物理的な情報を持たないのでしょうか。
 上図を見ればわかるように、例えば星間乱流のモデルを変えると、磁場の向きなども変化するため、$$F(\phi)$$の形状も変化します。
 このことから$$F(\phi)$$は物理的な情報を含んではいるのですが、それを正しく引き出す研究は、今も精力的に行われています。
 
 ## 参考文献
 
-[1] 
+[1] [Brentjens & de Bruyn, 2005, "Faraday rotation measure synthesis"](https://www.aanda.org/articles/aa/abs/2005/39/aa2990-05/aa2990-05.html)  
+[2] [Ideguchi et al., 2018, "Faraday Tomography Tutorial"](https://www.mdpi.com/2075-4434/6/4/140)  
+[3] [Ideguchi et al., 2014, "Faraday Dispersion Functions of Galaxies"](https://iopscience.iop.org/article/10.1088/0004-637X/792/1/51/meta)  
+[4] [Heald et al., "The Westerbork SINGS Survey II. Polarization, Faraday Rotation, and Magnetic Fields"](https://www.aanda.org/articles/aa/full_html/2009/32/aa12240-09/aa12240-09.html)  
+[5] [Heald, "RM Synthesis"](https://www.mpifr-bonn.mpg.de/1294972/Heald.pdf)  
+[6] [RM-Tools](https://github.com/CIRADA-Tools/RM-Tools)  
+[7] [出口真輔, "ファラデートモグラフィー：広帯域電波観測による新たな宇宙磁場観測法"](http://ska-jp.org/ws2013/radio/files/slides/ideguchi.pdf)  
+[8] [出口真輔, "ファラデートモグラフィー：広帯域偏波観測による新たな宇宙磁場探査法"](http://ska-jp.org/ws2015/SKA-JP/talks/Ideguchi.pdf)  
+[9] [中川晶太, "宇宙磁場解析における QU-fitting"](http://www.astro-wakate.org/ss2015/web/file/shuroku/galaxy_a8.pdf)  
 
 {% include adsense.html %}

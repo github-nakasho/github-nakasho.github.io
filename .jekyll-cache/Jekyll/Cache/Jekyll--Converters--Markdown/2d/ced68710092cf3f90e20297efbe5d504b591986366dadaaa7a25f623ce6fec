@@ -1,4 +1,4 @@
-I"�I
+I"^R
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -18,6 +18,7 @@
       </li>
       <li><a href="#qu-fitting" id="markdown-toc-qu-fitting">QU-fitting</a></li>
       <li><a href="#fphi-rightarrow-fxへの変換" id="markdown-toc-fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
 </ol>
@@ -200,8 +201,9 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 
 <h3 id="rm-synthesisの欠点">RM synthesisの欠点</h3>
 
-<p>矩形の窓関数をフーリエ変換すると、<a href="/math/sinc">sinc関数</a>になることが知られています。
-このことからわかるように、窓関数を通して得られた\(\widetilde{F}(\phi)\)は、元々の\(F(\phi)\)に比べて広がり(サイドローブ)を持つようになります。</p>
+<p>例えば矩形の窓関数について考えましょう。
+これをフーリエ変換すると、<a href="/math/sinc">sinc関数</a>になることが知られています。
+この簡単な例からもわかるように、窓関数を通して得られた\(\widetilde{F}(\phi)\)は、元々の\(F(\phi)\)に比べて広がり(サイドローブ)を持つようになります。</p>
 
 <p><img src="/assets/images/astroelec/faraday_tomography_03.png" alt="" /></p>
 
@@ -252,7 +254,7 @@ Faraday thinである、とは(2)式において\(\lambda^2 \Delta \phi \ll 1\)�
 </table>
 
 <p>\(\bigcirc, \triangle, \times\)はそれぞれ、良い・普通・悪いを表す記号です。
-QU-fittingにはMCMCを用いるなどして計算コストを削減することが試みられていますが、それでもまだ</p>
+QU-fittingにはMCMCを用いるなどして計算コストを削減することが試みられていますが、それでもまだ計算量が高価なものと考えられています。</p>
 
 <h2 id="fphi-rightarrow-fxへの変換">\(F(\phi) \rightarrow F(x)\)への変換</h2>
 
@@ -262,9 +264,26 @@ QU-fittingにはMCMCを用いるなどして計算コストを削減すること
 
 <p><img src="/assets/images/astroelec/faraday_tomography_05.png" alt="" /></p>
 
-<p>ではファラデースペクトル\(F(\phi)\)は物理的な情報を持たないのでしょうか。
+<p>上左図は、横軸を観測者からの距離\(x\)としたときに、どのように\(\phi(x)\)が推移するかを表現したものです。
+左上パネルには観測者の視線方向1, 2が描かれており、その視線方向に磁場を伴うプラズマ領域がいくつか存在します。
+そして一番上の矢印が\(n_e B_\parallel\)を表しています。
+視線方向1, 2では見ている領域が異なるために、\(\phi(x)\)のグラフに違いが現れています。
+また薄く色付けされた領域A, Bは放射を出しながらも、<a href="/plasma/faraday_rotation">ファラデー回転</a>を伴う領域です。
+さらに領域Cは放射のみを出し、<a href="/plasma/faraday_rotation">ファラデー回転</a>は伴わないような狭い領域を指します。
+これらの領域の放射から\(F(\phi)\)を計算し、これを横軸\(\phi\)のグラフとして描くと右図のようになります。
+右図上パネルが視線方向1, そして下パネルが視線方向2の\(F(\phi)\)を表したものです。
+特に、同じ領域Cから来る放射でも\(F(\phi)\)の位置が変化していることがわかります。<br />
+ではファラデースペクトル\(F(\phi)\)は物理的な情報を持たないのでしょうか。
 上図を見ればわかるように、例えば星間乱流のモデルを変えると、磁場の向きなども変化するため、\(F(\phi)\)の形状も変化します。
 このことから\(F(\phi)\)は物理的な情報を含んではいるのですが、それを正しく引き出す研究は、今も精力的に行われています。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://www.aanda.org/articles/aa/abs/2005/39/aa2990-05/aa2990-05.html">Brentjens &amp; de Bruyn, 2005, “Faraday rotation measure synthesis”</a><br />
+[2] <a href="https://www.mdpi.com/2075-4434/6/4/140">Ideguchi et al., 2018, “Faraday Tomography Tutorial”</a><br />
+[3] <a href="http://ska-jp.org/ws2013/radio/files/slides/ideguchi.pdf">出口真輔, “ファラデートモグラフィー：広帯域電波観測による新たな宇宙磁場観測法”</a><br />
+[4] <a href="http://ska-jp.org/ws2015/SKA-JP/talks/Ideguchi.pdf">出口真輔, “ファラデートモグラフィー：広帯域偏波観測による新たな宇宙磁場探査法”</a><br />
+[5] <a href="http://www.astro-wakate.org/ss2015/web/file/shuroku/galaxy_a8.pdf"></a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

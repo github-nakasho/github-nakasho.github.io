@@ -1,0 +1,84 @@
+I"u
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#アインシュタインテンソル" id="markdown-toc-アインシュタインテンソル">アインシュタインテンソル</a>    <ol>
+      <li><a href="#リッチテンソルとリッチスカラー" id="markdown-toc-リッチテンソルとリッチスカラー">リッチテンソルとリッチスカラー</a></li>
+      <li><a href="#アインシュタインテンソル-1" id="markdown-toc-アインシュタインテンソル-1">アインシュタインテンソル</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="アインシュタインテンソル">アインシュタインテンソル</h1>
+
+<p>ビアンキの恒等式から導かれるアインシュタインテンソルの導出を行います。</p>
+
+<h2 id="リッチテンソルとリッチスカラー">リッチテンソルとリッチスカラー</h2>
+
+<p>ビアンキの恒等式より</p>
+
+\[\nabla_\lambda R^\alpha_{\gamma \mu \alpha} + \nabla_\mu R^\alpha_{\gamma \alpha \lambda} + \nabla_\alpha R^\alpha_{\gamma \lambda \mu}
+= 0 \tag{1}\]
+
+<p>が成り立つのでした。ここでリッチテンソルという、リーマンテンソルから派生したものを新たに</p>
+
+\[R_{\mu \nu} \equiv R^\alpha_{\mu \alpha \nu}\]
+
+<p>として定義します。\(\nabla_\lambda g_{\mu \nu} = 0\)より</p>
+
+\[\begin{aligned}
+(1) &amp;\Longrightarrow \ - \nabla_\lambda R_{\gamma \mu} + \nabla_\mu R_{\gamma \lambda} + \nabla_\alpha R^\alpha_{\gamma \lambda \mu} = 0 
+\ \underbrace{\Longrightarrow}_{g^{\lambda \gamma } \times} \ 
+- \nabla_\lambda g^{\lambda \gamma} R_{\gamma \mu} + \nabla_\mu  g^{\lambda \gamma} R_{\gamma \lambda} +  g^{\lambda \gamma} \nabla_\alpha R^\alpha_{\gamma \lambda \mu} = 0 \\
+&amp; \Longrightarrow \ - \nabla_\lambda R^\lambda_{\mu} + \nabla_\mu  R^\lambda_{\lambda} + \nabla_\alpha g^{\lambda \gamma} g^{\alpha \sigma} \underbrace{R_{\sigma \gamma \lambda \mu}}_{= - R_{\gamma \sigma \lambda \mu}} 
+= - \nabla_\lambda R^\lambda_{\mu} + \nabla_\mu R^\lambda_{\lambda} - \nabla_\alpha g^{\alpha \sigma} g^{\lambda \gamma} R_{\gamma \sigma \lambda \mu} \\
+&amp;\qquad \qquad = - \nabla_\lambda R^\lambda_{\mu} + \nabla_\mu R^\lambda_{\lambda} - \nabla_\alpha g^{\alpha \sigma} R^\lambda_{\sigma \lambda \mu} 
+= 0
+\end{aligned}\]
+
+<p>ここでリッチスカラーを</p>
+
+\[R \equiv g^{\mu \nu} R_{\mu \nu} = R^\mu_{\ \mu}\]
+
+<p>と定義すると</p>
+
+\[\begin{aligned}
+&amp; \nabla_\alpha R^\alpha_{\ \mu} - \nabla_\mu R + \nabla_\alpha g^{\alpha \sigma} R_{\sigma \mu} 
+= \nabla_\alpha g^{\alpha \sigma} R_{\sigma \mu} - \nabla_\mu R + \nabla_\alpha g^{\alpha \sigma} R_{\sigma \mu} 
+= 2 \nabla_\alpha g^{\alpha \sigma} R_{\sigma \mu} - \nabla_\mu R = 0 \\
+&amp;\underbrace{\Longrightarrow}_{g^{\beta \mu}} \ 2 \nabla_\alpha R^{\alpha \beta} - \nabla_\alpha R g^{\alpha \beta}= 0
+\end{aligned}\]
+
+<h2 id="アインシュタインテンソル-1">アインシュタインテンソル</h2>
+
+<p>先ほどまでの式変形で</p>
+
+\[G^{\alpha \beta} \equiv R^{\alpha \beta} - \frac{1}{2} R g^{\alpha \beta}\]
+
+<p>を定義すると、式変形の結果は</p>
+
+\[\nabla_\alpha G^{\alpha \beta} = 0\]
+
+<p>となります。\(G^{\alpha \beta}\)をアインシュタインテンソルと呼びます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -2280,10 +2280,10 @@
     "relUrl": "/plasma/faraday_rotation"
   },"380": {
     "doc": "ファラデートモグラフィ",
-    "title": "ファラデートモグラフィ (工事中、随時更新いたします)",
+    "title": "ファラデートモグラフィ",
     "content": "ここでは近年の電波観測の発展に伴って注目されつつある、新しい宇宙物理解析手法のファラデートモグラフィ (Faraday tomography)についてご紹介します。 . ",
-    "url": "http://localhost:4000/astroelec/faraday_tomography#%E3%83%95%E3%82%A1%E3%83%A9%E3%83%87%E3%83%BC%E3%83%88%E3%83%A2%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3-%E5%B7%A5%E4%BA%8B%E4%B8%AD%E9%9A%8F%E6%99%82%E6%9B%B4%E6%96%B0%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99",
-    "relUrl": "/astroelec/faraday_tomography#ファラデートモグラフィ-工事中随時更新いたします"
+    "url": "http://localhost:4000/astroelec/faraday_tomography#%E3%83%95%E3%82%A1%E3%83%A9%E3%83%87%E3%83%BC%E3%83%88%E3%83%A2%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
+    "relUrl": "/astroelec/faraday_tomography#ファラデートモグラフィ"
   },"381": {
     "doc": "ファラデートモグラフィ",
     "title": "トモグラフィとは",
@@ -2329,7 +2329,7 @@
   },"388": {
     "doc": "ファラデートモグラフィ",
     "title": "ファラデートモグラフィ",
-    "content": ". | ファラデートモグラフィ (工事中、随時更新いたします) . | トモグラフィとは | ファラデートモグラフィ (Faraday tomography) | . | ファラデートモグラフィの代表的手法 . | RM synthesisの原理 . | Faraday Dispersion Function (FDF: ファラデー分散関数) | 観測による制限: 窓関数の導入による一般化 | RM synthesisの欠点 | . | QU-fitting | \\(F(\\phi) \\rightarrow F(x)\\)への変換 | 参考文献 | . | . ",
+    "content": ". | ファラデートモグラフィ . | トモグラフィとは | ファラデートモグラフィ (Faraday tomography) | . | ファラデートモグラフィの代表的手法 . | RM synthesisの原理 . | Faraday Dispersion Function (FDF: ファラデー分散関数) | 観測による制限: 窓関数の導入による一般化 | RM synthesisの欠点 | . | QU-fitting | \\(F(\\phi) \\rightarrow F(x)\\)への変換 | 参考文献 | . | . ",
     "url": "http://localhost:4000/astroelec/faraday_tomography",
     "relUrl": "/astroelec/faraday_tomography"
   },"389": {
@@ -8173,7 +8173,7 @@
   },"1362": {
     "doc": "ゆっくり自転する低質量星が作る時空",
     "title": "元のメトリックへ変換と極座標への変換",
-    "content": "ここまでは\\(\\bar{h}\\)という、トレース反転テンソルで計算を行なってきました。よって元のメトリックに戻しましょう。 . \\[h_{00} =\\bar{h}_{00} - \\frac{1}{2} \\eta_{00}\\bar{h} = \\frac{2GM}{c^2 r} \\tag{22}\\] \\[h_{01} = \\bar{h}_{01} = \\frac{2GJy}{c^3 r^3} \\tag{23}\\] \\[h_{02} = \\bar{h}_{02} = - \\frac{2GJx}{c^3 r^3} \\tag{24}\\] \\[h_{03} = \\bar{h}_{03} = 0 \\tag{25}\\] \\[h_{ij} = \\bar{h}_{ij} - \\eta_{ij} \\bar{h} = \\frac{2GM}{c^2 r} \\delta_{ij} \\tag{26}\\] 見通しを良くするため、これを極座標系に変換しましょう。座標変換則より . \\[h_{0r} = \\frac{\\partial x^\\mu}{\\partial r} h_{0\\mu} = \\sin \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + \\sin \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{27}\\] \\[\\begin{align} h_{0\\varphi} &amp;= \\frac{\\partial x^\\mu}{\\partial \\varphi} h_{0\\mu} = - r \\sin \\theta \\sin \\varphi \\frac{2GJy}{c^3 r^3} + r \\sin \\theta \\cos \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) \\notag \\\\ &amp;= - r \\sin \\theta \\frac{2GJ}{c^3 r^3} (y \\sin \\varphi + x \\cos \\varphi) = - \\frac{2GJ}{c^3 r} \\sin^2 \\theta \\tag{28} \\end{align}\\] \\[h_{0\\theta} = \\frac{\\partial x^\\mu}{\\partial \\theta} h_{0 \\mu} = r\\cos \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + r \\cos \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{29}\\] 原点に質量\\(M\\)の星があるときに作られるSchwarzschild時空メトリックと合わせて、ゆっくり回転する低質量星が作る時空は . \\[ds^2 = - \\left( 1- \\frac{r_g}{r}\\right) c^2 dt^2 - 2 \\frac{2GJ}{c^3 r} \\sin^2 \\theta c dt d\\varphi + \\frac{1}{1-r_g/r} dr^2 + r^2 (d\\theta^2 + \\sin^2 \\theta d\\varphi^2) \\tag{30}\\] のようになります。ここで\\(r_g = 2GM/c^2\\)はSchwarzschild半径、そして\\(c dt d\\varphi\\)の間に現れた係数2は、\\(h_{0\\varphi} = h_{\\varphi 0}\\)から出現したものです。 . ",
+    "content": "ここまでは\\(\\bar{h}\\)という、トレース反転テンソルで計算を行なってきました。よって元のメトリックに戻しましょう。 . \\[h_{00} =\\bar{h}_{00} - \\frac{1}{2} \\eta_{00}\\bar{h} = \\frac{2GM}{c^2 r} \\tag{22}\\] \\[h_{01} = \\bar{h}_{01} = \\frac{2GJy}{c^3 r^3} \\tag{23}\\] \\[h_{02} = \\bar{h}_{02} = - \\frac{2GJx}{c^3 r^3} \\tag{24}\\] \\[h_{03} = \\bar{h}_{03} = 0 \\tag{25}\\] \\[h_{ij} = \\bar{h}_{ij} - \\eta_{ij} \\bar{h} = \\frac{2GM}{c^2 r} \\delta_{ij} \\tag{26}\\] 見通しを良くするため、これを極座標系に変換しましょう。座標変換則より . \\[h_{0r} = \\frac{\\partial x^\\mu}{\\partial r} h_{0\\mu} = \\sin \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + \\sin \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{27}\\] \\[\\begin{align} h_{0\\varphi} &amp;= \\frac{\\partial x^\\mu}{\\partial \\varphi} h_{0\\mu} = - r \\sin \\theta \\sin \\varphi \\frac{2GJy}{c^3 r^3} + r \\sin \\theta \\cos \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) \\notag \\\\ &amp;= - r \\sin \\theta \\frac{2GJ}{c^3 r^3} (y \\sin \\varphi + x \\cos \\varphi) = - \\frac{2GJ}{c^3 r} \\sin^2 \\theta \\tag{28} \\end{align}\\] \\[h_{0\\theta} = \\frac{\\partial x^\\mu}{\\partial \\theta} h_{0 \\mu} = r\\cos \\theta \\cos \\varphi \\frac{2GJy}{c^3 r^3} + r \\cos \\theta \\sin \\varphi \\left( - \\frac{2GJx}{c^3 r^3}\\right) = 0 \\tag{29}\\] 原点に質量\\(M\\)の星があるときに作られるSchwarzschild時空メトリックと合わせて、ゆっくり回転する低質量星が作る時空は . \\[ds^2 = - \\left( 1- \\frac{r_g}{r}\\right) c^2 dt^2 - 2 \\frac{2GJ}{c^3 r} \\sin^2 \\theta c dt d\\varphi + \\left( 1+\\frac{r_g}{r}\\right) \\left\\{ dr^2 + r^2 (d\\theta^2 + \\sin^2 \\theta d\\varphi^2) \\right\\}\\tag{30}\\] のようになります。ここで\\(r_g = 2GM/c^2\\)はSchwarzschild半径、そして\\(c dt d\\varphi\\)の間に現れた係数2は、\\(h_{0\\varphi} = h_{\\varphi 0}\\)から出現したものです。 . ",
     "url": "http://localhost:4000/gr/spinning_weak_gravity#%E5%85%83%E3%81%AE%E3%83%A1%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%81%B8%E5%A4%89%E6%8F%9B%E3%81%A8%E6%A5%B5%E5%BA%A7%E6%A8%99%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B",
     "relUrl": "/gr/spinning_weak_gravity#元のメトリックへ変換と極座標への変換"
   },"1363": {

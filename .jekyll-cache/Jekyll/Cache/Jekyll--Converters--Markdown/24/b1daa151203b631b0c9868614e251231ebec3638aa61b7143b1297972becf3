@@ -1,0 +1,171 @@
+I"�)
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#そもそも量子コンピュータとは" id="markdown-toc-そもそも量子コンピュータとは">そもそも量子コンピュータとは</a>    <ol>
+      <li><a href="#アイデア" id="markdown-toc-アイデア">アイデア</a></li>
+      <li><a href="#どのように役に立つか" id="markdown-toc-どのように役に立つか">どのように役に立つか</a></li>
+      <li><a href="#量子誤り訂正" id="markdown-toc-量子誤り訂正">量子誤り訂正</a></li>
+      <li><a href="#nisq-noisy-intermediate-scale-quantum-デバイスの時代" id="markdown-toc-nisq-noisy-intermediate-scale-quantum-デバイスの時代">NISQ (Noisy Intermediate-Scale Quantum) デバイスの時代</a></li>
+      <li><a href="#qunasysさんの資料より抜粋" id="markdown-toc-qunasysさんの資料より抜粋">QunaSysさんの資料より抜粋</a>        <ol>
+          <li><a href="#quantum-supremacy量子超越" id="markdown-toc-quantum-supremacy量子超越">Quantum Supremacy（量子超越）</a></li>
+          <li><a href="#quantum-speedup-量子加速" id="markdown-toc-quantum-speedup-量子加速">Quantum Speedup (量子加速)</a></li>
+          <li><a href="#量子コンピュータの発展" id="markdown-toc-量子コンピュータの発展">量子コンピュータの発展</a></li>
+          <li><a href="#divicenzo-criteria" id="markdown-toc-divicenzo-criteria">DiVicenzo Criteria</a></li>
+          <li><a href="#ハードウェアの種類" id="markdown-toc-ハードウェアの種類">ハードウェアの種類</a></li>
+          <li><a href="#量子コンピュータはなぜ速いのか" id="markdown-toc-量子コンピュータはなぜ速いのか">量子コンピュータはなぜ速いのか</a>            <ol>
+              <li><a href="#よくある間違い" id="markdown-toc-よくある間違い">よくある間違い</a></li>
+              <li><a href="#動作は遅い" id="markdown-toc-動作は遅い">動作は遅い</a></li>
+            </ol>
+          </li>
+          <li><a href="#量子アルゴリズム" id="markdown-toc-量子アルゴリズム">量子アルゴリズム</a></li>
+          <li><a href="#long-term-アルゴリズムの応用展開" id="markdown-toc-long-term-アルゴリズムの応用展開">Long-term アルゴリズムの応用展開</a></li>
+          <li><a href="#量子-inspired-アルゴリズム" id="markdown-toc-量子-inspired-アルゴリズム">量子-inspired アルゴリズム</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献というよりこれを見て勉強中" id="markdown-toc-参考文献というよりこれを見て勉強中">参考文献(というよりこれを見て勉強中)</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="そもそも量子コンピュータとは">そもそも量子コンピュータとは</h1>
+
+<h2 id="アイデア">アイデア</h2>
+
+<ul>
+  <li>ファインマンが提唱</li>
+  <li>ドイチュが理論的に定式化</li>
+</ul>
+
+<p>古典コンピュータでは情報は0 or 1のどちらかの状態をとる「古典ビット」で表される。<br />
+量子コンピュータは0と1の両方の状態を同時にとることができる「量子ビット」で表現される。</p>
+
+<p>量子コンピュータの原理を用いることで、古典コンピュータに比べて飛躍的に高速に計算を行える<strong>場合がある</strong>。</p>
+
+<h2 id="どのように役に立つか">どのように役に立つか</h2>
+
+<p>量子コンピュータの方が古典コンピュータよりも高速なのかどうか、いまだにわかっていない問題の方が圧倒的に多い。一部の問題については<strong>現状の</strong>古典コンピュータアルゴリズムよりも高速であることが証明されている。</p>
+
+<p>e.g. 1 ) 素因数分解、1995年にショアが量子アルゴリズムを発見。<br />
+e.g. 2 ) 整理されていないデータから目的のデータを探しだす探索問題、1996年にグローバーが考案。<br />
+e.g. 3 ) 連立一次方程式の解を求める問題、2009年に開発。HHLアルゴリズム。</p>
+
+<p>応用分野: 流体解析、電磁気解析、機械学習など。</p>
+
+<h2 id="量子誤り訂正">量子誤り訂正</h2>
+
+<p>計算途中に生じた量子ビットの誤り(エラー)を検知し、本来の状態に訂正する技術。</p>
+
+<p>量子コンピュータでこれを実現するには1量子ビットあたりに、誤り訂正機能を持った量子ビットが$<code class="language-plaintext highlighter-rouge">10^4</code>$個程度必要。これが実現されるのは数十年先(FTQC: Fault Torrelant Quantum Computer)。</p>
+
+<h2 id="nisq-noisy-intermediate-scale-quantum-デバイスの時代">NISQ (Noisy Intermediate-Scale Quantum) デバイスの時代</h2>
+
+<p>現在のGoogleなどが開発済みの、ノイズを含む中規模量子デバイスのこと。誤り訂正機能がないため、限られた量子アルゴリズムしか実行できない。しかし、量子化学計算や機械学習といった領域で、現在の古典コンピュータを凌駕する性能を発揮すると予想されている。</p>
+
+<h2 id="qunasysさんの資料より抜粋">QunaSysさんの資料より抜粋</h2>
+
+<h3 id="quantum-supremacy量子超越">Quantum Supremacy（量子超越）</h3>
+
+<p>量子回路を古典計算機でシミュレーションできなくなること。</p>
+
+<h3 id="quantum-speedup-量子加速">Quantum Speedup (量子加速)</h3>
+
+<p>実用的な問題で、量子コンピュータが優位になること。</p>
+
+<h3 id="量子コンピュータの発展">量子コンピュータの発展</h3>
+
+<p>1999年、当時NECにいた中村・葵らが世界初の量子ビットを超伝導物質で実現。<br />
+2014年、マルティネスがエラー訂正可能な精度で5量子ビットコンピュータを実現。</p>
+
+<p>量子コンピュータを作る際にコヒーレンス時間が重要となる。</p>
+<ul>
+  <li>T1: 量子ビットが初期化されてしまう時間</li>
+  <li>T2: 量子ビットの量子的な重ね合わせが崩れる時間</li>
+</ul>
+
+<p>量子コンピュータのサイズ(量子ビット数)も重要。</p>
+
+<p><img src="/images/qc/num_qubit.png" alt="量子コンピュータの量子ビット数の開発推移" /></p>
+
+<p>操作精度も重要。</p>
+
+<h3 id="divicenzo-criteria">DiVicenzo Criteria</h3>
+
+<p>スケーラビリティ: 量子ビット数を増やす時に、配線とサイズが指数的に増大してはならない。<br />
+ユニバーサルな演算: 制御演算のリソースが指数的に増大してはならない。<br />
+訂正可能性: 初期化と測定を効率的に行い、エラーを訂正可能でなければならない。</p>
+
+<h3 id="ハードウェアの種類">ハードウェアの種類</h3>
+
+<ul>
+  <li>超伝導量子ビット
+Google, IBM, Rigetti, Alibabaなど</li>
+  <li>イオントラップ
+ION Q, Honeywallなど</li>
+  <li>キャビティQED</li>
+  <li>光量子ビット
+Xanadoなど</li>
+  <li>量子ドット
+Intelなど</li>
+  <li>トポロジカル量子ビット
+Microsoftなど</li>
+</ul>
+
+<h3 id="量子コンピュータはなぜ速いのか">量子コンピュータはなぜ速いのか</h3>
+
+<h4 id="よくある間違い">よくある間違い</h4>
+
+<p>量子コンピュータは指数的に多くのパターンを並列化して計算するから速い、は<strong>間違い</strong></p>
+
+<p>理由: 重ね合わせ状態を同時に計算することは可能だが、量子状態を測定すると一つの状態に収束する。<br />
+-&gt; 欲しい状態を得る確率は指数的に低い<br />
+-&gt; 欲しい状態を得るために指数的に多い回数試したら速くない</p>
+
+<h4 id="動作は遅い">動作は遅い</h4>
+
+<p>今のパソコンの制御信号はGHzに対して、超伝導量子ビットの量子コンピュータの制御パルスはMHz。誤り訂正を行うとさらに遅くなる(ただし光量子コンピュータはTHzオーダーの動作が期待される)。</p>
+
+<h3 id="量子アルゴリズム">量子アルゴリズム</h3>
+
+<p>量子アルゴリズム動物園: https://quantumalgorithmzoo.org/</p>
+
+<h3 id="long-term-アルゴリズムの応用展開">Long-term アルゴリズムの応用展開</h3>
+
+<ol>
+  <li>ショアの素因数分解 -&gt; RSA暗号解読 (1億物理量子ビット程度必要)</li>
+  <li>量子シミュレーション -&gt; 分子・物質の性質解析 (100万物理量子ビット程度必要)</li>
+  <li>HHLの行列積計算 -&gt; 物理現象・機械学習・金融</li>
+  <li>グローバーのアルゴリズム -&gt; 最適化問題</li>
+</ol>
+
+<p>グローバーのアルゴリズムは$<code class="language-plaintext highlighter-rouge">\mathcal{O}(\sqrt{N})</code>$より速くならないことが証明されている。膨大なデータでないとデータベース検索・最適化の優位性は低い。</p>
+
+<h3 id="量子-inspired-アルゴリズム">量子-inspired アルゴリズム</h3>
+
+<p>量子コンピュータで速くなるアルゴリズムは、解くために制約がある。同じ制約を設ければ、古典コンピュータでも同じくらい速くなるのでは？(0量子ビットコンピュータアプリケーションとも呼ばれる)</p>
+
+<h1 id="参考文献というよりこれを見て勉強中">参考文献(というよりこれを見て勉強中)</h1>
+
+<p><a href="https://dojo.qulacs.org/ja/latest/index.html">Quantum Native Dojo</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,117 @@
+I"D
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#エネルギー保存" id="markdown-toc-エネルギー保存">エネルギー保存</a>    <ol>
+      <li><a href="#フリードマン方程式の変形" id="markdown-toc-フリードマン方程式の変形">フリードマン方程式の変形</a></li>
+      <li><a href="#非相対論的物質の場合" id="markdown-toc-非相対論的物質の場合">非相対論的物質の場合</a></li>
+      <li><a href="#相対論的物質の場合" id="markdown-toc-相対論的物質の場合">相対論的物質の場合</a></li>
+      <li><a href="#ダークエネルギーの場合" id="markdown-toc-ダークエネルギーの場合">ダークエネルギーの場合</a></li>
+      <li><a href="#真空空間の曲率の場合" id="markdown-toc-真空空間の曲率の場合">真空(空間の曲率)の場合</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="エネルギー保存">エネルギー保存</h1>
+
+<h2 id="フリードマン方程式の変形">フリードマン方程式の変形</h2>
+
+<p><a href="/cosmo/friedmann">フリードマン方程式</a>から</p>
+
+\[\dot{\rho} + 3 \frac{\dot{a}}{a} (\rho + \frac{p}{c^2}) = 0\]
+
+<p>これがエネルギー保存になっています。この式が、非相対論的物質や相対論的物質・ダークエネルギー・空間曲率にどのような制限をつけるのでしょうか。</p>
+
+<h2 id="非相対論的物質の場合">非相対論的物質の場合</h2>
+
+\[\dot{\rho}_m + 3 \rho_m \frac{\dot{a}}{a} (1 + \frac{p}{\rho_m c^2}) 
+\simeq \dot{\rho}_m + 3\frac{\dot{a}}{a} \rho_m = 0 \ \Longrightarrow \ 
+a^3 \dot{\rho}_m + 3a^2 \dot{a} \rho_m = 0\]
+
+<p>これより</p>
+
+\[a^3 \rho_m = {\rm Const} = \rho_{m, 0}\]
+
+<p>となります。</p>
+
+<h2 id="相対論的物質の場合">相対論的物質の場合</h2>
+
+\[\dot{\rho}_\gamma + 3 \rho_\gamma \frac{\dot{a}}{a} (1 + \frac{p_\gamma}{\rho_\gamma c^2}) 
+\simeq \dot{\rho}_\gamma + 4\frac{\dot{a}}{a} \rho_\gamma = 0 \ \Longrightarrow \ 
+a^4 \dot{\rho}_\gamma + 4a^3 \dot{a} \rho_\gamma = 0\]
+
+<p>これより</p>
+
+\[a^4 \rho_\gamma = {\rm Const} = \rho_{\gamma, 0}\]
+
+<p>となります。特に光子の場合、光子1個のエネルギーは\(h\nu\)より光子数は</p>
+
+\[n_\gamma = \frac{\rho_\gamma c^2}{h\nu}\]
+
+<p>です。ドップラー効果より</p>
+
+\[\nu_0 = \frac{\nu}{1+z} = a\nu\]
+
+<p>これらを総合すると</p>
+
+\[\rho_\gamma c^2 a^4 = {\rm Const} = h\nu n_\gamma a^4 = h\nu_0 n_\gamma a^3\]
+
+<p>よって</p>
+
+\[n_\gamma a^3 = {\rm Const}\]
+
+<p>となります。これは粒子数保存を示しています。また状態方程式の補遺より、\(\rho_\gamma \propto T^4\)から</p>
+
+\[T^4 a^4 = {\rm Const} = T_0^4 a_0^4 = T_0^4\]
+
+<p>です。よって光子の温度は\(T = T_0 (1+z)\)となります。</p>
+
+<h2 id="ダークエネルギーの場合">ダークエネルギーの場合</h2>
+
+\[\begin{aligned}
+&amp;\dot{\rho}_{\rm DE} + 3 \frac{\dot{a}}{a} \rho_{\rm DE} (1+\frac{p_{\rm DE}}{\rho_{\rm DE} c^2}) 
+= \dot{\rho}_{\rm DE} + 3 (1+w_{\rm DE}) \frac{\dot{a}}{a} \rho_{\rm DE} 
+= 0 \\
+&amp;\Longrightarrow \ 
+a^{3(1+w_{\rm DE})} \dot{\rho}_{\rm DE} + 3(1+w_{\rm DE}) a^{3(1+w_{\rm DE})-1} \dot{a} \rho_{\rm DE} = 0
+\end{aligned}\]
+
+<p>これより</p>
+
+\[a^{3(1+w_{\rm DE})} \rho_{\rm DE} = {\rm Const} = \rho_{\rm DE, 0}\]
+
+<p>となります。</p>
+
+<h2 id="真空空間の曲率の場合">真空(空間の曲率)の場合</h2>
+
+\[\dot{\rho}_K + 3\frac{\dot{a}}{a} \rho_K (1+\frac{p_K}{\rho_K c^2}) 
+= \dot{\rho}_K + 2\frac{\dot{a}}{a} \rho_K = 0 \ \Longrightarrow \ 
+a^2 \dot{\rho}_K + 2a\dot{a} \rho_K = 0\]
+
+<p>これより</p>
+
+\[a^2 \rho_K = {\rm Const} = \rho_{K, 0}\]
+
+<p>となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

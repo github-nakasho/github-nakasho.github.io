@@ -308,7 +308,7 @@ $$
 
 $$
 ds^2 
-= - \left( 1- \frac{r_g}{r}\right) c^2 dt^2 - 2 \frac{2GJ}{c^3 r}  \sin^2 \theta c dt d\varphi + \frac{1}{1-r_g/r} dr^2 + r^2 (d\theta^2 + \sin^2 \theta d\varphi^2) \tag{30} 
+= - \left( 1- \frac{r_g}{r}\right) c^2 dt^2 - 2 \frac{2GJ}{c^3 r}  \sin^2 \theta c dt d\varphi + \left( 1+\frac{r_g}{r}\right) \left\{ dr^2 + r^2 (d\theta^2 + \sin^2 \theta d\varphi^2) \right\}\tag{30} 
 $$
 
 のようになります。ここで$$r_g = 2GM/c^2$$はSchwarzschild半径、そして$$c dt d\varphi$$の間に現れた係数2は、$$h_{0\varphi} = h_{\varphi 0}$$から出現したものです。

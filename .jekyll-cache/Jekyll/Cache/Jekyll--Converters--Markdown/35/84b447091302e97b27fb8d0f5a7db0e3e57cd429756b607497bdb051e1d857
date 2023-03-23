@@ -1,0 +1,77 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#宇宙項" id="markdown-toc-宇宙項">宇宙項</a>    <ol>
+      <li><a href="#アインシュタイン方程式への追加" id="markdown-toc-アインシュタイン方程式への追加">アインシュタイン方程式への追加</a></li>
+      <li><a href="#フリードマン方程式の修正" id="markdown-toc-フリードマン方程式の修正">フリードマン方程式の修正</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="宇宙項">宇宙項</h1>
+
+<p>フリードマン方程式にしたがって宇宙が進化すると、宇宙は減速しながら膨張し続けるか自重で潰れてしまいます。よって宇宙の始まりや終わりを仮定しなければならず、アインシュタインはこの考え方を受け入れることができませんでした。そこで物質の重力とちょうどバランスするような量の斥力が働くような項を導入し、宇宙の進化を食い止めようとしました。</p>
+
+<h2 id="アインシュタイン方程式への追加">アインシュタイン方程式への追加</h2>
+
+<p>\(\nabla^\mu g_{\mu \nu} = 0\)より、定数\(\Lambda\)を用いて<a href="/gr/einstein_eq">アインシュタイン方程式</a>を</p>
+
+\[R_{\mu \nu} - \frac{1}{2} R + \Lambda g_{\mu \nu} 
+= \frac{8\pi G}{c^4} T_{\mu \nu}\]
+
+<p>のように変形しても、完全流体の条件式\(\nabla^\mu T_{\mu \nu} = 0\)が成り立ちます。\(\Lambda\)の項を<strong>宇宙項</strong>と呼びます。<br />
+\(R\)は空間の曲率などを表現するものなので左辺に異物があるのは不自然です。よってこの項を右辺に持っていき、整理を行います。</p>
+
+\[R_{\mu \nu} - \frac{1}{2} R
+= \frac{8\pi G}{c^4} \left( T_{\mu \nu} - \frac{c^4 \Lambda}{8\pi G} g_{\mu \nu} \right) \equiv \tilde{T}_{\mu \nu}\]
+
+<p>ここで</p>
+
+\[\tilde{T}_{\mu \nu} 
+= \left( \begin{array}{cc}
+\rho c^2 + \frac{c^4 \Lambda }{8\pi G} &amp; {\bf 0} \\
+{\bf 0} &amp; (p_m - \frac{c^4 \Lambda }{8\pi G}) g_{ij}
+\end{array}
+\right)\]
+
+<p>このように、\(\Lambda\)項によって新しい物質が導入されたと考えます。そしてその物質はエネルギー密度</p>
+
+\[\rho_\Lambda c^2 = \frac{c^4 \Lambda }{8\pi G}\]
+
+<p>と負の圧力</p>
+
+\[p_\Lambda = - \frac{c^4 \Lambda }{8\pi G} = - \rho_\Lambda c^2\]
+
+<p>を持つような物質と見なします。</p>
+
+<h2 id="フリードマン方程式の修正">フリードマン方程式の修正</h2>
+
+<p>これにより、フリードマン方程式は</p>
+
+\[\frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left(\rho + \frac{3p}{c^2} \right) 
+= -\frac{4\pi G}{3} \left(\rho_m + \rho_\Lambda + \frac{3(p_m + p_\Lambda )}{c^2} \right)\]
+
+<p>と修正されます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,187 @@
+I"�&
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#gitbookメモ" id="markdown-toc-gitbookメモ">GitBookメモ</a>    <ol>
+      <li><a href="#mathjax" id="markdown-toc-mathjax">mathjax</a>        <ol>
+          <li><a href="#事象" id="markdown-toc-事象">事象</a></li>
+          <li><a href="#解決策" id="markdown-toc-解決策">解決策</a></li>
+        </ol>
+      </li>
+      <li><a href="#画像のリンク" id="markdown-toc-画像のリンク">画像のリンク</a></li>
+      <li><a href="#数式番号" id="markdown-toc-数式番号">数式番号</a></li>
+      <li><a href="#数式を揃える" id="markdown-toc-数式を揃える">数式を揃える</a></li>
+      <li><a href="#google-adsense" id="markdown-toc-google-adsense">Google Adsense</a>        <ol>
+          <li><a href="#事前準備" id="markdown-toc-事前準備">事前準備</a></li>
+          <li><a href="#インストールと設定" id="markdown-toc-インストールと設定">インストールと設定</a></li>
+        </ol>
+      </li>
+      <li><a href="#google-analytics" id="markdown-toc-google-analytics">Google Analytics</a>        <ol>
+          <li><a href="#インストールと設定-1" id="markdown-toc-インストールと設定-1">インストールと設定</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="gitbookメモ">GitBookメモ</h1>
+
+<p>12/14/2021: 現在はJekyllを用いて静的サイトを構築しています。GitBookは使用しておらず、古い情報であることにご注意ください。</p>
+
+<h2 id="mathjax">mathjax</h2>
+
+<h3 id="事象">事象</h3>
+
+<p>book.jsonに</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mathjax"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>と記述し以下を実行します。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gitbook install
+</code></pre></div></div>
+
+<p>するとmathjaxがインストールされます。しかしいざビルドしてみると</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gitbook build
+
+PluginError: Error with plugin "mathjax": Cannot find module 'mathjax/unpacked/MathJax'
+Require stack:
+- /Users/s.nakamura/website/node_modules/mathjax-node/lib/mj-single.js
+- /Users/s.nakamura/website/node_modules/gitbook-plugin-mathjax/index.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/plugins/loadPlugin.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/plugins/loadForBook.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/plugins/index.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/api/encodeGlobal.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/api/index.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/output/getModifiers.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/output/json/onPage.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/output/json/index.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/output/index.js
+- /Users/s.nakamura/.gitbook/versions/3.2.3/lib/index.js
+- /Users/s.nakamura/.nodebrew/node/v14.0.0/lib/node_modules/gitbook-cli/lib/local.js
+- /Users/s.nakamura/.nodebrew/node/v14.0.0/lib/node_modules/gitbook-cli/lib/index.js
+- /Users/s.nakamura/.nodebrew/node/v14.0.0/lib/node_modules/gitbook-cli/bin/gitbook.js
+</code></pre></div></div>
+
+<p>のようにエラーがたくさん出てきてしまいました。もちろんhtmlは作られていません。</p>
+
+<h3 id="解決策">解決策</h3>
+
+<p>以下のようにnpm(Node Package Manager)でmathjaxのバージョンを指定してインストール。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install mathjax@2.7.6
+</code></pre></div></div>
+
+<p>そして再びビルドすると、今度はちゃんと数式が表現されたhtmlが作成されました。</p>
+
+<h2 id="画像のリンク">画像のリンク</h2>
+
+<p>GitBookはファイルのパスを記述すると、大抵が相対パスに翻訳されます。例えば以下のようにファイルのリンク先を指定したとしましょう。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![放射冷却曲線](/images/ism/cooling.png)
+</code></pre></div></div>
+
+<p>するとこれは絶対パスでなく、README.mdと同じディレクトリにあるimagesディレクトリの中からpngファイルを探してくることになります。</p>
+
+<h2 id="数式番号">数式番号</h2>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hogehoge <span class="k">\tag</span><span class="p">{</span>#1<span class="p">}</span>
+</code></pre></div></div>
+
+<p>のようにすると(#1)の式番号が付与されます。その式を参照するには<code class="language-plaintext highlighter-rouge">(#1)</code>のようにハードコーディングするしかないようです(2020/04/25現在)。</p>
+
+<h2 id="数式を揃える">数式を揃える</h2>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{align}</span>
+a <span class="p">&amp;</span>= <span class="p">{</span><span class="k">\rm</span> hogehoge<span class="p">}</span> <span class="k">\\</span>
+b <span class="p">&amp;</span>= 1
+<span class="nt">\end{align}</span>
+</code></pre></div></div>
+
+<p>のようにalignで囲みます。揃えたい部分に&amp;記号を入れます。</p>
+
+<h2 id="google-adsense">Google Adsense</h2>
+
+<h3 id="事前準備">事前準備</h3>
+
+<p>事前にGoogle Adsenseのアカウントを取得しておきます。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GitHub Pagesでアカウントを取得する際は、例えばhttps://github-nakasho.github.ioのようなURLで登録します。https://github-nakasho.github.io/websiteのようにURLにパス名が入っていると、取得できません。ご注意ください。
+</code></pre></div></div>
+
+<h3 id="インストールと設定">インストールと設定</h3>
+
+<p>以下のコマンドで必要なプラグインをインストールします。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install </span>gitbook-plugin-adsense
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">book.json</code>に以下の行を追加します。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "plugins": ["adsense"]
+}
+</code></pre></div></div>
+
+<p>そしてこのプラグインの設定として以下も記述します。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "pluginsConfig": {
+        "adsense": {
+            "client": "ca-pub-XXXXXXXXXXXXXXXX",
+            "slot": "XXXXXXXXXX",
+            "format": "auto",
+            "element": ".page-inner section",
+            "position": "top"
+        }
+    }
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">client</code>にはca-pub-から始まる番号、<code class="language-plaintext highlighter-rouge">slot</code>にはどのAdsenseを貼るかを識別する番号を入力します。<code class="language-plaintext highlighter-rouge">position</code>は初期設定ではbottom(ページ下部)です。topかbottomを選ぶことができます(これ以外は試していません)。</p>
+
+<h2 id="google-analytics">Google Analytics</h2>
+
+<h3 id="インストールと設定-1">インストールと設定</h3>
+
+<p>以下のコマンドでプラグインをインストールします。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install </span>gitbook-plugin-gtag 
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">book.json</code>に以下を追記します。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"plugin": ['gtag'],
+"pluginsConfig": {
+  "gtag": {
+    "token": &lt;gtag-id&gt;
+  }
+}
+</code></pre></div></div>
+
+<p>Google Analyticsに登録した後、websiteをトラッキングするためのスクリプト部分から<code class="language-plaintext highlighter-rouge">gtag</code>番号を<gtag-id>部分に入力します。</gtag-id></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

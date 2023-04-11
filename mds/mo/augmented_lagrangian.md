@@ -190,10 +190,10 @@ $$
 
 を満たす$$(\mathbf{x}^{\ast (k)}, \boldsymbol{\lambda}^{(k)})$$を求める手法です。
 
-# 参考文献
+## 参考文献
 
-* [1] 梅谷俊治, しっかり学ぶ数理最適化 モデルからアルゴリズムまで
-* [2] [等式制約あり最適化問題と拡張ラグランジュ乗数法](http://yuki-koyama.hatenablog.com/entry/2017/11/09/200000)
-* [3] [山下信雄, 数理計画法 第3回目: 最適性の条件1](http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf)
+[1] [梅谷俊治, "しっかり学ぶ数理最適化 モデルからアルゴリズムまで"](https://amzn.to/3KQHAzz)  
+[2] [等式制約あり最適化問題と拡張ラグランジュ乗数法](http://yuki-koyama.hatenablog.com/entry/2017/11/09/200000)  
+[3] [山下信雄, 数理計画法 第3回目: 最適性の条件1](http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf)  
 
 {% include adsense.html %}

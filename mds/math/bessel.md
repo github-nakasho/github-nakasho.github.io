@@ -815,13 +815,13 @@ if __name__ == '__main__':
 
 ![ベッセル関数。](/assets/images/math/bessel.png)
 
-# 参考文献
+## 参考文献
 
-* 田島, 近道, "改訂 演習工科の数学4 複素関数"  
-* 中山, "裳華房フィジックスライブラリー 物理数学 II"  
-* 福山, 小形, "基礎物理学シリーズ3 物理数学 I"  
-* [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
-* [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)
+[1] [田島, 近道, "改訂 演習工科の数学4 複素関数"](https://amzn.to/405zY0w)  
+[2] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
+[3] [福山, 小形, "基礎物理学シリーズ3 物理数学 I"](https://amzn.to/3o5YUaz)  
+[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
+[5] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)
 
 
 {% include adsense.html %}

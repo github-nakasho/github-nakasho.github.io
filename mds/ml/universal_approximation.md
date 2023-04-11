@@ -113,7 +113,7 @@ $$
 
 # 参考文献
 
-* [1] 富谷昭夫, "これならわかる機械学習"  
-* [2] [Michael Nielsen, "Neural Networks and Deep Learning" website, Chapter 4](http://neuralnetworksanddeeplearning.com/chap4.html)  
+[1] [富谷昭夫, "これならわかる機械学習"](https://amzn.to/3mq8yEw)  
+[2] [Michael Nielsen, "Neural Networks and Deep Learning" website, Chapter 4](http://neuralnetworksanddeeplearning.com/chap4.html)  
 
 {% include adsense.html %}

@@ -543,18 +543,24 @@ M87のSMBHの観測といえば、EHTによるブラックホール直接撮像�
 しかし、こちらの撮像で得られた光子リングはスピンの影響をあまり受けず、ここからブラックホールスピンを明らかにするのは困難とされてきました。
 観測精度、そして解析手法の発展に伴って、ブラックホールの性質が明らかにされつつあります。
 
+![](/assets/images/gr/lense_thirring_05.png)
+
+天球面上で歳差運動するジェットの電波観測の様子(上図)と、GRMHD計算から得られたジェットの歳差運動の比較(下図。)
+
+![](/assets/images/gr/lense_thirring_06.png)
+
 こちらの論文は2023年4月現在、査読中のようです。進展があり次第、この記事も随時更新させていただきます。
 {: .label .label-yellow }
 
 ## 参考文献
 
-[1] [Bardeen & Petterson, 1975, "The Lense-Thirring Effect and Accretion Disks Around Kerr Black Holes"](https://articles.adsabs.harvard.edu//full/1975ApJ...195L..65B/L000065.000.html)  
-[2] [Bennet, 2014, master thesis, "Gyroscopic Precessions in Relativity and Gravitoelectromagnetism"](https://www.mas.ncl.ac.uk/library/display_pdf.php?id=249)  
-[3] [Everitt et al., 2011, "Gravity Probe B: Final Results of a Space Experiment to Test General Relativity"](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.221101)  
-[4] [Haimoud, New York University, General Relativity Fall 2019, Homework 8 solution](https://cosmo.nyu.edu/yacine/teaching/GR_2019/homeworks/solution8.pdf)  
-[5] Hartle, "Gravity: An Introduction to Einstein's General Relativity"  
-[6] [Liska et al., 2021, "Disc tearing and Bardeen–Petterson alignment in GRMHD simulations of highly tilted thin accretion discs"](https://academic.oup.com/mnras/article/507/1/983/5810669)  
-[7] [Mizuno, 2022, "GRMHD Simulations and Modeling for Jet Formation and Acceleration Region in AGNs"](https://www.mdpi.com/2218-1997/8/2/85)  
-[8] Thorne & Blandford, "Modern Classical Physics: Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics"  
+[1] [Thorne & Blandford, "Modern Classical Physics: Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics"](https://amzn.to/3MD1orv)  
+[2] [Hartle, "Gravity: An Introduction to Einstein's General Relativity"](https://amzn.to/3KOV7Yo)  
+[3] [Bardeen & Petterson, 1975, "The Lense-Thirring Effect and Accretion Disks Around Kerr Black Holes"](https://articles.adsabs.harvard.edu//full/1975ApJ...195L..65B/L000065.000.html)  
+[4] [Bennet, 2014, master thesis, "Gyroscopic Precessions in Relativity and Gravitoelectromagnetism"](https://www.mas.ncl.ac.uk/library/display_pdf.php?id=249)  
+[5] [Everitt et al., 2011, "Gravity Probe B: Final Results of a Space Experiment to Test General Relativity"](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.221101)  
+[6] [Haimoud, New York University, General Relativity Fall 2019, Homework 8 solution](https://cosmo.nyu.edu/yacine/teaching/GR_2019/homeworks/solution8.pdf)  
+[7] [Liska et al., 2021, "Disc tearing and Bardeen–Petterson alignment in GRMHD simulations of highly tilted thin accretion discs"](https://academic.oup.com/mnras/article/507/1/983/5810669)  
+[8] [Mizuno, 2022, "GRMHD Simulations and Modeling for Jet Formation and Acceleration Region in AGNs"](https://www.mdpi.com/2218-1997/8/2/85)  
 
 {% include adsense.html %}

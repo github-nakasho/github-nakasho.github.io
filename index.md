@@ -71,4 +71,10 @@ permalink: /
 * [日本アマゾン](https://www.amazon.co.jp/hz/wishlist/ls/1Q60HHRFW2CGR/ref=nav_wishlist_lists_1)  
 * [アメリカアマゾン](https://www.amazon.com/hz/wishlist/ls/2SW3UR2VPITV4/ref=nav_wishlist_lists_2)  
 
+## プライバシーポリシー
+
+* 当サイトは*Google アナリティクス*による訪問者解析を行っております。
+* 当サイトは*Google アドセンス*による広告表示を行なっております
+* 当サイトは*Amazon アソシエイトプログラム*に参加しております。
+
 {% include adsense.html %} 

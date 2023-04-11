@@ -424,10 +424,10 @@ if __name__ == '__main__':
 
 ![Legendre多項式。](/assets/images/math/legendre.png)
 
-# 参考文献
+## 参考文献
 
-[1] 田島, 近藤, "改訂演習工科の数学4, 複素関数"  
-[2] 中山, "裳華房フィジックスライブリー, 物理数学II"  
-[3] 福山, 小形, "基礎物理学シリーズ3, 物理数学I"  
+[1] [田島, 近道, "改訂 演習工科の数学4 複素関数"](https://amzn.to/405zY0w)  
+[2] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
+[3] [福山, 小形, "基礎物理学シリーズ3 物理数学 I"](https://amzn.to/3o5YUaz)  
 
 {% include adsense.html %}

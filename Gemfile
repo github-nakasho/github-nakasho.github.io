@@ -35,3 +35,4 @@ gem "webrick", "~> 1.7"
 # gem "just-the-docs", "0.3.3"
 gem "just-the-docs"
 gem "jekyll-twitter-plugin"
+gem 'jekyll-amazon', group: [:jekyll_plugins]

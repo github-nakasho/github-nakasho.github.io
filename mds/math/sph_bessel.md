@@ -77,11 +77,13 @@ $$
 より
 
 $$
-h_n^{(1)} = (-1)^{n+1} (2z)^n \left( \frac{d}{dz^2}\right)^n \frac{e^{iz}}{z}
+h_n^{(1)} 
+= i(-1)^{n+1} (2z)^n \left( \frac{d}{dz^2}\right)^n \frac{e^{iz}}{z}
 $$
 
 $$
-h_n^{(2)} = (-1)^{n} (2z)^n \left( \frac{d}{dz^2}\right)^n \frac{e^{-iz}}{z}
+h_n^{(2)} 
+= i(-1)^{n} (2z)^n \left( \frac{d}{dz^2}\right)^n \frac{e^{-iz}}{z}
 $$
 
 ## 球ハンケル関数が満たす漸化式

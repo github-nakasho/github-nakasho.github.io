@@ -18,7 +18,7 @@ nav_order: 4
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08T9JT543&linkId=e8b13a3c4a495c70e095448c984a57e9"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09G9VZ4PH&linkId=6843d713ac9e653b1b56bb311ed1f4f6"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4339029343&linkId=abe980a3721ef0c335d2f843c37ea56a"></iframe>
 
 # 拡張ラグランジュ関数法
 
@@ -115,6 +115,8 @@ $$
 
 ![未定乗数更新の様子。](/assets/images/mo/augmented_tsp.png)
 
+{% include adsense.html %}
+
 # 補題: 未定乗数更新についての証明
 
 $$(\mathbf{x}^\ast, \boldsymbol{\lambda}^\ast)$$を等式制約つき最適化問題の[最適性の2次の十分条件](/mo/second)を満たす点としましょう。このとき(1)式の$$\mathbf{x}$$の勾配を考えると
@@ -196,4 +198,4 @@ $$
 [2] [等式制約あり最適化問題と拡張ラグランジュ乗数法](http://yuki-koyama.hatenablog.com/entry/2017/11/09/200000)  
 [3] [山下信雄, 数理計画法 第3回目: 最適性の条件1](http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf)  
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08T9JT543&linkId=e8b13a3c4a495c70e095448c984a57e9"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09G9VZ4PH&linkId=6843d713ac9e653b1b56bb311ed1f4f6"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4339029343&linkId=abe980a3721ef0c335d2f843c37ea56a"></iframe>

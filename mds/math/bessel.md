@@ -18,7 +18,7 @@ nav_order: 11
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
 
 # ベッセル関数
 
@@ -200,6 +200,8 @@ $$
 = 2 \frac{d}{dz} J_n \tag{6}
 $$
 
+{% include adsense.html %}
+
 ## ベッセルの微分方程式
 
 $$
@@ -235,8 +237,6 @@ $$
 $$
 
 を満たすことがわかりました。
-
-{% include adsense.html %}
 
 ## フーリエ級数展開
 
@@ -308,6 +308,8 @@ J_n(n\epsilon)
 $$
 
 となります。
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
 
 ## ベッセル関数のべき乗表示
 
@@ -433,6 +435,8 @@ $$
 =  2 \sum_{m=0}^\infty J_{2m+1} (z) \sin\{(2m+1)\theta\} \tag{12}
 $$
 
+{% include adsense.html %}
+
 ## 直交関係とフーリエ・ベッセル展開
 
 ベッセル関数はベッセルの微分方程式(7)を満たします。ここに$$\lambda_1, \lambda_2$$を異なる正の実数として、$$u(x) = J_n (\lambda_1 x), v(x) = J_n(\lambda_2 x)$$としましょう。これらと(7)式より
@@ -515,8 +519,6 @@ $$
 
 のように展開することができます。これをフーリエ・ベッセル展開と呼びます。
 
-{% include adsense.html %}
-
 ## ベッセル関数の2乗
 
 (8)式より、この2乗を計算しましょう。
@@ -589,6 +591,8 @@ $$
 J_n^2(z) 
 = \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2m} \tag{16}
 $$
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
 
 ## 2乗との間に成り立つ公式
 
@@ -718,6 +722,8 @@ $$
 
 も成り立ちます。
 
+{% include adsense.html %}
+
 ## ベッセル関数のポアソン表示
 
 (8)式において階乗を[ガンマ関数](/math/gamma)を用いて一般化すると
@@ -820,8 +826,7 @@ if __name__ == '__main__':
 [1] [田島, 近道, "改訂 演習工科の数学4 複素関数"](https://amzn.to/405zY0w)  
 [2] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
 [3] [福山, 小形, "基礎物理学シリーズ3 物理数学 I"](https://amzn.to/3o5YUaz)  
-[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)
+[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)  
 [5] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)
 
-
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>

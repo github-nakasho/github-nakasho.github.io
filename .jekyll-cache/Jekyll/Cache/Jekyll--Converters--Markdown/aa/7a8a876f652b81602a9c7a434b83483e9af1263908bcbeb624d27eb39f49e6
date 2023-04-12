@@ -1,4 +1,4 @@
-I"�<
+I"�F
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -17,19 +17,17 @@
       </li>
     </ol>
   </li>
-  <li><a href="#補題-未定乗数更新についての証明" id="markdown-toc-補題-未定乗数更新についての証明">補題: 未定乗数更新についての証明</a></li>
-  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+  <li><a href="#補題-未定乗数更新についての証明" id="markdown-toc-補題-未定乗数更新についての証明">補題: 未定乗数更新についての証明</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
 </ol>
 
 </details>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08T9JT543&amp;linkId=e8b13a3c4a495c70e095448c984a57e9"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B09G9VZ4PH&amp;linkId=6843d713ac9e653b1b56bb311ed1f4f6"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4339029343&amp;linkId=abe980a3721ef0c335d2f843c37ea56a"></iframe>
 
 <h1 id="拡張ラグランジュ関数法">拡張ラグランジュ関数法</h1>
 
@@ -112,6 +110,14 @@ L_\rho (\mathbf{x}, \boldsymbol{\lambda})
 
 <p><img src="/assets/images/mo/augmented_tsp.png" alt="未定乗数更新の様子。" /></p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h1 id="補題-未定乗数更新についての証明">補題: 未定乗数更新についての証明</h1>
 
 <p>\((\mathbf{x}^\ast, \boldsymbol{\lambda}^\ast)\)を等式制約つき最適化問題の<a href="/mo/second">最適性の2次の十分条件</a>を満たす点としましょう。このとき(1)式の\(\mathbf{x}\)の勾配を考えると</p>
@@ -173,20 +179,13 @@ L_\rho (\mathbf{x}, \boldsymbol{\lambda})
 
 <p>を満たす\((\mathbf{x}^{\ast (k)}, \boldsymbol{\lambda}^{(k)})\)を求める手法です。</p>
 
-<h1 id="参考文献">参考文献</h1>
+<h2 id="参考文献">参考文献</h2>
 
-<ul>
-  <li>[1] 梅谷俊治, しっかり学ぶ数理最適化 モデルからアルゴリズムまで</li>
-  <li>[2] <a href="http://yuki-koyama.hatenablog.com/entry/2017/11/09/200000">等式制約あり最適化問題と拡張ラグランジュ乗数法</a></li>
-  <li>[3] <a href="http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf">山下信雄, 数理計画法 第3回目: 最適性の条件1</a></li>
-</ul>
+<p>[1] <a href="https://amzn.to/3KQHAzz">梅谷俊治, “しっかり学ぶ数理最適化 モデルからアルゴリズムまで”</a><br />
+[2] <a href="http://yuki-koyama.hatenablog.com/entry/2017/11/09/200000">等式制約あり最適化問題と拡張ラグランジュ乗数法</a><br />
+[3] <a href="http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf">山下信雄, 数理計画法 第3回目: 最適性の条件1</a></p>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
-
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08T9JT543&amp;linkId=e8b13a3c4a495c70e095448c984a57e9"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B09G9VZ4PH&amp;linkId=6843d713ac9e653b1b56bb311ed1f4f6"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4339029343&amp;linkId=abe980a3721ef0c335d2f843c37ea56a"></iframe>
 :ET

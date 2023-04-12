@@ -1,4 +1,4 @@
-I"�,
+I"�6
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -9,19 +9,16 @@
       <li><a href="#thomson散乱の微分散乱断面積と古典電子半径" id="markdown-toc-thomson散乱の微分散乱断面積と古典電子半径">Thomson散乱の微分散乱断面積と古典電子半径</a></li>
       <li><a href="#thomson散乱の散乱断面積" id="markdown-toc-thomson散乱の散乱断面積">Thomson散乱の散乱断面積</a></li>
       <li><a href="#thomson散乱の特徴" id="markdown-toc-thomson散乱の特徴">Thomson散乱の特徴</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
 </ol>
 
 </details>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=43544297879136c5ea5a6638aa78288b"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BLVJM17N&amp;linkId=5bbd8fecba2af91e5169929307870ee1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=0471827592&amp;linkId=2f45599c4c0fbce28c637f7945cc2573"></iframe>
 
 <h1 id="thomson散乱">Thomson散乱</h1>
 
@@ -155,11 +152,13 @@
 <p>です。よって運動量保存が破れていることがわかります。<br />
 これは電磁波による電子の運動方程式で、磁場によるローレンツ力を無視したことに起因しています。電磁波の運動量は磁場によって点電荷に伝えられます。電磁波は電場で点電荷をゆらしてエネルギーを伝え、揺れ出したら磁場で押して運動量を伝えているのです。したがって、磁場の効果を無視した時点で電磁波の運動量の伝搬が無視されたことになっています。運動量保存まで考慮した取り扱い、およびトムソン散乱の理論の適用限界についてはCompton散乱で学びましょう。</p>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+<h2 id="参考文献">参考文献</h2>
 
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+<p>[1] <a href="https://amzn.to/41323Xn">Rybicki &amp; Lightman, “Radiative Processes in Astrophysics”</a><br />
+[2] <a href="https://amzn.to/3UoImqm">観山正見, 二間瀬敏史, 野本憲一, ”天体物理学の基礎 II”</a><br />
+[3] <a href="https://amzn.to/40d1pWh">中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, “放射素過程の基礎”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=43544297879136c5ea5a6638aa78288b"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BLVJM17N&amp;linkId=5bbd8fecba2af91e5169929307870ee1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=0471827592&amp;linkId=2f45599c4c0fbce28c637f7945cc2573"></iframe>
 :ET

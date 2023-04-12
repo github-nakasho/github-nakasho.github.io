@@ -18,7 +18,8 @@ nav_order: 21
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=43544297879136c5ea5a6638aa78288b"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLVJM17N&linkId=5bbd8fecba2af91e5169929307870ee1"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=2f45599c4c0fbce28c637f7945cc2573"></iframe>
 
 # Thomson散乱
 
@@ -177,7 +178,9 @@ $$
 
 ## 参考文献
 
-[1] [観山正見, 二間瀬敏史, 野本憲一, ”天体物理学の基礎 II”](https://amzn.to/3UoImqm)  
-[2] [中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, "放射素過程の基礎"](https://amzn.to/40d1pWh)  
+[1] [Rybicki & Lightman, "Radiative Processes in Astrophysics"](https://amzn.to/41323Xn)  
+[2] [観山正見, 二間瀬敏史, 野本憲一, ”天体物理学の基礎 II”](https://amzn.to/3UoImqm)  
+[3] [中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, "放射素過程の基礎"](https://amzn.to/40d1pWh)  
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=43544297879136c5ea5a6638aa78288b"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLVJM17N&linkId=5bbd8fecba2af91e5169929307870ee1"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=2f45599c4c0fbce28c637f7945cc2573"></iframe>

@@ -30,7 +30,7 @@ $$
 
 を求めましょう。
 
-# 複素積分
+## 複素積分
 
 $$
 f(z) = \frac{e^{iz}}{z} \ \ (z = x + iy)
@@ -112,8 +112,12 @@ $$
 = \pi 
 $$
 
-# 結言
+## 結言
 
 複素関数を用いることで、ある値に積分が収束することを示しました。この積分は特にディリクレ積分という名前がついており、有名です。
 
-{% include adsense.html %}
+## 参考文献
+
+[1] [寺沢寛一, "自然科学者のための数学概論"](https://amzn.to/3UCy5qJ)  
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000054805&linkId=3aafb100f03359a1c4c6594fa5a4fa61"></iframe>

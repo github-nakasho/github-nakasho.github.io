@@ -140,9 +140,9 @@ $$
 
 エネルギーは低い状態になろうとするので、全てのスピンは揃おうとします。しかしエントロピー$$S$$からは、温度を上げると状態の乱雑さが上昇し、向きが不揃いになるはずです。このことから低温から温度を徐々に上昇させると、スピンの向きが揃った状態から不揃いな状態に遷移する特別な温度の存在が示唆されます。
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4563024376&linkId=eda1d0255d6c27c4773e41a461ac6fa5"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4563024384&linkId=60fca211f8c7ee1fe019f281098562c0"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4007303657&linkId=dee182c4f846cbacbc007f44c7da82c3"></iframe>
 
-## 全結合モデル (Fushimi-Tempely model or Mean-Field model)
+## 全結合モデル (Fushimi-Tempely model or Mean-Field model)　
 
 $$
 E({\bf{x}}) 
@@ -380,6 +380,10 @@ $$
 
 # 参考文献
 
-* [1] [大関真之 Youtube動画 "Statistical physics and information processing vol. 1 (情報統計物理) 【Tokyo Tech Lecture Live Streaming"](https://www.youtube.com/embed/VcINN1ew7TU)
+[1] [大関真之 Youtube動画 "Statistical physics and information processing vol. 1 (情報統計物理) 【Tokyo Tech Lecture Live Streaming"](https://www.youtube.com/embed/VcINN1ew7TU)  
+[2] [田崎晴明, "統計力学 I"](https://amzn.to/41vWTTO)  
+[3] [田崎晴明, "統計力学 II"](https://amzn.to/41dtgXu)  
+[4] [久保亮五, "大学演習 熱学・統計力学"](https://amzn.to/40cJoHg)  
+[5] [西森秀稔, "スピングラス理論と情報統計力学"](https://amzn.to/3KYSNht)  
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4563024376&linkId=eda1d0255d6c27c4773e41a461ac6fa5"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4563024384&linkId=60fca211f8c7ee1fe019f281098562c0"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4007303657&linkId=dee182c4f846cbacbc007f44c7da82c3"></iframe>

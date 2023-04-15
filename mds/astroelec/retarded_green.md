@@ -127,6 +127,8 @@ $$
 
 となります。
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=8f165ec70d6c9bdcc17a77dc508d4c7c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=3fd46a683c7a3483b018033efad0cd9c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000054805&linkId=3aafb100f03359a1c4c6594fa5a4fa61"></iframe>
+
 ### 逆フーリエ変換
 
 (7)式を逆フーリエ変換して、遅延グリーン関数を求めましょう。
@@ -285,6 +287,8 @@ $$
 
 となります。
 
+{% include adsense.html %} 
+
 ### 積分実行
 
 残りの$$\mathbf{k}$$空間での積分を行いましょう。そのためには積分が$$\mathbf{k}$$空間の無限大領域に渡り、かつ計算が簡単になるような座標を設定します。すると下図のように、$$\mathbf{r}$$を$$k_z$$に一致させる座標設定を取ると良いでしょう。
@@ -348,5 +352,13 @@ P \int_{-\infty}^\infty dx \frac{\sin x}{x}
 $$
 
 のように書けます。特異点を半円で避けその半径の0極限を取る場合、いくら積分経路を0に持っていっても、特異点では無限大に関数の値が発散しているため、積分の値は有限となります。しかし、この積分は$$x = 0$$で有限の値かつ連続なので、経路の避け方を議論する必要なく積分が行えたのです。
+
+## 参考文献
+
+[1] [Rybicki & Lightman, "Radiative Processes in Astrophysics"](https://amzn.to/43CMurh)  
+[2] [観山正見, 二間瀬敏史, 野本憲一, ”天体物理学の基礎 II”](https://amzn.to/3L2f1zd)  
+[3] [寺沢寛一, "自然科学者のための数学概論"](https://amzn.to/3UCy5qJ)
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=8f165ec70d6c9bdcc17a77dc508d4c7c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=3fd46a683c7a3483b018033efad0cd9c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000054805&linkId=3aafb100f03359a1c4c6594fa5a4fa61"></iframe>
 
 {% include adsense.html %} 

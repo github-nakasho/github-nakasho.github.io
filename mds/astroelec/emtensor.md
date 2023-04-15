@@ -18,7 +18,7 @@ nav_order: 11
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=8f165ec70d6c9bdcc17a77dc508d4c7c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=3fd46a683c7a3483b018033efad0cd9c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=3fd46a683c7a3483b018033efad0cd9c"></iframe>
 
 # 電磁場テンソル
 
@@ -31,6 +31,9 @@ A^{\mu} \equiv (\phi, \mathbf{A})=\left(\phi, A_{x}, A_{y}, A_{z}\right)
 $$
 
 と定義します。
+
+注意: cgs単位系を用いているため、光速度cは出現しません。
+{: .label .label-yellow }
 
 ## 電磁場テンソル
 
@@ -53,9 +56,8 @@ $$
 
 のように取ります。
 
-```
-素粒子専門の教科書や講義とはミンコフスキーメトリックの符号が逆なので注意が必要です。
-```
+注意: 素粒子物理の教科書や講義ノートとは符号が逆になっています。
+{: .label .label-yellow }
 
 また
 
@@ -151,6 +153,11 @@ E_{z} & B_{y} & -B_{x} & 0
 $$
 
 結局、時間成分しか符号が反転していないことがわかります。
+
+注意: ここでもcgs単位系のために光速度cは出現しません。
+{: .label .label-yellow }
+
+{% include adsense.html %}
 
 ## マクスウェル方程式の電磁場テンソル表現
 
@@ -313,5 +320,10 @@ $$
 
 これは運動量の時間変化です。電場とローレンツ力による力が運動量の時間変化をもたらすという式です。
 
-{% include adsense.html %}
- 
+## 参考文献
+
+[1] [Rybicki & Lightman, "Radiative Processes in Astrophysics"](https://amzn.to/43CMurh)  
+[2] [観山正見, 二間瀬敏史, 野本憲一, ”天体物理学の基礎 II”](https://amzn.to/3L2f1zd)  
+[3] [エリ・デ・ランダウ, イェ・エム・リフシッツ, "場の古典論"](https://amzn.to/40fcaam)
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0471827592&linkId=8f165ec70d6c9bdcc17a77dc508d4c7c"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=d319b6def7b4ae68d5d86f2be9361d84"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=3fd46a683c7a3483b018033efad0cd9c"></iframe>

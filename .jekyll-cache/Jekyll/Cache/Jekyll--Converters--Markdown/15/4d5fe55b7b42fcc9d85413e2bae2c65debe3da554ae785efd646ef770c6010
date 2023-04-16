@@ -1,4 +1,4 @@
-I"�
+I"
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -7,6 +7,7 @@
   <li><a href="#11-光のintensityとflux" id="markdown-toc-11-光のintensityとflux">1.1 光のIntensityとFlux</a>    <ol>
       <li><a href="#恒星" id="markdown-toc-恒星">恒星</a></li>
       <li><a href="#太陽や銀河のように広がりがある天体" id="markdown-toc-太陽や銀河のように広がりがある天体">太陽や銀河のように広がりがある天体</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
 </ol>
@@ -95,11 +96,9 @@
 
 <p><img src="/assets/images/atmos/e_nu_i_nu.png" alt="単位立体角に見込む面積は距離の2乗に比例する" /></p>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+<h2 id="参考文献">参考文献</h2>
 
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+<p>[1] <a href="https://amzn.to/3L1dMQC">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a><br />
+[2] <a href="https://amzn.to/3ULYPFy">梅村雅之, 福江純, 野村英子, “輻射輸送と輻射流体力学”</a><br />
+[3] <a href="https://amzn.to/43CMurh">Rybicki &amp; Lightman, “Radiative Processes in Astrophysics”</a></p>
 :ET

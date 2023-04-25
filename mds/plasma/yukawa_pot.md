@@ -18,7 +18,7 @@ nav_order: 3
 {:toc}
 </details>
 
-{% include adsense.html %} 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621042556&linkId=655f19c222c055d8a19fbca3c214ac33"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4320047109&linkId=cee9d6f6756d944a323217f3f9c8f085"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621035630&linkId=45ac2c14c7b4dd89c0674583e46b7a75"></iframe>
 
 # 湯川型ポテンシャルの導出
 
@@ -77,6 +77,8 @@ $$
 = \frac{q_0}{\pi r} \int_{-\infty}^\infty \frac{k \sin rk}{k^2 + \mu^2} dk 
 = \frac{q_0}{2i \pi r} \int_{-\infty}^\infty \frac{k}{k^2 + \mu^2} (e^{irk} - e^{-irk}) dk \tag{6}
 $$
+
+{% include adsense.html %} 
 
 ## 複素平面上での積分
 
@@ -211,7 +213,7 @@ $$
 = - 4\pi q_0 \tag{19}
 $$
 
-のように、点電荷を原点においた場合に一致することからもわかります。
+のように、真空中で点電荷を原点に置いた場合に一致することからもわかります。
 
 ## 補遺: Juliaスクリプト
 
@@ -228,5 +230,10 @@ plot!(r, yukawa, linewidth=3, label="Yukawa")
 savefig("yukawa_pot_02.png")
 ```
 
-{% include adsense.html %} 
+## 参考文献
 
+[1] [Chen, "プラズマ物理入門"](https://amzn.to/3V5P8BP)  
+[2] [小野高幸, 三好由純, "太陽地球圏"](https://amzn.to/41CCxII)  
+[3] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/41EhLIQ)  
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621042556&linkId=655f19c222c055d8a19fbca3c214ac33"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4320047109&linkId=cee9d6f6756d944a323217f3f9c8f085"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621035630&linkId=45ac2c14c7b4dd89c0674583e46b7a75"></iframe>

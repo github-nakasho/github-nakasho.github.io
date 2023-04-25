@@ -18,7 +18,7 @@ nav_order: 25
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07Y7RHPRW&linkId=a8062c251426effc7b6190c799fecf78"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621083112&linkId=6c98bdbc25ec160c8821eb8b01968e72"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=db00c1a519f21caa5809ddcff5bbdd24"></iframe>
 
 # TOV方程式
 
@@ -125,6 +125,8 @@ $$
 G_{\theta \theta} = R_{\theta \theta} - \frac{1}{2} g_{\theta \theta} R 
 = r^2 e^{-2\Lambda} (\Phi'' - \Phi' \Lambda' + \Phi'^2 + \frac{\Phi'}{r}- \frac{\Lambda'}{r})
 $$
+
+{% include adsense.html %}
 
 ## エネルギー運動量テンソルの計算
 
@@ -256,4 +258,10 @@ $$
 
 となり、ニュートン引力と圧力勾配による力の釣り合いの式が得られます。
 
-{% include adsense.html %}
+## 参考文献
+
+[1] [須藤靖, "一般相対論入門"](https://amzn.to/41xKsGW)  
+[2] [Bernerd Schutz, "シュッツ　相対論入門 II 一般相対論"](https://amzn.to/43SXMb5)  
+[3] [エリ・デ・ランダウ, イェ・エム・リフシッツ, "場の古典論"](https://amzn.to/3GRiDl2)  
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07Y7RHPRW&linkId=a8062c251426effc7b6190c799fecf78"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621083112&linkId=6c98bdbc25ec160c8821eb8b01968e72"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4489023871&linkId=db00c1a519f21caa5809ddcff5bbdd24"></iframe>

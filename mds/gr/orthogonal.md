@@ -31,7 +31,7 @@ $$
 
 を証明していきます。
 
-## 座標変換
+## 座標変換とその計量
 
 実験室系での粒子の座標を$$x^\hat{\mu}$$のようにハットをつけて表し、慣性系での粒子の座標を$$x^\mu$$のように書きます。
 初期に実験室系で$$x^\hat{i}=0$$に$$v^\hat{i}=0$$で静止している粒子について考えましょう。
@@ -91,10 +91,89 @@ $$
 
 $$
 g_{00} 
-= 1 + \frac{2 \mathbf{a} \cdot \mathbf{x}}{c^2}, \quad g_{0i} 
+= -1 - \frac{2 \mathbf{a} \cdot \mathbf{x}}{c^2}, \quad g_{0i} 
 = \frac{(\boldsymbol{\Omega} \times \mathbf{x})_i}{c}, \quad g_{ij} 
 = \delta_{ij} \tag{8}
 $$
+
+## クリストッフェル記号の計算と輸送の法則
+
+ベクトルについての公式を導出するために、以下では世界線に沿った[基底ベクトルの微分](/gr/derivative)
+
+$$
+\nabla_U \mathbf{e}_\alpha 
+= \nabla_\hat{0} \mathbf{e}_\alpha 
+= \Gamma^\mu_{0\alpha} \mathbf{e}_\mu \tag{9}
+$$
+
+を考えます。
+よって[クリストッフェル記号](/gr/christoffel)を計算しましょう。
+ここで、加速度や角速度は一定で時間に依存しないことに注意しましょう。
+さらにこれらの量は非相対論的であるとして、先程の計量は
+
+$$
+g_{\mu \nu} 
+= \eta_{\mu \nu} + h_{\mu \nu} \quad (\vert h_{\mu \nu} \vert \ll 1) \tag{9}
+$$
+
+のように書かれ、さらに[クリストッフェル記号](/gr/christoffel)は
+
+$$
+\Gamma^\mu_{\alpha 0} 
+\simeq \frac{1}{2} \eta^{\mu \nu} (\partial_\alpha h_{0\nu} + \partial_0 h_{\nu \alpha} - \partial_\nu h_{\alpha 0}) \tag{10}
+$$
+
+のように計算されることから
+
+$$
+\Gamma^0_{00} 
+= 0, \quad \Gamma^j_{00} 
+= \frac{a^j}{c^2}, \quad \Gamma^0_{j0} 
+= \frac{a_j}{c^2}, \quad \Gamma^i_{j0} 
+= \frac{1}{2} \left\{ \frac{\partial}{\partial x_j} \frac{(\boldsymbol{\Omega} \times \mathbf{x})_i}{c} - \frac{\partial}{\partial x_i} \frac{(\boldsymbol{\Omega} \times \mathbf{x})_j}{c} \right\} \tag{11}
+$$
+
+と求まります。
+よって
+
+$$
+\nabla_U \frac{U}{c} \equiv
+\nabla_U \mathbf{e}_0 
+= \Gamma^\mu_{00} \mathbf{e}_\mu 
+= \frac{\mathbf{a}}{c^2} \tag{12}
+$$
+
+$$
+\nabla_U \mathbf{e}_j 
+= \frac{\mathbf{a} \cdot \mathbf{e}_j}{c^2} \frac{U}{c} + \boldsymbol{\epsilon} (\mathbf{U}, \boldsymbol{\Omega}, \mathbf{e}_j) \tag{13}
+$$
+
+を得ます。
+(13)式を、一般的な「輸送の法則」(general "law of transport")と呼びます。
+
+## フェルミ・ウォーカー輸送と自転角運動量ベクトルの直交性
+
+先程は$$\mathbf{e}_j$$を用いました。
+しかし以降では$$\mathbf{e}_j$$を、[レンズ・チュリング歳差運動](/gr/lense_thirring)で考えた惑星の自転角運動量ベクトル$$S^\mu$$に置き換えましょう。
+さらに惑星の慣性系で考えると、$$\boldsymbol{\Omega} = \mathbf{0}$$より
+
+$$
+\nabla_U S^\mu
+= \frac{U^\mu}{c^3} (a_\nu S^\nu) \tag{14}
+$$
+
+となります。
+これをフェルミ・ウォーカー輸送(Fermi-Walker transport)と呼びます。
+以下の式を計算しましょう。
+
+$$
+\nabla_U (S^\nu U_\nu) 
+= U_\nu \underbrace{(\nabla_U S^\nu)}_{(14)} + S^\nu \underbrace{(\nabla_U U_\nu)}_{(12)} 
+= \frac{\overbrace{U_\nu U^\nu}^{=-c^2}}{c^3} (a_\alpha S^\alpha) + S^\nu \frac{a_\nu}{c} 
+= 0 \tag{25}
+$$
+
+この計算から、初期に$$S^\nu U_\nu = 0$$ならば、世界線に沿って常に$$S^\nu U_\nu = 0$$であることがわかります。
 
 ## 参考文献
 

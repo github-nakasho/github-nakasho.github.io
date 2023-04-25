@@ -1,0 +1,165 @@
+I"w%
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#4元角運動量と4元速度の直交性工事中" id="markdown-toc-4元角運動量と4元速度の直交性工事中">4元角運動量と4元速度の直交性　（工事中…）</a>    <ol>
+      <li><a href="#座標変換とその計量" id="markdown-toc-座標変換とその計量">座標変換とその計量</a></li>
+      <li><a href="#クリストッフェル記号の計算と輸送の法則" id="markdown-toc-クリストッフェル記号の計算と輸送の法則">クリストッフェル記号の計算と輸送の法則</a></li>
+      <li><a href="#フェルミウォーカー輸送と自転角運動量ベクトルの直交性" id="markdown-toc-フェルミウォーカー輸送と自転角運動量ベクトルの直交性">フェルミ・ウォーカー輸送と自転角運動量ベクトルの直交性</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="4元角運動量と4元速度の直交性工事中">4元角運動量と4元速度の直交性　（工事中…）</h1>
+
+<p>ここではレンズ・チュリング歳差運動の計算で出現した、4元角運動量\(S^\mu\)と4元速度\(U^\mu\)の直交性</p>
+
+\[U_\mu S^\mu 
+= 0 \tag{1}\]
+
+<p>を証明していきます。</p>
+
+<h2 id="座標変換とその計量">座標変換とその計量</h2>
+
+<p>実験室系での粒子の座標を\(x^\hat{\mu}\)のようにハットをつけて表し、慣性系での粒子の座標を\(x^\mu\)のように書きます。
+初期に実験室系で\(x^\hat{i}=0\)に\(v^\hat{i}=0\)で静止している粒子について考えましょう。
+そして実験室系において、この粒子は一定の加速度\(a^\hat{i}\)で加速度運動し、さらに角速度\(\Omega^\hat{j}\)で回転を始めたとします。
+すると慣性系と実験室系の間の変換は</p>
+
+\[x^i 
+= x^\hat{i} + \frac{1}{2} a^\hat{i} \hat{t}^2 + \epsilon^\hat{i}_{\ \ \hat{j} \hat{k}} \Omega^\hat{j} x^\hat{k} \hat{t} \tag{2}\]
+
+<p>ここで\(c \hat{t} = x^{\hat{0}}\)より</p>
+
+\[x^i 
+= x^\hat{i} + \frac{1}{2} a^\hat{i} \frac{(x^\hat{0})^2}{c^2} + \epsilon^\hat{i}_{\ \ \hat{j} \hat{k}} \Omega^\hat{j} x^\hat{k} \frac{x^\hat{0}}{c} \tag{3}\]
+
+<p>のように書き直すことができます。
+\(\hat{t}\)秒後にこの粒子は\(v^\hat{j} = a^\hat{j} \hat{t} = a^\hat{j} x^\hat{0} / c\)で運動するので、ローレンツ変換より</p>
+
+\[ct 
+= (c\hat{t} + \beta_\hat{j} x^\hat{j}) \gamma 
+\underbrace{\simeq}_{\gamma \sim 1} c\hat{t} \left( 1 + \frac{v_\hat{j} x^\hat{j}}{c^2\hat{t}}\right) 
+= x^\hat{0} \left( 1 + \frac{a_\hat{j} x^\hat{j}}{c^2}\right) \tag{4}\]
+
+<p>の関係にあるとわかります。
+途中、この粒子の運動は非相対論的であるとして\(\gamma \sim 1\)のように近似しました。
+これらから</p>
+
+\[dx^i 
+= dx^\hat{i} + \frac{a^\hat{i} x^\hat{0} dx^\hat{0}}{c^2} + \epsilon^\hat{i}_{\ \ \hat{j} \hat{k}} \Omega^\hat{j} x^\hat{k} \frac{dx^\hat{0}}{c} \tag{5}\]
+
+\[dx^0 
+= dx^\hat{0} \left( 1 + \frac{a_\hat{j} x^\hat{j}}{c^2}\right) \tag{6}\]
+
+<p>を得ます。
+よって、慣性系での線素は</p>
+
+\[\begin{align}
+ds^2 
+&amp;= -c^2 dt^2 + \delta_{ij} dx^i dx^j \notag \\
+&amp;= - (dx^\hat{0})^2 \left( 1 + \frac{a_\hat{j} x^\hat{j}}{c^2}\right)^2 + \delta_{ij} \left(dx^\hat{i} + \frac{a^\hat{i} x^\hat{0} dx^\hat{0}}{c^2} + \epsilon^\hat{i}_{\ \ \hat{a} \hat{b}} \Omega^\hat{a} x^\hat{b} \frac{dx^\hat{0}}{c}\right) \left(dx^\hat{j} + \frac{a^\hat{j} x^\hat{0} dx^\hat{0}}{c^2} + \epsilon^\hat{j}_{\ \ \hat{c} \hat{d}} \Omega^\hat{c} x^\hat{d} \frac{dx^\hat{0}}{c}\right) \notag \\
+&amp;\simeq - (dx^\hat{0})^2  \left( 1 + \frac{2 a_\hat{j} x^\hat{j}}{c^2}\right) + (dx^\hat{i})^2 + 2 dx_\hat{i} \epsilon^\hat{i}_{\ \ \hat{a}\hat{b}} \Omega^\hat{a} x^\hat{b} \frac{dx^\hat{0}}{c} \notag \\
+&amp;= - \left( 1 + \frac{2 \mathbf{a} \cdot \mathbf{x}}{c^2} \right) (dx^\hat{0})^2 + (dx^\hat{i})^2 + 2 (\boldsymbol{\Omega} \times \mathbf{x}) \cdot \frac{dx^\hat{0} d\mathbf{x}}{c} \tag{7}
+\end{align}\]
+
+<p>以上から、実験室系での計量は</p>
+
+\[g_{00} 
+= -1 - \frac{2 \mathbf{a} \cdot \mathbf{x}}{c^2}, \quad g_{0i} 
+= \frac{(\boldsymbol{\Omega} \times \mathbf{x})_i}{c}, \quad g_{ij} 
+= \delta_{ij} \tag{8}\]
+
+<h2 id="クリストッフェル記号の計算と輸送の法則">クリストッフェル記号の計算と輸送の法則</h2>
+
+<p>ベクトルについての公式を導出するために、以下では世界線に沿った<a href="/gr/derivative">基底ベクトルの微分</a></p>
+
+\[\nabla_U \mathbf{e}_\alpha 
+= \nabla_\hat{0} \mathbf{e}_\alpha 
+= \Gamma^\mu_{0\alpha} \mathbf{e}_\mu \tag{9}\]
+
+<p>を考えます。
+よって<a href="/gr/christoffel">クリストッフェル記号</a>を計算しましょう。
+ここで、加速度や角速度は一定で時間に依存しないことに注意しましょう。
+さらにこれらの量は非相対論的であるとして、先程の計量は</p>
+
+\[g_{\mu \nu} 
+= \eta_{\mu \nu} + h_{\mu \nu} \quad (\vert h_{\mu \nu} \vert \ll 1) \tag{9}\]
+
+<p>のように書かれ、さらに<a href="/gr/christoffel">クリストッフェル記号</a>は</p>
+
+\[\Gamma^\mu_{\alpha 0} 
+\simeq \frac{1}{2} \eta^{\mu \nu} (\partial_\alpha h_{0\nu} + \partial_0 h_{\nu \alpha} - \partial_\nu h_{\alpha 0}) \tag{10}\]
+
+<p>のように計算されることから</p>
+
+\[\Gamma^0_{00} 
+= 0, \quad \Gamma^j_{00} 
+= \frac{a^j}{c^2}, \quad \Gamma^0_{j0} 
+= \frac{a_j}{c^2}, \quad \Gamma^i_{j0} 
+= \frac{1}{2} \left\{ \frac{\partial}{\partial x_j} \frac{(\boldsymbol{\Omega} \times \mathbf{x})_i}{c} - \frac{\partial}{\partial x_i} \frac{(\boldsymbol{\Omega} \times \mathbf{x})_j}{c} \right\} \tag{11}\]
+
+<p>と求まります。
+よって</p>
+
+\[\nabla_U U \equiv
+\nabla_U \mathbf{e}_0 
+= \Gamma^\mu_{00} \mathbf{e}_\mu 
+= \frac{\mathbf{a}}{c^2} \tag{12}\]
+
+\[\nabla_U \mathbf{e}_j 
+= \frac{\mathbf{a} \cdot \mathbf{e}_j}{c^2} U + \boldsymbol{\epsilon} (\mathbf{U}, \boldsymbol{\Omega}, \mathbf{e}_j) \tag{13}\]
+
+<p>を得ます。
+(13)式を、一般的な「輸送の法則」(general “law of transport”)と呼びます。</p>
+
+<h2 id="フェルミウォーカー輸送と自転角運動量ベクトルの直交性">フェルミ・ウォーカー輸送と自転角運動量ベクトルの直交性</h2>
+
+<p>先程は\(\mathbf{e}_j\)を用いました。
+しかし以降では\(\mathbf{e}_j\)を、<a href="/gr/lense_thirring">レンズ・チュリング歳差運動</a>で考えた惑星の自転角運動量ベクトル\(S^\mu\)に置き換えましょう。
+さらに惑星の慣性系で考えると、\(\boldsymbol{\Omega} = \mathbf{0}\)より</p>
+
+\[\nabla_U S^\mu
+= \frac{U^\mu}{c^2} (a_\nu \cdot S^\nu) \tag{14}\]
+
+<p>となります。
+これをフェルミ・ウォーカー輸送(Fermi-Walker transport)と呼びます。
+以下の式を計算しましょう。</p>
+
+\[\nabla_U (S^\nu U_\nu) 
+= U_\nu \underbrace{(\nabla_U S^\nu)}_{(14)} + S^\nu \underbrace{(\nabla_U U_\nu)}_{(12)} 
+= U_\nu \farc{U^\nu}{c^2} (a_\alpha S^\alpha) + S^\nu \frac{a_\nu}{c^2} 
+= 0 \tag{25}\]
+
+<p>この計算から、初期に\(S^\nu U_\nu = 0\)ならば、世界線に沿って常に\(S^\nu U_\nu = 0\)であることがわかります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/3MD1orv">Thorne &amp; Blandford, “Modern Classical Physics: Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics”</a><br />
+[2] <a href="https://amzn.to/3KOV7Yo">Hartle, “Gravity: An Introduction to Einstein’s General Relativity”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01LVZ72QL&amp;linkId=9b7f592d17f1e5e5bab70888d5ba05a1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=1316517543&amp;linkId=73f2d614dabc417ef58c27bf4247a6a2"></iframe>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

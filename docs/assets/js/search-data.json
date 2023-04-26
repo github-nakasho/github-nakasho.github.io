@@ -5581,7 +5581,7 @@
   },"930": {
     "doc": "パーカー不安定性",
     "title": "参考文献",
-    "content": ". | Fukui et al., 2006, “Modecular Loops in the Galactic Center: Evidence for Magnetic Flotation” | Horiuchi et al., 1988, | Parker, 1966 | 柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙” | . ",
+    "content": "[1] Fukui et al., 2006, “Modecular Loops in the Galactic Center: Evidence for Magnetic Flotation” [2] Horiuchi et al., 1988, “Parker Instability in Nonuniform Gravitational Fileds. I. Linear Stability Analysis” [3] Parker, 1966, “The Dynamical State of the Interstellar Gas and Field” [4] Priest, “Magnetohydrodynamics of the Sun” [5] 柴田一成, 横山央明, 工藤哲洋, “宇宙電磁流体力学の基礎” [6] 柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙” [7] 観山正見, 二間瀬敏史, 野本憲一, “天体物理学の基礎 II” . ",
     "url": "http://localhost:4000/mhd/parker#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/mhd/parker#参考文献"
   },"931": {
@@ -9889,7 +9889,7 @@
   },"1648": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "フーリエ変換による方法",
-    "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\begin{align} \\phi(\\mathbf{r}) &amp;= \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\notag \\\\ &amp;\\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk \\notag \\\\ &amp;= \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5} \\end{align}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (r) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] ",
+    "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\begin{align} \\phi(\\mathbf{r}) &amp;= \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\notag \\\\ &amp;\\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk \\notag \\\\ &amp;= \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5} \\end{align}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (r) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] . ",
     "url": "http://localhost:4000/plasma/yukawa_pot#%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AB%E3%82%88%E3%82%8B%E6%96%B9%E6%B3%95",
     "relUrl": "/plasma/yukawa_pot#フーリエ変換による方法"
   },"1649": {
@@ -9906,47 +9906,53 @@
     "relUrl": "/plasma/yukawa_pot#補遺-juliaスクリプト"
   },"1651": {
     "doc": "湯川型ポテンシャルの導出",
+    "title": "参考文献",
+    "content": "[1] Chen, “プラズマ物理入門” [2] 小野高幸, 三好由純, “太陽地球圏” [3] 田中基彦, 西川恭治, “高温プラズマの物理学” . ",
+    "url": "http://localhost:4000/plasma/yukawa_pot#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    "relUrl": "/plasma/yukawa_pot#参考文献"
+  },"1652": {
+    "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
-    "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | 補遺: Juliaスクリプト | . | . ",
+    "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | 補遺: Juliaスクリプト | 参考文献 | . | . ",
     "url": "http://localhost:4000/plasma/yukawa_pot",
     "relUrl": "/plasma/yukawa_pot"
-  },"1652": {
+  },"1653": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "http://localhost:4000/math/zeta#zeta%E9%96%A2%E6%95%B0",
     "relUrl": "/math/zeta#zeta関数"
-  },"1653": {
+  },"1654": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "http://localhost:4000/math/zeta#%E5%AE%9A%E7%BE%A9",
     "relUrl": "/math/zeta#定義"
-  },"1654": {
+  },"1655": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"1655": {
+  },"1656": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "http://localhost:4000/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"1656": {
+  },"1657": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "http://localhost:4000/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"1657": {
+  },"1658": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "http://localhost:4000/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     "relUrl": "/math/zeta#参考文献"
-  },"1658": {
+  },"1659": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

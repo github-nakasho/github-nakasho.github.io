@@ -18,7 +18,7 @@ nav_order: 8
 {:toc}
 </details>
 
-{% include adsense.html %} 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785328126&linkId=a4804c04e708d41bf7b16e16220e3b41"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_top&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=705b08d8a5e3c236f33de0ea6a70ac3a"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C23QKK93&linkId=79d03f2b96f017fc71eea6043f7b5f47"></iframe>
 
 # パーカー不安定性 (Parker instability)
 
@@ -125,6 +125,8 @@ $$
 = \frac{GM}{r_0} \int_0^z \tilde{g}(z) dz
 = \frac{GM}{r_0} \tilde{\Phi}
 $$
+
+{% include adsense.html %}
 
 ## 線形解析
 
@@ -397,6 +399,8 @@ $$
 
 のように書けます。これを数値積分してやれば良いことがわかります。
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785328126&linkId=a4804c04e708d41bf7b16e16220e3b41"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_top&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=705b08d8a5e3c236f33de0ea6a70ac3a"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C23QKK93&linkId=79d03f2b96f017fc71eea6043f7b5f47"></iframe>
+
 ### 境界条件
 
 $$z \rightarrow \infty$$で2つの物理量は減衰するような境界条件を設定します。すなわち
@@ -455,7 +459,7 @@ $$\kappa < 0$$のとなるような解を選択するので、$$\kappa_{-} = \fr
 
 ### どういう形のモードが成長しやすい？
 
-同じ波数でも、赤道面を挟んですべり対称のモードの方が鏡像対称よりも成長率が大きくなります。
+同じ波数でも、赤道面を挟んですべり対称のモード(下図左パネル)の方が鏡像対称(下図右パネル)よりも成長率が大きくなります。
 
 ![磁力線の概形、すべり対称(左図)と鏡像対称(右図)](/assets/images/mhd/parker_mirror_glide.png)
 
@@ -562,7 +566,12 @@ $$
 
 ## 参考文献
 
-* [Fukui et al., 2006, "Modecular Loops in the Galactic Center: Evidence for Magnetic Flotation"](https://www.science.org/doi/10.1126/science.1130425)
-* Horiuchi et al., 1988,   
-* Parker, 1966  
-* 柴田一成, 福江純, 松元亮治, 嶺重慎, "活動する宇宙"  
+[1] [Fukui et al., 2006, "Modecular Loops in the Galactic Center: Evidence for Magnetic Flotation"](https://www.science.org/doi/10.1126/science.1130425)  
+[2] [Horiuchi et al., 1988, "Parker Instability in Nonuniform Gravitational Fileds. I. Linear Stability Analysis"](https://articles.adsabs.harvard.edu//full/1988PASJ...40..147H/0000147.000.html)  
+[3] [Parker, 1966, "The Dynamical State of the Interstellar Gas and Field"](https://ui.adsabs.harvard.edu/abs/1966ApJ...145..811P/abstract)  
+[4] [Priest, "Magnetohydrodynamics of the Sun"](https://amzn.to/3Lsyh87)  
+[5] [柴田一成, 横山央明, 工藤哲洋, "宇宙電磁流体力学の基礎"](https://amzn.to/3HdlIvQ)  
+[6] [柴田一成, 福江純, 松元亮治, 嶺重慎, "活動する宇宙"](https://amzn.to/3oHt84j)  
+[7] [観山正見, 二間瀬敏史, 野本憲一, "天体物理学の基礎 II"](https://amzn.to/3Hb8dgc)  
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785328126&linkId=a4804c04e708d41bf7b16e16220e3b41"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_top&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=705b08d8a5e3c236f33de0ea6a70ac3a"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C23QKK93&linkId=79d03f2b96f017fc71eea6043f7b5f47"></iframe>

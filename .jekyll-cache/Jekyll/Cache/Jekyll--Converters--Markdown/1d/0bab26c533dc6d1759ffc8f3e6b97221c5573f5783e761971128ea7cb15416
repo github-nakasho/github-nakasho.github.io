@@ -1,4 +1,4 @@
-I"�
+I"Յ
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -33,13 +33,9 @@
 
 </details>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4785328126&amp;linkId=a4804c04e708d41bf7b16e16220e3b41"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_top&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=705b08d8a5e3c236f33de0ea6a70ac3a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0C23QKK93&amp;linkId=79d03f2b96f017fc71eea6043f7b5f47"></iframe>
 
 <h1 id="パーカー不安定性-parker-instability">パーカー不安定性 (Parker instability)</h1>
 
@@ -118,6 +114,14 @@
 = \frac{GM}{r_0^2} \int_0^{Z} \frac{Z}{(1+Z^2)^{3/2}} r_0 dZ 
 = \frac{GM}{r_0} \int_0^z \tilde{g}(z) dz
 = \frac{GM}{r_0} \tilde{\Phi}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="線形解析">線形解析</h2>
 
@@ -380,7 +384,7 @@ D_{\eta \xi} &amp; D_{\eta \eta}
 
 <h3 id="どういう形のモードが成長しやすい">どういう形のモードが成長しやすい？</h3>
 
-<p>同じ波数でも、赤道面を挟んですべり対称のモードの方が鏡像対称よりも成長率が大きくなります。</p>
+<p>同じ波数でも、赤道面を挟んですべり対称のモード(下図左パネル)の方が鏡像対称(下図右パネル)よりも成長率が大きくなります。</p>
 
 <p><img src="/assets/images/mhd/parker_mirror_glide.png" alt="磁力線の概形、すべり対称(左図)と鏡像対称(右図)" /></p>
 

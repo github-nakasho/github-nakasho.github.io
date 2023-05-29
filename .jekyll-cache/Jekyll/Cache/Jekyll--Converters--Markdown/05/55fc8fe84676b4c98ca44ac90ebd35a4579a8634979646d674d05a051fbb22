@@ -1,4 +1,4 @@
-I"5
+I"5
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -55,7 +55,7 @@ J_{\nu+1} = -J_\nu' +\frac{\nu}{z} J_\nu\]
 \[z^{-(\nu+\xi)} J_{\nu+\xi} 
 = (-1)^\xi \left( \frac{1}{z} \frac{d}{dz}\right)^\xi (z^{-\nu} J_\nu)\]
 
-<p>を得ます。\(xi = n, \nu = 1/2\)を代入すれば、半整数次に対するベッセル関数の式</p>
+<p>を得ます。\(\xi = n, \nu = 1/2\)を代入すれば、半整数次に対するベッセル関数の式</p>
 
 \[z^{-(n+1/2)} J_{n+1/2} 
 = (-1)^n \left( \frac{1}{z} \frac{d}{dz}\right)^n (z^{-1/2} J_{1/2}) \tag{3}\]

@@ -80,6 +80,8 @@ $$
 \nabla \cdot \mathbf{B} = 0 \tag{5}
 $$
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BJ1NWLNM&linkId=269b352ea0213497e468778abe8d2f57"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00C59C7ZA&linkId=ea337f4674c200ee509c9f014e53eca1"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=902771374X&linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>
+
 ## 方程式の線形化
 
 最初、系は定常状態にあるとします。そのときの物理量をそれぞれ
@@ -256,8 +258,6 @@ $$
 = 0 \tag{22} 
 $$
 
-{% include adsense.html %} 
-
 ## フーリエモード
 
 ここで$$\rho, \mathbf{v}, \mathbf{B}, P$$の微小摂動の1つのフーリエモードに着目します。すなわち
@@ -335,6 +335,8 @@ $$
 \frac{\partial}{\partial y} \left\{ (\omega -kv_0) \rho_0 \frac{\partial \delta v_y}{\partial y} + k \rho_0 \delta v_y \frac{\partial v_0}{\partial y} \right\} - \rho_0 k^2 (\omega -kv_0) \delta v_y 
 = \frac{k^2 B_0^2}{4\pi} \left( \frac{\partial^2}{\partial y^2} - k^2\right) \left( \frac{\delta v_y}{\omega -kv_0}\right) + \frac{k^2g}{\omega-kv_0} \delta v_y \frac{\partial \rho_0}{\partial y} \tag{29}
 $$
+
+{% include adsense.html %}
 
 ## 境界面以外の取り扱い
 
@@ -490,6 +492,8 @@ $$
 \end{align}
 $$
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BJ1NWLNM&linkId=269b352ea0213497e468778abe8d2f57"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00C59C7ZA&linkId=ea337f4674c200ee509c9f014e53eca1"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=902771374X&linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>
+
 ## レイリー・テイラー不安定性の条件
 
 ### 磁場がない場合
@@ -626,15 +630,14 @@ $$
 
 # 参考文献
 
-[1] 観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”  
-[2] 福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”  
-[3] 福井康雄, 犬塚修一郎, 大西利和, 中井直正, 舞原俊憲, 水野亮, "星間物質と星形成"  
-[4] S. Chandrasekhar, "Hydrodynamic and Hydromagnetic Stability"  
-[5] E. Priest, "Solar MagnetohydroDynamics"  
+[1] [観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”](https://amzn.to/40NHcpY)  
+[2] [福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”](https://amzn.to/3nbA8pC)  
+[3] [福井康雄, 犬塚修一郎, 大西利和, 中井直正, 舞原俊憲, 水野亮, "星間物質と星形成"](https://amzn.to/3LdFHMb)  
+[4] [S. Chandrasekhar, "Hydrodynamic and Hydromagnetic Stability"](https://amzn.to/3NfUubT)  
+[5] [E. Priest, "Solar MagnetohydroDynamics"](https://amzn.to/41ZJTWs)  
 [6] [Kuranz et al., 2018, "How high energy fluxes may affect Rayleigh-Taylor instability growth in young supernova remnants"](https://www.nature.com/articles/s41467-018-03548-7#Sec11)  
 [7] [Chen et al., 2016, "Magnetar-Powered Supernovae in Two Dimensions. I. Superluminous Supernovae"](https://iopscience.iop.org/article/10.3847/0004-637X/832/1/73)  
 [8] [Pasetto et al., 2021, "Reading M87's DNA: A Double Helix revealing a large scale Helical Magnetic Field"](https://iopscience.iop.org/article/10.3847/2041-8213/ac3a88)  
 [9] [Asahina et al., 2014, "Magnetohydrodynamic Simulations of a Jet Drilling an HI Cloud: Shock Induced Formation of Molecular Clouds and Jet Breakup"](https://iopscience.iop.org/article/10.1088/0004-637X/789/1/79)
 
-{% include adsense.html %} 
-
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=453560732X&linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BJ1NWLNM&linkId=269b352ea0213497e468778abe8d2f57"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00C59C7ZA&linkId=ea337f4674c200ee509c9f014e53eca1"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=902771374X&linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>

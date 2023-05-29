@@ -1,4 +1,4 @@
-I"��
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -90,6 +90,11 @@
 <p>マクスウェル方程式から、磁気単極子が存在しないことを表す式より</p>
 
 \[\nabla \cdot \mathbf{B} = 0 \tag{5}\]
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BJ1NWLNM&amp;linkId=269b352ea0213497e468778abe8d2f57"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00C59C7ZA&amp;linkId=ea337f4674c200ee509c9f014e53eca1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=902771374X&amp;linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>
 
 <h2 id="方程式の線形化">方程式の線形化</h2>
 
@@ -225,14 +230,6 @@ P = P_0 + \delta P\]
 = \frac{\partial \delta B_y}{\partial t} + v_0 \frac{\partial \delta B_y}{\partial x} - B_0 \frac{\partial \delta v_y}{\partial x} 
 = 0 \tag{22}\]
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
-
 <h2 id="フーリエモード">フーリエモード</h2>
 
 <p>ここで\(\rho, \mathbf{v}, \mathbf{B}, P\)の微小摂動の1つのフーリエモードに着目します。すなわち</p>
@@ -292,6 +289,14 @@ P = P_0 + \delta P\]
 
 \[\frac{\partial}{\partial y} \left\{ (\omega -kv_0) \rho_0 \frac{\partial \delta v_y}{\partial y} + k \rho_0 \delta v_y \frac{\partial v_0}{\partial y} \right\} - \rho_0 k^2 (\omega -kv_0) \delta v_y 
 = \frac{k^2 B_0^2}{4\pi} \left( \frac{\partial^2}{\partial y^2} - k^2\right) \left( \frac{\delta v_y}{\omega -kv_0}\right) + \frac{k^2g}{\omega-kv_0} \delta v_y \frac{\partial \rho_0}{\partial y} \tag{29}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="境界面以外の取り扱い">境界面以外の取り扱い</h2>
 
@@ -408,6 +413,11 @@ v_A^2 \equiv \frac{B_0^2}{4\pi \frac{(\rho_0^{(1)} + \rho_0^{(1)})}{2}} = \frac{
 &amp;= \alpha_1 v_0^{(1)} + \alpha_2 v_0^{(2)} \pm \sqrt{(\alpha_1 v_0^{(1)} + \alpha_2 v_0^{(2)})^2 - \{ \alpha_1 (v_0^{(1)})^2 + \alpha_2 (v_0^{(2)})^2 \} + v_A^2 - \frac{g}{k} (\alpha_1-\alpha_2)} \notag \\
 &amp;= \alpha_1 v_0^{(1)} + \alpha_2 v_0^{(2)} \pm \sqrt{v_A^2 - \alpha_1 \alpha_2 (v_0^{(1)} - v_0^{(2)})^2 - \frac{g}{k} (\alpha_1 - \alpha_2)} \tag{36}
 \end{align}\]
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BJ1NWLNM&amp;linkId=269b352ea0213497e468778abe8d2f57"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00C59C7ZA&amp;linkId=ea337f4674c200ee509c9f014e53eca1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=902771374X&amp;linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>
 
 <h2 id="レイリーテイラー不安定性の条件">レイリー・テイラー不安定性の条件</h2>
 
@@ -529,22 +539,18 @@ v_A^2 \equiv \frac{B_0^2}{4\pi \frac{(\rho_0^{(1)} + \rho_0^{(1)})}{2}} = \frac{
 
 <h1 id="参考文献">参考文献</h1>
 
-<p>[1] 観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”<br />
-[2] 福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”<br />
-[3] 福井康雄, 犬塚修一郎, 大西利和, 中井直正, 舞原俊憲, 水野亮, “星間物質と星形成”<br />
-[4] S. Chandrasekhar, “Hydrodynamic and Hydromagnetic Stability”<br />
-[5] E. Priest, “Solar MagnetohydroDynamics”<br />
+<p>[1] <a href="https://amzn.to/40NHcpY">観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”</a><br />
+[2] <a href="https://amzn.to/3nbA8pC">福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”</a><br />
+[3] <a href="https://amzn.to/3LdFHMb">福井康雄, 犬塚修一郎, 大西利和, 中井直正, 舞原俊憲, 水野亮, “星間物質と星形成”</a><br />
+[4] <a href="https://amzn.to/3NfUubT">S. Chandrasekhar, “Hydrodynamic and Hydromagnetic Stability”</a><br />
+[5] <a href="https://amzn.to/41ZJTWs">E. Priest, “Solar MagnetohydroDynamics”</a><br />
 [6] <a href="https://www.nature.com/articles/s41467-018-03548-7#Sec11">Kuranz et al., 2018, “How high energy fluxes may affect Rayleigh-Taylor instability growth in young supernova remnants”</a><br />
 [7] <a href="https://iopscience.iop.org/article/10.3847/0004-637X/832/1/73">Chen et al., 2016, “Magnetar-Powered Supernovae in Two Dimensions. I. Superluminous Supernovae”</a><br />
 [8] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac3a88">Pasetto et al., 2021, “Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field”</a><br />
 [9] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/789/1/79">Asahina et al., 2014, “Magnetohydrodynamic Simulations of a Jet Drilling an HI Cloud: Shock Induced Formation of Molecular Clouds and Jet Breakup”</a></p>
 
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
-
-<!-- for_jekyll -->
-<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
-
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=453560732X&amp;linkId=0415610d34a72dbed0e4f4518666f6c8"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BJ1NWLNM&amp;linkId=269b352ea0213497e468778abe8d2f57"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00C59C7ZA&amp;linkId=ea337f4674c200ee509c9f014e53eca1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=902771374X&amp;linkId=9f551b33ccc0ef5a6a06e5040a851ef7"></iframe>
 :ET

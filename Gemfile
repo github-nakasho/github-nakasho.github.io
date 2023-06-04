@@ -34,5 +34,12 @@ gem "webrick", "~> 1.7"
 # for using theme of just-the-docs
 # gem "just-the-docs", "0.3.3"
 gem "just-the-docs"
-gem "jekyll-twitter-plugin"
+gem 'jekyll-twitter-plugin'
 gem 'jekyll-amazon', group: [:jekyll_plugins]
+
+# for pdf embed
+
+group :jekyll_plugins do
+  gem "jekyll-pdf-embed"
+end
+

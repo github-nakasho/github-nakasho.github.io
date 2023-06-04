@@ -20,7 +20,7 @@ permalink: /
 
 ### Twitter
 
-[@tweet_nakasho](https://twitter.com/tweet_nakasho){: .btn .btn-purple }
+[@tweetnakasho](https://twitter.com/tweetnakasho){: .btn .btn-purple }
 
 ### Current Job
 

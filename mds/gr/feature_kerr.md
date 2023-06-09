@@ -100,6 +100,49 @@ $$
 
 ![](/assets/images/gr/feature_kerr_02.png)
 
+次にこの地平面の面積を計算します。
+まずは$$r, t$$が一定となるような表面の面積を計算してみましょう。
+$$dt = dr = 0$$より、(1)式から
+
+$$
+ds^2 
+= \frac{(r^2+a^2)^2 - a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \rho^2 d\theta^2 \tag{7}
+$$
+
+です。
+ここから、[面積積分の際に必要となる計量の行列式](/gr/volume)が
+
+$$
+\sqrt{g} 
+= \sqrt{\frac{(r^2+a^2)^2 - a^2 \Delta \sin^2 \theta}{\rho^2} \rho^2 }
+= \sqrt{(r^2+a^2)^2 - a^2 \Delta } \sin \theta \tag{8}
+$$
+
+のように求まります。
+
+注意: マイナスがないのは、時間部分を考えていないためです。
+{: .label .label-yellow }
+
+これを$$\theta, \varphi$$で積分したものが面積となるので
+
+$$
+A(r) 
+= \int_0^\pi d\theta \int_0^{2\pi} d\varphi \sqrt{(r^2+a^2)^2 - a^2 \Delta } \sin \theta 
+= 4\pi \sqrt{(r^2+a^2)^2 - a^2 \Delta } \tag{9}
+$$
+
+となります。
+地平面においては$$\Delta = 0$$より
+
+$$
+A(r_+) 
+= 4\pi (r_+^2 + a^2) \tag{10}
+$$
+
+のように、最終的な計算結果を得ます。
+(6)式から、$$r_+$$は$$r_g \propto M$$です。
+よって、カーブラックホールの地平面の面積は$$M^2$$に比例することがわかります。
+
 ## 慣性系の引きずり
 
 カー時空は軸対称性であり、方位角$$\varphi$$に依存しません。よって$$\varphi$$方向の単位質量あたりの角運動量を$$U_\varphi$$のように書くと、これは保存します。
@@ -110,7 +153,7 @@ $$
 = \frac{d\varphi}{d\tau} \frac{d\tau}{dt} 
 = \frac{U^{\varphi}}{U^0 / c} 
 = \frac{c (g^{\varphi \varphi} U_\varphi + g^{\varphi 0} U_0)}{g^{00} U_0 + g^{0\varphi} U_\varphi} 
-= \frac{c g^{0 \varphi}}{g^{00}} \tag{7}
+= \frac{c g^{0 \varphi}}{g^{00}} \tag{11}
 $$
 
 この結果は、軌道角運動量がゼロだった粒子が、ブラックホールの自転による時空の引きずり効果で角速度を持つことを意味しています。
@@ -120,5 +163,6 @@ $$
 
 [1] 内山龍雄, "一般相対性理論"  
 [2] ランダウ, リフシッツ, "場の古典論"  
+[3] Schutz, "A First Course in General Relativity"  
 
 {% include adsense.html %}

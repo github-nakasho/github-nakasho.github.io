@@ -1,4 +1,4 @@
-I"�
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -87,6 +87,40 @@ r_+ = \frac{r_g + \sqrt{r_g^2 - 4a^2}}{2} \tag{6}\]
 
 <p><img src="/assets/images/gr/feature_kerr_02.png" alt="" /></p>
 
+<p>次にこの地平面の面積を計算します。
+まずは\(r, t\)が一定となるような表面の面積を計算してみましょう。
+\(dt = dr = 0\)より、(1)式から</p>
+
+\[ds^2 
+= \frac{(r^2+a^2)^2 - a^2 \Delta \sin^2 \theta}{\rho^2} \sin^2 \theta d\varphi^2 + \rho^2 d\theta^2 \tag{7}\]
+
+<p>です。
+ここから、<a href="/gr/volume">面積積分の際に必要となる計量の行列式</a>が</p>
+
+\[\sqrt{g} 
+= \sqrt{\frac{(r^2+a^2)^2 - a^2 \Delta \sin^2 \theta}{\rho^2} \rho^2 }
+= \sqrt{(r^2+a^2)^2 - a^2 \Delta } \sin \theta \tag{8}\]
+
+<p>のように求まります。</p>
+
+<p class="label label-yellow">注意: マイナスがないのは、時間部分を考えていないためです。</p>
+
+<p>これを\(\theta, \varphi\)で積分したものが面積となるので</p>
+
+\[A(r) 
+= \int_0^\pi d\theta \int_0^{2\pi} d\varphi \sqrt{(r^2+a^2)^2 - a^2 \Delta } \sin \theta 
+= 4\pi \sqrt{(r^2+a^2)^2 - a^2 \Delta } \tag{9}\]
+
+<p>となります。
+地平面においては\(\Delta = 0\)より</p>
+
+\[A(r_+) 
+= 4\pi (r_+^2 + a^2) \tag{10}\]
+
+<p>のように、最終的な計算結果を得ます。
+(6)式から、\(r_+\)は\(r_g \propto M\)です。
+よって、カーブラックホールの地平面の面積は\(M^2\)に比例することがわかります。</p>
+
 <h2 id="慣性系の引きずり">慣性系の引きずり</h2>
 
 <p>カー時空は軸対称性であり、方位角\(\varphi\)に依存しません。よって\(\varphi\)方向の単位質量あたりの角運動量を\(U_\varphi\)のように書くと、これは保存します。
@@ -96,7 +130,7 @@ r_+ = \frac{r_g + \sqrt{r_g^2 - 4a^2}}{2} \tag{6}\]
 = \frac{d\varphi}{d\tau} \frac{d\tau}{dt} 
 = \frac{U^{\varphi}}{U^0 / c} 
 = \frac{c (g^{\varphi \varphi} U_\varphi + g^{\varphi 0} U_0)}{g^{00} U_0 + g^{0\varphi} U_\varphi} 
-= \frac{c g^{0 \varphi}}{g^{00}} \tag{7}\]
+= \frac{c g^{0 \varphi}}{g^{00}} \tag{11}\]
 
 <p>この結果は、軌道角運動量がゼロだった粒子が、ブラックホールの自転による時空の引きずり効果で角速度を持つことを意味しています。
 引きずりにより回転の向きはブラックホールの自転の向きと同じです。</p>
@@ -104,7 +138,8 @@ r_+ = \frac{r_g + \sqrt{r_g^2 - 4a^2}}{2} \tag{6}\]
 <h1 id="参考文献">参考文献</h1>
 
 <p>[1] 内山龍雄, “一般相対性理論”<br />
-[2] ランダウ, リフシッツ, “場の古典論”</p>
+[2] ランダウ, リフシッツ, “場の古典論”<br />
+[3] Schutz, “A First Course in General Relativity”</p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

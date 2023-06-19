@@ -1,0 +1,123 @@
+I"�#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#輻射場のフーリエスペクトル" id="markdown-toc-輻射場のフーリエスペクトル">輻射場のフーリエスペクトル</a>    <ol>
+      <li><a href="#その1" id="markdown-toc-その1">その1</a></li>
+      <li><a href="#その2" id="markdown-toc-その2">その2</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="輻射場のフーリエスペクトル">輻射場のフーリエスペクトル</h1>
+
+<h2 id="その1">その1</h2>
+
+<p>位置\(\mathbf{r}\)にいる観測者が時刻\(t\)に観測する輻射場のフーリエスペクトル</p>
+
+\[\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+= \frac{1}{2\pi} \int_{T_1}^{T_2} \frac{q}{c} \frac{\mathbf{n} \times \{ (\mathbf{n}-\boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\}}{\kappa(t')^3 R(t')} e^{i\omega t} dt\]
+
+<p>を求めましょう。ここで\(\mathbf{R} (t') = \mathbf{r} - \mathbf{r}_0 (t'), \mathbf{n}(t') = \mathbf{R}(t')/R(t')\)ですが、今、\(\mathbf{n}\)の時間変化は微小として定ベクトルとして扱うことにします。また\(t'=t-R(t')/c\)は遅延時刻、そして\(T_1 &lt; t &lt; T_2\)はスペクトルを求めるために輻射場が観測された時間です。</p>
+
+<p>\(dt = \kappa (t') dt'\)より、\(t = T_1 \rightarrow T_2\)のとき\(t' = T_1' \rightarrow T_2'\)としましょう。観測者と荷電粒子との相対距離\(R\)において成り立つ式</p>
+
+\[R^2 
+= \mathbf{R} \cdot (\mathbf{r}-\mathbf{r}_0) 
+\ \Longrightarrow \ 
+R 
+= \mathbf{n} \cdot (\mathbf{r}-\mathbf{r}_0)\]
+
+<p>を用いて</p>
+
+\[\begin{align}
+\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+&amp;= \frac{1}{2\pi} \frac{q}{c} \int_{T_1'}^{T_2'} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\} }{\kappa(t')^3 R(t')}  e^{i \omega (t'+\frac{R(t')}{c})}\kappa(t') \ dt' \notag \\
+&amp;= \frac{1}{2\pi} \frac{q}{c} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\}}{\kappa(t')^2 R(t')} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \ dt' \notag
+\end{align}\]
+
+<p>さらに分母に出現している\(R(t')\)も時間変化が無視できるほど小さいとして、代表時刻(例えば\(t'=0\))での相対距離\(R\)で近似すると</p>
+
+\[\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\}}{\kappa(t')^2} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \tag{1}\]
+
+<p>のようになります。
+上式に\(\dot{\boldsymbol{\beta}}\)が含まれているため、これを部分積分で除去しましょう。</p>
+
+\[\frac{d \kappa}{dt} 
+= \frac{d}{dt} (1- \mathbf{n} \cdot \boldsymbol{\beta}) 
+= - \mathbf{n} \cdot \dot{\boldsymbol{\beta}}\]
+
+\[\frac{\mathbf{n}\times \{ (\mathbf{n}- \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \}}{\kappa^2}
+= \frac{\mathbf{n} \times (\mathbf{n} \times \dot{\boldsymbol{\beta}}) - \mathbf{n} \times (\boldsymbol{\beta} \times \dot{\boldsymbol{\beta}})}{\kappa^2} 
+= \frac{(\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - \dot{\boldsymbol{\beta}} - (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \boldsymbol{\beta} + (\mathbf{n} \cdot \boldsymbol{\beta}) \dot{\boldsymbol{\beta}}}{\kappa^2} 
+= \frac{(\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) (\mathbf{n} - \boldsymbol{\beta}) -\dot{\boldsymbol{\beta}} \kappa}{\kappa^2}\]
+
+\[\begin{align}
+\frac{d}{dt} \left( \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa}\right) 
+&amp;= \frac{[(\mathbf{n}\cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - \dot{\boldsymbol{\beta}} ] \kappa - [(\mathbf{n}\cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta} ] \dot{\kappa}}{\kappa^2} 
+= \frac{[(\mathbf{n}\cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - \dot{\boldsymbol{\beta}} ] (1-\mathbf{n} \cdot \boldsymbol{\beta}) + [(\mathbf{n} \cdot \boldsymbol{\beta}) \mathbf{n} - \boldsymbol{\beta} ] (\mathbf{n} \cdot \dot{\boldsymbol{\beta}})}{\kappa^2} \notag \\
+&amp;= \frac{[(\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \mathbf{n} - \dot{\boldsymbol{\beta}} ] + (\mathbf{n} \cdot \boldsymbol{\beta}) \dot{\boldsymbol{\beta}} - (\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) \boldsymbol{\beta}}{\kappa^2} 
+= \frac{(\mathbf{n} \cdot \dot{\boldsymbol{\beta}}) (\mathbf{n} - \boldsymbol{\beta}) -\dot{\boldsymbol{\beta}} \kappa}{\kappa^2} \notag
+\end{align}\]
+
+\[\therefore \ 
+\frac{\mathbf{n}\times \{ (\mathbf{n}- \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \}}{\kappa^2} 
+= \frac{d}{dt} \left( \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa}\right)\]
+
+<p>よって</p>
+
+\[\begin{align}
+\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+&amp;= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{d}{dt'} \left( \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa}\right) e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \notag \\
+&amp;= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \left[ \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \right]_{T_1}^{T_2} - \frac{i \omega q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \int_{T'_1}^{T'_2} \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa} (1- \mathbf{u} \cdot \mathbf{n}) e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \notag \\
+&amp;= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \left[ \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \right]_{T_1}^{T_2} - \frac{i \omega q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \int_{T'_1}^{T'_2} \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa} \underbrace{(1- \frac{\mathbf{u} \cdot \mathbf{n}}{c})}_{=\kappa} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \notag \\
+&amp;= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \left[ \frac{\mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})}{\kappa} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \right]_{T_1}^{T_2} - \frac{i \omega q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \int_{T'_1}^{T'_2} \mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \notag
+\end{align}\]
+
+<p>荷電粒子の軌道をこの式に代入すれば、その荷電粒子から放射される輻射のスペクトルを求めることができます。長時間平均を取ると右辺の第1項が消えて</p>
+
+\[\hat{\mathbf{E}} (\mathbf{r}, \omega)
+= - \frac{i \omega q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \int_{T'_1}^{T'_2} \mathbf{n} \times (\mathbf{n} \times \boldsymbol{\beta})e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt'\]
+
+<p>の部分のみが残ります。</p>
+
+<h2 id="その2">その2</h2>
+
+<p>輻射場のフーリエスペクトルは、この表記だけではありません。
+(1)式において、\(T_1 \rightarrow -\infty, T_2 \rightarrow \infty\)の場合を考えましょう。
+この荷電粒子は観測者から十分に遠く、\(\mathbf{n}\)jは定ベクトルとして扱って良いとします。
+また加速度\(\dot{\boldsymbol{\beta}} = \mathbf{a} /c\)が十分に弱いため、速度ベクトルもほぼ一定であるとすると</p>
+
+\[\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+= \frac{q}{2\pi c R} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta}) \times \hat{\mathbf{a}}\}}{\kappa^2 c} \tag{2}\]
+
+<p>のように書くこともできます。
+ここで</p>
+
+\[\hat{\mathbf{a}} 
+= \int_{-\infty}^\infty \mathbf{a} (t') e^{i\omega t'} dt' \tag{3}\]
+
+<p>は、加速度をフーリエ変換したものです。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

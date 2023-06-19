@@ -22,6 +22,8 @@ nav_order: 10
 
 # 輻射場のフーリエスペクトル
 
+## その1
+
 位置$$\mathbf{r}$$にいる観測者が時刻$$t$$に観測する輻射場のフーリエスペクトル
 
 $$
@@ -47,7 +49,7 @@ $$
 \begin{align}
 \hat{\mathbf{E}} (\mathbf{r}, \omega) 
 &= \frac{1}{2\pi} \frac{q}{c} \int_{T_1'}^{T_2'} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\} }{\kappa(t')^3 R(t')}  e^{i \omega (t'+\frac{R(t')}{c})}\kappa(t') \ dt' \notag \\
-&= \frac{1}{2\pi} \frac{q}{c} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}}\} (t')}{\kappa(t')^2 R(t')} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \ dt' \notag
+&= \frac{1}{2\pi} \frac{q}{c} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\}}{\kappa(t')^2 R(t')} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} \ dt' \notag
 \end{align}
 $$
 
@@ -55,9 +57,10 @@ $$
 
 $$
 \hat{\mathbf{E}} (\mathbf{r}, \omega) 
-= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}}\} (t')}{\kappa(t')^2} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt'
+= \frac{q}{2\pi cR} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}}\int_{T'_1}^{T'_2} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta} (t')) \times \dot{\boldsymbol{\beta}} (t')\}}{\kappa(t')^2} e^{i \omega (t'-\frac{\mathbf{r}_0(t') \cdot \mathbf{n}}{c})} dt' \tag{1}
 $$
 
+のようになります。
 上式に$$\dot{\boldsymbol{\beta}}$$が含まれているため、これを部分積分で除去しましょう。
 
 $$
@@ -111,5 +114,28 @@ $$
 $$
 
 の部分のみが残ります。
+
+## その2
+
+輻射場のフーリエスペクトルは、この表記だけではありません。
+(1)式において、$$T_1 \rightarrow -\infty, T_2 \rightarrow \infty$$の場合を考えましょう。
+この荷電粒子は観測者から十分に遠く、$$\mathbf{n}$$は定ベクトルとして扱って良いとします。
+また加速度$$\dot{\boldsymbol{\beta}} = \mathbf{a} /c$$が十分に弱いため、速度ベクトルもほぼ一定であるとすると
+
+$$
+\hat{\mathbf{E}} (\mathbf{r}, \omega) 
+= \frac{q}{2\pi c R} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \frac{\mathbf{n} \times \{ (\mathbf{n} - \boldsymbol{\beta}) \times \hat{\mathbf{a}}_{\omega'}\}}{\kappa^2 c} \tag{2}
+$$
+
+のように書くこともできます。
+ここで
+
+$$
+\hat{\mathbf{a}}_{\omega'}
+= \int_{-\infty}^\infty \mathbf{a} (t') e^{i\omega' t'} dt' \tag{3}
+$$
+
+は、加速度をフーリエ変換したものです。
+また$$\omega' = \omega (1 - \frac{\mathbf{r}_0 \cdot \mathbf{n}}{ct'})$$を用いました。
 
 {% include adsense.html %}

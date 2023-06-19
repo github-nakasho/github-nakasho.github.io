@@ -772,11 +772,13 @@ $$
 のように書けるので、
 
 $$
+\begin{align}
 \int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
-= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(\nu+1/2)}{\Gamma(m+\nu+1)} \frac{(2m)!}{2^{2m} m!} \sqrt{\pi} 
-= \sqrt{\pi} \Gamma(\nu+1/2) \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{2^{2m} m! \Gamma(m+\nu+1)} 
-= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} \sum_{m=0}^{\infty} \frac{(-1)^m}{m! \Gamma(m+\nu+1)} \left( \frac{z}{2}\right)^{2m+\nu} 
-= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} J_\nu(z)
+&= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(\nu+1/2)}{\Gamma(m+\nu+1)} \frac{(2m)!}{2^{2m} m!} \sqrt{\pi} 
+= \sqrt{\pi} \Gamma(\nu+1/2) \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{2^{2m} m! \Gamma(m+\nu+1)} \notag \\
+&= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} \sum_{m=0}^{\infty} \frac{(-1)^m}{m! \Gamma(m+\nu+1)} \left( \frac{z}{2}\right)^{2m+\nu} 
+= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} J_\nu(z) \notag 
+\end{align}
 $$
 
 を得ます。よって

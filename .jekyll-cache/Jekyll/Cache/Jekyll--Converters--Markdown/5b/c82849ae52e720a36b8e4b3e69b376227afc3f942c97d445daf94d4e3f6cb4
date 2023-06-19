@@ -1,0 +1,101 @@
+I">
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#輻射のスペクトル" id="markdown-toc-輻射のスペクトル">輻射のスペクトル</a>    <ol>
+      <li><a href="#電磁場のフーリエ変換" id="markdown-toc-電磁場のフーリエ変換">電磁場のフーリエ変換</a></li>
+      <li><a href="#単位立体角単位周波数あたりの放射エネルギー" id="markdown-toc-単位立体角単位周波数あたりの放射エネルギー">単位立体角・単位周波数あたりの放射エネルギー</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="輻射のスペクトル">輻射のスペクトル</h1>
+
+<p>ここでは輻射のスペクトルについての式をまとめています。</p>
+
+<h2 id="電磁場のフーリエ変換">電磁場のフーリエ変換</h2>
+
+<p>電磁波\(E(t)\)のフーリエ変換を考えましょう。</p>
+
+\[\hat{E}(\omega) 
+= \frac{1}{2\pi} \int_{-\infty}^\infty E(t) e^{i\omega t} dt \tag{1}\]
+
+<p>そしてこの逆変換は</p>
+
+\[E(t) 
+= \int_{-\infty}^\infty \hat{E}(\omega) e^{-i\omega t} d\omega \tag{2}\]
+
+<p>です。
+\(\hat{E} (\omega)\)は一般には複素数です。
+しかし、実際に観測される量である\(E(t)\)は実数です。
+このことから複素共役\(\hat{E}^\ast (\omega)\)を計算してみると</p>
+
+\[\hat{E}^\ast (\omega) 
+= \frac{1}{2\pi} \int_{-\infty}^\infty \underbrace{E^\ast (t)}_{=E(t)} e^{-i\omega t} dt 
+= \hat{E}(- \omega) \tag{3}\]
+
+<p>のようになります。</p>
+
+<h2 id="単位立体角単位周波数あたりの放射エネルギー">単位立体角・単位周波数あたりの放射エネルギー</h2>
+
+<p>単位時間・単位面積あたりの放射エネルギーは、<a href="/astroelec/em_energy_momentum#%E9%9B%BB%E7%A3%81%E5%A0%B4%E3%81%AE%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%A8%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E6%B5%81%E6%9D%9F%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB">ポインティングベクトル</a>より</p>
+
+\[\frac{dW}{dt dA} 
+= \frac{c}{4\pi} E^2 (t) \tag{4}\]
+
+<p>のように書かれます。
+この両辺を時間で積分することで、単位面積あたりに通過する放射のエネルギーが求まります。</p>
+
+\[\frac{dW}{dA} 
+= \frac{c}{4\pi} \int_{-\infty}^\infty E^2 (t) dt \tag{5}\]
+
+<p>ここでパーセバルの定理より</p>
+
+\[\int_{-\infty}^\infty E^2 (t) dt 
+= 2\pi \int_{-\infty}^\infty \vert \hat{E}(\omega) \vert^2 d\omega \tag{6}\]
+
+<p>そして(3)式から</p>
+
+\[\vert \hat{E} (\omega) \vert^2 
+= \vert \hat{E} (-\omega) \vert^2 \tag{7}\]
+
+<p>が成り立つため、</p>
+
+\[\int_{-\infty}^\infty E^2 (t) dt 
+= 4\pi \int_{0}^\infty \vert \hat{E}(\omega) \vert^2 d\omega \tag{8}\]
+
+<p>を得ます。
+(5), (8)式より</p>
+
+\[\frac{dW}{dA} 
+= c \int_0^\infty \vert \hat{E} (\omega) \vert^2 d\omega d\omega \ \Longrightarrow \
+\frac{dW}{dA d\omega} 
+= c \vert \hat{E} (\omega) \vert^2 \tag{9}\]
+
+<p>です。
+放射を出す荷電粒子と観測者までの距離を\(R\)、立体角を\(\Omega\)とすれば、\(dA = R^2 d\Omega\)の関係より</p>
+
+\[\frac{dW}{d\omega d\Omega} 
+= c R^2 \vert \hat{E} (\omega) \vert^2 \tag{10}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

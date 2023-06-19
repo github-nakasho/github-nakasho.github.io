@@ -1,0 +1,150 @@
+I"�#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ジッター放射-jitter-radiation" id="markdown-toc-ジッター放射-jitter-radiation">ジッター放射 (jitter radiation)</a>    <ol>
+      <li><a href="#軌道のずれ角と問題設定" id="markdown-toc-軌道のずれ角と問題設定">軌道のずれ角と問題設定</a></li>
+      <li><a href="#スペクトル導出" id="markdown-toc-スペクトル導出">スペクトル導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ジッター放射-jitter-radiation">ジッター放射 (jitter radiation)</h1>
+
+<p>相対論的電子が一様磁場中を運動すると、その軌道は円運動となります。
+また<a href="/astroelec/rel_beaming">相対論的ビーミング効果</a>も合間って、この荷電粒子からの放射は<a href="/astroelec/sync_spectrum">シンクトロン放射</a>になることが知られています。
+しかし、例えばガンマ線バースト(GRB)の衝撃波面では一様ではなく、乱れた電磁場が存在するとされています。
+今回は、その乱れた電磁場(小さいスケールで磁場の向きが変化する場合)での、相対論的電子からの放射について考えましょう。</p>
+
+<h2 id="軌道のずれ角と問題設定">軌道のずれ角と問題設定</h2>
+
+<p>磁場が\(+z\)方向と\(-z\)方向に、頻繁にその向きを変化させている領域中を、相対論的電子が運動することを考えましょう。
+<a href="/astroelec/uniform_mag_rel">一様磁場中での相対論的電子の円運動のラーモア半径</a>は</p>
+
+\[r_L 
+= \frac{m_e c^2 \gamma \beta}{e B} 
+\underbrace{\simeq}_{\beta \sim 1} \frac{m_e c^2 \gamma}{e B} \tag{1}\]
+
+<p>です。
+ここで、電子の運動が超相対論的であるとして\(v \sim c (\beta \sim 1)\)のように近似しました。
+また超相対論的な場合、電子の運動量は\(p \simeq m_e c \gamma\)と書けます。
+そして磁場の典型的な相関スケール、すなわち磁場が同じ方向に揃っている距離を\(\lambda_B\)としましょう。
+この距離を電子が移動するのにかかる時間は\(t \simeq \lambda_B / c\)です。
+この間に電子は磁場からローレンツ力\(F_L\)を受けます。
+よってローレンツ力によりこの電子にもたらされる垂直方向の力積(=運動量変化)は</p>
+
+\[p_\perp 
+\simeq F_L t 
+\simeq \frac{e B \lambda_B}{c} \tag{2}\]
+
+<p>のように計算できます。
+ここから、下図のように定義される、観測者視線方向からの電子の軌道のずれ角\(\alpha\)は</p>
+
+\[\alpha 
+\simeq \frac{p_\perp}{p} 
+\simeq \frac{eB \lambda_B}{m_e c^2 \gamma} \tag{3}\]
+
+<p>のようになります。
+ここで、<a href="/astroelec/rel_beaming">相対論的ビーミングの放射コーンの角度\(\Delta \theta \simeq 1 / \gamma\)</a>とこの比を\(\delta\)と定義しましょう。
+すると</p>
+
+\[\delta 
+\equiv \frac{\alpha}{\Delta \theta} 
+= \frac{eB \lambda_B}{m_e c^2} 
+\underbrace{=}_{(1)} \frac{\gamma \lambda_B}{r_L} 
+\simeq \frac{\gamma }{k_B r_L}\tag{4}\]
+
+<p>(4)式の途中式からわかるように、\(\delta\)は\(B, \lambda_B\)にしか依存しません。
+またさらに扱いやすいように、最後の変形では\(\lambda_B \simeq k_B^{-1}\)のように波数を用いて表現をしました。<br />
+さて、ここからは具体的にスペクトルを求める問題設定を考えていきましょう。
+軌道のズレが非常に小さい場合、観測者は放射コーンを常に見続けることになります。
+これにより、シンクロトロン放射とは違ったスペクトルが観測されるはずです。</p>
+
+<p><img src="/assets/images/astroelec/jitter_01.png" alt="" /></p>
+
+<p>この議論から、今回扱う問題は\(\delta \ll 1\)のような状況であるとわかります。
+このように「細かく振動する(jittering)ような軌道からの放射」という意味をこめて、これをジッター放射(jitter radiation)と呼びます。</p>
+
+<h2 id="スペクトル導出">スペクトル導出</h2>
+
+<p>それではスペクトルを導出していきましょう。
+超相対論的電子が出す放射の電場は、<a href="/astroelec/rad_fourier">輻射場のフーリエスペクトル</a>より</p>
+
+\[\hat{\mathbf{E}}(\mathbf{r}, \omega) 
+= \frac{-e}{2\pi c^2 R} e^{i\omega \frac{\mathbf{n} \cdot \mathbf{r}}{c}} \frac{\mathbf{n} \times \{(\mathbf{n} - \boldsymbol{\beta}) \times \hat{\mathbf{a}}_{\omega'}\}}{\kappa^2} \tag{5}\]
+
+<p>です。
+ここで\(\kappa = 1 -\mathbf{n} \cdot \boldsymbol{\beta}\)です。
+これより、<a href="/astroelec/energy_per_solid_angle_per_freq">単位立体角・単位周波数あたりの放射エネルギー</a>は</p>
+
+\[\frac{dW}{d\omega d\Omega} 
+= c R^2 \vert \hat{\mathbf{E}} (\omega) \vert^2 
+= \frac{e^2}{4\pi^2 c^3} \frac{\vert \mathbf{n} \times \{(\mathbf{n} - \boldsymbol{\beta}) \times \hat{\mathbf{a}}_{\omega'}\} \vert^2 }{\kappa^4} 
+= \frac{e^2}{4\pi^2 c^3} \left( \frac{\omega}{\omega'} \right)^4 \left| \mathbf{n} \times \left\{ \left( \mathbf{n} - \boldsymbol{\beta} \right) \times \hat{\mathbf{a}}_{\omega'} \right\} \right|^2 \tag{6}\]
+
+<p>のようになります。
+途中、\(\omega' = \omega \kappa\)のように定義しました。
+これを全立体角で積分します。
+計算にあたり、近似を施しましょう。
+\(\mathbf{n} \cdot \boldsymbol{\beta} = \frac{v}{c} \cos \theta\)のように、\(\mathbf{n}\)と\(\mathbf{v}\)の成す角度を\(\theta\)とします。
+このとき\(\theta \simeq \Delta \theta \ll 1\)で十分に小さいとすると</p>
+
+\[\begin{align}
+\kappa 
+&amp;= 1 - \frac{v}{c} \cos \theta 
+\simeq 1 - \frac{v}{c} \left( 1 - \frac{\theta^2}{2}\right) 
+\underbrace{\simeq}_{v/c \sim 1} 1 - \frac{v}{c} + \frac{\theta^2}{2} 
+\simeq \frac{1}{2} \left\{ 2 \left( 1 - \frac{v}{c} \right) + \theta^2 \right\} \notag \\
+&amp;\underbrace{\simeq}_{1+\frac{v}{c} \sim 2} \frac{1}{2} \left\{ \left( 1 + \frac{v}{c} \right) \left( 1 - \frac{v}{c} \right) + \theta^2 \right\} 
+= \frac{1}{2} \left( 1 - \frac{v^2}{c^2} + \theta^2 \right) 
+= \frac{1}{2} (\gamma^{-2} + \theta^2) \tag{7}
+\end{align}\]
+
+<p>のように近似することができます。
+以上より</p>
+
+\[\omega' 
+= \omega \kappa \ \Longrightarrow \ 
+d\omega' 
+= \omega \theta d\theta \tag{8}\]
+
+<p>を得ます。
+これを用いれば、全立体角積分は\(d\Omega = \sin \theta d\theta d\phi \simeq \theta d\theta d\phi = d\phi d\omega' / \omega\)のように変数変換されます。
+積分範囲は\(\theta: 0 \rightarrow \pi\)から\(\omega': \omega/2\gamma^2 \rightarrow \omega (\gamma^{-2} + \pi^2) / 2\)となりますが、<a href="/astroelec/rel_beaming">相対論的ビーミング効果</a>から\(\theta\)が大きな部分での寄与はゼロとなるはずです。
+したがって、積分範囲の上限は無限大にしても差し支えありません。
+よって</p>
+
+\[\frac{dW}{d\omega} 
+= \frac{e^2}{2\pi c^3} \int_{\omega / 2\gamma^2}^\infty \left( \frac{\omega}{\omega'} \right)^4 \left| (\mathbf{n} \cdot \hat{\mathbf{a}}_{\omega'}) \mathbf{n} - \hat{\mathbf{a}}_{\omega'} - (\mathbf{n} \cdot \hat{\mathbf{a}}_{\omega'}) \boldsymbol{\beta} + (\mathbf{n} \cdot \boldsymbol{\beta}) \hat{\mathbf{a}}_{\omega'} \right|^2 \frac{d\omega'}{\omega} 
+= \frac{e^2 \omega^3}{2\pi c^3} \int_{\omega / 2\gamma^2}^\infty \frac{\vert \hat{\mathbf{a}}_{\omega'} \vert^2}{\omega'^3} \left| 1 - \mathbf{n} \cdot \boldsymbol{\beta} \right|^2 \frac{d\omega'}{\omega}\tag{9}\]
+
+<p>のようになります。
+ここで軌道はほぼ直線で、電子にかかる加速度は常に垂直である(\(\mathbf{n} \cdot \hat{\mathbf{a}} \sim 0\))という近似を用いました。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://iopscience.iop.org/article/10.1086/309374">Medvedev, 2000, “Theory of “Jitter” Radiation from Small-Scale Random Magnetic Fields and Prompt Emission from Gamma-Ray Burst Shocks”</a><br />
+[2] ランダウ &amp; リフシッツ, “場の古典論”</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

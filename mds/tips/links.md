@@ -1,6 +1,6 @@
 ---
 layout: default
-title: arXivチェック
+title: リンク集
 parent: Tips
 math: mathjax3
 permalink: /tips/links

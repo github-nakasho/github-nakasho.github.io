@@ -182,6 +182,8 @@ $$
 ランダウ・リフシッツなどの文献では、第三項の分母が2になる...近似の仕方にミス(?_?)
 ```
 
+{% include adsense.html %}
+
 ## べき乗分布磁場でのスペクトル計算
 
 (12)式に磁場の情報、そしてそこから計算される加速度を代入すれば、スペクトルが求まります。
@@ -242,12 +244,25 @@ $$
 さらにそれを正面に跳ね返すことを考え、再び実験室系にローレンツ変換すると、散乱後の光子の振動数は$$\gamma^2 \omega$$となります。
 [トムソン散乱](/astroelec/thomson)を例に出して説明したように、電子は乱れた電磁場の周波数に対応した放射を出していることがわかります。
 
+## γ線バーストや宇宙ジェットへの応用
+
+γ線バーストや宇宙ジェットは、磁場が関係する宇宙現象としてよく知られています。
+しかしシンクロトロン放射では再現できないスペクトルがあり、その説明としてジッター放射が研究されてきました。
+γ線バーストや宇宙ジェットで形成される衝撃波面では、ワイベル不安定性(Weibel instability)と呼ばれる磁場生成機構が働いていると考えられています。
+これによりできた乱流電磁場中を、衝撃波面で生成された超相対論的電子が駆け抜けることで、ジッター放射が起こるだろうとされています。
+上述のスペクトル導出の議論は、超相対論的電子がほぼ直線軌道を描くという近似の下で導出されたものでした。  
+しかし、シンクロトロン放射とジッター放射の間のような軌道を描く場合、その電子に対しては直線近似を適用することはできません。
+ジッター放射だけでは説明できない現象が、γ線バーストや宇宙ジェットにはまだまだ隠れているのです。
+
+![](/assets/images/astroelec/jitter_03.png)
+
 ## 参考文献
 
 [1] [Medvedev, 2000, "Theory of "Jitter" Radiation from Small-Scale Random Magnetic Fields and Prompt Emission from Gamma-Ray Burst Shocks"](https://iopscience.iop.org/article/10.1086/309374)  
 [2] [Workman et al., 2008, "Jitter radiation in gamma-ray bursts and their afterglows: emission and self-absorption"](https://academic.oup.com/mnras/article/386/1/199/977648)  
-[3] ランダウ & リフシッツ, "場の古典論"  
-[4] [寺木悠人, 修士論文, "乱れた磁場中を運動する相対論的粒子からの放射"](https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf)  
-[5] [寺木悠人, "乱れた電磁場中を運動する相対論的電子からの放射"](http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7)  
+[3] [Vanthieghem et al., 2022, "Origin of Intense Electron Heating in Relativistic Blast Waves"](https://iopscience.iop.org/article/10.3847/2041-8213/ac634f)  
+[4] ランダウ & リフシッツ, "場の古典論"  
+[5] [寺木悠人, 修士論文, "乱れた磁場中を運動する相対論的粒子からの放射"](https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf)  
+[6] [寺木悠人, "乱れた電磁場中を運動する相対論的電子からの放射"](http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7)  
 
 {% include adsense.html %}

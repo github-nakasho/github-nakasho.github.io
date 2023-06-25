@@ -261,8 +261,10 @@ $$
 [1] [Medvedev, 2000, "Theory of "Jitter" Radiation from Small-Scale Random Magnetic Fields and Prompt Emission from Gamma-Ray Burst Shocks"](https://iopscience.iop.org/article/10.1086/309374)  
 [2] [Workman et al., 2008, "Jitter radiation in gamma-ray bursts and their afterglows: emission and self-absorption"](https://academic.oup.com/mnras/article/386/1/199/977648)  
 [3] [Vanthieghem et al., 2022, "Origin of Intense Electron Heating in Relativistic Blast Waves"](https://iopscience.iop.org/article/10.3847/2041-8213/ac634f)  
-[4] ランダウ & リフシッツ, "場の古典論"  
-[5] [寺木悠人, 修士論文, "乱れた磁場中を運動する相対論的粒子からの放射"](https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf)  
-[6] [寺木悠人, "乱れた電磁場中を運動する相対論的電子からの放射"](http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7)  
+[4] Dermer & Menon, "High Energy Radiation from Black Holes: Gamma Rays, Cosmic Rays and Neutrinos"  
+[5] ランダウ & リフシッツ, "場の古典論"  
+[6] 中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, "放射素過程の基礎"  
+[7] [寺木悠人, 修士論文, "乱れた磁場中を運動する相対論的粒子からの放射"](https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf)  
+[8] [寺木悠人, "乱れた電磁場中を運動する相対論的電子からの放射"](http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7)  
 
 {% include adsense.html %}

@@ -1,4 +1,4 @@
-I"J@
+I"�E
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -9,7 +9,7 @@
       <li><a href="#スペクトル導出" id="markdown-toc-スペクトル導出">スペクトル導出</a></li>
       <li><a href="#べき乗分布磁場でのスペクトル計算" id="markdown-toc-べき乗分布磁場でのスペクトル計算">べき乗分布磁場でのスペクトル計算</a></li>
       <li><a href="#定性的な導出" id="markdown-toc-定性的な導出">定性的な導出</a></li>
-      <li><a href="#γ線バーストや宇宙ジェットとの関係性" id="markdown-toc-γ線バーストや宇宙ジェットとの関係性">γ線バーストや宇宙ジェットとの関係性</a></li>
+      <li><a href="#γ線バーストや宇宙ジェットへの応用" id="markdown-toc-γ線バーストや宇宙ジェットへの応用">γ線バーストや宇宙ジェットへの応用</a></li>
       <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
@@ -222,18 +222,28 @@ a
 さらにそれを正面に跳ね返すことを考え、再び実験室系にローレンツ変換すると、散乱後の光子の振動数は\(\gamma^2 \omega\)となります。
 <a href="/astroelec/thomson">トムソン散乱</a>を例に出して説明したように、電子は乱れた電磁場の周波数に対応した放射を出していることがわかります。</p>
 
-<h2 id="γ線バーストや宇宙ジェットとの関係性">γ線バーストや宇宙ジェットとの関係性</h2>
+<h2 id="γ線バーストや宇宙ジェットへの応用">γ線バーストや宇宙ジェットへの応用</h2>
 
 <p>γ線バーストや宇宙ジェットは、磁場が関係する宇宙現象としてよく知られています。
-しかしシンクロトロン放射では再現できないスペクトルがあり、その説明としてジッター放射が研究されてきました。</p>
+しかしシンクロトロン放射では再現できないスペクトルがあり、その説明としてジッター放射が研究されてきました。
+γ線バーストや宇宙ジェットで形成される衝撃波面では、ワイベル不安定性(Weibel instability)と呼ばれる磁場生成機構が働いていると考えられています。
+これによりできた乱流電磁場中を、衝撃波面で生成された超相対論的電子が駆け抜けることで、ジッター放射が起こるだろうとされています。
+上述のスペクトル導出の議論は、超相対論的電子がほぼ直線軌道を描くという近似の下で導出されたものでした。<br />
+しかし、シンクロトロン放射とジッター放射の間のような軌道を描く場合、その電子に対しては直線近似を適用することはできません。
+ジッター放射だけでは説明できない現象が、γ線バーストや宇宙ジェットにはまだまだ隠れているのです。</p>
+
+<p><img src="/assets/images/astroelec/jitter_03.png" alt="" /></p>
 
 <h2 id="参考文献">参考文献</h2>
 
 <p>[1] <a href="https://iopscience.iop.org/article/10.1086/309374">Medvedev, 2000, “Theory of “Jitter” Radiation from Small-Scale Random Magnetic Fields and Prompt Emission from Gamma-Ray Burst Shocks”</a><br />
 [2] <a href="https://academic.oup.com/mnras/article/386/1/199/977648">Workman et al., 2008, “Jitter radiation in gamma-ray bursts and their afterglows: emission and self-absorption”</a><br />
-[3] ランダウ &amp; リフシッツ, “場の古典論”<br />
-[4] <a href="https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf">寺木悠人, 修士論文, “乱れた磁場中を運動する相対論的粒子からの放射”</a><br />
-[5] <a href="http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7">寺木悠人, “乱れた電磁場中を運動する相対論的電子からの放射”</a></p>
+[3] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac634f">Vanthieghem et al., 2022, “Origin of Intense Electron Heating in Relativistic Blast Waves”</a><br />
+[4] Dermer &amp; Menon, “High Energy Radiation from Black Holes: Gamma Rays, Cosmic Rays and Neutrinos”<br />
+[5] ランダウ &amp; リフシッツ, “場の古典論”<br />
+[6] 中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, “放射素過程の基礎”<br />
+[7] <a href="https://nagataki-lab.riken.jp/yutoteraki/pdfs/m-thesis.pdf">寺木悠人, 修士論文, “乱れた磁場中を運動する相対論的粒子からの放射”</a><br />
+[8] <a href="http://nagataki-lab.riken.jp/yutoteraki/ppts/d-presen.pdf#page7">寺木悠人, “乱れた電磁場中を運動する相対論的電子からの放射”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

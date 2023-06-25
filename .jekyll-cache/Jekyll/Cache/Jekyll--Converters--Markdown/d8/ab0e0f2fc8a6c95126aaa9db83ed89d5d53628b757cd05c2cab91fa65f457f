@@ -1,0 +1,68 @@
+I"�
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#スペクトル線" id="markdown-toc-スペクトル線">スペクトル線</a>    <ol>
+      <li><a href="#スペクトル線の観測量" id="markdown-toc-スペクトル線の観測量">スペクトル線の観測量</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="スペクトル線">スペクトル線</h1>
+
+<p>ここでは、恒星からの光の観測にたびたび現れるスペクトル線(輝線・吸収線)についてメモします。</p>
+
+<h2 id="スペクトル線の観測量">スペクトル線の観測量</h2>
+
+<p>恒星のスペクトルは光の波長または振動数に対するflux(太陽ではintensity)分布を表します。
+吸収線の深さは吸収線内の波長\(\lambda\)でのflux \(F_\lambda\)と、連続スペクトルのflux \(F_e\)を用いて</p>
+
+\[A_\lambda 
+= \frac{F_e - F_\lambda}{F_e} 
+= 1 - \frac{F_\lambda}{F_e} \tag{5.1}\]
+
+<p>のように定義されます。
+そしてresidual fluxとして</p>
+
+\[R_\lambda 
+= \frac{F_\lambda}{F_e} 
+= 1-A_\lambda \tag{5.2}\]
+
+<p>を定義します。<br />
+スペクトル線の強さを表すために等価幅(equivalent width)</p>
+
+\[W_\lambda 
+= \int_0^\infty A_\lambda d\lambda \tag{5.3}\]
+
+<p>がよく用いられます。
+等価幅は、吸収線の底でのfluxがゼロの短冊型としたときの幅に等しく、その吸収線により吸収された全エネルギーを示す量となります。
+もちろん、等価幅は振動数単位でも表すことができます。</p>
+
+\[W_\nu 
+= \int_0^\infty A_\nu d\nu, \quad 
+\frac{W_\nu}{\nu_0} = \frac{W_\lambda}{\lambda_0} \tag{5.4}\]
+
+<p>ここで\(\lambda_0, \nu_0\)はそれぞれ吸収線の中心での波長と周波数です。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

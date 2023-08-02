@@ -419,7 +419,7 @@ $$
 しかしここでは、より厳密に複素数平面上での積分からこれを示してみましょう。
 被積分関数を$$e^{-z^2} \ (z = \eta + i\zeta)$$のように書き、これを下図のような複素数平面上の経路で積分することを考えましょう。
 
-![](/assets/images/atomos/absorption_line_coeff_04.png)
+![](/assets/images/atmos/absorption_line_coeff_04.png)
 
 この積分経路の内側の至る所で、この関数は正則です。
 よって留数定理より

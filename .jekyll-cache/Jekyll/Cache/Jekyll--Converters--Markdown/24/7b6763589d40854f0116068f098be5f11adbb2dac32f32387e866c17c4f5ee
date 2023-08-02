@@ -1,4 +1,4 @@
-I"!m
+I" m
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -364,7 +364,7 @@ e^{-v^2} &amp; (v \ll 1)\\
 しかしここでは、より厳密に複素数平面上での積分からこれを示してみましょう。
 被積分関数を\(e^{-z^2} \ (z = \eta + i\zeta)\)のように書き、これを下図のような複素数平面上の経路で積分することを考えましょう。</p>
 
-<p><img src="/assets/images/atomos/absorption_line_coeff_04.png" alt="" /></p>
+<p><img src="/assets/images/atmos/absorption_line_coeff_04.png" alt="" /></p>
 
 <p>この積分経路の内側の至る所で、この関数は正則です。
 よって留数定理より</p>

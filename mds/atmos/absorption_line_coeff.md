@@ -448,6 +448,8 @@ $$
 
 を得ます。
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4065213541&linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254131178&linkId=5d108bdd0c7512027efa54c5438cc91c"></iframe>
+
 ## 補遺3: フォークト関数の性質
 
 (5.25)式を、$$v : -\infty \rightarrow \infty$$の範囲で積分してみましょう。
@@ -583,6 +585,55 @@ H(a, v)
 $$
 
 よって、さらに$$v \gg 1$$ならば、$$H(a, v) \simeq a / (\sqrt{\pi} v^2)$$と近似されることがわかります。
+
+{% include adsense.html %}
+
+## 補遺4: フォークト関数の可視化
+
+最後に、$$a = 1.0, 0.1, 0.01, 0.001$$に対する$$\log_{10} H(a, v)$$を$$v$$の関数として図示します。
+
+![](/assets/images/atmos/absorption_line_coeff_05.png)
+
+また、図示に用いたJuliaスクリプトを以下に示します。
+
+```julia
+using QuadGK
+using Plots
+gr()
+
+
+# define the integrand funciton for Voigt function
+function f(a, v, x)
+    return exp(-(a*x+x^2/4)) * cos(v*x)
+end
+
+# set array for a
+array_a = [1, 0.1, 0.01, 0.001]
+# get length of array_a
+len_a = length(array_a)
+# set length of v
+len_v = 100
+# set array for v
+array_v = range(0.0, 7.0, length=len_v)
+# initialize an array for Voigt function
+voigt = zeros(Float64, len_a, len_v)
+for i in 1:len_a
+    a = array_a[i]
+    for j in 1:len_v
+        v = array_v[j]
+        # compute integration using quadgk
+        integral, error = quadgk(x -> f(a, v, x), 0, 100)
+        # put the integration result into voigt array
+        voigt[i, j] = log10(integral/sqrt(pi))
+    end
+end
+# visualize Voigt function for each a
+plot(array_v, voigt[1, :], linewidth=3, xlabel="v", ylabel="Log(Voigt function)", label="a=1.0")
+plot!(array_v, voigt[2, :], linewidth=3, label="a=0.1")
+plot!(array_v, voigt[3, :], linewidth=3, label="a=0.01")
+plot!(array_v, voigt[4, :], linewidth=3, label="a=0.001")
+savefig("absorption_line_coeff_04.png")
+```
 
 ## 参考文献
 

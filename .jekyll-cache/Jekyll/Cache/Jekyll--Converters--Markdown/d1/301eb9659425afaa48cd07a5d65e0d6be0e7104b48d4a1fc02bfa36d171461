@@ -1,4 +1,4 @@
-I"��
+I"�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -31,6 +31,10 @@
 </ol>
 
 </details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4065213541&amp;linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe>
 
 <h1 id="スペクトル線形成">スペクトル線形成</h1>
 
@@ -228,6 +232,14 @@ J_\nu (0)
 
 <p>のように書かれます。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h3 id="散乱によって形成される吸収線">散乱によって形成される吸収線</h3>
 
 <p>ここでは、連続光に対して散乱が存在しない場合を考えましょう。
@@ -327,6 +339,10 @@ S_\nu (\tau_\nu)
 
 <p>で、\(\mu\)の値に関わらずゼロになります。
 これは<a href="/atmos/spectral_line_formation#吸収過程のみよって形成される吸収線">多数の散乱により私たちの方向に向かう光がなくなるという、先程の説明</a>に一致します。</p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4065213541&amp;linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe>
 
 <h2 id="吸収線の成長曲線-curve-of-growth">吸収線の成長曲線 (curve of growth)</h2>
 
@@ -482,7 +498,18 @@ W^\ast
 <p>が得られます。
 したがって、非常に強く減衰wingg優勢になるような吸収線の等価幅は、\(\sqrt{\beta_0}\)に比例して大きくなります。
 成長曲線のこの部分は減衰部(damping part)または平方根部(squareroot part)と呼ばれます。
-Wing部分は、減衰定数\(a\)g大きいほど、早くに重要になります。</p>
+Wing部分は、減衰定数\(a\)が大きいほど、早くに重要になります。<br />
+実際に(5.72)式を数値的に計算したものを、下図に示します。</p>
+
+<p><img src="/assets/images/atmos/spectral_line_formation_01.png" alt="" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="成長曲線の利用">成長曲線の利用</h2>
 
@@ -605,6 +632,10 @@ N_{jk}
 それとは別に観測されたスペクトル線とを直接比較することで、先程の議論から種々の量を推定することができます。
 また、種々の組成に対して理論的に得られたスペクトル線輪郭から等価幅を計算し、それと観測された等価幅を比較することによって、元素組成を推定することが可能です。</p>
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4065213541&amp;linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe>
+
 <h2 id="太陽表面の元素組成">太陽表面の元素組成</h2>
 
 <p>これまでの太陽のスペクトル線の解析により、太陽表面の詳細な元素組成が得られています。
@@ -620,7 +651,7 @@ N_{jk}
 この傾向から大きく逸脱して、最も安定した原子核である鉄のグループが、含有量のピーク(iron-peak)を形成します。
 鉄のグループよりも重たい原子核は、鉄の原子核に中性子が捕獲されて生成されたと考えられています。</p>
 
-<p><img src="/assets/images/atmos/spectral_line_formation_05.png" alt="" /></p>
+<p><img src="/assets/images/atmos/spectral_line_formation_02.png" alt="" /></p>
 
 <h2 id="恒星表面のリチウム含有量">恒星表面のリチウム含有量</h2>
 
@@ -639,13 +670,13 @@ N_{jk}
 <p>という反応を起こしてヘリウムとなります。
 この事実に基づくならば、太陽の外層部にある物質は一度は約200万度の高温にさらされたことを表しています。
 太陽外層の対流層の底の温度は約100万度と考えられているため、物質はそれよりも内側まで混合されている必要があります。
-しかし、この混合のメカニズムはいまだによくわかっていません。</p>
+しかし、この混合のメカニズムはいまだによくわかっていません。<br />
+次の図の上パネルと下パネルはそれぞれ、ヒアデス星団(年齢約7億歳)とプレアデス星団(年齢約1億歳)中の主系列星の表面でのリチウム含有量を、恒星の有効温度に対して描画したものです。
+まずはヒアデス星団に着目しましょう。</p>
 
-<p><img src="/assets/images/atmos/spectral_line_formation_06.png" alt="" /></p>
+<p><img src="/assets/images/atmos/spectral_line_formation_04.png" alt="" /></p>
 
-<p>次の図の上パネルと下パネルはそれぞれ、ヒアデス星団(年齢約7億歳)とプレアデス星団(年齢約1億歳)中の主系列星の表面でのリチウム含有量を、恒星の有効温度に対して描画したものです。
-まずはヒアデス星団に着目しましょう。
-ここに描画されてい恒星は同じ分子雲から生まれたものなので、誕生当初は皆同じリチウム含有量を持っていたはずです。
+<p>ここに描画されてい恒星は同じ分子雲から生まれたものなので、誕生当初は皆同じリチウム含有量を持っていたはずです。
 しかし、約7億年が経過した現在では、この図のように恒星の質量(有効温度)によって異なる値を持ちます。<br />
 スペクトルがF6型よりも低温(小質量)の星では、表面のリチウム含有量が有効温度(質量)の減少とともに減少しています。
 このような低温の主系列星の外層には対流層が存在し、その層の厚さは表面温度が減少するほど厚く、その底の温度も高くなります。
@@ -657,7 +688,13 @@ N_{jk}
 このような理由から、6700度あたりでだけリチウム含有量が小さくなっていると理解されています。
 下パネルのプレアデス星団は年齢が若いため、リチウムの沈降が進んでいないと考えられます。</p>
 
-<p><img src="/assets/images/atmos/spectral_line_formation_07.png" alt="" /></p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h2 id="補遺">補遺</h2>
 
@@ -670,7 +707,7 @@ N_{jk}
 \[R_\nu 
 = \frac{\sqrt{\frac{3}{1+\beta_\nu}} + \frac{B_1}{B_0}\frac{1}{1+\beta_\nu}}{\sqrt{\frac{3}{1+\beta_\nu}} + \frac{3}{2}} \frac{\sqrt{3} + \frac{3}{2}}{\frac{B_1}{B_0} + \sqrt{3}}\]
 
-<p>！<a href="/assets/images/atmos/spectral_line_formation_08.png"></a></p>
+<p><img src="/assets/images/atmos/spectral_line_formation_05.png" alt="" /></p>
 
 <h3 id="557式の図示">(5.57)式の図示</h3>
 
@@ -683,15 +720,92 @@ N_{jk}
 <p>のように式変形をしました。
 また、ここでは\(\beta_\nu = \kappa_\nu / \kappa_c = \beta_0 H(a, v)\)、そして\(\beta_0 = 1, 10, 10^2, 10^3, 10^4\)、そして\(B_1 / B_0 = 1, 2, 3\)、さらに\(a = 10^{-3}\)を仮定したものを作成しました。</p>
 
-<p>！<a href="/assets/images/atmos/spectral_line_formation_09.png"></a></p>
+<p><img src="/assets/images/atmos/spectral_line_formation_06.png" alt="" /></p>
+
+<p>以下は、(5.56)式を図示するために作成したJuliaスクリプトです。
+これの数式を書き換えれば、(5.57)式も描くことができます。</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">QuadGK</span>
+<span class="k">using</span> <span class="n">Plots</span>
+<span class="n">gr</span><span class="x">()</span>
+
+
+<span class="c"># define the integrand funciton for Voigt function</span>
+<span class="k">function</span><span class="nf"> f</span><span class="x">(</span><span class="n">a</span><span class="x">,</span> <span class="n">v</span><span class="x">,</span> <span class="n">x</span><span class="x">)</span>
+    <span class="k">return</span> <span class="n">exp</span><span class="x">(</span><span class="o">-</span><span class="x">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span><span class="x">))</span> <span class="o">*</span> <span class="n">cos</span><span class="x">(</span><span class="n">v</span><span class="o">*</span><span class="n">x</span><span class="x">)</span>
+<span class="k">end</span>
+
+<span class="c"># define a function for computing residual flux</span>
+<span class="k">function</span><span class="nf"> residual_flux</span><span class="x">(</span><span class="n">beta</span><span class="x">,</span> <span class="n">bratio</span><span class="x">)</span>
+    <span class="n">one_onebeta</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="x">(</span><span class="mi">1</span><span class="o">+</span><span class="n">beta</span><span class="x">)</span>
+    <span class="n">sqrt_part</span> <span class="o">=</span> <span class="n">sqrt</span><span class="x">(</span><span class="mi">3</span><span class="o">*</span><span class="n">one_onebeta</span><span class="x">)</span>
+    <span class="k">return</span> <span class="x">(</span><span class="n">sqrt_part</span><span class="o">+</span><span class="n">bratio</span><span class="o">*</span><span class="n">one_onebeta</span><span class="x">)</span> <span class="o">/</span> <span class="x">(</span><span class="n">sqrt_part</span><span class="o">+</span><span class="mf">1.5</span><span class="x">)</span> <span class="o">*</span> <span class="x">(</span><span class="n">sqrt</span><span class="x">(</span><span class="mi">3</span><span class="x">)</span><span class="o">+</span><span class="mf">1.5</span><span class="x">)</span> <span class="o">/</span> <span class="x">(</span><span class="n">bratio</span><span class="o">+</span><span class="n">sqrt</span><span class="x">(</span><span class="mi">3</span><span class="x">))</span>
+<span class="k">end</span>
+
+
+<span class="c"># set array for beta0</span>
+<span class="n">array_beta0</span> <span class="o">=</span> <span class="x">[</span><span class="mi">10</span><span class="o">^</span><span class="mi">0</span><span class="x">,</span> <span class="mi">10</span><span class="o">^</span><span class="mi">1</span><span class="x">,</span> <span class="mi">10</span><span class="o">^</span><span class="mi">2</span><span class="x">,</span> <span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="x">,</span> <span class="mi">10</span><span class="o">^</span><span class="mi">4</span><span class="x">]</span>
+<span class="c"># get length of beta0</span>
+<span class="n">len_beta0</span> <span class="o">=</span> <span class="n">length</span><span class="x">(</span><span class="n">array_beta0</span><span class="x">)</span>
+<span class="c"># set array for B1/B0</span>
+<span class="n">array_bratio</span> <span class="o">=</span> <span class="x">[</span><span class="mf">1.0</span><span class="x">,</span> <span class="mf">2.0</span><span class="x">,</span> <span class="mf">3.0</span><span class="x">]</span>
+<span class="c"># get length of bratio</span>
+<span class="n">len_bratio</span> <span class="o">=</span> <span class="n">length</span><span class="x">(</span><span class="n">array_bratio</span><span class="x">)</span>
+<span class="c"># set a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">^</span><span class="x">(</span><span class="o">-</span><span class="mi">3</span><span class="x">)</span>
+<span class="c"># set length of v</span>
+<span class="n">len_v</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c"># set array for v</span>
+<span class="n">array_v</span> <span class="o">=</span> <span class="n">range</span><span class="x">(</span><span class="mf">0.0</span><span class="x">,</span> <span class="mf">7.0</span><span class="x">,</span> <span class="n">length</span><span class="o">=</span><span class="n">len_v</span><span class="x">)</span>
+<span class="c"># initialize an array for residual flux</span>
+<span class="n">residual</span> <span class="o">=</span> <span class="n">zeros</span><span class="x">(</span><span class="kt">Float64</span><span class="x">,</span> <span class="n">len_bratio</span><span class="x">,</span> <span class="n">len_beta0</span><span class="x">,</span> <span class="n">len_v</span><span class="x">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">len_bratio</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">len_beta0</span>
+        <span class="n">beta0</span> <span class="o">=</span> <span class="n">array_beta0</span><span class="x">[</span><span class="n">j</span><span class="x">]</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">len_v</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">array_v</span><span class="x">[</span><span class="n">k</span><span class="x">]</span>
+            <span class="c"># compute integration using quadgk</span>
+            <span class="n">integral</span><span class="x">,</span> <span class="n">error</span> <span class="o">=</span> <span class="n">quadgk</span><span class="x">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="x">(</span><span class="n">a</span><span class="x">,</span> <span class="n">v</span><span class="x">,</span> <span class="n">x</span><span class="x">),</span> <span class="mi">0</span><span class="x">,</span> <span class="mi">100</span><span class="x">)</span>
+            <span class="c"># put the integration result into voigt array</span>
+            <span class="n">voigt</span> <span class="o">=</span> <span class="n">integral</span><span class="o">/</span><span class="n">sqrt</span><span class="x">(</span><span class="nb">pi</span><span class="x">)</span>
+            <span class="n">beta</span> <span class="o">=</span> <span class="n">beta0</span> <span class="o">*</span> <span class="n">voigt</span>
+            <span class="n">bratio</span> <span class="o">=</span> <span class="n">array_bratio</span><span class="x">[</span><span class="n">i</span><span class="x">]</span>
+            <span class="n">residual</span><span class="x">[</span><span class="n">i</span><span class="x">,</span> <span class="n">j</span><span class="x">,</span> <span class="n">k</span><span class="x">]</span> <span class="o">=</span> <span class="n">residual_flux</span><span class="x">(</span><span class="n">beta</span><span class="x">,</span> <span class="n">bratio</span><span class="x">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+<span class="c"># visualize residual flux</span>
+<span class="n">plt1</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="mi">1</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">"v"</span><span class="x">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">"Residual flux"</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 1"</span><span class="x">,</span> <span class="n">ylim</span><span class="o">=</span><span class="x">(</span><span class="mf">0.0</span><span class="x">,</span> <span class="mf">1.1</span><span class="x">),</span> <span class="n">title</span><span class="o">=</span><span class="s">"B1/B0=1"</span><span class="x">,</span> <span class="n">margin</span><span class="o">=</span><span class="n">Plots</span><span class="o">.</span><span class="n">Measures</span><span class="o">.</span><span class="n">Length</span><span class="x">(</span><span class="o">:</span><span class="n">mm</span><span class="x">,</span> <span class="mf">5.0</span><span class="x">))</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{2}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="mi">4</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{3}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="mi">5</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{4}"</span><span class="x">)</span>
+
+<span class="n">plt2</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="mi">1</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">"v"</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 1"</span><span class="x">,</span> <span class="n">ylim</span><span class="o">=</span><span class="x">(</span><span class="mf">0.0</span><span class="x">,</span> <span class="mf">1.1</span><span class="x">),</span> <span class="n">title</span><span class="o">=</span><span class="s">"B1/B0=2"</span><span class="x">,</span> <span class="n">margin</span><span class="o">=</span><span class="n">Plots</span><span class="o">.</span><span class="n">Measures</span><span class="o">.</span><span class="n">Length</span><span class="x">(</span><span class="o">:</span><span class="n">mm</span><span class="x">,</span> <span class="mf">5.0</span><span class="x">))</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{2}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="mi">4</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{3}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="mi">5</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{4}"</span><span class="x">)</span>
+
+<span class="n">plt3</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="mi">1</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">"v"</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 1"</span><span class="x">,</span> <span class="n">ylim</span><span class="o">=</span><span class="x">(</span><span class="mf">0.0</span><span class="x">,</span> <span class="mf">1.1</span><span class="x">),</span> <span class="n">title</span><span class="o">=</span><span class="s">"B1/B0=3"</span><span class="x">,</span> <span class="n">margin</span><span class="o">=</span><span class="n">Plots</span><span class="o">.</span><span class="n">Measures</span><span class="o">.</span><span class="n">Length</span><span class="x">(</span><span class="o">:</span><span class="n">mm</span><span class="x">,</span> <span class="mf">5.0</span><span class="x">))</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{2}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="mi">4</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{3}"</span><span class="x">)</span>
+<span class="n">plot!</span><span class="x">(</span><span class="n">array_v</span><span class="x">,</span> <span class="n">residual</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="mi">5</span><span class="x">,</span> <span class="o">:</span><span class="x">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="x">,</span> <span class="n">label</span><span class="o">=</span><span class="n">raw</span><span class="s">"</span><span class="se">\b</span><span class="s">eta_{0} = 10^{4}"</span><span class="x">)</span>
+
+<span class="n">plt</span> <span class="o">=</span> <span class="n">plot</span><span class="x">(</span><span class="n">plt1</span><span class="x">,</span> <span class="n">plt2</span><span class="x">,</span> <span class="n">plt3</span><span class="x">,</span> <span class="n">layout</span><span class="o">=</span><span class="x">(</span><span class="mi">1</span><span class="x">,</span> <span class="mi">3</span><span class="x">),</span> <span class="n">size</span><span class="o">=</span><span class="x">(</span><span class="mi">1100</span><span class="x">,</span> <span class="mi">300</span><span class="x">))</span>
+
+<span class="n">savefig</span><span class="x">(</span><span class="n">plt</span><span class="x">,</span> <span class="s">"spectral_line_formation_05.png"</span><span class="x">)</span>
+</code></pre></div></div>
 
 <h2 id="参考文献">参考文献</h2>
 
-<p>[] <a href="https://arxiv.org/abs/1912.00844">Lodders, 2019, “Solar Elemental Abundances”</a><br />
-[] <a href="https://link.springer.com/article/10.1007/s10511-016-9446-5">Lyubimkov, 2016, “Lithium in Stellar Atmospheres: Observations and Theory”</a><br />
-[] <a href="https://amzn.to/459XnR9">野本憲一, 定金晃三, 佐藤勝彦, “シリーズ現代の天文学, 恒星”</a></p>
+<p>[1] <a href="https://arxiv.org/abs/1912.00844">Lodders, 2019, “Solar Elemental Abundances”</a><br />
+[2] <a href="https://link.springer.com/article/10.1007/s10511-016-9446-5">Lyubimkov, 2016, “Lithium in Stellar Atmospheres: Observations and Theory”</a><br />
+[3] <a href="https://amzn.to/459XnR9">野本憲一, 定金晃三, 佐藤勝彦, “シリーズ現代の天文学, 恒星”</a><br />
+[4] <a href="https://amzn.to/3QVZRPs">桜井隆, 小島正宜, 小杉健郎, 柴田一成, “シリーズ現代の天文学, 太陽”</a></p>
 
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe>
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe>
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4065213541&amp;linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe>
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254131178&amp;linkId=5d108bdd0c7512027efa54c5438cc91c"></iframe>
 :ET

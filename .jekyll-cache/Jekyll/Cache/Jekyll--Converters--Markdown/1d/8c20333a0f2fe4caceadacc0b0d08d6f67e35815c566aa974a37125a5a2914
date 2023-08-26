@@ -49,8 +49,8 @@
 <p>こちらに、某所で発表させていただいた内容のpdfファイルを添付します。
 以降では、この内容について詳しくご説明します。</p>
 
-<style> .pdf-embed-wrap-6d762aaf-b642-45fd-8005-a9ba056f306a { display: flex; flex-direction: column; width: 100%; height: 650px; } .pdf-embed-container-6d762aaf-b642-45fd-8005-a9ba056f306a { height: 100%; } .pdf-link-6d762aaf-b642-45fd-8005-a9ba056f306a { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container-6d762aaf-b642-45fd-8005-a9ba056f306a iframe { width: 100%; height: 100%; } </style>
-<div class="pdf-embed-wrap-6d762aaf-b642-45fd-8005-a9ba056f306a"> <div class="pdf-link-6d762aaf-b642-45fd-8005-a9ba056f306a"> <a href="/assets/pdfs/tips/arxiv_check_20230601.pdf" target="_blank">View PDF</a> </div> <div class="pdf-embed-container-6d762aaf-b642-45fd-8005-a9ba056f306a"> <iframe src="/assets/pdfs/tips/arxiv_check_20230601.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+<style> .pdf-embed-wrap-4603230f-6a6e-44ce-ad6c-9c1716f424d4 { display: flex; flex-direction: column; width: 100%; height: 650px; } .pdf-embed-container-4603230f-6a6e-44ce-ad6c-9c1716f424d4 { height: 100%; } .pdf-link-4603230f-6a6e-44ce-ad6c-9c1716f424d4 { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container-4603230f-6a6e-44ce-ad6c-9c1716f424d4 iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-4603230f-6a6e-44ce-ad6c-9c1716f424d4"> <div class="pdf-link-4603230f-6a6e-44ce-ad6c-9c1716f424d4"> <a href="/assets/pdfs/tips/arxiv_check_20230601.pdf" target="_blank">View PDF</a> </div> <div class="pdf-embed-container-4603230f-6a6e-44ce-ad6c-9c1716f424d4"> <iframe src="/assets/pdfs/tips/arxiv_check_20230601.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
 
 <h2 id="arxivチェックとは">ArXivチェックとは？</h2>
 

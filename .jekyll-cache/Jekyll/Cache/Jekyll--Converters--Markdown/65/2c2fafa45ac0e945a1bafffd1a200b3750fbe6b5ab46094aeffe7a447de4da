@@ -1,10 +1,12 @@
-I"c
+I"_
 <details open="">
   <summary class="text-delta">
     Table of contents
   </summary>
 <ol id="markdown-toc">
-  <li><a href="#自転の効果" id="markdown-toc-自転の効果">自転の効果</a>    <ol>
+  <li><a href="#自転の効果と恒星風の影響" id="markdown-toc-自転の効果と恒星風の影響">自転の効果と恒星風の影響</a>    <ol>
+      <li><a href="#自転の効果" id="markdown-toc-自転の効果">自転の効果</a></li>
+      <li><a href="#恒星風の影響-p-cygni-profile" id="markdown-toc-恒星風の影響-p-cygni-profile">恒星風の影響: P Cygni profile</a></li>
       <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
@@ -16,13 +18,49 @@
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe>
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4065213541&amp;linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe>
 
-<h1 id="自転の効果">自転の効果</h1>
+<h1 id="自転の効果と恒星風の影響">自転の効果と恒星風の影響</h1>
+
+<h2 id="自転の効果">自転の効果</h2>
 
 <p>恒星の自転のように、光子の平均自由行程よりも長い距離スケールの運動は、発光粒子と吸収粒子との間に速度差をもたらしません。
 よって吸収量、すなわち吸収線の等価幅には影響を及ぼしませんが、吸収線の形を変化させることが知られています。<br />
 恒星は自転しているため、表面の各点は私たちに対してそれぞれ異なる視線速度を持ちます。
 そのため、私たちが観測する吸収線は、それぞれの視線速度に対応するドップラーシフトを受けた吸収線の重ね合わせとなります。<br />
 自転軸を\(\theta =0\)の方向とし、私たちの方向を\(\varphi = 0\)とする球座標で考えましょう。</p>
+
+<p><img src="/assets/images/atmos/rotation_and_stellar_wind_01.png" alt="" /></p>
+
+<p>自転角速度を\(\Omega\)、恒星の半径を\(R\)とすると、\((\theta, \varphi)\)で表される恒星表面の各点での自転速度は\(\Omega R \sin \theta\)です。
+また視線方向は\(\theta = \pi/2\)の位置であるとすると、視線速度は\(\Omega R \sin \theta \sin \varphi\)のようになります。
+自転軸を\(z\)軸、私たちの方向を\(x\)軸とする直交座標系において、\(y = R \sin \theta \sin \varphi\)より、恒星表面で\(y\)が一定の部分が視線速度一定の領域となります。
+すなわち、恒星表面を平面に投影したとき、自転軸に平行な直線上で視線速度が一定となります。</p>
+
+<p><img src="/assets/images/atmos/rotation_and_stellar_wind_02.png" alt="" /></p>
+
+<p>ここまでの議論では、自転軸と視線方向が垂直であると仮定しました。
+しかし、一般に自転軸と視線方向のなす角度を\(i\)と書くと、視線速度は</p>
+
+\[v_\mathrm{rad} 
+= \Omega R \sin \theta \sin \varphi \sin i 
+= v_\mathrm{eq} y \sin i\]
+
+<p>のように表されます。
+ここで\(v_\mathrm{eq} \equiv \Omega R\)は、恒星の赤道での自転速度を表します。
+さらに\(y\)は恒星の半径\(R\)で規格化されているとします。<br />
+自転を無視した場合、恒星表面のどこから出てくる光に対しても、ある吸収線の輪郭は同じで\(\phi (\lambda - \lambda_0)\)で表されるとします。
+このとき、観測される吸収線内でのresidual fluxは</p>
+
+\[\frac{F_\lambda}{F_c}
+= \frac{\int_{2\pi} \phi(\lambda - \lambda_0) I_c(\theta) \cos \theta d\omega}{\int_{2\pi} I_c (\theta) \cos \theta d\omega} 
+= \phi(\lambda - \lambda_0)\]
+
+<p>のようになります。
+ここで\(\theta\)は、\(x\)軸方向(視線方向)となす角度で、\(R^2 \cos \theta d\omega\)は恒星表面を平面に投影したときの面積要素を表します。</p>
+
+<h2 id="恒星風の影響-p-cygni-profile">恒星風の影響: P Cygni profile</h2>
+
+<p>恒星風が強い恒星のスペクトル線には、P Cygni profileと呼ばれる、吸収成分と輝線成分が組み合わさったものが観測されます。
+これは吸収線がドップラーシフトにより短波長側に出現することから現れる形態です。</p>
 
 <h2 id="参考文献">参考文献</h2>
 

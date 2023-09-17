@@ -469,11 +469,13 @@ $$
 となり、さらに単位周波数あたりの全放射エネルギーはこれを全立体角積分することで
 
 $$
+\begin{align}
 \frac{dW}{d\omega} 
-= \frac{\omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int \sin^2 \Theta d\Omega 
-= \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_0^\pi (1-\cos^2 \Theta) \sin \Theta d \Theta 
-\underbrace{=}_{\mu = \cos \Theta} \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_{-1}^1 (1-\mu^2) d\mu 
+&= \frac{\omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int \sin^2 \Theta d\Omega 
+= \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_0^\pi (1-\cos^2 \Theta) \sin \Theta d \Theta \notag \\
+&\underbrace{=}_{\mu = \cos \Theta} \frac{2\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{c^3} \int_{-1}^1 (1-\mu^2) d\mu 
 = \frac{8\pi \omega^4 \left| \hat{d} (\omega) \right|^2}{3c^3} \tag{39}
+\end{align}
 $$
 
 のように求まります。

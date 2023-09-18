@@ -18,7 +18,7 @@ nav_order: 110
 {:toc}
 </details>
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137737&linkId=41368ff933f5749048bce7282bc69290"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4314008547&linkId=276e2c5adf19e02136b766cc5e58161a"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4320030222&linkId=7da98b78a91c7eb81ce3201fafbc48ea"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLVJM17N&linkId=be1b9f7b3ecdddc12d2987f022142532"></iframe>
 
 # 微粒子による散乱 
 
@@ -172,6 +172,8 @@ $$
 = \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} a^3 \mathbf{E}_0 \tag{15}
 $$
 
+{% include adsense.html %}
+
 ### 誘電体球による電磁波の散乱
 
 静電場での議論を、電磁波の場合に拡張しましょう。
@@ -290,14 +292,19 @@ $$\sigma$$が大きいほど((47)式より波長が短いほど)散乱を強く�
 
 ![](/assets/images/astroelec/rayleigh_02.png)
 
-## 火星の夕焼けは青い
+### 火星の夕焼けは青い
 
 地球大気と異なる組成を持つ火星大気では、その光の散乱の様相も異なります。
 火星地表から太陽の沈む様子を見ると、太陽の方向が青く輝いて見えることが、火星地表探査機から送られた画像により判明しました。
 これは、火星での光の散乱は、地表から舞い上がった砂塵によるものであるためと考えられています。
-砂塵の大きさは地球大気に含まれる分子よりも大きいため、ここで議論されてきたようなレイリー散乱が適用できません。
+砂塵粒子の大きさは地球大気に含まれる分子よりも大きいため、ここで議論されてきたようなレイリー散乱が適用できません。
 冒頭で記述したように、より大きな粒子による電磁波の散乱過程であるミー散乱を用いた議論が必要です。
-散乱過程の違いから、火星の夕焼けは青く見えるのです。
+この砂塵の粒子の場合、赤い光がよく散乱されるため、日中は空が赤くなります。
+そして日が沈み始めると、青い光がよく透過してくるために、夕焼けが青く見えます。
+
+[NASAが撮影した画像はこちらからご覧いただけます。](https://solarsystem.nasa.gov/news/925/what-does-a-sunrise-sunset-look-like-on-mars/)
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137737&linkId=41368ff933f5749048bce7282bc69290"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4314008547&linkId=276e2c5adf19e02136b766cc5e58161a"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4320030222&linkId=7da98b78a91c7eb81ce3201fafbc48ea"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLVJM17N&linkId=be1b9f7b3ecdddc12d2987f022142532"></iframe>
 
 ## 補遺: レイリー散乱のもう一つの導出法、束縛された電子による電磁波の散乱
 
@@ -474,6 +481,8 @@ $$
 
 のような解となります。
 
+{% include adsense.html %}
+
 ### 電磁波の散乱と散乱断面積
 
 散乱された電磁波を、入射電磁波により電子が運動することで起こった電磁放射であると考えます。
@@ -616,12 +625,14 @@ $$\omega / \omega_0 \sim 1$$では[ローレンツプロファイル](/atmos/tra
 
 ## 参考文献
 
-[] [中村哲, "電磁気学"]()  
-[] [ランダウ & リフシッツ, "場の古典論"]()  
-[] [砂川, "理論電磁気学"]()  
-[] [太田, "電磁気学の基礎"]()  
-[] [後藤, "詳解電磁気学演習"]()  
-[] [, "電気力学"]()  
-[] [中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, "放射素過程の基礎"]()  
+[1] [中村哲, 須藤彰三, "電磁気学"](https://amzn.to/3Rxh15U)  
+[2] [ランダウ & リフシッツ, "場の古典論"](https://amzn.to/46gbK7e)  
+[3] [砂川重信, "理論電磁気学"](https://amzn.to/46dk3jT)  
+[4] [太田浩一, "電磁気学の基礎I"](https://amzn.to/46jSy8B)  
+[5] [太田浩一, "電磁気学の基礎II"](https://amzn.to/3Rs4D7y)  
+[6] [後藤憲一, 山﨑修一郎, , "詳解電磁気学演習"](https://amzn.to/48kYDn6)  
+[7] [平川浩正, "電気力学"](https://amzn.to/3RsRA5A)  
+[8] [中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, "放射素過程の基礎"](https://amzn.to/3LnWxsH)  
+[9] [NASA Solar System Exploration, "What Does a Sunrise-Sunset Look Like on Mars?"](https://solarsystem.nasa.gov/news/925/what-does-a-sunrise-sunset-look-like-on-mars/)
 
-{% include adsense.html %}
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137737&linkId=41368ff933f5749048bce7282bc69290"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4314008547&linkId=276e2c5adf19e02136b766cc5e58161a"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4320030222&linkId=7da98b78a91c7eb81ce3201fafbc48ea"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLVJM17N&linkId=be1b9f7b3ecdddc12d2987f022142532"></iframe>

@@ -1,0 +1,561 @@
+I"��
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#微粒子による散乱" id="markdown-toc-微粒子による散乱">微粒子による散乱</a>    <ol>
+      <li><a href="#誘電体球による電磁波の散乱" id="markdown-toc-誘電体球による電磁波の散乱">誘電体球による電磁波の散乱</a>        <ol>
+          <li><a href="#一様電場中の誘電体球" id="markdown-toc-一様電場中の誘電体球">一様電場中の誘電体球</a></li>
+          <li><a href="#誘電体球による電磁波の散乱-1" id="markdown-toc-誘電体球による電磁波の散乱-1">誘電体球による電磁波の散乱</a></li>
+        </ol>
+      </li>
+      <li><a href="#地球大気への応用-青空と夕焼け" id="markdown-toc-地球大気への応用-青空と夕焼け">地球大気への応用: 青空と夕焼け</a>        <ol>
+          <li><a href="#火星の夕焼けは青い" id="markdown-toc-火星の夕焼けは青い">火星の夕焼けは青い</a></li>
+        </ol>
+      </li>
+      <li><a href="#補遺-レイリー散乱のもう一つの導出法束縛された電子による電磁波の散乱" id="markdown-toc-補遺-レイリー散乱のもう一つの導出法束縛された電子による電磁波の散乱">補遺: レイリー散乱のもう一つの導出法、束縛された電子による電磁波の散乱</a>        <ol>
+          <li><a href="#放射による反作用" id="markdown-toc-放射による反作用">放射による反作用</a></li>
+          <li><a href="#入射電磁波が存在する場合の束縛電子の運動" id="markdown-toc-入射電磁波が存在する場合の束縛電子の運動">入射電磁波が存在する場合の、束縛電子の運動</a></li>
+          <li><a href="#電磁波の散乱と散乱断面積" id="markdown-toc-電磁波の散乱と散乱断面積">電磁波の散乱と散乱断面積</a></li>
+          <li><a href="#omega-gg-omega_0の場合" id="markdown-toc-omega-gg-omega_0の場合">\(\omega \gg \omega_0\)の場合</a></li>
+          <li><a href="#omega-simeq-omega_0の場合" id="markdown-toc-omega-simeq-omega_0の場合">\(\omega \simeq \omega_0\)の場合</a></li>
+          <li><a href="#omega-ll-omega_0の場合" id="markdown-toc-omega-ll-omega_0の場合">\(\omega \ll \omega_0\)の場合</a></li>
+          <li><a href="#sigma-omegaの図示" id="markdown-toc-sigma-omegaの図示">\(\sigma (\omega)\)の図示</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254137737&amp;linkId=41368ff933f5749048bce7282bc69290"></iframe>
+<p>　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4314008547&amp;linkId=ee2835ee6c1b395b2ebb4d7386b5ac44"&gt;&lt;/iframe&gt;　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320030222&amp;linkId=6cd0907cbe14b6ac74f16a66d1aa757a"&gt;&lt;/iframe&gt;　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BLVJM17N&amp;linkId=05c7d406bfa5f423ec24540a0d1826b0"&gt;&lt;/iframe&gt;</p>
+
+<h1 id="微粒子による散乱">微粒子による散乱</h1>
+
+<p>微粒子などに電磁波が入射すると、その入射電磁波は荷電粒子と相互作用を起こし、散乱されることはよく知られています。
+この散乱現象は、入射電磁波の波長と微粒子の大きさによって、その様子が変わります。
+大雑把には、以下の3つの分類に分けられます。</p>
+
+<ul>
+  <li>微粒子の大きさが電磁波の波長よりもすごく小さい: レイリー散乱 (Rayleigh scattering)</li>
+  <li>微粒子の大きさと電磁波の波長が同程度: ミー散乱 (Mie scattering)</li>
+  <li>微粒子の大きさが電磁波の波長よりもすごく大きい: 回折による散乱</li>
+</ul>
+
+<p><img src="/assets/images/astroelec/rayleigh_01.png" alt="" /></p>
+
+<p>以下では、微粒子の大きさが電磁波波長よりも小さい極限である、レイリー散乱について学びましょう。
+このレイリー散乱は、空が青い理由、そして夕焼けが赤い理由としても有名な散乱現象です。</p>
+
+<h2 id="誘電体球による電磁波の散乱">誘電体球による電磁波の散乱</h2>
+
+<h3 id="一様電場中の誘電体球">一様電場中の誘電体球</h3>
+
+<p>さて、ここからは微粒子について考えていきましょう。
+簡単のため、微粒子を半径\(a\)、誘電率\(\varepsilon_1\)の一様な誘電体球と近似します。
+この誘電体球に、\(z\)軸方向を向いた一様電場\(E_0\)をかけます。
+誘電体球の正味の電荷はゼロであるとします。
+さらに誘電体球外部は真空であり、その誘電率を\(\varepsilon_0\)とします。<br />
+外場として与えた電場の静電ポテンシャルは、以下のように書けます。</p>
+
+\[\Phi_0 (r, \theta, \varphi) 
+= -E_0 z 
+= -E_0 r \cos \theta \tag{1}\]
+
+<p>次に誘電体球内部の静電ポテンシャルを\(\Phi_1\)、外部の静電ポテンシャルを\(\Phi_2\)とします。
+特に外部の静電ポテンシャルのうち、誘電体球の存在によって誘起される静電ポテンシャル成分を\(\Phi_\mathrm{P}\)のように書きましょう。
+誘電体球外部の静電場は、外部から与えた電場と誘電体球が作る電場の重ね合わせとなり、\(\Phi_2 = \Phi_0 + \Phi_\mathrm{P}\)のように書けます。
+誘電体球表面でのポテンシャルの連続性より</p>
+
+\[\Phi_1 (a, \theta, \varphi) 
+= - E_0 a \cos \theta + \Phi_\mathrm{P} (a, \theta, \varphi) \tag{2}\]
+
+<p>この式が任意の\(\theta, \varphi\)に対して成り立つためには、ポテンシャルの形が以下のようであれば良いでしょう。</p>
+
+\[\Phi_i
+= F_i(r) \cos \theta \qquad (i = 1, \mathrm{P}) \tag{3}\]
+
+<p>静電ポテンシャルは、ラプラス方程式</p>
+
+\[\Delta \Phi_i 
+= \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \Phi_i }{\partial r}\right) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial \Phi_i}{\partial \theta}\right) 
+= 0\tag{4}\]
+
+<p>を満たすため、この方程式に(3)式を代入すれば、\(F_i\)が満たす方程式を得ることができます。</p>
+
+\[\frac{1}{r^2} \frac{d}{d r} \left( r^2 \frac{d F_i}{d r}\right) - \frac{2 F_i}{r^2} 
+= 0 \tag{5}\]
+
+<p>この方程式の独立な解は</p>
+
+\[F_i (r) = r, \ r^{-2} \tag{6}\]
+
+<p>の2つです。無限遠での境界条件\(\lim_{r \rightarrow \infty} \Phi_\mathrm{P} = 0\)と、原点で\(\Phi_1\)が有限であるという要請から</p>
+
+\[\Phi_1 (r) 
+= C_1 r \cos \theta , \quad
+\Phi_\mathrm{P} (r) 
+= \frac{C_\mathrm{P}}{r^2} \cos \theta \tag{7}\]
+
+<p>となります。
+ここで\(C_1, C_\mathrm{P}\)は別の境界条件から求まる定数です。
+(2)式より</p>
+
+\[C_1 a \cos \theta
+= - E_0 a \cos \theta + \frac{C_\mathrm{P}}{a^2} \cos \theta \tag{8}\]
+
+<p>さらに、誘電体球表面に垂直な電束密度成分の連続性から</p>
+
+\[\varepsilon_1 \frac{\partial \Phi_1}{\partial r} 
+= \varepsilon_0 \frac{\partial \Phi_2}{\partial r} \ \Longrightarrow \ 
+\varepsilon_1 C_1 \cos \theta
+= \varepsilon_0 \left( -E_0 - \frac{2C_\mathrm{P}}{a^3} \right) \cos \theta \tag{9}\]
+
+<p>が成り立ちます。
+(8), (9)式の辺々割り算を行うと</p>
+
+\[\frac{a}{\varepsilon_1} 
+= \frac{- E_0 a + \frac{C_\mathrm{P}}{a^2}}{-\varepsilon_0 \left( E_0 + \frac{2 C_\mathrm{P}}{a^3}\right)} \ \Longrightarrow \ 
+C_\mathrm{P} 
+= \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} a^3 E_0 \tag{10}\]
+
+<p>と求まります。
+そして</p>
+
+\[C_1 
+= - \frac{3 \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} E_0 \tag{11}\]
+
+<p>から、求めたかった誘電体球による静電ポテンシャルは</p>
+
+\[\Phi_1 
+= - \frac{3 \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} E_0 r \cos \theta, \quad 
+\Phi_\mathrm{P} 
+= \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} \frac{a^3}{r^3} E_0 r \cos \theta \tag{12}\]
+
+<p>となります。
+ここから、誘電体球内部の電場は</p>
+
+\[\mathbf{E}_1 
+= - \frac{\partial \Phi_1}{\partial z} \mathbf{e}_z 
+= \frac{3 \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} E_0 \tag{13}\]
+
+<p>と計算されます。
+ここで\(\mathbf{e}_z\)は\(z\)軸方向の単位ベクトルです。<br />
+ここで一様電場中に置かれた誘電体球に誘起される電場を、電気双極子モーメントを用いてモデル化しましょう。
+この電気双極子モーメントを\(\mathbf{d}\)とすると、これが十分遠方で作る静電ポテンシャルは</p>
+
+\[\Phi 
+\simeq \frac{\mathbf{d} \cdot \mathbf{r}}{r^3} \tag{14}\]
+
+<p>と書かれます。
+この式と(12)式の\(\Phi_\mathrm{P}\)を見比べることで、この誘電体球の存在が、次の式で定義される電気双極子モーメントと等価であるとわかります。</p>
+
+\[\mathbf{d} 
+= \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} a^3 \mathbf{E}_0 \tag{15}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h3 id="誘電体球による電磁波の散乱-1">誘電体球による電磁波の散乱</h3>
+
+<p>静電場での議論を、電磁波の場合に拡張しましょう。
+電場の変化を\(\mathbf{E} = \mathbf{E}_0 \cos (\omega t + \phi)\)のように考えますが、誘電体球の半径\(a\)が電磁波の波長に比べて十分小さいとします。
+すると誘電体球内部に誘起される電気双極子モーメントは、これまで議論してきた一様な電場中の誘電体球の場合と同じと考えて差し支えないでしょう。
+よって</p>
+
+\[\mathbf{d} (t)
+= \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0} a^3 \mathbf{E}_0 \cos (\omega t + \phi) \tag{16}\]
+
+<p>となります。
+この電気双極子モーメントの時間変化により発生する電磁放射の放射強度は、<a href="/astroelec/lienard_larmor#非相対論的極限">ラーモアの式</a>で与えられます。</p>
+
+\[P_\mathrm{Larmor} 
+= \frac{2e^2}{3c^3} \ddot{x}^2 
+= \frac{2}{3c^3} \ddot{d}^2 \qquad (\mathbf{d} = -e \mathbf{x}) \tag{17}\]
+
+<p>(16)式を代入すると</p>
+
+\[P 
+= \frac{2}{3c^3} \omega^4 \left( \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0}\right)^2 a^6 E_0^2 \cos^2 (\omega t + \phi) \tag{18}\]
+
+<p>この長時間平均を計算すると</p>
+
+\[\lim_{T \rightarrow \infty} \frac{1}{T} \int_0^T \cos^2 (\omega t + \phi) dt 
+= \lim_{T \rightarrow \infty} \frac{1}{T} \int_0^T \frac{1 + \cos \{2(\omega t + \phi)\}}{2} dt 
+= \frac{1}{2}\]
+
+<p>より</p>
+
+\[\langle P \rangle 
+= \frac{1}{3c^3} \omega^4 \left( \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0}\right)^2 a^6 E_0^2 \tag{19}\]
+
+<p>のように計算されます。
+入射電磁波のエネルギー流束の長時間平均は</p>
+
+\[\langle S \rangle 
+= \frac{c}{8\pi} E_0^2 \tag{20}\]
+
+<p>です。
+これを用いると、散乱電磁波の放射強度の長時間平均が満たす式は、散乱断面積\(\sigma\)を用いて</p>
+
+\[\langle \frac{dP}{d\Omega} \rangle 
+= \langle S \rangle \frac{d\sigma}{d\Omega} \ \Longrightarrow \ 
+\langle P \rangle 
+= \langle S \rangle \int_{4\pi} \frac{d\sigma}{d\Omega} d\Omega 
+= \frac{c}{8\pi} E_0^2 \sigma \tag{21}\]
+
+<p>のように書かれます。
+(19)式を代入すると、散乱断面積は</p>
+
+\[\sigma (\omega) 
+= \frac{8\pi}{3} \left( \frac{\varepsilon_1 - \varepsilon_0}{\varepsilon_1 + 2 \varepsilon_0}\right)^2 a^6 \left( \frac{\omega}{c} \right)^4 
+\propto \frac{a^6}{\lambda^4} \tag{22}\]
+
+<p>のように求まります。
+この式から、波長が短いほど散乱断面積が大きくなり、散乱されやすいことがわかります。</p>
+
+<h2 id="地球大気への応用-青空と夕焼け">地球大気への応用: 青空と夕焼け</h2>
+
+<p>(22)式において、\(n \equiv \sqrt{\varepsilon_1 / \varepsilon_0}\)で定義される屈折率、そして\(\omega = \frac{2\pi c}{\lambda}\)を用いると</p>
+
+\[\sigma (\lambda) 
+= \frac{128\pi^5}{3} \left( \frac{n^2 - 1}{n^2 + 2}\right)^2 \frac{a^6}{\lambda^4} \tag{23}\]
+
+<p>のように書き直すことができます。
+地球大気の成分固有の値である\(n, a\)を実験から測定すれば、ある波長\(\lambda\)に対する散乱断面積\(\sigma(\lambda)\)を計算することができます。<br />
+この散乱断面積を用いて、実際に太陽からの光がどの程度散乱されるかを計算する式を導出しましょう。
+太陽から地球に垂直に光が降り注ぐことを考えます。
+地表からの高度\(z\)での光の強度を\(I(z)\)、そして地球大気中の分子数密度は\(N(z) = N_0 e^{-z/\mu}\)のように、重力成層を成しているとします。
+\(\mu\)は地球大気のスケールハイトです。
+地球大気を形成する分子を誘電体球と見なし、(23)式の散乱断面積が適用できるとします。
+上空から\(-dz\)進む間に、地表に向かう光線は\(N (-dz)\)個の分子と衝突をします。
+このことから、光線の強度変化は\(dI = \sigma I Ndz\)です。
+よって</p>
+
+\[\frac{dI}{I} 
+= \sigma N_0 e^{-z/\mu} dz \ \Longrightarrow \ 
+\log I 
+= -\sigma \mu N_0 e^{-z/\mu} + C \ \Longrightarrow \ 
+I = I_\infty \exp (-\sigma \mu N_0 e^{-z/\mu}) \tag{24}\]
+
+<p>を得ます。
+ここで\(I_\infty\)は、\(z \rightarrow \infty\)での光の強度です。
+この式から、地表\(z=0\)での光の強度は</p>
+
+\[I_0 
+= I_\infty e^{-\sigma \mu N_0} \tag{25}\]
+
+<p>とわかります。
+後は散乱断面積\(\sigma\)、地球大気における\(\mu, N_0\)を用いて\(I_0/I_\infty\)を計算すれば、その波長における光の強度の何割が地表に到達しているのかを算出することが可能です。
+\(\sigma\)が大きいほど((47)式より波長が短いほど)散乱を強く受けます。
+これが昼間の空全体が青く、夕焼けが赤い理由です。</p>
+
+<p><img src="/assets/images/astroelec/rayleigh_02.png" alt="" /></p>
+
+<h3 id="火星の夕焼けは青い">火星の夕焼けは青い</h3>
+
+<p>地球大気と異なる組成を持つ火星大気では、その光の散乱の様相も異なります。
+火星地表から太陽の沈む様子を見ると、太陽の方向が青く輝いて見えることが、火星地表探査機から送られた画像により判明しました。
+これは、火星での光の散乱は、地表から舞い上がった砂塵によるものであるためと考えられています。
+砂塵の大きさは地球大気に含まれる分子よりも大きいため、ここで議論されてきたようなレイリー散乱が適用できません。
+冒頭で記述したように、より大きな粒子による電磁波の散乱過程であるミー散乱を用いた議論が必要です。
+散乱過程の違いから、火星の夕焼けは青く見えるのです。</p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254137737&amp;linkId=41368ff933f5749048bce7282bc69290"></iframe>
+<p>　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4314008547&amp;linkId=ee2835ee6c1b395b2ebb4d7386b5ac44"&gt;&lt;/iframe&gt;　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320030222&amp;linkId=6cd0907cbe14b6ac74f16a66d1aa757a"&gt;&lt;/iframe&gt;　&lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0BLVJM17N&amp;linkId=05c7d406bfa5f423ec24540a0d1826b0"&gt;&lt;/iframe&gt;</p>
+
+<h2 id="補遺-レイリー散乱のもう一つの導出法束縛された電子による電磁波の散乱">補遺: レイリー散乱のもう一つの導出法、束縛された電子による電磁波の散乱</h2>
+
+<p>束縛電子による電磁波の散乱について考えることで、レイリー散乱を導出することもできます。
+これは先程の誘電体球に誘起される電機双極子モーメントを、周期的な運動をする電子であると見なすことから得られるものです。
+ただし、電子が加速度運動することで放射を出す場合、厳密には以下のように放射を出すことによる反作用も考える必要があります。</p>
+
+<h3 id="放射による反作用">放射による反作用</h3>
+
+<p>電子が何らかの束縛を受けて周期的な運動をしているとし</p>
+
+\[\mathbf{v} (t_1) 
+= \mathbf{v} (t_2) 
+= \mathbf{0} \tag{26}\]
+
+<p>であるとします。
+また、以下では電子の速度は非相対論的であるとします。
+電子は加速度運動を受けて放射を出し、エネルギーを失います。
+このエネルギーを失う効果を、「放射による反作用」と考え、放射が出る分だけ電子に減衰力がはたらくものと考えましょう。
+すなわち、減衰力を\(\mathbf{f}\)とすると(\(t_1 \sim t_2\)の間に減衰力\(\mathbf{f}\)のする仕事)=(\(t_1 \sim t_2\)の間にラーマーの式で与えられる放射によるエネルギー損失量)のようにモデル化します。
+これを式で改めて書き表すと</p>
+
+\[\int_{t_1}^{t_2} \mathbf{f} \cdot \mathbf{v} dt 
+= - \int_{t_1}^{t_2} P_\mathrm{Larmor} dt 
+= - \frac{2e^2}{3c^3} \int_{t_1}^{t_2} \dot{v}^2 dt \tag{27}\]
+
+<p>のようになります。
+ここで、最右辺の積分計算を進めましょう。</p>
+
+\[\int_{t_1}^{t_2} \dot{v}^2 dt 
+= \int_{t_1}^{t_2} \dot{\mathbf{v}} \cdot \dot{\mathbf{v}} dt 
+\underbrace{=}_{部分積分} \underbrace{\left[ \mathbf{v} \cdot \dot{\mathbf{v}} \right]_{t_1}^{t_2}}_{=0} - \int_{t_1}^{t_2} \mathbf{v} \cdot \ddot{\mathbf{v}} dt \tag{28}\]
+
+<p>(2), (3)式より</p>
+
+\[\int_{t_1}^{t_2} \mathbf{f} \cdot \mathbf{v} dt 
+= \frac{2e^2}{3c^3} \int_{t_1}^{t_2} \mathbf{v} \cdot \ddot{\mathbf{v}} dt \tag{29}\]
+
+<p>です。
+両辺の形を見比べることで</p>
+
+\[\mathbf{f} 
+= \frac{2e^2}{3c^3} \ddot{\mathbf{v}} \tag{30}\]
+
+<p>とわかります。
+今、電子が周期的な運動をしていると考えているため、\(\mathbf{v} \propto e^{-i\omega_0 t}\)であるとすれば</p>
+
+\[\mathbf{f} 
+= - \frac{2e^2}{3c^3} \omega_0^2 \mathbf{v} 
+= - m_e \tau \omega_0^2 \mathbf{v} \qquad
+\left( \tau \equiv \frac{2e^2}{3m_ec^3} \sim 10^{-23} \ [s] \right) \tag{31}\]
+
+<p>のように求まります。</p>
+
+<h3 id="入射電磁波が存在する場合の束縛電子の運動">入射電磁波が存在する場合の、束縛電子の運動</h3>
+
+<p>質量\(m_e\)、電荷\(-e\)の電子が</p>
+
+\[\ddot{x} 
+=  - \omega_0^2 x -\omega_0^2 \tau \dot{x} \tag{32}\]
+
+<p>に従って一次元運動をしているとします。
+ここでも電子の運動は非相対論的極限で\(\dot{x} \ll c\)とし、さらに電子の角振動数は\(\omega_0 \tau \ll 1\)とします。
+座標設定は電子の運動方向を\(x\)軸にとります。
+入射電磁波は\(x\)方向に垂直な方向に進行し、\(x\)方向に直線偏光した角振動数\(\omega\)の電磁波とします。
+すると、入射電磁波の電場は</p>
+
+\[E(t) 
+= E_0 \cos \omega t \tag{33}\]
+
+<p>のように書かれます。
+この電磁波が入射してきた後の、電子の運動方程式は</p>
+
+\[\ddot{x} 
+=  - \omega_0^2 x -\omega_0^2 \tau \dot{x} - \frac{eE_0}{m_e} \cos \omega t \tag{34}\]
+
+<p>となります。
+この方程式の解は、\(\ddot{x} + \omega_0^2 \tau \dot{x} + \omega_0^2 x = 0\)の一般解と、\(\ddot{x} + \omega_0^2 \tau \dot{x} + \omega_0^2 x + \frac{eE_0}{m_e} \cos \omega t= 0\)の特解を足し合わせたものです。</p>
+
+<ul>
+  <li>\(\ddot{x} + \omega_0^2 \tau \dot{x} + \omega_0^2 x = 0\)の一般解</li>
+</ul>
+
+<p>\(x = e^{\lambda t}\)の形で求めてみましょう。</p>
+
+\[\lambda^2 + \omega_0^2 \tau \lambda + \omega_0^2 
+= 0 \ \Longrightarrow \ 
+\lambda 
+= \frac{-\omega_0^2 \tau \pm \sqrt{\omega_0^4 \tau^2 -4\omega_0^2}}{2} \tag{35}\]
+
+<p>よって</p>
+
+\[x 
+= e^{-\frac{\omega_0^2 \tau}{2} t} (C_1 e^{\frac{\sqrt{\omega_0^4 \tau^2 -4\omega_0^2}}{2}} + C_2 e^{-\frac{\sqrt{\omega_0^4 \tau^2 -4\omega_0^2}}{2}}) \tag{36}\]
+
+<p>と求まります。
+ここで\(C_1, C_2\)は初期条件から求まる定数です。</p>
+
+<ul>
+  <li>\(\ddot{x} + \omega_0^2 \tau \dot{x} + \omega_0^2 x + \frac{eE_0}{m_e} \cos \omega t= 0\)の特解</li>
+</ul>
+
+<p>\(x = C_3 \cos (\omega t + \phi)\)の形で求めてみましょう。</p>
+
+\[\begin{align}
+&amp;-\omega^2 C \cos (\omega t + \phi) -\omega_0^2 \tau \omega C \sin (\omega t + \phi) + \omega_0^2 C \cos (\omega t + \phi) 
+= - \frac{e E_0}{m_e} \cos \omega t \notag \\
+&amp;\Longrightarrow \ 
+(\omega_0^2 - \omega^2) C (\cos \omega t \cos \phi - \sin \phi \sin \omega t) - \omega_0^2 \tau \omega C (\sin \omega t \cos \phi + \cos \omega t \sin \phi) 
+= -\frac{eE_0}{m_e} \cos \omega t \notag \\
+&amp;\Longrightarrow \ 
+C \{(\omega_0^2 - \omega^2) \cos \phi - \omega_0^2 \tau \omega \sin \phi \} \cos \omega t + C \{ -(\omega_0^2 - \omega^2) \sin \phi - \omega_0^2 \tau \omega \cos \phi \} \sin \omega t 
+= -\frac{eE_0}{m_e} \cos \omega t \tag{37}
+\end{align}\]
+
+<p>右辺と左辺を比較すると、\(\sin \omega t\)の係数から</p>
+
+\[(\omega^2 - \omega_0^2) \sin \phi - \omega_0^2 \tau \omega \cos \phi 
+= 0 \ \Longrightarrow \ 
+\tan \phi 
+= \frac{\omega_0^2 \tau \omega}{\omega^2 - \omega_0^2} \tag{38}\]
+
+<p>また、\(\cos \omega t\)の係数より</p>
+
+\[\begin{align}
+&amp;C \cos \phi \{(\omega_0^2 - \omega^2) - \omega_0^2 \tau \omega \tan \phi \} 
+= C \cos \phi (\omega^2 - \omega_0^2) \left( -1 - \frac{\omega_0^2 \tau \omega}{\omega^2 - \omega_0^2} \tan \phi \right) \notag \\
+&amp;\qquad \underbrace{=}_{(12)}  - C \cos \phi (\omega^2 - \omega_0^2) \left( 1 + \tan^2 \phi \right) 
+= - C \frac{\omega^2 - \omega_0^2}{\cos \phi} 
+= - \frac{eE_0}{m_e} \notag \\
+&amp;\Longrightarrow \ 
+C 
+= \frac{eE_0}{m_e} \frac{\cos \phi}{\omega^2 - \omega_0^2} 
+= \frac{eE_0}{m_e} \frac{1}{(\omega^2 - \omega_0^2) \sqrt{1+\tan^2 \phi}} 
+\underbrace{=}_{(12)} \frac{eE_0}{m_e} \frac{1}{(\omega^2 - \omega_0^2) \sqrt{1+\left( \frac{\omega_0^2 \tau \omega}{\omega^2 - \omega_0^2}\right)}} \notag \\
+&amp;\qquad = \frac{eE_0}{m_e} \frac{1}{\sqrt{(\omega^2 - \omega_0^2)^2 + (\omega_0^2 \tau \omega)^2}} \tag{39}
+\end{align}\]
+
+<p>求めたい(32)式の一般解は、これら2つを足し合わせたものです。
+しかし、力学で減衰振動を勉強した方々であれば、\(\omega_0^2 \tau \dot{x}\)の項が減衰を表すものであることを知っているはずです。
+この項により、周期的な運動をする粒子の振幅は減少していくと考えられますが、十分な時間が経過すると、減衰しきって系は定常状態に落ち着きます。
+よって、ここでも十分時間が経過し、電子の運動が定常状態に落ち着いた場合の解を求めることにしましょう。
+具体的には\(\omega_0^2 \tau t \gg 1\)のとき</p>
+
+\[x 
+= \frac{eE_0}{m_e} \frac{1}{\sqrt{(\omega^2 - \omega_0^2)^2 + \Gamma^2 \omega^2}} \cos (\omega t + \phi)
+\qquad \left( \Gamma \equiv \omega_0^2 \tau, \quad \tan \phi = \frac{\Gamma \omega}{\omega^2 - \omega_0^2} \right) \tag{40}\]
+
+<p>のような解となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h3 id="電磁波の散乱と散乱断面積">電磁波の散乱と散乱断面積</h3>
+
+<p>散乱された電磁波を、入射電磁波により電子が運動することで起こった電磁放射であると考えます。
+この問題では、電子の運動を非相対論的であると考えているため、この放射強度は<a href="/astroelec/lienard_larmor#非相対論的極限">ラーモアの式</a>で与えられます。</p>
+
+\[P_\mathrm{Larmor} 
+= \frac{2e^2}{3c^3} \ddot{x}^2 \tag{41}\]
+
+<p>(40)式より</p>
+
+\[\ddot{x} 
+= - \frac{eE_0}{m_e} \frac{\omega^2}{\sqrt{(\omega^2 - \omega_0^2)^2 + \Gamma^2 \omega^2}} \cos (\omega t + \phi) \tag{42}\]
+
+<p>を代入すれば</p>
+
+\[P_\mathrm{Larmor} 
+= \frac{2e^2}{3c^3} \frac{e^2 E_0^2}{m_e^2} \frac{\omega^4}{(\omega^2 - \omega_0^2)^2 + \Gamma^2 \omega^2} \cos^2 (\omega t + \phi) \tag{43}\]
+
+<p>この長時間平均は</p>
+
+\[\lim_{T \rightarrow \infty} \frac{1}{T} \int_0^T \cos^2 (\omega t + \phi) dt 
+= \lim_{T \rightarrow \infty} \frac{1}{T} \int_0^T \frac{1 + \cos \{2(\omega t + \phi)\}}{2} dt 
+= \frac{1}{2}\]
+
+<p>より</p>
+
+\[\langle P_\mathrm{Larmor} \rangle 
+= \frac{e^4 E_0^2}{3m_e^2 c^3} \frac{\omega^4}{(\omega^2 - \omega_0^2)^2 + \Gamma \omega^2} \tag{44}\]
+
+<p>のように計算されます。<br />
+入射電磁波のエネルギー流束の長時間平均は</p>
+
+\[\langle S \rangle 
+= \frac{c}{8\pi} E_0^2 \tag{45}\]
+
+<p>です。
+これを用いると、散乱電磁波の放射強度の長時間平均は</p>
+
+\[\langle \frac{dP_\mathrm{Larmor}}{d\Omega} \rangle 
+= \langle S \rangle \frac{d\sigma}{d\Omega} \ \Longrightarrow \ 
+\langle P_\mathrm{Larmor} \rangle 
+= \langle S \rangle \int_{4\pi} \frac{d\sigma}{d\Omega} d\Omega 
+= \frac{c}{8\pi} E_0^2 \sigma \tag{46}\]
+
+<p>のように書かれます。
+ここで\(\sigma\)は散乱断面積です。
+(44)式を代入すると</p>
+
+\[\sigma (\omega) 
+= \frac{8\pi}{3} \left( \frac{e^2}{m_e c^2}\right)^2 \frac{\omega^4}{(\omega^2 - \omega_0^2)^2 + \Gamma^2 \omega^2} 
+= \frac{\omega^4}{(\omega^2 - \omega_0^2)^2 + \Gamma^2 \omega^2} \sigma_\mathrm{T} \tag{47}\]
+
+<p>となります。
+ここで、<a href="/astroelec/thomson#thomson散乱の散乱断面積">\(\sigma_\mathrm{T} = \frac{8\pi}{3} \left( \frac{e^2}{m_e c^2}\right)^2\)はトムソン散乱断面積</a>です。</p>
+
+<h3 id="omega-gg-omega_0の場合">\(\omega \gg \omega_0\)の場合</h3>
+
+<p>この\(\sigma (\omega)\)は、\(\omega \gg \omega_0\)の極限では</p>
+
+\[\sigma (\omega) 
+= \frac{\sigma_\mathrm{T}}{\left(1 - \frac{\omega_0^2}{\omega^2}\right)^2 + \frac{\Gamma^2}{\omega^2}} 
+\simeq \sigma_\mathrm{T} \tag{48}\]
+
+<p>のように、<a href="/astroelec/thomson#thomson散乱の散乱断面積">トムソン散乱断面積</a>に一致します。
+入射電磁波の角振動数よりも電子の周期運動の角振動数が十分小さい場合、入射電磁波にとっては電子は静止しているように見えます。
+これは、自由電子による散乱現象に一致するため、散乱断面積は<a href="(/astroelec/thomson#thomson散乱の散乱断面積)">トムソン散乱</a>のものと一致すると解釈することができます。</p>
+
+<h3 id="omega-simeq-omega_0の場合">\(\omega \simeq \omega_0\)の場合</h3>
+
+<p>(47)式より</p>
+
+\[\begin{align}
+\sigma (\omega) 
+&amp;= \frac{\omega^4}{(\omega - \omega_0)^2 (\omega + \omega_0)^2 + \Gamma^2 \omega^2} \sigma_\mathrm{T}
+\simeq \frac{\omega_0^4}{4\omega_0^2 (\omega - \omega_0)^2 + \Gamma^2 \omega_0^2} \sigma_\mathrm{T} \notag \\
+&amp;\underbrace{=}_{(6)} \frac{4\pi e^2}{m_e c} \frac{\tau \omega_0^2}{4 (\omega - \omega_0)^2 + \Gamma^2} 
+= \frac{2\pi^2 e^2}{m_e c} \frac{\Gamma / (2\pi)}{(\omega - \omega_0)^2 + (\Gamma / 2)^2} \tag{49}
+\end{align}\]
+
+<p>となります。
+これを共鳴散乱(resonance scattering)の断面積と呼びます。
+(49)式の形は<a href="/atmos/transition_prob#%E5%8F%A4%E5%85%B8%E7%9A%84%E5%B0%8E%E5%87%BArayleigh%E6%95%A3%E4%B9%B1%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9">ローレンツ型の分布</a>と呼ばれる有名な関数形です。
+これを\(\omega\)で積分すると</p>
+
+\[\int_0^\infty \frac{\Gamma / (2\pi)}{(\omega - \omega_0)^2 + (\Gamma / 2)^2} d\omega 
+\underbrace{=}_{\omega - \omega_0 = \frac{\Gamma}{2} \tan \theta} \frac{\Gamma}{2} \int_0^{\pi / 2} \frac{1}{(\Gamma / 2)^2} \frac{\Gamma / 2}{\cos^2 \theta} \frac{d\theta}{1 + \tan^2 \theta} 
+= \frac{1}{2}\]
+
+<p>より</p>
+
+\[\int_0^\infty \sigma (\omega) d\omega 
+= \frac{\pi^2 e^2}{m_e c} \tag{50}\]
+
+<p>と求まります。</p>
+
+<h3 id="omega-ll-omega_0の場合">\(\omega \ll \omega_0\)の場合</h3>
+
+\[\sigma (\omega) 
+\underbrace{=}_{\Gamma = \omega_0^2 \tau} \frac{\omega^4}{\omega_0^4} \frac{\sigma_\mathrm{T}}{\left( \frac{\omega^2}{\omega_0^2} - 1\right)^2 + \tau \frac{\omega^2}{\omega_0^2}} 
+\simeq \frac{\omega^4}{\omega_0^4} \sigma_\mathrm{T} \propto \omega^4 \tag{51}\]
+
+<p>のように近似されます。
+(51)式から、短波長になるほどより散乱断面積が大きくなり、散乱されやすくなるとわかります。</p>
+
+<h3 id="sigma-omegaの図示">\(\sigma (\omega)\)の図示</h3>
+
+<p>最後に、(47)式で表現される散乱断面積を図示しましょう。</p>
+
+<p><img src="/assets/images/astroelec/rayleigh_03.png" alt="" /></p>
+
+<p>この図では、\(\Gamma = 0.5\)、また縦軸は\(\sigma(\omega) / \sigma_\mathrm{T}\)、横軸は\(\omega / \omega_0\)のように規格化しています。
+\(\omega / \omega_0\)が小さいところでは4乗に比例して大きくなります。
+\(\omega / \omega_0 \sim 1\)では<a href="/atmos/transition_prob#%E5%8F%A4%E5%85%B8%E7%9A%84%E5%B0%8E%E5%87%BArayleigh%E6%95%A3%E4%B9%B1%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9">ローレンツプロファイル</a>のようになり、\(\omega / \omega_0 \gg 1\)では\(\sigma / \sigma_\mathrm{T} \rightarrow 1\)に漸近しています。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/3Rxh15U">中村哲, 須藤彰三, “電磁気学”</a><br />
+[2] <a href="https://amzn.to/46gbK7e">ランダウ &amp; リフシッツ, “場の古典論”</a><br />
+[3] <a href="https://amzn.to/46dk3jT">砂川重信, “理論電磁気学”</a><br />
+[4] <a href="https://amzn.to/46jSy8B">太田浩一, “電磁気学の基礎I”</a><br />
+[5] <a href="https://amzn.to/3Rs4D7y">太田浩一, “電磁気学の基礎II”</a><br />
+[6] <a href="https://amzn.to/48kYDn6">後藤憲一, 山﨑修一郎, , “詳解電磁気学演習”</a><br />
+[7] <a href="https://amzn.to/3RsRA5A">平川浩正, “電気力学”</a><br />
+[8] <a href="https://amzn.to/3LnWxsH">中村文隆, 鶴剛, 長田哲也, 藤沢健太, 梅村雅之, 福江純, “放射素過程の基礎”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254137737&amp;linkId=41368ff933f5749048bce7282bc69290"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4314008547&amp;linkId=276e2c5adf19e02136b766cc5e58161a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320030222&amp;linkId=7da98b78a91c7eb81ce3201fafbc48ea"></iframe>
+:ET

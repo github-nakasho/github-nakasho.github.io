@@ -1,0 +1,72 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#14-luminosity-class" id="markdown-toc-14-luminosity-class">1.4 Luminosity class</a>    <ol>
+      <li><a href="#pressure-broadening" id="markdown-toc-pressure-broadening">Pressure broadening</a></li>
+      <li><a href="#luminosity-class" id="markdown-toc-luminosity-class">Luminosity class</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="14-luminosity-class">1.4 Luminosity class</h1>
+
+<h2 id="pressure-broadening">Pressure broadening</h2>
+
+<p>吸収線の幅は(恒星の自転による効果を無視すると)恒星大気の密度が大きいほど大きくなります。これはエネルギーレベルが他の粒子の衝突(近接遭遇)によって擾乱を受けて広がるためです。これはPressure broadening or Collisional broadeningと呼ばれます。同じ有効温度に対して、明るい星ほど半径が大きい(\(L = 4\pi R^2 \sigma T_{\rm eff}\))ため、大気の密度が小さくなります。下の写真はA型の太陽・白色矮星・青色巨星のスペクトルを並べたものです。半径が小さく、表面重力の大きい白色矮星ほど吸収線が広がっていることが見て取れます。</p>
+
+<p><img src="/assets/images/atmos/pressure_broadening.png" alt="各恒星の吸収線の広がり。" /></p>
+
+<p>Pressure broadeningを定性的に証明してみましょう。圧力\(P\)は状態方程式より</p>
+
+\[P \propto T \rho\]
+
+<p>と書けます。\(T, \rho\)はそれぞれ温度とガス密度です。恒星質量が\(M\)のとき、恒星表面\(R\)での重力は</p>
+
+\[F_g = \frac{GM}{R^2}\]
+
+<p>となります。これらの式から次のことが言えます。\(R\)が小さいと重力\(F_g\)が大きくなります。重力でつぶれないためには圧力が大きくなければなりません。恒星内部が一定一様温度とすると、\(\rho\)が大きい必要があります。密度が大きいほど恒星大気を構成する物質の衝突頻度が多くなり、吸収線のエネルギーゆらぎが大きくなります。このような理由から、pressure broadeningは半径が小さい恒星ほど広がります。</p>
+
+<h2 id="luminosity-class">Luminosity class</h2>
+
+<p>この吸収線の幅の違いに基づいて、Luminosity classが決定されています。
+Luminosity classはIa-0, Ia, Ib, II, III, IV, V, Vi, Dに分けられます。</p>
+
+<ul>
+  <li>Ia-0: 非常に明るい超巨星</li>
+  <li>Ia: 明るい超巨星</li>
+  <li>Ib: 超巨星</li>
+  <li>II: 明るい巨星</li>
+  <li>III: 巨星</li>
+  <li>IV: 準巨星</li>
+  <li>V: 主系列星</li>
+  <li>VI: 準矮星(subdwarf)</li>
+  <li>D: 白色矮星</li>
+</ul>
+
+<p>Luminosity typeも含めたスペクトル分類はM-K分類(classification)と言われます。例えばA5V(A5が温度、Vがluminosity)のように記述します。</p>
+
+<p>白色矮星の場合はスペクトルが特殊なため、Luminosity classも特別になります。Hの吸収線のみが現れている場合はA, Heの吸収線のみが存在している場合はBのようにアルファベットが付与され、DA, DB, DC, DQ, …のように表現します。 白色矮星は重力が強いため、重たいものは星の深部に移動します。そのため、その内部構造は層状になっていると考えられています。少しでもHが存在するとDAに分類されますが、このような層構造において表面のH層を恒星風などにより全て吹き飛ばすとDBとなります。</p>
+
+<p><img src="/assets/images/atmos/luminosity_class.png" alt="HR図上に分布させたLuminosity class。" /></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li><a href="https://hubblesite.org/image/3052/news/115-spectra">Hubble site, Signature of a White Dwarf</a></li>
+  <li><a href="https://web.njit.edu/~gary/321/Lecture6.html">Prof. Dale E. Gary’s website, Hertzsprung-Russell Diagrams and Structure of Spectral Lines</a></li>
+</ul>
+:ET

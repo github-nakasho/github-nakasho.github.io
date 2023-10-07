@@ -4,7 +4,7 @@ title: 1次元ランダムウォーク
 parent: 大学院入試問題
 math: mathjax3
 permalink: /graduate_exam/tmu_phys_2023_winter
-nav_order: 1
+nav_order: 2
 ---
 
 {: .no_toc }
@@ -231,7 +231,7 @@ W(N+1, m) - W(N, m)
 &= \frac{1}{2} W(N, m-1) + \frac{1}{2} W(N, m+1) - \frac{1}{2} W(N, m) - \frac{1}{2} W(N, m) \notag \\
 &= \frac{1}{2} \{ W(N, m+1) - W(N, m)\} - \frac{1}{2} \{W(N, m) - W(N, m-1)\} \notag \\
 &= \frac{\xi}{2} \frac{W(N, m+1) - W(N, m)}{\xi} - \frac{\xi}{2} \frac{W(N, m) - W(N, m-1)}{\xi} \notag \\
-&\underbrace{\simeq}_{\xi \rightarrow 0} \frac{\xi}{2} \left( \left. \frac{\partial W}{\partial x} \right|_{(m+1/2)x} - \left. \frac{\partial W}{\partial x} \right|_{(m-1/2)x} \right) 
+&\underbrace{\simeq}_{\xi \rightarrow 0} \frac{\xi}{2} \left( \left. \frac{\partial W}{\partial x} \right|_{x=(m+1/2)\xi} - \left. \frac{\partial W}{\partial x} \right|_{x=(m-1/2)\xi} \right) 
 = \frac{\xi^2}{2} \frac{\partial^2 W}{\partial x^2} \notag
 \end{align}
 $$

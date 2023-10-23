@@ -1,0 +1,194 @@
+I"9
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#エルミート多項式-hermite-polynomial" id="markdown-toc-エルミート多項式-hermite-polynomial">エルミート多項式 (Hermite polynomial)</a>    <ol>
+      <li><a href="#級数表現" id="markdown-toc-級数表現">級数表現</a></li>
+      <li><a href="#微分表現" id="markdown-toc-微分表現">微分表現</a></li>
+      <li><a href="#多項式の直交性" id="markdown-toc-多項式の直交性">多項式の直交性</a></li>
+      <li><a href="#漸化式" id="markdown-toc-漸化式">漸化式</a></li>
+      <li><a href="#エルミート多項式の具体的な形" id="markdown-toc-エルミート多項式の具体的な形">エルミート多項式の具体的な形</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="エルミート多項式-hermite-polynomial">エルミート多項式 (Hermite polynomial)</h1>
+
+<h2 id="級数表現">級数表現</h2>
+
+<p>母関数展開</p>
+
+\[e^{2z\omega - \omega^2} 
+= \sum_{n=0}^{\infty} \frac{H_n(z)}{n!} \omega^n \tag{1}\]
+
+<p>のように定義される\(H_n(z)\)をエルミート多項式と呼びます。
+この式の左辺は</p>
+
+\[e^{2z\omega - \omega^2} 
+= e^{2z\omega} e^{-\omega^2} 
+= \left( \sum_{\ell = 0}^\infty \frac{(2z\omega)^\ell}{\ell !} \right) \left( \sum_{m=0}^\infty \frac{(-\omega^2)^m}{m!}\right) 
+= \sum_{\ell=0}^\infty \sum_{m=0}^\infty \frac{(-1)^m (2z)^\ell}{\ell ! m!} \omega^{\ell + 2m} \tag{2}\]
+
+<p>のようにも計算されます。
+ここで\(\ell + 2m = n \ (\ell = n-2m)\)とおくことで、\(\omega^n\)の形で整理を行いましょう。</p>
+
+\[e^{2z\omega - \omega^2} 
+= \sum_{n=0}^\infty \sum_{m=0}^{[n/2]} \frac{(-1)^m (2z)^{n-2m}}{(n-2m)! m!} \omega^n 
+= \sum_{n=0}^\infty \sum_{m=0}^{[n/2]} \frac{(-1)^m n! (2z)^{n-2m}}{(n-2m)! m!} \frac{\omega^n}{n!} \tag{3}\]
+
+<p>これを(1)式と比較すると</p>
+
+\[H_n(z) 
+= \sum_{m=0}^{[n/2]} \frac{(-1)^m n! (2z)^{n-2m}}{(n-2m)! m!} \tag{4}\]
+
+<p>のような級数表現を得ます。</p>
+
+<h2 id="微分表現">微分表現</h2>
+
+<p>(1)式の左辺において、\(z\)を固定して\(\omega\)に関してテイラー展開を行います。
+すると\(\omega^n / n!\)の係数は</p>
+
+\[\begin{align}
+H_n (z) 
+&amp;= \left[ \frac{d^n}{d\omega^n} e^{2z\omega - \omega^2}\right]_{\omega = 0} 
+= e^{z^2} \left[ \frac{d^n}{d\omega^n} e^{-(\omega - z)^2}\right]_{\omega = 0} 
+\underbrace{=}_{u = \omega - z} e^{z^2} \left[ \frac{d^n}{du^n} e^{-u^2}\right]_{u = -z} 
+= e^{z^2} \frac{d^n}{d(-z)^n} e^{-z^2} \notag \\
+&amp;= (-1)^n e^{z^2} \frac{d^n}{dz^n} e^{-z^2} \tag{5} 
+\end{align}\]
+
+<p>となり、微分系での表現も得ることができました。</p>
+
+<h2 id="多項式の直交性">多項式の直交性</h2>
+
+<p>直交性を考えるために、まずは以下の積分を計算しましょう。</p>
+
+\[\int_{-\infty}^\infty e^{2z\omega - \omega^2} e^{2zt - t^2} e^{-z^2} dz 
+= \int_{-\infty}^\infty e^{-(z-\omega - t)^2} e^{2t\omega} dz 
+\underbrace{=}_{ガウス積分} \sqrt{\pi} e^{2t\omega} 
+= \sqrt{\pi} \sum_{n=0}^\infty \frac{(2t\omega)^n}{n!} \tag{6}\]
+
+<p>ここで、(1)式より</p>
+
+\[e^{2z\omega - \omega^2} e^{2zt - t^2} 
+= \sum_{n=0}^\infty \sum_{m=0}^\infty \frac{H_n H_m}{n! m!} \omega^n t^m \tag{7}\]
+
+<p>が得られることから、これを(6)式に代入します。</p>
+
+\[\sum_{n=0}^\infty \sum_{m=0}^\infty \frac{\omega^n t^m}{n! m!} \int_{-\infty}^\infty H_n H_m e^{-z^2} dz 
+= \sqrt{\pi} \sum_{n=0}^\infty \frac{2^n \omega^n t^n}{n!} 
+= \sqrt{\pi} \sum_{n=0}^\infty \sum_{m=0}^\infty \frac{2^n \omega^n t^m}{n! m!} m! \delta_{nm} \tag{8}\]
+
+<p>両辺の\(\omega, t\)のベキの係数を比較することで</p>
+
+\[\int_{-\infty}^\infty H_n H_m e^{-z^2} dz 
+= 2^n n! \sqrt{\pi} \delta_{nm} \tag{9}\]
+
+<p>という直交性が導かれます。</p>
+
+<h2 id="漸化式">漸化式</h2>
+
+<p>エルミート多項式が満たす漸化式をいくつか証明しましょう。
+(1)式の両辺を\(z\)微分したものより</p>
+
+\[2\omega e^{2z\omega - \omega^2} 
+= \sum_{n=0}^\infty \frac{H_n'}{n!} \omega^n \tag{10}\]
+
+<p>この左辺は</p>
+
+\[2\omega e^{2z\omega - \omega^2} 
+= 2\omega \sum_{n=0}^\infty \frac{H_n}{n!} \omega^n 
+= \sum_{n=0}^\infty \frac{2 H_n}{n!} \omega^{n+1} 
+= \sum_{n=1}^\infty \frac{2 H_{n-1}}{(n-1)!} \omega^n \tag{11}\]
+
+<p>のように変形されるので、\(\omega^n\)の係数比較から</p>
+
+\[\frac{H_n'}{n!} 
+= \frac{2H_{n-1}}{(n-1)!} \ \Longrightarrow \ 
+H_n' = 2n H_{n-1} \quad (n \geq 1) \tag{12}\]
+
+<p>を得ます。
+さらに(1)式の両辺を\(\omega\)微分すると</p>
+
+\[2(z-\omega) e^{2z\omega - \omega^2} 
+= \sum_{n=1}^\infty \frac{H_n}{(n-1)!} \omega^{n-1} 
+= \sum_{n=0}^\infty \frac{H_{n+1}}{n!} \omega^n \tag{13}\]
+
+<p>この最左辺は</p>
+
+\[2(z-\omega) e^{2z\omega - \omega^2} 
+= 2z \sum_{n=0}^\infty \frac{H_n}{n!} \omega^n - 2 \sum_{n=0}^\infty \frac{H_n}{n!} \omega^{n+1} 
+= 2z \sum_{n=0}^\infty \frac{H_n}{n!} \omega^n - 2 \sum_{n=1}^\infty \frac{H_{n-1}}{(n-1)!} \omega^{n} \tag{14}\]
+
+<p>のように変形されるので、\(\omega^n\)の係数比較から</p>
+
+\[\frac{H_{n+1}}{n!} 
+= \frac{2zH_n}{n!} - \frac{2H_{n-1}}{(n-1)!} \ \Longrightarrow \ 
+H_{n+1} 
+= 2z H_n - 2n H_{n-1} \quad (n \geq 1) \tag{15}\]
+
+<p>となります。<br />
+(5)式の両辺を\(z\)微分すると</p>
+
+\[\begin{align}
+H_n' 
+&amp;= (-1)^n 2z e^{z^2} \frac{d^n}{dz^n} e^{-z^2} + (-1)^2 (-1)^n e^{z^2} \frac{d^{n+1}}{dz^{n+1}} e^{-z^2}
+= 2z (-1)^n e^{z^2} \frac{d^n}{dz^n} e^{-z^2} - (-1)^{n+1} e^{z^2} \frac{d^{n+1}}{dz^{n+1}} e^{-z^2} \notag \\
+&amp;= 2z H_n - H_{n+1} \tag{16}
+\end{align}\]
+
+<p>となります。
+さらに両辺を\(z\)微分すれば</p>
+
+\[H_n'' 
+= 2H_n + 2z H_n' - H_{n+1}' \tag{17}\]
+
+<p>を得ます。
+そして(12)式より\(H_{n+1}' = 2(n+1) H_n\)を用いると</p>
+
+\[H_n'' 
+= 2H_n + 2z H_n' - 2(n+1) H_n 
+= 2z H_n' - 2n H_n \ \Longrightarrow \ 
+H_n'' - 2z H_n' + 2nH_n 
+= 0 \tag{18}\]
+
+<p>を導くことができます。
+これをエルミートの微分方程式と呼びます。</p>
+
+<h2 id="エルミート多項式の具体的な形">エルミート多項式の具体的な形</h2>
+
+<p>以下に、エルミート多項式の具体的な形を示します。</p>
+
+\[\begin{align}
+&amp;H_0(z) = 1, \quad 
+H_1(z) = 2z, \quad
+H_2(z) = 4z^2 - 2, \quad
+H_3(z) = 8z^3 - 12z, \notag \\
+&amp;H_4(z) = 16z^4 - 48z^2 + 12, \quad
+H_5(z) = 32z^5 - 160z^3 + 120z \tag{19}
+\end{align}\]
+
+<h1 id="参考文献">参考文献</h1>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

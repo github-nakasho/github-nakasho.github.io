@@ -1,0 +1,109 @@
+I"�%
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#過冷却状態の熱力学的な議論" id="markdown-toc-過冷却状態の熱力学的な議論">過冷却状態の熱力学的な議論</a>    <ol>
+      <li><a href="#問1" id="markdown-toc-問1">問1</a>        <ol>
+          <li><a href="#1-1" id="markdown-toc-1-1">1-1</a></li>
+          <li><a href="#1-2" id="markdown-toc-1-2">1-2</a></li>
+          <li><a href="#1-3" id="markdown-toc-1-3">1-3</a></li>
+        </ol>
+      </li>
+      <li><a href="#問2" id="markdown-toc-問2">問2</a>        <ol>
+          <li><a href="#2-1" id="markdown-toc-2-1">2-1</a></li>
+          <li><a href="#2-2" id="markdown-toc-2-2">2-2</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626183&amp;linkId=9b7db8f4021e4efe1deffccaea30634d"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=bf125858b1296359a270d4f5025cf871"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=8f115c2076820a80f01be51e51690c7c"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254131178&amp;linkId=9ac266c069a399ce4585f2b3581a5c6d"></iframe>
+<p>　</p>
+
+<h1 id="過冷却状態の熱力学的な議論">過冷却状態の熱力学的な議論</h1>
+
+<p>以下の問題は、<a href="https://www.ep.sci.hokudai.ac.jp/enroll/files/R06/R6_enroll_Q_Phys_PM.pdf">2023年に行われた北海道大学大学院理学院宇宙物理学専攻の大学院入試問題</a>です。
+最初はエンタルピーなどの基本的な問題ののち、それを用いて過冷却状態にある液体から固体への変化について議論しています。
+過冷却状態はあまり馴染みがないかもしれませんが、それに面食らうことなく、落ち着いて解き進めていきましょう。</p>
+
+<h2 id="問1">問1</h2>
+
+<p>系の内部エネルギーを\(U\)、エンタルピーを\(H\)、エントロピーを\(S\)、絶対温度を\(T\)、圧力を\(p\)、体積を\(V\)として以下の問いに答えなさい。</p>
+
+<h3 id="1-1">1-1</h3>
+
+<p>熱力学第一法則より、系に\(d'Q\)の熱量を準静的に与えた場合、以下の式が成り立ちます。</p>
+
+\[d'Q 
+= dU + pdV \tag{1}\]
+
+<p>\(H = U + pV\)と表されることを用いて、以下の式が成り立つことを示しなさい。</p>
+
+\[d'Q 
+= dH - V dp \tag{2}\]
+
+<h3 id="1-2">1-2</h3>
+
+<p>エンタルピーを\(H(T, p)\)のように温度と圧力の関数と考えると、\(d'Q\)が以下の式で表されることを示しなさい。</p>
+
+\[d'Q 
+= \left( \frac{\partial H}{\partial T}\right)_p dT + \left\{ \left(\frac{\partial H}{\partial p}\right)_T - V\right\} dp \tag{3}\]
+
+<h3 id="1-3">1-3</h3>
+
+<p>定圧条件下で\(d'Q\)の熱量を系に準静的に与えるとき、系の温度が\(dT\)上昇した場合、系の定圧熱容量は\(C_p = \left( \frac{d'Q}{dT}\right)_p\)と表されます。
+1-2の結果と\(dS = \frac{d'Q}{T}\)の関係を用いて、以下の関係式を示しなさい。</p>
+
+\[\left( \frac{\partial H}{\partial T}\right)_p 
+= C_p, \quad 
+\left( \frac{\partial S}{\partial T}\right)_p 
+= \frac{C_p}{T} \tag{3}\]
+
+<h2 id="問2">問2</h2>
+
+<p>問1の結果を用いて、以下の問題に答えなさい。　　</p>
+
+<p>過冷却状態とは、物質が凝固点(融点)以下まで液体状態を保った準安定な状態です。
+ここでは以下の過程のもとで、過冷却状態を示すある物質Xが凝固点以下の温度で過冷却液体から固体に状態変化する過程でのエントロピー変化について、図1を参考にしながら考えてみましょう。<br />
+物質Xの1気圧での固体状態での定圧モル比熱を\(C_s\)、液体状態の定圧モル比熱を\(C_l\)とします。
+\(C_s, C_l\)は温度に依存せずに一定で、\(C_s &lt; C_l\)とします。
+また、過冷却状態での液体の定圧モル比熱も\(C_l\)であり、平衡状態での液体と同様に扱うことができるものとします。
+物質Xの1気圧での融点は\(T_0\)であり、1気圧かつ温度\(T_0\)でのモル融解熱を\(Q_0\)とします。
+過冷却液体から固体に変化する温度を\(T_1 (&lt; T_0)\)とし、\(T &gt; T_1\)の範囲では、液体状態のエントロピーは固体状態のエントロピーより大きいものとします。
+全て1モルの物質Xの1気圧での定圧変化を考えるものとして、以下の問題に\(C_s, C_l, T_0, T_1, Q_0\)を用いて答えてみましょう。</p>
+
+<h3 id="2-1">2-1</h3>
+
+<p>物質Xを温度\(T_1\)の固体から温度\(T_0\)の液体に変化(図1のA-&gt;B-&gt;Cの変化)させるのに必要となる熱量\(Q_1\)と物質Xのエントロピー変化\(\Delta S_1\)を求めなさい。<br />
+同様に、温度\(T_0\)の液体から温度\(T_1\)の過冷却液体に変化(図1のC-&gt;Dの変化)させるのに必要となる熱量\(Q_2\)と物質Xのエントロピー変化\(\Delta S_2\)を求めなさい。</p>
+
+<h3 id="2-2">2-2</h3>
+
+<p>物質Xが温度\(T_1\)の過冷却液体から同じ温度\(T_1\)の固体に変化する過程は、図1でD-&gt;Aの変化に対応します。
+この過程が不可逆過程であることに注意して、物質Xが温度\(T_1\)の過冷却液体から温度\(T_1\)の固体に変化する過程での物質Xのエントロピー変化\(\Delta S_3\)を求めなさい。</p>
+
+<p><img src="/assets/images/graduate_exam/hokkaido_2023_thermo_01.png" alt="" />
+図1: 物質Xの温度-エントロピー図</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://www.astr.tohoku.ac.jp/examinee/pdf/exam05.pdf">東北大学大学院理学研究科天文学専攻、令和5年度大学院入学生向け試験</a><br />
+[2] <a href="https://amzn.to/3tzJpdT">須藤靖, “解析力学・量子論”</a><br />
+[3] <a href="https://amzn.to/3QmJFFW">桜井隆, 小島正宜, 小杉健郎, 柴田一成, “太陽”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626183&amp;linkId=9b7db8f4021e4efe1deffccaea30634d"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07MJ9D486&amp;linkId=bf125858b1296359a270d4f5025cf871"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=8f115c2076820a80f01be51e51690c7c"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254131178&amp;linkId=9ac266c069a399ce4585f2b3581a5c6d"></iframe>
+<p>　</p>
+
+:ET

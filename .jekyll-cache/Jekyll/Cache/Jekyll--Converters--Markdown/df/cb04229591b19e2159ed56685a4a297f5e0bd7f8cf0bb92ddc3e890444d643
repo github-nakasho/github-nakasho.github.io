@@ -1,0 +1,84 @@
+I"1
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#恒星の重力エネルギー" id="markdown-toc-恒星の重力エネルギー">恒星の重力エネルギー</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=1cea0e65f198098664e273dc87bb11aa"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4769916434&amp;linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254131178&amp;linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254137796&amp;linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+
+<h1 id="恒星の重力エネルギー">恒星の重力エネルギー</h1>
+
+<p>星の重力エネルギーは、星を構成しているガス全てを無限遠まで運ぶのに必要なエネルギーに負の符号をつけたものとして評価することができます。
+これはエネルギーが必要なだけ低いエネルギー状態にあると考えられることから負の値とします。
+質量\(M_r\)を持つ半径\(r\)の球を取り囲む、微小質量\(dM_r\)の球殻を無限遠まで運ぶのに必要なエネルギーを\(dW\)としましょう。
+中心からの距離が\(r' (&gt;r)\)での重力\(\frac{GM_r dM_r}{r'^2}\)に逆らって無限遠まで持ち去るので</p>
+
+\[dW 
+= GM_r dM_r \int_r^\infty \frac{dr'}{r'^2} 
+= \frac{GM_r}{r} dM_r \tag{1.3.1}\]
+
+<p>となります。
+これを\(dM_r\)について積分することで、星全体のガスを無限遠に運ぶのに必要なエネルギー\(W\)が求まります。
+星の重力エネルギー\(E_\mathrm{g}\)は\(-W\)より</p>
+
+\[E_\mathrm{g} 
+= - \int_0^M \frac{GM_r}{r} dM_r \tag{1.3.2}\]
+
+<p>のように表現されます。
+この積分を実行するには\(M_r\)と\(r\)の関係、すなわち星の内部構造を知る必要があります。
+しかし近似的に</p>
+
+\[E_\mathrm{g} 
+= -q \frac{GM^2}{R} \tag{1.3.3}\]
+
+<p>のように書くと、\(q\)は1のオーダーの量となることが知られています。
+(1.3.2)式は部分積分を行うとさらに変形ができます。</p>
+
+\[E_\mathrm{g} 
+= -\frac{1}{2} \left[ \frac{GM_r^2}{r}\right]_{M_r = 0}^{M_r = M} - \frac{1}{2} \int_0^M \frac{GM_r^2}{r^2} \frac{dr}{dM_r} dM_r 
+= -\frac{GM^2}{2R} - \frac{1}{2} \int_0^R \frac{GM_r^2}{r^2} dr 
+= -\frac{GM^2}{2R} - \frac{1}{2} \int_0^R \frac{d\psi}{dr} M_r dr 
+= -\frac{GM^2}{2R} - \frac{1}{2} [\psi M_r]_0^R + \frac{1}{2} \int_0^R \psi \frac{dM_r}{dr} dr \tag{1.3.4}\]
+
+<p>途中、<a href="/stellar/basic_equations#球対称の場合">(1.1.8)式</a>を用いました。
+さらに重力ポテンシャル\(\psi\)は<a href="/stellar/basic_equations#球対称の場合">(1.1.8)式</a>を積分することで</p>
+
+\[\psi(r) 
+= \int^r \frac{GM_r}{r'^2} dr' 
+= -\frac{GM_r}{r} + \int^r \frac{G}{r'} \frac{dM_{r'}}{dr'} dr' + C 
+= -\frac{GM_r}{r} + 4\pi G \int^r \rho r' dr' + C\]
+
+<p>を得ます。
+途中、<a href="/stellar/basic_equations#ラグランジュ座標を用いた記述">(1.1.11)式</a>を用いました。
+積分定数\(C\)は、恒星外部\((r&gt;R)\)で\(\psi(r) = - \frac{GM}{r}\)となるように選ぶと</p>
+
+\[\psi (r) 
+= - \frac{GM_r}{r} - 4\pi G \int_r^R \rho (r') r' dr' \tag{1.3.5}\]
+
+<p>のように表されます。
+第一項は質点系でも見られるものですが、第二項はガス球を考えた場合に出てくる特有の項です。
+この式から\(\psi (R) = -\frac{GM}{R}\)であることを(1.3.4)式に用いると、最終的に</p>
+
+\[E_\mathrm{g} 
+= \frac{1}{2} \int_0^M \psi dM_r \tag{1.3.6}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/3tithNI">野本憲一, 佐藤勝彦, 定金晃三, “シリーズ現代の天文学 恒星”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4535607273&amp;linkId=1cea0e65f198098664e273dc87bb11aa"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4769916434&amp;linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254131178&amp;linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4254137796&amp;linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+:ET

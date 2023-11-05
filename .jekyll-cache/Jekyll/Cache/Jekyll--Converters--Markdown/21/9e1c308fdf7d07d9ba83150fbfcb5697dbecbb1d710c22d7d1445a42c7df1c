@@ -1,0 +1,260 @@
+I">
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#連星系の重力場" id="markdown-toc-連星系の重力場">連星系の重力場</a>    <ol>
+      <li><a href="#問題" id="markdown-toc-問題">問題</a>        <ol>
+          <li><a href="#問1" id="markdown-toc-問1">問1</a></li>
+          <li><a href="#問2" id="markdown-toc-問2">問2</a></li>
+          <li><a href="#問3" id="markdown-toc-問3">問3</a>            <ol>
+              <li><a href="#a" id="markdown-toc-a">(a)</a></li>
+              <li><a href="#b" id="markdown-toc-b">(b)</a></li>
+              <li><a href="#c" id="markdown-toc-c">(c)</a></li>
+              <li><a href="#d" id="markdown-toc-d">(d)</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#解答例" id="markdown-toc-解答例">解答例</a>        <ol>
+          <li><a href="#問1-1" id="markdown-toc-問1-1">問1</a></li>
+          <li><a href="#問2-1" id="markdown-toc-問2-1">問2</a></li>
+          <li><a href="#問3-1" id="markdown-toc-問3-1">問3</a>            <ol>
+              <li><a href="#a-1" id="markdown-toc-a-1">(a)</a></li>
+              <li><a href="#b-1" id="markdown-toc-b-1">(b)</a></li>
+              <li><a href="#c-1" id="markdown-toc-c-1">(c)</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4489023413&amp;linkId=b2cd51b2d8121bb5d08d7f4623e798e7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320036069&amp;linkId=6328a2498d56c490dcdb26b3937a25cd"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626221&amp;linkId=fc1d48e95ff249f9f6c054ddf47e643a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4563024325&amp;linkId=b9eee73f7a58ced64245530fa5faf077"></iframe>
+
+<h1 id="連星系の重力場">連星系の重力場</h1>
+
+<p>以下の問題は、<a href="https://www.astron.s.u-tokyo.ac.jp/tenmon/wp-content/uploads/2023/01/R5%E4%BF%AE%E5%A3%AB%E3%83%BB%E5%8D%9A%E5%A3%AB%E8%AA%B2%E7%A8%8B%E5%85%A5%E5%AD%A6%E8%A9%A6%E9%A8%93%E5%95%8F%E9%A1%8C_%E5%85%AC%E9%96%8B.pdf">2022年に行われた東京大学大学院理学系研究科天文学専攻の大学院入試問題</a>です。
+連星系の重力場についての問題で、その時間変動などを求めるものになっています。
+2017年にはノーベル物理学賞にも選ばれた重力波観測、その発生源となっている連星の重力に関する問題です。
+一般相対論は用いず、古典力学の範疇で重力場の時間変化を計算します。
+ぜひチャレンジしてみましょう。</p>
+
+<h2 id="問題">問題</h2>
+
+<p>図1に示すように、距離\(\ell\)だけ離れた質量\(M/2\)の質点とみなせる2つの天体が、重力で引き合い重心の周りを角速度\(\omega\)で回転している系を考えましょう。
+天体の回転面を\(x-y\)面、その垂直方向を\(z\)軸となるように座標設定をします。
+この系の重心\(O\)から距離\(r \ (&gt;0)\)だけ離れた点を\(P\)とし、\(OP\)が\(z\)軸となす角度を\(\theta\)、\(OP\)の\(x-y\)面への射影が\(x\)軸となす角度を\(\varphi\)とします。
+このとき、以下の設問に答えなさい。
+なお、本設問では\(G\)を重力定数、\(t\)を時刻とします。
+また\(t=0\)のとき、天体1は\(+x\)軸上にあるとします。</p>
+
+<p><img src="/assets/images/gradeate_exam/u_tokyo_2022_mechanics_01.png" alt="" /></p>
+
+<h3 id="問1">問1</h3>
+
+<p>天体1の中心から\(P\)点に伸びるベクトルと\(\mathbf{r}_1\)とするとき、\(\mathbf{r}_1\)の\(x, y, z\)成分を求めなさい。</p>
+
+<h3 id="問2">問2</h3>
+
+<p>地点\(P\)に質量\(m\)の質点を置いたとき、天体1, 2が作るこの質点の重力ポテンシャル\(U(r)\)が</p>
+
+\[U(r) 
+= -\frac{GmM}{2r} \left[ \frac{1}{\sqrt{1+\left(\frac{\ell}{2r}\right)^2 -\frac{\ell}{r} \sin \theta \cos (\varphi - \omega t)}} + \frac{1}{\sqrt{1+\left(\frac{\ell}{2r}\right)^2 + \frac{\ell}{r} \sin \theta \cos (\varphi - \omega t)}}\right] \tag{1}\]
+
+<p>となることを示しなさい。</p>
+
+<h3 id="問3">問3</h3>
+
+<p>\(OP\)間の距離\(r\)が天体間の距離\(\ell\)よりも十分に大きい場合\((r \gg \ell)\)を考えましょう。</p>
+
+<h4 id="a">(a)</h4>
+
+<p>(1)式の重力ポテンシャル\(U(r)\)を\(\frac{\ell}{2r}\)についてテイラー展開し、0, 1, 2次項を求めなさい。</p>
+
+<h4 id="b">(b)</h4>
+
+<p>(a)で求めた0, 1, 2次項がどのような物理的意味を持っているのか、簡潔な文章で説明しなさい。</p>
+
+<h4 id="c">(c)</h4>
+
+<p>(a)を用いてこの質量\(m\)の質点が受ける重力の大きさの近似値を求めなさい。</p>
+
+<h4 id="d">(d)</h4>
+
+<p>(c)で求めた重力の大きさから、時間変動成分の周波数と振幅を求めなさい。</p>
+
+<h2 id="解答例">解答例</h2>
+
+<h3 id="問1-1">問1</h3>
+
+<p>原点\(O\)から\(P\)に向かう位置ベクトルは</p>
+
+\[\mathbf{r} 
+= r \left( 
+\begin{array}{c}
+\sin \theta \cos \varphi \\
+\sin \theta \sin \varphi \\
+\cos \theta
+\end{array}
+\right) \tag{1-1}\]
+
+<p>のように表記されます。
+一方、連星を成している天体1の位置ベクトルを\(\mathbf{R}_1\)とすると、これは</p>
+
+\[\mathbf{R}_1 
+= \frac{\ell}{2} \left( 
+  \begin{array}{c}
+  \cos \omega t \\
+  \sin \omega t \\
+  0
+  \end{array}
+\right) \tag{1-2}\]
+
+<p>と書かれます。
+これらより</p>
+
+\[\mathbf{r}_1 
+= \mathbf{r} - \mathbf{R}_1 
+= \left( 
+  \begin{array}{c}
+  r \sin \theta \cos \varphi - \frac{\ell}{2} \cos \omega t \\
+  r \sin \theta \sin \varphi - \frac{\ell}{2} \sin \omega t \\
+  r \cos \theta 
+  \end{array}
+\right) \tag{1-3}\]
+
+<p>のように計算されます。</p>
+
+<h3 id="問2-1">問2</h3>
+
+<p>天体1, 2が作る重力ポテンシャルをそれぞれ\(U_1(\mathbf{r}), U_2(\mathbf{r})\)とすると</p>
+
+\[U_1(\mathbf{r}) 
+= - \frac{GMm}{2r_1}, \quad 
+U_2(\mathbf{r}) 
+= - \frac{GMm}{2r_2} \tag{2-1}\]
+
+<p>です。
+ここで\(r_2\)は、天体2から点\(P\)までの距離です。
+(1-3)式より</p>
+
+\[\begin{align}
+r_1^2 
+&amp;= \left(r \sin \theta \cos \varphi - \frac{\ell}{2} \cos \omega t \right)^2 + \left(r \sin \theta \sin \varphi - \frac{\ell}{2} \sin \omega t\right)^2 + r^2 \cos^2 \theta \notag \\
+&amp;= r^2 - r\ell \sin \theta (\cos \varphi \cos \omega t + \sin \varphi \sin \omega t) + \left(\frac{\ell}{2}\right)^2 
+= r^2 \left\{ 1 - 2 \frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t) + \left(\frac{\ell}{2r}\right)^2 \right\} \tag{2-2}
+\end{align}\]
+
+<p>のように計算されます。
+同様に\(\mathbf{r}_2\)を求め、その大きさ\(r_2\)を求めると</p>
+
+\[r_2^2 
+= r^2 \left\{ 1 + 2 \frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t) + \left(\frac{\ell}{2r}\right)^2 \right\} \tag{2-3}\]
+
+<p>となります。
+以上より、求める重力ポテンシャルは</p>
+
+\[U (\mathbf{r}) 
+= U_1 (\mathbf{r}) + U_2 (\mathbf{r}) 
+= - \frac{GMm}{2r} \left\{ \frac{1}{\sqrt{1 - 2\frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t)} + \left( \frac{\ell}{2r}\right)^2} + \frac{1}{\sqrt{1 + 2\frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t)} + \left( \frac{\ell}{2r}\right)^2}\right\} \tag{2-4}\]
+
+<p>と求まります。</p>
+
+<h3 id="問3-1">問3</h3>
+
+<h4 id="a-1">(a)</h4>
+
+<p>普通にテイラー展開を行っても良いですが、せっかくなので<a href="/math/legendre">ルジャンドル多項式</a>を用いて表現してみましょう。
+<a href="/math/legendre">ルジャンドル多項式 \(P_n\)</a>は母関数を用いて</p>
+
+\[\frac{1}{\sqrt{1-2zw + w^2}} 
+= \sum_{n=0}^\infty P_n(z) w^n \tag{3-a-1}\]
+
+<p>のように表されます。
+\(z = \sin \theta \cos (\varphi - \omega t), w = \frac{\ell}{2r}\)として</p>
+
+\[\frac{1}{\sqrt{1 - 2\frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t)} + \left( \frac{\ell}{2r}\right)^2} 
+= \sum_{n=0}^\infty P_n (\sin \theta \cos (\varphi - \omega t)) \left( \frac{\ell}{2r}\right)^n \tag{3-a-2}\]
+
+<p>上式で\(z = - \sin \theta \cos (\varphi - \omega t)\)とすれば</p>
+
+\[\frac{1}{\sqrt{1 + 2\frac{\ell}{2r} \sin \theta \cos (\varphi - \omega t)} + \left( \frac{\ell}{2r}\right)^2} 
+= \sum_{n=0}^\infty P_n (-\sin \theta \cos (\varphi - \omega t)) \left( \frac{\ell}{2r}\right)^n \tag{3-a-3}\]
+
+<p>を得ます。
+<a href="/math/legendre">ルジャンドル多項式の性質\(P_n (-z) = (-1)^n P_n(z)\)</a>より</p>
+
+\[U(\mathbf{r}) 
+= -\frac{GMm}{2r} \sum_{n=0}^\infty \left\{ 1 + (-1)^n \right\} P_n (\sin \theta \cos (\varphi - \omega t)) \left( \frac{\ell}{2r} \right)^n \tag{3-a-4}\]
+
+<p>のように求まります。
+0次、1次、2次の項をそれぞれ\(U_0, U_1, U_2\)のように表記しましょう。
+すると\(P_0(z) = 1, P_1(z) = z, P_2(z) = \frac{1}{2} (3z^2 - 1)\)より</p>
+
+\[U_0 (\mathbf{r}) 
+= - \frac{GMm}{r}, \quad 
+U_1 (\mathbf{r}) 
+= 0, \quad 
+U_2 
+= - \frac{GMm}{2r} \left\{ 3\sin^2 \theta \cos^2 (\varphi - \omega t) - 1 \right\} \left( \frac{\ell}{2r}\right)^2 \tag{3-a-5}\]
+
+<p>となります。</p>
+
+<h4 id="b-1">(b)</h4>
+
+<p>0次の項は、連星系を成している2つの天体の質量の合計\(M\)が原点に存在する場合の重力ポテンシャルと同じ形をしています。
+このことからもわかるように、これはこの系を単極子近似した場合の重力ポテンシャルです。<br />
+1次の項はゼロになっていますが、これはこの連星系の重力場を双極子として近似した場合に対応します。
+電磁気学ではプラスの電荷とマイナスの電荷が存在することから、双極子成分が存在します。
+しかし、重力相互作用においてはマイナスの質量が存在しないため、双極子成分はゼロとなります。<br />
+2次の項は4重極成分を表します。
+簡単のため、(3-a-5)式において\(\theta = \pi/2\)、すなわち\(xy\)平面上で考えることにしましょう。
+すると\(\cos^2 (\varphi - \omega t)\)の部分からわかるように、\(U_2\)は方位角\(\varphi\)に対して周期\(\pi/2\)の関数となっていることがわかります。
+このことから、\(0 \leq \varphi \leq 2\pi\)の間に4つのポテンシャルの極大が存在することから、これは4重極成分を表すことがわかります。</p>
+
+<h4 id="c-1">(c)</h4>
+
+<p>重力は\(\mathbf{F} = - \nabla U\)のように計算されます。
+(3-a-5)式のように重力ポテンシャルが3次元極座標で表現されているため、この勾配計算は極座標で行うと良いでしょう。
+重力ポテンシャルの0, 1, 2次の項からくる重力をそれぞれ\(\mathbf{F}_0, \mathbf{F}_1, \mathbf{F}_2\)のように書く</p>
+
+\[\mathbf{F}_0 
+= - \nabla U_0 
+= \frac{\partial}{\partial r} \frac{GMm}{r} \mathbf{e}_r
+= - \frac{GMm}{r^2} \mathbf{e}_r \tag{3-c-1}\]
+
+\[\mathbf{F}_1 
+= \mathbf{0} \tag{3-c-2}\]
+
+\[\begin{align}
+\mathbf{F}_2 
+&amp;= - \nabla U_2 
+= \frac{GMm \ell^2}{8} \nabla \left[ \frac{3 \sin^2 \theta \cos^2 (\varphi - \omega t) -1}{r^3}\right] \notag \\
+&amp;= \frac{GMm}{2r^2} \left(\frac{\ell}{2r}\right)^2 \left[ (-3) \{ 3\sin^2 \theta \cos^2 (\varphi - \omega t) -1 \} \mathbf{e}_r + 6 \sin \theta \cos \theta \cos^2 (\varphi - \omega t) \mathbf{e}_\theta -6 \sin \theta \cos (\varphi - \omega t ) \sin (\varphi - \omega t) \mathbf{e}_\varphi \right] \tag{3-c-3}
+\end{align}\]
+
+<p>これらを用いて重力の大きさを計算しましょう。</p>
+
+\[F 
+= \vert \mathbf{F}_0 + \mathbf{F}_2 \vert 
+= \sqrt{F_0^2 + F_2^2 + 2 \mathbf{F}_0 \cdot \mathbf{F}_2} \tag{3-c-4}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://www.ep.sci.hokudai.ac.jp/enroll/files/R06/R6_enroll_Q_Phys_PM.pdf">北海道大学大学院理学院(宇宙理学専攻)、令和6年度修士課程入学試験</a><br />
+[2] <a href="https://home-01.com/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/%E9%81%8E%E5%86%B7%E5%8D%B4%E3%81%A8%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%94%E3%83%BC%E5%A4%89%E5%8C%96%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E5%A4%89%E5%8C%96/">home-01.com, “過冷却とエンタルピー変化・エントロピー変化”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4489023413&amp;linkId=b2cd51b2d8121bb5d08d7f4623e798e7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320036069&amp;linkId=6328a2498d56c490dcdb26b3937a25cd"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626221&amp;linkId=fc1d48e95ff249f9f6c054ddf47e643a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4563024325&amp;linkId=b9eee73f7a58ced64245530fa5faf077"></iframe>
+:ET

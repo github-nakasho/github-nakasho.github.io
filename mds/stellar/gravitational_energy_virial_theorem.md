@@ -124,7 +124,7 @@ $$
 P 
 \simeq \frac{1}{3} n v (mv) 
 = \frac{1}{3} nmv^2 
-\propto \rho e_i
+\propto \rho e_\mathrm{i}
 $$
 
 と書けます。
@@ -133,7 +133,7 @@ $$
 
 $$
 \frac{P}{\rho} 
-= (\gamma - 1) e_i \tag{1.4.3}
+= (\gamma - 1) e_\mathrm{i} \tag{1.4.3}
 $$
 
 と書くことができます。
@@ -142,17 +142,17 @@ $$
 
 $$
 E_\mathrm{g} 
-= -3 \int_0^M (\gamma - 1) e_i dM_r 
-= -3 (\gamma - 1) E_i 
+= -3 \int_0^M (\gamma - 1) e_\mathrm{i} dM_r 
+= -3 (\gamma - 1) E_\mathrm{i}
 $$
 
 と表すことができます。
-ここで、最後の$$\gamma$$は恒星の中での平均的な値を表すものとし、$$E_i$$は恒星全体の内部エネルギーを表します。
+ここで、最後の$$\gamma$$は恒星の中での平均的な値を表すものとし、$$E_\mathrm{i}$$は恒星全体の内部エネルギーを表します。
 この式は、恒星の静水圧平衡状態におけるビリアル定理
 
 $$
 E_\mathrm{g} 
-= -3(\gamma - 1) E_i \tag{1.4.4}
+= -3(\gamma - 1) E_\mathrm{i} \tag{1.4.4}
 $$
 
 を与えます。
@@ -161,17 +161,19 @@ $$
 
 $$
 E_\mathrm{tot} 
-= E_\mathrm{g} + E_i 
-= - (3\gamma - 4) E_i 
+= E_\mathrm{g} + E_\mathrm{i}
+= - (3\gamma - 4) E_\mathrm{i}
 = \frac{3\gamma - 4}{3(\gamma - 1)}E_\mathrm{g} \quad 
 \left( = -\frac{3\gamma - 4}{3(\gamma - 1)} q \frac{GM^2}{R}\right) \tag{1.4.5}
 $$
 
 のようになります。
 この式は$$\gamma > 4/3$$のときのみ$$E_\mathrm{tot} < 0$$となり、恒星のガスが束縛された状態にあることを表しています。
-単原子分子からなる理想気体では$$\gamma = 5/3$$なので、この条件を満たしていることになります。
-
-
+単原子分子からなる理想気体では$$\gamma = 5/3$$なので、この条件を満たしていることになります。  
+光子ガスの場合、[$$P_\mathrm{rad} = \frac{1}{3}a T^4 = \frac{1}{3} U_\mathrm{rad}$$](/atmos/moment#radiation-pressure-輻射圧)と表されます。
+ここで$$a$$は輻射定数、$$U_\mathrm{rad}$$は輻射のエネルギー密度です。
+ここから、これは$$\gamma = 4/3$$に相当します。
+これは、星全体で輻射圧がガス圧に比べて優勢になってくると、$$E_\mathrm{tot}=0$$の状態、すなわち束縛されない状態に近づいて行くことを表しています。
 
 ## 参考文献
 

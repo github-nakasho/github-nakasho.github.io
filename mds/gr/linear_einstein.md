@@ -125,7 +125,7 @@ $$
 = x^\mu + \xi^\mu
 $$
 
-弱重力場中のメトリックテンソルでは微小量$$\xi$$の一次までを用いて、メトリックのMinkowskiからのズレの部分のゲージ変観則は以下のようになります(詳細は後日掲載予定)。
+弱重力場中のメトリックテンソルでは微小量$$\xi$$の一次までを用いて、メトリックのMinkowskiからのズレの部分のゲージ変換則は以下のようになります(詳しくは補遺をご参照ください。)
 
 $$
 \bar{h}_{\mu \nu} 
@@ -287,5 +287,57 @@ $$
 $$
 
 ただし$$\bar{h}_{\gamma \nu}^{\ \ \ \ , \nu}=0$$を満たします。
+
+## 補遺: ゲージ変換則の導出
+
+(7)式までは$$h_{\mu \nu}$$は任意の摂動であるとしてきました。
+しかしこの仮定では、座標を一意に定めることができません。
+そこでその自由度を用いて、$$\eta_{\mu \nu}$$を変えずに$$h_{\mu \nu}$$の形を変化させながら、$$g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}$$の形は変えないような変換を考えましょう。
+そのために、座標の無限小変換
+
+$$
+\bar{x}^\mu 
+= x^\mu + \xi^\mu (x) \tag{16}
+$$
+
+を考えます。
+ここで$$\xi^\mu (x)$$は4つの成分を持つ任意の関数で、$$\xi^\mu$$とその微分は微少量であるとします。
+(8)式のゲージ変換則を求めるために、一般の二階のテンソル$$B_{\mu \nu}$$のゲージ変換性を求める公式を導出しましょう。  
+ゲージ変換の定義式より$$x^\mu = \bar{x}^\mu - \xi^\mu (x^\nu) = \bar{x}^\mu - \xi^\mu (\bar{x}^\nu)$$となります。
+この最後の等式は、線形の場合には$$\xi^\mu$$の一次までは正しいとできます。
+よってこの両辺を$$\bar{x}^\nu$$で微分したものに対しても
+
+$$
+\frac{\partial x^\mu}{\partial \bar{x}^\nu} 
+= \delta^\mu_\nu - \frac{\partial \xi^\mu}{\partial \bar{x}^\nu} 
+= \delta^\mu_\nu - \frac{\partial \xi^\mu}{\partial x^\nu} \tag{17}
+$$
+
+のように、偏微分部分に対しては$$\bar{x}^\nu = x^\nu$$とすることができます。  
+計量の座標変換は、[共変テンソルの変換則](/gr/vector#共変テンソル)より
+
+$$
+\bar{g}_{\alpha \beta} 
+= \frac{\partial x^\mu}{\partial \bar{x}^\alpha} \frac{\partial x^\nu}{\partial \bar{x}^\beta} g_{\mu \nu} \tag{18}
+$$
+
+となることから
+
+$$
+\begin{align}
+\bar{g}_{\alpha \beta} 
+&= \eta_{\alpha \beta} + \bar{h}_{\alpha \beta} 
+= \frac{\partial x^\mu}{\partial \bar{x}^\alpha} \frac{\partial x^\nu}{\partial \bar{x}^\beta} (\eta_{\mu \nu} + h_{\mu \nu}) 
+\underbrace{=}_{(17)} \left( \delta^\mu_\alpha - \frac{\partial \xi^\mu}{\partial x^\alpha}\right) \left( \delta^\nu_\beta - \frac{\partial \xi^\nu}{\partial x^\beta}\right) (\eta_{\mu \nu} + h_{\mu \nu}) \notag \\
+&\simeq \eta_{\alpha \beta} + h_{\alpha \beta} - \frac{\partial \xi^\beta}{\partial x^\alpha} - \frac{\partial \xi^\alpha}{\partial x^\beta} 
+= \eta_{\alpha \beta} + h_{\alpha \beta} - \xi_{\beta, \alpha} - \xi_{\alpha, \beta} \tag{19} 
+\end{align}
+$$
+
+のようになり、(8)式が導かれます。
+
+## 参考文献
+
+[1] 福永真土, 横浜国立大学素粒子理論研究室修士論文, "重力波の理論波形"  
 
 {% include adsense.html %}

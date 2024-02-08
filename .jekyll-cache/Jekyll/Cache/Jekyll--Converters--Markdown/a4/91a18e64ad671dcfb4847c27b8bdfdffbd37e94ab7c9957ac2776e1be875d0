@@ -1,0 +1,157 @@
+I"�)
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#測地線偏差の方程式とその応用" id="markdown-toc-測地線偏差の方程式とその応用">測地線偏差の方程式とその応用</a>    <ol>
+      <li><a href="#測地線偏差の方程式の導出" id="markdown-toc-測地線偏差の方程式の導出">測地線偏差の方程式の導出</a></li>
+      <li><a href="#応用-重力波の検出原理" id="markdown-toc-応用-重力波の検出原理">応用: 重力波の検出原理</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="測地線偏差の方程式とその応用">測地線偏差の方程式とその応用</h1>
+
+<p>ここでは隣接する2本の測地線について考え、その相対間隔の変化を記述する方程式を導出します。
+なぜこのようなことを考えるかというと、そもそも、相対論において重要な概念である<a href="/gr/equivalence_general">等価原理</a>によれば、空間の1点に着目しているだけでは、重力の存在を知ることができないためです。
+有限の距離だけ離れた2点間の相対運動を知ることで、その空間がどのような特徴を持っているのかを知ることができます。
+そしてそれを求めるだけでなく、その方程式の応用についても見ていきましょう。</p>
+
+<h2 id="測地線偏差の方程式の導出">測地線偏差の方程式の導出</h2>
+
+<p>近接した2点\(x^\mu\)と\(x^\mu + \xi^\mu (\vert \xi^\mu \vert \ll x^\mu)\)にある2つの質点が、何らかの外力\(F^\mu_\mathrm{ext}\)を受けて運動しているとします。
+それらが満たす<a href="/gr/geodesic">測地線方程式</a>は、それぞれ以下で与えられます。</p>
+
+\[\frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\ \ \alpha \beta} (x) \frac{dx^\alpha}{d\tau} \frac{dx^\beta}{d\tau} 
+= 0 \tag{1}\]
+
+\[\frac{d^2 }{d\tau^2} (x^\mu + \xi^\mu) + \Gamma^\mu_{\ \ \alpha \beta} (x+\xi) \frac{d}{d\tau} (x^\alpha + \xi^\alpha) \frac{d}{d\tau} (x^\beta + \xi^\beta)
+= 0 \tag{2}\]
+
+<p>(2)式を\(\xi^\mu\)の1次までで展開しましょう。</p>
+
+\[\Gamma^\mu_{\ \ \alpha \beta} (x + \xi) 
+\approx \Gamma^\mu_{\ \ \alpha \beta} (x) + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\gamma \tag{3}\]
+
+<p>ここで\(\Gamma^\mu_{\ \ \alpha \beta, \gamma} = \frac{d \Gamma^\mu_{\ \ \alpha \beta}}{dx^\gamma}\)です。
+これより、(2)式は</p>
+
+\[\frac{d^2 x^\mu}{d\tau^2} + \frac{d^2 \xi^\mu}{d\tau^2} + (\Gamma^\mu_{\ \ \alpha \beta} + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\gamma) \left( \frac{dx^\alpha}{d\tau} + \frac{d \xi^\alpha}{d\tau}\right) \left( \frac{dx^\beta}{d\tau} + \frac{d \xi^\beta}{d\tau}\right) 
+= 0 \tag{4}\]
+
+<p>のようになります。
+(4)-(1)式を計算すると</p>
+
+\[\frac{d^2 \xi^\mu}{d\tau^2} + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\gamma \frac{dx^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \frac{d\xi^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \frac{dx^\alpha}{d\tau} \frac{d\xi^\beta}{d\tau} 
+= 0\]
+
+<p>のようになり、さらに\(\Gamma^\mu_{\ \ \alpha \beta} = \Gamma^\mu_{\ \ \beta \alpha}\)というクリストッフェル記号の性質から</p>
+
+\[\frac{d^2 \xi^\mu}{d\tau^2} + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\gamma \frac{dx^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + 2 \Gamma^\mu_{\ \ \alpha \beta} \frac{d\xi^\alpha}{d\tau} \frac{dx^\beta}{d\tau}
+= 0 \tag{5}\]
+
+<p>を得ます。
+式の見通しを良くするために、微分を絶対微分(測地線に沿った方向の微分)を用いて書き直していきましょう。
+絶対微分は以下のように書かれます。</p>
+
+\[\frac{D \xi^\mu}{D \tau} 
+\equiv \frac{d\xi^\mu}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \xi^\alpha \frac{d x^\beta}{d\tau} \tag{6}\]
+
+<p>これを用いて\(\frac{D^2 \xi^\mu}{D\tau^2}\)を計算します。</p>
+
+\[\begin{align}
+\frac{D^2 \xi^\mu}{D\tau^2} 
+&amp;= \frac{d}{d\tau} \left( \frac{D\xi^\mu}{D\tau}\right) + \Gamma^\mu_{\ \ \alpha \beta} \frac{D\xi^\alpha}{D\tau} \frac{d x^\beta}{d\tau}
+= \frac{d}{d\tau} \left( \frac{d \xi^\mu}{d\tau} + \Gamma^\mu_{ \ \ \alpha \beta} \xi^\alpha \frac{dx^\beta}{d\tau} \right) + \Gamma^\mu_{\ \ \alpha \beta} \left( \frac{d\xi^\alpha}{d\tau} + \Gamma^\alpha_{\ \ \gamma \delta} \xi^\gamma \frac{dx^\delta}{d\tau} \right) \frac{dx^\beta}{d\tau} \notag \\
+&amp;= \frac{d^2 \xi^\mu}{d\tau^2} + \frac{d\Gamma^\mu_{\ \ \alpha \beta}}{d\tau} \xi^\alpha \frac{dx^\beta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \left( \frac{d\xi^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + \xi^\alpha \frac{d^2 x^\beta}{d\tau^2}\right) + \Gamma^\mu_{\ \ \alpha \beta} \frac{d\xi^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \Gamma^\alpha_{\ \ \gamma \delta} \xi^\gamma \frac{dx^\delta}{d\tau} \frac{dx^\beta}{d\tau} \tag{7}
+\end{align}\]
+
+<p>ここで</p>
+
+\[\frac{d}{d\tau} 
+= \frac{dx^\gamma}{d\tau} \frac{d}{dx^\gamma}\]
+
+<p>を用いると、\(\Gamma\)の微分を持つ第二項は</p>
+
+\[(第二項) 
+= \frac{dx^\gamma}{d\tau} \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\alpha \frac{dx^\beta}{d\tau} \tag{8}\]
+
+<p>のように計算されます。
+さらに測地線方程式(1)より</p>
+
+\[\frac{D^2 \xi^\mu}{D\tau^2} 
+= \frac{d^2 \xi^\mu}{d\tau^2} + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\alpha \frac{dx^\beta}{d\tau} \frac{dx^\gamma}{d\tau} + 2 \Gamma^\mu_{\ \ \alpha \beta} \frac{d\xi^\alpha}{d\tau} \frac{dx^\beta}{d\tau} - \Gamma^\mu_{\ \ \alpha \beta} \Gamma^\beta_{\ \ \gamma \delta} \xi^\alpha \frac{dx^\gamma}{d\tau} \frac{dx^\delta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \Gamma^\alpha_{\ \ \gamma \delta} \xi^\gamma \frac{dx^\delta}{d\tau} \frac{dx^\beta}{d\tau} \tag{9}\]
+
+<p>のようになります。
+(5), (9)式より</p>
+
+\[\frac{D^2 \xi^\mu}{D\tau^2} 
+= - \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\gamma \frac{dx^\alpha}{d\tau} \frac{dx^\beta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta, \gamma} \xi^\alpha \frac{dx^\beta}{d\tau} \frac{dx^\gamma}{d\tau} - \Gamma^\mu_{\ \ \alpha \beta} \Gamma^\beta_{\ \ \gamma \delta} \xi^\alpha \frac{dx^\gamma}{d\tau} \frac{dx^\delta}{d\tau} + \Gamma^\mu_{\ \ \alpha \beta} \Gamma^\alpha_{\ \ \gamma \delta} \xi^\gamma \frac{dx^\delta}{d\tau} \frac{dx^\beta}{d\tau}\]
+
+<p>となります。
+さらに添字のダミー変数を操作することにより、\(\frac{dx^\alpha}{d\tau} \xi^\beta \frac{dx^\gamma}{d\tau}\)でまとめることで</p>
+
+\[\frac{D^2 \xi^\mu}{D\tau^2} 
+= (\Gamma^\mu_{\ \ \alpha \gamma, \beta} - \Gamma^\mu_{\ \ \alpha \beta, \gamma} + \Gamma^\mu_{\ \ \delta \beta} \Gamma^\delta_{\ \ \alpha \gamma} - \Gamma^\mu_{\ \ \delta \gamma} \Gamma^\delta_{\ \ \alpha \beta}) \frac{dx^\alpha}{d\tau} \xi^\beta \frac{dx^\gamma}{d\tau} \tag{10}\]
+
+<p>を得ます。
+ここで、左辺の\((\cdots)\)の部分と<a href="/gr/riemann_tensor">リーマンテンソル</a>を見比べることで</p>
+
+\[\frac{D^2 \xi^\mu}{D \tau^2} 
+= R^\mu_{\ \ \alpha \beta \gamma} \frac{dx^\alpha}{d\tau} \xi^\beta \frac{dx^\gamma}{d\tau} \tag{11}\]
+
+<p>のようになることがわかります。
+これが測地線偏差の方程式です。
+これは2本の測地線が相対的な距離\(\xi\)だけ離れて存在していたとき、その\(\xi\)の二階微分、すなわち相対的な加速度が空間の曲がり具合を表現する\(R^\mu_{\ \ \alpha \beta \gamma}\)に依存することを表しています。
+たとえばミンコフスキー時空のような、平坦な空間では\(R^\mu_{\ \ \alpha \beta \gamma} = 0\)となり、2本の測地線の相対的な距離は一定のままです。
+しかし重力などにより空間に歪みが生じると、2本の測地線の相対距離が伸びたり縮んだりすることがわかります。</p>
+
+<h2 id="応用-重力波の検出原理">応用: 重力波の検出原理</h2>
+
+<p>測地線偏差の方程式を用いて、重力波の検出原理について学びましょう。
+地球上で重力波を観測することを考えると、その観測者は非相対論的な運動はしていないと考えてよく</p>
+
+\[d\tau 
+\approx dt, \quad 
+\frac{dx^0}{d\tau} 
+\approx c, \quad
+\frac{dx^i}{d\tau} 
+\approx 0 \tag{12}\]
+
+<p>と近似できます。
+すると(11)式は</p>
+
+\[\frac{d\xi^\mu}{dt^2} 
+= c^2 R^\mu_{\ \ 0 \beta 0} \xi^\beta \tag{13}\]
+
+<p>となります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/3MD1orv">Thorne &amp; Blandford, “Modern Classical Physics: Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics”</a><br />
+[2] <a href="https://amzn.to/3KOV7Yo">Hartle, “Gravity: An Introduction to Einstein’s General Relativity”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01LVZ72QL&amp;linkId=9b7f592d17f1e5e5bab70888d5ba05a1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=1316517543&amp;linkId=73f2d614dabc417ef58c27bf4247a6a2"></iframe>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

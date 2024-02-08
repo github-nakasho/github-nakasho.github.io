@@ -1,0 +1,63 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#静磁場による荷電粒子の閉じ込め" id="markdown-toc-静磁場による荷電粒子の閉じ込め">静磁場による荷電粒子の閉じ込め</a>    <ol>
+      <li><a href="#問題" id="markdown-toc-問題">問題</a>        <ol>
+          <li><a href="#i" id="markdown-toc-i">I</a>            <ol>
+              <li><a href="#1" id="markdown-toc-1">(1)</a></li>
+              <li><a href="#2" id="markdown-toc-2">(2)</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4489023413&amp;linkId=b2cd51b2d8121bb5d08d7f4623e798e7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320036069&amp;linkId=6328a2498d56c490dcdb26b3937a25cd"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626221&amp;linkId=fc1d48e95ff249f9f6c054ddf47e643a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4563024325&amp;linkId=b9eee73f7a58ced64245530fa5faf077"></iframe>
+
+<h1 id="静磁場による荷電粒子の閉じ込め">静磁場による荷電粒子の閉じ込め</h1>
+
+<p>以下の問題は、<a href="http://www.ess.sci.osaka-u.ac.jp/pdf/admissions/past-exam/2023_kakomon1st_buturi.pdf">2022年に行われた大阪大学大学院理学研究科宇宙地球科学専攻の大学院入試問題</a>です。
+この物理機構は地球磁気圏での荷電粒子の運動や、核融合のプラズマを閉じ込める基礎となっています。
+プラズマ物理に馴染みのない皆さんも、ぜひ一度解いてみてください。</p>
+
+<h2 id="問題">問題</h2>
+
+<p>荷電粒子は静磁場で閉じ込めることができます。
+この基本を理解するために、円柱座標系\((R, \varphi, z)\)において、電荷\(q (q &gt; 0)\)、質量\(M\)の荷電粒子の静磁場中での運動を考えてみましょう。
+磁束密度を\(\mathbf{B}\)、荷電粒子の速度ベクトル\(\mathbf{v}\)の円柱座標系での成分表示を、それぞれ\((B_R, B_\varphi, B_z), (v_R, v_\varphi, v_z)\)とします。
+また以下では、運動する荷電粒子からの電磁放射と重力の効果は無視できるものとします。</p>
+
+<h3 id="i">I</h3>
+
+<p>まず、\(z\)軸方向の一様な磁束密度\(\mathbf{B} = (0, 0, B_z) \ (B_z &gt; 0)\)において、荷電粒子が\(z\)軸を中心とする半径一定のらせん運動をしている場合を考えましょう。
+このらせん運動について、以下の問いに答えなさい。</p>
+
+<h4 id="1">(1)</h4>
+
+<p>らせん運動の半径を、\(M, q, B_z, v_\varphi\)を用いて答えなさい。
+また\(v_\varphi\)の符号を答えなさい。
+ただし、\(z\)軸の正方向から見て反時計回りを\(v_\varphi\)の正の向きとします。</p>
+
+<h4 id="2">(2)</h4>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://www.astron.s.u-tokyo.ac.jp/tenmon/wp-content/uploads/2023/01/R5%E4%BF%AE%E5%A3%AB%E3%83%BB%E5%8D%9A%E5%A3%AB%E8%AA%B2%E7%A8%8B%E5%85%A5%E5%AD%A6%E8%A9%A6%E9%A8%93%E5%95%8F%E9%A1%8C_%E5%85%AC%E9%96%8B.pdf">東京大学大学院理学系研究科天文学専攻、令和5年度修士・博士課程入学試験問題</a><br />
+[2] <a href="https://www.icepp.s.u-tokyo.ac.jp/symposium/23/download/sympo23-lec_ando_gw1.pdf">安東正樹, 重力波天文学入門</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4489023413&amp;linkId=b2cd51b2d8121bb5d08d7f4623e798e7"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4320036069&amp;linkId=6328a2498d56c490dcdb26b3937a25cd"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4130626221&amp;linkId=fc1d48e95ff249f9f6c054ddf47e643a"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4563024325&amp;linkId=b9eee73f7a58ced64245530fa5faf077"></iframe>
+:ET

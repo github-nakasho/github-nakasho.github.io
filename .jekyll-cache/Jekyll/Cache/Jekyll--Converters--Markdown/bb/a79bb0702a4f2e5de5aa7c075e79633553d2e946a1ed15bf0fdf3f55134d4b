@@ -1,0 +1,244 @@
+I"�9
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力波の応力テンソル" id="markdown-toc-重力波の応力テンソル">重力波の応力テンソル</a>    <ol>
+      <li><a href="#線形化されたアインシュタイン方程式からは導出できない" id="markdown-toc-線形化されたアインシュタイン方程式からは導出できない">線形化されたアインシュタイン方程式からは導出できない？</a></li>
+      <li><a href="#balbus-2016の方法" id="markdown-toc-balbus-2016の方法">Balbus 2016の方法</a>        <ol>
+          <li><a href="#エネルギー運動量保存則の導出" id="markdown-toc-エネルギー運動量保存則の導出">エネルギー・運動量保存則の導出</a></li>
+          <li><a href="#応力テンソル" id="markdown-toc-応力テンソル">応力テンソル</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力波の応力テンソル">重力波の応力テンソル</h1>
+
+<p>ここでは、物体が重力波を放射することで運ばれるエネルギーについてメモします。</p>
+
+<h2 id="線形化されたアインシュタイン方程式からは導出できない">線形化されたアインシュタイン方程式からは導出できない？</h2>
+
+<p>まずは<a href="/gr/linear_einstein">線形化されたアインシュタイン方程式</a>から考えてみることにしましょう。</p>
+
+\[\Box \bar{h}^{\mu \nu} 
+= - \frac{16 \pi G}{c^4} T^{\mu \nu} \tag{1}\]
+
+<p>ここで、\(\bar{h}^{\mu \nu}\)は</p>
+
+\[\bar{h}^{\mu \nu}_{\ \ \ \ \ , \nu} 
+= 0 \tag{2}\]
+
+<p>を満たすようなゲージ(ローレンツゲージ)を選択したのでした。
+これらより、(1)式の両辺に\(\partial^\nu\)を作用させることで</p>
+
+\[T^{\mu \nu}_{\ \ \ \ \ , \nu} 
+= 0 \tag{3}\]
+
+<p>を得ます。
+ここで\(T^{00}\)は、物質のエネルギーを表します。
+これをある有限の大きさの体積で積分しましょう。
+その中に存在する物質の全エネルギーを\(E\)とすると、これは</p>
+
+\[E 
+\equiv \iiint T^{00} dV \tag{4}\]
+
+<p>のようになります。
+この両辺を時間微分すると</p>
+
+\[\frac{dE}{dt} 
+= \iiint T^{00}_{\ \ \ \ \ , 0} dV 
+\underbrace{=}_{(3)} - \iiint T^{0k}_{\ \ \ \ \ ,k} dV 
+\underbrace{=}_{ガウスの定理} - \iint T^{0k} dS_k 
+= 0 \tag{5}\]
+
+<p>のように計算できます。
+最後の等号は、表面積分においてその面を無限遠に設定することから得られるものです。
+この式はエネルギーが保存すること、すなわち重力波放出によるエネルギー損失が存在しないことを意味します。<br />
+では重力波によるエネルギーの運搬を計算するには、どうすれば良いでしょうか。</p>
+
+<h2 id="balbus-2016の方法">Balbus 2016の方法</h2>
+
+<h3 id="エネルギー運動量保存則の導出">エネルギー・運動量保存則の導出</h3>
+
+<p>それには、<a href="/gr/linear_einstein">ゲージ変換を施し線形化されたアインシュタイン方程式(1)</a>を用いるのでなく、その前の方程式である</p>
+
+\[\Box \bar{h}_{\mu \nu} - \bar{h}^\alpha_{\ \ \ \mu, \nu \alpha} - \bar{h}^\alpha_{\ \ \ \nu, \mu \alpha} + \eta_{\mu \nu} \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T_{\mu \nu} \tag{6}\]
+
+<p>を用います。
+ここで\(\kappa = 16 \pi G / c^4\)です。
+この式を出発点にすることで、ゲージ変換で失われた情報を用いることが可能となり、重力波の運ぶエネルギーを求めることができるようになります。
+(6)式の両辺に\(\eta^{\mu \nu}\)をかけて縮約をとります。
+このとき、\(\bar{h} \equiv \eta^{\mu \nu} \bar{h}_{\mu \nu} = h^\mu_{\ \ \mu}\)とすると</p>
+
+\[\begin{align}
+&amp;\Box \bar{h} - \bar{h}^{\alpha \nu}_{\ \ \ \ \ , \alpha \nu} - \bar{h}^{\alpha \mu}_{\ \ \ \ \ , \alpha \mu} + \underbrace{\delta^{\mu}_{\ \ \ \mu}}_{=4} \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T_{\mu}^{\ \ \ \mu} 
+\ \Longrightarrow \ 
+\Box \bar{h} + 2 \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T \notag \\
+&amp;\Longrightarrow \ 
+\bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \frac{1}{2} \Box \bar{h} - \frac{\kappa}{2} T \tag{7}
+\end{align}\]
+
+<p>となります。
+途中、\(T \equiv T_\mu^{\ \ \ \mu}\)としました。
+これを(6)式に代入すると</p>
+
+\[\Box \bar{h}_{\mu \nu} - \bar{h}^\alpha_{\ \ \ \mu, \nu \alpha} - \bar{h}^\alpha_{\ \ \ \nu, \alpha \mu} - \frac{1}{2} \eta_{\mu \nu} \Box \bar{h} 
+= - \kappa S_{\mu \nu} \tag{8}\]
+
+<p>のように計算できます。
+ここで右辺の</p>
+
+\[S_{\mu \nu} 
+\equiv T_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} T \tag{9}\]
+
+<p>は、 厳選項を表しています。
+さて、この式をエネルギー・運動量保存則の形に書き換えることで、重力波の応力テンソルを導出していきましょう。
+そのために、(8)式の両辺に\(\partial_\sigma \bar{h}^{\mu \nu}\)をかけ、\(\mu, \nu\)で縮約を取ります。
+まずは第一項からです。</p>
+
+\[\begin{align}
+&amp;\Box \bar{h}_{\mu \nu} \partial_\sigma \bar{h}^{\mu \nu} 
+= (\partial_\rho \partial^\rho \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu})
+= \partial^\rho \{ (\partial_\rho \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu})\} - \{\partial^\rho (\partial_\sigma \bar{h}^{\mu \nu})\} (\partial_\rho \bar{h}_{\mu \nu}) \notag \\
+&amp; \quad = \partial^\rho \{ (\partial_\rho \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu})\} - \{\partial_\sigma (\partial^\rho \bar{h}^{\mu \nu})\} (\partial_\rho \bar{h}_{\mu \nu}) 
+= \partial^\rho \{ (\partial_\rho \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu})\} - \frac{1}{2} \partial_\sigma \{ (\partial^\rho \bar{h}^{\mu \nu}) (\partial_\rho \bar{h}_{\mu \nu}) \} \tag{10}
+\end{align}\]
+
+<p>最後の等号は、\(\rho, \mu, \nu\)で縮約をとることから、2乗の微分であることを用いた変形をしています。
+続いて第二項です。</p>
+
+\[\begin{align}
+&amp;-\bar{h}^\alpha_{\ \ \ \mu, \nu \alpha} \partial_\sigma \bar{h}^{\mu \nu} 
+= -\bar{h}^\alpha_{\ \ \ \mu, \nu \alpha} \partial_\sigma \eta^{\mu \beta} \eta^{\nu \gamma} \bar{h}_{\beta \gamma} 
+= -\bar{h}^{\alpha \beta, \gamma}_{\ \ \ \ \ \ \ \ , \alpha} \partial_\sigma \bar{h}_{\beta \gamma} 
+= - \{ \partial^\gamma (\partial_\alpha \bar{h}^{\alpha \beta}) \} (\partial_\sigma \bar{h}_{\beta \gamma}) \notag \\
+&amp; \quad = -\partial^\gamma \{( \partial_\alpha \bar{h}^{\alpha \beta}) (\partial_\sigma \bar{h}_{\beta \gamma})\} + (\partial_\alpha \bar{h}^{\alpha \beta})(\partial^\gamma \partial_\sigma \bar{h}_{\beta \gamma}) 
+\underbrace{=}_{\gamma \rightarrow \rho} -\partial^\rho \{( \partial_\alpha \bar{h}^{\alpha \beta}) (\partial_\sigma \bar{h}_{\beta \rho})\} + \frac{1}{2} \partial_\sigma (\partial_\alpha \bar{h}^{\alpha \beta})(\partial^\rho \bar{h}_{\beta \rho}) \tag{11}
+\end{align}\]
+
+<p>第三項は、\(\mu, \nu\)で縮約をとることを考えれば、第二項と同じ結果になります。
+第四項は</p>
+
+\[\begin{align}
+&amp;-\frac{1}{2} \eta_{\mu \nu} (\partial^\rho \partial_\rho \bar{h}) \partial_\sigma \bar{h}^{\mu \nu} 
+= -\frac{1}{2} (\partial^\rho \partial_\rho \bar{h}) (\partial_\sigma \bar{h}) 
+= -\frac{1}{2} \partial^\rho \{ (\partial_\rho \bar{h}) (\partial_\sigma \bar{h})\} + \frac{1}{2} (\partial_\rho \bar{h}) (\partial^\rho \partial_\sigma \bar{h}) \notag \\
+&amp; \quad = -\frac{1}{2} \partial^\rho \{ (\partial_\rho \bar{h}) (\partial_\sigma \bar{h})\} + \frac{1}{4} (\partial_\rho \bar{h}) (\partial^\rho \bar{h}) \tag{12}
+\end{align}\]
+
+<p>のように整理されます。
+以上をまとめ、両辺を\(2\kappa\)で割れば</p>
+
+\[\partial_\sigma \mathcal{S} + \partial^\rho \mathcal{T}_{\rho \sigma} 
+= - \frac{1}{2} S_{\mu \nu} \partial_\sigma \bar{h}^{\mu \nu} \tag{13}\]
+
+<p>のようにまとめることができます。
+ここで</p>
+
+\[\mathcal{S} 
+= -\frac{1}{4\kappa} (\partial^\rho \bar{h}^{\mu \nu}) (\partial_\rho \bar{h}_{\mu \nu}) + \frac{1}{2\kappa} (\partial_\alpha \bar{h}^{\alpha \beta}) (\partial^\rho \bar{h}_{\beta \rho}) + \frac{1}{8\kappa} (\partial_\rho \bar{h}) (\partial^\rho \bar{h}) \tag{14}\]
+
+\[\mathcal{T}_{\rho \sigma} 
+= \frac{1}{2\kappa} (\partial_\rho \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu}) - \frac{1}{\kappa} (\partial_\alpha \bar{h}^{\alpha \beta}) (\partial_\sigma \bar{h}_{\beta \rho}) - \frac{1}{4\kappa} (\partial_\rho \bar{h}) (\partial_\sigma \bar{h}) \tag{15}\]
+
+<p>です。
+このようにすることで、保存系のような形にまとめることができました。</p>
+
+<h3 id="応力テンソル">応力テンソル</h3>
+
+<p>しかし、これは応力テンソルの形になっていません。
+この\(\mathcal{T}_{\rho \sigma}\)は対称な形になっていないためです。
+そこで\(\partial_\sigma \mathcal{S} = \partial^\rho \eta_{\rho \sigma} \mathcal{S}\)のような変形を行い、さらに式変形を進めましょう。</p>
+
+\[\partial^\rho (\mathcal{T}_{\rho \sigma} + \eta_{\rho \sigma} \mathcal{S}) 
+= - \frac{1}{2} S_{\mu \nu} \partial_\sigma \bar{h}^{\mu \nu} \tag{16}\]
+
+<p>ここで</p>
+
+\[\mathcal{U}_{\rho \sigma} 
+\equiv \mathcal{T}_{\rho \sigma} + \eta_{\rho \sigma} \mathcal{S} \tag{17}\]
+
+<p>です。
+この\(\mathcal{U}_{\rho \sigma}\)の\(00, 0i, ij\)成分を、ローレンツゲージ(\(\bar{h}_{\mu \nu}^{\ \ \ \ \ ,\nu} = 0\))とTTゲージ(\(\bar{h} = 0\))を課して計算しましょう。</p>
+
+\[\begin{align}
+\mathcal{U}_{00} 
+&amp;= \mathcal{T}_{00} + \eta_{00} \mathcal{S} 
+= \frac{1}{2\kappa} (\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) + \frac{1}{4\kappa} (\partial^\rho \bar{h}^{\mu \nu}) (\partial_\rho \bar{h}_{\mu \nu}) \notag \\
+&amp;= \frac{1}{2\kappa} (\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) + \frac{1}{4\kappa} (\eta^{\rho \alpha} \partial_\alpha \bar{h}^{\mu \nu}) (\partial_\rho \bar{h}_{\mu \nu}) \notag \\
+&amp;= \frac{1}{2\kappa} (\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) + \frac{1}{4\kappa} (- \partial_0 \bar{h}^{\mu \nu}) (\partial_0 \bar{h}_{\mu \nu}) + \frac{1}{4\kappa} (\partial_i \bar{h}^{\mu \nu}) (\partial_i \bar{h}_{\mu \nu}) \notag \\
+&amp;= \frac{1}{4\kappa} \{(\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) + (\partial_i \bar{h}^{\mu \nu}) (\partial_i \bar{h}_{\mu \nu}) \} \tag{18}
+\end{align}\]
+
+\[\mathcal{U}_{0i} 
+= \mathcal{T}_{0i} 
+= \frac{1}{2\kappa} (\partial_0 \bar{h}_{\mu \nu}) (\partial_i \bar{h}^{\mu \nu}) \tag{19}\]
+
+\[\mathcal{U}_{ij} 
+= \mathcal{T}_{ij} + \delta_{ij} \mathcal{S} 
+= \frac{1}{2\kappa} \left\{ (\partial_i \bar{h}_{\mu \nu}) (\partial_j \bar{h}^{\mu \nu})- \frac{1}{2} \delta_{ij} (\partial_\rho \bar{h}_{\mu \nu}) (\partial^\rho \bar{h}^{\mu \nu}) \right\} \tag{20}\]
+
+<p>以上から、\(\mathcal{U}_{\rho \sigma}\)が対称なテンソルとなっていることがわかります。
+さらに、重力波の波長\(\lambda\)よりも十分長いスケールで平均を取ると、光子と同じくその4元波数ベクトルは\(k^\rho k_\rho = 0\)を満たすはずです。
+よって\(\partial^\rho \bar{h}_{\mu \nu} \partial_\rho \bar{h}^{\mu \nu} = 0\)から</p>
+
+\[\begin{align}
+&amp;(\partial^\rho \bar{h}_{\mu \nu}) (\partial_\rho \bar{h}^{\mu \nu}) 
+= \eta^{\rho \alpha} (\partial_\alpha \bar{h}_{\mu \nu}) (\partial_\rho \bar{h}^{\mu \nu}) 
+= - (\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) + (\partial_i \bar{h}_{\mu \nu}) (\partial_i \bar{h}^{\mu \nu})
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+(\partial_0 \bar{h}_{\mu \nu}) (\partial_0 \bar{h}^{\mu \nu}) 
+= (\partial_i \bar{h}_{\mu \nu}) (\partial_i \bar{h}^{\mu \nu}) \tag{21}
+\end{align}\]
+
+<p>と示せます。
+これを用いると</p>
+
+\[\mathcal{U}_{\rho \sigma} 
+= \frac{1}{2\kappa} \langle (\partial_{\rho} \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu}) \rangle_\mathrm{TT}
+= \frac{c^4}{32 \pi G} \langle (\partial_{\rho} \bar{h}_{\mu \nu}) (\partial_\sigma \bar{h}^{\mu \nu}) \rangle_\mathrm{TT}
+= t_{\rho \sigma}^\mathrm{GW} \tag{22}\]
+
+<p>を得ます。
+ここで\(\langle \cdots \rangle_\mathrm{TT}\)は、重力波の波長\(\lambda\)より十分長いスケールでの平均操作かつTTゲージを適用したことを表す記号です。
+このようにして、Issacsonが1969に論文で発表したものと同じ、TTゲージにおける重力波のエネルギー運動量擬テンソルを得ることができました。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4blItLJ">須藤靖, “もうひとつの一般相対論入門”</a><br />
+[2] <a href="https://amzn.to/4ar7e7W">田中貴浩, “基幹講座 物理学 相対論”</a><br />
+[3] <a href="https://amzn.to/4a6BSUd">ランダウ &amp; リフシッツ, “場の古典論”</a><br />
+[4] <a href="https://www.pnas.org/doi/full/10.1073/pnas.1614681113">Balbus, 2016, “Simplified Derivation of the Gravitational Wave Stress Tensor from the linearized Einstein Field Equations”</a><br />
+[5] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1263">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency I. The Linear Approximation and Geometrical Optics”</a><br />
+[6] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1272">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency II. Nonlinear Terms and the Effective Stress Tensor”</a><br />
+[7] <a href="https://amzn.to/491W20k">Maggiore, “Gravitational Waves”</a><br />
+[8] <a href="https://amzn.to/3x7JF5B">Misner, Thorne &amp; Wheeler, “Gravitation”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,112 @@
+I"J
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力波の運ぶエネルギー" id="markdown-toc-重力波の運ぶエネルギー">重力波の運ぶエネルギー</a>    <ol>
+      <li><a href="#線形化されたアインシュタイン方程式からは導出できない" id="markdown-toc-線形化されたアインシュタイン方程式からは導出できない">線形化されたアインシュタイン方程式からは導出できない？</a></li>
+      <li><a href="#balbus-2016の方法-保存則の導出" id="markdown-toc-balbus-2016の方法-保存則の導出">Balbus 2016の方法: 保存則の導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力波の運ぶエネルギー">重力波の運ぶエネルギー</h1>
+
+<p>ここでは、物体が重力波を放射することで運ばれるエネルギーについてメモします。</p>
+
+<h2 id="線形化されたアインシュタイン方程式からは導出できない">線形化されたアインシュタイン方程式からは導出できない？</h2>
+
+<p>まずは<a href="/gr/linear_einstein">線形化されたアインシュタイン方程式</a>から考えてみることにしましょう。</p>
+
+\[\Box \bar{h}^{\mu \nu} 
+= - \frac{16 \pi G}{c^4} T^{\mu \nu} \tag{1}\]
+
+<p>ここで、\(\bar{h}^{\mu \nu}\)は</p>
+
+\[\bar{h}^{\mu \nu}_{\ \ \ \ \ , \nu} 
+= 0 \tag{2}\]
+
+<p>を満たすようなゲージ(ローレンツゲージ)を選択したのでした。
+これらより、(1)式の両辺に\(\partial^\nu\)を作用させることで</p>
+
+\[T^{\mu \nu}_{\ \ \ \ \ , \nu} 
+= 0 \tag{3}\]
+
+<p>を得ます。
+ここで\(T^{00}\)は、物質のエネルギーを表します。
+これをある有限の大きさの体積で積分しましょう。
+その中に存在する物質の全エネルギーを\(E\)とすると、これは</p>
+
+\[E 
+\equiv \iiint T^{00} dV \tag{4}\]
+
+<p>のようになります。
+この両辺を時間微分すると</p>
+
+\[\frac{dE}{dt} 
+= \iiint T^{00}_{\ \ \ \ \ , 0} dV 
+\underbrace{=}_{(3)} - \iiint T^{0k}_{\ \ \ \ \ ,k} dV 
+\underbrace{=}_{ガウスの定理} \iint T^{0k} dS_k 
+= 0 \tag{5}\]
+
+<p>のように計算できます。
+最後の等号は、表面積分においてその面を無限遠に設定することから得られるものです。
+この式はエネルギーが保存すること、すなわち重力波放出によるエネルギー損失が存在しないことを意味します。<br />
+では重力波によるエネルギーの運搬を計算するには、どうすれば良いでしょうか。</p>
+
+<h2 id="balbus-2016の方法-保存則の導出">Balbus 2016の方法: 保存則の導出</h2>
+
+<p>それには、<a href="/gr/linear_einstein">ゲージ変換を施し線形化されたアインシュタイン方程式(1)</a>を用いるのでなく、その前の方程式である</p>
+
+\[\Box \bar{h}_{\mu \nu} - \bar{h}^\alpha_{\ \ \ \mu, \nu \alpha} - \bar{h}^\alpha_{\ \ \ \nu, \mu \alpha} + \eta_{\mu \nu} \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T_{\mu \nu} \tag{6}\]
+
+<p>を用います。
+ここで\(\kappa = 16 \pi G / c^4\)です。
+この式を出発点にする子で、ゲージ変換で失われた情報を用いることが可能となり、重力波の運ぶエネルギーを求めることができるようになります。
+(6)式の両辺に\(\eta^{\mu \nu}\)をかけて縮約をとります。
+このとき、\(\bar{h} \equiv \eta^{\mu \nu} \bar{h}_{\mu \nu} = h^\mu_{\ \ \mu}\)とすると</p>
+
+\[\begin{align}
+&amp;\Box \bar{h} - \bar{h}^{\alpha \nu}_{\ \ \ \ \ , \alpha \nu} - \bar{h}^{\alpha \mu}_{\ \ \ \ \ , \alpha \mu} + \underbrace{\delta^{\mu}_{\ \ \ \mu}}_{=4} \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T_{\mu}^{\ \ \ \mu} 
+\ \Longrightarrow \ 
+\Box \bar{h} + 2 \bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \kappa T \notag \\
+&amp;\Longrightarrow \ 
+\bar{h}^{\alpha \beta}_{\ \ \ \ \ , \alpha \beta} 
+= - \frac{1}{2} \Box \bar{h} - \frac{\kappa}{2} T \tag{7}
+\end{align}\]
+
+<p>となります。
+途中、\(T \equiv T_\mu^{\ \ \ \mu}\)としました。
+これを(6)式に代入すると</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4blItLJ">須藤靖, “もうひとつの一般相対論入門”</a><br />
+[2] <a href="">, “相対論”</a><br />
+[3] <a href="">, “場の古典論”</a><br />
+[4] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

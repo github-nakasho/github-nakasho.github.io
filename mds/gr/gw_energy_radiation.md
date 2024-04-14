@@ -449,5 +449,7 @@ $$
 [4] [柴田大, "数値相対論と中性子星の合体"](https://amzn.to/4cPSi5j)  
 [5] [Maggiore, "Gravitational Waves"](https://amzn.to/491W20k)  
 [6] [Misner, Thorne & Wheeler, "Gravitation"](https://amzn.to/3x7JF5B)  
+[7] ["Evaluation of some integrals over solid angles"](https://scipp.ucsc.edu/~haber/ph214/Angular_Integrals.pdf)  
+[8] [平松尚志, "宇宙論的起源の背景重力波による余剰次元の探求"](https://www2.yukawa.kyoto-u.ac.jp/~takashi.hiramatsu/files/thesisMR.pdf)  
 
 {% include adsense.html %}

@@ -1,0 +1,122 @@
+I"X
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力波のエネルギー放出率" id="markdown-toc-重力波のエネルギー放出率">重力波のエネルギー放出率</a>    <ol>
+      <li><a href="#重力波振幅のttゲージ化" id="markdown-toc-重力波振幅のttゲージ化">重力波振幅のTTゲージ化</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力波のエネルギー放出率">重力波のエネルギー放出率</h1>
+
+<h2 id="重力波振幅のttゲージ化">重力波振幅のTTゲージ化</h2>
+
+<p>重力波の振幅は、以下のように求まるのでした。</p>
+
+\[\bar{h}_{ij} 
+= \frac{2G}{c^4 r} \ddot{D} (t-r/c) \tag{1}\]
+
+<p>ここで、\(r\)は重力波源と観測者との距離、\(D\)は質量分布の四重極モーメントを表します。
+これをIsaacsonの式に代入すれば、重量波の応力テンソルが求まります。
+しかし、Isaacsonの式はTTゲージであることを用いて得られた式でした。
+よって(1)式の重力波の振幅も、TTゲージ化する必要があります。
+そこで、以下のようなTT projection (TTゲージへの射影演算子)を考えましょう。</p>
+
+\[P_{ij} 
+\equiv \delta_{ij} - n_i n_j 
+\qquad (n_i = x_i /r) \tag{2}\]
+
+<p>すると</p>
+
+\[n^\ell P_\ell^{\ \ m}  
+= n^m - n^m 
+= 0 \tag{3}\]
+
+<p>のような性質を持つことがわかります。
+この\(P_\ell^{\ \ m}\)を添字\(\ell\)のベクトルとみなすと、\(P_\ell^{\ \ m} \perp n^\ell\)と考えることができます。
+ここから、2つの演算子を作用させた\(P_i^{\ \ \ell} P_j^{\ \ m} \bar{h}_{\ell m}\)は、\(n^i, n^j\)の両方ともと直交することがわかります。<br />
+次に、この演算子が満たす関係式を示しましょう。</p>
+
+\[P_j^{\ \ \ell} P^{jm} 
+= (\delta_j^{\ell} - n_j n^\ell) (\delta^{jm} - n^j n^m) 
+= \delta^{\ell m} - n^\ell n^m - n^m n^\ell + n^\ell n^m 
+= \delta^{\ell m} - n^\ell n^m 
+= P^{\ell m} \tag{4}\]
+
+<p>この関係式を用いると</p>
+
+\[P_j^{\ \ \ell} P^{jm} \bar{h}_{\ell m} 
+= P^{\ell m} \bar{h}_{\ell m} \tag{5}\]
+
+<p>を得ます。
+ここで\(P_i^{\ \ \ell} P_j^{\ \ m} \bar{h}_{\ell m} = A_{ij}\)とおくと、このトレースは</p>
+
+\[\eta^{ij} A_{ij} 
+= A_i^{\ \ i} 
+= P_i^{\ \ \ell} P^{im} \bar{h}_{i m} 
+= P^{\ell m} \bar{h}_{\ell m} \tag{6}\]
+
+<p>です。
+以上より</p>
+
+\[\bar{h}_{ij}^\mathrm{TT} 
+= \left( P_i^{\ \ k} P_j^{\ \ \ell} - \frac{1}{2} P_{ij} P^{k \ell} \right) \bar{h}_{k\ell} \tag{7}\]
+
+<p>のようにおけば、\(n^i A_{ij}^\mathrm{TT} = 0\)から</p>
+
+\[\delta^{ij} A_{ij}^\mathrm{TT} 
+= \underbrace{P^{jk} P_j^{\ \ \ell}}_{=P^{k \ell}} A_{k \ell} - \frac{1}{2} \underbrace_{P^j_{\ \ j}}_{=2} P^{k \ell} A_{k \ell} 
+= 0 \tag{8}\]
+
+<p>を満たすことがわかります。
+最終的に、\(\bar{h}_{ij}\)をTTゲージに変換したものは</p>
+
+\[\bar{h}_{ij}^\mathrm{TT} 
+= \frac{2G}{c^4 r} \left( P_i^{\ \ k} P_j^{\ \ \ell} - \frac{1}{2} P_{ij} P^{k \ell} \right) \ddot{D}(t-r/c) \tag{9}\]
+
+<p>のように書けることがわかりました。<br />
+さらに今後の計算を簡略化するため、\(D\)のトレースフリー成分を考えましょう。</p>
+
+\[\mathscr{D}_{ij} 
+\equiv D_{ij} - \frac{1}{3} \delta_{ij} D_k^{ \ \ k} \tag{10}\]
+
+<p>\(D_{ij}\)と\(\mathscr{D}_{ij}\)は本質的には同じ物理量となります。
+この\(\mathscr{D}_{ij}\)は、質量分布の換算四重極モーメントと呼ばれるものです。
+このような成分は</p>
+
+\[\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4blItLJ">須藤靖, “もうひとつの一般相対論入門”</a><br />
+[2] <a href="https://amzn.to/4ar7e7W">田中貴浩, “基幹講座 物理学 相対論”</a><br />
+[3] <a href="https://amzn.to/4a6BSUd">ランダウ &amp; リフシッツ, “場の古典論”</a><br />
+[4] <a href="https://www.pnas.org/doi/full/10.1073/pnas.1614681113">Balbus, 2016, “Simplified Derivation of the Gravitational Wave Stress Tensor from the linearized Einstein Field Equations”</a><br />
+[5] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1263">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency I. The Linear Approximation and Geometrical Optics”</a><br />
+[6] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1272">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency II. Nonlinear Terms and the Effective Stress Tensor”</a><br />
+[7] <a href="https://amzn.to/491W20k">Maggiore, “Gravitational Waves”</a><br />
+[8] <a href="https://amzn.to/3x7JF5B">Misner, Thorne &amp; Wheeler, “Gravitation”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

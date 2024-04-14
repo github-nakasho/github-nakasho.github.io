@@ -1,0 +1,179 @@
+I"J"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力波のエネルギー放出率" id="markdown-toc-重力波のエネルギー放出率">重力波のエネルギー放出率</a>    <ol>
+      <li><a href="#重力波振幅のttゲージ化" id="markdown-toc-重力波振幅のttゲージ化">重力波振幅のTTゲージ化</a></li>
+      <li><a href="#重力波のエネルギー放出率-1" id="markdown-toc-重力波のエネルギー放出率-1">重力波のエネルギー放出率</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力波のエネルギー放出率">重力波のエネルギー放出率</h1>
+
+<h2 id="重力波振幅のttゲージ化">重力波振幅のTTゲージ化</h2>
+
+<p>重力波の振幅は、以下のように求まるのでした。</p>
+
+\[\bar{h}_{ij} 
+= \frac{2G}{c^4 r} \ddot{D}_{ij} (t-r/c) \tag{1}\]
+
+<p>ここで、\(r\)は重力波源と観測者との距離、\(D\)は質量分布の四重極モーメントを表します。
+これをIsaacsonの式に代入すれば、重量波の応力テンソルが求まります。
+しかし、Isaacsonの式はTTゲージであることを用いて得られた式でした。
+よって(1)式の重力波の振幅も、TTゲージ化する必要があります。
+そこで、以下のようなTT projection (TTゲージへの射影演算子)を考えましょう。</p>
+
+\[P_{ij} 
+\equiv \delta_{ij} - n_i n_j 
+\qquad (n_i = x_i /r) \tag{2}\]
+
+<p>すると</p>
+
+\[n^\ell P_\ell^{\ \ m}  
+= n^m - n^m 
+= 0 \tag{3}\]
+
+<p>のような性質を持つことがわかります。
+この\(P_\ell^{\ \ m}\)を添字\(\ell\)のベクトルとみなすと、\(P_\ell^{\ \ m} \perp n^\ell\)と考えることができます。
+ここから、2つの演算子を作用させた\(P_i^{\ \ \ell} P_j^{\ \ m} \bar{h}_{\ell m}\)は、\(n^i, n^j\)の両方ともと直交することがわかります。<br />
+次に、この演算子が満たす関係式を示しましょう。</p>
+
+\[P_j^{\ \ \ell} P^{jm} 
+= (\delta_j^{\ell} - n_j n^\ell) (\delta^{jm} - n^j n^m) 
+= \delta^{\ell m} - n^\ell n^m - n^m n^\ell + n^\ell n^m 
+= \delta^{\ell m} - n^\ell n^m 
+= P^{\ell m} \tag{4}\]
+
+<p>この関係式を用いると</p>
+
+\[P_j^{\ \ \ell} P^{jm} \bar{h}_{\ell m} 
+= P^{\ell m} \bar{h}_{\ell m} \tag{5}\]
+
+<p>を得ます。
+ここで\(P_i^{\ \ \ell} P_j^{\ \ m} \bar{h}_{\ell m} = A_{ij}\)とおくと、このトレースは</p>
+
+\[\eta^{ij} A_{ij} 
+= A_i^{\ \ i} 
+= P_i^{\ \ \ell} P^{im} \bar{h}_{i m} 
+= P^{\ell m} \bar{h}_{\ell m} \tag{6}\]
+
+<p>です。
+以上より</p>
+
+\[\bar{h}_{ij}^\mathrm{TT} 
+= \left( P_i^{\ \ k} P_j^{\ \ \ell} - \frac{1}{2} P_{ij} P^{k \ell} \right) \bar{h}_{k\ell} \tag{7}\]
+
+<p>のようにおけば、\(n^i A_{ij}^\mathrm{TT} = 0\)から</p>
+
+\[\delta^{ij} A_{ij}^\mathrm{TT} 
+= \underbrace{P^{jk} P_j^{\ \ \ell}}_{=P^{k \ell}} A_{k \ell} - \frac{1}{2} \underbrace{P^j_{\ \ j}}_{=2} P^{k \ell} A_{k \ell} 
+= 0 \tag{8}\]
+
+<p>を満たすことがわかります。
+最終的に、\(\bar{h}_{ij}\)をTTゲージに変換したものは</p>
+
+\[\bar{h}_{ij}^\mathrm{TT} 
+= \frac{2G}{c^4 r} \left( P_i^{\ \ k} P_j^{\ \ \ell} - \frac{1}{2} P_{ij} P^{k \ell} \right) \ddot{D}_{k \ell} (t-r/c) \tag{9}\]
+
+<p>のように書けることがわかりました。<br />
+さらに今後の計算を簡略化するため、\(D\)のトレースフリー成分を考えましょう。</p>
+
+\[\mathscr{D}_{k \ell} 
+\equiv D_{k \ell} - \frac{1}{3} \delta_{k \ell} D_m^{ \ \ m} \tag{10}\]
+
+<p>\(D_{ij}\)と\(\mathscr{D}_{ij}\)は本質的には同じ物理量となります。
+この\(\mathscr{D}_{ij}\)は、質量分布の換算四重極モーメントと呼ばれるものです。
+(10)式の第二項において</p>
+
+\[P_i^{\ \ k} P_j^{\ \ \ell} \delta_{k\ell} 
+= P_i^{\ \ k} P_{jk} 
+= P_{ij} \tag{11}\]
+
+\[\frac{1}{2} P_{ij} P^{k \ell} \delta_{k \ell} 
+= \frac{1}{2} P_{ij} \underbrace{P_k^{\ \ k}}_{=2} 
+= P_{ij} \tag{12}\]
+
+<p>より、このようなものを考えても(9)式は変更を受けず、\(\ddot{D} \rightarrow \ddot{\mathscr{D}}\)とすることができます。
+以上から、重力波の振幅が</p>
+
+\[\bar{h}_{ij}^\mathrm{TT} 
+= \frac{2G}{c^4 r} \underbrace{\left( P_i^{\ \ k} P_j^{\ \ \ell} - \frac{1}{2} P_{ij} P^{k \ell} \right)}_{\equiv \Lambda_{ij}^{\ \ \ \ \ k \ell}} \ddot{\mathscr{D}}_{k \ell} (t-r/c) \tag{13}\]
+
+<p>のように書き換えることができます。</p>
+
+<h2 id="重力波のエネルギー放出率-1">重力波のエネルギー放出率</h2>
+
+<p>これまでの結果を用いて、いよいよ重力波のエネルギー放出率(電磁放射でいうところの光度\(L\) [erg/s])を計算してみましょう。
+そのために、重力波源を取り囲むような十分大きな閉曲面\(S\)で、重力波のエネルギー流束を積分します。</p>
+
+\[L_\mathrm{GW}
+= \iint c T_{0k}^\mathrm{GW} dS^k 
+= c \int_{4\pi} T_{0k}^\mathrm{GW} n^k r^2 d\Omega \tag{14}\]
+
+<p>途中、閉曲面\(S\)を十分大きい半径\(r\)を持つ球面としました。
+また、\(n^k\)は球面に対して外向きの法線ベクトルです。
+さらにこの\(T_{0k}\)は、<a href="/gr/gw_stress_tensor">重力波の応力テンソル</a>より</p>
+
+\[T_{0k}^\mathrm{GW} n^k
+= \frac{c^4}{32\pi G} \langle \bar{h}_{i j, 0} \bar{h}^{ij}_{\ \ \ \ , k} \rangle_\mathrm{TT} n^k \tag{15}\]
+
+<p>となります。
+途中、TTゲージから\(h_{00}, h_{0k} = 0\)としました。
+さらに</p>
+
+\[\frac{d}{dr} \ddot{\mathscr{D}}_{k \ell} (t-r/c) 
+= \frac{d(t-r/c)}{dr} \frac{d}{d(t-r/c)} \ddot{\mathscr{D}}_{k \ell} (t-r/c) 
+= - \frac{1}{c} \dddot{\mathscr{D}}_{k \ell} (t-r/c) \tag{16}\]
+
+<p>より</p>
+
+\[\frac{d\bar{h}_{ij}}{dr} 
+= -\frac{2G}{c^4 r^2} \Lambda_{ij}^{\ \ \ \ k \ell} \ddot{\mathscr{D}}_{ij} %- \frac{2G}{c^5r} \Lambda_{ij}^{\ \ \ \ k \ell} \dddot{\mathscr{D}}_{ij} 
+= -\frac{\dot{\bar{h}}_{ij}}{r} - \frac{\bar{h}_{ij}}{r} \tag{17}\]
+
+<p>のように計算されることから</p>
+
+\[T_{0k}^\mathrm{GW} n^k
+= - \frac{c^4}{32\pi G} \langle \dot{\bar{h}_{ij}} \frac{\dot{\bar{h}}_{ij}}{c} + \frac{\dot{\bar{h}}_{ij}}{c} \rangle \tag{18}\]
+
+<p>となります。
+しかし、そもそも\(\bar{h}_{ij} \propto r^{-1}\)であるため、(14)式の積分を実行したときに(18)式の第一項は\(r\)に依存しない量となりますが、第二項は\(r^{-1}\)で減衰する量となります。
+今、\(r \rightarrow \infty\)としているため、第二項を無視すると</p>
+
+\[T_{0k}^\mathrm{GW} n^k
+\approx - \frac{c^3}{32\pi G} \langle \dot{\bar{h}}_{ij} \dot{\bar{h}}_{ij} \rangle_\mathrm{TT}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4blItLJ">須藤靖, “もうひとつの一般相対論入門”</a><br />
+[2] <a href="https://amzn.to/4ar7e7W">田中貴浩, “基幹講座 物理学 相対論”</a><br />
+[3] <a href="https://amzn.to/4a6BSUd">ランダウ &amp; リフシッツ, “場の古典論”</a><br />
+[4] <a href="https://www.pnas.org/doi/full/10.1073/pnas.1614681113">Balbus, 2016, “Simplified Derivation of the Gravitational Wave Stress Tensor from the linearized Einstein Field Equations”</a><br />
+[5] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1263">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency I. The Linear Approximation and Geometrical Optics”</a><br />
+[6] <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.1272">Isaacson, 1968, “Gravitational Radiation in the Limit of High Frequency II. Nonlinear Terms and the Effective Stress Tensor”</a><br />
+[7] <a href="https://amzn.to/491W20k">Maggiore, “Gravitational Waves”</a><br />
+[8] <a href="https://amzn.to/3x7JF5B">Misner, Thorne &amp; Wheeler, “Gravitation”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

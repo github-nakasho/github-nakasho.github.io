@@ -18,11 +18,11 @@ nav_order: 34
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01LVZ72QL&linkId=ec136c04d055429202e3f99977906079"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=1316517543&linkId=aa771681553cd98887a221bbbd7c9eba"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621083090&linkId=84199d92c099397c1d8fdcea8cb08ca3"></iframe>
+{% include adsense.html %}
 
 # レンズ・チュリング歳差運動 (Lense-Thirring precession)
 
-レンズ・サーリング歳差運動と訳する場合もあります。人名はいつの時代もどのように訳すのが正解かわかりません...
+レンズ・サーリング、レンズ・シリングと訳される場合もあります。人名はいつの時代もどのように訳すのが正解かわかりません...
 {: .label }
 
 宇宙に存在する恒星やブラックホールは、ほぼ必ずと言ってよいほど自転をしています。
@@ -187,7 +187,7 @@ $$
 二つ目の等号では$$\vert \mathbf{u} / c \vert \ll 1$$より、$$u^j$$の1次までを考えました。
 ここまでくれば、あとはこの$$A^i_{\ \ k}$$を計算すれば良いとわかります。
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01LVZ72QL&linkId=ec136c04d055429202e3f99977906079"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=1316517543&linkId=aa771681553cd98887a221bbbd7c9eba"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621083090&linkId=84199d92c099397c1d8fdcea8cb08ca3"></iframe>
+{% include adsense.html %}
 
 ### クリストッフェル記号の計算
 
@@ -327,7 +327,7 @@ $$
 
 を得ます。
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01LVZ72QL&linkId=ec136c04d055429202e3f99977906079"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=1316517543&linkId=aa771681553cd98887a221bbbd7c9eba"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535603456&linkId=334b78d7047003effb96c6fa6fe138a8"></iframe>
+{% include adsense.html %}
 
 ### 自転角運動量の時間変化の方程式とシッフ方程式
 
@@ -512,7 +512,7 @@ Gravity Probe Bにはジャイロスコープが搭載されています。
 
 {% include adsense.html %}
 
-## 最新の応用研究: ブラックホールのスピンを求める
+## 最新の応用研究1: ブラックホールのスピンを求める
 
 (45)式の通り、$$\Omega_\mathrm{LT}$$は中心天体の質量$$M$$などに依存することはありません。
 そのためこれを用いれば、中心天体の角運動量$$\mathbf{J}$$を正確に求めることができるだろうと期待されています。
@@ -549,8 +549,20 @@ M87のSMBHの観測といえば、EHTによるブラックホール直接撮像�
 
 ![](/assets/images/gr/lense_thirring_06.png)
 
-こちらの論文は2023年4月現在、査読中のようです。進展があり次第、この記事も随時更新させていただきます。
-{: .label .label-yellow }
+<!-- こちらの論文は2023年4月現在、査読中のようです。進展があり次第、この記事も随時更新させていただきます。
+{: .label .label-yellow } -->
+
+この論文は2023年9月に、["Precessing jet nozzle connecting to a spinning black hole in M87"](https://www.nature.com/articles/s41586-023-06479-6)というタイトルでNatureから出版されました。
+リンク先もぜひご覧ください（同タイトルで[arXiv](https://arxiv.org/abs/2310.09015)からもご覧いただけます。）
+
+### 最新の応用研究2: パルサー-白色矮星連星での一般相対論の検証
+
+[Krishnan et al. 2020](https://www.science.org/doi/10.1126/science.aax7007)では、$$1 M_\odot$$の大質量白色矮星と$$1.27 M\odot$$パルサーからなる連星において、そのパルサーを20年にわたって観測を行いました。
+すると、その軌道傾斜が長い時間かけて変動していることが確認されたのです。
+論文ではこれを古典的なニュートン四重極モーメントと白色矮星の高速自転による、軌道のLT歳差運動であると結論づけました。
+しかし、このシナリオでは白色矮星が高速回転している必要があります。
+実はこれはパルサー前駆体（超新星爆発を起こしてパルサーになる前の恒星）からガスの供給を通して、200秒以下の自転周期まで白色矮星がスピンアップした、という連星進化のシナリオに一致するのです。
+このような強い重力場持つ連星を通してまた一歩、相対論の正しさが堅牢なものになりました。
 
 ## 参考文献
 
@@ -562,5 +574,7 @@ M87のSMBHの観測といえば、EHTによるブラックホール直接撮像�
 [6] [Haimoud, New York University, General Relativity Fall 2019, Homework 8 solution](https://cosmo.nyu.edu/yacine/teaching/GR_2019/homeworks/solution8.pdf)  
 [7] [Liska et al., 2021, "Disc tearing and Bardeen–Petterson alignment in GRMHD simulations of highly tilted thin accretion discs"](https://academic.oup.com/mnras/article/507/1/983/5810669)  
 [8] [Mizuno, 2022, "GRMHD Simulations and Modeling for Jet Formation and Acceleration Region in AGNs"](https://www.mdpi.com/2218-1997/8/2/85)  
+[9] [Cui et al., 2023, "Precessing jet nozzle connecting to a spinning black hole in M87"](https://www.nature.com/articles/s41586-023-06479-6)  
+[10] [Krishnan et al., 2020, "Lense-Thirring frame dragging induced by a fast-rotating white dwarf in a binary pulsar sysmte"](https://www.science.org/doi/10.1126/science.aax7007)  
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01LVZ72QL&linkId=ec136c04d055429202e3f99977906079"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=1316517543&linkId=aa771681553cd98887a221bbbd7c9eba"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621083090&linkId=84199d92c099397c1d8fdcea8cb08ca3"></iframe>
+{% include adsense.html %}

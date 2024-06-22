@@ -125,11 +125,36 @@ $$
 $$
 \left< \frac{d J_i}{dt} \right> 
 = - \frac{2G}{5c^5} \epsilon_{ijk} \frac{1}{T} \int \underbrace{m x^j x^a}_{=D^{ja}} \dddot{\ddot{\mathscr{D}}}_a^k dt 
-\underbrace{= \cdots = }_{部分積分を複数回実行} - \frac{2G}{5c^5} \epsilon_{ijk} \left< \ddot{\mathscr{D}}^{ja} \dddot{\mathscr{D}}_a^k \right> \tag{10}
+\underbrace{= \cdots = }_{部分積分を複数回実行} - \frac{2G}{5c^5} \epsilon_{ijk} \left< \ddot{D}^{ja} \dddot{\mathscr{D}}_a^k \right> \tag{10}
 $$
 
 を得ます。
-これが、重力波放射に伴う系の角運動量の時間変化です。
+さらに
+
+$$
+\epsilon_{ijk} \ddot{D}^{ja} \dddot{\mathscr{D}}_a^k 
+= \epsilon_{ijk} \ddot{\mathscr{D}}^{ia} \dddot{\mathscr{D}}_a^k + \frac{1}{3} \epsilon_{ijk} \delta^{ja} \ddot{D} \dddot{\mathscr{D}}_a^k 
+= \epsilon_{ijk} \ddot{\mathscr{D}}^{ia} \dddot{\mathscr{D}}_a^k + \frac{1}{3} \epsilon_{ijk} \ddot{D} \dddot{\mathscr{D}}^{jk} \tag{12}
+$$
+
+です。
+第二項において、例えば$$i=x$$の場合を考えましょう。
+すると
+
+$$
+\epsilon_{xjk} \dddot{\mathscr{D}}^{jk} 
+= \dddot{\mathscr{D}}^{yz} - \underbrace{\dddot{\mathscr{D}}^{zy}}_{=\dddot{\mathscr{D}}^{yz}} 
+= 0 \tag{13}
+$$
+
+のようになるため、結局
+
+$$
+\left< \frac{d J_i}{dt} \right> 
+= -\frac{2G}{5c^5} \epsilon_{ijk} \left< \ddot{\mathscr{D}}^{ja} \dddot{\mathscr{D}}_a^k \right> \tag{14}
+$$
+
+のように整理されます。
 
 ## 参考文献
 

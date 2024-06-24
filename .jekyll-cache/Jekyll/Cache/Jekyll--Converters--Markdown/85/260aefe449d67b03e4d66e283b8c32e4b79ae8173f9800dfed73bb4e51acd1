@@ -1,0 +1,188 @@
+I"�"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#アインシュタイン方程式" id="markdown-toc-アインシュタイン方程式">アインシュタイン方程式</a>    <ol>
+      <li><a href="#アインシュタインテンソルとエネルギー運動量テンソル" id="markdown-toc-アインシュタインテンソルとエネルギー運動量テンソル">アインシュタインテンソルとエネルギー運動量テンソル</a></li>
+      <li><a href="#定数の決定" id="markdown-toc-定数の決定">定数の決定</a></li>
+      <li><a href="#アインシュタイン方程式-1" id="markdown-toc-アインシュタイン方程式-1">アインシュタイン方程式</a></li>
+      <li><a href="#コラム的な-この宇宙は何次元" id="markdown-toc-コラム的な-この宇宙は何次元">(コラム的な？): この宇宙は何次元？</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="アインシュタイン方程式">アインシュタイン方程式</h1>
+
+<p>導出の途中で出てくる</p>
+
+\[h_{00} = \frac{2\Phi}{c^2}\]
+
+<p>は弱重力場でのニュートン方程式の導出(後日更新)でわかります。</p>
+
+<h2 id="アインシュタインテンソルとエネルギー運動量テンソル">アインシュタインテンソルとエネルギー運動量テンソル</h2>
+
+<p>アインシュタインテンソルは\(\nabla_\alpha G^{\alpha \beta} = 0\)を満たします。また完全流体のエネルギー運動量テンソルも同様に\(\nabla_\alpha T^{\alpha \beta} = 0\)を満たすので、定数\(\kappa\)を用いて</p>
+
+\[G^{\alpha \beta} = \kappa T^{\alpha \beta}\]
+
+<p>と書くことがきます。これは物質が存在する(右辺)ことにより、空間の曲率が変化する(左辺)ことを意味するものです。</p>
+
+<h2 id="定数の決定">定数の決定</h2>
+
+<p>定数\(\kappa\)を求めるために、重力が弱い極限でのポアソン方程式</p>
+
+\[\Delta \Phi = 4\pi G \rho\]
+
+<p>と一致することを用います。弱い重力場において、メトリックが</p>
+
+\[(g_{\mu \nu}) = \left( \begin{array}{cccc}
+-(1+h_{00}) &amp;&amp; &amp;&amp; &amp;&amp; {\bf 0} \\
+&amp;&amp; 1+h &amp;&amp; &amp;&amp; \\
+&amp;&amp; &amp;&amp; 1+h &amp;&amp; \\
+{\bf 0} &amp;&amp; &amp;&amp; &amp;&amp; 1+h
+\end{array} \right)\]
+
+<p>のようにミンコフスキーメトリックからの微小なズレとして表現されるとします。ここで\(\|h_{00} \| \ll 1, \| h \| \ll 1\)かつ\(\dot{h_{00}} = \dot{h} = 0\)です。</p>
+
+<p>クリストッフェル記号を計算するために、この逆行列を準備する必要があります。しかし</p>
+
+\[\Gamma^\mu_{\alpha \beta} 
+= \frac{1}{2} g^{\mu \sigma} (g_{\sigma \alpha, \beta} + g_{\sigma \beta, \alpha} - g_{\alpha \beta, \sigma})\]
+
+<p>より、逆行列を詳細に求めたところで、結局\(h_{00}, h\)の高次の項が出現するだけです。よって必要な部分だけ計算を行うことにしましょう。</p>
+
+\[g^{00} 
+= \frac{1}{g_{00}} 
+= - \frac{1}{1+h_{00}} 
+\simeq - 1+h_{00}\]
+
+\[\delta^j_i g^{ij} \simeq 1\]
+
+<p>です。すると\(\Gamma \simeq O (h)\)より</p>
+
+\[R^\alpha_{\gamma \mu \nu} 
+= \partial_\mu \Gamma^\alpha_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma} + \underbrace{\Gamma^\alpha_{\mu \sigma} \Gamma^\sigma_{\gamma \nu}}_{O(h^2)} - \underbrace{\Gamma^\alpha_{\nu \sigma} \Gamma^\sigma_{\mu \gamma}}_{O(h^2)}
+\simeq \partial_\mu \Gamma^\alpha_{\nu \gamma} - \partial_\nu \Gamma^\alpha_{\mu \gamma}\]
+
+\[\Gamma^0_{00} = 0, \Gamma^0_{0i} = \frac{1}{2} g^{00} g_{00, i} = \frac{1}{2} h_{00, i}, \Gamma^i_{00} = \frac{1}{2} g^{ij} (-g_{00, j}) = \frac{1}{2} h_{00, i}\]
+
+<p>より</p>
+
+\[R^{0}_{i0j} 
+= \partial_0 \Gamma^0_{ji} - \partial_j \Gamma^0_{0i} 
+= - \frac{1}{2} h_{00, ij}\]
+
+\[R^0_{ij0} = - R^0_{i0j} = \frac{1}{2} h_{00, ij}\]
+
+\[R^i_{00j} = - \partial_j \Gamma^i_{00} = - \frac{1}{2} h_{00, ij}\]
+
+\[R^0_{000} = 0\]
+
+\[\begin{aligned}
+R^{i}_{k \ell j} 
+&amp;= \partial_\ell \Gamma^i_{jk} -\partial_j \Gamma^i_{\ell k} 
+= \partial_\ell \left\{ \frac{1}{2} \delta^{im} (\delta_{mj} h_{,k} + \delta_{mk} h_{,j} - \delta_{jk} h_{,m} )\right\} - \partial_j \left\{ \frac{1}{2} \delta^{im} (\delta_{m\ell} h_{,k} + \delta_{mk} h_{,\ell} - \delta_{\ell k} h_{,m} )\right\} \\
+&amp;= \frac{1}{2} (\delta^i_j h_{, k\ell} - \delta^{jk} \delta^{im} h_{, m\ell} -\delta^i_\ell h_{, kj}  + \delta^{\ell k} \delta^{im} h_{, mj})
+\end{aligned}\]
+
+<p>よって</p>
+
+\[R_{k\ell} 
+= R^\alpha_{k\alpha \ell} 
+= R^0_{k0\ell} + R^{i}_{ki\ell} 
+= -\frac{1}{2} h_{00, k\ell} - \frac{3}{2} h_{, k\ell} + \frac{1}{2} h_{,k\ell} + \frac{1}{2} h_{, k\ell} - \frac{1}{2} \delta^{k\ell} \Delta h 
+= - \frac{1}{2} h_{00, k\ell} - \frac{1}{2} h_{, k\ell} - \frac{1}{2} \delta^{k\ell} \Delta h\]
+
+\[R = g^{\mu \nu} R^\alpha_{\mu \alpha \nu} 
+= g^{00} R^\alpha_{0\alpha 0} + g^{k\ell} R^0_{k0\ell} + g^{k\ell} R^i_{ki\ell} 
+= -\frac{1}{2} \Delta h_{00} - \frac{1}{2} \Delta h_00 - 2 \Delta h 
+= -\Delta h_{00} -2 \Delta h\]
+
+\[R_{00} = R^0_{000} + R^i_{0i0} = \frac{1}{2} \Delta h_{00}\]
+
+<p>\(i \neq j\)に対して</p>
+
+\[G_{ij} 
+= R_{ij} - \frac{1}{2} g_{ij} R 
+= -\frac{1}{2}h_{00, ij} - \frac{1}{2} h_{, ij} = \kappa T_{ij}\]
+
+<p>ここで\(u^\alpha = 0\)のように完全流体が静止しているとすると</p>
+
+\[-\frac{1}{2} h_{00, ij} - \frac{1}{2} h_{, ij} 
+= \kappa T_{ij} 
+= 0 \ \Longrightarrow \ 
+h_{00} = -h = \frac{2\Phi}{c^2}\]
+
+\[\begin{aligned}
+&amp;\therefore \ G_{00} 
+= R_{00} - \frac{1}{2} g_{00} R 
+= \frac{1}{2} \Delta h_{00} + \frac{1}{2} (-\Delta h_{00} - 2\Delta h) 
+= -\Delta h 
+= \frac{2}{c^2} \Delta \Phi 
+= \frac{8\pi G}{c^2} \rho 
+= \kappa T^{00} = \kappa \rho c^2 \\
+&amp;\Longrightarrow \
+\kappa = \frac{8\pi G}{c^4}
+\end{aligned}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="アインシュタイン方程式-1">アインシュタイン方程式</h2>
+
+<p>定数が求まったので、最終的な形は</p>
+
+\[G^{\alpha \beta} 
+= R^{\alpha \beta} - \frac{1}{2} Rg^{\alpha \beta} 
+= \frac{8\pi G}{c^4} T^{\alpha \beta} \tag{1}\]
+
+<p>となります。</p>
+
+<h2 id="コラム的な-この宇宙は何次元">(コラム的な？): この宇宙は何次元？</h2>
+
+<p>アインシュタイン方程式(1)によると、物質が何もない真空中では常に</p>
+
+\[G_{\mu \nu} 
+= R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} 
+= 0 \tag{2}\]
+
+<p>となります。
+この両辺に\(g^{\mu \nu}\)をかけて\(\mu, \nu\)で縮約をとると</p>
+
+\[\underbrace{g^{\mu \nu} R_{\mu \nu}}_{=R} - \frac{1}{2} R g^{\mu \nu} g_{\mu \nu} 
+= R \left( 1- \frac{1}{2} \delta_\mu^\mu \right)
+= 0 \tag{3}\]
+
+<p>もしこの宇宙が\(n\)次元の場合、添字は\(\mu = 1, 2, \dots, n\)をとるため、\(\delta_\mu^\mu = n\)となります。
+すると\(n=4\)の場合には、時空の歪みを表す\(R\)は任意の値を取ることができます。
+しかし\(n \neq 4\)では、常に\(R = 0\)でなければなりません。
+これでは時空のさざなみと呼ばれる重力波や、ブラックホール周囲の時空の歪みが、この宇宙には存在しないしないことになります。
+この議論から「この宇宙は4次元時空である」ということが見えてくるのです。<br />
+ただしこの議論は一般相対論が適用できる範囲に限られます。
+一般相対論でモデル化することができないような極限的な場合では、時空がより大きな次元になることもあるかもしれません。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

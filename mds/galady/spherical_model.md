@@ -612,33 +612,319 @@ $$
 を、concentration (集中度？)と呼びます。
 実際の研究で観測データにキングモデルを適用した場合の論文などでは、これをパラメータとして記述することが多いようです。
 
-## ハーンキストモデル (Hernquist model)
+## Isochroneポテンシャルモデル
 
-(準備中...)
+以下のような重力ポテンシャルで与えられるモデルを、isochroneポテンシャルと呼びます。
 
-<!-- ハーンキストモデルとは、以下のような密度分布のモデルを指します。
+$$
+\Phi (r) 
+= - \frac{GM}{b + \sqrt{b^2 + r^2}} \tag{53}
+$$
+
+これは質点が作るポテンシャル$$\Phi_\mathrm{point}= - \frac{GM}{r}$$を、$$b$$だけスムージングしたものです。
+当然、$$b \rightarrow 0$$または$$r \gg b$$では、質点が作るポテンシャルに漸近します。  
+このポテンシャルモデルがどれだけ速く質点のポテンシャルに漸近するかを、$$b/r$$で展開することで見てみましょう。
+
+$$
+\begin{align}
+\Phi_{r \gg b} (r) 
+&= - \frac{GM}{r \left( \frac{b}{r} + \sqrt{1 + \left(\frac{b}{r}\right)^2 }\right)}　
+\underbrace{\approx}_{b/r \ll 1} - \frac{GM}{r} \frac{1}{\frac{b}{r} + 1 + \frac{1}{2}\left(\frac{b}{r}\right)^2}
+\approx - \frac{GM}{r} \left( 1-\frac{b}{r} \right) \notag \\
+&= \Phi_\mathrm{point} + \Phi_\mathrm{other} (r) \tag{54}
+\end{align}
+$$
+
+第一項は質点が作る重力ポテンシャルです。
+第二項は$$r^{-2}$$に比例する項であることがわかります。
+[ポアソン方程式](/galady/poisson)より、密度分布を計算しましょう。
+
+$$
+\frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \Phi_\mathrm{other}}{\partial r}\right) 
+= \frac{2GMb}{r^4} 
+= 4\pi_{r \gg b} G \rho \ \Longrightarrow \ 
+\rho 
+= \frac{Mb}{2 \pi r^4} \tag{55}
+$$
+
+この$$\rho_{r \gg b} \propto r^{-4}$$は、ダークマターハローのモデルであるハーンキストモデルの振る舞いと同じです。  
+次に$$r/b \rightarrow 0$$の場合を考えましょう。
+
+$$
+\begin{align}
+\Phi_{r \ll b} (r) 
+&= - \frac{GM}{b \left(1 + \sqrt{\left(\frac{r}{b}\right)^2 + 1}\right)} 
+\approx - \frac{GM}{b} \frac{1}{1 + 1 + \frac{1}{2} \left( \frac{r}{b}\right)^2} 
+\approx - \frac{GM}{2b} \left( 1 - \frac{1}{4} \frac{r^2}{b^2}\right) \notag \\
+&= \frac{GM}{8b^3} r^2 + \mathrm{const.} \tag{56}
+\end{align}
+$$
+
+再び[ポアソン方程式](/galady/poisson)より
+
+$$
+4\pi G \rho 
+= \frac{6GM}{8b^3} \ \Longrightarrow \ 
+\rho 
+= \frac{3M}{16\pi b^3} \tag{57}
+$$
+
+と求まります。
+このことから、isochroneポテンシャルが作る質量分布は、中心部では一定密度となることがわかります。
+以上の議論から、このポテンシャルモデルは質点が作るポテンシャルと、一定密度分布が作るポテンシャルとをなめらかに繋ぐポテンシャルであることがわかります。  
+次に、このポテンシャル中を円運動する粒子の運動速度を計算しましょう。
+遠心力と重力との釣り合いより
+
+$$
+\frac{v_c^2}{r} 
+= \frac{GMr}{(b + \sqrt{r^2+b^2})^2 \sqrt{r^2 + b^2}} \ \Longrightarrow \ 
+v_c^2 
+= \frac{GMr^2}{(b+a)^2 a} \qquad (a \equiv \sqrt{r^2 + b^2}) \tag{58}
+$$
+
+となります。
+このモデルが最も注目される理由としては、すべての軌道を解析的に解くことができる、最も現実的な銀河のモデルとなっているためです。
+解析的に解けるトイモデルというのは、それだけで魅力的なのです。
+
+## べき乗則モデル (Power-law models)
+
+もう一つの重要なモデルとして、半径$$r$$に対して質量密度がべき乗分布するものがあります。
 
 $$
 \rho (r) 
-= \frac{M}{2\pi} \frac{a}{r} \frac{1}{(r+a)^3} \tag{53}
+= \rho_0 \left( \frac{r_0}{r} \right)^\alpha \tag{59}
 $$
 
-ここで$$a$$は系の典型的な長さ(scale length)、そして$$M$$は系の全質量です。
-この密度分布の場合に、半径$$r$$の球の内側に存在する質量$$M(r)$$は
+ここで$$\rho_0$$は$$r=r_0$$における質量密度を表します。
+半径$$r$$以内に存在する総質量を計算しましょう。
+
+$$
+M (r) 
+= 4\pi \int_0^r \rho_0 \left( \frac{r_0}{r} \right)^\alpha r^2 dr 
+= 4\pi \rho_0 r_0^\alpha \int_0^r r^{2-\alpha} dr 
+= \frac{4\pi \rho_0 r_0^3}{3-\alpha} \left( \frac{r_0}{r} \right)^{\alpha -3} \tag{60}
+$$
+
+質量$$M(r)$$は正であるため、$$\alpha < 3$$を仮定しました。
+半径$$r$$における回転速度は
+
+$$
+\frac{v_c^2}{r} 
+= \frac{GM}{r^2} 
+= \frac{4\pi G \rho_0 r_0^\alpha}{3-\alpha} r^{1-\alpha} \ \Longrightarrow \ 
+v_c^2 
+= \frac{4\pi G \rho_0 r_0^\alpha}{3-\alpha} r^{2-\alpha} \tag{61}
+$$
+
+のように求まります。
+ここまで、$$\alpha$$が実際にどのような値かは議論してきませんでした。
+実際の円盤銀河では、中心部から離れると$$v_c = 一定$$のflat rotationであることが知られています。
+それを再現するには、(61)式で$$\alpha = 2$$であれば良いとわかります。
+その場合、重力ポテンシャルは
+
+$$
+\Phi(r) - \Phi (r_0)
+= G \int_{r_0}^r \frac{M(r')}{r'^2} dr' 
+= 4\pi G \rho_0 r_0^2 \int_{r_0}^r \frac{dr'}{r'} 
+= 4\pi G \rho_0 r_0^2 \ln (r/r_0) 
+= v_c^2 \ln (r/r_0) \tag{62}
+$$
+
+のように求まります。
+ここで$$r_0$$をポテンシャルの基準とし、さらに$$\alpha = 2$$のとき$$v_c^2 = 4\pi G \rho_0 r_0^2$$であることを用いました。
+このポテンシャルはlogarithmic potential (対数ポテンシャル) と呼ばれ、銀河のflat rotationを再現する重要なポテンシャルです。
+
+## 2つのべき乗を用いた密度モデル (Two-power density models)
+
+もう一つ重要なモデルとして、以下のような質量密度のものがあります。
+
+$$
+\rho (r) 
+= \frac{\rho_0}{\left( \frac{r}{a} \right)^\alpha \left( 1+\frac{r}{a} \right)^{\beta - \alpha}} \tag{63}
+$$
+
+ここで$$a$$は適当な定数です。
+このモデルは
+
+$$
+\rho(r) 
+\approx \left\{ 
+  \begin{array}{ll}\rho_0 \left( \frac{a}{r}\right)^\alpha & (r \ll a) \\
+  \rho_0 \left(\frac{a}{r}\right)^\beta & (r \gg a) 
+  \end{array}
+  \right. \tag{64}
+$$
+
+のように表現され、$$r \sim a$$付近でそのべきが$$\alpha \rightarrow \beta$$に変化します。
+このような理由から、定数$$a$$をスケール半径と呼びます。
+このモデルを一般の$$\alpha, \beta$$について議論すると大変なため、ここでは$$(\alpha, \beta) = (1, 4), (2, 4), (1, 3)$$の場合のみ議論しましょう。
+特に$$(\alpha, \beta) = (1, 4)$$をハーンキストモデル (Hernquist model)、$$(\alpha, \beta) = (2, 4)$$をジャッフェモデル (Jaffe model)、そして$$(\alpha, \beta) = (1, 3)$$をNFWモデルと呼びます。  
+半径$$r$$内に存在する質量は
 
 $$
 M(r) 
-= 4\pi \int_0^r \frac{M}{2\pi} \frac{a}{r} \frac{1}{(r+a)^3} r^2 dr 
-= M \int_0^r \frac{2ar}{(r+a)^3} 
-= M \left[ 2ar \left( -\frac{1}{2} (r+a)^{-2} \right) \right]_0^r - M \int_0^r \frac{-a}{(r+a)^2} dr 
-= M \left[ \frac{-ar}{(r+a)^2} \right]_0^r + M 
-$$ -->
+= 4\pi \int_0^r r^2 \rho(r) dr 
+\underbrace{=}_{s = r/a} 4\pi \rho_0 a^3 \int_0^{r/a} \frac{s^{2-\alpha}}{(1+s)^{\beta - \alpha}} ds \tag{65}
+$$
+
+のようになります。
+では$$(\alpha, \beta) = (1, 4)$$から順に求めていきましょう。
+
+$$
+\begin{align}
+M(r) 
+&= 4\pi \rho_0 a^3 \int_0^{r/a} \frac{s}{(1+s)^3} ds 
+= 4\pi \rho_0 a^3 \left( \left[ -\frac{1}{2} s (1+s)^{-2}\right]_0^{r/a} + \frac{1}{2} \int_0^{r/a} (1+s)^{-2} ds \right) \notag \\
+&= 4\pi \rho_0 a^3 \left\{ - \frac{r}{2a (1+r/a)^2} + \frac{1}{2} \left[ -(1+s)^{-1} \right]_0^{r/a}\right\} \notag \\
+&= 4\pi \rho_0 a^3 \left\{ - \frac{r}{2a (1+r/a)^2} - \frac{1}{2} \left( \frac{1}{1+r/a} -1\right) \right\} 
+= 4\pi \rho_0 a^3 \frac{ \left( \frac{r}{a} \right)^2}{2 \left( 1 + \frac{r}{a} \right)^2} \tag{66}
+\end{align}
+$$
+
+続いて$$(\alpha, \beta) = (2, 4)$$の場合です。
+
+$$
+\begin{align}
+M(r) 
+&= 4\pi \rho_0 a^3 \int_0^{r/a} (1+s)^{-2} ds 
+= 4\pi \rho_0 a^3 \left[ -(1+s)^{-1}\right]_0^{r/a} 
+= 4\pi \rho_0 a^3 \left( 1-\frac{1}{1+\frac{r}{a}}\right) \notag \\
+&= 4\pi \rho_0 a^3 \frac{\frac{r}{a}}{1+\frac{r}{a}} \tag{67}
+\end{align}
+$$
+
+そして$$(\alpha, \beta) = (1, 3)$$の場合は
+
+$$
+\begin{align}
+M(r) 
+&= 4\pi \rho_0 a^3 \int_0^{r/a} \frac{s}{(1+s)^2} ds 
+= 4\pi \rho_0 a^3 \left\{ \left[ -(1+s)^{-1} s\right]_0^{r/a} + \int_0^{r/a} (1+s)^{-1} ds \right\} \notag \\
+&= 4\pi \rho_0 a^3 \left\{ - \frac{\frac{r}{a}}{1+\frac{r}{a}} + \left[ \ln (1+s)\right]_0^{r/a} \right\} 
+= 4\pi \rho_0 a^3 \left\{ \ln \left( 1+\frac{r}{a} \right) - \frac{\frac{r}{a}}{1+\frac{r}{a}} \right\} \tag{68}
+\end{align}
+$$
+
+のようになります。
+以上から
+
+$$
+M(r) 
+= 4\pi \rho_0 a^3 \times \left\{ \begin{array}{ll}
+\frac{(r/a)^2}{2(1+r/a)^2} & (\mathrm{Hernquist}) \\
+\frac{r/a}{1+r/a} & (\mathrm{Jaffe})\\
+\ln (1+r/a) - \frac{r/a}{1+r/a} & (\mathrm{NFW})
+\end{array} \right. \tag{69}
+$$
+
+のようにまとめることができます。
+ハーンキストモデルの場合、$$r \rightarrow \infty$$で$$M = 2\pi \rho_0 a^3$$となります。
+ジャッフェモデルでは$$r \rightarrow \infty$$で$$M=4\pi \rho_0 a^3$$です。
+すなわちこれらのモデルでは、これが全系の質量となります。
+しかしNFWモデルでは、$$r \rightarrow \infty$$で質量が無限大に発散します。
+そのため、NFWモデルを実際の銀河に適用する場合には、有限の半径までを銀河の系としなければなりません。  
+続いて、重力ポテンシャルを求めてみましょう。
+まずは$$(\alpha, \beta) = (1, 4)$$の場合です。
+
+$$
+\begin{align}
+\Phi (r) 
+&= - G \int_r^\infty \frac{dr'}{r'^2} 4\pi \rho_0 a^3 \frac{(r'/a)^2}{2(1+r'/a)^2} 
+= -2\pi G \rho_0 a \int_r^\infty \frac{dr'}{(1+r'/a)^2} \notag \\
+&= -2\pi G \rho_0 a \left[ - a \left(1+\frac{r'}{a}\right)^{-1} \right]_r^\infty 
+= -4\pi G \rho_0 a^2 \frac{1}{2(1+r/a)} \tag{70}
+\end{align}
+$$
+
+次は$$(\alpha, \beta) = (2, 4)$$についてです。
+
+$$
+\begin{align}
+\Phi(r) 
+&= - G \int_r^\infty \frac{dr'}{r'^2} 4\pi \rho_0 a^3 \frac{r'/a}{1+r'/a} 
+= - 4\pi G \rho_0 a^2 \int_r^\infty \frac{1}{r'} \frac{1}{1+r'/a} dr' \notag \\
+&= - 4\pi G \rho_0 a^2 \int_r^\infty \left( \frac{1}{r'} - \frac{1}{a} \frac{1}{1+r'/a} \right) dr' 
+= - 4\pi G \rho_0 a^2 \left[ \ln r' - \ln \left(1+ \frac{r'}{a} \right) \right]_r^\infty \notag \\
+&= - 4\pi G \rho_0 a^2 \ln \left(1+\frac{a}{r} \right) \tag{71} 
+\end{align}
+$$
+
+最後に、$$(\alpha, \beta) = (1, 3)$$です。
+
+$$
+\begin{align}
+\Phi(r) 
+&= -G \int_r^\infty \frac{dr'}{r'^2} 4\pi \rho_0 a^3 \left\{ \ln (1+r'/a) - \frac{r'/a}{1+r'/a}\right\} 
+= -4\pi G \rho_0 a^3 \left\{ \int_r^\infty \frac{dr'}{r'^2} \ln (1+r'/a) -\int_r^\infty \frac{dr'}{r'^2} \frac{r'/a}{1+r'/a} \right\} \notag \\
+&= - 4\pi G \rho_0 a^3 \left\{ \left[ - r^{-1} \ln (1+r'/a)\right]_r^\infty + \int_r^\infty r^{-1} \frac{1/a}{1+r'/a} dr' -\int_r^\infty \frac{dr'}{r'^2} \frac{r'/a}{1+r'/a} \right\} \notag \\
+&= -4\pi G \rho_0 a^2 \frac{a}{r} \ln \left( 1 + \frac{a}{r} \right) \tag{72}
+\end{align}
+$$
+
+以上をまとめると
+
+$$
+\Phi (r) 
+= - 4 \pi G \rho_0 a^2 \times 
+\left\{ \begin{array}{ll}
+\frac{1}{2(1+r/a)} & (\mathrm{Hernquist}) \\
+\ln (1+a/r) & (\mathrm{Jaffe}) \\
+\frac{a}{r} \ln (1+a/r) & (\mathrm{NFW})
+\end{array} \right. \tag{73}
+$$
+
+ハーンキストモデルでは、全質量が$$M_\mathrm{Hernquist} = 2\pi \rho_0 a^3$$となるのでした。
+ここから、ハーンキストモデルにおける重力ポテンシャルは
+
+$$
+\Phi_\mathrm{Hernquist} (r) 
+= - \frac{GM}{r+a} \tag{74}
+$$
+
+のように書き直すことができます。
+すなわちハーンキストモデルの重力ポテンシャルは、質点のポテンシャルを$$r \rightarrow r +a$$としたものに等しいことがわかります。
+ハーンキストモデルは楕円銀河の$$R^{1/4}$$のドゥ・ボクルール則 (de Vaucouleurs sourface-brightness profile)を再現することから、楕円銀河や銀河のバルジ部分のモデルとして有名です。  
+これに対してジャッフェモデルは、とてもカスピー (cuspy、中心部で質量密度がとても大きくなるような分布)なものとして知られています。
+これはもちろん現実の銀河ハローなどとは異なりますが、ジャッフェモデルは解析的に扱いやすいという利点があり、広く用いられています。  
+NFWモデルは、Navarro et al. (1996, 1997)で示されたモデルです。
+これは宇宙論的なN体計算から求められた、冷たいダークマターハローの質量密度分布モデルです。
+Navarroたちは、様々な宇宙初期の密度ゆらぎからダークマターのみのN体計算を行いました。
+そしてどのような初期条件からシミュレーションを開始しても、普遍的にこの質量密度分布になることを見出したのです。
+しかし、どのような物理機構でこの分布が再現されるのかについては決着がついていません。
+また最近のより高精度な数値シミュレーションでは、ダークマターハローの中心部の密度分布は、必ずしもNFW分布にならないことが知られています。
+さらにダークマターハロー外縁部についても、これを良く再現する分布は得られていません。
+種々の研究から、NFWよりハーンキストモデルに近い質量密度分布であると言われています。
+
+### NFW分布とコア・カスプ問題
+
+普遍的に成り立つNFW分布ですが、実は矮小銀河などの低質量銀河ではこれとは異なる分布を持つことが知られています。
+観測から判明している矮小銀河の中心の質量分布は、ほぼ一定のコア構造になっているのです。
+一方、NFW分布では、中心部の質量分布はカスピーなものになります。
+このような食い違いをコア・カスプ問題 (core-cusp problem)と呼ばれています。  
+この問題を解決する手段として、以下の2つが挙げられます。
+
+* バリオンの物理を考慮する (stellar feedbacks, tidal force, reionization etc.)
+
+銀河中心領域での星形成そして形成された恒星の超新星爆発を考慮することでや、銀河中心にできる超大質量ブラックホールのAGN活動により、これを軽減することができるとされています。
+超新星爆発などにより中心部からガスが吹き飛ばされると、重力相互作用をするダークマターもまた、そのガスに引っ張られる形で周辺部へ移動します。
+結果として、中心部に一極集中するはずだったダークマターが、その周りにも分布するようになるという説です。
+
+* 冷たいダークマター以外のダークマター理論 (WDM, SIDM, FDM etc.)
+
+ダークマターの候補となっているものは様々提案されており、それらがこの問題を解決するのではないか、という説です。
+有名なものとしては、冷たいダークマターよりも速度分散が大きい温かいダークマター (Warm Dark Matter: WDM)、冷たいダークマターよりも強い自己相互作用を持つ自己相互作用ダークマター (Self-Interacting Dark Matter: SIDM)、とても軽い質量のスカラー粒子からなるファジーダークマター (Fuzzy Dark Matter: FDM)などが挙げられます。
+これらダークマターは、そのダークマター自身の性質により小さいスケールでの構造を抑制し、コア構造を形成することが可能とされています。
+逆を言えば、矮小銀河の構造から乱立するダークマター理論に対して制限をかけることも可能です。
+天の川銀河の周辺に存在する矮小銀河だけを見ても、まだまだ謎が多く、次世代の観測に期待が寄せられています。
 
 # 参考文献
 
-[1] Binney & Tremaine, "Galactic Dynamics: Second Edition"  
+[1] [Binney & Tremaine, "Galactic Dynamics: Second Edition"](https://amzn.to/46lnQNv)  
 [2] [Bovy, "Dyanmics and Astrophysics of Galxies"](https://galaxiesbook.org/index.html)  
 [3] [牧野淳一郎, "理論天体物理学特論I"](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics/all/all.html)  
-[4] 観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"  
+[4] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://amzn.to/46mO8Pu)  
+[5] [Navarro et al., 1996, "The Structure of Cold Dark Matter Halos"](https://ui.adsabs.harvard.edu/abs/1996ApJ...462..563N/abstract)  
+[6] [Navarro et al., 1997, "A Universal Density Profile from Hierarchical Clustering"](https://iopscience.iop.org/article/10.1086/304888)  
+[7] [林航平, "2020年度 京都大学基礎物理学研究所 集中講義 「近傍宇宙論（銀河考古学）で探るダークマターの正体」"](https://sites.google.com/view/khayashi-jp/%E8%AC%9B%E7%BE%A9?authuser=0)  
 
 {% include adsense.html %} 

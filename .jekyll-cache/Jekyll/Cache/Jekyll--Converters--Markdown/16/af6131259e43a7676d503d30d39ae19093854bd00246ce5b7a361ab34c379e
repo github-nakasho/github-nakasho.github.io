@@ -1,0 +1,141 @@
+I"�1
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#天の川銀河中心の超巨大質量コンパクトオブジェクトの発見" id="markdown-toc-天の川銀河中心の超巨大質量コンパクトオブジェクトの発見">天の川銀河中心の超巨大質量コンパクトオブジェクトの発見</a>    <ol>
+      <li><a href="#天の川銀河中心の概要" id="markdown-toc-天の川銀河中心の概要">天の川銀河中心の概要</a>        <ol>
+          <li><a href="#天の川銀河中心核" id="markdown-toc-天の川銀河中心核">天の川銀河中心核</a></li>
+          <li><a href="#観測" id="markdown-toc-観測">観測</a>            <ol>
+              <li><a href="#可視光による観測" id="markdown-toc-可視光による観測">可視光による観測</a></li>
+              <li><a href="#天の川銀河中心の位置" id="markdown-toc-天の川銀河中心の位置">天の川銀河中心の位置</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#genzelとghezの貢献" id="markdown-toc-genzelとghezの貢献">GenzelとGhezの貢献</a>        <ol>
+          <li><a href="#genzel" id="markdown-toc-genzel">Genzel</a></li>
+          <li><a href="#ghez" id="markdown-toc-ghez">Ghez</a></li>
+          <li><a href="#その後の観測" id="markdown-toc-その後の観測">その後の観測</a></li>
+          <li><a href="#最新の研究" id="markdown-toc-最新の研究">最新の研究</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#結言" id="markdown-toc-結言">結言</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="天の川銀河中心の超巨大質量コンパクトオブジェクトの発見">天の川銀河中心の超巨大質量コンパクトオブジェクトの発見</h1>
+
+<p>2020年10月、今年のノーベル物理学賞が発表されました。内容はブラックホールの理論と観測によるものでした。</p>
+
+<ul>
+  <li>理論: Roger Penrose</li>
+  <li>観測: Reihard Genzel, Andrea Ghez</li>
+</ul>
+
+<p>観測で受賞した両名は「天の川銀河中心に超巨大質量コンパクトオブジェクトの発見したことによるもの」という事由で受賞しました。それではこの観測がどのようなものだったかを見ていきましょう。</p>
+
+<h2 id="天の川銀河中心の概要">天の川銀河中心の概要</h2>
+
+<h3 id="天の川銀河中心核">天の川銀河中心核</h3>
+
+<p>天の川銀河に代表されるような円盤銀河の中心には、超巨大質量ブラックホール(Super Massive Black Holes, SMBHs)が存在することが種々の銀河観測結果から示唆されています。天の川銀河にもそれは当てはまります。観測された力学的構造から、中心から半径0.01pcより小さな領域に</p>
+
+\[M = (4.3 \pm 0.4) \times 10^6 M_\odot\]
+
+<p>が存在しなければならないと言われています。</p>
+
+<h3 id="観測">観測</h3>
+
+<h4 id="可視光による観測">可視光による観測</h4>
+
+<p>以下の図は可視光で天の川銀河中心の方向を観測したものです。様々なメシエ天体と天の川銀河中心(+マーク)、そして直線で銀河面を示しています。</p>
+
+<p><img src="/assets/images/gr/optical.png" alt="天の川銀河中心方向を可視光観測したもの" /></p>
+
+<p>+マークの部分はダストによる減光を受けて暗くなっていることがわかります。このため、天の川銀河中心方向は可視光ではなく、電波・赤外・X線などの波長で調べることができます。</p>
+
+<h4 id="天の川銀河中心の位置">天の川銀河中心の位置</h4>
+
+<p><img src="/assets/images/gr/radio.png" alt="GCを電波で観測したもの" /></p>
+
+<p>上図は電波で観測した天の川銀河中心(GC)です。左のパネルは\(\lambda = 90\)cmで観測したもの、右上パネルはSgr A Eastを\(\lambda=20\)cmで観測したもの、右中段パネルはSgr A Westを\(\lambda = 6\)cmで観測したものです。赤い点マークが天の川銀河中心にいるSMBH, Sgr A*の位置になります。そして右下パネルは同じくSgr A westをHCNの分子輝線で観測したもので、中心核周辺にリング構造があることがわかります。</p>
+
+<p><img src="/assets/images/gr/x.png" alt="GC方向をChandra, Spizer, HSTで観測した画像を合成したもの" /></p>
+
+<p>さらにこの図はGCをX線(青色)と中間赤外(赤)と近赤外(黄)で観測し、それらを合成した画像です。この図の右側にある青白い部分(X線で明るく輝く部分)にSMBHがいると考えられています。これら観測や水メーザー源観測、そして電波による正確な位置天文学から、Sgr A*は我々から8kpcの位置にあるとされています。</p>
+
+<h2 id="genzelとghezの貢献">GenzelとGhezの貢献</h2>
+
+<p><img src="/assets/images/gr/nsc.png" alt="GenzelとGhezが詳細に観測・解析を行ったNuclear Star Cluster" /></p>
+
+<h3 id="genzel">Genzel</h3>
+
+<p>GenzelはEckartとともに1992年から1996年にかけて3.5m New Technology Telescope(NTT)のSHARPカメラを用いてK-band(近赤外、波長\(2.2\mu m\))でSgr A*周辺0.04pcから0.4pcに存在する星団(Nuclear Star Cluster, NSC)の恒星39個を観測し、それらの固有運動を測定しました。Eckart &amp; Genzel, 1996, “Observations of stellar proper motions near the Galactic Centre”によると、GCから0.015pc内にある巨大な質量を\(2.45 \pm 0.4 \times 10^6 M_\odot\)と見積もりました。最低でもSgr A*領域の質量密度の下限を\(6.5 \times 10^9 M_\odot {\rm pc}^{-3}\)と算出しました。これはSMBHが存在することを示唆していると結論づけました。</p>
+
+<h3 id="ghez">Ghez</h3>
+
+<p>同時期にGhezは1995年から2年間、Keck望遠鏡でK-bandで観測を行い、Sgr A*周辺にあるNSCの星90個の固有運動を算出しました。Ghez et al., 1998, “High Proper Motion Stars in the Vicinity of Sgr A*: Evidence for a Supermassive Black Hole at the Center of Our Galaxy”によると、その固有速度の大きさは1400\(\pm\)100 km/sにもなるとの結果を出しています。その固有運動の分散とビリアル定理</p>
+
+\[M \simeq \frac{3\pi R_G \sigma_v^2}{2G}\]
+
+<p>から、GCにある巨大な質量を\(2.6 \pm 0.2 \times 10^6 M_\odot\)と見積もりました。この質量が\(10^{-6}{\rm pc}^3\)という狭い領域に存在しなければならないことから、Sgr A*領域の質量密度は少なくとも\(10^{12} M_\odot {\rm pc}^{-3}\)でなければならないと算出しました。このことから、SMBHが存在するだろうと結論づけました。</p>
+
+<h3 id="その後の観測">その後の観測</h3>
+
+<p>その後、GenzelのグループはNSCをS-star clusterと名付けました。Schodel et al., 2002, “Closest Star Seen Orbiting the Supermassive Black Hole at the Centre of the Milky Way”ではSgr A*の周りを楕円運動するS2の軌道周期などを詳細に算出しました。その周期はおよそ15.2年、我々が眺めている天球面と軌道平面がなす角度は46度、軌道離心率は0.87、近点(pericenter)とSgr A*の距離は17光時間、そしてSgr A*のSMBH質量を\(3.7 \pm 1.5 \times 10^6 M_\odot\)と見積もりました。</p>
+
+<p><img src="/assets/images/gr/s_cluster.png" alt="Genzelのグループが観測したS-star cluster" /></p>
+
+<p><img src="/assets/images/gr/s2_genzel.png" alt="Genzelのグループが発表したS2軌道" /></p>
+
+<p>同時期にGhezが発表した論文 Ghez et al., 2003, “The First Measurement of Spectral Lines in a Short-Period Star Bound to the Galaxy’s Central Black Hole: A Paradox of Youth”ではS2(Ghezの論文ではS02)のスペクトルを詳細に観測・解析しました。これによりS2がO8-B0星であること、15\(M_\odot\)で年齢は10Myr以下と若いことがわかりました。その速度の動径成分を\(\langle v_z \rangle = -510 \pm 40\)km/sと算出し、そこからSgr A*のSMBH質量を\(4.1 \pm 0.6 \times 10^6 M_\odot\)と見積もりました。</p>
+
+<p><img src="/assets/images/gr/s2_ghez.png" alt="Ghezのグループが発表したS2軌道とS2のスペクトル観測結果" /></p>
+
+<p>Sgr A*に付随するNSCの観測だけでなく、SMBH自身の観測も行われました。SMBHが存在することにより発生したと思われる近赤外フレアとX線フレアも観測されたのです。このフレア現象はSMBH近傍に熱いガスが降着することによって起こると、理論や数値シミュレーションで予言されていました。Genzel et al., 2003, “Near-infrared flares from accreting gas around the supermassive black hole at the Galactic Centre”では、2003年5月に発生したSgr A*のフレアが近赤外で観測されたことを報告しています。このフレアの発生場所はS2軌道から推察されるSgr A*の位置に一致していることから、SMBHの存在とその位置の確証を高めるものとなりました。</p>
+
+<h3 id="最新の研究">最新の研究</h3>
+
+<p>1992年から2018年までのS2の楕円運動の様子をコンパイルした論文も出版されています。Abuter et al., 2018, “Detection of the gravitational redshift in the orbit of the star S2 near the Galactic center massive black hole”では、重力赤方偏移と横ドップラー効果による波長の変化を解析から捉えました。このことからニュートン力学では説明できない、一般相対性理論の実証の場としてSgr A*という極限環境は注目を集めています。</p>
+
+<p><img src="/assets/images/gr/abuter.png" alt="Abuter et al., 2018の中で示されたS2の観測コンパイル結果" /></p>
+
+<h1 id="結言">結言</h1>
+
+<p>今回は2020年ノーベル物理学賞の中でも、観測により天の川銀河中心に超巨大質量ブラックホールが存在することを示した研究をご紹介しました。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>[1] <a href="https://arxiv.org/abs/1807.09409">Abuter et al., 2018, “Detection of the gravitational redshift in the orbit of the star S2 near the Galactic center massive black hole”</a></li>
+  <li>[2] <a href="https://www.nature.com/articles/383415a0">Eckart &amp; Genzel, 1996, “Observations of stellar proper motions near the Galactic Centre”</a></li>
+  <li>[3] <a href="https://www.nature.com/articles/nature02065">Genzel et al., 2003, “Near-infrared flares from accreting gas around the supermassive black hole at the Galactic Centre”</a></li>
+  <li>[4] <a href="https://arxiv.org/abs/1006.0064">Genzel et al., 2010, “The Galactic Center Massive Black Hole and Nuclear Star Cluster”</a></li>
+  <li>[5] <a href="https://iopscience.iop.org/article/10.1086/306528">Ghez et al., 1998, “High Proper Motion Stars in the Vicinity of Sgr A*: Evidence for a Supermassive Black Hole at the Center of Our Galaxy”</a></li>
+  <li>[6] <a href="https://iopscience.iop.org/article/10.1086/374804">Ghez et al., 2003, “The First Measurement of Spectral Lines in a Short-Period Star Bound to the Galaxy’s Central Black Hole: A Paradox of Youth”</a></li>
+  <li>[7] Schneider, 2016, “Extragalactic Astronomy and Cosmology”</li>
+  <li>[8] <a href="https://arxiv.org/abs/astro-ph/0210426">Schodel et al., 2002, “Closest Star Seen Orbiting the Supermassive Black Hole at the Centre of the Milky Way”</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

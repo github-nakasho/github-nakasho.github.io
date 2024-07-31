@@ -1,0 +1,97 @@
+I";
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#固有体積要素" id="markdown-toc-固有体積要素">固有体積要素</a>    <ol>
+      <li><a href="#固有体積要素の導出" id="markdown-toc-固有体積要素の導出">固有体積要素の導出</a></li>
+      <li><a href="#共動座標における数密度の導出" id="markdown-toc-共動座標における数密度の導出">共動座標における数密度の導出</a>        <ol>
+          <li><a href="#例-天体の個数密度が進化しない場合" id="markdown-toc-例-天体の個数密度が進化しない場合">例: 天体の個数密度が進化しない場合</a></li>
+          <li><a href="#例-天体の進化によって個数密度が進化する場合" id="markdown-toc-例-天体の進化によって個数密度が進化する場合">例: 天体の進化によって個数密度が進化する場合</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="固有体積要素">固有体積要素</h1>
+
+<p>固有距離を用いて、膨張する宇宙の固有体積要素を求めてみましょう。</p>
+
+<h2 id="固有体積要素の導出">固有体積要素の導出</h2>
+
+<p>図を用いて3次元の体積要素を考えてみましょう。</p>
+
+<p><img src="/assets/images/cosmo/proper_ve.png" alt="超球面を用いた固有距離、固有体積要素の導出" /></p>
+
+\[dS = d\chi rd\theta \cdot \underbrace{a^2}_{宇宙膨張の効果}\]
+
+<p>より、固有体積要素は</p>
+
+\[dV(z) = a^3 (z) d\chi r^2 \underbrace{\sin \theta d\theta d\varphi}_{=d\Omega} 
+= \frac{1}{(1+z)^3} r^2 (z) d\chi(z) d\Omega\]
+
+<p>固有距離より</p>
+
+\[d\chi = -\frac{c}{H_0} \frac{dz}{E(z)} \tag{1}\]
+
+<p>です。</p>
+
+\[dV(z) 
+= - \frac{c}{H_0 (1+z)^3} \frac{r^2 (z)}{E(z)} d\Omega dz\]
+
+<p>(1)式より\(dz &gt; 0\)のときに\(d\chi &lt;0\)のため、\(dV&lt;0\)です。しかし遠方である(\(dz &gt; 0\))に行くほど\(d\chi &lt; 0\)というのは天文学的な考え方・直感に反します。よって以下では</p>
+
+\[dV(z) 
+= \frac{c}{H_0 (1+z)^3} \frac{r^2 (z)}{E(z)} d\Omega dz\]
+
+<p>のように計算します。</p>
+
+<h2 id="共動座標における数密度の導出">共動座標における数密度の導出</h2>
+
+<p>固有体積要素\(dV(z)\)あたりに存在する銀河の数を\(dN(z)\)とすると</p>
+
+\[dN(z) 
+= n(z) dV 
+= n(z) \frac{c}{H_0 (1+z)^3} \frac{r^2 (z)}{E(z)} d\Omega dz\]
+
+<p>ここで\(n(z)\)は固有数密度です。</p>
+
+\[\therefore \ \frac{dN(z)}{dz d\Omega} 
+= \frac{n(z)}{(1+z)^3} \frac{c}{H_0} \frac{r^2(z)}{E(z)}\]
+
+<p>よって\(n_c (z) \equiv n(z) /(1+z)^3\)を共動座標における数密度と定義します。</p>
+
+<h3 id="例-天体の個数密度が進化しない場合">例: 天体の個数密度が進化しない場合</h3>
+
+\[n_0 a_0^3 = n(z) a^3 \ \Longrightarrow \ 
+n_0 = \frac{n(z)}{(1+z)^3} = {\rm Const}\]
+
+<p>という関係が成り立ちます。</p>
+
+<h3 id="例-天体の進化によって個数密度が進化する場合">例: 天体の進化によって個数密度が進化する場合</h3>
+
+\[n_c (z) = n_0 f(z)\]
+
+<p>のようにして、\(f(z)\)を天体の進化による因子にします。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

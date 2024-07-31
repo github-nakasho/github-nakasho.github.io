@@ -1,0 +1,91 @@
+I"#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#固有体積要素" id="markdown-toc-固有体積要素">固有体積要素</a>    <ol>
+      <li><a href="#固有体積要素とは" id="markdown-toc-固有体積要素とは">固有体積要素とは</a></li>
+      <li><a href="#例題-2次元デカルト座標での固有体積要素" id="markdown-toc-例題-2次元デカルト座標での固有体積要素">例題: 2次元デカルト座標での固有体積要素</a></li>
+      <li><a href="#例題-2次元極座標での固有体積要素" id="markdown-toc-例題-2次元極座標での固有体積要素">例題: 2次元極座標での固有体積要素</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="固有体積要素">固有体積要素</h1>
+
+<h2 id="固有体積要素とは">固有体積要素とは</h2>
+
+<p>局所慣性系での微小変位ベクトルを\(d\bar{\bf x}\)と書きましょう。これを用いて体積要素を表現すると\(dV = d\bar{x}^0d\bar{x}^1d\bar{x}^2d\bar{x}^3\)と書けます。これを一般座標系での微小変位ベクトル\(d{\bf x}\)で表現すると、ヤコビアンを用いて</p>
+
+\[dV 
+= {\rm det} \left( \frac{\partial \bar{x}^\alpha}{\partial x^\mu}\right) dx^0 dx^1 dx^2 dx^3\]
+
+<p>となります。局所慣性系での計量テンソルはミンコフスキーメトリックなので、一般座標系での計量テンソルは</p>
+
+\[g_{\mu \nu} 
+= \frac{\partial \bar{x}^\alpha}{\partial x^\mu}\frac{\partial \bar{x}^\beta}{\partial x^\nu} \eta_{\bar{\alpha} \bar{\beta}} 
+= \Lambda_\mu^{\ \bar{\alpha}}\eta_{\bar{\alpha} \bar{\beta}} \Lambda_{\ \nu}^\bar{\beta}\]
+
+<p>よってこれを行列形式で書くと</p>
+
+\[(g_{\mu \nu}) = \Lambda^\top \eta \Lambda\]
+
+<p>これの行列式は</p>
+
+\[g \equiv {\rm det} (g_{\mu \nu})
+= {\rm det}(\Lambda^\top) {\rm det}(\eta) {\rm det}(\Lambda) 
+= - {\rm det}(\Lambda)^2 
+\ \Longrightarrow \ {\rm det}(\Lambda) = \sqrt{-g}\]
+
+<p>となります。よって固有体積要素は</p>
+
+\[dV 
+= \sqrt{-g} d^4 x\]
+
+<p>と書けます。</p>
+
+<h2 id="例題-2次元デカルト座標での固有体積要素">例題: 2次元デカルト座標での固有体積要素</h2>
+
+\[{\rm det} (g_{\mu \nu}) 
+= \left| \begin{array}{ccc}
+ -1 &amp; &amp; {\bf 0}\\
+&amp; 1 &amp;\\
+{\bf 0}&amp; &amp; 1
+\end{array} \right|
+= -1\]
+
+\[\therefore \ dV 
+= 1 dx dy cdt\]
+
+<h2 id="例題-2次元極座標での固有体積要素">例題: 2次元極座標での固有体積要素</h2>
+
+\[{\rm det} (g_{\mu \nu}) 
+= \left| \begin{array}{ccc}
+ -1 &amp; &amp; {\bf 0}\\
+&amp; 1 &amp;\\
+{\bf 0}&amp; &amp; r^2
+\end{array} \right|
+= -r^2\]
+
+\[\therefore \ dV 
+= r dr d\theta cdt\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -574,7 +574,7 @@ $$
 $$\Psi$$は定義式(8)から、基準となる重力エネルギーからポテンシャルエネルギーを差し引いたものです。
 よって$$r$$が大きくなるにつれてその値は減少し、ついにはあるところでゼロとなることが考えられます。
 この半径を$$r_t$$としましょう。
-このとき、実は$$\Psi(r_t) = 0$$となるだけでなく、()式から$$\rho(\Psi(r_t)) = 0$$となることもわかります。
+このとき、実は$$\Psi(r_t) = 0$$となるだけでなく、(47)式から$$\rho(\Psi(r_t)) = 0$$となることもわかります。
 $$r > r_t$$では$$\Psi < 0$$となるため、$$r_t$$より外側の領域では$$\mathcal{E} = \Psi (r) - \frac{1}{2} v^2 \leq 0$$となります。
 すると(42)式から$$f(\mathcal{E}) =0$$であるため、$$r > r_t$$では$$\rho = 0$$であることがわかります。
 この$$r_t$$を、キングモデルの潮汐半径(tidal radius)と呼びます。
@@ -606,7 +606,7 @@ r_0
 \equiv \sqrt{\frac{9 \sigma^2}{4\pi G \rho_0}} \tag{51}
 $$
 
-ここで$$\rho_0$$は()式を数値的に解くことで得られた中心の密度を表します。
+ここで$$\rho_0$$は(47)式を数値的に解くことで得られた中心の密度を表します。
 潮汐半径とキング半径の比の対数
 
 $$
@@ -891,7 +891,7 @@ $$
 
 のように書き直すことができます。
 すなわちハーンキストモデルの重力ポテンシャルは、質点のポテンシャルを$$r \rightarrow r +a$$としたものに等しいことがわかります。
-ハーンキストモデルは楕円銀河の$$R^{1/4}$$のドゥ・ボクルール則 (de Vaucouleurs sourface-brightness profile)を再現することから、楕円銀河や銀河のバルジ部分のモデルとして有名です。  
+ハーンキストモデルは楕円銀河の$$r^{1/4}$$のドゥ・ボクルール則 (de Vaucouleurs sourface-brightness profile)を再現することから、楕円銀河や銀河のバルジ部分のモデルとして有名です。  
 これに対してジャッフェモデルは、とてもカスピー (cuspy、中心部で質量密度がとても大きくなるような分布)なものとして知られています。
 これはもちろん現実の銀河ハローなどとは異なりますが、ジャッフェモデルは解析的に扱いやすいという利点があり、広く用いられています。  
 NFWモデルは、Navarro et al. (1996, 1997)で示されたモデルです。
@@ -901,7 +901,10 @@ Navarroたちは、様々な宇宙初期の密度ゆらぎからダークマタ�
 しかし、どのような物理機構でこの分布が再現されるのかについては決着がついていません。
 また最近のより高精度な数値シミュレーションでは、ダークマターハローの中心部の密度分布は、必ずしもNFW分布にならないことが知られています。
 さらにダークマターハロー外縁部についても、これを良く再現する分布は得られていません。
-種々の研究から、NFWよりハーンキストモデルに近い質量密度分布であると言われています。
+種々の研究から、NFWよりハーンキストモデルに近い質量密度分布であると言われています。  
+下図はハーンキスト・ジャッフェ・NFWモデルの質量密度分布を図示したものです。
+
+![](/assets/images/galady/spherical_model_03.png)
 
 ### NFW分布とコア・カスプ問題
 
@@ -930,9 +933,10 @@ Navarroたちは、様々な宇宙初期の密度ゆらぎからダークマタ�
 [1] [Binney & Tremaine, "Galactic Dynamics: Second Edition"](https://amzn.to/46lnQNv)  
 [2] [Bovy, "Dyanmics and Astrophysics of Galxies"](https://galaxiesbook.org/index.html)  
 [3] [牧野淳一郎, "理論天体物理学特論I"](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics/all/all.html)  
-[4] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://amzn.to/46mO8Pu)  
-[5] [Navarro et al., 1996, "The Structure of Cold Dark Matter Halos"](https://ui.adsabs.harvard.edu/abs/1996ApJ...462..563N/abstract)  
-[6] [Navarro et al., 1997, "A Universal Density Profile from Hierarchical Clustering"](https://iopscience.iop.org/article/10.1086/304888)  
-[7] [林航平, "2020年度 京都大学基礎物理学研究所 集中講義 「近傍宇宙論（銀河考古学）で探るダークマターの正体」"](https://sites.google.com/view/khayashi-jp/%E8%AC%9B%E7%BE%A9?authuser=0)  
+[4] [谷口義明, 岡村定矩, 祖父江義明, "銀河 I"](https://amzn.to/4frEnDy)  
+[5] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://amzn.to/46mO8Pu)  
+[6] [Navarro et al., 1996, "The Structure of Cold Dark Matter Halos"](https://ui.adsabs.harvard.edu/abs/1996ApJ...462..563N/abstract)  
+[7] [Navarro et al., 1997, "A Universal Density Profile from Hierarchical Clustering"](https://iopscience.iop.org/article/10.1086/304888)  
+[8] [林航平, "2020年度 京都大学基礎物理学研究所 集中講義 「近傍宇宙論（銀河考古学）で探るダークマターの正体」"](https://sites.google.com/view/khayashi-jp/%E8%AC%9B%E7%BE%A9?authuser=0)  
 
 {% include adsense.html %} 

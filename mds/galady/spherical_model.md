@@ -928,7 +928,7 @@ Navarroたちは、様々な宇宙初期の密度ゆらぎからダークマタ�
 逆を言えば、矮小銀河の構造から乱立するダークマター理論に対して制限をかけることも可能です。
 天の川銀河の周辺に存在する矮小銀河だけを見ても、まだまだ謎が多く、次世代の観測に期待が寄せられています。
 
-# 参考文献
+## 参考文献
 
 [1] [Binney & Tremaine, "Galactic Dynamics: Second Edition"](https://amzn.to/46lnQNv)  
 [2] [Bovy, "Dyanmics and Astrophysics of Galxies"](https://galaxiesbook.org/index.html)  

@@ -1,0 +1,421 @@
+I"�K
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#軸対称モデル" id="markdown-toc-軸対称モデル">軸対称モデル</a>    <ol>
+      <li><a href="#非常に薄い円盤モデル-razor-thin-disk-or-zero-thickness-disk" id="markdown-toc-非常に薄い円盤モデル-razor-thin-disk-or-zero-thickness-disk">非常に薄い円盤モデル (razor-thin disk or zero-thickness disk)</a>        <ol>
+          <li><a href="#z-neq-0の場合" id="markdown-toc-z-neq-0の場合">\(z \neq 0\)の場合</a></li>
+          <li><a href="#z--0の場合" id="markdown-toc-z--0の場合">\(z = 0\)の場合</a></li>
+          <li><a href="#指数円盤モデル-exponential-disk" id="markdown-toc-指数円盤モデル-exponential-disk">指数円盤モデル (exponential disk)</a></li>
+          <li><a href="#メステル円盤-mestel-disk" id="markdown-toc-メステル円盤-mestel-disk">メステル円盤 (Mestel disk)</a></li>
+        </ol>
+      </li>
+      <li><a href="#クズミンモデル-kuzmin-model" id="markdown-toc-クズミンモデル-kuzmin-model">クズミンモデル (Kuzmin model)</a></li>
+      <li><a href="#宮本永井ポテンシャル" id="markdown-toc-宮本永井ポテンシャル">宮本・永井ポテンシャル</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="軸対称モデル">軸対称モデル</h1>
+
+<p>球対称モデルは、球状星団や楕円銀河を扱いためのものでした。
+ここでは円盤銀河のような、薄い円盤型の質量モデルを見ていきましょう。
+ただし、ここで扱うのは軸対称なものであり、銀河の持つ渦状腕などは考慮しないものとします。</p>
+
+<h2 id="非常に薄い円盤モデル-razor-thin-disk-or-zero-thickness-disk">非常に薄い円盤モデル (razor-thin disk or zero-thickness disk)</h2>
+
+<p>銀河を形成する質量が\(z=0\)平面のみに存在すると仮定します。
+すなわち、その質量分布が</p>
+
+\[\rho (R, z) 
+= \Sigma (R) \delta (z) \tag{1}\]
+
+<p>のように書けるものとします。
+ここで\(\Sigma(R)\)は表面密度です。
+また\(\delta(z)\)はデルタ関数ですが、\(\delta(0)=1\)であるとします。<br />
+<a href="/galady/poisson">ポアソン方程式</a>、重力ポテンシャルと質量密度は</p>
+
+\[\nabla^2 \Phi (R, z) 
+= \frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{\partial \Phi}{\partial R}\right) + \frac{\partial^2 \Phi}{\partial z^2} 
+= 4\pi G \Sigma (R) \delta (z) \tag{2}\]
+
+<p>の関係にあります。</p>
+
+<h3 id="z-neq-0の場合">\(z \neq 0\)の場合</h3>
+
+<p>ここで\(z \neq 0\)の場合を考えてみましょう。
+するとデルタ関数の性質より</p>
+
+\[\frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{\partial \Phi}{\partial R}\right) + \frac{\partial^2 \Phi}{\partial z^2} 
+= 0 \tag{3}\]
+
+<p>のようになります。
+これを解くために\(\Phi(R, z) = J(R) Z (z)\)のように、変数分離をしましょう。
+これを代入すると</p>
+
+\[\frac{Z}{R} \frac{d}{d R} \left( R \frac{dJ}{dR}\right) + J \frac{d^2 Z}{dz^2} 
+= 0 \ \Longrightarrow \ 
+\frac{1}{JR} \frac{d}{dR} \left( R \frac{dJ}{dR}\right) 
+= - \frac{1}{Z} \frac{d^2 Z}{dz^2} 
+= -k^2 \tag{4}\]
+
+<p>左辺は\(R\)のみの関数、右辺は\(z\)のみの関数であるため、これらを定数\(-k^2\)であるとしました。
+すると\(z\)方向に対しては</p>
+
+\[\frac{d^2 Z}{dz^2} 
+= k^2 Z \ \Longrightarrow \ 
+Z = C e^{\pm kz} \tag{5}\]
+
+<p>のように解くことができます。
+ここで\(C\)は積分定数です。
+続いて\(R\)方向は</p>
+
+\[\frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{dJ}{dR}\right) + k^2 J 
+= 0 \tag{6}\]
+
+<p>のようになります。
+この方程式を解くために\(u \equiv kR\)とおくと</p>
+
+\[\frac{1}{u} \frac{d}{du} \left( u \frac{dJ}{du}\right) + J 
+= 0 \tag{7}\]
+
+<p>のように整理されます。
+すると、この方程式は<a href="/math/bessel#ベッセルの微分方程式">\(n=0\)のベッセルの微分方程式</a>になっています。
+よって(7)式の解は\(J = J_0(u)\)で与えられます。
+以上から、(3)式の解は</p>
+
+\[\Phi(R, z) 
+= J_0 (kR) e^{\pm kz} \tag{8}\]
+
+<p>と求まります。
+重力ポテンシャルを、\(\vert z \vert \rightarrow \infty\)で\(\Phi \rightarrow 0\)になるように計算しましょう。
+さらに、\(k &gt; 0\)のみを考えると</p>
+
+\[\left\{ \begin{array}{ll}
+e^{-kz} &amp; (z \geq 0) \\
+e^{kz} &amp; (z&lt;0)
+\end{array}\right. \ \Longrightarrow \ 
+\Phi (R, z) 
+= J_0 (kR) e^{-k \vert z \vert} \tag{9}\]
+
+<p>が妥当であるとわかります。</p>
+
+<h3 id="z--0の場合">\(z = 0\)の場合</h3>
+
+<p>次に、\(z=0\)について考えることにしましょう。
+下図のように、\(z=0\)を挟んで\(z\)方向の重力が不連続に変化することを考慮に入れて、計算を行います。</p>
+
+<p><img src="/assets/images/galady/axisymmetric_model_01.png" alt="" /></p>
+
+<p>\(z=\pm \epsilon\)における\(z\)方向の重力を計算し、その\(\epsilon \rightarrow 0\)の極限を取ります。
+すると</p>
+
+\[\lim_{\epsilon \rightarrow 0} \left. \left( -\frac{\partial \Phi}{\partial z}\right) \right|_{z=\epsilon} 
+= \lim_{\epsilon \rightarrow 0} k J_0 (kR) e^{-k\epsilon} 
+= k J_0 (kR) \tag{10}\]
+
+\[\lim_{\epsilon \rightarrow 0} \left. \left( -\frac{\partial \Phi}{\partial z}\right) \right|_{z=-\epsilon} 
+= \lim_{\epsilon \rightarrow 0} (-k) J_0(kR) e^{-k \epsilon} 
+= -k J_0 (kR) \tag{11}\]
+
+<p>この重力の不連続性を、\(\Sigma(R)\)と結びつけましょう。
+(2)式を\([-\epsilon, \epsilon]\)で積分すると</p>
+
+\[\begin{align}
+(右辺) 
+&amp;= \int_{-\epsilon}^\epsilon \frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{\partial \Phi}{\partial R}\right) dz + \int_{-\epsilon}^\epsilon \frac{\partial^2 \Phi}{\partial z^2} dz 
+= \int_{-\epsilon}^\epsilon \frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{\partial \Phi}{\partial R}\right) dz + \left( \left. \frac{\partial \Phi}{\partial z} \right|_{z=\epsilon} - \left. \frac{\partial \Phi}{\partial z} \right|_{z=-\epsilon} \right) \notag \\
+&amp;\xrightarrow{\epsilon \rightarrow 0} - 2k J_0 (kR) \tag{12}
+\end{align}\]
+
+\[(左辺) 
+= 4\pi G \Sigma (R) \int_{-\epsilon}^\epsilon \delta(z) dz 
+= 4\pi G \Sigma (R) \tag{13}\]
+
+<p>のようになります。
+途中、右辺第一項は\(\epsilon \rightarrow 0\)でゼロとなることを用いました。
+よって</p>
+
+\[\Sigma_k (R) 
+= - \frac{k}{2\pi G} J_0(kR) \tag{14}\]
+
+<p>を得ます。
+ここで定数\(k\)の依存性が存在することを明示的に表すために、\(\Sigma_k\)のように表記しました。
+また、ここまでの計算から\(\Sigma_k\)に対応する重力ポテンシャルが\(\Phi_k = J_0 (kR) e^{-k\vert z \vert}\)であることもわかります。<br />
+<a href="/galady/poisson">ポアソン方程式</a>は線形であるため、解を重ね合わせたものもまた解となります。
+よって</p>
+
+\[\Sigma (R)
+= \int_0^\infty S(k) \Sigma_k (R) dk 
+= - \frac{1}{2\pi G} \int_0^\infty k S(k) J_0 (kR) dk \tag{15}\]
+
+<p>もまた、<a href="/galady/poisson">ポアソン方程式</a>の解です。
+ここで\(S(k)\)は、\(\Sigma_k\)の重みを表す関数です。
+この式はハンケル変換 (Hankel transform)として知られています。
+この逆変換から、適当な表面密度\(\Sigma (R)\)に対する重み\(S(k)\)が</p>
+
+\[S(k) 
+= - 2\pi G \int_0^\infty R \Sigma (R) J_0 (kR) dR \tag{16}\]
+
+<p>のように求まります。
+こうして求めた\(S(k)\)を用いることで</p>
+
+\[\Phi (R, z) 
+= \int_0^\infty S(k) \Phi_k(R, z) dk \tag{17}\]
+
+<p>を計算すれば、こちらが与えた\(\Sigma (R)\)に対応する重力ポテンシャル\(\Phi (R, z)\)を計算することができます。
+また回転速度は</p>
+
+\[\begin{align}
+&amp;\frac{v_c^2}{R} 
+= \left. \frac{\partial \Phi}{\partial R} \right|_{z=0} \notag \\
+&amp;\Longrightarrow \ 
+v_c^2 
+= R \int_0^\infty S(k) \left. \frac{\partial \Phi_k}{\partial R} \right|_{z=0} dk 
+\underbrace{=}_{u = kR} R \int_0^\infty k S(k) \frac{d J_0 (u)}{d u} dk 
+= - R \int_0^\infty k S(k) J_1 (kR) dk \tag{18}
+\end{align}\]
+
+<p>のように計算されます。
+途中、<a href="/math/bessel#ベッセル関数の満たす漸化式">ベッセル関数</a>において成り立つ漸化式\(\frac{dJ_0}{du} = -J_1 (u)\)を用いました。
+(16)式から\(S(k)\)を求めれば、同様に回転速度を求めることが可能であるとわかります。</p>
+
+<h3 id="指数円盤モデル-exponential-disk">指数円盤モデル (exponential disk)</h3>
+
+<p>ここでは、以下のような面密度の円盤を考えることにしましょう。</p>
+
+\[\Sigma (R) 
+= \Sigma_0 e^{-R/h} \tag{19}\]
+
+<p>中心からの距離\(R\)に指数依存していることから、このモデルを指数円盤モデルと呼びます。
+これは中心部ほど明るく、中心から離れると急激に明るさが減衰する、円盤銀河の高度分布を良く再現するものとして考えられてきました。
+(19)式を(16)式に代入すると</p>
+
+\[\begin{align}
+S(k) 
+&amp;= -2\pi G \Sigma_0 \int_0^\infty R J_0 (kR) e^{-R/h} dR 
+\underbrace{=}_{\alpha = 1/h} 2\pi G \Sigma_0 \frac{\partial}{\partial \alpha} \int_0^\infty J_0(kR) e^{-\alpha R} dR \notag \\
+&amp;= 2\pi G \Sigma_0 \frac{\partial}{\partial \alpha} \frac{1}{\sqrt{\alpha^2 + k^2}} \tag{20}
+\end{align}\]
+
+<p>のように計算されます。
+途中、<a href="/math/bessel">ベッセル関数</a>のラプラス変換を用いました。
+さらにこれを(17)式に代入すると</p>
+
+\[\Phi (R, z) 
+= 2\pi G \Sigma_0 \frac{\partial}{\partial \alpha} \int_0^\infty \frac{J_0 (kR) e^{-k \vert z \vert}}{\sqrt{\alpha^2 + k^2}} dk \tag{21}\]
+
+<p>です。
+特に\(z=0\)では</p>
+
+\[\begin{align}
+\Phi (R, 0) 
+&amp;= 2\pi G \Sigma_0 \frac{\partial}{\partial \alpha} \{ I_0 (\alpha R / 2) K_0 (\alpha R / 2) \} \notag \\
+&amp;= \pi G \Sigma_0 R \{ I_1(\alpha R / 2) K_0 (\alpha R / 2) - I_0 (\alpha R / 2) K_1 (\alpha R / 2) \} \tag{22}
+\end{align}\]
+
+<p>と計算できます。
+ここで\(I_n, K_n\)はそれぞれ、第一種と第二種の修正ベッセル関数です。
+途中、ベッセル関数と同様に、これらは\(\frac{dI_0(x)}{dx} = I_1(x), \frac{dK_0(x)}{dx} = -K_1 (x)\)が成り立つことも用いました。
+同様に\(v_c\)を計算しましょう。</p>
+
+\[\begin{align}
+v_c^2 
+&amp;= R \frac{\partial \Phi (R, 0)}{\partial R} \notag \\
+&amp;= \pi G \Sigma_0 R \left[ I_1 (\alpha R/ 2) K_0 (\alpha R /2) - I_0 (\alpha R/ 2) K_1 (\alpha R /2) + R \frac{\partial}{\partial R} \left\{ I_1 (\alpha R/ 2) K_0 (\alpha R /2) - I_0 (\alpha R/ 2) K_1 (\alpha R /2) \right\} \right] \tag{23}
+\end{align}\]
+
+<p>\(y = \alpha R / 2\)とおくと、\(\frac{\partial}{\partial R} = \frac{\alpha}{2} \frac{\partial}{\partial y}\)より</p>
+
+\[v_c^2 
+= \pi G \Sigma_0 R \left\{ I_1 K_0 - I_1 K_0 + \frac{\alpha R}{2} \left( \frac{d I_1}{d y} K_0 + I_1 \frac{d K_0}{d y} - \frac{d I_0}{d y} K_1 - I_0 \frac{d K_1}{d y} \right)\right\} \tag{24}\]
+
+<p>修正ベッセル関数の公式\(\frac{dI_1}{dy} = I_0 - \frac{I_1}{y}, \frac{dK_1}{dy} = - K_0 - \frac{K_1}{y}\)より</p>
+
+\[\begin{align}
+v_c^2 
+&amp;= \pi G \Sigma_0 R \left[ I_1 K_0 - I_1 K_0 + \frac{\alpha R}{2} \left\{ 2 (I_0 K_0 - I_1 K_1) - \frac{1}{y} (I_1 K_0 - I_0 K_1)\right\} \right] \notag \\
+&amp;= \pi G \Sigma_0 \frac{R^2}{h} (I_0 K_0 - I_1 K_1) \tag{25}
+\end{align}\]
+
+<h3 id="メステル円盤-mestel-disk">メステル円盤 (Mestel disk)</h3>
+
+<p>このモデルでは、円盤の面密度分布を次のように与えます。</p>
+
+\[\Sigma_\mathrm{Mestel} (R) 
+= \frac{C^2}{2\pi GR} \tag{26}\]
+
+<p>ここで\(C\)は定数とします。
+この場合、\(S(k)\)は</p>
+
+\[S(k) 
+= -2\pi G \int_0^\infty R \frac{C^2}{2\pi GR} J_0 (kR) dR 
+= - C^2 \int_0^\infty J_0 (kR) dR 
+= - \frac{C^2}{k} \tag{27}\]
+
+<p>と計算できます。
+途中、\(\int_0^\infty J_n (x) dx =1\)であることを用いました。
+すると、この面密度分布に対応する重力ポテンシャルを求めるには</p>
+
+\[\Phi (R, z) 
+= - \int_0^\infty \frac{C^2}{k} J_0 (kR) e^{-k \vert z \vert} dk \tag{28}\]
+
+<p>を計算すれば良いとわかります。
+ここで</p>
+
+\[\frac{\partial}{\partial \vert z \vert} \int_0^\infty \frac{J_0(kR)}{k} e^{-k\vert z \vert} dk 
+= - \int_0^\infty e^{-k \vert z \vert} J_0 (kR) dk 
+\underbrace{=}_{ベッセル関数のラプラス変換} \frac{1}{\sqrt{R^2 + z^2}} \tag{29}\]
+
+<p>と</p>
+
+\[\frac{\partial}{\partial z} \ln(\sqrt{R^2 + z^2} + z) 
+= \frac{1}{\sqrt{R^2 + z^2} + z} \left(\frac{z}{\sqrt{R^2 + z^2}} + 1\right) 
+= \frac{1}{\sqrt{R^2 + z^2}} \tag{30}\]
+
+<p>より</p>
+
+\[\Phi(R, z) 
+= C^2 \ln(\sqrt{R^2 + z^2} + z) \tag{31}\]
+
+<p>と求まります。
+さらに、回転速度は(18)式より</p>
+
+\[v_c^2 
+= R \int_0^\infty C^2 J_1(kR) dk 
+\underbrace{=}_{\int_0^\infty J_n(x) dx = 1} C^2 \tag{32}\]
+
+<p>となります。
+メステル円盤モデルでは、回転速度が定数となり、銀河のflat rotationを再現できることがわかります。</p>
+
+<h2 id="クズミンモデル-kuzmin-model">クズミンモデル (Kuzmin model)</h2>
+
+<p>同じような薄い円盤モデルの一つとして、クズミンモデルと呼ばれるものがあります。
+先ほどのように特殊関数を用いずとも解析的に諸物理量を求めることができ、計算が容易に扱えることが特徴です。
+このモデルは、以下のような重力ポテンシャルで表現されます。</p>
+
+\[\Phi (R, z) 
+= - \frac{GM}{\sqrt{R^2 + (\vert z \vert + a)^2}} \tag{33}\]
+
+<p>\(a=0\)のとき、このモデルは</p>
+
+\[\Phi (R, z) 
+= - \frac{GM}{\sqrt{R^2 + z^2}} 
+= - \frac{GM}{r} \tag{34}\]
+
+<p>のように、原点に質量\(M\)の質点が存在する場合の重力ポテンシャルに等しくなります。
+またこの重力ポテンシャルは、\(z \geq 0\)では\((R, z) = (0, -a)\)に質量\(M\)の質点が存在する重力ポテンシャルに一致し、\(z&lt;0\)では\((R, z)= (0, a)\)に質点が存在する重力ポテンシャルとなります。
+よって、\(z \neq 0\)では対応する質量密度分布はゼロと考えて良いでしょう。
+この議論から、</p>
+
+\[\rho(R, z) 
+= \Sigma (R) \delta (z) \tag{35}\]
+
+<p>のように書くことができます。
+これは先ほどの非常に薄い円盤モデルで議論したものと同じ形です。
+よって\(z=0\)での重力の不連続性を、面密度と関連づけることにしましょう。
+\(z &gt; 0\)では</p>
+
+\[\frac{\partial \Phi}{\partial z} 
+= \frac{GM(z+a)}{(R^2 + (z+a)^2)^{3/2}} 
+\xrightarrow{z \rightarrow +0} \frac{GMa}{(R^2 + a^2)^{3/2}} \tag{36}\]
+
+<p>そして\(z&lt;0\)では</p>
+
+\[\frac{\partial \Phi}{\partial z} 
+= -\frac{GM(a-z)}{(R^2 + (a-z)^2)^{3/2}} 
+\xrightarrow{z \rightarrow -0} - \frac{GMa}{(R^2 + a^2)^{3/2}} \tag{37}\]
+
+<p>です。
+(14)式を求めたときの計算から</p>
+
+\[\Sigma_\mathrm{Kuzmin} (R) 
+= \frac{Ma}{2\pi (R^2 + a^2)^{3/2}} \tag{38}\]
+
+<p>と求まります。
+さらに、回転速度は</p>
+
+\[v_c^2 
+= R \left. \frac{\partial \Phi}{\partial R}\right|_{z=0} 
+= \frac{GM R^2}{(R^2 + a^2)^{3/2}} \tag{39}\]
+
+<p>と計算されます。</p>
+
+<h2 id="宮本永井ポテンシャル">宮本・永井ポテンシャル</h2>
+
+<p>先ほどまでのモデルは円盤が非常に薄く、その厚さが無視できる場合の円盤の重力ポテンシャルでした。
+ここでは、円盤の厚さが有限な場合の重力ポテンシャルについて触れておきましょう。
+特に、有名な Miyamoto &amp; Nagai (1975) で示された銀河の重力ポテンシャルモデル、宮本・永井ポテンシャルを以下に示します。</p>
+
+\[\Phi_\mathrm{MN} (R, z) 
+= - \frac{GM}{\sqrt{R^2 + (a + \sqrt{z^2 + b^2})^2}} \tag{40}\]
+
+<p>このモデルは、\(a \rightarrow 0\)で<a href="/galady/spherical_model#プラマーモデル-plummer-model">球対称なプラマーモデル</a>、\(b \rightarrow 0\)で<a href="/galady/axisymmetric_model#クズミンモデル-kuzmin-model">薄い円盤のクズミンモデル</a>となります。
+このことから、パラメータ\(a, b\)を調整することで、球対称と円盤の両方を取り入れることが可能です。
+(40)式に対応する密度分布を求めましょう。
+<a href="/galady/poisson">ポアソン方程式</a>より</p>
+
+\[\nabla^2 \Phi_\mathrm{MN} (R, z) 
+= \frac{1}{R} \frac{\partial}{\partial R} \left(R \frac{\partial \Phi_\mathrm{MN}}{\partial R} \right) + \frac{\partial^2 \Phi_\mathrm{MN}}{\partial z^2} 
+= 4\pi G \rho_\mathrm{MN} (R, z) \tag{41}\]
+
+<p>\(\alpha = (z^2 + b^2)^{1/2}, \beta = R^2 + (a+\alpha)^2\)と置くと</p>
+
+\[\frac{\partial \beta}{\partial R} 
+= 2R, \quad 
+\frac{\partial \beta}{\partial z} 
+= 2 (a + \alpha) \frac{\partial \alpha}{\partial z}, \quad 
+\frac{\partial \alpha}{\partial z} 
+= z \alpha^{-1} \tag{42}\]
+
+<p>より</p>
+
+\[\frac{\partial \Phi_\mathrm{MN}}{\partial R} 
+= GM R \beta^{-3/2} \tag{43}\]
+
+\[\frac{1}{R} \frac{\partial }{\partial R} \left( R \frac{\partial \Phi_\mathrm{MN}}{\partial R}\right) 
+= \frac{GM}{R} \left\{ 2R \beta^{-3/2} + R^2 \left( - \frac{3}{2} \right) \beta^{-5/2} 2R\right\} 
+= GM \beta^{-5/2} (2\beta - 3 R^2) \tag{44}\]
+
+\[\frac{\partial \Phi_\mathrm{MN}}{\partial z} 
+= -GM \left( - \frac{1}{2}\right) \beta^{-3/2} 2 (a + \alpha) z \alpha^{-1} 
+= GM z \beta^{-3/2} (1 + a \alpha^{-1}) \tag{45}\]
+
+\[\begin{align}
+\frac{\partial^2 \Phi_\mathrm{MN}}{\partial z^2} 
+&amp;= GM \left\{ \beta^{-3/2} (1+a \alpha^{-1}) + z \left( - \frac{3}{2} \right) \beta^{-5/2} 2 (a + \alpha) z\alpha^{-1} (1+a \alpha^{-1}) + z \beta^{-3/2} a (-1) \alpha^{-2} z \alpha^{-1} \right\} \notag \\
+&amp;=GM \beta^{-5/2} \{ \beta (1+a \alpha^{-1}) -3 z^2 (1+a\alpha^{-1})^2 - a z^2 \beta \alpha^{-3}\} \tag{46}
+\end{align}\]
+
+<p>以上より</p>
+
+\[\begin{align}
+\nabla^2 \Phi_\mathrm{MN} 
+&amp;= GM \beta^{-5/2} \left\{ 2 \beta - 3R^2 + \beta (1+a \alpha^{-1}) -3 z^2 (1+a\alpha^{-1})^2 - a z^2 \beta \alpha^{-3}\right\} \notag \\
+&amp;= GM \beta^{-5/2} \alpha^{-3} \left\{ 3 \beta \alpha^3 - 3R^2 \alpha^3 + a \beta \alpha^2 - 3z^2 (\alpha^{-3} + 2a \alpha^2 + a \alpha) - az^2 \beta \right\} \tag{47}
+\end{align}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

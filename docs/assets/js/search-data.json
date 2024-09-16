@@ -1072,7 +1072,7 @@
   },"153": {
     "doc": "軸対称モデル",
     "title": "余談: 天の川銀河を再現するには？　(工事中…近いうちに更新予定)",
-    "content": "ここまで、様々な軸対称ポテンシャルをご覧いただきました。 ではこれらを用いて、私たちの住まう天の川銀河の重力ポテンシャルを再現することを考えましょう。 簡単のため、天の川銀河中心に存在する棒状構造は考えないとします。 すると、円盤銀河はバルジ・ディスク・ハローの3成分からなると考えることができます。 . ",
+    "content": "ここまで、様々な軸対称ポテンシャルをご覧いただきました。 ではこれらを用いて、私たちの住まう天の川銀河の重力ポテンシャルを再現することを考えましょう。 簡単のため、天の川銀河中心に存在する棒状構造は考えないとします。 すると、円盤銀河はバルジ・ディスク・ハローの3成分からなると考えることができます . ",
     "url": "/galady/axisymmetric_model#%E4%BD%99%E8%AB%87-%E5%A4%A9%E3%81%AE%E5%B7%9D%E9%8A%80%E6%B2%B3%E3%82%92%E5%86%8D%E7%8F%BE%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E5%B7%A5%E4%BA%8B%E4%B8%AD%E8%BF%91%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB%E6%9B%B4%E6%96%B0%E4%BA%88%E5%AE%9A",
     
     "relUrl": "/galady/axisymmetric_model#余談-天の川銀河を再現するには工事中近いうちに更新予定"
@@ -4628,7 +4628,7 @@
   },"661": {
     "doc": "ホーム",
     "title": "CV(?)",
-    "content": "GitHub . github-nakasho . Twitter . @tweetnakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Education . | 2008-2010. 東北大学理学部宇宙地球物理学科天文学コース | 2010-2012. 東北大学大学院理学研究科天文学専攻修士課程 | 2012-2016. 東北大学大学院理学研究科天文学専攻博士課程 | . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C, Python, Julia | OpenMP, MPI並列化 | Git (GitHub, Bitbucket) | Website制作 | Illustrator, Photoshopを用いた簡単なイラスト作成 | . For fun . | 子育て (2022年末より) | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 海外旅行 | 自転車 | 寺社仏閣巡り | アニメ・ゲーム | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | Just Danceでエキササイズ | 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング | . ",
+    "content": "GitHub . github-nakasho . Twitter . @tweetnakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C, Python, Julia | OpenMP, MPI並列化 | Git (GitHub, Bitbucket) | Website制作 | Illustrator, Photoshopを用いた簡単なイラスト作成 | . For fun . | 子育て (2022年末より) | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 海外旅行 | 自転車 | 寺社仏閣巡り | アニメ・ゲーム | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | Just Danceでエキササイズ | 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング | . ",
     "url": "/#cv",
     
     "relUrl": "/#cv"

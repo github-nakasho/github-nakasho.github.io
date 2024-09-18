@@ -1,0 +1,7 @@
+# for assets
+assets/illustrators
+assets/scripts
+assets/graphers
+
+# for MacOS
+.DS_Store

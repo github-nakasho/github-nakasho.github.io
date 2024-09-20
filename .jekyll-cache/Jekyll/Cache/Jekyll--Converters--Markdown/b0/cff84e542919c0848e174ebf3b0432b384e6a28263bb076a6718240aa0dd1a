@@ -1,0 +1,240 @@
+I"�:
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#大関法" id="markdown-toc-大関法">大関法</a>    <ol>
+      <li><a href="#概要" id="markdown-toc-概要">概要</a></li>
+      <li><a href="#等式制約の表現" id="markdown-toc-等式制約の表現">等式制約の表現</a></li>
+      <li><a href="#問題の変換" id="markdown-toc-問題の変換">問題の変換</a>        <ol>
+          <li><a href="#hubbard-stratonovich変換" id="markdown-toc-hubbard-stratonovich変換">Hubbard-Stratonovich変換</a></li>
+          <li><a href="#鞍点法" id="markdown-toc-鞍点法">鞍点法</a></li>
+          <li><a href="#kullback-leibler情報量とgibbsの自由エネルギーからの導出" id="markdown-toc-kullback-leibler情報量とgibbsの自由エネルギーからの導出">Kullback-Leibler情報量とGibbsの自由エネルギーからの導出</a></li>
+        </ol>
+      </li>
+      <li><a href="#最適化問題を解くためのアルゴリズム" id="markdown-toc-最適化問題を解くためのアルゴリズム">最適化問題を解くためのアルゴリズム</a></li>
+      <li><a href="#数値実験" id="markdown-toc-数値実験">数値実験</a>        <ol>
+          <li><a href="#k-minimum-set-of-the-random-values" id="markdown-toc-k-minimum-set-of-the-random-values">K-minimum set of the random values</a></li>
+          <li><a href="#pythonスクリプト" id="markdown-toc-pythonスクリプト">Pythonスクリプト</a></li>
+          <li><a href="#数値実験結果" id="markdown-toc-数値実験結果">数値実験結果</a></li>
+          <li><a href="#boldsymbolnuの更新に用いるetaについて" id="markdown-toc-boldsymbolnuの更新に用いるetaについて">\(\boldsymbol{\nu}\)の更新に用いる\(\eta\)について</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="大関法">大関法</h1>
+
+<h2 id="概要">概要</h2>
+
+<p><a href="https://www.nature.com/articles/s41598-020-60022-5">M. Ohzeki, 2020, “Breaking limitation of quantum annealer in solving optimization problems under constraints”</a>を読んだので、その内容の理解を深めるために作成されたものです。</p>
+
+<h2 id="等式制約の表現">等式制約の表現</h2>
+
+<p>\(F_j(\mathbf{x}) = C_j \ (\forall j)\)のような等式制約がある最適化問題を数式で表現することを考えると、そのHamiltonianは</p>
+
+\[H_\mathrm{target} (\mathbf{x}) 
+= H_0 (\mathbf{x}) + \sum_j \frac{\lambda_j}{2} (F_j (\mathbf{x}) - C_j)^2 \tag{1}\]
+
+<p>のように書かれます。ここで\(H_0\)は等式制約以外の項、そして第2項の\(\frac{1}{2}\)は後の変換を簡潔に表すための係数です。</p>
+
+<h2 id="問題の変換">問題の変換</h2>
+
+<h3 id="hubbard-stratonovich変換">Hubbard-Stratonovich変換</h3>
+
+<p>2乗の項を線形の形に変換する方法として、Hubbard-Stratonovich変換があります。これを適用するために\(H_\mathrm{target}\)が作るカノニカル分布の分布関数</p>
+
+\[Z = \sum_\mathbf{x} e^{-\beta H_\mathrm{target} (\mathbf{x})} \tag{2}\]
+
+<p>を用います。ここで\(\beta\)は逆温度(\(=1/T\))です。これにHubbard-Stratonovich変換を施します。</p>
+
+\[\begin{aligned}
+Z 
+&amp;= \sum_\mathbf{x} e^{-\beta H_0(\mathbf{x})} \exp \left\{ -\beta \sum_j \frac{\lambda_j}{2} (F_j (\mathbf{x}) - C_j)^2 \right\} \\
+&amp;= \sum_\mathbf{x} e^{-\beta H_0 (\mathbf{x})}\prod_j \exp \left\{ -\beta \frac{\lambda_j}{2} (F_j (\mathbf{x}) - C_j)^2 \right\} \\
+&amp;= \sum_\mathbf{x} e^{-\beta H_0 (\mathbf{x})}\prod_j \int_{-\infty}^\infty \frac{dz_j}{\sqrt{2\pi}} e^{-\frac{z_j^2}{2}} \exp \{ i z_j \sqrt{\beta \lambda_j} (F_j (\mathbf{x})-C_j)\}
+\end{aligned}\]
+
+<p>ここで\(z_j = -i \sqrt{\frac{\beta}{\lambda_j}} \nu_j\)と変数変換をすると</p>
+
+\[\begin{align}
+Z 
+&amp;\propto \sum_\mathbf{x} e^{-\beta H_0 (\mathbf{x})} \prod_j \int_{-\infty}^\infty d\nu_j \exp \left\{ \frac{\beta}{2\lambda_j} \nu_j^2+ \beta \nu_j (F_j (\mathbf{x})-C_j)\right\} \notag \\
+&amp;= \sum_\mathbf{x} e^{-\beta H_0 (\mathbf{x})} \left( \int_{-\infty}^\infty d\nu_0 \int_{-\infty}^\infty d\nu_1 \cdots \right) \exp \left\{ \frac{\beta}{2\lambda_0} \nu_0^2 + \beta \nu_0 (F_0 (\mathbf{x})-C_0)\right\} \exp \left\{ \frac{\beta}{2\lambda_1} \nu_1^2+ \beta \nu_1 (F_1 (\mathbf{x})-C_1)\right\}\cdots \notag \\
+&amp;= \sum_\mathbf{x} \prod_i \int_{-\infty}^\infty d\nu_i \exp \left\{ -\beta \left( - \sum_j\frac{\nu_j^2}{2\lambda_j} -\sum_j \nu_j (F_j (\mathbf{x})-C_j)+H_0 (\mathbf{x}) \right)\right\} \tag{3}
+\end{align}\]
+
+<p>となります。よって</p>
+
+\[H_\mathrm{eff} (\mathbf{x}, \boldsymbol{\nu}) \equiv - \sum_j\frac{\nu_j^2}{2\lambda_j} -\sum_j \nu_j (F_j (\mathbf{x})-C_j)+H_0 (\mathbf{x}) \tag{4}\]
+
+<p>のようにeffective Hamiltonianを用いて、この分布関数を表現することができます。</p>
+
+<p>(1)式のままでは\(\lambda_j\)を適切にとる必要がありましたが、(4)式では\(\lambda_j \rightarrow \infty\)とすることができます。よって実際の実装では第2項・第3項のみを考えれば良いことがわかります。<br />
+後のためにさらにこれを変形しておきましょう。ボルツマン因子は</p>
+
+\[e^{-\beta H_\mathrm{eff}(\mathbf{x}, \boldsymbol{\nu})} 
+= e^{\beta \sum_j \frac{\nu_j^2}{2\lambda_j}} e^{-\beta \sum_j \nu_j C_j} \exp \left\{ -\beta H_0 (\mathbf{x}) + \beta \sum_j \nu_j F_j (\mathbf{x}) \right\} \tag{5}\]
+
+<p>のように書き換えることができます。(3), (5)式より</p>
+
+\[Z 
+\propto \prod_i \int_{-\infty}^\infty d\nu_i e^{\beta \sum_j \frac{\nu_j^2}{2\lambda_j}} e^{-\beta \sum_j \nu_j C_j} \sum_\mathbf{x} \exp \left\{ -\beta H_0 (\mathbf{x}) + \beta \sum_j \nu_j F_j (\mathbf{x}) \right\}\]
+
+<p>これから\(\boldsymbol{\nu}\)におけるeffective partition functionを</p>
+
+\[Z_\mathrm{eff}(\boldsymbol{\nu}) 
+\equiv \sum_\mathbf{x} \exp \left\{ -\beta H_0 (\mathbf{x}) + \beta \sum_j \nu_j F_j (\mathbf{x}) \right\} \tag{6}\]
+
+<p>のように書くことができます。これを用いて分布関数は</p>
+
+\[\begin{aligned}
+Z 
+&amp;\propto \prod_i \int_{-\infty}^\infty d\nu_i e^{\beta \sum_j \frac{\nu_j^2}{2\lambda_j}} e^{-\beta \sum_j \nu_j C_j} e^{\log Z_\mathrm{eff}(\boldsymbol{\nu})} \\
+&amp;= \prod_i \int_{-\infty}^\infty d\nu_i \exp \left\{-\beta \left( - \sum_j \frac{\nu_j^2}{2\lambda_j} + \sum_j \nu_j C_j - \frac{1}{\beta} \log Z_\mathrm{eff}(\boldsymbol{\nu}) \right) \right\}
+\end{aligned}\]
+
+<p>と変形できます。ここから、\(\boldsymbol{\nu}\)におけるeffective Hamiltonianを</p>
+
+\[H_\mathrm{eff}(\boldsymbol{\nu}) 
+\equiv - \sum_j \frac{\nu_j^2}{2\lambda_j} + \sum_j \nu_j C_j - \frac{1}{\beta} \log Z_\mathrm{eff}(\boldsymbol{\nu}) \tag{7}\]
+
+<p>のように定義することもできます。</p>
+
+<h3 id="鞍点法">鞍点法</h3>
+
+<p>(3)式において\(\beta \rightarrow \infty\)の極限をとると、\(\int d \nu_i\)の積分に寄与するのは\(H_\mathrm{eff} (\mathbf{x}, \boldsymbol{\nu})\)の最小値部分のみです。(4)式を変形してその最小値を計算しましょう。</p>
+
+\[H_\mathrm{eff} (\mathbf{x}, \boldsymbol{\nu}) 
+= -\sum_j \frac{1}{2\lambda_j} (\nu_j + \lambda_j (F_j(\mathbf{x})-C_j))^2 + \sum_j \frac{\lambda_j}{2} (F_j(\mathbf{x})-C_j)^2 + H_0 (\mathbf{x})\]
+
+<p>第1項は必ずマイナスの値となるので、第2項が0となるような場所が最小値です。よって</p>
+
+\[F_j (\mathbf{x}) 
+= C_j \quad (\forall j)\]
+
+<p>という等式制約が成り立ちます。ここから(4)式を最小化することは、(1)式の\(H_\mathrm{target}\)を最小化することに等しいことがわかります。</p>
+
+<h3 id="kullback-leibler情報量とgibbsの自由エネルギーからの導出">Kullback-Leibler情報量とGibbsの自由エネルギーからの導出</h3>
+
+<p>ここではHubbard-Stratonovich変換を用いない導出方法をご紹介します。分布\(P\)と分布\(Q\)におけるKullback-Leibler情報量(KL)は</p>
+
+\[\mathrm{KL}(P|Q) 
+= \sum_\mathbf{x} Q(\mathbf{x}) \log \left( \frac{Q(\mathbf{x})}{P(\mathbf{x})}\right)\]
+
+<p>です。ここで分布\(P\)は</p>
+
+\[P(\mathbf{x}) 
+= \frac{1}{Z} e^{-\beta H_0 (\mathbf{x})}\]
+
+<p>のように\(F_j(\mathbf{x})=C_j\)の制約がない場合のHamiltonianによるボルツマン分布とします。そして分布\(Q\)は\(F_j(\mathbf{x}) =C_j\)の制約を満たし、KLが最小となるような分布です。この条件から、Gibbsの自由エネルギーが</p>
+
+\[G(\mathbf{C}) 
+= \min_Q \left( E-\frac{S}{\beta} \right)\]
+
+<p>のように求まります。ここで\(E = \sum_\mathbf{x} Q(\mathbf{x}) H_0(\mathbf{x})\)はエネルギー、そして\(S= -\sum_\mathbf{x} Q(\mathbf{x}) \log Q(\mathbf{x})\)はエントロピーです。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>KLからGを導くことができない...どなたか証明の詳細をご教示いただけると助かりますm(-_-)m
+</code></pre></div></div>
+
+<p>\(Q\)の形として、ラグランジュ未定乗数と(6)式の\(Z_\mathrm{eff}\)を用いて</p>
+
+\[Q (\mathbf{x}) 
+= \frac{1}{Z_\mathrm{eff}} \exp \left\{ -\beta \left(H_0 (\mathbf{x}) - \sum_j \nu_j F_j(\mathbf{x})\right)\right\}\]
+
+<p>としましょう。この\(Q\)の形の中で\(\boldsymbol{\nu}\)をどのように選べば\(G(\mathbf{C})\)を最小にできるかを考えます。</p>
+
+\[\begin{aligned}
+G(\mathbf{C}) 
+&amp;= \min_Q \left[ \sum_\mathbf{x} Q (\mathbf{x})\left( H_0 (\mathbf{x}) + \frac{1}{\beta} \log Q(\mathbf{x})\right) \right] \\
+&amp;= \min_Q \left[ \sum_\mathbf{x} Q (\mathbf{x})\left( H_0 (\mathbf{x}) + \frac{1}{\beta} \log \frac{1}{Z_\mathrm{eff}} -H_0 (\mathbf{x}) + \sum_j \nu_j F_j(\mathbf{x})\right) \right] \\
+&amp;= \min_Q \left[ \sum_\mathbf{x} Q(\mathbf{x}) \left(\sum_j \nu_j F_j (\mathbf{x})-\frac{1}{\beta} \log Z_\mathrm{eff} \right)\right]
+\end{aligned}\]
+
+<p>\(F_j=C_j\)の制約を満たすことと合わせて</p>
+
+\[G(\mathbf{C}) 
+= \min_{\boldsymbol{\nu}} \left[ \sum_j \nu_j C_j - \frac{1}{\beta} \log Z_\mathrm{eff}\right]\]
+
+<p>これは(7)式を最小化することを意味しています。このことから、このようにKLとGibbs自由エネルギーを用いた導出も同じ結果となることができます。</p>
+
+<h2 id="最適化問題を解くためのアルゴリズム">最適化問題を解くためのアルゴリズム</h2>
+
+<p>以下に、この手法を用いて最適化問題を解くアルゴリズムを示します。</p>
+
+<ul>
+  <li>step 1: 初期未定乗数\(\boldsymbol{\nu}^{t=0}\)を決定します。</li>
+  <li>step 2: (量子)アニーリングなどを用いて、この変換で2乗の項を線形にしたハミルトニアンを最小化します。</li>
+  <li>step 3: 制約が満たされた\((F_j(\mathbf{x})=C_j \ \forall j)\)ならば、終了します。</li>
+  <li>step 4: \(\nu_j^{t+1} = \nu_j^t + \eta (C_j - F_j(\mathbf{x}))\)として、次の反復での\(\boldsymbol{\nu}^{t+1}\)を計算します。\(t \leftarrow t+1\)として、step 2に戻ります。</li>
+</ul>
+
+<h2 id="数値実験">数値実験</h2>
+
+<h3 id="k-minimum-set-of-the-random-values">K-minimum set of the random values</h3>
+
+<p>今回の数値実験はK-minimum set問題です。いくつかの乱数の中から\(K\)個だけ選び出し、その数の総和が最小になる組み合わせを探索します。このとき、普通の実装では</p>
+
+\[H_\mathrm{target}(\mathbf{x}) = \sum_{i=0}^{N-1} h_i x_i + \frac{\lambda}{2} \left(\sum_{i=0}^{N-1} x_i -K\right)^2\]
+
+<p>となります。ここで\(N\)は\([0, 1]\)の範囲の乱数の総数、\(h_i \ (i = 0, \dots, N-1)\)は乱数列、\(x_i\)は\(i\)番目の乱数を選ぶとき1, そうでないとき0となるバイナリ変数です。<br />
+これを(4)式のeffective Hamiltonianに当てはめると</p>
+
+\[H_\mathrm{eff}(\mathbf{x}, \nu) 
+= -\nu \left( \sum_{i=0}^{N-1} x_i -K\right) + \sum_{i=0}^{N-1} h_i x_i\]
+
+<p>となります。これを実装します。</p>
+
+<h3 id="pythonスクリプト">Pythonスクリプト</h3>
+
+<p>以下に、今回実装したPythonスクリプトをアップロードしました。</p>
+
+<p><a href="https://github.com/github-nakasho/ohzeki_method" class="btn btn-purple">Link button</a></p>
+
+<h3 id="数値実験結果">数値実験結果</h3>
+
+<p>num_reads=1, \(\eta=0.0001\)、そして乱数の総数\(N=2000\)でアニーリングを行った結果を以下に示します。これは横軸に未定乗数更新step数、縦軸には最適解における目的関数からの値のズレの大きさを描画しています。</p>
+
+<p><img src="/assets/images/mo/ohzeki_01.png" alt="最適解からのズレ" /></p>
+
+<p>数回実行したところ、5~20step程度で最適解を発見できていました。さらに以下の図は横軸に未定乗数更新step数、縦軸に未定乗数\(\nu\)の値を描画したものです。</p>
+
+<p><img src="/assets/images/mo/ohzeki_02.png" alt="未定乗数の更新" /></p>
+
+<h3 id="boldsymbolnuの更新に用いるetaについて">\(\boldsymbol{\nu}\)の更新に用いる\(\eta\)について</h3>
+
+<p>\(\eta\)の値を適切に取らないと、最適解周辺で振動するような振る舞いが見られます。以下は\(\eta=0.001\)の場合の最適解における目的関数からの値のズレの大きさを描画したものです。</p>
+
+<p><img src="/assets/images/mo/ohzeki_03.png" alt="目的関数の振動する振る舞い" /></p>
+
+<p>この問題の場合、\(\eta=1/N\)程度がちょうど良いようです。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li><a href="https://www.nature.com/articles/s41598-020-60022-5">M. Ohzeki, 2020, “Breaking limitation of quantum annealer in solving optimization problems under constraints”</a></li>
+  <li><a href="/infostat/random_spin_system">情報統計物理学 ランダムスピン系</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

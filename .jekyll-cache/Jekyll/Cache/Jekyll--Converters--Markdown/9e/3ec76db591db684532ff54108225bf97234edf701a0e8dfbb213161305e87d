@@ -1,0 +1,68 @@
+I"Y
+<meta name="twitter:image" content="/assets/images/logo.png" />
+
+<details open="" class="no_toc">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#m1-mac-でトリプルディスプレイ環境を構築" id="markdown-toc-m1-mac-でトリプルディスプレイ環境を構築">M1 Mac でトリプルディスプレイ環境を構築</a>    <ol>
+      <li><a href="#m1-macでは1台までしか外部ディスプレイを接続できない" id="markdown-toc-m1-macでは1台までしか外部ディスプレイを接続できない">M1 Macでは1台までしか外部ディスプレイを接続できない？</a></li>
+      <li><a href="#displaylink" id="markdown-toc-displaylink">DisplayLink</a></li>
+      <li><a href="#displaylinkドライバのダウンロード" id="markdown-toc-displaylinkドライバのダウンロード">DisplayLinkドライバのダウンロード</a></li>
+      <li><a href="#macを再起動したらディスプレイが接続されなくなった" id="markdown-toc-macを再起動したらディスプレイが接続されなくなった">Macを再起動したらディスプレイが接続されなくなった</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="m1-mac-でトリプルディスプレイ環境を構築">M1 Mac でトリプルディスプレイ環境を構築</h1>
+
+<h2 id="m1-macでは1台までしか外部ディスプレイを接続できない">M1 Macでは1台までしか外部ディスプレイを接続できない？</h2>
+
+<p>デフォルトではM1 Macはサードバーティ製の外部ディスプレイへの出力が1つまでしかできません。つまりこのままでは元のMacの画面+外部ディスプレイ1つのデュアルディスプレイとなります。ではこれを拡張してトリプルディスプレイにする方法はないのでしょうか。ここでは私の備忘録として、M1 Macでトリプルディスプレイをする方法をメモしておきます。</p>
+
+<h2 id="displaylink">DisplayLink</h2>
+
+<p>1つではなく複数の外部ディスプレイに出力する方法として、<a href="https://www.synaptics.com/products/displaylink-graphics">DisplayLink</a>が開発した技術を用います。これを用いることで、1本のUSBケーブルから複数の外部ディスプレイ装置やマウス・キーボードなどのUSB周辺機器にも接続することが可能になります。<br />
+このような理由から、M1 Macトリプルディスプレイ環境の構築には以下のような手順が必要となります。</p>
+
+<ol>
+  <li>DisplayLink技術に対応したUSB-HDMI変換アダプタを購入する</li>
+  <li>用意したUSB-HDMI変換アダプタとM1 Macおよび接続したいディスプレイ群を接続する</li>
+  <li>DisplayLink社のwebsiteに行き、ドライバをダウンロードする</li>
+</ol>
+
+<h2 id="displaylinkドライバのダウンロード">DisplayLinkドライバのダウンロード</h2>
+
+<p>以下のボタンリンク先からご自分のOSにあったものをダウンロードし、手順にしたがってインストールを行います。01/10/2022現在、対応しているのはWindows, macOS, Android, Chrome OS, Ubuntuのようです。</p>
+
+<p><a href="https://www.synaptics.com/products/displaylink-graphics/downloads" class="btn btn-purple">DisplayLink</a></p>
+
+<p class="label label-yellow">リンクはDisplayLink社の意向により変更される恐れがあります。ご注意ください。</p>
+
+<h2 id="macを再起動したらディスプレイが接続されなくなった">Macを再起動したらディスプレイが接続されなくなった</h2>
+
+<p>M1 Macの動作が重たくなってきたなどの理由で再起動をしなけらばならない事があります。しかし再び作業しようとしたところ、2つの外部ディスプレイのうちの1つが認識されなくなってしまいました。<br />
+解決策としては、<code class="language-plaintext highlighter-rouge">/Applications</code>にある<code class="language-plaintext highlighter-rouge">DisplayLink Manager</code>をダブルクリックすることで再起動します。</p>
+
+<p><img src="/assets/images/pro/displaylink_01.png" alt="DisplayLink Manager icon" /></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

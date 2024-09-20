@@ -656,12 +656,78 @@ $$
 この結果から分かるように、$$q < 1/\sqrt{2}$$の場合には$$q_\rho$$が負になります。
 これは$$\rho_\mathrm{L}$$が負になる領域の存在を示しています。
 
-## 余談: 天の川銀河を再現するには？　(工事中...近いうちに更新予定)
+## 余談: 天の川銀河を再現するには？（工事中...近いうちに図を掲載予定）
 
 ここまで、様々な軸対称ポテンシャルをご覧いただきました。
-ではこれらを用いて、私たちの住まう天の川銀河の重力ポテンシャルを再現することを考えましょう。
+ではこれらを用いて、私たちの住まう天の川銀河の重力ポテンシャル(もしくはそこから求められる回転曲線)を再現することを考えましょう。
 簡単のため、天の川銀河中心に存在する棒状構造は考えないとします。
-すると、円盤銀河はバルジ・ディスク・ハローの3成分からなると考えることができます
+すると、円盤銀河はバルジ・ディスク・ハローの3成分からなると考えることができます。
+
+### Guo & Mathews (2012)の場合
+
+[Guo & Mathews (2012)](https://iopscience.iop.org/article/10.1088/0004-637X/756/2/181)は、天の川銀河中心から放出されたAGNジェットの進化を、宇宙線を考慮した流体力学方程式を解くことで解明した研究です。
+中心部から注入された宇宙線を伴う高速流が起こす衝撃波と空洞が、天の川銀河ハロー部分にまで広がっていく様子が、シミュレーションから得られました。  
+この論文で用いられている天の川銀河の重力ポテンシャルは、以下のようなものです。
+
+$$
+\Phi_\mathrm{halo} 
+= v_\mathrm{halo}^2 \ln (r^2 + d_\mathrm{h}^2) \tag{59}
+$$
+
+$$
+\Phi_\mathrm{disk} 
+= - \frac{GM_\mathrm{disk}}{\sqrt{R^2 + (a + \sqrt{z^2 + b^2})^2}} \tag{60}
+$$
+
+$$
+\Phi_\mathrm{bulge} 
+= - \frac{GM_\mathrm{bulge}}{r + d_\mathrm{b}} \tag{61}
+$$
+
+ここで$$r = \sqrt{R^2 + z^2}$$は銀河中心からの距離、$$v_\mathrm{halo}=131.5 \mathrm{km \ s^{-1}}, d_\mathrm{h} = 12 \mathrm{kpc}, M_\mathrm{disk} = 10^{11} M_\odot, a = 6.5 \mathrm{kpc}, b = 0.26 \mathrm{kpc}, M_\mathrm{bulge} = 3.4 \times 10^{10} M_\odot, d_\mathrm{b} = 0.7 \mathrm{kpc}$$などです。
+(59)式は[球対称のべき乗則モデル](galady/spherical_model#べき乗則モデル-power-law-models)で紹介した、銀河のflat rotationを再現するポテンシャルです。
+{60}式は宮本・永井ポテンシャルで円盤を表現したもの、そして(61)式は[球対称のハーンキストモデル](galady/spherical_model#2つのべき乗を用いた密度モデル-two-power-density-models)です。
+バルジとハローには球対称モデルを用意し、円盤部分は軸対称モデルを用いています。
+
+### Nishikori et al. (2006)の場合
+
+[Nishikori et al. (2006)](https://iopscience.iop.org/article/10.1086/500525)は、円盤銀河中の磁気流体シミュレーションを行なったものです。
+初期に用意された弱い方位角磁場が、[磁気回転不安定性](mhd/mri)により増幅され、それが[パーカー不安定性](mhd/parker)によりハローへと逃走する物理過程を示しました。
+この論文で用いられた銀河のポテンシャルは、以下のようなシンプルなものです。
+
+$$
+\Phi 
+= - \sum_{i=1}^3 \frac{GM_i}{\sqrt{R^2 + (a_i + \sqrt{z^2 + b_i^2})^2}} \tag{62}
+$$
+
+ここで$$i=1, 2, 3$$はそれぞれバルジ・ディスク・ハローに対応しています。
+また用いたパラメータは$$a_1 = 0.0\mathrm{kpc}, b_1 = 0.47\mathrm{kpc}, M_1 = 1.95 \times 10^{10} M_\odot, a_2 = 6.2 \mathrm{kpc}, b_2 = 0.15 \mathrm{kpc}, M_2 = 1.74 \times 10^{11} M_\odot, a_3 = 0.0 \mathrm{kpc}, b_3 = 31.2 \mathrm{kpc}, M_3 = 7.35 \times 10^{11} M_\odot$$です。
+
+### Kakiuchi et al. (2024)の場合
+
+[Kakiuchi et al. (2024)](https://iopscience.iop.org/article/10.3847/1538-4357/ad3638)は、銀河中心領域の磁気流体シミュレーションを行なったものです。
+放射冷却と加熱を考慮することで、銀河中心部に磁場が卓越した領域が発生することを示しました。
+この論文で用いられた銀河のポテンシャルは、上述の2つとは異なり、銀河中心の超大質量ブラックホールを考慮したものになっています。
+
+$$
+\Phi_\mathrm{SMBH} 
+= - \frac{GM_\mathrm{SMBH}}{r} \tag{63}
+$$
+
+$$
+\Phi_\ast 
+= - \sum_{i=1}^2 \frac{GM_i}{\sqrt{R^2 + (a_i + \sqrt{z^2 + b_i^2})^2}} \tag{64}
+$$
+
+$$
+\Phi_\mathrm{halo} 
+= - 4\pi G \rho_{h, 0} r_h^3 \frac{1+ r/r_h}{r} \tag{65}
+$$
+
+ここで$$M_\mathrm{SMBH}=4.4 \times 10^6 M_\odot, M_1 = 2.05 \times 10^{10} M_\odot, M_2 = 2.57 \times 10^{11} M_\odot, a_1 = 0.0 \mathrm{kpc}, a_2 = 7.258 \mathrm{kpc}, b_1 = 0.495 \mathrm{kpc}, b_2 = 0.52 \mathrm{kpc}, r_h = 10.2 \mathrm{kpc}, \rho_{h, 0} = 1.82 \times 10^{-2} M_\odot \mathrm{pc}^{-3}$$です。
+(63)式は銀河中心に存在する超大質量ブラックホールが作る重力ポテンシャルです。
+(64)式は$$i=1$$がバルジ、$$i=2$$がディスクを表しています。
+(65)式はダークハローを表し、ここでは[NFWモデル](galady/spherical_model#2つのべき乗を用いた密度モデル-two-power-density-models)を採用しています。
 
 ## 参考文献
 
@@ -669,5 +735,9 @@ $$
 [2] [Bovy, "Dyanmics and Astrophysics of Galxies"](https://galaxiesbook.org/index.html)  
 [3] [Miyamoto & Nagai, 1975, "Three-dimensional models for the distribution of mass in galaxies"](https://ui.adsabs.harvard.edu/abs/1975PASJ...27..533M/abstract)  
 [4] [Satoh, 1980, "Dynamical Models of Axisymmetric Galaxies and Their Applications to the Elliptical Galaxy NGC4697"](https://ui.adsabs.harvard.edu/abs/1980PASJ...32...41S/abstract)  
+[5] [Guo & Mathews, 2012, "The Fermi Bubbles. I. Possible Evidence for Recent AGN Jet Activity in the Galaxy"](https://iopscience.iop.org/article/10.1088/0004-637X/756/2/181)  
+[6] [Nishikori et al., 2006, "Global Three-dimensional Magnetohydrodynamic Simulations of Galactic Gaseous Disks. I. Amplification of Mean Magnetic Fields in an Axisymmetric Gravitational Potential"](https://iopscience.iop.org/article/10.1086/500525)  
+[7] [Kakiuchi et al., 2024, "MHD Simulation in Galactic Center Region with Radiative Cooling and Heating"](https://iopscience.iop.org/article/10.3847/1538-4357/ad3638)  
+
 
 {% include adsense.html %} 

@@ -1,0 +1,64 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#エピサイクリック理論" id="markdown-toc-エピサイクリック理論">エピサイクリック理論</a>    <ol>
+      <li><a href="#運動方程式" id="markdown-toc-運動方程式">運動方程式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="エピサイクリック理論">エピサイクリック理論</h1>
+
+<h2 id="運動方程式">運動方程式</h2>
+
+<p>銀河中を運動する天体について考えましょう。
+この系の運動方程式は、銀河による重力ポテンシャルを\(\Phi(R, z)\)として</p>
+
+\[\frac{d^2 \mathrm{x}}{dt^2} 
+= - \nabla \Phi (R, z) \tag{1}\]
+
+<p>のように書けます。
+これを\((R, \varphi, z)\)の円筒座標系で考えると</p>
+
+\[r方向: \ \ddot{r} - r\dot{\varphi}^2 
+= - \frac{\partial \Phi}{\partial R} \tag{2}\]
+
+\[\varphi 方向: \ \frac{d}{dt} (r^2 \dot{\varphi}) 
+= 0 \tag{3}\]
+
+\[z 方向: \ \ddot{z} 
+= - \frac{\partial \Phi}{\partial z} \tag{4}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/46lnQNv">Binney &amp; Tremaine, “Galactic Dynamics: Second Edition”</a><br />
+[2] <a href="https://galaxiesbook.org/index.html">Bovy, “Dyanmics and Astrophysics of Galxies”</a><br />
+[3] <a href="https://ui.adsabs.harvard.edu/abs/1975PASJ...27..533M/abstract">Miyamoto &amp; Nagai, 1975, “Three-dimensional models for the distribution of mass in galaxies”</a><br />
+[4] <a href="https://ui.adsabs.harvard.edu/abs/1980PASJ...32...41S/abstract">Satoh, 1980, “Dynamical Models of Axisymmetric Galaxies and Their Applications to the Elliptical Galaxy NGC4697”</a><br />
+[5] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/756/2/181">Guo &amp; Mathews, 2012, “The Fermi Bubbles. I. Possible Evidence for Recent AGN Jet Activity in the Galaxy”</a><br />
+[6] <a href="https://iopscience.iop.org/article/10.1086/500525">Nishikori et al., 2006, “Global Three-dimensional Magnetohydrodynamic Simulations of Galactic Gaseous Disks. I. Amplification of Mean Magnetic Fields in an Axisymmetric Gravitational Potential”</a><br />
+[7] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad3638">Kakiuchi et al., 2024, “MHD Simulation in Galactic Center Region with Radiative Cooling and Heating”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

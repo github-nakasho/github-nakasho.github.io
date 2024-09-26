@@ -1,0 +1,121 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#エピサイクリック運動" id="markdown-toc-エピサイクリック運動">エピサイクリック運動</a>    <ol>
+      <li><a href="#運動方程式" id="markdown-toc-運動方程式">運動方程式</a>        <ol>
+          <li><a href="#天体が円運動をしている場合" id="markdown-toc-天体が円運動をしている場合">天体が円運動をしている場合</a></li>
+          <li><a href="#天体が円運動から少しずれている場合" id="markdown-toc-天体が円運動から少しずれている場合">天体が円運動から少しずれている場合</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="エピサイクリック運動">エピサイクリック運動</h1>
+
+<h2 id="運動方程式">運動方程式</h2>
+
+<p>銀河中を運動する天体について考えましょう。
+簡単のため銀河は軸対称であるとし、銀河の重力ポテンシャルは\(\Phi (R, z)\)のように書けるとします。
+すると、この天体の運動方程式は</p>
+
+\[\frac{d^2 \mathbf{r}}{dt^2} 
+= - \nabla \Phi (R, z) \tag{1}\]
+
+<p>のように書けます。
+これを\((R, \varphi, z)\)の円筒座標系で考えると</p>
+
+\[R方向: \ \ddot{R} - r\dot{\varphi}^2 
+= - \frac{\partial \Phi}{\partial R} \tag{2}\]
+
+\[\varphi 方向: \ \frac{d}{dt} (R^2 \dot{\varphi}) 
+= 0 \tag{3}\]
+
+\[z 方向: \ \ddot{z} 
+= - \frac{\partial \Phi}{\partial z} \tag{4}\]
+
+<p>のようになります。
+(3)式より</p>
+
+\[R^2 \dot{\varphi} =
+ L_z \qquad (L_z: 定数) \tag{5}\]
+
+<p>のように、角運動量保存が導かれます。
+(5)式を用いて、\(\dot{\varphi}\)を消去しましょう。
+すると(2)式は</p>
+
+\[\ddot{R} - \frac{L_z^2}{R^3} 
+= - \frac{\partial \Phi}{\partial R} \ \Longrightarrow \ 
+\ddot{R} = -\frac{\partial \Phi_\mathrm{eff}}{\partial R} \qquad \left( \Phi_\mathrm{eff} \equiv \Phi (R, z) + \frac{L_z^2}{2R^2}\right) \tag{6}\]
+
+<p>のように整理されます。
+\(\Phi_\mathrm{eff}\)を有効ポテンシャルと呼びます。</p>
+
+<h3 id="天体が円運動をしている場合">天体が円運動をしている場合</h3>
+
+<p>ここでは天体は、銀河中心から一定の半径\(R_g\)を円運動しているとしましょう。
+すると(6)式において、動径方向の加速度がゼロであることより</p>
+
+\[\ddot{R} 
+= -\frac{\partial \Phi_\mathrm{eff}}{\partial R} 
+= 0 \ \Longrightarrow \
+\left. \frac{\partial \Phi}{\partial R} \right|_{R=R_g} 
+= \frac{L_z^2}{R_g^3} \tag{7}\]
+
+<p>を得ます。
+ここまで\(z\)成分についてはあまり議論してきませんでしたが、円盤銀河のような上下の対称性も持つようなでは\(z=0\)平面において\(\ddot{z}=0\)と考えることができます。
+もし\(\ddot{z}\neq 0\)でない値を持つなら、天体は直ちに\(z\)方向に加速され、上下の対称性が保たれないためです。
+数学的に言うならば、関数\(\Phi(R, z)\)は、\(z=0\)で極値を持つと言えます。</p>
+
+<h3 id="天体が円運動から少しずれている場合">天体が円運動から少しずれている場合</h3>
+
+<p>次に、円運動している天体に摂動を加え、円運動から少しずれているような場合を考えましょう。
+円運動からの摂動を以下のように表現します。</p>
+
+\[\left\{ \begin{array}{ll}
+R = R_g + x &amp; (\vert x\vert \ll R_g) \\
+\vert z \vert \ll 1 
+\end{array} \right. \tag{8}\]
+
+<p>すると、この位置での有効ポテンシャルは</p>
+
+\[\begin{align}
+\Phi_\mathrm{eff} (R, z) 
+&amp;= \Phi_\mathrm{eff} (R_g, 0) + \left. \frac{\partial \Phi_\mathrm{eff}}{\partial R} \right|_{(R_g, 0)} x + \frac{1}{2} \left. \frac{\partial^2 \Phi_\mathrm{eff}}{\partial R^2} \right|_{(R_g, 0)} x^2 + \cdots \notag \\
+&amp; \quad + \left. \frac{\partial \Phi_\mathrm{eff}}{\partial z} \right|_{(R_g, 0)} z + \frac{1}{2} + \left. \frac{\partial^2 \Phi_\mathrm{eff}}{\partial z^2} \right|_{(R_g, 0)} z^2 + \cdots \notag \\
+&amp; \quad + \left. \frac{\partial^2 \Phi_\mathrm{eff}}{\partial R \partial z} \right|_{(R_g, 0)} xz + \cdots \tag{9}
+\end{align}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/46lnQNv">Binney &amp; Tremaine, “Galactic Dynamics: Second Edition”</a><br />
+[2] <a href="https://galaxiesbook.org/index.html">Bovy, “Dyanmics and Astrophysics of Galxies”</a><br />
+[3] <a href="https://ui.adsabs.harvard.edu/abs/1975PASJ...27..533M/abstract">Miyamoto &amp; Nagai, 1975, “Three-dimensional models for the distribution of mass in galaxies”</a><br />
+[4] <a href="https://ui.adsabs.harvard.edu/abs/1980PASJ...32...41S/abstract">Satoh, 1980, “Dynamical Models of Axisymmetric Galaxies and Their Applications to the Elliptical Galaxy NGC4697”</a><br />
+[5] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/756/2/181">Guo &amp; Mathews, 2012, “The Fermi Bubbles. I. Possible Evidence for Recent AGN Jet Activity in the Galaxy”</a><br />
+[6] <a href="https://iopscience.iop.org/article/10.1086/500525">Nishikori et al., 2006, “Global Three-dimensional Magnetohydrodynamic Simulations of Galactic Gaseous Disks. I. Amplification of Mean Magnetic Fields in an Axisymmetric Gravitational Potential”</a><br />
+[7] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad3638">Kakiuchi et al., 2024, “MHD Simulation in Galactic Center Region with Radiative Cooling and Heating”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,777 @@
+I"Ĥ
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ベッセル関数" id="markdown-toc-ベッセル関数">ベッセル関数</a>    <ol>
+      <li><a href="#ベッセル関数の積分表示" id="markdown-toc-ベッセル関数の積分表示">ベッセル関数の積分表示</a></li>
+      <li><a href="#ベッセル関数の満たす漸化式" id="markdown-toc-ベッセル関数の満たす漸化式">ベッセル関数の満たす漸化式</a></li>
+      <li><a href="#ベッセルの微分方程式" id="markdown-toc-ベッセルの微分方程式">ベッセルの微分方程式</a></li>
+      <li><a href="#フーリエ級数展開" id="markdown-toc-フーリエ級数展開">フーリエ級数展開</a></li>
+      <li><a href="#ベッセル関数の近似" id="markdown-toc-ベッセル関数の近似">ベッセル関数の近似</a>        <ol>
+          <li><a href="#1" id="markdown-toc-1">(1)</a></li>
+          <li><a href="#2" id="markdown-toc-2">(2)</a></li>
+        </ol>
+      </li>
+      <li><a href="#ベッセル関数のべき乗表示" id="markdown-toc-ベッセル関数のべき乗表示">ベッセル関数のべき乗表示</a></li>
+      <li><a href="#直交関係とフーリエベッセル展開" id="markdown-toc-直交関係とフーリエベッセル展開">直交関係とフーリエ・ベッセル展開</a></li>
+      <li><a href="#ベッセル関数の2乗" id="markdown-toc-ベッセル関数の2乗">ベッセル関数の2乗</a></li>
+      <li><a href="#2乗との間に成り立つ公式" id="markdown-toc-2乗との間に成り立つ公式">2乗との間に成り立つ公式</a></li>
+      <li><a href="#ベッセル関数のポアソン表示" id="markdown-toc-ベッセル関数のポアソン表示">ベッセル関数のポアソン表示</a></li>
+      <li><a href="#ベッセル関数のラプラス変換" id="markdown-toc-ベッセル関数のラプラス変換">ベッセル関数のラプラス変換</a></li>
+      <li><a href="#ベッセル関数の概形" id="markdown-toc-ベッセル関数の概形">ベッセル関数の概形</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ベッセル関数">ベッセル関数</h1>
+
+<h2 id="ベッセル関数の積分表示">ベッセル関数の積分表示</h2>
+
+<p>母関数展開</p>
+
+\[e^{\frac{z}{2}(\omega - 1/\omega)} 
+= \sum_{n=-\infty}^{\infty} J_n (z) \omega^n \ (0&lt;| \omega | &lt;\infty) \tag{1}\]
+
+<p>によって定義される\(J_n(z)\)を\(n\)次のベッセル関数と呼びます。左辺を\(f(\omega ) = e^{\frac{z}{2} (\omega- 1/\omega)}\)と定義し、両辺を\(\omega^{n+1}\)で割りましょう。すると</p>
+
+\[\begin{aligned}
+\frac{f(\omega)}{\omega^{n+1}} 
+&amp;= \cdots + \frac{J_{n-3}(z)}{\omega^4} + \frac{J_{n-2}(z)}{\omega^3} + \frac{J_{n-1}(z)}{\omega^2} +  \frac{J_n(z)}{\omega} + J_{n+1}(z) + J_{n+2} (z) \omega + J_{n+3} (z) \omega^2 + \cdots \\
+&amp;=\sum_{m=-\infty}^{-1} \frac{J_{m+n}}{\omega^{m+3}} + \frac{J_n}{\omega} + \sum_{m=1}^\infty J_{m+n} \omega^{m-1}
+\end{aligned}\]
+
+<p>これを両辺複素数平面上\(\| \omega \| =1\)の円周上で経路積分する。すると留数定理より</p>
+
+\[\oint_{|\omega|=1} \frac{f(\omega)}{\omega^{n+1}} d\omega 
+= \oint_{|\omega|=1} \frac{J_n(z)}{\omega} d\omega 
+= 2\pi i J_n(z) \ \Longrightarrow \ 
+\therefore \ J_n(z) 
+= \frac{1}{2\pi i} \oint_{|\omega|=1} \frac{f(\omega)}{\omega^{n+1}} d\omega\]
+
+<p>\(\omega=e^{i \theta}(\theta : -\pi \rightarrow \pi), d\omega = i e^{i\theta} d\theta\)より</p>
+
+\[J_n(z) 
+= \frac{1}{2\pi i} \int_{-\pi}^\pi \frac{e^{\frac{z}{2} (e^{i\theta} - e^{-i\theta})}}{e^{i(n+1)\theta}} i e^{i\theta} d\theta 
+=\frac{1}{2\pi}\int_{-\pi}^\pi \frac{e^{iz\sin \theta}}{e^{in\theta}} d\theta 
+=\frac{1}{2\pi} \int_{-\pi}^\pi e^{i(z\sin \theta-n\theta)} d\theta\]
+
+<p>となります。これをさらに変形しましょう。オイラーの公式より</p>
+
+\[J_n(z) 
+=\frac{1}{2\pi} \int_{-\pi}^\pi \{ \cos(z\sin \theta-n\theta) + i \sin (z\sin \theta-n\theta) \} d\theta\]
+
+<p>第2項は奇関数より積分値は0となります。よって</p>
+
+\[J_n(z) 
+=\frac{1}{2\pi} \int_{-\pi}^\pi \cos(z\sin \theta-n\theta) d\theta\]
+
+<p>とも書けます。さらにこの被積分関数は偶関数なので</p>
+
+\[J_n(z)
+=\frac{1}{\pi} \int_{0}^\pi \cos(z\sin \theta-n\theta) d\theta \tag{2}\]
+
+<p>となります。</p>
+
+<p>(2)式を変形しましょう。</p>
+
+\[J_n 
+= \frac{1}{2\pi} \int_0^\pi [\exp\{ i (n\varphi - z \sin \varphi)\} + \exp \{ - i (n\varphi - z \sin \varphi)\}] \ d\varphi 
+= \frac{1}{2\pi} \int_0^\pi (e^{in\varphi} e^{-i z \sin \varphi} + e^{-i n \varphi} e^{iz \sin \varphi}) \ d\varphi\]
+
+<p>以下の様に変形を行います。</p>
+
+\[\begin{aligned}
+\int_0^\pi e^{in\varphi} e^{-iz\sin \varphi} \ d \varphi 
+&amp;\underbrace{=}_{\varphi \rightarrow -\varphi}
+\int_0^{-\pi} (-e^{-in\varphi} e^{iz\sin \varphi}) \ d\varphi 
+= \int_{-\pi}^0 e^{-in\varphi} e^{iz\sin \varphi} \ d\varphi 
+\underbrace{=}_{\varphi \rightarrow \varphi + 2\pi}  \int_\pi^{2\pi} e^{-in(\varphi - 2\pi)} e^{iz \sin (\varphi - 2\pi)} \ d\varphi \\
+&amp;=\int_\pi^{2\pi} e^{-in\varphi} \underbrace{e^{i2\pi n}}_{=1} e^{iz \sin \varphi} \ d\varphi 
+= \int_\pi^{2\pi} e^{-in\varphi} e^{iz \sin \varphi} \ d\varphi 
+\end{aligned}\]
+
+\[\therefore \ 
+J_n 
+= \frac{1}{2\pi} \int_0^{2\pi} e^{-in\varphi} e^{iz\sin\varphi} \ d\varphi \tag{3}\]
+
+<p>同様に次の様に式変形をしましょう。</p>
+
+\[\begin{aligned}
+\int_0^\pi e^{in\varphi} e^{-iz\sin \varphi} \ d\varphi 
+&amp;\underbrace{=}_{\varphi \rightarrow \varphi + \pi/2} \int_{\pi/2}^{3\pi/2} e^{in(\varphi- \pi/2)} e^{-iz\sin (\varphi- \pi/2)} \ d\varphi 
+= \int_{\pi/2}^{3\pi/2} e^{in\varphi} \underbrace{e^{-in\frac{\pi}{2}}}_{=(e^{i \frac{\pi}{2}})^{-n}} e^{iz\cos \varphi} \ d\varphi \\
+&amp;= i^{-n} \int_{\pi/2}^{3\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi
+\end{aligned}\]
+
+\[\begin{aligned}
+\int_0^\pi e^{-in\varphi} e^{iz\sin \varphi} \ d\varphi 
+&amp;\underbrace{=}_{\varphi \rightarrow \varphi - \pi/2} \int_{-\pi/2}^{\pi/2} e^{-in(\varphi+ \pi/2)} e^{iz\sin (\varphi+ \pi/2)} \ d\varphi 
+= \int_{-\pi/2}^{\pi/2} e^{-in\varphi} \underbrace{e^{-in\frac{\pi}{2}}}_{(e^{i \frac{\pi}{2}})^{-n}} e^{iz\cos \varphi} \ d\varphi \\
+&amp;= i^{-n} \int_{-\pi/2}^{\pi/2} e^{-in\varphi} e^{iz\cos\varphi} \ d\varphi
+\underbrace{=}_{\varphi=-\varphi} i^{-n} \int_{\pi/2}^{-\pi/2} (-e^{in\varphi} e^{iz\cos(-\varphi)} ) \ d\varphi 
+=i^{-n} \int_{-\pi/2}^{\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi \\
+&amp;= i^{-n} \int_{-\pi/2}^{0} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi +  i^{-n} \int_{0}^{\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi 
+\end{aligned}\]
+
+<p>上式第一項において</p>
+
+\[\int_{-\pi/2}^{0} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi 
+\underbrace{=}_{\varphi \rightarrow \varphi + 2\pi} \int_{3\pi/2}^{2\pi} e^{in(\varphi-2\pi)} e^{iz\cos(\varphi-2\pi)} \ d\varphi 
+= \int_{3\pi/2}^{2\pi} e^{in\varphi} \underbrace{e^{-i 2\pi n}}_{=1} e^{iz\cos\varphi} d\varphi 
+= \int_{3\pi/2}^{2\pi} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi\]
+
+<p>より</p>
+
+\[\int_0^\pi e^{-in\varphi} e^{iz\sin \varphi} \ d\varphi 
+= i^{-n} \int_{3\pi/2}^{2\pi} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi +  i^{-n} \int_{0}^{\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi\]
+
+\[\begin{align}
+\therefore \ 
+J_n 
+&amp;= \frac{1}{2\pi} \left( i^{-n} \int_{\pi/2}^{3\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi +  i^{-n} \int_{3\pi/2}^{2\pi} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi +  i^{-n} \int_{0}^{\pi/2} e^{in\varphi} e^{iz\cos\varphi} \ d\varphi \right) \notag \\
+&amp;= \frac{i^{-n}}{2\pi} \int_0^{2\pi} e^{in\varphi} e^{iz \cos \varphi} \ d\varphi \tag{4}
+\end{align}\]
+
+<h2 id="ベッセル関数の満たす漸化式">ベッセル関数の満たす漸化式</h2>
+
+\[\begin{aligned}
+&amp;J_{n-1} (z) + J_{n+1} (z) 
+= \frac{1}{\pi} \int_0^\pi [\cos \{ (n-1) \varphi - z \sin \varphi) \} + \cos \{ (n+1) \varphi - z \sin \varphi \} ] \ d\varphi \\
+&amp;= \frac{1}{\pi} \int_0^\pi [ \cos \{ (n-1) \varphi \} \cos (z \sin \varphi) + \sin \{ (n-1) \varphi \} \sin (z \sin \varphi) + \cos \{ (n+1) \varphi \} \cos (z \sin \varphi) + \sin \{ (n+1)\varphi \} \sin (z \sin \varphi) ] \ d\varphi \\
+&amp;= \frac{1}{\pi} \int_0^\pi \{ 2\cos n \varphi \cos \varphi \cos (z \sin \varphi) + 2\sin n \varphi \cos \varphi \sin (z \sin \varphi) \} \ d\varphi \\
+&amp;= \frac{2}{\pi} \int_0^\pi \{\cos n \varphi \frac{1}{z} \frac{d}{d\varphi} \sin (z \sin \varphi) - \sin n\varphi \frac{1}{z} \frac{d}{d\varphi} \cos (z \sin \varphi) \} \ d\varphi \\
+&amp;= \frac{2}{\pi z} \left\{ \left[ \sin(z\sin \varphi) \cos n\varphi \right]_0^\pi - \int_0^\pi \sin (z\sin \varphi) n (-\sin n\varphi) \ d\varphi - \left[\sin n\varphi \cos (z\sin \varphi)  \right]_0^\pi + \int_0^\pi \cos (z\sin \varphi) n \cos n\varphi \ d\varphi\right\} \\
+&amp;= \frac{2n}{\pi z} \int_0^\pi \{ \sin (z\sin \varphi) \sin n\varphi + \cos (z\sin \varphi) \cos n\varphi \} \ d\varphi 
+= \frac{2n}{z} \frac{1}{\pi} \int_0^\pi \cos (n\varphi- z \sin \varphi) \ d\varphi 
+= \frac{2n}{z} J_n
+\end{aligned}\]
+
+\[\therefore \ J_{n-1}+ J_{n+1} 
+= \frac{2n}{z} J_n \tag{5}\]
+
+<p>が成立します。同様に</p>
+
+\[\begin{aligned}
+&amp;J_{n-1} (z) - J_{n+1} (z) 
+= \frac{1}{\pi} \int_0^\pi [\cos \{ (n-1) \varphi - z \sin \varphi) \} - \cos \{ (n+1) \varphi - z \sin \varphi \} ] \ d\varphi \\
+&amp;= \frac{1}{\pi} \int_0^\pi [ \cos \{ (n-1) \varphi \} \cos (z \sin \varphi) + \sin \{ (n-1)\varphi \} \sin (z \sin \varphi) - \cos \{ (n+1) \varphi \} \cos (z \sin \varphi) - \sin \{ (n+1)\varphi \} \sin (z \sin \varphi)] \ d\varphi \\
+&amp;= \frac{1}{\pi} \int_0^\pi \{ 2\sin n \varphi \sin \varphi \cos (z \sin \varphi) - 2\sin \varphi \cos n\varphi \sin (z \sin \varphi) \} \ d\varphi \\
+&amp;= \frac{2}{\pi} \int_0^\pi \sin \varphi \{ \sin n \varphi \cos (z \sin \varphi) - \cos n\varphi \sin (z \sin \varphi) \} \ d\varphi 
+= \frac{2}{\pi} \int_0^\pi \sin \varphi \sin (n\varphi- z \sin \varphi) \ d\varphi \\
+&amp;= \frac{2}{\pi} \int_0^\pi\frac{d}{dz} \cos (n\varphi- z \sin \varphi) \ d\varphi 
+= 2 \frac{d}{dz} J_n
+\end{aligned}\]
+
+\[\therefore \ J_{n-1}- J_{n+1} 
+= 2 \frac{d}{dz} J_n \tag{6}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="ベッセルの微分方程式">ベッセルの微分方程式</h2>
+
+\[\frac{d^2}{dz^2} J_n + \frac{1}{z} \frac{d}{dz} J_n + (1- \frac{n^2}{z^2}) J_n 
+= 0 \tag{7}\]
+
+<p>この式はベッセルの微分方程式と呼ばれています。ベッセル関数がこの微分方程式を満たすことを示しましょう。</p>
+
+\[(5) \underbrace{\Longrightarrow}_{両辺z微分} 
+2 \frac{d^2}{dz^2} J_n 
+= \frac{d}{dz} J_{n-1} - \frac{d}{dz} J_{n+1} 
+= \frac{1}{2} (J_{n-2} + J_n) - \frac{1}{2} (J_n - J_{n+2}) 
+= \frac{1}{2} J_{n-2} - J_n + \frac{1}{2} J_{n+2}\]
+
+\[\begin{aligned}
+(6)式左辺 \ \Longrightarrow \ 
+&amp;\frac{d^2}{dz^2} J_n+ \frac{1}{z} \frac{d}{dz} J_n + (1- \frac{n^2}{z^2}) J_n 
+= \frac{1}{4} J_{n-2} -\frac{1}{2} J_n + \frac{1}{4} J_{n+2} + \frac{1}{2z} (J_{n-1} - J_{n+1}) + J_n - \frac{n}{2z} \frac{2n}{z} J_n \\
+&amp;= \frac{1}{4} J_{n-2} +\frac{1}{2} J_n + \frac{1}{4} J_{n+2} + \frac{1}{2z} (J_{n-1}- J_{n+1})- \frac{n}{2z} (J_{n-1}+ J_{n+1}) \\
+&amp;= \frac{1}{4} J_{n-2} +\frac{1}{2} J_n + \frac{1}{4} J_{n+2} - \frac{n-1}{2z} J_{n-1} - \frac{n+1}{2z} J_{n+1} \\
+&amp;= \frac{1}{4} J_{n-2} +\frac{1}{2} J_n + \frac{1}{4} J_{n+2} - \frac{1}{4}( J_{n-2} + J_n) - \frac{1}{4} (J_{n} + J_{n+2}) 
+= 0 
+\end{aligned}\]
+
+\[\therefore \ \frac{d^2}{dz^2} J_n + \frac{1}{z} \frac{d}{dz} J_n + (1- \frac{n^2}{z^2}) J_n 
+= 0\]
+
+<p>を満たすことがわかりました。</p>
+
+<h2 id="フーリエ級数展開">フーリエ級数展開</h2>
+
+<p>\(e^{iz\sin \varphi}\)のフーリエ級数展開を考えましょう。</p>
+
+\[e^{iz \sin \varphi} 
+= \sum_{n=-\infty}^\infty C_n e^{in\varphi}\]
+
+<p>\(e^{iz\sin \varphi}$は周期$2\pi\)の関数なので</p>
+
+\[C_n 
+= \frac{1}{2\pi} \int_0^{2\pi} e^{-in\varphi} e^{iz\sin \varphi} \ d\varphi 
+= J_n\]
+
+\[\therefore \ e^{iz \sin \varphi} 
+= \sum_{n=-\infty}^\infty J_n e^{in\varphi}\]
+
+<p>が成立します。</p>
+
+<h2 id="ベッセル関数の近似">ベッセル関数の近似</h2>
+
+\[(2) \ \Longrightarrow \ 
+J_n(n \epsilon) = \frac{1}{\pi} \int_0^\pi \cos \left\{ n (\xi - \epsilon \sin \xi)\right\} d\xi\]
+
+<p>この式で\(n \gg 1\)での振る舞いについて考えましょう。</p>
+
+<h3 id="1">(1)</h3>
+
+<p>\(\epsilon \ll 1\) のとき</p>
+
+\[n \xi \gg n \epsilon \sin \xi \ \Longrightarrow \ 
+Jn(n \epsilon) 
+\simeq \frac{1}{\pi} \int_0^\pi \cos n \xi \ d \xi = \frac{1}{\pi n } [\sin n \xi]_0^\pi 
+= 0\]
+
+<h3 id="2">(2)</h3>
+
+<p>\(\epsilon \sim 1\) のとき、\(\cos\) の中の\(\xi\)と\(\epsilon \sin \xi\)を比較して考えてみましょう。\(\xi \ll 1\) のときは \(\xi-\epsilon \sin \xi \sim 0\) より\(\cos \{ n( \xi-\epsilon \sin \xi)\} \sim 1\)となり、\([0, \pi ]\) の積分に大きく寄与すると考えられます。しかし、\(\xi \ll 1\)以外のところでは\(n \gg 1\)より \(\cos\)が激しく振動し、結局積分にはほとんど影響しないと見なすことができます。よって積分範囲を\([0, \infty]\)のようにしても構わないと考えてよく</p>
+
+\[\begin{aligned}
+J_n(n \epsilon) 
+&amp;\simeq \frac{1}{\pi} \int_0^\infty \cos \left[ n \left\{ \xi - \epsilon \left( \xi - \frac{1}{3!} \xi^3 \right)\right\} \right] d\xi 
+= \frac{1}{\pi} \int_0^\infty \cos \left[ n \left\{ \xi(1 - \epsilon) + \frac{\epsilon}{6} \xi^3 \right\} \right] d\xi \\
+&amp;\simeq \frac{1}{\pi} \int_0^\infty \cos \left[ n \left\{ \xi \left( 1- \frac{1+ \epsilon^2}{2}\right) + \frac{\epsilon}{6} \xi^3 \right\} \right] d\xi 
+= \frac{1}{\pi} \int_0^\infty \cos \left[ n \left( \frac{1- \epsilon^2}{2} \xi + \frac{\epsilon}{6} \xi^3 \right) \right] d\xi
+\end{aligned}\]
+
+<p>ここで\(\epsilon \simeq \frac{1+ \epsilon^2}{2}\) としたのは\(\cos\)の中を微少量を3次に統一するためです。以上をまとめると</p>
+
+\[J_n(n\epsilon) 
+\simeq \left\{
+\begin{array}{l}
+\displaystyle{\frac{1}{\pi} \int_0^\infty \cos \left\{ n \left( \frac{1- \epsilon^2}{2} \xi + \frac{\xi^3}{6}\right)\right\} d\xi} \ \ \ ({\rm for} \ \epsilon \sim 1)\\
+0 \ \ \ ({\rm for} \ \epsilon \ll 1)
+\end{array} \right.\]
+
+<p>となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="ベッセル関数のべき乗表示">ベッセル関数のべき乗表示</h2>
+
+<p>一方で(#1)式の左辺を展開し、\(\omega^n\)の項の係数と比較することにより\(J_n(z)\)を求めることもできます。</p>
+
+\[e^{\frac{z}{2} \omega} e^{-\frac{z}{2} \frac{1}{\omega}} 
+= \left\{ 1+ \frac{z}{2} \omega + \frac{1}{2} \left( \frac{z}{2} \right)^2 \omega^2 + \frac{1}{3!} \left( \frac{z}{2} \right)^3 \omega^3 \cdots\right\} \left\{ 1- \frac{z}{2} \omega^{-1} + \frac{1}{2} \left( \frac{z}{2} \right)^2 \omega^{-2} + \frac{1}{3!} \left( \frac{z}{2} \right)^3 \omega^{-3} \cdots \right\}\]
+
+<p>ここで気をつけなくてはならないのは、\(n\)の正負によって式の形が異なってくることです。</p>
+
+<p>(i). \(n \geq 0\)のとき、前の\(\{ \cdots \}\)から\(\omega^{n+k}\)の項、後ろの\(\{ \cdots \}\)から\(\omega^{-k}\)の項を選び出せば、\(\omega^n\)の項を選び出すことができます(ただし\(k\geq 0\))。</p>
+
+\[(\omega^nの項) 
+= \sum_{k=0}^\infty \frac{1}{(n+k)!} \left( \frac{z}{2} \right)^{n+k} \omega^{n+k} \frac{(-1)^k}{k!} \left( \frac{z}{2}\right)^k \omega^{-k} 
+=\left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{z}{2}\right)^{2k} \omega^n\]
+
+\[\therefore \ J_n(z) 
+= \left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{z}{2}\right)^{2k} \tag{8}\]
+
+<p>(ii) \(n &lt; 0\)のとき、前の\(\{ \cdots \}\)から\(\omega^k\)の項、後ろの\(\{ \cdots \}\)から\(\omega^{n-k}\)の項を選び出せば、\(\omega^n\)の項を選び出すことができます(ただし\(k\geq 0\))。</p>
+
+\[(\omega^nの項) 
+= \sum_{k=0}^\infty \frac{1}{k!} \left( \frac{z}{2} \right)^k \omega^{k} \frac{(-1)^{-(n-k)}}{\{-(n-k)\}!} \left( \frac{z}{2}\right)^{-(n-k)} \omega^{n-k} 
+=\left( - \frac{z}{2} \right)^{-n} \sum_{k=0}^\infty \frac{(-1)^k}{k! (-n+k)!} \left( \frac{z}{2}\right)^{2k} \omega^n\]
+
+\[\therefore \ J_n(z) 
+=\left(- \frac{z}{2} \right)^{-n} \sum_{k=0}^\infty \frac{(-1)^k}{k! (-n+k)!} \left( \frac{z}{2}\right)^{2k}  \tag{9}\]
+
+<p>(9)式より\(n&gt;0\)のとき</p>
+
+\[J_{-n}(z) 
+\underbrace{=}_{(9)でn\rightarrow-n} \left(- \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{z}{2}\right)^{2k}\]
+
+<p>一方(8)式で\(z\rightarrow -z\)とすると</p>
+
+\[J_n(-z) 
+= \left(\frac{-z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left(\frac{-z}{2}\right)^{2k}
+= \left( - \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} (-1)^{2k} \left(\frac{z}{2}\right)^{2k}
+= \left( - \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left(\frac{z}{2}\right)^{2k}\]
+
+\[\therefore \ J_{-n}(z) 
+= J_n(-z)\]
+
+<p>さらに</p>
+
+\[J_{-n}(z) 
+= \left(- \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{z}{2}\right)^{2k} 
+= (-1)^n \underbrace{\left(\frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{z}{2}\right)^{2k}}_{(8)}
+= (-1)^n J_n(z)\]
+
+<p>以上より</p>
+
+\[J_{-n} (z) 
+= J_n(-z) 
+= (-1)^n J_n(z) \tag{10}\]
+
+<p>が成立します。\(n&lt;0\)のときも同様に証明できます。</p>
+
+<p>(10)式を母関数展開(1)式に用いると</p>
+
+\[\begin{aligned}
+e^{\frac{z}{2} (\omega-1/\omega)}
+&amp;= \underbrace{\sum_{n=-\infty}^{-1} J_n(z) \omega^n}_{n\rightarrow -n と置換} + J_0(z) + \sum_{n=1}^\infty J_n(z) \omega^n
+= \sum_{n=1}^\infty \underbrace{J_{-n}(z)}_{(10)} \omega^{-n} + J_0(z) + \sum_{n=1}^\infty J_n(z) \omega^n \\
+&amp;= J_0(z) + \sum_{n=1}^\infty J_n(z) \{ \omega^n + (-1)^n \omega^{-n}\}
+\end{aligned}\]
+
+<p>という公式を導くこともできます。さらに上式において\(\omega = e^{i \theta}\)を代入すると</p>
+
+\[\begin{aligned}
+e^{\frac{z}{2} (e^{i\theta} - e^{-i\theta})} 
+&amp;= e^{izsin\theta} 
+=  J_0(z) + \underbrace{\sum_{n=1}^\infty J_n(z) \{ e^{in\theta} + (-1)^n e^{-in\theta}\}}_{偶数和・奇数和に分解} \\
+&amp;= J_0(z) + \sum_{m=1}^\infty J_{2m}(z) (e^{2im\theta} +  e^{-2im\theta}) + \sum_{m=0}^\infty J_{2m+1}(z) ( e^{i(2m+1)\theta} -  e^{-i(2m+1)\theta}) \\
+&amp;=J_0(z) + 2 \sum_{m=1}^\infty J_{2m}(z) \cos(2m\theta) + 2i \sum_{m=0}^\infty J_{2m+1}(z) \sin\{(2m+1)\theta\} 
+\end{aligned}\]
+
+<p>上式において\(z\rightarrow -z\)と置換することにより</p>
+
+\[\begin{aligned}
+e^{-iz\sin \theta} 
+&amp;= J_0(-z) + 2 \sum_{m=1}^\infty J_{2m}(-z) \cos(2m\theta) + 2i \sum_{m=0}^\infty J_{2m+1}(-z) \sin\{(2m+1)\theta\} \\
+&amp;= J_0(z) + 2 \sum_{m=1}^\infty (-1)^{2m} J_{2m}(z) \cos(2m\theta) + 2i \sum_{m=0}^\infty (-1)^{2m+1}  J_{2m+1}(z) \sin\{(2m+1)\theta\} \\
+&amp;= J_0(z) + 2 \sum_{m=1}^\infty J_{2m}(z) \cos(2m\theta) - 2i \sum_{m=0}^\infty  J_{2m+1}(z) \sin\{(2m+1)\theta\}
+\end{aligned}\]
+
+<p>上の2つの式の両辺を足し算することで\(\cos\)、引き算することで\(\sin\)に関する公式を得ることができます。</p>
+
+\[\cos (z \sin \theta) 
+= J_0(z) + 2 \sum_{m=1}^\infty J_{2m} (z) \cos(2m\theta) \tag{11}\]
+
+\[\sin (z \sin \theta) 
+=  2 \sum_{m=0}^\infty J_{2m+1} (z) \sin\{(2m+1)\theta\} \tag{12}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="直交関係とフーリエベッセル展開">直交関係とフーリエ・ベッセル展開</h2>
+
+<p>ベッセル関数はベッセルの微分方程式(7)を満たします。ここに\(\lambda_1, \lambda_2\)を異なる正の実数として、\(u(x) = J_n (\lambda_1 x), v(x) = J_n(\lambda_2 x)\)としましょう。これらと(7)式より</p>
+
+\[\frac{1}{\lambda_1^2} \frac{d^2 J_n (\lambda_1 x)}{dx^2} + \frac{1}{\lambda_1 x} \frac{1}{\lambda_1} \frac{d J_n(\lambda_1 x)}{dx} + \left( 1- \frac{n^2}{\lambda_1^2 x^2}\right) J_n(\lambda_1 x) 
+= 0 \ \Longrightarrow \ 
+x u'' + u' + \left( \lambda_1^2 - \frac{n^2}{x^2} \right) xu 
+= 0\]
+
+<p>同様の式変形で</p>
+
+\[xv'' + v' + \left( \lambda_2^2 - \frac{n^2}{x^2} \right) xv 
+= 0\]
+
+<p>上の\(u\)に関する式にvを、\(v\)に関する式にuをそれぞれかけて、辺辺を引き算します。</p>
+
+\[x(u''v - v''u) + (u'v- v'u) + (\lambda_1^2-\lambda_2^2) xuv 
+= 0 \ \Longrightarrow \ 
+\frac{d}{dx} \{ x(u'v-v'u)\} 
+= (\lambda_2^2 - \lambda_1^2) xuv\]
+
+<p>この式を[0: 1]区間で積分します。</p>
+
+\[[x(u'v-v'u)]_0^1 
+= u'(\lambda_1) v(\lambda_2) - v'(\lambda_2) u(\lambda_1) 
+= (\lambda_2^2 - \lambda_1^2) \int_0^1 xuv dx\]
+
+<p>\(u'(x) = \lambda_1 J_n(\lambda_1 x)\)であることに注意すると</p>
+
+\[\frac{1}{\lambda_2^2-\lambda_1^2} \{ \lambda_1 J_n' (\lambda_1 ) J_n(\lambda_2) - \lambda_2 J_n (\lambda_1) J_n' (\lambda_2) \} 
+= \int_0^1 x J_n(\lambda_1 x) J_n(\lambda_2 x) dx\]
+
+<p>この積分は\(n&gt;-1\)のときに可能です。\(\lambda_1, \lambda_2\)が\(J_n(x)\)の正値のゼロ点ならば、左辺は0となります。よって一般的な\(J_n(x)\)のゼロ点\(0&lt;\lambda_1 &lt; \lambda_2&lt;\cdots\)に対して、\(x\)を重み関数とする直交関係</p>
+
+\[\int_0^1 x J_n (\lambda_m x) J_n(\lambda_\ell x) dx = 0 \ (m \neq \ell) \tag{13}\]
+
+<p>が成立します。次に\(m=\ell\)のとき\(\lambda_\ell = \lambda_m + \epsilon\)として、\(\epsilon \rightarrow 0\)の極限をとります。</p>
+
+\[\begin{aligned}
+\int_0^1 x J_n (\lambda_m)^2 dx 
+&amp;= \frac{1}{2\lambda_m \epsilon + \epsilon^2} \{ \lambda_m J_n' (\lambda_m) J_n(\lambda_m + \epsilon) - (\lambda_m+\epsilon) J_n(\lambda_m) J_n'(\lambda_m + \epsilon)\} \\
+&amp;\underbrace{=}_{\epsilon^2を無視} \frac{1}{2} \left\{ J_n' (\lambda_m) \frac{J_n (\lambda_m + \epsilon)}{\epsilon} - J_n(\lambda_m) \frac{J_n'(\lambda_m + \epsilon)}{\epsilon} - \frac{1}{\lambda_m} J_n(\lambda_m) J_n'(\lambda_m+\epsilon)\right\} \\
+&amp;\xrightarrow{\epsilon \rightarrow 0} \frac{1}{2} \left\{ J_n'(\lambda_m)^2 - J_n (\lambda_m) J_n''(\lambda_m) - \frac{1}{\lambda_m} J_n(\lambda_m) + J_n' (\lambda_m)\right\} \\
+&amp;\underbrace{=}_{(*6)} \frac{1}{2} \left\{ J_n' (\lambda_m)^2 + J_n(\lambda_m) \frac{1}{\lambda_m} J_n'(\lambda_m) + \left( 1-\frac{n^2}{\lambda_m^2}\right) J_n(\lambda_m)^2 - \frac{1}{\lambda_m} J_n(\lambda_m) J_n'(\lambda_m) \right\} \\
+&amp;= \frac{1}{2} \left\{ J_n' (\lambda_m)^2 + \left( 1-\frac{n^2}{\lambda_m^2} \right) J_n(\lambda_m)^2\right\}
+\underbrace{=}_{\lambda_mはゼロ点より} \frac{1}{2} J_n'(\lambda_m)^2 
+= \frac{1}{2} J_{n+1}(\lambda_m)^2 
+\end{aligned}\]
+
+<p>最後の等号には(<em>4), (</em>5)式の辺辺を引き算と\(\lambda_m\)が\(J_n\)のゼロ点であることを用いました。以上より</p>
+
+\[\int_0^1 x J_n(\lambda_m x) J_n(\lambda_\ell x) dx 
+= \frac{\delta_{m\ell}}{2} J_n'(\lambda_m)^2 
+= \frac{\delta_{m\ell}}{2} J_{n+1}(\lambda_m)^2 \tag{14}\]
+
+<p>が成り立ちます。この直交性より、\(0&lt;x&lt;1\)で定義されている関数\(\phi (x)\)を</p>
+
+\[\phi (x) 
+= \sum_{m=1}^\infty a_m J_n(\lambda_m x), \ 
+a_m 
+= \frac{2}{J_{n+1} (\lambda_m)^2} \int_0^1 x \phi(x) J_n(\lambda_m x) dx \tag{15}\]
+
+<p>のように展開することができます。これをフーリエ・ベッセル展開と呼びます。</p>
+
+<h2 id="ベッセル関数の2乗">ベッセル関数の2乗</h2>
+
+<p>(8)式より、この2乗を計算しましょう。</p>
+
+\[J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{k, \ell=0}^\infty \frac{(-1)^{k+\ell}}{k! \ell ! (n+k)!(n+\ell)!} \left( \frac{z}{2}\right)^{2(k+\ell)}\]
+
+<p>ここで\(k+\ell=m\)とおいて、和を書き換えます。</p>
+
+\[J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \sum_{k=0}^m \frac{(-1)^{m}}{k! (m-k) ! (n+k)!(n+m-k)!} \left( \frac{z}{2}\right)^{2(k+\ell)}\]
+
+<p>それでは階乗の変形を行いましょう。唐突ですが\((1+x)^{n+m}\)の\(x^{m-k}\)の項の係数を考えると、\({}_{n+m}C_{m-k}\)です。よって</p>
+
+\[\frac{d^{m-k}}{dx^{m-k}} {}_{n+m} C_{m-k} x^{m-k} 
+= (m-k)! \frac{(n+m)!}{(m-k)!(n+m-m+k)!} 
+= \frac{(n+m)!}{(n+k)!}\]
+
+<p>より</p>
+
+\[\frac{1}{(n+k)!} 
+= \frac{1}{(n+m)!} \frac{(n+m)!}{(n+k)!} 
+= \frac{1}{(n+m)!} \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m}\right]_{x=0}\]
+
+<p>同様に\((1+x)^{n+m}\)の\(x^k\)の項の係数は\({}_{n+m}C_k\)です。よって</p>
+
+\[\frac{d^k}{dx^k} {}_{n+m} C_k x^k 
+= k! {}_{n+m} C_k 
+= \frac{(n+m)!}{(n+m-k)!}\]
+
+<p>より</p>
+
+\[\frac{1}{(n+m-k)!} 
+= \frac{1}{(n+m)!} \frac{(n+m)!}{(n+m-k)!} 
+= \frac{1}{(n+m)!} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m}\right]_{x=0}\]
+
+<p>これらを用いて</p>
+
+\[\begin{aligned}
+J_n^2(z) 
+&amp;= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty (-1)^m \sum_{k=0}^m \frac{1}{k! (m-k) ! \{ (n+m)!\}^2} \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m} \right]_{x=0} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m} \right]_{x=0} \left( \frac{z}{2}\right)^{2m} \\
+&amp;= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)!\}^2} \left( \frac{z}{2}\right)^{2m} \sum_{k=0}^m {}_{m}C_k \left[ \frac{d^{m-k}}{dx^{m-k}} (1+x)^{n+m} \right]_{x=0} \left[ \frac{d^{k}}{dx^{k}} (1+x)^{n+m} \right]_{x=0} \\
+&amp;= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2m} \left[ \frac{d^m}{dx^m} (1+x)^{2(n+m)} \right]_{x=0} 
+\end{aligned}\]
+
+<p>と変形されます。\((1+x)^{2(n+m)}\)の\(x^m\)の係数は\({}_{2(n+m)} C_m\)より</p>
+
+\[\left[ \frac{d^m}{dx^m} (1+x)^{2(n+m)} \right]_{x=0} 
+= \frac{(2n+2m)!}{(2n+m)!}\]
+
+<p>よって</p>
+
+\[J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2m} \tag{16}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="2乗との間に成り立つ公式">2乗との間に成り立つ公式</h2>
+
+<p><a href="/math/sin_n_cos_n">sin, cosのn乗(nが偶数の場合)</a>の公式において、\(n \rightarrow 2(n+m)\)と置換すると</p>
+
+\[\int_0^{\pi/2} \cos^{2(n+m)} x dx 
+= \frac{\pi}{2} \frac{(2n+2m-1)!!}{(2n+2m)!!}
+= \frac{\pi}{2} \frac{(2n+2m)!}{\{ (2n+2m)!! \}^2}
+= \frac{\pi}{2} \frac{1}{(2^{n+m})^2}\frac{(2n+2m)!}{\{ (n+m)! \}^2}\]
+
+<p>よって(16)式から</p>
+
+\[J_n^2(z) 
+= \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2}\right)^{2m} \frac{2}{\pi} 2^{2n+2m} \int_0^{\pi/2} \cos^{2(n+m)}x dx\]
+
+<p>となります。<br />
+唐突ですが、(8)式から</p>
+
+\[J_{2n}(z) 
+= \left( \frac{z}{2}\right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \left( \frac{z}{2} \right)^{2m}\]
+
+<p>これにおいて\(z \rightarrow 2z \cos \theta\)と置換すると</p>
+
+\[J_{2n}(2z \cos \theta) 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} z^{2n+2m} \cos^{2n+2m} \theta\]
+
+<p>よって</p>
+
+\[\int_0^{\pi/2} J_{2n} (2z \cos \theta) d \theta 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} z^{2n+2m} \int_0^{\pi/2} \cos^{2n+2m} \theta d\theta 
+= \frac{\pi}{2} J_n^2(z) \tag{17}\]
+
+<p>が成り立ちます。</p>
+
+<p>(16)式において\(z \rightarrow z \sin \theta\)と置換し、両辺に\(\sin \theta\)をかけたものを\(0 \leq \theta \leq \pi/2\)で積分すると</p>
+
+\[\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d \theta 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2n+2m} \int_0^{\pi/2} \sin^{2n+2m+1} \theta  d\theta\]
+
+<p>ここで<a href="/math/sin_n_cos_n">sin, cosのn乗(nが奇数の場合)</a>の公式において、\(n \rightarrow 2(n+m)+1\)に置換すると</p>
+
+\[\int_0^{\pi/2} \sin^{2(n+m)+1} \theta d\theta 
+= \frac{(2n+2m)!!}{(2n+2m+1)!!}\]
+
+<p>よって</p>
+
+\[\begin{aligned}
+\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d \theta 
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (n+m)! \}^2} \left( \frac{z}{2}\right)^{2n+2m}
+\frac{(2n+2m)!!}{(2n+2m+1)!!} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{\{ (2n+2m)!!\}^2} z^{2n+2m} \frac{(2n+2m)!!}{(2n+2m+1)!!} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{(2n+2m)!}{(2n+2m+1)!} z^{2n+2m} 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{2n+2m+1} 
+\end{aligned}\]
+
+<p>と求まります。<br />
+唐突ですが(8)式から</p>
+
+\[J_{2n} (t) 
+= \left( \frac{t}{2} \right)^{2n} \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \left( \frac{t}{2} \right)^{2k}\]
+
+<p>より</p>
+
+\[\frac{1}{2z} \int_0^{2z} J_{2n} (t) dt 
+= \frac{1}{2z} \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \frac{1}{2^{2n+2k}} \frac{1}{2n+2k+1} [ t^{2n+2k+1}]_0^{2z} 
+= \sum_{k=0}^\infty \frac{(-1)^k}{k! (2n+k)!} \frac{z^{2n+2k}}{2n+2k+1}\]
+
+<p>以上から</p>
+
+\[\int_0^{\pi/2} J_n^2(z \sin \theta) \sin \theta d\theta 
+= \frac{1}{2z} \int_0^{2z} J_{2n} (t) dt \tag{17}\]
+
+<p>という公式が導かれます。<br />
+同様に</p>
+
+\[\begin{aligned}
+\int_0^{\pi/2} \frac{J_n^2(z \sin \theta)}{\sin \theta} d\theta 
+&amp;= \int_0^{\pi/2} \frac{1}{\sin \theta} \left( \frac{z \sin \theta}{2}\right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z \sin \theta}{2}\right)^{2m} d\theta \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2n+2m} \int_0^{\pi/2} \sin^{2n+2m-1} \theta d\theta \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (n+m)!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2n+2m} \frac{(2n+2m-2)!!}{(2n+2m-1)!!} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! \left\{ (2n+2m)!!\right\}^2} \frac{(2n+2m)!}{(2n+m)!} z^{2n+2m} \frac{(2n+2m-2)!!}{(2n+2m-1)!!} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+2m) (2n+2m)!! } \frac{(2n+2m)!}{(2n+m)!} \frac{z^{2n+2m}}{(2n+2m-1)!!} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{2n+2m}
+\end{aligned}\]
+
+<p>と</p>
+
+\[\begin{aligned}
+\int_0^{2z} \frac{J_{2n}(t)}{t} dt 
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \int_0^{2z} \frac{t^{2n+2m-1}}{2^{2n+2m}} dt 
+= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{1}{2^{2n+2m} (2n+2m)} [t^{2n+2m}]_0^{2z} \\
+&amp;= \sum_{m=0}^\infty \frac{(-1)^m}{m! (2n+m)!} \frac{z^{2n+2m}}{(2n+2m)} 
+\end{aligned}\]
+
+<p>より</p>
+
+\[\int_0^{\pi/2} \frac{J_n^2(z \sin \theta)}{\sin \theta} d\theta 
+= \int_0^{2z} \frac{J_{2n}(t)}{t} dt \tag{18}\]
+
+<p>も成り立ちます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="ベッセル関数のポアソン表示">ベッセル関数のポアソン表示</h2>
+
+<p>(8)式において階乗を<a href="/math/gamma">ガンマ関数</a>を用いて一般化すると</p>
+
+\[J_\nu (z) 
+= \sum_{k=0}^\infty \frac{(-1)^k}{k! \Gamma(\nu+k+1)} \left( \frac{z}{2}\right)^{2k+\nu}\]
+
+<p>となります。先に以下の計算を行いましょう。</p>
+
+\[\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \int_{-1}^1 \sum_{n=0}^\infty \frac{(iz)^n}{n!} x^n (1-x^2)^{\nu-1/2} dx\]
+
+<p>この\(x^n (1-x^2)^{\nu-1/2}\)は\(n\)が偶数のとき偶関数、奇数のときは奇関数となります。よって\(n = 2m \ (m \in \mathbb{Z})\)の場合だけ考えれば良いとわかります。よって</p>
+
+\[\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(iz)^{2m}}{(2m)!} 2 \int_{0}^1 x^{2m} (1-x^2)^{\nu - 1/2} dx\]
+
+<p>ここで\(y = x^2\)と置くと\(dy = 2x dx = 2\sqrt{y} dx\)より</p>
+
+\[\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \int_{0}^1 y^{m-1/2} (1-y)^{\nu - 1/2} dy\]
+
+<p>最後の積分部分は<a href="/math/beta">ベータ関数</a>を用いて</p>
+
+\[\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} B(m+1/2, \nu+1/2) 
+= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(m+1/2) \Gamma(\nu+1/2)}{\Gamma(m+\nu+1)}\]
+
+<p>と書き直すことができます。<a href="/math/gamma">半整数のガンマ関数</a>は</p>
+
+\[\Gamma(m+1/2) 
+= \frac{(2m)!}{2^{2m} m!} \sqrt{\pi}\]
+
+<p>のように書けるので、</p>
+
+\[\begin{align}
+\int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx 
+&amp;= \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{(2m)!} \frac{\Gamma(\nu+1/2)}{\Gamma(m+\nu+1)} \frac{(2m)!}{2^{2m} m!} \sqrt{\pi} 
+= \sqrt{\pi} \Gamma(\nu+1/2) \sum_{m=0}^{\infty} \frac{(-1)^m z^{2m}}{2^{2m} m! \Gamma(m+\nu+1)} \notag \\
+&amp;= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} \sum_{m=0}^{\infty} \frac{(-1)^m}{m! \Gamma(m+\nu+1)} \left( \frac{z}{2}\right)^{2m+\nu} 
+= \frac{\sqrt{\pi} \Gamma(\nu+1/2)}{(z/2)^\nu} J_\nu(z) \notag 
+\end{align}\]
+
+<p>を得ます。よって</p>
+
+\[J_\nu (z) = \frac{1}{\sqrt{\pi} \Gamma(\nu+1/2)} \left( \frac{z}{2}\right)^\nu \int_{-1}^1 e^{izx} (1-x^2)^{\nu-1/2} dx \tag{19}\]
+
+<p>となります。これをベッセル関数のポアソン積分表示と呼びます。</p>
+
+<h2 id="ベッセル関数のラプラス変換">ベッセル関数のラプラス変換</h2>
+
+<p>ベッセル関数のラプラス変換を求めることを考えましょう。
+そのために、ベッセルの微分方程式から考えます。</p>
+
+\[(7) \ \Longrightarrow \ 
+z^2 \frac{d^2 J_n}{dz^2} + z \frac{dJ_n}{dz} + (z^2 - n^2) J_n 
+= 0\]
+
+<p>これをラプラス変換します。
+ラプラス変換を\(\mathcal{L}\)と表し、変換後の変数を\(s\)とすると</p>
+
+\[\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2} + z \frac{dJ_n}{dz} + (z^2 - n^2) J_n \right]
+= 0\]
+
+<p>それでは、各項を計算しましょう。</p>
+
+\[\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2}\right] 
+= \frac{d^2}{ds^2} \mathcal{L}\left[ \frac{d^2J_n}{dz^2}\right] 
+= \frac{d^2}{ds^2} \left( s^2 \mathcal{L} [J_n] -s J_n(0) - J_n'(0)\right)\]
+
+<p>となります。
+途中、\(J_n' = \frac{dJ_n}{dz}\)としました。
+ここで\(\mathcal{L}[J_n] = J_n^L\)のように書くことにすると</p>
+
+\[\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2}\right] 
+= 2 J^L_n + 4 s J_n^{L \prime}  + s^2 J_n^{L \prime \prime}\]
+
+<p>のように整理できます。
+ここでも、\(J_n^{L \prime} = \frac{d J_n^L}{ds}\)としました。</p>
+
+\[\mathcal{L} \left[ z \frac{dJ_n}{dz}\right] 
+= - \frac{d}{ds} \mathcal{L} \left[ \frac{dJ_n}{dz}\right] 
+= - \frac{d}{ds} (s J_n^L - J_n(0)) 
+= -J_n^L - sJ_n^{L \prime}\]
+
+\[\mathcal{L} [z^2 J_n] 
+= J_n^{L \prime \prime}\]
+
+<p>以上より</p>
+
+\[(1+s^2) J_n^{L \prime \prime} + 3s J_n^{L \prime} + J_n^L - n^2 J_n^L 
+= 0\]
+
+<p>が得られました。
+これを解くために、\(\phi(s) = (1+s^2)^{1/2} J_n^L (s)\)のように変数変換を行いましょう。
+すると</p>
+
+\[\phi^\prime 
+= (1+s^2)^{-1/2} s J_n^L + (1+s^2)^{1/2} J_n^{L \prime} 
+\ \Longrightarrow \ 
+J_n^{L \prime} 
+= (1+s^2)^{-1/2} \phi^\prime - s(1+s^2)^{-3/2} \phi\]
+
+\[\begin{aligned}
+&amp;\phi^{\prime \prime} 
+= (1+s^2)^{-3/2} s^2 J_n^L + (1+s^2)^{-1/2} J_n^L + (1+s^2)^{-1/2} s J_n^{L \prime} + (1+s^2)^{-1/2} s J_n^{L \prime} + (1+s^2)^{1/2} J_n^{L \prime \prime} \\
+&amp; \quad = -s^2 (1+s^2)^{-2} \phi + (1+s^2)^{-1} \phi + 2s (1+s^2)^{-1} \phi^\prime \\
+&amp;\Longrightarrow \ J_n^{L \prime \prime} 
+= (1+s^2)^{-1/2} \phi^{\prime \prime}- 2s(1+s^2)^{-3/2} \phi^\prime - (1+s^2)^{-3/2} \phi + 3s^2 (1+s^2)^{-5/2} \phi 
+\end{aligned}\]
+
+<h2 id="ベッセル関数の概形">ベッセル関数の概形</h2>
+
+<p>以下にいくつかの\(n\)に対するベッセル関数を図示するスクリプトを示します。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="n">sc</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set variables
+</span>    <span class="n">ix</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">xmin</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">xmax</span> <span class="o">=</span> <span class="mf">10.0</span>
+    <span class="n">nmin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nmax</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="c1"># set x coordinate
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ix</span><span class="p">)</span>
+    <span class="c1"># main loop of plotting Bessel functions
+</span>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nmin</span><span class="p">,</span> <span class="n">nmax</span><span class="p">):</span>
+        <span class="n">ei</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">jv</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="s">"n={}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ei</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="c1"># make plot window
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>そしてこのスクリプトによって図示された結果は以下のようになります。</p>
+
+<p><img src="/assets/images/math/bessel.png" alt="ベッセル関数。" /></p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/405zY0w">田島, 近道, “改訂 演習工科の数学4 複素関数”</a><br />
+[2] <a href="https://amzn.to/3GxeWRt">中山, “裳華房フィジックスライブラリー 物理数学 II”</a><br />
+[3] <a href="https://amzn.to/3o5YUaz">福山, 小形, “基礎物理学シリーズ3 物理数学 I”</a><br />
+[4] <a href="https://wasan.hatenablog.com/entry/2017/06/03/223531">倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ</a><br />
+[5] <a href="https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/">まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

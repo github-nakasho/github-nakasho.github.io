@@ -18,7 +18,7 @@ nav_order: 11
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}
 
 # ベッセル関数
 
@@ -309,7 +309,7 @@ $$
 
 となります。
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}
 
 ## ベッセル関数のべき乗表示
 
@@ -592,7 +592,7 @@ J_n^2(z)
 = \left( \frac{z}{2} \right)^{2n} \sum_{m=0}^\infty \frac{(-1)^m}{m! \{ (n+m)! \}^2} \frac{(2n+2m)!}{(2n+m)!} \left( \frac{z}{2}\right)^{2m} \tag{16}
 $$
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}
 
 ## 2乗との間に成り立つ公式
 
@@ -789,6 +789,186 @@ $$
 
 となります。これをベッセル関数のポアソン積分表示と呼びます。
 
+## ベッセル関数のラプラス変換
+
+ベッセル関数のラプラス変換を求めることを考えましょう。
+そのために、ベッセルの微分方程式から考えます。
+
+$$
+(7) \ \Longrightarrow \ 
+z^2 \frac{d^2 J_n}{dz^2} + z \frac{dJ_n}{dz} + (z^2 - n^2) J_n 
+= 0
+$$
+
+これをラプラス変換します。
+ラプラス変換を$$\mathcal{L}$$と表し、変換後の変数を$$s$$とすると
+
+$$
+\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2} + z \frac{dJ_n}{dz} + (z^2 - n^2) J_n \right]
+= 0
+$$
+
+それでは、各項を計算しましょう。
+
+$$
+\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2}\right] 
+= \frac{d^2}{ds^2} \mathcal{L}\left[ \frac{d^2J_n}{dz^2}\right] 
+= \frac{d^2}{ds^2} \left( s^2 \mathcal{L} [J_n] -s J_n(0) - J_n'(0)\right) 
+$$
+
+となります。
+途中、$$J_n' = \frac{dJ_n}{dz}$$としました。
+ここで$$\mathcal{L}[J_n] = J_n^L$$のように書くことにすると
+
+$$
+\mathcal{L} \left[ z^2 \frac{d^2 J_n}{dz^2}\right] 
+= 2 J^L_n + 4 s J_n^{L \prime}  + s^2 J_n^{L \prime \prime} 
+$$
+
+のように整理できます。
+ここでも、$$J_n^{L \prime} = \frac{d J_n^L}{ds}$$としました。
+
+$$
+\mathcal{L} \left[ z \frac{dJ_n}{dz}\right] 
+= - \frac{d}{ds} \mathcal{L} \left[ \frac{dJ_n}{dz}\right] 
+= - \frac{d}{ds} (s J_n^L - J_n(0)) 
+= -J_n^L - sJ_n^{L \prime}
+$$
+
+$$
+\mathcal{L} [z^2 J_n] 
+= J_n^{L \prime \prime}
+$$
+
+以上より
+
+$$
+(1+s^2) J_n^{L \prime \prime} + 3s J_n^{L \prime} + J_n^L - n^2 J_n^L 
+= 0 \tag{20}
+$$
+
+が得られました。
+これを解くために、$$\phi(s) = (1+s^2)^{1/2} J_n^L (s)$$のように変数変換を行いましょう。
+すると
+
+$$
+\phi^\prime 
+= (1+s^2)^{-1/2} s J_n^L + (1+s^2)^{1/2} J_n^{L \prime} 
+\ \Longrightarrow \ 
+J_n^{L \prime} 
+= (1+s^2)^{-1/2} \phi^\prime - s(1+s^2)^{-3/2} \phi
+$$
+
+$$
+\begin{aligned}
+&\phi^{\prime \prime} 
+= (1+s^2)^{-3/2} s^2 J_n^L + (1+s^2)^{-1/2} J_n^L + (1+s^2)^{-1/2} s J_n^{L \prime} + (1+s^2)^{-1/2} s J_n^{L \prime} + (1+s^2)^{1/2} J_n^{L \prime \prime} \\
+& \qquad = -s^2 (1+s^2)^{-2} \phi + (1+s^2)^{-1} \phi + 2s (1+s^2)^{-1} \phi^\prime \\
+&\Longrightarrow \ J_n^{L \prime \prime} 
+= (1+s^2)^{-1/2} \phi^{\prime \prime}- 2s(1+s^2)^{-3/2} \phi^\prime - (1+s^2)^{-3/2} \phi + 3s^2 (1+s^2)^{-5/2} \phi 
+\end{aligned}
+$$
+
+これを(21)式に代入すれば
+
+$$
+(1+s^2)^{1/2} \phi^{\prime \prime} + s(1+s^2)^{-1/2} \phi^\prime - n^2 (1+s^2)^{-1/2} \phi \phi 
+= 0
+$$
+
+を得ます。
+これを変形すると
+
+$$
+\frac{d}{ds} \left[ (1+s^2)^{1/2} \phi^\prime \right] 
+= n^2 (1+s^2)^{-1/2} \phi
+$$
+
+となります。
+この両辺に$$(1+s^2)^{1/2} \phi^\prime$$をかけ、積分を行いましょう。
+すると
+
+$$
+(1+s^2)^{1/2} \phi^\prime \frac{d}{ds} \left[ (1+s^2)^{1/2} \phi^\prime \right] 
+= n^2 \phi \phi^\prime 
+\ \Longrightarrow \ 
+\left\{ (1+s^2)^{1/2} \phi^\prime \right\}^2 
+= n^2 \phi^2
+$$
+
+となります。
+ここで積分定数はゼロとしました。
+すると
+
+$$
+\frac{\phi^\prime}{\phi} 
+= \frac{\pm n}{\sqrt{1+s^2}} 
+\ \underbrace{\Longrightarrow}_{\int ds} \ \log \phi 
+= \mp \ln (\sqrt{1+s^2} - s)
+\ \Longrightarrow \ \phi 
+= (\sqrt{1+s^2} - s)^{\mp n}
+$$
+
+のように計算されます。
+以上より
+
+$$
+J_n^L (s)
+= \frac{(\sqrt{1+s^2} - s)^{\mp n}}{\sqrt{1+s^2}}
+$$
+
+のように求まります。
+$$\mp n$$のどちらの符号を取るかですが、これは境界条件から求めることにしましょう。
+ラプラス変換の初期値の定理より
+
+$$
+J_n(0) 
+= \lim_{s \rightarrow \infty} s J_n^L (s) 
+= \lim_{s \rightarrow \infty} \frac{s^{\mp n} \left( \sqrt{1+\frac{1}{s^2}} - 1 \right)^{\mp n}}{\sqrt{1+\frac{1}{s^2}}}
+$$
+
+です。
+$$s \rightarrow \infty$$でこの値が収束するには、マイナス符号を選択する必要があります。
+このとき右辺は0に収束しますが、$$J_n(0)=0$$となるのは$$n = 1, 2, \dots$$の場合のみです。
+以上から
+
+$$
+J_n^L (s) 
+= \frac{(\sqrt{1+s^2} - s)^{\mp n}}{\sqrt{1+s^2}} \qquad (n = 1, 2, \dots)
+$$
+
+のようになります。
+上の式では$$n=0$$は除外されていますが、実は
+
+$$
+\begin{aligned}
+\mathcal{L}[J_0] 
+&= \sum_{k=0}^\infty \frac{(-1)^k}{2^{2k} (k!)^2} \mathcal{L}[z^{2k}] 
+= \sum_{k=0}^\infty \frac{(-1)^k}{2^{2k} (k!)^2} \frac{(2k)!}{s^{2k+1}}
+= s \sum_{k=0}^\infty \frac{(-1)^k}{2^{2k}} {}_{2k} C_k (s^{-2})^k 
+= s (1+s^{-2})^{-1/2} \\
+&= \frac{1}{\sqrt{1+s^2}} 
+= J_0^L (s)
+\end{aligned}
+$$
+
+のように計算されるため、結局
+
+$$
+J_n^L (s) 
+= \frac{(\sqrt{1+s^2} - s)^{-n}}{\sqrt{1+s^2}} \qquad (n = 0, 1, \dots) \tag{21}
+$$
+
+と求まります。  
+(21)式において$$s=0$$とすれば
+
+$$
+\int_0^\infty J_n(z) dz 
+= 1 \qquad (n=0, 1, \dots) \tag{22}
+$$
+
+という公式も導くことができました。
+
 ## ベッセル関数の概形
 
 以下にいくつかの$$n$$に対するベッセル関数を図示するスクリプトを示します。
@@ -829,6 +1009,7 @@ if __name__ == '__main__':
 [2] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
 [3] [福山, 小形, "基礎物理学シリーズ3 物理数学 I"](https://amzn.to/3o5YUaz)  
 [4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)  
-[5] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)
+[5] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)  
+[6] [Mathematica tutorial for the fourst course. Part VI: Bessel Functions](https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch6/bessel.html)  
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}

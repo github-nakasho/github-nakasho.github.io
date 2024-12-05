@@ -934,7 +934,7 @@ $$s \rightarrow \infty$$でこの値が収束するには、マイナス符号�
 
 $$
 J_n^L (s) 
-= \frac{(\sqrt{1+s^2} - s)^{\mp n}}{\sqrt{1+s^2}} \qquad (n = 1, 2, \dots)
+= \frac{(\sqrt{1+s^2} - s)^{- n}}{\sqrt{1+s^2}} \qquad (n = 1, 2, \dots)
 $$
 
 のようになります。

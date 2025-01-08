@@ -1,0 +1,243 @@
+I"�8
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#密度波理論-density-wave-theory---工事中近日中にちゃんと公開する予定" id="markdown-toc-密度波理論-density-wave-theory---工事中近日中にちゃんと公開する予定">密度波理論 (density wave theory)   工事中、近日中にちゃんと公開する予定。</a>    <ol>
+      <li><a href="#巻き込み困難-winding-dillemma" id="markdown-toc-巻き込み困難-winding-dillemma">巻き込み困難 (winding dillemma)</a></li>
+      <li><a href="#運動学的な密度波-kinematic-density-waves" id="markdown-toc-運動学的な密度波-kinematic-density-waves">運動学的な密度波 (kinematic density waves)</a></li>
+      <li><a href="#密度波理論" id="markdown-toc-密度波理論">密度波理論</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="密度波理論-density-wave-theory---工事中近日中にちゃんと公開する予定">密度波理論 (density wave theory)   工事中、近日中にちゃんと公開する予定。</h1>
+
+<p>ここでは、銀河の渦巻構造を形成する理論として提唱された、密度波理論についてメモしています。</p>
+
+<h2 id="巻き込み困難-winding-dillemma">巻き込み困難 (winding dillemma)</h2>
+
+<p>渦巻構造を持つ円盤銀河の回転速度は、円盤内では\(v_c \sim (定数)\)のようなflat rotationと呼ばれる特徴を持ちます。
+しかしこの場合、角速度は\(\Omega \propto r^{-1}\)となります。
+これは渦巻銀河の内側ほど、角速度が大きいことを意味します。
+もし、渦巻を形成しているのが実体を持ったものの場合、内側ほど早く回転し、巻き込みが時間とともにきつくなってしまいます。
+天の川銀河の場合には200-300万年ほどで円盤が一回転すると考えられており、数億年も時間が経てば、渦巻がきつく巻いてしまいます。
+そのような巻き込みがきつい渦巻銀河は見つかっていないことから、これは巻き込み困難と呼ばれています。</p>
+
+<p><img src="/assets/images/galady/density_wave_01.png" alt="" /></p>
+
+<p>渦状腕部分がガスや恒星の自己重力により形成されたものとし、そのようにしてできた密度超過領域が差動回転で引き延ばされた構造の場合、これは巻き込み困難の問題を受けることになります。<br />
+この問題を解消するために提案されたものが、密度波理論です。
+この理論では、渦状腕の構成要素は入れ替わり立ち替わり変化します。
+渦状腕の部分は波動のある位相の部分を表しているため、渦状腕の角速度(以降ではパターン速度と呼びます)とそれを形成する媒質の速度は同じではありません。
+そのため、渦状腕は巻き込まれることなく、波動として同じ構造を維持し続けることが可能となります。</p>
+
+<h2 id="運動学的な密度波-kinematic-density-waves">運動学的な密度波 (kinematic density waves)</h2>
+
+<p>ここでは、銀河円盤内を運動する一つの恒星の運動に着目してみましょう。
+この恒星は銀河中心の周りを角速度\(\Omega\)で円運動しながら、<a href="/galady/epicyclic_motion">エピサイクリック運動</a>により動径方向に振動数\(\kappa\)で振動します。
+静止系では、その軌道は一般にバラの花形(rosette)軌道を描き、閉じることはありません。
+しかし、この恒星の運動を、角速度\(\Omega_p \equiv \Omega - \kappa /2\)で回転する座標系から見てみましょう。
+この回転系から見ると、恒星は回転方向には角速度\(\Omega - \Omega_p = \kappa / 2\)で回転(公転)することになります。
+\((公転角振動数):(動径方向角振動数)=1:2\)より、この回転系で公転運動を1回する間に、動径方向には2回振動を行うことになります。
+つまりこの軌道は楕円を描いて閉じることになります。
+この楕円を静止系から見ると、楕円の軸が角速度\(\Omega_p\)で回転して見えることになります。</p>
+
+<p><img src="/assets/images/galady/density_wave_02.png" alt="" /></p>
+
+<p>様々な半径を運動する恒星に対してこの楕円軌道を考えると、上図のようになります。
+この楕円の長軸が全て揃っている場合、上左図のように特別な変化は見られません。
+しかし、長軸が少しずつづれていると、上右図のような軌道の密な場所が渦巻状に現れます。
+この渦巻構造は、静止系では角速度\(\Omega_p\)で回転しているように見えます。<br />
+ここまでは\(\Omega_p = \Omega - \kappa / 2\)の場合のみを考えてきましたが、一般には軌道が閉じる条件は</p>
+
+\[\Delta \phi_p 
+= \Delta \phi - \Omega_p \frac{2\pi}{\kappa}
+= 2 \pi \frac{n}{m} \tag{1}\]
+
+<p>のように書けます。
+ここで\(\Delta \varphi_p\)と\(\Delta \varphi\)はそれぞれ、\(\Omega_p\)で回転する系と静止系での動径方向振動1回後の方位角方向の角度変化分、\(2\pi / \kappa\)はエピサイクリック運動による動径方向の振動周期、\(m, n\)は整数です。</p>
+
+<p><img src="/assets/images/galady/density_wave_03.png" alt="" /></p>
+
+<p>先程の例では\(n=\pm 1, m=2\)としていました。
+ここから、\(m\)が1周期の軌道運動中の動径方向振動回数であることもわかります。
+\(\Delta \varphi\)の定義から</p>
+
+\[\Delta \varphi
+= \frac{2\pi}{\kappa} \Omega \tag{2}\]
+
+<p>のように計算されるため</p>
+
+\[\Omega_p = \Omega - \frac{n}{m} \kappa \tag{3}\]
+
+<p>を得ます。</p>
+
+<p><img src="/assets/images/galady/density_wave_04.png" alt="" /></p>
+
+<p>上図は\(\Omega - \kappa / 2, \Omega, \Omega + \kappa / 2\)をプロットしたものです。
+上図に対して\(\Omega_p=(一定)\)の直線に対し、\(\Omega_p = \Omega - \kappa / 2, \Omega_p = \Omega, \Omega_p = \Omega + \kappa / 2\)の3つの交点があることが分かります。
+\(\Omega_p = \Omega\)を共回転、\(\Omega_p = \Omega \pm \kappa / 2\)をリンドブラッド共鳴点と呼びます。</p>
+
+<p>この考え方には、運動する恒星どうしの重力相互作用が含まれておらず、また渦状腕ができたことによる非軸対称性が考慮されていません。
+このことから恒星の軌道運動から作られた密度波を、運動学的密度波と呼びます。
+また、ここでは\(\Omega_p\)を半径によらずに一定としています。
+実際の銀河では\(\Omega_p\)が半径に依存し、楕円軌道の長軸方向は時事刻々とその向きを変えていくため、渦状腕が崩れていきます。
+このことからもこの説明は完全ではないことが分かりますが、密度波理論がどういうものか、その特徴を良く捉えていることから、良く引き合いに出されます。</p>
+
+<h2 id="密度波理論">密度波理論</h2>
+
+<p>ここからは、実際に密度波の分散関係式を求めることを考えましょう。
+しかし一般的な銀河円盤の動力学には、数値計算が必要となります。
+そこで、ここでは銀河円盤中を運動する恒星群を流体のように扱い、そのガスの分散関係式を求めます。
+ガスの運動方程式は</p>
+
+\[\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} 
+= - \frac{1}{\Sigma} \nabla P - \nabla \Phi \tag{4}\]
+
+<p>のように書かれます。
+ここで\(\mathbf{v} = (v_R, v_\varphi)\)は速度ベクトル、\(\Sigma\)は質量面密度、\(P\)は恒星円盤をガスと見立てた場合の熱運動による圧力、\(\Phi\)は重力ポテンシャルです。
+この式の\(R\)成分は</p>
+
+\[\frac{\partial v_R}{\partial t} + v_R \frac{\partial v_R}{\partial R} + \frac{v_\varphi}{R} \frac{\partial v_R}{\partial \varphi} - \frac{v_\varphi^2}{R} 
+= - \frac{\partial \Phi}{\partial R} - \frac{1}{\Sigma} \frac{\partial P}{\partial R} 
+= - \frac{\partial}{\partial R} (\Phi + h) \tag{5}\]
+
+<p>となります。
+途中、\(P = K \Sigma^\gamma\)をのように状態方程式はポリトロープであるとし、さらにエンタルピー\(h\)を</p>
+
+\[h 
+\equiv \int \frac{dP}{\Sigma (P)} 
+\underbrace{=}_{dP = K\gamma \Sigma^{\gamma -1} d\Sigma} K \gamma \int \Sigma^{\gamma -2} d\Sigma 
+= \frac{K\gamma}{\gamma -1} \Sigma^{\gamma -1} \tag{6}\]
+
+<p>のように定義しました。
+同様に\(\varphi\)成分は</p>
+
+\[\frac{\partial v_\varphi}{\partial t} + v_R \frac{\partial v_\varphi}{\partial R} + \frac{v_\varphi}{R} \frac{\partial v_\varphi}{\partial \varphi} + \frac{v_R v_\varphi}{R} 
+= - \frac{1}{R} \frac{\partial \Phi}{\partial \varphi} - \frac{1}{\Sigma R} \frac{\partial P}{\partial \varphi} 
+= - \frac{1}{R} \frac{\partial}{\partial \varphi} (\Phi + h) \tag{7}\]
+
+<p>です。
+さらに銀河円盤が無限に薄いと仮定すると、ポアソン方程式から</p>
+
+\[\nabla^2 \Phi 
+= 4\pi G \Sigma \delta(z) \tag{8}\]
+
+<p>の関係が成り立ちます。<br />
+ここで定常軸対称な平衡状態を0次とし、そこに摂動を加えた場合の応答を考えましょう。
+定常軸対称より＄\(\frac{\partial}{\partial t} = \frac{\partial}{\partial \varphi} =0\)のように考えることができます。
+そしてこの平衡状態では、簡単のため円運動\(v_R =0\)であるとします。
+平衡状態の物理量には0の添え字をつけることにすると、(5), (6), (8)式より</p>
+
+\[-\frac{v_\varphi^2}{R} 
+= -\frac{\partial}{\partial R} (\Phi_0 + h_0) \tag{9}\]
+
+\[h_0 
+= \frac{K\gamma}{\gamma -1} \Sigma_0^{\gamma -1} \tag{10}\]
+
+\[\frac{\partial^2 \Phi_0}{\partial R^2} 
+= 4\pi G \Sigma_0 \delta (z) \tag{11}\]
+
+<p>次に、摂動量に1次の添字をつけることにしましょう。</p>
+
+\[v_R 
+= v_{R, 1} (R, \varphi, t), \quad
+v_\varphi 
+= v_{\varphi, 0} + v_{\varphi, 1}, \quad
+h 
+= h_0 + h_1, \quad
+\Phi 
+= \Phi_0 + \Phi_1, \quad
+\Sigma 
+= \Sigma_0 + \Sigma_1 \tag{12}\]
+
+<p>より、(5), (9)式から</p>
+
+\[\frac{\partial v_{R, 1}}{\partial t} + v_{R, 1} \frac{\partial v_{R, 1}}{\partial R} + \frac{v_{\varphi, 0}+v_{\varphi, 1}}{R} \frac{\partial v_{R, 1}}{\partial \varphi} - \frac{(v_{\varphi, 0} + v_{\varphi, 1})^2}{R} 
+= -\frac{\partial}{\partial R} (\Phi_0 + h_0 + \Phi_1 + h_1)\]
+
+<p>ですが、摂動量は微小なので、その2乗を無視します。
+そして(9)-(11)式より</p>
+
+\[\frac{\partial v_{R, 1}}{\partial t} + \Omega \frac{\partial v_{R, 1}}{\partial \varphi} - 2\Omega v_{\varphi, 1} 
+= - \frac{\partial}{\partial R} (\Phi_1 + h_1) \tag{13}\]
+
+<p>のように整理されます。
+途中、\(\Omega = v_{\varphi, 0} / R\)としました。
+同様に(7)式は</p>
+
+\[\frac{\partial v_{\varphi, 1}}{\partial t} + v_{R, 1} \left\{ \frac{d}{d R} (R \Omega) + \Omega \right\} + \Omega \frac{\partial v_{\varphi, 1}}{\partial \varphi} 
+= - \frac{1}{R} \frac{\partial}{\partial \varphi} (\Phi_1 + h_1) \tag{14}\]
+
+<p>のようになります。
+ここで、摂動量は\(\varphi\)方向のフーリエモードを考えることにしましょう。
+すなわち摂動量は</p>
+
+\[v_{R, 1} 
+= v_{R, 1a} (R) e^{i(m\varphi - \omega t)}, \quad 
+v_{\varphi, 1} 
+= v_{\varphi, 1a} (R) e^{i(m\varphi - \omega t)} \tag{15}\]
+
+<p>などのように書けるとし、振幅である\(v_{R, 1a}, v_{\varphi, 1a}\)などは\(R\)の関数とします。
+すると\(\frac{\partial}{\partial t} \rightarrow -i \omega, \frac{\partial}{\partial \varphi} \rightarrow im\)のようになるため、(13)式は</p>
+
+\[-i\omega v_{R, 1a} + im \Omega v_{R, 1a} - 2\Omega v_{\varphi, 1a} 
+= - \frac{d}{dR} (\Phi_{1a} + h_{1a}) \tag{16}\]
+
+<p>そして(14)式は</p>
+
+\[-i\omega v_{\varphi, 1a} + v_{R, 1a} \left\{\frac{d}{dR} (R\Omega) + \Omega \right\} + im \Omega v_{\varphi, 1a} 
+= -\frac{im}{R} (\Phi_{1a} + h_{1a})
+\tag{17}\]
+
+<p>となります。
+ここで<a href="/galady/oort_constant#エピサイクリック近似とオールト定数">オールト定数\(B\)</a>を用いると、\(\frac{d\Omega}{dR} + 2\Omega = -2B\)より</p>
+
+\[v_{\varphi, 1a} 
+= \frac{i}{\omega - m\Omega} \left\{ 2B v_{R, 1a} - \frac{im}{R} (\Phi_{1a} + h_{1a}) \right\} \tag{18}\]
+
+<p>となります。
+これを(16)式に代入すると</p>
+
+\[\begin{align}
+&amp;-i(\omega - m\Omega) v_{R, 1a} 
+= \frac{2i\Omega}{\omega - m\Omega} \left\{ 2B v_{R, 1a} - \frac{im}{R} (\Phi_{1a} + h_{1a}) \right\} - \frac{d}{dR} (\Phi_{1a} + h_{1a})
+\ \Longrightarrow \ 
+&amp;-i \frac{(\omega - m \Omega)^2 + 4\Omega B}{\omega - m \Omega} v_{R, 1a} 
+= \frac{2m \Omega}{R(\omega - m\Omega)} (\Phi_{1a} + h_{1a}) - \frac{d}{dR} (\Phi_{1a} + h_{1a})
+\end{align}\]
+
+<p>となります。
+<a href="/galady/oort_constant#エピサイクリック近似とオールト定数">\(\kappa^2 = -4\Omega B\)</a>のように、エピサイクリック振動数を用いてさらに整理すると</p>
+
+\[v_{R, 1a} 
+=\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/46lnQNv">Binney &amp; Tremaine, “Galactic Dynamics: Second Edition”</a><br />
+[2] <a href="https://galaxiesbook.org/index.html">Bovy, “Dyanmics and Astrophysics of Galxies”</a><br />
+[3] <a href="https://amzn.to/4hYzROm">祖父江義明, 有本信雄, 家正則, “シリーズ現代の天文学5 銀河II”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

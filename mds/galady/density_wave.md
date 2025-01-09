@@ -661,10 +661,10 @@ $$
 
 ## 参考文献
 
-[1] [Fujii et al., 2011, "The Dynamics of Spiral Arms in Pure Stellar Disks"](https://iopscience.iop.org/article/10.1088/0004-637X/730/2/109)
+[1] [Fujii et al., 2011, "The Dynamics of Spiral Arms in Pure Stellar Disks"](https://iopscience.iop.org/article/10.1088/0004-637X/730/2/109)  
 [2] [Binney & Tremaine, "Galactic Dynamics: Second Edition"](https://amzn.to/46lnQNv)  
-[3] [Bovy, "Dyanmics and Astrophysics of Galxies"](https://galaxiesbook.org/index.html)  
-[4] [祖父江義明, 有本信雄, 家正則, "シリーズ現代の天文学5 銀河II"](https://amzn.to/4hYzROm)  
-[5] [福江純, 和田圭一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/3Zszrao)  
+[3] [祖父江義明, 有本信雄, 家正則, "シリーズ現代の天文学5 銀河II"](https://amzn.to/4hYzROm)  
+[4] [福江純, 和田圭一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/3Zszrao)  
+[5] [馬場淳一, "渦巻銀河ダイナミクス理論の進展と天の川銀河"](https://astro-wakate.sakura.ne.jp/ss2013/web/invited/galaxy_baba.pdf)  
 
 {% include adsense.html %} 

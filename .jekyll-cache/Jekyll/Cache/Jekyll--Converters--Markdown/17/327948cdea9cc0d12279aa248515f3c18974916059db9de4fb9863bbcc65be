@@ -1,0 +1,225 @@
+I"�/
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#与えられた場における荷電粒子の運動" id="markdown-toc-与えられた場における荷電粒子の運動">与えられた場における荷電粒子の運動</a>    <ol>
+      <li><a href="#一様電磁場中での粒子の運動-電場ドリフト" id="markdown-toc-一様電磁場中での粒子の運動-電場ドリフト">一様電磁場中での粒子の運動: 電場ドリフト</a>        <ol>
+          <li><a href="#例題" id="markdown-toc-例題">例題</a></li>
+          <li><a href="#旋回中心のドリフト" id="markdown-toc-旋回中心のドリフト">旋回中心のドリフト</a></li>
+        </ol>
+      </li>
+      <li><a href="#一般的な力によるドリフト" id="markdown-toc-一般的な力によるドリフト">一般的な力によるドリフト</a></li>
+      <li><a href="#時間的に変化する電場存在下での荷電粒子の運動-分極ドリフト" id="markdown-toc-時間的に変化する電場存在下での荷電粒子の運動-分極ドリフト">時間的に変化する電場存在下での荷電粒子の運動: 分極ドリフト</a>        <ol>
+          <li><a href="#例題-1" id="markdown-toc-例題-1">例題</a></li>
+          <li><a href="#分極ドリフト" id="markdown-toc-分極ドリフト">分極ドリフト</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="与えられた場における荷電粒子の運動">与えられた場における荷電粒子の運動</h1>
+
+<p>ここでは、プラズマの運動論現象を理解するための基本となる、与えられた場の中での荷電粒子の運動についてまとめました。</p>
+
+<h2 id="一様電磁場中での粒子の運動-電場ドリフト">一様電磁場中での粒子の運動: 電場ドリフト</h2>
+
+<h3 id="例題">例題</h3>
+
+<p>時間変化がないかつ空間的に一様な磁場中では、荷電粒子は磁場に巻き付く、一定の螺旋運動を行います。
+しかし、そこに電場も加わると、この荷電粒子の運動はどのようになるでしょうか。
+荷電粒子の質量・電荷・速度をそれぞれ\(m, q, \mathbf{v}\)とします。
+一様磁場は\(\mathbf{B}_0 = B_0 \mathbf{e}_z\)のように、\(z\)軸方向を向いているとし、さらに一様電場は\(\mathbf{E}_0 = E_x \mathbf{e}_x + E_z \mathbf{e}_z\)のように\(x-z\)平面にとるとしましょう。
+荷電粒子の運動方程式</p>
+
+\[m \frac{d \mathbf{v}}{dt} 
+= q \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} \right)
+\tag{1}\]
+
+<p>より、\(x, y, z\)成分の式はそれぞれ</p>
+
+\[\frac{dv_x}{dt} 
+= \frac{q}{m} E_x + \omega_c v_y \tag{2}\]
+
+\[\frac{dv_y}{dt} 
+= - \omega_c v_x \tag{3}\]
+
+\[\frac{dv_z}{dt} 
+= \frac{q}{m} E_z \tag{4}\]
+
+<p>となります。
+途中、サイクロトロン振動数を\(\omega_c \equiv \frac{qB_0}{mc}\)のように置きました。
+(4)式は、\(z\)方向への等加速度運動を表しています。
+(2), (3)式の両辺を時間で微分すると</p>
+
+\[\frac{d^2v_x}{dt^2} 
+= \omega_c \frac{dv_y}{dt} 
+\underbrace{=}_{(3)} - \omega_c^2 v_x \tag{5}\]
+
+\[\frac{d^2 v_y}{dt^2} 
+= - \omega_c \frac{dv_x}{dt} 
+\underbrace{=}_{(2)} - \omega_c^2 \left(v_y + \frac{c E_x}{B_z}\right) \ \Longrightarrow \ 
+\frac{d^2 }{dt^2} \left( v_y + \frac{cE_x}{B_z}\right)
+= - \omega_c^2 \left( v_y + \frac{cE_x}{B_z}\right)
+\tag{6}\]
+
+<p>を得ます。
+(5), (6)式から</p>
+
+\[v_x 
+= v_{0} e^{i \omega_c t}, \quad
+v_y 
+= i v_{0} e^{i \omega_c t} - \frac{cE_x}{B_z} \tag{7}\]
+
+<p>が解とわかります。
+このように、この電磁場中を運動する荷電粒子はサイクロトロン運動をしつつ、その旋回中心(guiding center)は\(-y\)方向に運動をすることがわかりました。</p>
+
+<h3 id="旋回中心のドリフト">旋回中心のドリフト</h3>
+
+<p>より一般的な方向を持つ電場・磁場の場合について、このドリフト運動を求めてみましょう。
+先程の例題から分かるように、このような場合の運動は<a href="/astroelec/uniform_mag">磁場によるサイクロトロン運動</a>と一定のドリフト速度\(\mathbf{v}_\mathrm{E}\)の和で表されることがわかります。
+さらに例題からも分かるように、このドリフト速度ベクトルは常に電場と磁場に垂直とします。
+サイクロトロン一周期での時間平均を取ると、(1)式は</p>
+
+\[\langle \frac{d\mathbf{v}}{dt} \rangle 
+= \frac{q}{m} \left( \mathbf{E}_0 + \frac{\mathbf{v}_\mathrm{E}}{c} \times \mathbf{B}_0\right) 
+= 0 \tag{8}\]
+
+<p>のようになります。
+ここで、磁場によるサイクロトロン運動の速度と加速度の一周期の時間平均はゼロとしました。
+この式の両辺に、磁場\(\mathbf{B}_0\)をベクトル積としてかけてみましょう。</p>
+
+\[\frac{q}{m} \left(\mathbf{E}_0 \times \mathbf{B}_0 + \frac{1}{c} (\mathbf{v}_\mathrm{E} \times \mathbf{B}_0) \times \mathbf{B}_0\right) 
+= \frac{q}{m} \mathbf{E}_0 \times \mathbf{B}_0 + \frac{q}{mc} \underbrace{(\mathbf{v}_\mathrm{E} \cdot \mathbf{B}_0)}_{\mathbf{v}_\mathrm{E} \perp \mathbf{B}_0} - \frac{q B_0^2}{mc} \mathbf{v}_\mathrm{E} \tag{10}\]
+
+<p>以上より</p>
+
+\[\mathbf{v}_\mathrm{E} 
+= \frac{c \mathbf{E}_0 \times \mathbf{B}_0}{B_0^2} \tag{11}\]
+
+<p>のように、電場によるドリフト運動を求めることができました。
+(11)式で重要なことは、\(\mathbf{v}_\mathrm{E}\)が\(m, q, v_0\)に依存せず、場の量のみで決まることです。
+よって、電子とイオンは同じ方向に同じ速度でドリフト運動を行うため、正味の電流は発生しません。</p>
+
+<h2 id="一般的な力によるドリフト">一般的な力によるドリフト</h2>
+
+<p>運動方程式(1)の\(q \mathbf{E}\)を一般的な力\(\mathbf{F}\)に置き換えることで、(11)式の電場ドリフトを他の力の場合に適用することができます。
+このようにして、\(\mathbf{F}\)による旋回中心のドリフトは</p>
+
+\[\mathbf{v}_\mathrm{f} 
+= \frac{c}{q} \frac{\mathbf{F} \times \mathbf{B}_0}{B_0^2} \tag{12}\]
+
+<p>となります。
+特に重力\(m \mathbf{g}\)の場合</p>
+
+\[\mathbf{v}_\mathrm{g} 
+= \frac{mc}{q} \frac{\mathbf{g} \times \mathbf{B}_0}{B_0^2} 
+= \frac{\mathbf{g} \times \hat{\mathbf{b}}_0}{\omega_c} \tag{13}\]
+
+<p>のようになります。
+途中、磁場方向の単位ベクトルを\(\hat{\mathbf{b}}_0 = \mathbf{B}_0 / B_0\)としました。
+またこれを重力ドリフトと呼ぶこともあります。
+このドリフトは\(\mathbf{F}, \mathbf{B}\)の両方に垂直という点では、先程の\(\mathbf{v}_\mathrm{E}\)と同じです。
+しかし、(13)式の途中からも分かる通り、\(\mathbf{v}_\mathrm{g}\)は電荷の正負によってドリフト方向が変化します。
+重力のもとでイオンと電子は逆方向にドリフトし、正味の電流密度</p>
+
+\[\mathbf{j} 
+= q n \mathbf{v}_\mathrm{g} 
+= (m_i + m_e) c n \frac{\mathbf{g} \times \mathbf{B}_0}{B_0^2} \tag{14}\]
+
+<p>がプラズマ中に存在することになります。
+ここで\(m_i, m_e\)はそれぞれイオンと電子の質量、\(n\)は荷電粒子の個数密度です。</p>
+
+<h2 id="時間的に変化する電場存在下での荷電粒子の運動-分極ドリフト">時間的に変化する電場存在下での荷電粒子の運動: 分極ドリフト</h2>
+
+<h3 id="例題-1">例題</h3>
+
+<p>\(\mathbf{E}\)が空間的には一様ですが、ゆっくりと時間変化する場合について考えましょう。
+なお磁場はこれまでと同じく、一様かつ時間に依存せず一定で、\(z\)方向を向いているとします。
+\(x\)軸を\(\mathbf{E}\)に沿ってとり</p>
+
+\[\mathbf{E} 
+= E_0 e^{i \omega t} \mathbf{e}_x \tag{15}\]
+
+<p>とします。
+ただし時間変化は十分遅いとして、\(\omega \ll \omega_c\)であるとします。
+すると(2), (3)式より</p>
+
+\[\ddot{v}_x 
+= \frac{q}{m} \dot{E}_x + \omega_c \dot{v}_y 
+= \frac{iq\omega}{m} E_x + - \omega_c^2 v_x 
+= - \omega_c^2 \left( v_x - \frac{i\omega}{\omega_c} \frac{cE_x}{B_0} \right) 
+= -\omega_c^2 (v_x - v_\mathrm{p}) \qquad \left(v_\mathrm{p} \equiv \frac{i\omega}{\omega_c} \frac{cE_x}{B_0} \right)\tag{16}\]
+
+\[\ddot{v}_y 
+= - \omega_c \dot{v}_x 
+= - \omega_c \left( \frac{q}{m} E_x + \omega_c v_y\right) 
+= -\omega_c^2 \left( v_y - v_\mathrm{E} \right) \tag{17}\]
+
+<p>のようになります。
+(17)式の\(v_\mathrm{E}\)は、(11)式の電場ドリフト速度です。
+(16), (17)式の解が、\(\omega \ll \omega_c\)の仮定のもとで</p>
+
+\[v_x 
+= v_0 e^{i\omega_c t} + v_\mathrm{p}, 
+v_y 
+= i v_0 e^{i\omega_c t} + v_\mathrm{E} \tag{18}\]
+
+<p>となることを示しましょう。
+これらの時間2階微分をとると</p>
+
+\[\ddot{v}_x 
+= - v_0 \omega_c^2 e^{i \omega_c t} - \omega^2 v_\mathrm{p} 
+= - \omega_c^2 v_x + (\omega_c^2 - \omega^2) v_\mathrm{p}\]
+
+\[\ddot{v}_y 
+= -i v_0 \omega_c^2 e^{i\omega_c t} - \omega^2 v_\mathrm{E} 
+= -\omega_c^2 v_y + (\omega_c^2 - \omega^2) v_\mathrm{E}\]
+
+<p>のようになりますが、\(\omega^2 \ll \omega_c^2\)の仮定により、これらが(16), (17)式と一致することがわかります。
+ここまでの議論から分かるように、電場の時間変化によって、旋回中心の新たなドリフト\(v_\mathrm{p}\)が加わっていることがわかります。</p>
+
+<h3 id="分極ドリフト">分極ドリフト</h3>
+
+<p>先程は電場が\(E_0 e^{i \omega t}\)のように、ゆっくりと振動する場合のみを考えました。
+ここでは、より一般的な場合のドリフトについて考えてみましょう。
+ただし、ここでも電場の時間変化は十分ゆっくりであるとします。<br />
+まずは先程の例題も踏まえて、この場合にどのような現象が起こるかを考察します。
+電場の存在により、荷電粒子の旋回中心は電場ドリフトを行います。
+しかし、電場の時間変化により、電場ドリフトの大きさも同じ速さで変化します。
+これは電場ドリフト方向に等価な力が働いていることを意味します。
+一般的な力におけるドリフトの式(12)を見てみると、この力によって新たにドリフトが生じることがわかります。<br />
+以上の考察から粒子の速度を、電場が存在しないときのサイクロイド運動速度\(\mathbf{v}_0\)、電場ドリフト速度\(\mathbf{v}_\mathrm{E}\)、そして新しいドリフト\(\mathbf{v}_\mathrm{p}\)に分けることにしましょう。</p>
+
+\[\mathbf{v} 
+= \mathbf{v}_0 + \mathbf{v}_\mathrm{E} + \mathbf{v}_\mathrm{p} \tag{19}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="">, “プラズマ物理入門”</a><br />
+[] <a href="">宮本健郎, “プラズマ物理・核融合”</a><br />
+[] <a href="">小野高幸, 三好良純, “太陽地球圏”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

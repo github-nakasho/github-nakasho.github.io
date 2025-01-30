@@ -546,5 +546,6 @@ $$
 [2] [Chen, 内田 岱二郎(訳), "プラズマ物理入門"](https://amzn.to/4akfJ5T)  
 [3] [宮本健郎, "プラズマ物理・核融合"](https://amzn.to/3PHHMmm)  
 [4] [小野高幸, 三好良純, "太陽地球圏"](https://amzn.to/4g6w5jL)  
+[5] [加藤鞆一, "核融合はなぜむずかしいか"](https://amzn.to/4jlSxYV)  
 
 {% include adsense.html %} 

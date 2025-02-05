@@ -1,0 +1,124 @@
+I"y
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#kagraについて" id="markdown-toc-kagraについて">KAGRAについて</a>    <ol>
+      <li><a href="#kagraが観測を開始" id="markdown-toc-kagraが観測を開始">KAGRAが観測を開始</a></li>
+      <li><a href="#世界の重力波望遠鏡" id="markdown-toc-世界の重力波望遠鏡">世界の重力波望遠鏡</a></li>
+      <li><a href="#感度比較" id="markdown-toc-感度比較">感度比較</a></li>
+      <li><a href="#kagraの意義" id="markdown-toc-kagraの意義">KAGRAの意義</a>        <ol>
+          <li><a href="#重力波源の方向の決定" id="markdown-toc-重力波源の方向の決定">重力波源の方向の決定</a></li>
+          <li><a href="#方向がわかるとどう嬉しい" id="markdown-toc-方向がわかるとどう嬉しい">方向がわかるとどう嬉しい？</a>            <ol>
+              <li><a href="#標準音源としての重力波" id="markdown-toc-標準音源としての重力波">標準音源としての重力波</a></li>
+              <li><a href="#重力波電磁波ニュートリノ観測の融合" id="markdown-toc-重力波電磁波ニュートリノ観測の融合">重力波・電磁波・ニュートリノ観測の融合</a></li>
+            </ol>
+          </li>
+          <li><a href="#重力理論の解明" id="markdown-toc-重力理論の解明">重力理論の解明</a></li>
+        </ol>
+      </li>
+      <li><a href="#結言" id="markdown-toc-結言">結言</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="kagraについて">KAGRAについて</h1>
+
+<h2 id="kagraが観測を開始">KAGRAが観測を開始</h2>
+
+<p>2020年2月25日、以下のようなニュースが飛び込んできました。</p>
+
+<p><a href="https://gwcenter.icrr.u-tokyo.ac.jp/archives/3321">【プレスリリース】大型低温重力波望遠鏡KAGRA 観測開始</a></p>
+
+<p>このKAGRA望遠鏡により重力波天文学・マルチメッセンジャー天文学がさらに進展することが予想されます。ではこのKAGRA、一体どれほどのインパクトがあるのでしょうか。</p>
+
+<h2 id="世界の重力波望遠鏡">世界の重力波望遠鏡</h2>
+
+<p>忘れてはならない2つの重力波望遠鏡を(お名前だけ)ご紹介しましょう。</p>
+
+<p><a href="https://www.ligo.caltech.edu/">(米国) LIGO</a><br />
+<a href="http://www.virgo-gw.eu/">(欧州) Virgo</a></p>
+
+<p>これらは重力波望遠鏡としてすでに多大な成果を挙げています。</p>
+
+<h2 id="感度比較">感度比較</h2>
+
+<p>では今回、観測を開始したKAGRAの感度は上述の2つのそれに比べて、どれほど良くなっているのでしょうか。その感度に関しては<a href="https://gwcenter.icrr.u-tokyo.ac.jp/researcher/parameters">KAGRAの公式ウェブサイトにて公開</a>されています。また、この3つを比較したレヴュー論文なども出版されています。</p>
+
+<p><img src="/assets/images/gr/kagra_amp.png" alt="横軸: 周波数、縦軸: 重力波望遠鏡の感度" /></p>
+
+<p>図のライトグリーンの曲線(LCGT)がKAGRAの感度をプロットしたものです。このように見ると、感度それ自体はLIGO, Virgoとそれほど変わらない印象を持ってしまいそうですね。</p>
+
+<p>(参考リンク: <a href="https://arxiv.org/abs/1102.3355">Gravitational Wave Detection by Interferometry (Ground and Space)</a>)</p>
+
+<h2 id="kagraの意義">KAGRAの意義</h2>
+
+<p>ここからが本題です。それではKAGRA建設の意義とはどのようなものなのでしょうか。それを以下にまとめました。</p>
+
+<h3 id="重力波源の方向の決定">重力波源の方向の決定</h3>
+
+<p>重力波望遠鏡はその装置の原理上、一台では方向を特定することができません。複数台が同時に観測を行うことで初めて重力波の到来方向を特定することができます。以下の図はLIGOとVirgoのみを使って重力波観測を行なった場合の方向特定精度の全天マップです。</p>
+
+<p><img src="/assets/images/gr/wo_kagra.png" alt="w/o KAGRA" /></p>
+
+<p>赤いx印は地球上に望遠鏡が固定されていることに起因する「この方向からの重力波はどう頑張っても特定できないよ」方向です。
+続いて、LIGO &amp; Virgo + KAGRAによる方向特定精度のマップです。</p>
+
+<p><img src="/assets/images/gr/w_kagra.png" alt="with KAGRA" /></p>
+
+<p>赤いx印が消え、全天マップ上での方向特定制度が向上していることがわかります。</p>
+
+<p>(参考リンク: <a href="https://arxiv.org/abs/1010.6192">Source localization with an advanced gravitational wave detector network</a>)</p>
+
+<h3 id="方向がわかるとどう嬉しい">方向がわかるとどう嬉しい？</h3>
+
+<h4 id="標準音源としての重力波">標準音源としての重力波</h4>
+
+<p>重力波を観測することによって宇宙論の光度距離(Luminosity Distance)を調べることができます。それと同時に、重力波の元となる天体が所属する母銀河を同定します。その母銀河を重力波以外の電磁波を観測する望遠鏡で観測することにより、重力波源の赤方偏移$z$を決定することができます。<br />
+この二つの関係を調べることは、光度距離と赤方偏移にどのような関係があるのかを特定することになります。これは言うなれば宇宙膨張の様子を直接観測することになるのです。</p>
+
+<h4 id="重力波電磁波ニュートリノ観測の融合">重力波・電磁波・ニュートリノ観測の融合</h4>
+
+<p>すでに上に述べたように、重力波の飛来方向を詳細に電磁波・ニュートリノ観測することができるようになります。これにより</p>
+
+<ul>
+  <li>超新星爆発の駆動原理の解明</li>
+  <li>ガンマ線バーストの起源解明</li>
+  <li>中性子星連星合体の初観測およびそこから示唆される中性子星状態方程式の理論への制限</li>
+</ul>
+
+<p>などが期待されます。</p>
+
+<h3 id="重力理論の解明">重力理論の解明</h3>
+
+<p>重力波は一般相対性理論の予言通り「横波」なのか、その偏極モードを調べるには3台以上の重力波観測が必要です。下図は左から順にテンソルモード/スカラーモード/ベクトルモードを図示したものです。</p>
+
+<p><img src="/assets/images/gr/polarization.png" alt="重力波の偏極モード" /></p>
+
+<p>(参考リンク: <a href="https://arxiv.org/abs/0903.0528">Probing non-tensorial polarizations of stochastic gravitational-wave backgrounds with ground-based laser interferometers</a>)</p>
+
+<h2 id="結言">結言</h2>
+
+<p>重力波を観測することは、それ自身大きな成果です。しかしその観測結果から得られる物理やシナジーはさらに大きな知的探究心をもたらすことでしょう。</p>
+
+<p>頑張れKAGRA。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,81 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビアマンバッテリー効果による磁場生成" id="markdown-toc-ビアマンバッテリー効果による磁場生成">ビアマンバッテリー効果による磁場生成</a>    <ol>
+      <li><a href="#ビアマンバッテリー-biermann-battery" id="markdown-toc-ビアマンバッテリー-biermann-battery">ビアマンバッテリー (Biermann battery)</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビアマンバッテリー効果による磁場生成">ビアマンバッテリー効果による磁場生成</h1>
+
+<p>ここでは、初期に磁場が存在しない状態から磁場を発生させる物理機構の一つとして知られるビアマンバッテリー(Biermann battery)についてまとめています。</p>
+
+<h2 id="ビアマンバッテリー-biermann-battery">ビアマンバッテリー (Biermann battery)</h2>
+
+<p>完全電離しているプラズマガスにおける電子の運動方程式を考えましょう。
+電子とイオンの衝突は無視できるとすると</p>
+
+\[m_e n_e \frac{D \mathbf{v}_e}{Dt} 
+= - \nabla P_e - e n_e \left( \mathbf{E} + \mathbf{v} \times \frac{\mathbf{B}}{c} \right) \tag{1}\]
+
+<p>のようになります。
+ここで\(\mathbf{v}, n_e, P_e\)はそれぞれ磁気流体の速度、電子数密度、電子による分圧です。
+電子に働く力は釣り合っているとすると、左辺の加速度はゼロより</p>
+
+\[\mathbf{E} 
+= - \mathbf{v} \times \frac{\mathbf{B}}{c} - \frac{\nabla P_e}{en_e} \tag{2}\]
+
+<p>を得ます。
+これをファラデーの法則に代入すると</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= - c \nabla \times \mathbf{E} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) + \frac{c}{e} \nabla \times \left( \frac{\nabla P}{n_e}\right) \tag{3}\]
+
+<p>となります。
+右辺第二項を整理しましょう。</p>
+
+\[\nabla \times \left( \frac{\nabla P_e}{n}\right) 
+= \epsilon_{ijk} \partial_j \left( \frac{\partial_k P_e}{n} \right) \mathbf{e}_i 
+= \underbrace{\epsilon_{ijk} \frac{\partial_j \partial_k P_e}{n}}_{=0} \mathbf{e}_i - \epsilon_{ijk} \frac{\partial_j n \partial_k P_e}{n^2} \mathbf{e}_i 
+= - \frac{\nabla n_e \times \nabla P_e}{n_e^2} \tag{4}\]
+
+<p>より</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) - \frac{\nabla n_e \times \nabla P_e}{n_e^2} \tag{5}\]
+
+<p>のように整理されます。
+この第二項をビアマンバッテリー項と呼びます。
+この項の物理的意味を直感的に理解してみましょう。</p>
+
+<p><img src="/assets/images/mhd/biermann_01.png" alt="" /></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -34,7 +34,7 @@ m_p n_p \frac{D \mathbf{v}_p}{Dt}
 = - \nabla P_p + e n_p \left( \mathbf{E} + \mathbf{v}_p \times \frac{\mathbf{B}}{c} \right) + \frac{n_p m_p}{\tau_{ep}} (\mathbf{v}_e - \mathbf{v}_p) \tag{2}
 $$
 
-ここで$$m_i, n_i, \mathbf{v}_i, P_i, \tau{ij}$$はそれぞれ$$i$$粒子の質量、個数密度、速度ベクトル、圧力、そして$$i$$粒子と$$j$$粒子の衝突時間(運動量を交換するのにかかる大体の時間)です。右辺の第3項は、1個の電子が1個の陽子と一回の衝突で$$m_e (\mathbf{v}_e-\mathbf{v}_p)$$だけ運動量を受け渡すことからくる、衝突項です。  
+ここで$$m_i, n_i, \mathbf{v}_i, P_i, \tau_{ij}$$はそれぞれ$$i$$粒子の質量、個数密度、速度ベクトル、圧力、そして$$i$$粒子と$$j$$粒子の衝突時間(運動量を交換するのにかかる大体の時間)です。右辺の第3項は、1個の電子が1個の陽子と一回の衝突で$$m_e (\mathbf{v}_e-\mathbf{v}_p)$$だけ運動量を受け渡すことからくる、衝突項です。  
 完全電離した水素ガスより$$n_e = n_p = n$$、さらに$$m_e \ll m_p$$から、単位体積あたりの質量$$\rho$$は
 
 $$

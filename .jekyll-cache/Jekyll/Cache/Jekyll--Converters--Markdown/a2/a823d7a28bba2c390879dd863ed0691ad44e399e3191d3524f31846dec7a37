@@ -1,0 +1,63 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#シュバルツシルトの外部解" id="markdown-toc-シュバルツシルトの外部解">シュバルツシルトの外部解</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="シュバルツシルトの外部解">シュバルツシルトの外部解</h1>
+
+<p>星の外での時空を求めるので以下の仮定を行います。</p>
+
+\[P = \rho = 0\]
+
+\[\frac{dM}{dr} = 0 \ \Longrightarrow \ M = {\rm Const}\]
+
+<p>それでは導出を行いましょう。</p>
+
+<h2 id="導出">導出</h2>
+
+<p><a href="/gr/tov">TOV方程式</a>を導く途中の式より</p>
+
+\[\Phi' = \frac{1}{r \left(r- \frac{2GM}{c^2}\right)} \frac{GM}{c^2} 
+= \frac{1}{2} ( \frac{1}{r-\frac{2GM}{c^2}} - \frac{1}{r}) \ \Longrightarrow \ 
+\Phi = \frac{1}{2} \ln (1-r_g/r) + C\]
+
+<p>ここで\(r_g \equiv 2GM/c^2\), そして\(C\)は積分定数です。</p>
+
+\[\lim_{r \rightarrow \infty} \Phi = C = 0\]
+
+\[\therefore \ g_{00} 
+= -e^{2\Phi} 
+= -(1-r_g/r)\]
+
+<p>これとTOV方程式を求める途中の式とを合わせて、シュバルツシルトの外部解は</p>
+
+\[ds^2 
+= -(1-r_g / r) c^2 dt^2 + \frac{1}{1-r_g/r} dr^2 + r^2 (d\theta^2 + \sin^2 \theta d\varphi^2)\]
+
+<p>と求まります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

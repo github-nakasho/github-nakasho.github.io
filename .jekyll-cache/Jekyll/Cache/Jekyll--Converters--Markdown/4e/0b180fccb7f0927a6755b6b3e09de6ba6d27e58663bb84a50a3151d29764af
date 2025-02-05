@@ -1,0 +1,128 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#超光速運動" id="markdown-toc-超光速運動">超光速運動</a>    <ol>
+      <li><a href="#超光速運動とは" id="markdown-toc-超光速運動とは">超光速運動とは?</a></li>
+      <li><a href="#問題設定" id="markdown-toc-問題設定">問題設定</a></li>
+      <li><a href="#ドップラー効果" id="markdown-toc-ドップラー効果">ドップラー効果</a></li>
+      <li><a href="#見かけの運動" id="markdown-toc-見かけの運動">見かけの運動</a></li>
+      <li><a href="#余談" id="markdown-toc-余談">余談</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="超光速運動">超光速運動</h1>
+
+<h2 id="超光速運動とは">超光速運動とは?</h2>
+
+<p>最近こんなニュースが目に飛び込んできました。</p>
+
+<p><a href="https://sorae.info/astronomy/20200110-m87jet.html">光速の99％以上！　M87のジェットの速度が「チャンドラ」の観測によって判明</a></p>
+
+<p>昨年2019、EHT(Event Horizon Telescope, イベント・ホライズン・テレスコープ)によってブラックホールの存在が直接撮像されたM87の中心部から、光の速度の99%以上という猛烈なスピードで宇宙ジェットが噴き出しているというものです。記事の中を詳しく読んでいくと…</p>
+
+<blockquote>
+  <p>研究チームによると、ジェットのなかでも超大質量ブラックホールに近い部分（ブラックホールからおよそ900光年ほどの範囲）にみられるX線を放つ2つの塊を観測すると、それぞれ光速の6.3倍と2.4倍で動いているように見えるといいます。ただし、これはあくまでも見かけ上の速度で、実際に光の速度を超えているわけではありません。</p>
+</blockquote>
+
+<p>なるほど。どうやら宇宙空間で物体が光速度に近い速度で運動を行うと<strong>見かけの速度が光速度を超える</strong>現象のようです。</p>
+
+<p>ではなぜそのようなことが起こるのでしょうか。それを数式で解説したいと思います。</p>
+
+<h2 id="問題設定">問題設定</h2>
+
+<p>以下のように、AGN(Active Galactic Nuclei, 活動銀河中心核)が勢いよくジェットを吹き出しているとします。その中心部分から光子1が、そして吹き出したジェットの先端から光子2が、それぞれ無限遠方にいる観測者の方向に飛び出してきたとしましょう。</p>
+
+<p><img src="/assets/images/astroelec/slmotion.png" alt="超光速運動" /></p>
+
+<h2 id="ドップラー効果">ドップラー効果</h2>
+
+<p>上図のようにジェットが角度\(\theta\)方向に速度\(v\)飛び出したとします。\(\Delta t\)だけ時間が経過すると、光子1は観測者に対して</p>
+
+\[\ell_1 
+= c \Delta t\]
+
+<p>だけ近づきます。その間にジェットは</p>
+
+\[\ell_{\rm jet} 
+= v \Delta t \cos \theta\]
+
+<p>だけ観測者の方向に近づきます。
+そして時刻\(t_0 +\Delta t\)にジェットから観測者方向に光子2が放射されたとしましょう。すると光子1が観測者に届いてから光子2が観測者に届くまでの時間差\(\Delta t'\)は</p>
+
+\[\Delta t' 
+= \frac{\ell_1 - \ell_{\rm jet}}{c}
+= (1-\beta \cos \theta )\Delta t\]
+
+<p>と書けます(ここで\(\beta=v/c\)としました)。</p>
+
+<h2 id="見かけの運動">見かけの運動</h2>
+
+<p>一方でジェットは天球面上を</p>
+
+\[\Delta x = v \Delta t \sin \theta\]
+
+<p>だけ動きます。よって天球面上でのジェットの見かけの運動速度\(\beta_{\rm app} = v_{\rm app} /c\)は</p>
+
+\[\beta_{\rm app} 
+= \frac{1}{c} \frac{\Delta x}{\Delta t'} 
+= \frac{\beta \sin \theta}{1-\beta \cos \theta}\]
+
+<p>となります。この式より適当に\(\beta \sim 1\)の値と\(\theta\)を選ぶと、見かけの速度が\(\beta_{\rm app}&gt;1\)となることがわかります。\(\beta_{\rm app}\)と\(\theta\)は観測量なので、この式からジェットの本当の速度\(\beta\)を見積もることも可能です。</p>
+
+<h2 id="余談">余談</h2>
+
+<p>\(\beta_{\rm app}\)が最大となる角度$\theta$を求めて見ましょう。</p>
+
+\[\frac{d\beta_{\rm app}}{d\theta} 
+= \frac{\beta \cos \theta (1-\beta \cos \theta) - \beta^2 \sin^2 \theta}{(1-\beta \cos \theta)^2} 
+= \frac{\beta(\cos \theta -\beta)}{(1-\beta \cos \theta)^2}
+=0\]
+
+<p>のとき極大となるので</p>
+
+\[\beta = \cos \theta \Longrightarrow \theta = \cos^{-1} \beta\]
+
+<p>よってこのときの\(\beta_{\rm app}\)は</p>
+
+\[\beta_{\rm app} 
+= \frac{\cos \theta \sin \theta}{1-\cos^2 \theta} 
+= \frac{\cos \theta}{\sin \theta} 
+= \cot \theta\]
+
+<p>この最大値が1を超えるとき(超光速運動として観測される)ために必要な\(\beta\)の下限値は</p>
+
+\[\beta_{\rm app} (\beta = \cos \theta)
+= \frac{\cos \theta}{\sin \theta} 
+= \frac{\beta}{\sqrt{1-\beta^2}} 
+&gt;1 \ \Longrightarrow \ 
+\beta &gt; 1/ \sqrt{2} \sim 0.71\]
+
+<p>となり、最低でも光速の70%以上の速度でジェットが運動していないと、超光速運動として観測されないことがわかります。</p>
+
+<p><img src="/assets/images/astroelec/betaapp.png" alt="見かけの速度" /></p>
+
+<p>上図は見かけの速度\(\beta_{\rm app}\)を横軸\(\theta\)で図示したものです。red:\(\beta\) = 0.1, green:\(\beta\) = 0.3, blue:\(\beta\) = 0.5, magenda:\(\beta\) = 0.7, cian:\(\beta\) = 0.9, blown:\(\beta\) = 0.99。黄色は\(\beta_{\rm app}\) = \(\cot \theta\)(\(\beta_{\rm app}\) が極大となる線)。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

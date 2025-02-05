@@ -1,0 +1,380 @@
+I":�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#等温の場合のhlld" id="markdown-toc-等温の場合のhlld">等温の場合のHLLD</a>    <ol>
+      <li><a href="#磁気流体方程式群" id="markdown-toc-磁気流体方程式群">磁気流体方程式群</a></li>
+      <li><a href="#流束計算" id="markdown-toc-流束計算">流束計算</a></li>
+      <li><a href="#数値計算に用いる" id="markdown-toc-数値計算に用いる">数値計算に用いる</a></li>
+      <li><a href="#等温hlld流束の計算モジュール" id="markdown-toc-等温hlld流束の計算モジュール">等温HLLD流束の計算モジュール</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="等温の場合のhlld">等温の場合のHLLD</h1>
+
+<h2 id="磁気流体方程式群">磁気流体方程式群</h2>
+
+<p>宇宙空間に存在するガスは圧縮を受けると一時的に高温になりますが、<a href="/astroelec/cooling">放射冷却</a>などの他の物理過程により素早くエネルギーを失う場合には、圧縮の前後で等温の状態が保たれる場合があります。
+そのような場合には、エネルギーの方程式を考える必要がなく、1次元の理想磁気流体方程式は以下のようになります。</p>
+
+\[\frac{\partial}{\partial t}\left( \begin{array}{c}
+\rho \\
+\rho v_x \\
+\rho v_y \\
+\rho v_z \\
+B_y \\
+B_z 
+\end{array} \right) + \frac{\partial}{\partial x} \left( \begin{array}{c} 
+\rho v_x \\
+\rho v_x v_x + P_\mathrm{tot} - B_x B_x \\
+\rho v_y v_x - B_y B_x \\
+\rho v_z v_x - B_z B_x \\
+B_y v_x - B_x v_y \\
+B_z v_x - B_x v_z
+\end{array} \right) = \mathbf{0} \tag{1}\]
+
+<p>このとき、<a href="/simulation/hlld">HLLD法</a>はどのように変形されるでしょうか。それを見てみましょう。以降では普通のHLLDを断熱HLLD、等温の場合を等温HLLDと呼ぶことにします。</p>
+
+<h2 id="流束計算">流束計算</h2>
+
+<p>(1)式の特性速度を計算すると、実は以下の6つになります。</p>
+
+\[\lambda_{1, 6} = v_x \pm c_f, \quad \lambda_{2, 5} = v_x \pm c_a, \quad \lambda_{3, 4} = v_x \pm c_s \tag{2}\]
+
+<p>ここで\(c_f, c_a, c_s\)はそれぞれ<a href="/mhd/magneto_acoustic">速い磁気音波</a>の伝播速度、<a href="/mhd/alfven_wave">アルヴェーン速度</a>、<a href="/mhd/magneto_acoustic">遅い磁気音波</a>の伝播速度です。
+断熱HLLDでは、ここにさらに\(\lambda = v_x\)で伝播するエントロピー波が存在します。今は等温を考えているため、エントロピー波のようにその波面を挟んで温度の不連続が発生することはありません。<br />
+よって断熱HLLDのときと同様に遅い磁気音波は無視することに加え、エントロピー波を考慮しない以下のようなリーマンファンを考えます。</p>
+
+<p><img src="/assets/images/simulation/iso_hlld_01.png" alt="" /></p>
+
+<p>ここで\(S_L, S_R\)はそれぞれ左方向と右方向に進む速進磁気音波の波面、\(S_L^\ast, S_R^\ast\)はそれぞれ左方向と右方向に進むアルヴェーン波の波面です。断熱HLLDでは中間状態において\(x\)方向の流体速度と全圧力を一定としました。よって等温HLLDでも同様に</p>
+
+\[v^\ast_{x, L} = v^\ast_{x, c} = v^\ast_{x, R} \equiv v_x^\ast \tag{3}\]
+
+\[P^\ast_{\mathrm{tot}, L} = P^\ast_{\mathrm{tot}, c} = P^\ast_{\mathrm{tot}, R} \equiv P^\ast_{\mathrm{tot}} \tag{4}\]
+
+<p>を仮定します。さらに<a href="/simulation/hlld">断熱HLLDの(19)式</a>から\(\rho_L^{\ast \ast} = \rho_L^\ast, \rho_R^{\ast \ast} = \rho_R^\ast\)でしたが、今は\(\mathbf{U}_L^{\ast \ast}, \mathbf{U}_R^{\ast \ast}\)の状態は\(\mathbf{U}_c^\ast\)という状態に集約されているため</p>
+
+\[\rho_L^\ast = \rho_c^\ast = \rho_R^\ast \equiv \rho^\ast \tag{5}\]
+
+<p>が成り立ちます。これらを踏まえた上で、\(S_\alpha\)の波面でのジャンプ条件を見ていきましょう。</p>
+
+\[S_\alpha \left( \begin{array}{c} 
+\rho^\ast \\
+\rho^\ast v_x^\ast \\
+\rho^\ast v_{y, \alpha}^\ast \\
+\rho^\ast v_{z, \alpha}^\ast \\
+B_{y, \alpha}^\ast \\
+B_{z, \alpha}^\ast
+\end{array} \right) - \left( \begin{array}{c} 
+\rho^\ast v_x^\ast \\
+\rho^\ast v_x^\ast v_x^\ast + P_\mathrm{tot}^\ast - B_x B_x \\
+\rho^\ast v_{y, \alpha}^\ast v_x^\ast - B_{y, \alpha}^\ast B_x \\
+\rho^\ast v_{z, \alpha}^\ast v_x^\ast - B_{z, \alpha}^\ast B_x \\
+B_{y, \alpha}^\ast v_x^\ast - v_{y, \alpha}^\ast B_x \\
+B_{z, \alpha}^\ast v_x^\ast - v_{z, \alpha}^\ast B_x
+\end{array} \right) 
+= S_\alpha \left( \begin{array}{c} 
+\rho_\alpha \\
+\rho_\alpha v_{x, \alpha} \\
+\rho_\alpha v_{y, \alpha} \\
+\rho_\alpha v_{z, \alpha} \\
+B_{y, \alpha} \\
+B_{z, \alpha}
+\end{array} \right) - \left( \begin{array}{c} 
+\rho_\alpha v_{x, \alpha} \\
+\rho_\alpha v_{x, \alpha} v_{x, \alpha} + P_{\mathrm{tot}, \alpha} - B_x B_x \\
+\rho_\alpha v_{y, \alpha} v_{x, \alpha} - B_{y, \alpha} B_x \\
+\rho_\alpha v_{z, \alpha} v_{x, \alpha} - B_{z, \alpha} B_x \\
+B_{y, \alpha} v_{x, \alpha} - v_{y, \alpha} B_x \\
+B_{z, \alpha} v_{x, \alpha} - v_{z, \alpha} B_x
+\end{array} \right) \tag{6}\]
+
+<p>ここで(6)式の第一, 第二式に着目してみましょう。</p>
+
+\[S_\alpha \rho^\ast - \rho^\ast v_x^\ast 
+= S_\alpha \rho_\alpha - \rho_\alpha v_{x, \alpha} \tag{7}\]
+
+\[S_\alpha \rho^\ast v_x^\ast - (\rho^\ast v_x^\ast v_x^\ast + P_\mathrm{tot}^\ast - B_x B_x) 
+= S_\alpha \rho_\alpha v_{x, \alpha} - (\rho_\alpha v_{x, \alpha} v_{x, \alpha} + P_{\mathrm{tot}, \alpha} - B_x B_x) \tag{8}\]
+
+<p>すると\(\alpha = R, L\)より、この4本の方程式には\(\rho^\ast, v_x^\ast, P_\mathrm{tot}^\ast\)の3つの変数しかありません。よってこれを解いて\(\rho^\ast\)などを得ることは不可能です。
+この議論から、断熱HLLDのときと同様に\(\rho^\ast, v_x^\ast\)はHLL中間状態から求めることにしましょう。すなわち</p>
+
+\[\rho^\ast 
+= \rho_\mathrm{HLL}^\ast 
+= \frac{S_R \rho_R - S_L \rho_L - \rho_R v_{x, R} + \rho_L v_{x, L}}{S_R - S_L} \tag{9}\]
+
+<p>そして\(\rho v_x\)のHLL中間状態は、<a href="/simulation/hll">HLL法の(8)式</a>から求めることにすると</p>
+
+\[(\rho v_x)_\mathrm{HLL}^\ast 
+= \frac{S_R \rho_L v_{x, L} - S_L \rho_R v_{x, R} + S_R S_L (\rho_R - \rho_L)}{S_R - S_L} \tag{10}\]
+
+<p>より</p>
+
+\[v_x^\ast 
+= \frac{(\rho v_x)_\mathrm{HLL}^\ast}{\rho_\mathrm{HLL}^\ast} 
+= \frac{S_R \rho_L v_{x, L} - S_L \rho_R v_{x, R} + S_R S_L (\rho_R - \rho_L)}{S_R \rho_R - S_L \rho_L - \rho_R v_{x, R} + \rho_L v_{x, L}} \tag{11}\]
+
+<p>と求まります。さらに\(P_\mathrm{tot}^\ast\)は(8)式から求めましょう。
+しかし(8)式において\(\rho^\ast, v_x^\ast\)はHLL中間状態から求めたことからわかるように、\(P_\mathrm{tot}^\ast\)もHLL中間状態から求めたものに一致します。<br />
+続いて\(v_{y, \alpha}^\ast\)を求めてみましょう。これは断熱HLLDの場合と変わりないため、その式を流用します。<a href="/simulation/hlld">断熱HLLDの(14)式</a>において\(S_M = v_x^\ast\)とすると</p>
+
+\[v_{y, \alpha}^\ast 
+= v_{y, \alpha} - \frac{v_x^\ast - v_{x, \alpha}}{(S_\alpha - v_{x, \alpha}) (S_\alpha - v_x^\ast) \rho_\alpha - B_x^2} B_{y, \alpha} B_x\]
+
+<p>ここで、この式の分数部分の分母を整理しましょう。</p>
+
+\[\rho_\alpha (S_\alpha - v_{x, \alpha}) (S_\alpha - v_x^\ast) - B_x^2 
+= \rho^\ast \left\{ \frac{\rho_\alpha}{\rho^\ast} (S_\alpha - v_{x, \alpha}) (S_\alpha - v_x^\ast) - \frac{B_x^2}{\rho^\ast}\right\}\]
+
+<p>(6)式の第一式より</p>
+
+\[\rho^\ast = \frac{S_\alpha - v_{x, \alpha}}{S_\alpha - v_x^\ast} \rho_\alpha\]
+
+<p>を代入すると</p>
+
+\[\rho^\ast \left\{ (S_\alpha - v_x^\ast)^2 - \frac{B_x^2}{\rho^\ast} \right\} 
+= \rho^\ast \left( S_\alpha - v_x^\ast - \frac{\vert B_x\vert}{\sqrt{\rho^\ast}}\right) \left( S_\alpha - v_x^\ast + \frac{\vert B_x\vert}{\sqrt{\rho^\ast}}\right) 
+= \rho^\ast (S_\alpha - S_R^\ast) (S_\alpha - S_L^\ast)\]
+
+<p>のように整理されます。よって</p>
+
+\[\rho^\ast v_{y, \alpha}^\ast = \rho^\ast v_{y, \alpha} - \frac{v_x^\ast - v_{x, \alpha}}{(S_\alpha - S_R^\ast)(S_\alpha - S_L^\ast)} B_{y, \alpha} B_x \tag{12}\]
+
+<p>同様に、<a href="/simulation/hlld">断熱HLLDの(16)式</a>より</p>
+
+\[\rho^\ast v_{z, \alpha}^\ast = \rho^\ast v_{z, \alpha} - \frac{v_x^\ast - v_{x, \alpha}}{(S_\alpha - S_R^\ast)(S_\alpha - S_L^\ast)} B_{z, \alpha} B_x \tag{13}\]
+
+<p><a href="/simulation/hlld">断熱HLLDの(15), (17)式</a>から</p>
+
+\[B_{y, \alpha}^\ast 
+= B_{y, \alpha} \frac{\rho_\alpha (S_\alpha - v_{x, \alpha})^2 - B_x^2}{\rho_\alpha (S_\alpha - v_{x, \alpha}) (S_\alpha - v_x^\ast) - B_x^2} 
+= B_{y, \alpha} \frac{\rho_\alpha (S_\alpha - v_{x, \alpha})^2 - B_x^2}{\rho^\ast (S_\alpha - S_R^\ast) (S_\alpha - S_L^\ast)} \tag{14}\]
+
+\[B_{z, \alpha}^\ast 
+= B_{z, \alpha} \frac{\rho_\alpha (S_\alpha - v_{x, \alpha})^2 - B_x^2}{\rho^\ast (S_\alpha - S_R^\ast) (S_\alpha - S_L^\ast)} \tag{15}\]
+
+<p>となります。求まっていないのは\(\mathbf{U}_c\)での\(v_{y, c}, v_{z, c}, B_{y, c}, B_{z, c}\)です。
+これらも<a href="/simulation/hlld">断熱HLLD</a>と同様の計算で求めることができます。<a href="/simulation/hlld">断熱HLLDの(27)式</a>において\(\rho_L^\ast = \rho_R^\ast = \rho^\ast\)とすれば</p>
+
+\[\begin{align}
+&amp;v_{y, c}^\ast 
+= \frac{\sqrt{\rho^\ast} v_{y, L}^\ast + \sqrt{\rho^\ast} v_{y, R}^\ast + (B_{y, R}^\ast - B_{y, L}^\ast) \mathrm{sign} (B_x)}{\sqrt{\rho^\ast} + \sqrt{\rho^\ast}} \notag \\
+&amp;\Longrightarrow \ 
+\rho^\ast v_{y, c}^\ast 
+= \frac{\rho^\ast v_{y, L}^\ast + \rho^\ast v_{y, R}}{2} + \frac{(B_{y, R}^\ast - B_{y, L}^\ast) \sqrt{\rho^\ast} \mathrm{sign} (B_x)}{2} \tag{16}
+\end{align}\]
+
+<p>同様に<a href="/simulation/hlld">断熱HLLDの(28)式</a>より</p>
+
+\[\rho^\ast v_{z, c}^\ast 
+= \frac{\rho^\ast v_{z, L}^\ast + \rho^\ast v_{z, R}}{2} + \frac{(B_{z, R}^\ast - B_{z, L}^\ast) \sqrt{\rho^\ast} \mathrm{sign} (B_x)}{2} \tag{17}\]
+
+<p>です。そして<a href="/simulation/hlld">断熱HLLDの(29)式</a>より</p>
+
+\[B_{y, c}^\ast 
+= \frac{\sqrt{\rho^\ast} B_{y, R}^\ast + \sqrt{\rho^\ast} B_{y, L}^\ast + \rho^\ast (v_{y, R}^\ast - v_{y, L}^\ast) \mathrm{sign}(B_x)}{2 \sqrt{\rho^\ast}} 
+= \frac{B_{y, R}^\ast + B_{y, L}^\ast}{2} + \frac{(v_{y, R}^\ast - v_{y, L}^\ast) \sqrt{\rho^\ast} \mathrm{sign} (B_x)}{2} \tag{18}\]
+
+<p>最後に<a href="/simulation/hlld">断熱HLLDの(30)式</a>から</p>
+
+\[B_{y, c}^\ast 
+= \frac{B_{z, R}^\ast + B_{z, L}^\ast}{2} + \frac{(v_{z, R}^\ast - v_{z, L}^\ast) \sqrt{\rho^\ast} \mathrm{sign} (B_x)}{2} \tag{19}\]
+
+<p>と求まります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="数値計算に用いる">数値計算に用いる</h2>
+
+<p><a href="/simulation/hll">HLL</a>, <a href="/simulation/hllc">HLLC</a>, <a href="/simulation/hlld">断熱HLLD</a>と同様に、実際の数値計算では\(S_L, S_L^\ast, S_R^\ast, S_R\)の大きさに依存して、どの流束を用いるかを決定します。
+下図は左上から\(S_L &gt; 0, S_L \leq 0 &lt; S_L^\ast, S_L^\ast \leq 0 S_R^\ast, S_R^\ast \leq 0 &lt; S_R, S_R \leq 0\)の場合を図示したものです。</p>
+
+<p><img src="/assets/images/simulation/iso_hlld_02.png" alt="" /></p>
+
+<p>よって、数値計算を行う場合に、その流束の選択は</p>
+
+\[\mathbf{F}_\mathrm{iso \ HLLD} 
+= \left\{ \begin{array}{ll}
+\mathbf{F}_L &amp; \mathrm{if} \ S_L &gt; 0 \\
+\mathbf{F}_L^\ast = \mathbf{F}_L + S_L (\mathbf{U}_L^\ast - \mathbf{U}_L) &amp; \mathrm{if} \ S_L \leq 0 &lt; S_L^\ast \\
+\mathbf{F}_c^\ast &amp; \mathrm{if} \ S_L^\ast \leq 0 &lt; S_R^\ast \\
+\mathbf{F}_R^\ast = \mathbf{F}_R + S_R (\mathbf{U}_R^\ast - \mathbf{U}_R)&amp; \mathrm{if} \ S_R^\ast &lt; 0 &lt; S_R \\
+\mathbf{F}_R &amp; \mathrm{if} \ S_R \leq 0 
+\end{array} \right. \tag{20}\]
+
+<p>のようにします。</p>
+
+<h2 id="等温hlld流束の計算モジュール">等温HLLD流束の計算モジュール</h2>
+
+<p>以下に等温HLLD流束計算コードのJulia実装例を示します。</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="nf"> hlld_core</span><span class="x">(</span><span class="n">rol</span><span class="x">,</span> <span class="n">vnl</span><span class="x">,</span> <span class="n">vtl</span><span class="x">,</span> <span class="n">vul</span><span class="x">,</span> <span class="n">prl</span><span class="x">,</span> <span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">,</span> <span class="n">ror</span><span class="x">,</span> <span class="n">vnr</span><span class="x">,</span> <span class="n">vtr</span><span class="x">,</span> <span class="n">vur</span><span class="x">,</span> <span class="n">prr</span><span class="x">,</span> <span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+    <span class="c"># compute B * B at left side</span>
+    <span class="n">bl2</span> <span class="o">=</span> <span class="n">dot</span><span class="x">([</span><span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">],</span> <span class="x">[</span><span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">])</span>
+    <span class="c"># compute fast-mode speed at left side</span>
+    <span class="n">vfl</span> <span class="o">=</span> <span class="n">sqrt</span><span class="x">(((</span><span class="n">bl2</span><span class="o">+</span><span class="n">prl</span><span class="x">)</span><span class="o">+</span><span class="n">sqrt</span><span class="x">((</span><span class="n">bl2</span><span class="o">+</span><span class="n">prl</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">prl</span><span class="o">*</span><span class="n">bnl</span><span class="o">^</span><span class="mi">2</span><span class="x">))</span><span class="o">/</span><span class="x">(</span><span class="mi">2</span><span class="o">*</span><span class="n">rol</span><span class="x">))</span>
+    <span class="c"># compute B * B at right side</span>
+    <span class="n">br2</span> <span class="o">=</span> <span class="n">dot</span><span class="x">([</span><span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">],</span> <span class="x">[</span><span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">])</span>
+    <span class="c"># compute fast-mode speed at right side</span>
+    <span class="n">vfr</span> <span class="o">=</span> <span class="n">sqrt</span><span class="x">(((</span><span class="n">br2</span><span class="o">+</span><span class="n">prr</span><span class="x">)</span><span class="o">+</span><span class="n">sqrt</span><span class="x">((</span><span class="n">br2</span><span class="o">+</span><span class="n">prr</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">prr</span><span class="o">*</span><span class="n">bnr</span><span class="o">^</span><span class="mi">2</span><span class="x">))</span><span class="o">/</span><span class="x">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ror</span><span class="x">))</span>
+    <span class="c"># compute sl, sr</span>
+    <span class="n">sl</span> <span class="o">=</span> <span class="n">min</span><span class="x">(</span><span class="n">vnl</span><span class="x">,</span> <span class="n">vnr</span><span class="x">)</span> <span class="o">-</span> <span class="n">max</span><span class="x">(</span><span class="n">vfl</span><span class="x">,</span> <span class="n">vfr</span><span class="x">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">max</span><span class="x">(</span><span class="n">vnl</span><span class="x">,</span> <span class="n">vnr</span><span class="x">)</span> <span class="o">+</span> <span class="n">max</span><span class="x">(</span><span class="n">vfl</span><span class="x">,</span> <span class="n">vfr</span><span class="x">)</span>
+    <span class="c"># compute bnc from HLL average</span>
+    <span class="n">bnc</span> <span class="o">=</span> <span class="x">(</span><span class="n">sr</span><span class="o">*</span><span class="n">bnr</span><span class="o">-</span><span class="n">sl</span><span class="o">*</span><span class="n">bnl</span><span class="x">)</span> <span class="o">/</span> <span class="x">(</span><span class="n">sr</span><span class="o">-</span><span class="n">sl</span><span class="x">)</span>
+    <span class="c"># compute pt at left and right sides</span>
+    <span class="n">ptl</span> <span class="o">=</span> <span class="n">prl</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">bl2</span>
+    <span class="n">ptr</span> <span class="o">=</span> <span class="n">prr</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">br2</span>
+    <span class="c"># compute ro from HLL average at intermediate state</span>
+    <span class="n">srsl</span> <span class="o">=</span> <span class="n">sr</span> <span class="o">-</span> <span class="n">sl</span>
+    <span class="n">roi</span> <span class="o">=</span> <span class="x">(</span><span class="n">sr</span><span class="o">*</span><span class="n">ror</span><span class="o">-</span><span class="n">sl</span><span class="o">*</span><span class="n">rol</span><span class="o">-</span><span class="n">ror</span><span class="o">*</span><span class="n">vnr</span><span class="o">+</span><span class="n">rol</span><span class="o">*</span><span class="n">vnl</span><span class="x">)</span> <span class="o">/</span> <span class="n">srsl</span>
+    <span class="c"># compute Fhll for density flux</span>
+    <span class="n">Fhllro</span> <span class="o">=</span> <span class="x">(</span><span class="n">sr</span><span class="o">*</span><span class="n">rol</span><span class="o">*</span><span class="n">vnl</span><span class="o">-</span><span class="n">sl</span><span class="o">*</span><span class="n">ror</span><span class="o">*</span><span class="n">vnr</span><span class="o">+</span><span class="n">sr</span><span class="o">*</span><span class="n">sl</span><span class="o">*</span><span class="x">(</span><span class="n">ror</span><span class="o">-</span><span class="n">rol</span><span class="x">))</span> <span class="o">/</span> <span class="n">srsl</span>
+    <span class="c"># compute Fhll for x-momentum flux</span>
+    <span class="n">Fmnl</span> <span class="o">=</span> <span class="n">rol</span> <span class="o">*</span> <span class="n">vnl</span> <span class="o">*</span> <span class="n">vnl</span> <span class="o">+</span> <span class="n">ptl</span> <span class="o">-</span> <span class="n">bnc</span> <span class="o">*</span> <span class="n">bnc</span>
+    <span class="n">Fmnr</span> <span class="o">=</span> <span class="n">ror</span> <span class="o">*</span> <span class="n">vnr</span> <span class="o">*</span> <span class="n">vnr</span> <span class="o">+</span> <span class="n">ptr</span> <span class="o">-</span> <span class="n">bnc</span> <span class="o">*</span> <span class="n">bnc</span>
+    <span class="n">Fhllmn</span> <span class="o">=</span> <span class="x">(</span><span class="n">sr</span><span class="o">*</span><span class="n">Fmnl</span><span class="o">-</span><span class="n">sl</span><span class="o">*</span><span class="n">Fmnr</span><span class="o">+</span><span class="n">sr</span><span class="o">*</span><span class="n">sl</span><span class="o">*</span><span class="x">(</span><span class="n">ror</span><span class="o">*</span><span class="n">vnr</span><span class="o">-</span><span class="n">rol</span><span class="o">*</span><span class="n">vnl</span><span class="x">))</span> <span class="o">/</span> <span class="n">srsl</span>
+    <span class="c"># compute vn at inbermediate state</span>
+    <span class="n">vni</span> <span class="o">=</span> <span class="n">Fhllro</span> <span class="o">/</span> <span class="n">roi</span>
+    <span class="c"># compute sl*, sr*</span>
+    <span class="n">rtroi</span> <span class="o">=</span> <span class="n">sqrt</span><span class="x">(</span><span class="n">roi</span><span class="x">)</span>
+    <span class="n">sli</span> <span class="o">=</span> <span class="n">vni</span> <span class="o">-</span> <span class="n">abs</span><span class="x">(</span><span class="n">bnc</span><span class="x">)</span> <span class="o">/</span> <span class="n">rtroi</span>
+    <span class="n">sri</span> <span class="o">=</span> <span class="n">vni</span> <span class="o">+</span> <span class="n">abs</span><span class="x">(</span><span class="n">bnc</span><span class="x">)</span> <span class="o">/</span> <span class="n">rtroi</span>
+    <span class="c"># compute my, mz, by, bz at left inner side in Riemann fan</span>
+    <span class="k">if</span> <span class="n">abs</span><span class="x">((</span><span class="n">sl</span><span class="o">-</span><span class="n">sri</span><span class="x">)</span><span class="o">*</span><span class="x">(</span><span class="n">sl</span><span class="o">-</span><span class="n">sli</span><span class="x">))</span> <span class="o">&gt;</span> <span class="mf">1.0e-10</span>
+        <span class="n">denol</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="x">((</span><span class="n">sl</span><span class="o">-</span><span class="n">sri</span><span class="x">)</span><span class="o">*</span><span class="x">(</span><span class="n">sl</span><span class="o">-</span><span class="n">sli</span><span class="x">))</span>
+        <span class="n">mtil</span> <span class="o">=</span> <span class="n">roi</span> <span class="o">*</span> <span class="n">vtl</span> <span class="o">-</span> <span class="x">(</span><span class="n">vni</span><span class="o">-</span><span class="n">vnl</span><span class="x">)</span> <span class="o">*</span> <span class="n">denol</span> <span class="o">*</span> <span class="n">btl</span> <span class="o">*</span> <span class="n">bnc</span>
+        <span class="n">muil</span> <span class="o">=</span> <span class="n">roi</span> <span class="o">*</span> <span class="n">vul</span> <span class="o">-</span> <span class="x">(</span><span class="n">vni</span><span class="o">-</span><span class="n">vnl</span><span class="x">)</span> <span class="o">*</span> <span class="n">denol</span> <span class="o">*</span> <span class="n">bul</span> <span class="o">*</span> <span class="n">bnc</span>
+        <span class="n">btil</span> <span class="o">=</span> <span class="n">btl</span> <span class="o">*</span> <span class="x">(</span><span class="n">rol</span><span class="o">*</span><span class="x">(</span><span class="n">sl</span><span class="o">-</span><span class="n">vnl</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">bnc</span><span class="o">^</span><span class="mi">2</span><span class="x">)</span> <span class="o">*</span> <span class="n">denol</span> <span class="o">/</span> <span class="n">roi</span>
+        <span class="n">buil</span> <span class="o">=</span> <span class="n">bul</span> <span class="o">*</span> <span class="x">(</span><span class="n">rol</span><span class="o">*</span><span class="x">(</span><span class="n">sl</span><span class="o">-</span><span class="n">vnl</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">bnc</span><span class="o">^</span><span class="mi">2</span><span class="x">)</span> <span class="o">*</span> <span class="n">denol</span> <span class="o">/</span> <span class="n">roi</span>
+    <span class="k">else</span>
+        <span class="n">mtil</span> <span class="o">=</span> <span class="n">rol</span> <span class="o">*</span> <span class="n">vtl</span>
+        <span class="n">muil</span> <span class="o">=</span> <span class="n">rol</span> <span class="o">*</span> <span class="n">vul</span>
+        <span class="n">btil</span> <span class="o">=</span> <span class="n">btl</span>
+        <span class="n">buil</span> <span class="o">=</span> <span class="n">bul</span>
+    <span class="k">end</span>
+    <span class="c"># compute my, mz, by, bz at right inner side in Riemann fan</span>
+    <span class="k">if</span> <span class="n">abs</span><span class="x">((</span><span class="n">sr</span><span class="o">-</span><span class="n">sri</span><span class="x">)</span><span class="o">*</span><span class="x">(</span><span class="n">sr</span><span class="o">-</span><span class="n">sli</span><span class="x">))</span> <span class="o">&gt;</span> <span class="mf">1.0e-10</span>
+        <span class="n">denor</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="x">((</span><span class="n">sr</span><span class="o">-</span><span class="n">sri</span><span class="x">)</span><span class="o">*</span><span class="x">(</span><span class="n">sr</span><span class="o">-</span><span class="n">sli</span><span class="x">))</span>
+        <span class="n">mtir</span> <span class="o">=</span> <span class="n">roi</span> <span class="o">*</span> <span class="n">vtr</span> <span class="o">-</span> <span class="x">(</span><span class="n">vni</span><span class="o">-</span><span class="n">vnr</span><span class="x">)</span> <span class="o">*</span> <span class="n">denor</span> <span class="o">*</span> <span class="n">btr</span> <span class="o">*</span> <span class="n">bnc</span>
+        <span class="n">muir</span> <span class="o">=</span> <span class="n">roi</span> <span class="o">*</span> <span class="n">vur</span> <span class="o">-</span> <span class="x">(</span><span class="n">vni</span><span class="o">-</span><span class="n">vnr</span><span class="x">)</span> <span class="o">*</span> <span class="n">denor</span> <span class="o">*</span> <span class="n">bur</span> <span class="o">*</span> <span class="n">bnc</span>
+        <span class="n">btir</span> <span class="o">=</span> <span class="n">btr</span> <span class="o">*</span> <span class="x">(</span><span class="n">ror</span><span class="o">*</span><span class="x">(</span><span class="n">sr</span><span class="o">-</span><span class="n">vnr</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">bnc</span><span class="o">^</span><span class="mi">2</span><span class="x">)</span> <span class="o">*</span> <span class="n">denor</span> <span class="o">/</span> <span class="n">roi</span>
+        <span class="n">buir</span> <span class="o">=</span> <span class="n">bur</span> <span class="o">*</span> <span class="x">(</span><span class="n">ror</span><span class="o">*</span><span class="x">(</span><span class="n">sr</span><span class="o">-</span><span class="n">vnr</span><span class="x">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">bnc</span><span class="o">^</span><span class="mi">2</span><span class="x">)</span> <span class="o">*</span> <span class="n">denor</span> <span class="o">/</span> <span class="n">roi</span>
+    <span class="k">else</span>
+        <span class="n">mtir</span> <span class="o">=</span> <span class="n">ror</span> <span class="o">*</span> <span class="n">vtr</span>
+        <span class="n">muir</span> <span class="o">=</span> <span class="n">ror</span> <span class="o">*</span> <span class="n">vur</span>
+        <span class="n">btir</span> <span class="o">=</span> <span class="n">btr</span>
+        <span class="n">buir</span> <span class="o">=</span> <span class="n">bur</span>
+    <span class="k">end</span>
+    <span class="c"># compute my, mz, by, bz at middle inner side in Riemann fan</span>
+    <span class="n">signbn</span> <span class="o">=</span> <span class="n">sign</span><span class="x">(</span><span class="n">bnc</span><span class="x">)</span>
+    <span class="n">mtic</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="x">(</span><span class="n">mtil</span><span class="o">+</span><span class="n">mtir</span><span class="o">+</span><span class="x">(</span><span class="n">btir</span><span class="o">-</span><span class="n">btil</span><span class="x">)</span><span class="o">*</span><span class="n">rtroi</span><span class="o">*</span><span class="n">signbn</span><span class="x">)</span>
+    <span class="n">muic</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="x">(</span><span class="n">muil</span><span class="o">+</span><span class="n">muir</span><span class="o">+</span><span class="x">(</span><span class="n">buir</span><span class="o">-</span><span class="n">buil</span><span class="x">)</span><span class="o">*</span><span class="n">rtroi</span><span class="o">*</span><span class="n">signbn</span><span class="x">)</span>
+    <span class="n">btic</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="x">(</span><span class="n">btil</span><span class="o">+</span><span class="n">btir</span><span class="o">+</span><span class="x">(</span><span class="n">mtir</span><span class="o">-</span><span class="n">mtil</span><span class="x">)</span><span class="o">*</span><span class="n">signbn</span><span class="o">/</span><span class="n">rtroi</span><span class="x">)</span>
+    <span class="n">buic</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="x">(</span><span class="n">buil</span><span class="o">+</span><span class="n">buir</span><span class="o">+</span><span class="x">(</span><span class="n">muir</span><span class="o">-</span><span class="n">muil</span><span class="x">)</span><span class="o">*</span><span class="n">signbn</span><span class="o">/</span><span class="n">rtroi</span><span class="x">)</span>
+    <span class="c"># choose flux</span>
+    <span class="k">if</span> <span class="n">sl</span> <span class="o">&gt;</span> <span class="mf">0.0</span>
+        <span class="n">Ultmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">rol</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vnl</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vtl</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vul</span><span class="x">,</span> <span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">]</span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="n">Convert</span><span class="o">.</span><span class="n">u_to_f</span><span class="x">(</span><span class="n">Ultmp</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+    <span class="k">elseif</span> <span class="n">sl</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">sli</span>
+        <span class="n">Ultmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">rol</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vnl</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vtl</span><span class="x">,</span> <span class="n">rol</span><span class="o">*</span><span class="n">vul</span><span class="x">,</span> <span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">]</span>
+        <span class="n">Ulitmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">roi</span><span class="x">,</span> <span class="n">roi</span><span class="o">*</span><span class="n">vni</span><span class="x">,</span> <span class="n">mtil</span><span class="x">,</span> <span class="n">muil</span><span class="x">,</span> <span class="n">bnc</span><span class="x">,</span> <span class="n">btil</span><span class="x">,</span> <span class="n">buil</span><span class="x">]</span>
+        <span class="n">Fltmp</span> <span class="o">=</span> <span class="n">Convert</span><span class="o">.</span><span class="n">u_to_f</span><span class="x">(</span><span class="n">Ultmp</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="n">Fltmp</span> <span class="o">+</span> <span class="n">sl</span> <span class="o">*</span> <span class="x">(</span><span class="n">Ulitmp</span><span class="o">-</span><span class="n">Ultmp</span><span class="x">)</span>
+    <span class="k">elseif</span> <span class="n">sli</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">sri</span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="x">[</span><span class="n">roi</span><span class="o">*</span><span class="n">vni</span><span class="x">,</span> <span class="n">Fhllmn</span><span class="x">,</span> <span class="n">mtic</span><span class="o">*</span><span class="n">vni</span><span class="o">-</span><span class="n">btic</span><span class="o">*</span><span class="n">bnc</span><span class="x">,</span> <span class="n">muic</span><span class="o">*</span><span class="n">vni</span><span class="o">-</span><span class="n">buic</span><span class="o">*</span><span class="n">bnc</span><span class="x">,</span> <span class="mf">0.0</span><span class="x">,</span> <span class="n">btic</span><span class="o">*</span><span class="n">vni</span><span class="o">-</span><span class="n">bnc</span><span class="o">*</span><span class="n">mtic</span><span class="o">/</span><span class="n">roi</span><span class="x">,</span> <span class="n">buic</span><span class="o">*</span><span class="n">vni</span><span class="o">-</span><span class="n">bnc</span><span class="o">*</span><span class="n">muic</span><span class="o">/</span><span class="n">roi</span><span class="x">]</span>
+    <span class="k">elseif</span> <span class="n">sri</span> <span class="o">&lt;=</span> <span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">sr</span>
+        <span class="n">Urtmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">ror</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vnr</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vtr</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vur</span><span class="x">,</span> <span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">]</span>
+        <span class="n">Uritmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">roi</span><span class="x">,</span> <span class="n">roi</span><span class="o">*</span><span class="n">vni</span><span class="x">,</span> <span class="n">mtir</span><span class="x">,</span> <span class="n">muil</span><span class="x">,</span> <span class="n">bnc</span><span class="x">,</span> <span class="n">btir</span><span class="x">,</span> <span class="n">buir</span><span class="x">]</span>
+        <span class="n">Frtmp</span> <span class="o">=</span> <span class="n">Convert</span><span class="o">.</span><span class="n">u_to_f</span><span class="x">(</span><span class="n">Urtmp</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="n">Frtmp</span> <span class="o">+</span> <span class="n">sr</span> <span class="o">*</span> <span class="x">(</span><span class="n">Uritmp</span><span class="o">-</span><span class="n">Urtmp</span><span class="x">)</span>
+    <span class="k">else</span>
+        <span class="n">Urtmp</span> <span class="o">=</span> <span class="x">[</span><span class="n">ror</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vnr</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vtr</span><span class="x">,</span> <span class="n">ror</span><span class="o">*</span><span class="n">vur</span><span class="x">,</span> <span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">]</span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="n">Convert</span><span class="o">.</span><span class="n">u_to_f</span><span class="x">(</span><span class="n">Urtmp</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">Fresult</span>
+<span class="k">end</span>
+
+<span class="k">function</span><span class="nf"> hlld!</span><span class="x">(</span><span class="n">F</span><span class="o">::</span><span class="kt">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span> <span class="mi">2</span><span class="x">},</span> <span class="n">Vl</span><span class="o">::</span><span class="kt">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span> <span class="mi">2</span><span class="x">},</span> <span class="n">Vr</span><span class="o">::</span><span class="kt">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span> <span class="mi">2</span><span class="x">},</span> <span class="n">nxmax</span><span class="o">::</span><span class="kt">Int64</span><span class="x">,</span> <span class="n">cs2</span><span class="o">::</span><span class="kt">Float64</span><span class="x">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">nxmax</span><span class="o">-</span><span class="mi">1</span>
+        <span class="c"># set primitive variables at left side</span>
+        <span class="n">rol</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vnl</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vtl</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vul</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">4</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">bnl</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">5</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">btl</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">6</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">bul</span> <span class="o">=</span> <span class="n">Vl</span><span class="x">[</span><span class="mi">7</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">prl</span> <span class="o">=</span> <span class="n">cs2</span> <span class="o">*</span> <span class="n">rol</span>
+        <span class="c"># set primitive variables at right side</span>
+        <span class="n">ror</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">1</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vnr</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">2</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vtr</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">3</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">vur</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">4</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">bnr</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">5</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">btr</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">6</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">bur</span> <span class="o">=</span> <span class="n">Vr</span><span class="x">[</span><span class="mi">7</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span>
+        <span class="n">prr</span> <span class="o">=</span> <span class="n">cs2</span> <span class="o">*</span> <span class="n">ror</span>
+        <span class="c"># compute HLLD flux </span>
+        <span class="n">Fresult</span> <span class="o">=</span> <span class="n">hlld_core</span><span class="x">(</span><span class="n">rol</span><span class="x">,</span> <span class="n">vnl</span><span class="x">,</span> <span class="n">vtl</span><span class="x">,</span> <span class="n">vul</span><span class="x">,</span> <span class="n">prl</span><span class="x">,</span> <span class="n">bnl</span><span class="x">,</span> <span class="n">btl</span><span class="x">,</span> <span class="n">bul</span><span class="x">,</span> <span class="n">ror</span><span class="x">,</span> <span class="n">vnr</span><span class="x">,</span> <span class="n">vtr</span><span class="x">,</span> <span class="n">vur</span><span class="x">,</span> <span class="n">prr</span><span class="x">,</span> <span class="n">bnr</span><span class="x">,</span> <span class="n">btr</span><span class="x">,</span> <span class="n">bur</span><span class="x">,</span> <span class="n">cs2</span><span class="x">)</span>
+        <span class="c"># convert flux and input to F</span>
+        <span class="n">F</span><span class="x">[</span><span class="o">:</span><span class="x">,</span> <span class="n">i</span><span class="x">]</span> <span class="o">=</span> <span class="n">Fresult</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>例えば全圧力\(P_\mathrm{tot} = P_\mathrm{gas} + \frac{1}{2} B^2\)を計算する際には、ガス圧\(P_\mathrm{gas}\)が必要になります。その場合には以下の関係式を用います。</p>
+
+\[C_s^2 = \frac{P_\mathrm{gas}}{\rho} \ \Longrightarrow \ 
+P_\mathrm{gas} = C_s^2 \rho \tag{21}\]
+
+<p>等温の場合、<a href="/mhd/sound_wave">音速\(C_s\)</a>は一定・一様な値になります。この値をあらかじめ初期条件として定めておくことで、計算を進めることができます。<br />
+初期条件として</p>
+
+\[\begin{aligned}
+(\rho_L, v_{x, L}, v_{y, L}, v_{z, L}, B_{x, L}, B_{y, L}, B_{z, L}) = (1.08, 1.2, 0.01, 0.5, 2.0/\sqrt{4\pi}, 3.6/\sqrt{4\pi}, 2.0/\sqrt{4\pi}) \\
+(\rho_R, v_{x, R}, v_{y, R}, v_{z, R}, B_{x, R}, B_{y, R}, B_{z, R}) = (1.0, 0.0, 0.0, 0.0, 2.0/\sqrt{4\pi}, 4.0/\sqrt{4\pi}, 2.0/\sqrt{4\pi})
+\end{aligned}\]
+
+<p>そして\(C_s = 1.0\)とした場合に、上述のJulia実装で計算された等温磁気流体衝撃波の時間発展を以下に示します。</p>
+
+<p><img src="/assets/images/simulation/iso_hlld_03.gif" alt="" /></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li><a href="https://www.sciencedirect.com/science/article/pii/S0021999107000617?via%3Dihub">Mignone, 2007, “A Simple and Accurate Riemann Solver for Isothermal MHD”</a></li>
+  <li><a href="https://github.com/PrincetonUniversity/athena">Athena++, GitHub</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

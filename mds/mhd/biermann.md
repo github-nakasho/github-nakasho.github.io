@@ -56,9 +56,9 @@ $$
 右辺第二項を整理しましょう。
 
 $$
-\nabla \times \left( \frac{\nabla P_e}{n}\right) 
-= \epsilon_{ijk} \partial_j \left( \frac{\partial_k P_e}{n} \right) \mathbf{e}_i 
-= \underbrace{\epsilon_{ijk} \frac{\partial_j \partial_k P_e}{n}}_{=0} \mathbf{e}_i - \epsilon_{ijk} \frac{\partial_j n \partial_k P_e}{n^2} \mathbf{e}_i 
+\nabla \times \left( \frac{\nabla P_e}{n_e}\right) 
+= \epsilon_{ijk} \partial_j \left( \frac{\partial_k P_e}{n_e} \right) \mathbf{e}_i 
+= \underbrace{\epsilon_{ijk} \frac{\partial_j \partial_k P_e}{n_e}}_{=0} \mathbf{e}_i - \epsilon_{ijk} \frac{(\partial_j n_e) (\partial_k P_e)}{n_e^2} \mathbf{e}_i 
 = - \frac{\nabla n_e \times \nabla P_e}{n_e^2} \tag{4}
 $$
 
@@ -80,8 +80,21 @@ $$
 ![](/assets/images/mhd/biermann_01.png)
 
 すると下側の方が上側に比べて圧力による力$$-\nabla P_e / n_e$$が大きくなるため、それと釣り合うように大きな電場が必要となることがわかります。
-電場の大きさの違いから$$\nabla \times \mathbf{E}$$が発生し、そこから磁場が紙面垂直方向に生成されるのです。
+電場の大きさの違いから$$\nabla \times \mathbf{E}$$が発生し、そこから磁場が紙面垂直方向に生成されるのです。  
+ビアマンバッテリーにより生成される磁場の大きさがどの程度か、そのオーダーを評価してみましょう。
+(5)式より
 
+$$
+\frac{B}{t_\mathrm{age}} 
+\approx \frac{c}{e n_e^2} \frac{n_e}{\ell} \frac{P_e}{\ell} \sin \theta \ \Longrightarrow \ 
+B 
+\approx 5 \times 10^{-17} \left( \frac{t_\mathrm{age}}{2 \mathrm{Myr}} \right) \left( \frac{\sin \theta}{0.1}\right) \left( \frac{\ell}{1 \mathrm{pc}}\right)^{-2} \left( \frac{T_e}{10^4 \mathrm{K}}\right) \quad [\mathrm{G}] \tag{6}
+$$
+
+のようになります。
+途中、$$\ell$$を系の典型的な長さスケール、$$\theta$$を$$\nabla n_e$$と$$\nabla P_e$$のなす角度です。
+さらに$$P_e = n_e k_B T_e$$を用いました。
+かなり小さな値ではありますが、これにより有限の磁場が生成されることがわかりました。
 
 ## 最近の研究: 初代星周辺で起こる種磁場生成
 
@@ -101,7 +114,7 @@ $$
 
 $$
 \mathbf{E} 
-= - \mathbf{v} \times \frac{\mathbf{B}}{c} - \frac{\nabla P_e}{e n_e} + \frac{\mathbf{f}_\mathrm{rad}}{en_e} \tag{6}
+= - \mathbf{v} \times \frac{\mathbf{B}}{c} - \frac{\nabla P_e}{e n_e} + \frac{\mathbf{f}_\mathrm{rad}}{en_e} \tag{7}
 $$
 
 のようになります。
@@ -109,7 +122,7 @@ $$
 
 $$
 \frac{\partial \mathbf{B}}{\partial t} 
-= \nabla \times (\mathbf{v} \times \mathbf{B}) - \frac{c \nabla n_e \times \nabla P_e}{e n_e^2} - \frac{c}{e} \nabla \times \mathbf{f}_\mathrm{rad} \tag{7}
+= \nabla \times (\mathbf{v} \times \mathbf{B}) - \frac{c \nabla n_e \times \nabla P_e}{e n_e^2} - \frac{c}{e} \nabla \times \mathbf{f}_\mathrm{rad} \tag{8}
 $$
 
 のように、放射による力の効果を考慮した式を得ることができます。

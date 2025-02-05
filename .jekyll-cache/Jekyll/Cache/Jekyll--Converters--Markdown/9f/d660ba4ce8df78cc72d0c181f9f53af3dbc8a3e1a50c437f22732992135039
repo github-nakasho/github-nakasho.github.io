@@ -1,0 +1,134 @@
+I"�#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビアマンバッテリー効果による磁場生成" id="markdown-toc-ビアマンバッテリー効果による磁場生成">ビアマンバッテリー効果による磁場生成</a>    <ol>
+      <li><a href="#ビアマンバッテリー-biermann-battery" id="markdown-toc-ビアマンバッテリー-biermann-battery">ビアマンバッテリー (Biermann battery)</a></li>
+      <li><a href="#最近の研究-初代星周辺で起こる種磁場生成" id="markdown-toc-最近の研究-初代星周辺で起こる種磁場生成">最近の研究: 初代星周辺で起こる種磁場生成</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビアマンバッテリー効果による磁場生成">ビアマンバッテリー効果による磁場生成</h1>
+
+<p>ここでは、初期に磁場が存在しない状態から磁場を発生させる物理機構の一つとして知られるビアマンバッテリー(Biermann battery)についてまとめています。</p>
+
+<h2 id="ビアマンバッテリー-biermann-battery">ビアマンバッテリー (Biermann battery)</h2>
+
+<p>完全電離しているプラズマガスにおける電子の運動方程式を考えましょう。
+電子とイオンの衝突は無視できるとすると</p>
+
+\[m_e n_e \frac{D \mathbf{v}_e}{Dt} 
+= - \nabla P_e - e n_e \left( \mathbf{E} + \mathbf{v} \times \frac{\mathbf{B}}{c} \right) \tag{1}\]
+
+<p>のようになります。
+ここで\(\mathbf{v}, n_e, P_e\)はそれぞれ磁気流体の速度、電子数密度、電子による分圧です。
+電子に働く力は釣り合っているとすると、左辺の加速度はゼロより</p>
+
+\[\mathbf{E} 
+= - \mathbf{v} \times \frac{\mathbf{B}}{c} - \frac{\nabla P_e}{en_e} \tag{2}\]
+
+<p>を得ます。
+これをファラデーの法則に代入すると</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= - c \nabla \times \mathbf{E} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) + \frac{c}{e} \nabla \times \left( \frac{\nabla P_e}{n_e}\right) \tag{3}\]
+
+<p>となります。
+右辺第二項を整理しましょう。</p>
+
+\[\nabla \times \left( \frac{\nabla P_e}{n_e}\right) 
+= \epsilon_{ijk} \partial_j \left( \frac{\partial_k P_e}{n_e} \right) \mathbf{e}_i 
+= \underbrace{\epsilon_{ijk} \frac{\partial_j \partial_k P_e}{n_e}}_{=0} \mathbf{e}_i - \epsilon_{ijk} \frac{(\partial_j n_e) (\partial_k P_e)}{n_e^2} \mathbf{e}_i 
+= - \frac{\nabla n_e \times \nabla P_e}{n_e^2} \tag{4}\]
+
+<p>より</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) - \frac{c \nabla n_e \times \nabla P_e}{e n_e^2} \tag{5}\]
+
+<p>のように整理されます。
+この第二項をビアマンバッテリー項と呼びます。
+この項は、磁場\(\mathbf{B}\)を含みません。
+このことから初期に磁場がゼロであっても、この項によって有限の磁場が生成されることがわかります。
+この項の物理的意味を直感的に理解してみましょう。
+下図は、電子一個に働く圧力による力と電場による力との釣り合いを示したものです。
+ただし、図の上側ほど数密度が大きくなっています。</p>
+
+<p><img src="/assets/images/mhd/biermann_01.png" alt="" /></p>
+
+<p>すると下側の方が上側に比べて圧力による力\(-\nabla P_e / n_e\)が大きくなるため、それと釣り合うように大きな電場が必要となることがわかります。
+電場の大きさの違いから\(\nabla \times \mathbf{E}\)が発生し、そこから磁場が紙面垂直方向に生成されるのです。<br />
+ビアマンバッテリーにより生成される磁場の大きさがどの程度か、そのオーダーを評価してみましょう。
+(5)式より</p>
+
+\[\frac{B}{t_\mathrm{age}} 
+\approx \frac{c}{e n_e^2} \frac{n_e}{\ell} \frac{P_e}{\ell} \sin \theta \ \Longrightarrow \ 
+B 
+\sim 5 \times 10^{-17} \left( \frac{t_\mathrm{age}}{2 \mathrm{Myr}} \right) \left( \frac{\sin \theta}{0.1}\right) \left( \frac{\ell}{1 \mathrm{pc}}\right)^{-2} \left( \frac{T_e}{10^4 \mathrm{K}}\right) \quad [\mathrm{G}] \tag{6}\]
+
+<h2 id="最近の研究-初代星周辺で起こる種磁場生成">最近の研究: 初代星周辺で起こる種磁場生成</h2>
+
+<p>このビアマンバッテリーは、宇宙初期の種磁場生成機構として注目されています。
+ここでは <a href="https://iopscience.iop.org/article/10.1088/0004-637X/741/2/93">Doi &amp; Susa 2011</a>を例に見ていきましょう。
+この論文では、質量\(500M_\odot\)の初代星からの強烈な放射にさらされている銀河間物質の塊の時間発展を、放射による力とビアマンバッテリーを考慮した輻射磁気流体計算から調べました。</p>
+
+<p><img src="/assets/images/mhd/biermann_02.png" alt="" /></p>
+
+<p>銀河間物質の塊(密度超過領域)に向かって、左から放射をぶつけます。
+このとき、密度超過領域が放射を遮ることで、その後方に放射の届かない影の領域を形成します。
+4段目の右パネルに注目すると、\(t=2\mathrm{Myr}\)では黒線(電離波面)に沿って、\(10^{-18} \mathrm{G}\)程度の磁場が生成されていることがわかります。
+放射にさらされている部分は、電離によって電子数密度が大きくなります。
+電子数密度分布と電子圧力分布に差異が生まれ、そこから\(\nabla n_e \times \nabla p_e\)がゼロでない値となり、磁場が生成されています。<br />
+この論文では、さらに放射による力\(\mathbf{f}_\mathrm{rad}\)による磁場生成効果も考慮に入れています。
+(1)式の右辺に\(\mathbf{f}_\mathrm{rad}\)を足し、さらに先程と同様に電子に働く力の釣り合いを考えると</p>
+
+\[\mathbf{E} 
+= - \mathbf{v} \times \frac{\mathbf{B}}{c} - \frac{\nabla P_e}{e n_e} + \frac{\mathbf{f}_\mathrm{rad}}{en_e} \tag{7}\]
+
+<p>のようになります。
+これをファラデーの法則に代入すれば</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) - \frac{c \nabla n_e \times \nabla P_e}{e n_e^2} - \frac{c}{e} \nabla \times \mathbf{f}_\mathrm{rad} \tag{8}\]
+
+<p>のように、放射による力の効果を考慮した式を得ることができます。
+ビアマンバッテリーによる磁場生成効果と放射による力の効果のどちらが重要かを調べたのが下図です。</p>
+
+<p><img src="/assets/images/mhd/biermann_03.png" alt="" /></p>
+
+<p>この図は磁場の最大値の時間発展を描画したもので、青線はビアマンバッテリーのみ、緑線は放射による力の効果のみ、そして赤線は両方を考慮した場合を表しています。
+この図から明らかなように、この論文で調査された現実的なパラメータにおいては、ビアマンバッテリー効果による磁場生成が優勢であることがわかります。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[1] <a href="https://arxiv.org/abs/astro-ph/0302168">Biermann &amp; Galea, 2003, “Origin of Cosmic Magnetic Fields”</a><br />
+[2] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/716/2/1566">Ando et al., 2010, “Generation of Seed Magnetic Field around First Stars: Effects of Radiation Force”</a><br />
+[3] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/741/2/93">Doi &amp; Susa, 2011, “Generation of a Seed Magnetic Filed around First Stars: the Biermann Battery Effect”</a><br />
+[4] <a href="https://amzn.to/40HaxEN">Kulsrud, “Plama Physics for Astrophysics”</a><br />
+[5] <a href="http://www.astro-wakate.org/ss2011/web/ss11_proceedings/proceeding/interstellar_10a.pdf">城本雄紀, “初代星周りの磁場生成”</a><br />
+[6] <a href="https://www.icrr.u-tokyo.ac.jp/JPSCR/2006F/presen-files/ichiki.pdf">市來淨與, “宇宙の磁場の起源 -密度揺らぎからの磁場生成とその観測的な応用について-“</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

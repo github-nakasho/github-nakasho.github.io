@@ -1,0 +1,251 @@
+I"L8
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#1次のフェルミ加速-1st-order-fermi-acceleration" id="markdown-toc-1次のフェルミ加速-1st-order-fermi-acceleration">1次のフェルミ加速 (1st order Fermi acceleration)</a>    <ol>
+      <li><a href="#衝撃波におけるフェルミ加速" id="markdown-toc-衝撃波におけるフェルミ加速">衝撃波におけるフェルミ加速</a></li>
+      <li><a href="#粒子加速のメカニズム" id="markdown-toc-粒子加速のメカニズム">粒子加速のメカニズム</a></li>
+      <li><a href="#粒子のエネルギースペクトル" id="markdown-toc-粒子のエネルギースペクトル">粒子のエネルギースペクトル</a></li>
+      <li><a href="#フェルミ加速で得られる最高エネルギー" id="markdown-toc-フェルミ加速で得られる最高エネルギー">フェルミ加速で得られる最高エネルギー</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="1次のフェルミ加速-1st-order-fermi-acceleration">1次のフェルミ加速 (1st order Fermi acceleration)</h1>
+
+<p>ここでは高エネルギー宇宙線の加速機構として知られる、衝撃波でのフェルミ加速 (1次のフェルミ加速)についてメモします。</p>
+
+<h2 id="衝撃波におけるフェルミ加速">衝撃波におけるフェルミ加速</h2>
+
+<p>以下では、簡単のためテスト粒子近似を用い、フェルミ加速の原理を見ていきましょう。
+テスト粒子近似では、熱的な粒子からなるマクロなプラズマ流は、<a href="/mhd/shock#垂直断熱衝撃波">衝撃波のランキン-ユゴニオ関係</a>を満たすように与えられるとします。
+その流れの中での非熱的な高エネルギー粒子の運動について考えるのですが、この粒子の存在によって流れが乱されるようなことはないものとします。
+さらにここで考える衝撃波は、その波面が磁場に垂直である(平行衝撃波)とします。<br />
+一般にプラズマ中には磁場の乱れ (主として<a href="/mhd/alfven_wave">アルヴェーン波と呼ばれる横波</a>)が存在しています。
+この磁場の乱れによって、荷電粒子はその軌道のピッチ角を変化させ、ついには進行方向を変えることになります。
+上流と下流の流体速度よりも大きな速度を持つ荷電粒子は、波によって散乱され、その運動方向を変えます。
+これにより上流から下流へ、下流から上流へと往復運動を行います。</p>
+
+<p>！<a href=""></a></p>
+
+<p>上流の流体と下流の流体は、荷電粒子から見ると互いに近づきあう運動を行っているため、往復するごとに粒子のエネルギーが増加することになります。
+1サイクルごとにエネルギーが増加するという意味で、これを1次のフェルミ加速と呼びます。<br />
+散乱を起こす波の速度は<a href="/mhd/alfven_wave">アルヴェーン速度</a>ですが、これは流体の速度よりはるかに小さく、乱れは基本的に流体と同じ速度で運動していると考えましょう。
+このとき、流体とともに運動する座標系で見ると、散乱は弾性的に起こるものとします。
+つまり粒子のエネルギーは変化しませんが、上流と下流とを往復することでエネルギーが増加していくことになります。</p>
+
+<h2 id="粒子加速のメカニズム">粒子加速のメカニズム</h2>
+
+<p>先ほどの図から、どの程度の加速が得られるかをみていきましょう。
+まずは正面衝突と追突を1回ずつだけ行った場合、すなわち衝撃波面を挟んで一往復したときのエネルギー獲得を考えましょう。
+簡単のため、すでに粒子は超相対論的であるとして\(E \simeq c \vert \mathbf{p} \vert, v \sim c\)の関係が成り立つとします。
+そして上流の超音速流体の速度を\(V_1\)、下流の亜音速流体の速度を\(V_2\)とします。
+正面衝突・追突による運動量変化\(\Delta p_{衝突}, \Delta p_{追突}\)はそれぞれ、<a href="/plasma/mirror#星間乱流による宇宙線の加速-2次のフェルミ加速-2nd-order-fermi-acceleration">2次のフェルミ加速</a>のときと同様に</p>
+
+\[\Delta p_{衝突} 
+= \frac{2V_1 E_x}{c^2}, \quad \Delta p_{追突}
+= -\frac{2V_2 E_x}{c^2} \tag{1}\]
+
+<p>のように与えられます。
+ここで\(E_x = cp_x = c p \cos \theta\)であり、\(\theta\)は衝撃波面を横切る角度です。
+すると一往復で粒子が得るエネルギー\(\Delta E\)は</p>
+
+\[\Delta E 
+= c \Delta p 
+= \frac{2 (V_1 - V_2)}{c} E_x 
+\ \Longrightarrow \ 
+\frac{\Delta E}{E} 
+= \frac{2 (V_1 - V_2)}{c} \frac{E_x}{E} 
+= \frac{2 (V_1 - V_2)}{c} \cos \theta \tag{2}\]
+
+<p>のようになります。<br />
+実際には様々な角度で衝撃波面を横切る粒子が存在することから、\(\theta\)で平均することを考えましょう。
+粒子が\(\theta \sim \theta + d\theta\)で衝撃波面を横切る確率\(P(\theta)\)は、幾何学的な因子である\(\sin \theta\)に粒子の\(x\)方向の速度成分である\(\cos \theta\)をかけて</p>
+
+\[P(\theta) d\theta \propto \sin \theta \cos \theta d \theta \tag{3}\]
+
+<p>のように書かれます。
+確率を全範囲で積分した場合、それは1に規格化されていなければなりません。</p>
+
+\[\int_0^{\pi / 2} \sin \theta \cos \theta d\theta 
+= \frac{1}{2} \int_0^{\pi / 2} \sin 2 \theta d \theta 
+= \frac{1}{2} \tag{4}\]
+
+<p>より、求めたかった確率は</p>
+
+\[P(\theta) d\theta 
+= 2 \sin \theta \cos \theta d\theta \tag{5}\]
+
+<p>となります。
+これを用いて(2)式を\(\theta\)で平均すると</p>
+
+\[\langle \cos \theta \rangle 
+= 2\int_0^{\pi / 2} \sin \theta \cos^2 \theta d\theta 
+\underbrace{=}_{\mu=\cos\theta} 2 \int_0^1 \mu^2 d\mu 
+= \frac{2}{3} \tag{6}\]
+
+<p>より</p>
+
+\[\left\langle \frac{\Delta E}{E}\right\rangle 
+= \frac{4}{3} \frac{V_1 - V_2}{c} \tag{7}\]
+
+<p>となります。
+すると一往復後の粒子のエネルギー\(E_1\)は、初期状態のエネルギーを\(E_0\)として</p>
+
+\[E_1 
+= E_0 + \Delta E 
+= E_0 \left( 1 + \frac{4}{3} \frac{V_1 - V_2}{c}\right) \ \Longrightarrow \ 
+\frac{E_1}{E_0} = 1 + \frac{4}{3} \frac{V_1 - V_2}{c} \tag{8}\]
+
+<p>のようになります。
+途中、角度の平均操作である\(\langle \cdots \rangle\)は省略しました。
+以上より、過程を\(\ell\)回繰り返した後の粒子の得たエネルギー\(E_\ell\)は</p>
+
+\[\frac{E_\ell}{E_0}
+= \left(1+ \frac{4}{3} \frac{V_1 - V_2}{c}\right)^\ell 
+\underbrace{\simeq}_{V_1 - V_2 \ll c} \left( e^{\frac{4}{3} \frac{V_1 - V_2}{c}} \right)^\ell 
+= e^{\frac{4}{3} \frac{V_1 - V_2}{c} \ell} \tag{9}\]
+
+<h2 id="粒子のエネルギースペクトル">粒子のエネルギースペクトル</h2>
+
+<p>続いて、先ほどのメカニズムで加速された荷電粒子が、衝撃波面近傍の加速領域から逃げていく確率を計算しましょう。
+上流に行った高エネルギー粒子は、長い時間が経過すると必ず衝撃波面に戻ってきます。
+そして下流に流された粒子は、先ほどのように追突を起こして再び上流へ戻るものもあれば、そのままさらに下流へ流されて衝撃波面に戻れないものもあるでしょう。
+そのまま下流に流されてしまう確率を\(P_\mathrm{esc}\)とすると、これは</p>
+
+\[P_\mathrm{esc} 
+= \frac{下流のプラズマに流されて逃げる粒子流束}{上流・下流両方から衝撃波面に流入する粒子流束} 
+\tag{10}\]
+
+<p>のように計算されます。
+分子は素直に\(N_0 V_2\)のように書けます。
+分母において、テスト粒子近似から粒子が等方的に存在すると、衝撃波面に流入する粒子の速度の平均は</p>
+
+\[\frac{1}{4\pi} \int_0^{\pi / 2} d\theta \int_0^{2\pi} c \cos \theta \sin \theta d\theta 
+= \frac{c}{4} \int_0^{\pi / 2} \sin 2 \theta d\theta 
+= \frac{c}{4} \tag{11}\]
+
+<p>のように計算されます。
+以上から</p>
+
+\[P_\mathrm{esc} 
+= \frac{N_0 V_2}{\frac{N_0 c}{4}} 
+= \frac{4V_2}{c} \tag{12}\]
+
+<p>を得ます。
+すると\(\ell\)回の往復後にまだ粒子が衝撃波面近傍に残って加速されることができる確率は</p>
+
+\[P(\ell) 
+= \left( 1 - P_\mathrm{esc}\right)^\ell 
+= \left( 1 - \frac{4V_2}{c} \right)^\ell 
+\underbrace{\simeq}_{V_2 \ll c} \left( e^{-\frac{4V_2}{c}} \right)^\ell 
+= e^{-\frac{4V_2}{c} \ell} \tag{13}\]
+
+<p>(9)式より</p>
+
+\[\log \left(\frac{E_\ell}{E_0}\right) 
+= \frac{4}{3} \frac{V_1 - V_2}{c} \ell \ \Longrightarrow \ \ell 
+= \log \left( \frac{E_\ell}{E_0} \right)^{\frac{3c}{4(V_1 - V_2)}} \tag{14}\]
+
+<p>一方、(13)式より</p>
+
+\[\log P(\ell) 
+= - \frac{4 V_2}{c} \ell 
+= - \frac{4 V_2}{c} \log \left( \frac{E_\ell}{E_0} \right)^{\frac{3c}{4(V_1 - V_2)}} 
+= \log \left( \frac{E_\ell}{E_0}\right)^{-\frac{3V_2}{V_1 - V_2}} \tag{15}\]
+
+<p>となるため</p>
+
+\[P(\ell) 
+= \left( \frac{E_\ell}{E_0}\right)^{-\frac{3V_2}{V_1 - V_2}} \tag{16}\]
+
+<p>を得ます。
+ここまで\(\ell\)回の往復する確率\(P(\ell)\)を考えてきましたが、これはエネルギー\(E\)まで粒子が加速される確率\(P(E) = \left( \frac{E}{E_0}\right)^{-\frac{3V_2}{V_1 - V_2}}\)と考えることができます。
+ここから、粒子のエネルギースペクトルを考えていきましょう。
+エネルギーが\(E \sim E + dE\)の範囲にある粒子数を\(N(E)dE\)とすると、あるエネルギー\(E\)より大きなエネルギーを持つ粒子の割合は</p>
+
+\[P(E) \propto \frac{\int_E^\infty N(E) dE}{\int_0^\infty N(E) dE} \tag{17}\]
+
+<p>のように考えることができます。
+この両辺を\(E\)で微分すれば</p>
+
+\[N(E) 
+\propto \frac{dP}{dE} 
+\propto E^{-\frac{3V_2}{V_1- V_2}-1} 
+= E^{-s} \quad \left( s \equiv \frac{V_1 / V_2 + 2}{V_1/ V_2 - 1}\right)\tag{18}\]
+
+<p>のようになり、求めたかった加速粒子のエネルギースペクトル求めることができました。
+スペクトル指数\(s\)の中に現れる\(V_1 / V_2\)は、<a href="/mhd/shock#垂直断熱衝撃波">衝撃波のランキン・ユゴニオ関係</a>から決定できるマクロな定数です。
+衝撃波の詳細な物理パラメータに依存することなく、普遍的なものとなりました。
+非相対論的な断熱(\(\gamma = 5/3\))の衝撃波において、マッハ数が1より非常に大きい場合には、\(V_1 / V_2 =4\)となります。
+その場合のスペクトル指数は\(s = 2\)となります。
+これは実際に観測されている、銀河系内起源であるknee以下の宇宙線スペクトルの観測結果\(N(E) \propto E^{-(2.0 \sim 2.2)}\)に非常に近いため、広く受け入れられています。</p>
+
+<h2 id="フェルミ加速で得られる最高エネルギー">フェルミ加速で得られる最高エネルギー</h2>
+
+<p>衝撃波でのフェルミ加速により、普遍的なスペクトル指数のベキスペクトルが得られることがわかりました。
+では実際の衝撃波において、どの程度のエネルギーまで加速することができるかを考えてみましょう。
+衝撃波面を一往復するのにかかる時間を\(\Delta t\)とします。
+そしてエネルギー\(E\)を持つ粒子が加速されるのにかかる時間\(t_\mathrm{acc}\)を「\(E \rightarrow 2E\)程度までエネルギーが増加するのにかかる時間」というように定義しましょう。
+すると、この定義から</p>
+
+\[t_\mathrm{acc} 
+= \frac{E}{\Delta E} \Delta t \tag{19}\]
+
+<p>となります。
+まずは上流側について考えましょう。
+上流における高エネルギー荷電粒子の粒子流束は以下のように与えられます。</p>
+
+\[\mathbf{J}
+= -D \nabla N + N \mathbf{V}_1 \ \Longrightarrow \ 
+J_x 
+= - D \frac{dN}{dx} + N V_1 \tag{20}\]
+
+<p>ここで\(D\)は拡散係数、\(\mathbf{V}_1\)は上流での流体の速度です。
+これまでの問題設定から、\(x\)方向のみを考えることにします。
+また\(x = 0\)を衝撃波面の位置としましょう。
+加速された粒子が一定の割合で逃げ出していくことにより平衡状態が維持されているとすると、\(J_x=0\)より</p>
+
+\[\frac{dN}{dx} 
+= \frac{V_1}{D} N \ \Longrightarrow \ 
+N(x) 
+= N_0 e^{\frac{V_1}{D} x} \quad (x&lt;0) \tag{21}\]
+
+<p>(21)式を\(x\)で積分することで、単位面積あたりの総粒子数(柱密度)\(n\)は</p>
+
+\[n 
+= \int_{-\infty}^0 N_0 e^{\frac{V_1}{D} x} dx 
+= \frac{N_0 D}{V_1} \tag{22}\]
+
+<p>のように計算されます。
+途中、\(N(-\infty) = 0\)としました。
+(11)式より、衝撃波面に流入する平均粒子流束は\(N_0 c/4\)であることから、粒子が上流に滞在する平均時間\(\Delta t_{上流}\)は</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3EkSj4w">高原文朗, “天体高エネルギー現象”</a><br />
+[] <a href="https://www.jstage.jst.go.jp/article/jspf/78/7/78_7_668/_article/-char/ja/">星野真弘, “相対論的粒子加速と宇宙線の起源”</a><br />
+[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

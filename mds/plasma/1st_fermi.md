@@ -135,6 +135,8 @@ $$
 
 となります。
 
+{% include adsense.html %}
+
 ## 粒子のエネルギースペクトル
 
 続いて、先ほどのメカニズムで加速された荷電粒子が、衝撃波面近傍の加速領域から逃げていく確率を計算しましょう。
@@ -226,7 +228,9 @@ $$
 衝撃波の詳細な物理パラメータに依存することなく、普遍的なものとなりました。
 非相対論的な断熱($$\gamma = 5/3$$)の衝撃波において、マッハ数が1より非常に大きい場合には、$$V_1 / V_2 =4$$となります。
 その場合のスペクトル指数は$$s = 2$$となります。
-これは実際に観測されている、銀河系内起源であるknee以下の宇宙線スペクトルの観測結果$$N(E) \propto E^{-(2.0 \sim 2.2)}$$に非常に近いため、広く受け入れられています。
+これは実際に観測されている、銀河系内起源であるknee以下の宇宙線スペクトルの観測結果$$N(E) \propto E^{-(2.0 \sim 2.2)}$$に非常に近いため、広く受け入れられています。 
+
+{% include adsense.html %}
 
 ## フェルミ加速で得られる最高エネルギー
 
@@ -414,25 +418,32 @@ $$
 超新星残骸の典型的なパラメータをとると、陽子が10-100TeV程度まで加速されることがわかります。
 さらに鉄原子($$Z = 26$$)であれば、PeV (=$$10^{15}$$eV)領域まで到達できると予想されます。
 
-<!-- ## 実際の観測と深まる謎
+{% include adsense.html %}
 
-[Albert et al. 2024](https://iopscience.iop.org/article/10.3847/2041-8213/ad772e)では、実際に銀河中心領域からの超高エネルギーγ線を観測しました。
-[High-Altitude Water Cherenkov (HAWC) Observatory](https://www.hawc-observatory.org/)を用いた観測により、6-114TeVのγ線の観測に成功しています。
+## ペバトロンの観測
+
+最後に、実際に観測されている高エネルギー天体について触れておきましょう。
+最近の観測で、[はくちょう座方向にある星形成領域 Cygnus X から、数PeVの超高エネルギーγ線が観測](https://www.sciencedirect.com/science/article/abs/pii/S209592732300912X?via%3Dihub)されました。
+この超高エネルギーγ線は少なくとも10PeV以上の加速陽子からの放射であるとされ、この領域がPeV粒子を生み出すペバトロン(PeVatron: エネルギーの単位ペブに粒子加速器などのトロンをつけた造語)であると結論づけました。
+この観測は[the Large High Altitude Air Shower Observatory (LHAASO)](http://english.ihep.cas.cn/lhaaso/)を用いて行われ
+中心部はCygnus OB2と呼ばれるOB association (O型星やB型星などの大質量星が群をなしているような領域)と、Cygnus X-3と呼ばれるマイクロクエーサー(コンパクト星を含む連星系からなる)を含んでいます。
+この部分から2つのPeV光子が観測され、またその周囲からも数百TeVのγ線が観測されています。
+この観測結果からコア部分が最高エネルギーまで粒子を加速し、加速された宇宙線が周囲に拡がっていくという、一般的なバブルの形態が再現されているとしました。
 
 ![](/assets/images/plasma/1st_fermi_02.png)
 
-この超高エネルギーγ線はTeVよりさらに上の、PeV($$10^{15}$$eV)領域のエネルギーを持つ荷電粒子からくるものと考えられています。
-しかしこのPeVエネルギーを持つ超高エネルギー粒子は、どのようにして生まれるのかが気になるところです。
-PeVエネルギー粒子を生み出すものはペバトロン(PeVatron)と呼ばれていますが、実際にPeV粒子が直接観測されているわけではありません。
-銀河中心をはじめ、HAWCや[Large High Altitude Air Shower Observatory (LHAASO)](http://english.ihep.cas.cn/lhaaso/)の観測によっていくつかの候補天体は発見されていますが、確定はまだできていません。 -->
+そのほかにも[the High-Altitude Water Cherenkov gamma-ray observatory (HAWC)](https://www.hawc-observatory.org/)による観測結果から、[天の川銀河中心方向にペバトロンが存在する](https://iopscience.iop.org/article/10.3847/2041-8213/ad772e)という論文も発表されています。
+このようなペバトロンでは、これまで考えてきたようなフェルミ加速による宇宙線生成が起こっていると考えられています。
 
 ## 参考文献
 
-[1] [Drury, 1983, "An introduction to the theory of diffusive shock acceleration of energetic particles in tenuous plasmas"]()  
-<!-- [2] [Albert et al., 2024, "Observation of the Galactic Center PeVatron beyond 100 TeV with HAWC"](https://iopscience.iop.org/article/10.3847/2041-8213/ad772e)  
-[] [HAWC](https://www.hawc-observatory.org/)   -->
-[2] [高原文朗, "天体高エネルギー現象"](https://amzn.to/3EkSj4w)  
-[3] [星野真弘, "相対論的粒子加速と宇宙線の起源"](https://www.jstage.jst.go.jp/article/jspf/78/7/78_7_668/_article/-char/ja/)  
-[4] [鶴剛, "京都大学大学院物理専攻大学院授業「高エネルギー天文学」講義ノート"](https://www-cr.scphys.kyoto-u.ac.jp/member/tsuru/data/lecture/HighEnergyAstro_v2002_14.pdf)  
+[1] [Drury, 1983, "An introduction to the theory of diffusive shock acceleration of energetic particles in tenuous plasmas"](https://iopscience.iop.org/article/10.1088/0034-4885/46/8/002)  
+[2] [LHASSO Collaboration, 2024, "An Ultrahigh-energy γ-ray Bubble Powered by a Super PeVatron"](https://www.sciencedirect.com/science/article/abs/pii/S209592732300912X?via%3Dihub)  
+[3] [LHASSO](http://english.ihep.cas.cn/lhaaso/)  
+[4] [Albert et al., 2024, "Observation of the Galactic Center PeVatron beyond 100 TeV with HAWC"](https://iopscience.iop.org/article/10.3847/2041-8213/ad772e)  
+[5] [HAWC](https://www.hawc-observatory.org/)  
+[6] [高原文朗, "天体高エネルギー現象"](https://amzn.to/3EkSj4w)  
+[7] [星野真弘, "相対論的粒子加速と宇宙線の起源"](https://www.jstage.jst.go.jp/article/jspf/78/7/78_7_668/_article/-char/ja/)  
+[8] [鶴剛, "京都大学大学院物理専攻大学院授業「高エネルギー天文学」講義ノート"](https://www-cr.scphys.kyoto-u.ac.jp/member/tsuru/data/lecture/HighEnergyAstro_v2002_14.pdf)  
 
 {% include adsense.html %} 

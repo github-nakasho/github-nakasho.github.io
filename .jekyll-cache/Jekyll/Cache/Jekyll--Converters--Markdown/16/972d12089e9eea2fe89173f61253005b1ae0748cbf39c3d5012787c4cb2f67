@@ -1,0 +1,83 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#曲率放射-curvature-radiation" id="markdown-toc-曲率放射-curvature-radiation">曲率放射 (curvature radiation)</a>    <ol>
+      <li><a href="#原理" id="markdown-toc-原理">原理</a></li>
+      <li><a href="#冷却時間" id="markdown-toc-冷却時間">冷却時間</a></li>
+      <li><a href="#応用-agn中心にいる超大質量ブラックホールの磁気圏からの超高エネルギー放射" id="markdown-toc-応用-agn中心にいる超大質量ブラックホールの磁気圏からの超高エネルギー放射">応用: AGN中心にいる超大質量ブラックホールの磁気圏からの超高エネルギー放射</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="曲率放射-curvature-radiation">曲率放射 (curvature radiation)</h1>
+
+<p>ここではパルサーの極域からの放射で重要とされる、曲率放射についてメモします。</p>
+
+<h2 id="原理">原理</h2>
+
+<p>シンクロトロン放射による全放射強度は</p>
+
+\[P_\mathrm{sync} 
+= \frac{2e^2}{3c^3} \gamma^4 \omega_\mathrm{se}^2 v^2 \sin^2 \alpha 
+= \frac{2e^2}{3c^3} \gamma^4 \frac{e^2 B^2 \sin^2 \alpha}{me^2 c^2 \gamma^2} v^2\tag{1}\]
+
+<p>この式において、ラーモア半径\(r_L = \frac{m c \gamma v}{e B \sin \alpha}\)を磁力線の曲率半径\(R_c\)に置き換えれば、それが曲率放射の全放射強度になります。
+よって</p>
+
+\[P_\mathrm{curv} 
+= \frac{2e^2}{3c^3} \gamma^4 \frac{v^4}{R_c^2} 
+= \frac{2e^2 c}{3} \gamma^4 \frac{\beta^4}{R_c^2} 
+\underbrace{\approx}_{\beta \sim 1} \frac{2e^2 c}{3} \frac{\gamma^4}{R_c^2} \tag{2}\]
+
+<p>またシンクロトロン放射の典型的な周波数は</p>
+
+\[\nu_c 
+= \frac{3}{4\pi} \gamma^2 \frac{eB \sin \alpha}{mc} 
+= \frac{3}{4\pi} \gamma^2 \frac{v \gamma}{r_L}\]
+
+<p>より、曲率放射の典型的な周波数が</p>
+
+\[\nu_{\mathrm{curv}, c} 
+= \frac{3}{4\pi} \gamma^3 \frac{v}{R_c} 
+\underbrace{\approx}_{v \sim c} \frac{3c}{4\pi} \frac{\gamma^3}{R_c}\]
+
+<p>のように求まります。</p>
+
+<h2 id="冷却時間">冷却時間</h2>
+
+<p>この曲率放射による冷却時間(粒子がエネルギーを失うのにかかる時間)を計算しましょう。</p>
+
+\[t_\mathrm{cool} 
+= \frac{E}{\left \vert \frac{dE}{dt} \right \vert} 
+= \frac{\m_e c^2 \gamma}{P_\mahtrm{curv}} 
+= \frac{3 m_e c}{2 e^2} \frac{R_c^2}{\gamma^3}\]
+
+<h2 id="応用-agn中心にいる超大質量ブラックホールの磁気圏からの超高エネルギー放射">応用: AGN中心にいる超大質量ブラックホールの磁気圏からの超高エネルギー放射</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="">高原文郎, “宇宙物理学”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

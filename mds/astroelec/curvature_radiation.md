@@ -28,19 +28,19 @@ nav_order: 112
 
 荷電粒子は、磁力線を横切ることができず、磁力線の回りを螺旋運動をします。
 その加速度運動により、荷電粒子は放射を出します。
-その一つに、磁場によるラーモア運動から生じるシンクロトロン放射があります。
-シンクロトロン放射によって荷電粒子はエネルギーを失い、磁場に垂直な方向の運動量はすぐに放射として損失します。
+その一つに、[磁場によるラーモア運動から生じるシンクロトロン放射](/astroelec/uniform_mag_rel)があります。
+[シンクロトロン放射](/astroelec/uniform_mag_rel)によって荷電粒子はエネルギーを失い、磁場に垂直な方向の運動量はすぐに放射として損失します。
 すると荷電粒子は磁力線に沿った方向に運動するようになります。
 磁力線が曲がっていると、そこから働く向心力により放射を出すようになります。
 これを曲率放射と呼びます。
 
 ![](/assets/images/astroelec/curvature_radiation_01.png)
 
-シンクロトロン放射とのアナロジーから、シンクロトロン放射のラーモア半径を曲率半径に置き換えることで、曲率放射の式を得ることができます。
+[シンクロトロン放射](/astroelec/uniform_mag_rel)とのアナロジーから、[シンクロトロン放射のラーモア半径](/astroelec/uniform_mag_rel)を磁力線の曲率半径に置き換えることで、曲率放射の式を得ることができます。
 
 ## 曲率放射スペクトル
 
-単一の荷電粒子からのシンクロトロン放射のスペクトルは
+単一の荷電粒子からの[シンクロトロン放射のスペクトル](/astroelec/sync_spectrum)は
 
 $$
 \frac{dW}{d\omega dt} 
@@ -50,8 +50,8 @@ $$
 $$
 
 でした。
-ここで$$K_n$$は修正ベッセル関数です。
-この式において$$r_L = \frac{mc \gamma v}{e B}$$を磁力線の曲率半径$$R_c$$に置き換えれば、単一粒子からの曲率放射スペクトルとなります。
+ここで[$$K_n$$は修正ベッセル関数](/math/modified_bessel_airy)です。
+この式において[$$r_L = \frac{mc \gamma v}{e B}$$](/astroelec/uniform_mag_rel)を磁力線の曲率半径$$R_c$$に置き換えれば、単一粒子からの曲率放射スペクトルとなります。
 
 $$
 \frac{dW}{d\omega dt} 
@@ -62,7 +62,7 @@ $$
 
 ## 全放射強度
 
-シンクロトロン放射による全放射強度は
+[シンクロトロン放射による全放射強度](/astroelec/uniform_mag_rel#全放射強度)は
 
 $$
 P_\mathrm{sync} 
@@ -71,7 +71,7 @@ P_\mathrm{sync}
 $$
 
 で与えられます。
-この式にでもラーモア半径$$r_L = \frac{m c \gamma v}{e B \sin \alpha}$$を磁力線の曲率半径$$R_c$$に置き換えれば、それが曲率放射の全放射強度になります
+この式でも[ラーモア半径$$r_L = \frac{m c \gamma v}{e B \sin \alpha}$$](/astroelec/uniform_mag_rel)を磁力線の曲率半径$$R_c$$に置き換えれば、それが曲率放射の全放射強度になります
 ($$\alpha$$: 荷電粒子のピッチ角。)
 よって
 
@@ -174,13 +174,27 @@ $$
 
 のようになります。
 光子のエネルギー$$h\nu$$として換算すれば、これは大体TeV程度になります。
+TeVエネルギースケールのγ線光子と強磁場が存在することで、電子と陽電子の対生成が可能となります。
+これにより、強磁場を伴う中性子星やブラックホールの周囲は電子・陽電子プラズマで満たされており、様々な現象を引き起こします。
+
+## シンクロトロン放射と曲率放射の中間を考える
+
+冒頭で議論したように、荷電粒子は磁力線の周りで螺旋運動を行います。
+シンクロトロン放射によって磁場に垂直な方向の運動量は失われますが、それには(短いながらも)有限の時間がかかるはずです。
+するとシンクロトロン放射が優勢な状態と曲率放射が優勢の状態の、中間状態のようなものが考えられます。
+シンクロトロン放射を出しつつ曲率放射も同時に出しているような放射を、[シンクロ-曲率放射 (synchro-curvature radiation)](https://www.sciencedirect.com/science/article/abs/pii/0275106296000331?via%3Dihub)と呼び、いくつかの論文で提唱されています。
+さらにパルサーの磁場は$$10^{11]-10^{13}$$Gにもなることから、この場合の[ランダウ準位](compact/landau_level)の運動半径はとても小さいものになります。
+よって、このような強磁場では量子的な効果も考慮に入れなければなりません。
+先程の[シンクロ-曲率放射を量子版に拡張したもの](https://iopscience.iop.org/article/10.1086/305138)も、論文として研究されています。
 
 ## 参考文献
 
 [1] [Ghisellini & Locatelli, 2018, "Coherent Curvature Radiation and Fast Radio Bursts"](https://www.aanda.org/articles/aa/full_html/2018/05/aa31820-17/aa31820-17.html)  
 [2] [Levinson, 2000, "TeV Emission by Ultra-High Energy Cosmic Rays in Nearby, Dormant AGNs"](https://arxiv.org/abs/hep-ph/0002020)  
 [3] [Inoue et al., 2021, "Gamma-ray and Neutrino Signals from Accretion Disk Coronae of Active Galactic Nuclei"](https://www.mdpi.com/2075-4434/9/2/36)  
-[4] [Frank Reiger, "High Energy Astrophysics - Lecture 6"](https://www.mpi-hd.mpg.de/personalhomes/frieger/HEA6.pdf)  
-[5] [高原文郎, "宇宙物理学"](https://amzn.to/410X4aY)  
+[4] [Zhang & Cheng, 1996, "Synchro-curvature radiation -a new and more general radiation in curved magnetic field"](https://www.sciencedirect.com/science/article/abs/pii/0275106296000331?via%3Dihub)  
+[5] [Zhang & Yuan, 1998, "The Quantum Radiation Formulae of a New Radiation Mechanism in Curved Magnetic Fields"](https://iopscience.iop.org/article/10.1086/305138)  
+[6] [Frank Reiger, "High Energy Astrophysics - Lecture 6"](https://www.mpi-hd.mpg.de/personalhomes/frieger/HEA6.pdf)  
+[7] [高原文郎, "宇宙物理学"](https://amzn.to/410X4aY)  
 
 {% include adsense.html %} 

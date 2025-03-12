@@ -1,0 +1,123 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#光子ガス-黒体放射-blackbody-radiation" id="markdown-toc-光子ガス-黒体放射-blackbody-radiation">光子ガス (黒体放射, blackbody radiation)</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="光子ガス-黒体放射-blackbody-radiation">光子ガス (黒体放射, blackbody radiation)</h1>
+
+<p>光子は静止質量がゼロの粒子なので、<a href="/stellar/lte#状態式-equation-of-state-の一般論">(3.2.2)式</a>より\(\mathcal{E}_p = cp\)となります。
+これは光のエネルギーが\(h \nu\)で与えられることと、運動量が\(h\nu /c\)であることと一致します。
+光子には内部状態が存在しないため、<a href="(/stellar/lte#状態式-equation-of-state-の一般論)">(3.2.1)式</a>において\(\mathcal{E}_j = 0\)として良いでしょう。
+また光には2方向の偏光の自由度が存在するため、統計的重率は\(g_j=2\)となります。
+光子の数密度を\(N_\gamma\)、化学ポテンシャルを\(\mu_\gamma\)と書くと、熱平衡状態では\(\mu_\gamma dN_\gamma = 0\)が成り立っている必要があります。
+しかし、光子数は必ずしも保存しないため、\(\mu_\gamma = 0\)である必要があります。
+これらのことと、光子がボーズ粒子であることを<a href="/stellar/lte#状態式-equation-of-state-の一般論">(3.2.2)式</a>に用いると、運動量\(p\)での単位位相空間体積あたりの光子数は</p>
+
+\[f(p) 
+= \frac{2}{h^3} \frac{1}{\exp \left\{ pc / (k_B T)\right\} -1} \tag{3.4.1}\]
+
+<p>のように表現されます。
+従って、光子数密度は</p>
+
+\[\begin{aligned}
+N_\gamma 
+&amp;= 4\pi \int_0^\infty f(p) p^2 dp 
+= \frac{8\pi}{h^3} \int_0^\infty \frac{p^2 dp}{\exp \{pc / (k_B T)\} -1} \notag \\
+&amp;\underbrace{=}_{x \equiv pc / (k_B T)} 8\pi \left( \frac{k_B T}{ch} \right)^3 \underbrace{\int_0^\infty \frac{x^2 dx}{e^x-1}} \tag{3.4.2}
+\end{aligned}\]
+
+<p>となります。
+最後の積分部分は<a href="/math/gamma">ガンマ関数</a>と<a href="/math/zeta">ゼータ関数</a>を用いて</p>
+
+\[\int_0^\infty \frac{x^\ell dx}{e^x - 1} 
+= \Gamma(\ell+1) \zeta(\ell+1) \tag{3.4.3}\]
+
+<p>と表現されます。
+以上から</p>
+
+\[N_\gamma 
+= 8 \pi \left( \frac{k_B T}{ch}\right)^3 \underbrace{\Gamma(3)}_{2!} \underbrace{\zeta(3)}_{\sim 1.204} 
+\simeq  20.28 T^3 \ [\mathrm{cm}^{-3}] \tag{3.4.4}\]
+
+<p>また、光子による圧力と輻射圧\(P_\mathrm{rad}\)は、<a href="/stellar/lte#状態式-equation-of-state-の一般論">(3.2.4)式</a>と(3.4.1)式から</p>
+
+\[P_\mathrm{rad} 
+= \frac{8\pi c}{3h^3} \int_0^\infty \frac{p^3 dp}{\exp\{pc/ (k_B T)\} -1} 
+\underbrace{=}_{x \equiv pc / (k_B T)} \frac{8\pi}{3c^3 h^3} (k_B T)^4 \underbrace{\int_0^\infty \frac{x^3 dx}{e^x -1}}_{=\Gamma(4) \zeta(4)} 
+= \frac{1}{3} \left( \frac{8\pi^5 k_B^4}{15 c^3 h^3}\right) T^4 
+= \frac{1}{3} a T^4 \qquad \left( a \equiv \frac{8\pi^5 k_B^4}{15 c^3 h^3} \sim 7.566 \times 10^{-15} \ [\mathrm{erg \ cm^{-3} \ K^{-4}}]\right) \tag{3.4.5}\]
+
+<p>と求まります。
+ここで\(a\)は輻射定数(radiation constant)と呼ばれます。
+また、単位体積あたりの輻射エネルギー(radiation energy density)は、<a href="/stellar/lte#状態式-equation-of-state-の一般論">(3.2.6)式</a>に\(\mathcal{E}_p = cp\)と(3.4.1)式を代入して</p>
+
+\[E_\mathrm{rad} 
+= \frac{8\pi c}{h^3} \int_0^\infty \frac{p^3 dp}{\exp\{pc/(k_B T)\}-1} 
+\underbrace{=}_{(3.4.5)} 3P_\mathrm{rad} 
+= aT^4 \tag{3.4.6}\]
+
+<p>が得られます。
+この関係は</p>
+
+\[E_\mathrm{rad} 
+= \frac{P_\mathrm{rad}}{\gamma_\mathrm{rad}-1} \qquad 
+(\gamma_\mathrm{rad} = 4/3)\]
+
+<p>のように表すこともできます。
+また光子に対して\(p = h\nu / c = h/\lambda\)の関係があるため、単位体積・単位周波数あたりのエネルギー密度\(u_\nu\)は、(3.4.6)式の積分部分から</p>
+
+\[u_\nu d\nu 
+= \frac{8\pi h}{c^3} \frac{\nu^3 d\nu}{\exp \{h\nu / (k_B T)\}-1} 
+= \frac{4\pi }{c} B_\nu (T) d\nu \tag{3.4.7}\]
+
+<p>のように書かれます。
+これを波長で書き換えた、単位体積・単位波長あたりのエネルギー密度\(u_\lambda\)は</p>
+
+\[u_\lambda d\lambda 
+= \frac{8\pi hc}{\lambda^5} \frac{d\lambda}{\exp \{hc/ (\lambda k_B T)\}-1} 
+= \frac{4\pi}{c} B_\lambda (T) d\lambda \tag{3.4.8}\]
+
+<p>となります。
+ここで\(B_\nu(T), B_\lambda (T)\)はプランク関数と呼ばれ</p>
+
+\[B_\nu (T) 
+= \frac{2h \nu^3/c^2}{\exp \{h\nu / (k_B T)\}-1}, \qquad
+B_\lambda (T) 
+= \frac{2h c^2/\lambda^5}{\exp \{hc / (\lambdak_B T)\}-1} \tag{3.4.9}\]
+
+<p>のように表されます。
+ただし\(B_\nu d\nu = - B_\lambda d\lambda\)であり、さらに\(B_\nu (T) \neq B_\lambda (T)\)であることに注意しましょう。
+\(B_\nu\)を周波数で積分したものは</p>
+
+\[B(T) 
+\equiv \int_0^\infty B_\nu (T) d\nu 
+= \int_0^\infty B_\lambda (T) d\lambda 
+= \frac{ac}{4\pi} T^4 
+= \frac{\sigma}{\pi} T^4 \qquad \left( \sigma \equiv \frac{ac}{4}\right) \tag{3.4.10}\]
+
+<p>となります。
+ここで\(\sigma\)はステファン・ボルツマン定数と呼ばれます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

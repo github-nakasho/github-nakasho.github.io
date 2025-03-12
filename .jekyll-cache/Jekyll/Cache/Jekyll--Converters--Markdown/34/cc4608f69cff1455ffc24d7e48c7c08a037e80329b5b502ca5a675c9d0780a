@@ -1,0 +1,60 @@
+I"3
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ガスの元素組成と平均分子量" id="markdown-toc-ガスの元素組成と平均分子量">ガスの元素組成と平均分子量</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ガスの元素組成と平均分子量">ガスの元素組成と平均分子量</h1>
+
+<p>主系列星とヘリウム燃焼が始まる前の赤色巨星を構成するガスは、水素とヘリウムとわずかな量の金属(または重元素)からなります。
+そしてガスの組成を表すのに\(X=\)水素の質量比、\(Y=\)ヘリウムの質量比、\(Z=\)金属の質量比を用います。
+このように定義された\(X, Y, Z\)は、全てが独立ではなく</p>
+
+\[X + Y + Z = 1 \tag{3.5.1}\]
+
+<p>という関係にあります。<br />
+平均分子量は、ガス粒子一個あたりの質量を原子質量単位で表したものです。
+完全電離している場合</p>
+
+\[\frac{1}{\mu} 
+= \sum_i \frac{1+Z_i}{A_i} X_i 
+\approx 2X + \frac{3}{4} Y + \frac{1}{2} Z 
+= \frac{1}{4} (3+5X-Z) \tag{3.5.2}\]
+
+<p>のように表されます。
+ここで\(1/\mu\)は、1質量数に対する粒子数を表します。
+そして\(Z_i, A_i, X_i\)はそれぞれ原子核\(i\)の原子番号、質量数、および質量含有量を表します。
+さらに(3.5.2)式では重元素に対して\((1+Z_i)/A_i \sim 1/2\)という近似を用いました。
+またイオンと電子の寄与を分けて</p>
+
+\[\frac{1}{\mu_\mathrm{I}} 
+= \sum_i \frac{X_i}{A_i}
+\approx X + \frac{1}{4} Y, \quad 
+\frac{1}{\mu_\mathrm{e}} 
+= \sum_i \frac{Z_i}{A_i} X_i 
+= X + \frac{1}{2} Y + \frac{1}{2} Z 
+= \frac{1}{2} (1+X) \tag{3.5.3}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

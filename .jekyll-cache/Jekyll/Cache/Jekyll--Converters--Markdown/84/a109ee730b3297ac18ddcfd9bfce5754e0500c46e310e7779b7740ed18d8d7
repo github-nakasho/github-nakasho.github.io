@@ -1,0 +1,43 @@
+I"@
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ポリトロープガス球の性質" id="markdown-toc-ポリトロープガス球の性質">ポリトロープガス球の性質</a>    <ol>
+      <li><a href="#平均密度" id="markdown-toc-平均密度">平均密度</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ポリトロープガス球の性質">ポリトロープガス球の性質</h1>
+
+<h2 id="平均密度">平均密度</h2>
+
+<p>平均密度\(\bar{\rho}\)は、その定義から</p>
+
+\[\bar{\rho} 
+= \frac{3}{4\pi R^3} \int_0^R 4\pi \rho r^2 dr\]
+
+<p>のように計算されます。
+今、ポリトロープの\(R = \alpha \xi_1\)、</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

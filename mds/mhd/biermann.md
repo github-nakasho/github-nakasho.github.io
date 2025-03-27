@@ -98,6 +98,8 @@ $$
 
 ## 最近の研究: 初代星周辺で起こる種磁場生成
 
+### 数値シミュレーション
+
 このビアマンバッテリーは、宇宙初期の種磁場生成機構として注目されています。
 ここでは [Doi & Susa 2011](https://iopscience.iop.org/article/10.1088/0004-637X/741/2/93)を例に見ていきましょう。
 この論文では、質量$$500M_\odot$$の初代星からの強烈な放射にさらされている銀河間物質の塊の時間発展を、放射による力とビアマンバッテリーを考慮した輻射磁気流体計算から調べました。
@@ -133,13 +135,25 @@ $$
 この図は磁場の最大値の時間発展を描画したもので、青線はビアマンバッテリーのみ、緑線は放射による力の効果のみ、そして赤線は両方を考慮した場合を表しています。
 この図から明らかなように、この論文で調査された現実的なパラメータにおいては、ビアマンバッテリー効果による磁場生成が優勢であることがわかります。
 
+### レーザー実験
+
+「宇宙物理は実験室で再現できない」という部分にロマンを感じる方々もいらっしゃるかと思いますが、最近では高出力レーザーを用いた宇宙での状態の再現が盛り上がりを見せています。
+ここではレーザーにより生成された衝撃波において、ビアマンバッテリー効果による種磁場生成の再現に成功した実験をご紹介します。
+
+![](/assets/images/mhd/biermann_04.png)
+
+原子銀河のもとととなるガス塊が重力崩壊を起こすと、その収縮中に衝撃波を発生させます。
+その衝撃波による幾何学的な非対称性から、ビアマンバッテリー交換を通して種磁場生成が行われます。
+この種磁場が、銀河ダイナモや乱流を通して増幅されることで、観測されている銀河磁場の大きさになると言われています。
+
 # 参考文献
 
 [1] [Biermann & Galea, 2003, "Origin of Cosmic Magnetic Fields"](https://arxiv.org/abs/astro-ph/0302168)  
 [2] [Ando et al., 2010, "Generation of Seed Magnetic Field around First Stars: Effects of Radiation Force"](https://iopscience.iop.org/article/10.1088/0004-637X/716/2/1566)  
 [3] [Doi & Susa, 2011, "Generation of a Seed Magnetic Filed around First Stars: the Biermann Battery Effect"](https://iopscience.iop.org/article/10.1088/0004-637X/741/2/93)  
-[4] [Kulsrud, "Plama Physics for Astrophysics"](https://amzn.to/40HaxEN)  
-[5] [城本雄紀, "初代星周りの磁場生成"](http://www.astro-wakate.org/ss2011/web/ss11_proceedings/proceeding/interstellar_10a.pdf)  
-[6] [市來淨與, "宇宙の磁場の起源 -密度揺らぎからの磁場生成とその観測的な応用について-"](https://www.icrr.u-tokyo.ac.jp/JPSCR/2006F/presen-files/ichiki.pdf)  
+[4] [Gregori et al., 2012, "Generation of scaled protogalactic seed magnetic fields in laser-produced shock waves"](https://www.nature.com/articles/nature10747)  
+[5] [Kulsrud, "Plama Physics for Astrophysics"](https://amzn.to/40HaxEN)  
+[6] [城本雄紀, "初代星周りの磁場生成"](http://www.astro-wakate.org/ss2011/web/ss11_proceedings/proceeding/interstellar_10a.pdf)  
+[7] [市來淨與, "宇宙の磁場の起源 -密度揺らぎからの磁場生成とその観測的な応用について-"](https://www.icrr.u-tokyo.ac.jp/JPSCR/2006F/presen-files/ichiki.pdf)  
 
 {% include adsense.html %} 

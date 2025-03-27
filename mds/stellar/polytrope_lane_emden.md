@@ -124,7 +124,7 @@ $$
 $$
 \theta = 1, \quad 
 \frac{d\theta}{d\xi} 
-= 0 (4.1.7)
+= 0 \tag{4.1.7}
 $$
 
 が与えられます。
@@ -233,7 +233,7 @@ M
 &= \int_0^R 4\pi \rho r^2 dr 
 = 4\pi \left( \frac{(n+1)K}{4\pi G} \rho_c^{\frac{1}{n}-1} \right)^{3/2} \rho_c \int_0^{\xi_1} \xi^2 \theta^n d\xi \notag \\
 &= - 4\pi \left( \frac{(n+1)K}{4\pi G} \rho_c^{\frac{1}{n}-1} \right)^{3/2} \rho_c \int_0^{\xi_1} \frac{d}{d\xi} \left( \xi^2 \frac{d\theta}{d\xi} \right) d\xi \notag \\
-&= - 4\pi \left( \frac{(n+1)K}{4\pi G} \rho_c^{\frac{1}{n}-1} \right)^{3/2} \rho_c^{\frac{3-n}{2n}} \xi_1^2 \left. \frac{d\theta}{d\xi} \right|_{\xi_1} \tag{4.2.14}
+&= - 4\pi \left( \frac{(n+1)K}{4\pi G} \right)^{3/2} \rho_c^{\frac{3-n}{2n}} \xi_1^2 \left. \frac{d\theta}{d\xi} \right|_{\xi_1} \tag{4.2.14}
 \end{align}
 $$
 

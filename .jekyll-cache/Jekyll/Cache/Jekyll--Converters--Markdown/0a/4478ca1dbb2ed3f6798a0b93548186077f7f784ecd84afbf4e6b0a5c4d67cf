@@ -1,0 +1,149 @@
+I"� 
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#輻射によるエネルギーの流れ" id="markdown-toc-輻射によるエネルギーの流れ">輻射によるエネルギーの流れ</a>    <ol>
+      <li><a href="#輻射の強度とエネルギー流束" id="markdown-toc-輻射の強度とエネルギー流束">輻射の強度とエネルギー流束</a></li>
+      <li><a href="#輻射エネルギー密度" id="markdown-toc-輻射エネルギー密度">輻射エネルギー密度</a></li>
+      <li><a href="#輻射圧" id="markdown-toc-輻射圧">輻射圧</a></li>
+      <li><a href="#放射輸送の式" id="markdown-toc-放射輸送の式">放射輸送の式</a></li>
+      <li><a href="#余談-恒星中の温度勾配を見積もってみよう" id="markdown-toc-余談-恒星中の温度勾配を見積もってみよう">余談: 恒星中の温度勾配を見積もってみよう</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="輻射によるエネルギーの流れ">輻射によるエネルギーの流れ</h1>
+
+<p>恒星内部の静水圧平衡の式を閉じさせ、内部構造を得るためには、温度分布を記述する式が必要でした。
+この式を得るには、エネルギーの発生と輸送を考えなければなりません。
+温度勾配が存在すると、熱エネルギーは温度の高い場所から低い場所へと運ばれます。
+恒星の中で重要な働きをするエネルギー輸送には、輻射・電子伝導・対流の3つがあります。<br />
+ここでは輻射、すなわち光子によるエネルギー輸送について考えましょう。</p>
+
+<h2 id="輻射の強度とエネルギー流束">輻射の強度とエネルギー流束</h2>
+
+<p>恒星の中心を中心とするある球面上の、単位面積を通過する光のエネルギーを考えます。</p>
+
+<p><img src="/assets/images/stellar/radiative_energy_transfer_01.png" alt="" /></p>
+
+<p>その面の天頂方向からの角度が\(\theta\)の方向の微小立体角\(d\Omega\)内を、単位時間あたりに通過する(振動数が\(\nu \sim \nu + d\nu\)の間にある)輻射のエネルギーは、振動数\(\nu\)の光の強度\(I_\nu (r, \theta)\)を用いて</p>
+
+\[I_\nu (r, \theta) \cos \theta d\nu d\Omega \tag{5.1.1}\]
+
+<p>と表されます。
+これが光の強度 (intensity) \(I_\nu\)の定義です。
+\(I_\nu\)はある方向に、その方向に垂直な単位面積を通過して、単位立体角・単位時間あたりに流れる光のエネルギーを表す \(I_\nu \geq 0\)となるような量です。
+(5.1.1)式で\(\cos \theta\)がかかっているのは、光が斜めに入射することで有効面積が減少するためです。
+\(\cos \theta\)により、内向きに通過する光\(\pi / 2 \leq \theta \leq \pi\)に対して、(5.1.1)式は負の値を持つこともできます。<br />
+(5.1.1)式を全立体角で積分すると、単位時間・単位面積あたりに正味通過するエネルギー、すなわちエネルギーフラックス(流束)を得ることができます。</p>
+
+\[F_\nu (r) d\nu 
+= d \nu \int_{4\pi} I_\nu (r, \theta) \cos \theta d\Omega \tag{5.1.2}\]
+
+<p>ここで\(F_\nu\)は、単位振動数あたりのエネルギー流束を表します。
+\(I_\nu\)が\(\theta\)に依存しない(isotopic, 等方的)場合、内向きと外向きの流れが同量であるため、\(F_\nu =0\)となります。
+恒星内部では、等方的な状態からのわずかなズレによって、輻射が外側に染み出す状態になっています。</p>
+
+<h2 id="輻射エネルギー密度">輻射エネルギー密度</h2>
+
+<p>光は光速度\(c\)で進むため、ある方向の微小立体角\(d\Omega\)内の振動数\(\nu\)の輻射エネルギー密度波\(\frac{I_\nu d\Omega}{c}\)で与えられます。
+ある場所での輻射エネルギー密度\(u_\nu\)は、あらゆる方向に進む光のエネルギーを足し合わせたものなので</p>
+
+\[u_\nu 
+= \frac{1}{c} \int_{4\pi} I_\nu (\theta, \varphi) d\Omega 
+= \frac{4\pi}{c} J_\nu \tag{5.1.3}\]
+
+<p>のように表されます。
+ここで\(J_\nu\)は\(I_\nu (\theta \varphi)\)を方向に対して平均した量で、光の平均強度(mean intensity)と呼ばれ</p>
+
+\[J_\nu 
+\equiv \frac{1}{4\pi} \int_{4\pi} I_\nu (\theta, \varphi) d\Omega \tag{5.1.4}\]
+
+<p>のように定義されます。
+恒星内部では、輻射とガスの間で<a href="/atmos/lte">局所熱平衡(LTE)</a>が良い近似で成り立っているため、輻射はほとんど黒体輻射で記述することができます。
+この場合、<a href="/stellar/black_body#輻射圧プランク関数の導出">\(u_\nu d\nu = \frac{4\pi}{c} B_\nu d\nu\)</a>と(5.1.3)式を比較することで</p>
+
+\[J_\nu 
+\approx B_\nu (T) 
+= \frac{2h\nu^3}{c^2} \frac{1}{\exp(h\nu / (k_B T)) -1} \tag{5.1.5}\]
+
+<p>のようになっているとわかります。</p>
+
+<h2 id="輻射圧">輻射圧</h2>
+
+<p>ある面にかかる圧力は、その面に垂直な方向の運動量流束です。
+光の運動量は、エネルギーを光速度\(c\)で割ったものです。
+よって振動数\(\nu \sim \nu + d\nu\)の間の光による圧力\(P_\mathrm{rad, \nu} d\nu\)は</p>
+
+\[P_\mathrm{rad, \nu} 
+= \frac{d\nu}{c} \int_{4\pi} I_\nu (r, \theta) \cos^2 \theta d\Omega \tag{5.1.6}\]
+
+<p>のように表されます。
+エネルギー流束の式(5.1.2)と比較して\(\cos \theta\)が余計にかかっているのは、面に垂直な方向の運動量流束を表すためです。
+恒星内部では輻射は等方的に近く、\(I_\nu (r, \theta) \approx J_\nu (r) \approx B_\nu (T)\)となります。
+よって(5.1.6)式は</p>
+
+\[P_\mathrm{rad, \nu} 
+\approx \frac{J_\nu (r)}{c} \int_{4\pi} \cos^2 \theta d\Omega 
+= \frac{4\pi}{3} \frac{J_\nu}{c} 
+\approx \frac{4\pi}{c} \frac{B_\nu (T)}{c} \tag{5.1.7}\]
+
+<p>のように近似できます。
+輻射圧\(P_\mathrm{rad}\)は\(P_\mathrm{rad, \nu}\)を振動数について積分したものなので、この近似のもとでは</p>
+
+\[P_\mathrm{rad} 
+\approx \frac{4\pi}{3c} \int_0^\infty B_\nu (T) d\nu 
+= \frac{1}{3} a T^4 \tag{5.1.8}\]
+
+<p>となります。
+ここで<a href="/stellar/black_body#輻射圧プランク関数の導出">\(a\)は放射定数(radiation constant)</a>を表します。
+この式は、恒星大気のように\(I_nu(r, \theta)\)の非等方性が大きい場合には使えないことに注意しましょう。</p>
+
+<h2 id="放射輸送の式">放射輸送の式</h2>
+
+<h2 id="余談-恒星中の温度勾配を見積もってみよう">余談: 恒星中の温度勾配を見積もってみよう</h2>
+
+<p>恒星中の温度勾配は、以下のように概算できます。</p>
+
+\[\left\vert \frac{dT}{dr} \right\vert 
+\approx \frac{T_c}{R} 
+\sim \frac{10^7 \ [\mathrm{K}]}{10^{11} \ [\mathrm{cm}]} 
+\sim 10^{-4} \ [\mathrm{K/cm}]\]
+
+<p>一方、光子の平均自由行程は</p>
+
+\[\ell \kappa \rho 
+\sim 1 \ \Longrightarrow \ 
+\ell \sim 0.1 \ [\mathrm{cm}]\]
+
+<p>と見積もられます。
+この2つの値から、上向きに走る光子と下向きに走る光子の温度差は</p>
+
+\[\ell \left\vert \frac{dT}{dr} \right\vert 
+\sim 10^{-5} \ [\mathrm{K}] 
+\ll 1\]
+
+<p>とわかります。
+よって、このわずかな温度差(エネルギー差)によって、恒星内部での放射によるエネルギー輸送が起こっていることがわかります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

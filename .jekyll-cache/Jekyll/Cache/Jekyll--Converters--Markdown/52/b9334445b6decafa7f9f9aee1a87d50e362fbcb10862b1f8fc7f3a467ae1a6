@@ -1,0 +1,64 @@
+I"r	
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#等温度球に対するレーンエムデン方程式" id="markdown-toc-等温度球に対するレーンエムデン方程式">等温度球に対するレーン・エムデン方程式</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="等温度球に対するレーンエムデン方程式">等温度球に対するレーン・エムデン方程式</h1>
+
+<p>理想気体での等温度球の構造について考えましょう。
+理想気体の状態方程式\(P = \frac{\rho}{\mu m_p} k_B T\)とポリトロープ関係\(P = K \rho^{1+\frac{1}{n}}\)を見比べてみると、これは\(n \rightarrow \infty\)に対応していることがわかります。
+等温の理想気体の圧力は</p>
+
+\[P 
+= (\gamma - 1) C_v T \rho 
+\equiv K' \rho \tag{4.3.1}\]
+
+<p>のように表せます。
+これを静水圧平衡の式に使いましょう。</p>
+
+\[\frac{dP}{dr} 
+= - \frac{d\psi}{dr} \rho \ \Longrightarrow \ 
+\frac{1}{\rho}\frac{d\rho}{dr} 
+= \frac{d\ln \rho}{dr} 
+= - \frac{1}{K'} \frac{d\psi}{dr} \tag{4.3.2}\]
+
+<p>この両辺を積分すると</p>
+
+\[\ln \rho 
+= - \frac{\psi}{K'} + C\]
+
+<p>を得ます。
+\(C\)は積分定数ですが、中心での密度とポテンシャルエネルギーをそれぞれ\(\rho_c, \psi_c\)と書くと</p>
+
+\[C 
+= \frac{\psi_c}{K'} + \ln \rho_c\]
+
+<p>となります。
+ここで新しい変数\(\Theta\)を導入しましょう。</p>
+
+\[\Theta 
+\equiv \frac{\psi- \psi_c}{K'} \tag{4.3.3}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

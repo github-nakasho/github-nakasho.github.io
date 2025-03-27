@@ -1,0 +1,179 @@
+I"&-
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#不透明度-opacity" id="markdown-toc-不透明度-opacity">不透明度 (opacity)</a>    <ol>
+      <li><a href="#電子散乱" id="markdown-toc-電子散乱">電子散乱</a></li>
+      <li><a href="#free-free吸収" id="markdown-toc-free-free吸収">Free-free吸収</a></li>
+      <li><a href="#bound-free吸収" id="markdown-toc-bound-free吸収">Bound-free吸収</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="不透明度-opacity">不透明度 (opacity)</h1>
+
+<p>吸収係数の<a href="/stellar/radiative_energy_transfer#輻射流束-radiative-flux">ロスランド平均</a>は、ガスの密度・温度・元素組成の関数として与えられます。
+これを単にガスの不透明度(opacity)と呼ばれることが多いです。
+<a href="/stellar/radiative_energy_transfer#輻射流束-radiative-flux">(5.1.16)式</a>は、温度勾配と輻射による(局所的な)光度 \(L_{r, \mathrm{rad}}\)との関係を与えます。
+この関係から、不透明度が大きいほど、大きな温度勾配が必要であることを示しています。
+このように、ガスの不透明度の値は、恒星の内部構造(物理量の分布)にとって重要な量となります。<br />
+不透明度に寄与するプロセスには、bound-bound吸収 (線吸収)・bound-free吸収・free-free吸収、そして電子散乱(electron scattering)などがあります。</p>
+
+<h2 id="電子散乱">電子散乱</h2>
+
+<p>電子散乱による不透明度 \(\kappa_\mathrm{el}\)は、<a href="/astroelec/thomson#thomson散乱の散乱断面積">トムソン散乱断面積\(\sigma_T = 6.65 \times 10^{-25} \mathrm{cm^2}\)</a>に、1グラムあたりの電子数を乗じたものになります。
+1グラムあたりの電子数は\(\frac{1}{\mu_e m_p} (=\frac{N_A}{\mu_e})\)で表されます。
+そして<a href="/stellar/element_composition#ガスの元素組成と平均分子量-1">電子の平均分子量\(\mu_e\)は、完全電離したガスでは\(\mu_e = \frac{2}{1+X}\) (\(X\)は水素の質量含有量)</a>と書けます。
+したがって、完全電離したガスでは\(\kappa_\mathrm{el}\)は、温度と密度に対する依存性を持たず</p>
+
+\[\kappa_\mathrm{el} 
+= \frac{\sigma_T}{\mu_e m_p} 
+= \sigma_T \frac{N_A}{2} (1+X) 
+\simeq 0.20 (1+X) \ [\mathrm{cm^2 / g}] \tag{5.2.1}\]
+
+<p>のように表されます。
+ただし、非常に高音(\(T \gg 10^8 \mathrm{K}\))では、コンプトン効果に伴って電子散乱の不透明度は、上式の値よりも小さくなります。
+電子散乱による不透明度は不透明度の下限となっており、密度が小さく高温の領域で重要になります。
+そのような場所ではbound-bound・bound-free・free-freeによる不透明度が小さくなり(後述)、電子散乱不透明度が卓越するためです。</p>
+
+<h2 id="free-free吸収">Free-free吸収</h2>
+
+<p>Free-free吸収は制動放射の逆過程であり、自由電子がイオンの電場で散乱される際に、光を吸収する過程で起こります。
+(自由電子と光子だけでは、エネルギー保存と運動量保存を同時に満たすことができないため、第三者のイオンが必要となります。)<br />
+最初に制動放射の発光係数を与え、<a href="/stellar/radiative_energy_transfer#キルヒホッフの法則-kirchhoffs-law">キルヒホッフの法則</a>を用いて、free-free吸収の吸収係数を求めてみましょう。<br />
+(ただし、ここでは詳細な式変形は省略します。詳しくは<a href="/astroelec/thermal_brems">熱制動放射</a>と<a href="/astroelec/thermal_brems_absorption">熱制動吸収</a>のページをご覧ください。)<br />
+加速度運動する1つの電子(電荷\(e\))が、単位時間あたりに放出する電磁波のエネルギーは、<a href="/astroelec/lienard_larmor#非相対論的極限">ラーモアの式</a>より\(\frac{2e^2}{3c^3} \dot{v}^2\)で与えられます。
+ここで電子の運動は非相対論的であるとしました。
+ここで\(\dot{v}\)は電子の加速度を表します。
+電荷\(Z_i e\)を持つイオンのそばを通過する場合の加速度は\(\dot{v} = \frac{Z_i e^2}{m_e r^2}\)のように書けます。
+ここに\(r\)は電子とイオンの距離を表します。
+電子の速度が(非相対論的ではありますが)十分高速で、電子は次の図のようにほぼ直線的に通過すると近似すると、衝突パラメータ\(b\)で通過する電子が放出する全放射エネルギーは</p>
+
+\[E_b 
+= \frac{2e^2}{3c^3} \frac{Z_i^2 e^4}{m_e^2} \int_0^\infty \frac{dt}{(b^2 + x^2)^2} 
+= \frac{2e^6 Z_i^2}{3 m_e^2 c^3} \frac{1}{v} \int_{-\infty}^\infty \frac{dx}{(b^2 + x^2)^2} 
+= \frac{\pi e^6 Z_i^2}{3 m_e^2 c^3} \frac{1}{vb^3} \tag{5.2.3}\]
+
+<p><img src="/assets/images/stellar/opacity_01.png" alt="" /></p>
+
+<p>のように求めることができます。
+この過程では、電子は\(x \sim 0\)のあたりで最も電磁波を強く発します。
+その強さは\((b^2 + x^2)^{-2}\)に比例します。
+よって、\(x = vt\)として\(\vert vt \vert \ll b\)の範囲で展開を行うと</p>
+
+\[E(t) 
+\propto \frac{1}{(b^2 + v^2 t^2)^2} 
+\approx \frac{1}{b^4} \left( 1 - \frac{2v^2 t^2}{b^2}\right) \tag{5.2.4}\]
+
+<p>と書けます。
+一方、これを\(\cos (\omega t)\)に比例する電磁波によるエネルギー(\(\propto \cos^2 (\omega t)\))と考えると、\(\omega t \ll 1\)で</p>
+
+\[E(t) 
+\propto \cos^2 (\omega t) 
+\approx 1 - \omega^2 t^2 \tag{5.2.5}\]
+
+<p>のようになります。
+これと(5.2.4)式を比較すると</p>
+
+\[\omega 
+\simeq \frac{\sqrt{2} v}{b} 
+\simeq \frac{v}{b} \tag{5.2.6}\]
+
+<p>という関係を得ます。
+これはある電子の速度に対して、衝突パラメータ\(b\)は近似的に電磁波の振動数に関係づけられることを表しています。
+イオンと電子間の相対速度\(v\)が与えられているとき、様々な衝突パラメータ\(b\)での遭遇によって放出される電磁波の角振動数が\(\omega \sim \omega + d\omega\)である衝突の衝突パラメータの面積は\(-2\pi b db\) (\(b\)が小さいほど、\(\omega\)が大きいので負の符号がつきます)なので、1つの衝突で放出される単位振動数あたりのエネルギー\(E_\omega\)は</p>
+
+\[E_\omega d\omega 
+= -2\pi b E_b db 
+= - \frac{2\pi^2 e^6 Z_i^2}{3 m_e^2 c^3} \frac{1}{vb} db 
+\simeq \frac{2\pi^2}{3} \frac{e^6 Z_i^2}{m_e^2 c^3 v^2} d\omega \tag{5.2.7}\]
+
+<p>と表されます。
+電子およびイオンの数密度を\(N_e, N_i\)と書くと、単位時間・単位体積・単位振動数あたりに放出されるエネルギー\(4\pi \rho \eta_\omega^{ff}\)は</p>
+
+\[4\pi \rho \eta_\omega^{ff} 
+= N_i N_e \int_{v_\mathrm{min}}^\infty E_\omega v f(v) dv \tag{5.2.8}\]
+
+<p>と表されます。
+ここで\(f(v)\)は、相対速度が\(v \sim v + dv\)にある確率を与える分布関数です。
+熱運動の場合は、規格化されたマクスウェル・ボルツマン分布</p>
+
+\[f(v) dv 
+= 4\pi \left( \frac{m_e}{2\pi k_B T}\right)^{3/2} \exp \left( - \frac{m_e v^2}{2k_B T}\right) v^2 dv \tag{5.2.9}\]
+
+<p>で与えられます。
+(5.2.8)式の積分の下限値\(v_\mathrm{min}\)は、電子の運動エネルギーが放出される光子のエネルギーよりも大きくなければならないという条件から</p>
+
+\[\frac{1}{2} m_e v_\mathrm{min}^2 
+= \hbar \omega \tag{5.2.10}\]
+
+<p>のように設定できます。
+(5.2.9), (5.2.10)式を用いて、(5.2.8)式の積分を実行すると</p>
+
+\[4\pi \rho \eta_\nu^{ff} 
+\simeq \frac{2\pi e^6 Z_i^2}{3 m_e c^3} \left( \frac{2\pi}{m_e k_B T}\right)^{1/2} N_e N_i e^{-\frac{h\nu}{k_B T}} \tag{5.2.11}\]
+
+<p>が得られます。
+これに<a href="/stellar/radiative_energy_transfer#キルヒホッフの法則-kirchhoffs-law">キルヒホッフの法則</a>を用いれば</p>
+
+\[\rho \kappa_\nu^{ff} 
+\simeq N_e N_i \frac{e^6 Z_i^2}{12 m_e c h} \left( \frac{2\pi}{m_e k_B T}\right)^{1/2} \nu^{-3} \left( 1 - e^{-\frac{h\nu}{k_B T}}\right) \tag{5.2.12}\]
+
+<p>となります。
+ロスランド平均不透明度をとると</p>
+
+\[\kappa^{ff} 
+\propto \frac{Z_i^2 N_e N_i}{\rho} T^{-7/2} 
+\propto \rho T^{-3.5} \tag{5.2.13}\]
+
+<p>を得ます。
+ここから、単位質量あたりのロスランド平均不透明度は密度に比例して大きくなり、温度が高いと急激に小さくなるとわかります。
+\(T^{-3.5}\)の依存性は、\(\kappa_\nu^{ff}\)が\(T^{-1/2} \nu^{-3}\)に比例することから、ロスランド平均不透明度を得る際の積分で\(\nu^{-3} \propto \left(\frac{h\nu}{k_B T})^{-3]\)となることから現れるものです。
+係数を計算すると、free-free吸収におけるロスランド平均不透明度は、cgs単位で近似的に</p>
+
+\[\kappa^{ff} 
+\approx 10^{23} \frac{\langle Z_i^2\rangle}{\mu_e \mu_I} \rho T^{-3.5} \ [\mathrm{cm^2 / g}] \tag{5.2.14}\]
+
+<p>のように表されます。
+ここで\(\mu_e, \mu_I\)はそれぞれ電子とイオンの平均分子量を表します。</p>
+
+<h2 id="bound-free吸収">Bound-free吸収</h2>
+
+<p>Bound-free吸収は、原子またはイオンに束縛されていた電子が光を吸収することで、束縛から離れて自由電子になる(電離する)過程で起こります。
+束縛電子に対する電離エネルギー以上のエネルギーを持つ光子しか吸収しないため、bound-freeの吸収係数の波長に対する形はノコギリの歯状となります。
+(Bound-free吸収は、古典的には電子がfree-free放射をした後に再結合する過程の逆過程と考えることができます。)
+不連続と不連続の間での吸収係数は、free-free吸収のロスランド平均不透明度と同じように考えることができるため、\(\rho T^{-3.5}\)に比例します。
+水素・ヘリウムがほぼ完全に電離しているガスでは、bound-free吸収のロスランド平均不透明度\(\kappa^{bf}\)は、近似的に</p>
+
+\[\kappa^{bf} 
+\approx 4 \times 10^{25} Z (1 + X) \rho T^{-3.5} \ [\mathrm{cm^2 / g}] \tag{5.2.15}\]
+
+<p>のよう表されます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4bXfKgP">高原文郎, “宇宙物理学”</a><br />
+[2] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

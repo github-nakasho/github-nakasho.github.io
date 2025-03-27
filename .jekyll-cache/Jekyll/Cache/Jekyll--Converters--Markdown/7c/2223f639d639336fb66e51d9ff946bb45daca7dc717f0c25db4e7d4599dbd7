@@ -1,0 +1,102 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#標準モデル" id="markdown-toc-標準モデル">標準モデル</a>    <ol>
+      <li><a href="#全圧" id="markdown-toc-全圧">全圧</a></li>
+      <li><a href="#恒星の全質量" id="markdown-toc-恒星の全質量">恒星の全質量</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="標準モデル">標準モデル</h1>
+
+<p>理想気体ガス圧\(P_\mathrm{gas}\)と輻射圧\(P_\mathrm{rad}\)を考え、ガス圧と全圧の比を\(\beta \equiv P_\mathrm{gas} / P\)とします。
+この\(\beta\)が恒星内部で一定であると仮定するモデルは、Eddingtonによって勢力的に研究されました。
+これは恒星中で輻射によりエネルギーが運ばれる場合の粗い近似となっており、標準モデルと呼ばれています。
+以下では、この標準モデルについて考えてみましょう。</p>
+
+<h2 id="全圧">全圧</h2>
+
+<p>ガス圧・輻射圧・全圧はそれぞれ</p>
+
+\[P_\mathrm{gas} 
+= n k_B T 
+= \frac{\rho}{ \mu m_p} k_B T \tag{1}\]
+
+\[P_\mathrm{rad} 
+= \frac{1}{3} a T^4 \tag{2}\]
+
+\[P 
+= P_\mathrm{gas} + P_\mathrm{rad} \tag{3}\]
+
+<p>で与えられます。
+ここで<a href="/stellar/black_body#輻射圧プランク関数の導出">\(a\)は輻射定数</a>です。
+すると恒星内部の温度\(T\)は、\(\beta\)をパラメータとして</p>
+
+\[\beta 
+= \frac{P_\mathrm{gas}}{P} 
+= \frac{\frac{k_B}{\mu m_p} \rho T}{P} \ \Longrightarrow \ 
+T 
+= \beta P \frac{\mu m_p}{k_B \rho} \tag{4}\]
+
+<p>これにより、全圧\(P\)が</p>
+
+\[\begin{align}
+&amp;P 
+= \beta P + \frac{1}{3} a \beta^4 P^4 \left( \frac{\mu m_p}{k_B \rho} \right)^4 \ \Longrightarrow \
+1-\beta  
+= \frac{1}{3} a \beta^4 P^3 \left( \frac{\mu m_p}{k_B \rho} \right)^4 \notag \\
+&amp;\Longrightarrow \ 
+P 
+= \left\{ \left( \frac{k_B}{\mu m_p}\right)^4 \frac{3}{a} \frac{1-\beta}{\beta^3}\right\}^{1/3} \rho^{4/3} \tag{5}
+\end{align}\]
+
+<p>のように求まります。</p>
+
+<h2 id="恒星の全質量">恒星の全質量</h2>
+
+<p>(5)式は、<a href="/stellar/polytrope_lane_emden">\(n = 3\)のポリトロープ関係</a></p>
+
+\[P = K \rho^{4/3} \tag{6}\]
+
+<p>になっています。
+(5), (6)式を比較することで</p>
+
+\[K 
+= \left\{ \left( \frac{k_B}{\mu m_p}\right)^4 \frac{3}{a} \frac{1-\beta}{\beta^3}\right\}^{1/3} \tag{7}\]
+
+<p>これにより、<a href="/stellar/polytrope_lane_emden#半径と質量">このガス球の全質量</a>が</p>
+
+\[M 
+= -4\pi \left\{ \frac{4K}{4\pi G}\right\}^{3/2} \xi_1^2 \left( \frac{d\theta}{d\xi} \right)_{\xi_1} 
+= - \frac{4\pi}{(\pi G)^{3/2}} \left\{ \left( \frac{k_B}{\mu m_p}\right)^4 \frac{3}{a} \frac{1-\beta}{\beta^3}\right\}^{1/2} \xi_1^2 \left( \frac{d\theta}{d\xi}\right)_{\xi_1}\tag{8}\]
+
+<p><a href="/stellar/polytrope_lane_emden#ポリトロープの関係式">\(n=3\)のときのレーン・エムデン方程式のゼロ点での値より\(- \xi_1^2 \left( \frac{d\theta}{d\xi}\right)_{\xi_1} \sim 2.0\)</a>を代入すれば</p>
+
+\[M 
+\simeq 18 \left( \frac{1-\beta}{\mu^4 \beta^4} \right)^{1/2} M_\odot \tag{9}\]
+
+<p>となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

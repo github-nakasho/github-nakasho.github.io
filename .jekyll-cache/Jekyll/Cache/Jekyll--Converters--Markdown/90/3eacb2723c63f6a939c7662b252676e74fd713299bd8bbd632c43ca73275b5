@@ -1,0 +1,97 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#重力エネルギー源" id="markdown-toc-重力エネルギー源">重力エネルギー源</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="重力エネルギー源">重力エネルギー源</h1>
+
+<p><a href="/stellar/gravitational_energy_virial_theorem#ビリアル定理">ビリアル定理</a>により、恒星内のガスはエネルギーを得る\((T \frac{dS}{dt} &gt; 0)\)と膨張して温度(内部エネルギー)が減少します。
+逆にエネルギーを失うと、重力収縮して温度が上昇します (収縮による重力エネルギー減少に伴い解放された重力エネルギーの一部が内部エネルギーぎーとなります。)
+重力収縮によるエネルギー発生率を</p>
+
+\[\epsilon_\mathrm{g} 
+\equiv - T \frac{dS}{dt} \tag{6.2.1}\]
+
+<p>のように定義しましょう。
+すると恒星内部のエネルギー保存式(6.1.3)式は</p>
+
+\[\frac{dL_r}{dM_r} 
+= \epsilon_\mathrm{n} - \epsilon_\nu + \epsilon_\mathrm{g} \tag{6.2.2}\]
+
+<p>のように書くことができます。<br />
+エントロピーの変化率\(\frac{dS}{dt}\)と重力収縮とは、以下のように関係づけられます。
+ガスの単位質量あたりの内部エネルギーを\(\epsilon_\mathrm{i}\)のように書くと、エントロピーの変化率\(\frac{dS}{dt}\)は</p>
+
+\[T \frac{dS}{dt} 
+= T \left( \frac{\partial S}{\partial t}\right)_{M_r} 
+= \left( \frac{\partial e_\mathrm{i}}{\partial t}\right)_\mathrm{M_r} + P \left\{ \frac{\partial}{\partial t} \left( \frac{1}{\rho}\right) \right\}_\mathrm{M_r} \tag{6.2.3}\]
+
+<p>のように表されます。
+上式を恒星全体に渡って積分すると</p>
+
+\[\int_0^M T \frac{\partial S}{\partial t} dM_r 
+= \frac{d}{dt} \int_0^M e_\mathrm{i} dM_r + \int_0^M P \left\{ \frac{\partial}{\partial t} \left( \frac{1}{\rho}\right) \right\}_\mathrm{M_r} dM_r \tag{6.2.4}\]
+
+<p>となります。
+右辺の最後の項は</p>
+
+\[\left( \frac{\partial r}{\partial M_r} \right)_t 
+= \frac{1}{4\pi r^2 \rho} \ \Longrightarrow \ 
+\frac{4\pi}{3} \frac{\partial r^3}{\partial M_r} 
+= \frac{1}{\rho} \ \Longrightarrow \ 
+\left\{ \frac{\partial}{\partial t} \left( \frac{1}{\rho} \right) \right\}_{M_r} 
+= \frac{4\pi}{3} \frac{\partial}{\partial M_r} \left( \frac{\partial r^3}{\partial t}\right)\tag{6.2.5}\]
+
+<p>の式を用いると</p>
+
+\[\int_0^M P \left\{ \frac{\partial}{\partial t} \left( \frac{1}{\rho}\right) \right\}_{M_r} dM_r 
+= \frac{4\pi}{3} \int_0^M P \frac{\partial}{\partial M_r} \left( \frac{\partial r^3}{\partial t}\right) dM_r 
+= \frac{4\pi}{3} \left\{ \left[ P \frac{\partial r^3}{\partial t} \right]_0^M - \int_0^M \frac{\partial r^3}{\partial t} \frac{\partial P}{\partial M_r} \right\} 
+% = 4\pi \int_0^M r^2 \dot{r} \frac{GM_r}{4\pi r^4} dM_r 
+% = \int_0^M \left( \frac{\partial r}{\partial t}\right)_{M_r} \frac{GM_r}{r^2} dM_r 
+% = - \frac{d}{dt} \int_0^M \frac{GM_r}{r} dM_r\]
+
+<p>と書けます。
+途中、恒星表面\((M_r = M)\)で\(P=0\)であることを用いました。
+これより、(6.2.4)式は</p>
+
+\[\int_0^M T \frac{\partial S}{\partial t} dM_r 
+= \frac{d}{dt} \int_0^M e_\mathrm{i} dM_r - \frac{d}{dt} \int_0^M \frac{GM_r}{r} dM_r \tag{6.2.6}\]
+
+<p>と表されます。
+右辺の第一項が内部エネルギーの変化を表し、第二項が重力エネルギーの変化を表しています。
+従って、(6.2.6)式は全体で恒星のガスの全エネルギーの時間変化を表していることがわかります。
+<a href="/stellar/gravitational_energy_virial_theorem#ビリアル定理">ビリアル定理</a>によると、恒星の全エネルギーは恒星半径の減少とともに減少します。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[2] <a href="https://amzn.to/4bXfKgP">高原文郎, “宇宙物理学”</a><br />
+[3] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

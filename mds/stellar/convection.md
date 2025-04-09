@@ -188,7 +188,7 @@ $$
 $$
 \frac{d\Delta T}{dr} 
 \approx \left\{ \left( \frac{dT}{dr} \right)_\mathrm{ad} -\left( \frac{dT}{dr} \right) \right\} 
-= ( \nabla_mathrm{T} - \nabla_\mathrm{ad} ) \frac{T}{H_p} \tag{5.5.3}
+= ( \nabla_\mathrm{T} - \nabla_\mathrm{ad} ) \frac{T}{H_p} \tag{5.5.3}
 $$
 
 を得ます。

@@ -1,0 +1,83 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ヘリウム燃焼" id="markdown-toc-ヘリウム燃焼">ヘリウム燃焼</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ヘリウム燃焼">ヘリウム燃焼</h1>
+
+<p>例として、ここではヘリウム燃焼により\({}^4 \mathrm{He}\)から\({}^{12} \mathrm{C}, {}^{16} \mathrm{O}\)を生成することを考えましょう。
+ここではトリプルアルファ反応により\({}^{12} \mathrm{C}\)を生成し、そこにさらに\({}^4 \mathrm{He}\)を追加することで\({}^{16} \mathrm{O}\)を生成します。
+さらに\({}^{20} \mathrm{Ne}\)を作るために、\({}^{16} \mathrm{O}\)が破壊される反応も考慮に入れましょう。
+この核融合反応が起こる場所は中質量星の中心部であるとし、\(\rho = 10^4 \mathrm{g/cm^3}, T_9 = 0.15\)とします。
+ヘリウム、炭素、酸素、ネオンの数密度をそれぞれ\(N_4, N_{12}, N_{16}, N_{20}\)とし、さらにそれぞれの質量比を\(X_4, X_{12}, X_{16}, X_{20}\)とします。
+またここで考慮する核融合反応での、散乱断面積と速度の積の平均\(\langle \sigma v \rangle\)を、以下のように書きます。</p>
+
+<ul>
+  <li>トリプルアルファ反応: \(\langle 3\alpha \rangle\)</li>
+  <li>\({}^{12} \mathrm{C} (\alpha, \gamma) {}^{16} \mathrm{O}\): \(\langle \alpha12 \rangle\)</li>
+  <li>\({}^{16} \mathrm{O} (\alpha, \gamma) {}^{20} \mathrm{Ne}\): \(\langle \alpha16 \rangle\)</li>
+</ul>
+
+<p>これらを用い、\(N_4, N_{12}, N_{16}, N_{20}\)が満たす微分方程式を書き下していきましょう。
+まずは\(N_4\)についてです。
+トリプルアルファ反応では、まず\({}^4 \mathrm{He} + {}^4 \mathrm{He}\)による反応が起こり、\({}^8 \mathrm{Be}\)が生成されます。
+するとこの反応の反応断面積を\(\sigma_{2\alpha}\)とすると、単位体積・単位時間あたりの反応数は\(\frac{1}{2} N_4 N_4 \langle \sigma_{2\alpha} v \rangle\)のように書かれます。
+係数の\(1/2\)は、\(N_4\)から2つの\({}^4 \mathrm{He}\)を取り出す場合の数 \({}_{N_4} C_2\)からくるものです。
+こうしてできた\({}^8 \mathrm{Be}\)に、さらに\({}^4 \mathrm{He}\)が核融合を起こします。
+このときの反応断面積を\(\sigma_{2\alpha, \alpha}\)とすると、単位体積・単位時間あたりのトリプルアルファ反応数は</p>
+
+\[\frac{1}{2} N_4 N_4 \langle \sigma_{2\alpha} v\rangle \cdot N_4 \langle \sigma_{2\alpha, \alpha} v\rangle 
+= \frac{N_4^3}{2} \langle 3\alpha \rangle \tag{1}\]
+
+<p>のように書くことができます。
+同様に、単位体積・単位時間あたりの\({}^{12} \mahtrm{C} (\alpha, \gamma) {}^{16} \mathrm{O}, {}^{16} \mahtrm{O} (\alpha, \gamma) {}^{20} \mathrm{Ne}\)の反応数はそれぞれ、\(N_4 N_{12} \langle \alpha 12\rangle, N_4 N_{16} \langle \alpha 16\rangle\)と書かれることから</p>
+
+\[\frac{dN_4}{dt} 
+= - \frac{N_4^3}{2} \langle 3\alpha \rangle - N_4 N_{12} \langle \alpha 12 \rangle - N_4 N_{16} \langle \alpha 16 \rangle \tag{1}\]
+
+\[\frac{dN_{12}}{dt} 
+= \frac{1}{3} \frac{N_4^3}{2} \langle 3\alpha \rangle - N_4 N_{12} \langle \alpha 12 \rangle \tag{2}\]
+
+\[\frac{dN_{16}}{dt} 
+= N_4 N_{12} \langle \alpha 12 \rangle - N_4 N_{16} \langle \alpha 16 \rangle \tag{3}\]
+
+\[\frac{dN_{20}}{dt} 
+= N_4 N_{16} \langle \alpha 16 \rangle \tag{4}\]
+
+<p>のようになります。
+(2)式の\(1/3\)の係数は、トリプルアルファ反応で\({}^4 \mathrm{He}\)粒子が3つ消費され、\({}^{12} \mathrm{C}\)が1つ生成されることを表すものです。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="1989ApJ...339..354I">Itoh et al., 1989, “Neutrino Energy Loss in Stellar Interiors. III. Pair, Photo-, Plasma, and Bremsstrahlung Processes”</a><br />
+[2] <a href="1994ApJ...425..222H">Haft et al., 1994, “Standard and Nonstandard Plasma Neutrino Emission Revisited”</a><br />
+[3] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[4] <a href="https://amzn.to/4bXfKgP">高原文郎, “宇宙物理学”</a><br />
+[5] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

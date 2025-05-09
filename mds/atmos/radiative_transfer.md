@@ -87,7 +87,7 @@ $$
 光学的深さ(Optical depth)$$tau_\nu$$を
 
 $$
-\tau_\nu = \int_r^\infty (\kappa_\nu + \sigma_\nu) \rho dr \ {\rm or} \ d\tau_\nu = -(\kappa_\nu + \sigma_\nu) \rho dr \tag{2.4}
+\tau_\nu = \int_r^\infty (\kappa_\nu + \sigma_\nu) \rho dr \quad {\rm or} \quad d\tau_\nu = -(\kappa_\nu + \sigma_\nu) \rho dr \tag{2.4}
 $$
 
 と定義します。$$\tau_\nu$$は表面から遠く離れた$$\rho=0$$の場所で0で、内側に向かって大きくなります。  

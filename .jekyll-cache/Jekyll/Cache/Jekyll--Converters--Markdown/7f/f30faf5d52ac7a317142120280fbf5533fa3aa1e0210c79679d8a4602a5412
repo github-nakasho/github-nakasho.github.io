@@ -1,0 +1,131 @@
+I"e0
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#水平巨星分枝と球状星団について" id="markdown-toc-水平巨星分枝と球状星団について">水平巨星分枝と球状星団について</a>    <ol>
+      <li><a href="#水平分枝星" id="markdown-toc-水平分枝星">水平分枝星</a></li>
+      <li><a href="#球状星団" id="markdown-toc-球状星団">球状星団</a></li>
+      <li><a href="#青色はぐれ星-blue-straggler-stars-bbs" id="markdown-toc-青色はぐれ星-blue-straggler-stars-bbs">青色はぐれ星 (Blue Straggler Stars: BBS)</a></li>
+      <li><a href="#最近の話題-terzan-5" id="markdown-toc-最近の話題-terzan-5">最近の話題: Terzan 5</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="水平巨星分枝と球状星団について">水平巨星分枝と球状星団について</h1>
+
+<p>ここではヘリウム中心核を持つ進化段階にある恒星、そしてそれが多く存在する球状星団についてまとめています。</p>
+
+<h2 id="水平分枝星">水平分枝星</h2>
+
+<p>水平分枝星の内部は\(0.5M_\odot\)程度のヘリウム中心核を持ちます。
+ヘリウム中心核の質量はヘリウムフラッシュが起こるときの質量であるため、ほぼ一定です。
+赤色巨星の中心温度と中心密度は、外層質量にほとんど関係なく、ヘリウム中心核の質量で決まります。
+よってヘリウムフラッシュは全質量に依存せず、中心核質量がある値(およそ\(0.5M_\odot\)とされますが重元素含有量で多少変化します)まで成長したときに起こります。
+中心領域では\(3\mathrm{He} \rightarrow \mathrm{C}\)と\(\mathrm{C} + \mathrm{He} \rightarrow \mathrm{O}\)の核融合によりエネルギーが発生しています。
+また中心部は対流平衡になっており、ヘリウム中心核の周囲には水素燃焼殻が存在します。<br />
+水平分枝星は、球状星団のHR図でほぼ水平に走るグループとして現れます。
+水平分枝の長さは星団によって異なりますが、これは一般に重元素量の少ない星団ほど水平分枝が長い傾向にあります。<br />
+ヘリウムフラッシュが終わったすぐの状態を、特にゼロ年齢水平分枝星と呼びます。
+水平分枝の色の広がりは、ゼロ年齢水平分枝星の有効温度の広がりと、進化の効果によるものです。
+水平分枝星の外層質量が小さいほど、また外層の重元素含有量が少ないほど(不透明度が小さくなるため)表面温度は高くなります。
+球状星団の水平分枝を再現するには、水平分枝星の質量は\(0.6 M_\odot\)程度で、10%程度の質量の分散が必要です。
+球状星団の主系列の転向点(\(T_\mathrm{eff}\)の最も高い点で、中心部の水素が枯渇する段階に対応)付近に存在する恒星の質量は\(0.8 M_\odot\)程度なため、恒星は転向点からヘリウムフラッシュ発生までの進化の間に\(0.2M_\odot\)程度の質量を失わなければなりません。
+これは赤色巨星時代に発生する星風によるもので、個々の星によるばらつきは、恒星の自転速度などのばらつきに起因すると考えられています。
+赤色巨星での星風には、表面対流層の乱流のエネルギーが関わっていると考えられています。
+しかし、質量放出には未解明の部分があり、定量的な評価はまだできていません。<br />
+HR図上でセファイド不安定帯が水平分枝を横切るところでは、恒星の外層が不安定になり、脈動が起こります。
+そのような脈動変光星をRRライリ(Lyrae)型変光星と呼びます。
+水平分枝星の光度は、Heコアの質量で決まりまります。
+これはヘリウムフラッシュを起こしたときのヘリウムコア質量であることから、ほぼ一定となります
+(ただし重元素含有量に対するゆるやかな依存性は存在します。)
+よって、RRライリ型変光星の周期はみな類似しており、約0.5日とわかっています。
+RRライリ型変光星の光度は、球状星団の年齢の決定に重要な働きをしています。<br />
+水平分枝星の進化は、対流中心核でヘリウムが炭素と酸素に変えられていくことにより起こります。
+星はHR図上で、最初に有効温度の低い方向にわずかに進化したのち、高温の方向に向かってほぼ明るさを一定に保ちながら進化します。
+中心対流核内のヘリウム含有量が少なくなると、中心核が収縮し、水素燃焼殻の温度が上昇しエネルギー発生率が増加します。
+すると外層が膨張し、表面温度の低い方向絵と進化を始めます。
+中心核のヘリウムが全て炭素と酸素に変えられると、炭素-酸素中心核の周囲にヘリウム燃焼殻ができ、2つの燃焼殻をもつ構造ができます。
+このような段階では、恒星はHR図上で再び林トラックに沿って明るさを増加させていきます。
+このような進化段階にある恒星の系列を、漸近巨星枝 (Asymptotic Giant Branch: AGB)と呼びます。</p>
+
+<h2 id="球状星団">球状星団</h2>
+
+<p>その名の通り、たくさんの恒星が球状に分布する集合です。
+1つの球状星団に含まれる星の数は\(\sim 10^5\)個程度であり、星団の潮汐半径の平均値はおよそ40pc程度です。
+天の川銀河で知られている球状星団の数は170個程度とされています。
+そして重元素含有量が太陽の\(\sim 1/10\)以下のものは、銀河の取り囲む半径およそ50kpcの領域に分布しています。
+一方、重元素含有量の大きな星団は、銀河を囲む偏平な領域に分布しています。
+このような分布は、銀河が非常に大きなおおよそ球状のガス雲から収縮して形成され、球状星団はその初期の段階に形成されたことを示しています。
+また最近では、非常に遠方の球状星団には、我々の銀河が形成されたのちに他の矮小銀河から我々の銀河に侵入してきたものも含まれていると考えられています。<br />
+典型的な球状星団のHR図は、主系列から赤色巨星にまでのびる系列・ほぼ水平に走る水平分枝・その低温部上部から赤色巨星枝に漸近的に近づくAGBなどで特徴づけられます。
+またハッブル宇宙望遠鏡(HST)による観測では、主系列と平行な白色矮星の系列まで明らかになってきています。
+主系列から赤色巨星への系列は、光度が上がるに従って質量の大きい主系列の位置に対応して表面温度が高くなりますが、あるところで恒星の進化の効果によって、表面温度の低い方へと折れ曲がります。
+折れ曲がりによる最も表面温度の高い点は、転向点 (turn-off point)と呼ばれます。
+その点の明るさにより、球状星団の年齢が決定されます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="青色はぐれ星-blue-straggler-stars-bbs">青色はぐれ星 (Blue Straggler Stars: BBS)</h2>
+
+<p>また星団によっては、転向点のすぐ上部に恒星が存在するものもあります。
+転向点よりも明るい(質量の大きい)恒星はすでに主系列進化を終えていると考えられるため、それらの星は他の星団のメンバーとは異なる進化をしていなければなりません。
+種々の説が考えられてきましたが、それらが2つの恒星の合体によって質量が大きくなったものであるという説が有力です。
+それらを青色はぐれ星 (Blue Straggler Stars: BBS)と呼び、近接連星系での進化による質量交換と連星合体が原因でHR図上のその位置に出現すると考えられています。
+これは星団の中で、青色はぐれ星が比較的中心部に集中する傾向があるという観測結果と一致しています。</p>
+
+<p><img src="/assets/images/stellar/horizontal_branch_blue_stragglers_01.png" alt="" /></p>
+
+<h2 id="最近の話題-terzan-5">最近の話題: Terzan 5</h2>
+
+<p>球状星団のような古い恒星が集団をなす構造は、何も銀河のハロー部分にだけ存在しているわけではありません。
+天の川銀河のバルジ中に存在するTerzan 5と呼ばれる球状星団のような天体は、その一つです。
+最新の(とはいえ2009年の論文ですが)観測により、この天体には少なくとも2つの年齢・金属量成分からなる進化経路の恒星群が存在することが判明しました。
+それらは60億年と120億年程度の年齢からなることが、恒星進化モデルとの比較からわかりました。
+観測からHR図を描いたところ、明るい水平分枝星の集団と暗い水平分枝星の集団を発見したのです。</p>
+
+<p><img src="/assets/images/stellar/horizontal_branch_blue_stragglers_02.png" alt="" /></p>
+
+<p>1つのガス塊から形成される球状星団であれば、同時期に恒星が誕生するために同じような年齢・金属量の集団となるはずです。
+すなわち、Terzan 5は異なる成分を持つ天体が合体して形成されたものと考えることができます。
+このような天体が天の川銀河のバルジ中に存在するということは、天の川銀河がその昔に他の銀河と合体して成長し、その過程でバルジを形成してきた原始的な構成要素の生き残りである可能性が高いと言えます。
+このTerzan 5では、2種類の青色はぐれ星が存在することも判明しています。</p>
+
+<p><img src="/assets/images/stellar/horizontal_branch_blue_stragglers_03.png" alt="" /></p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="2009Natur.462..483F">Ferraro et al., 2009, “The cluster Terzan 5 as a remnant of a primordial building block of the Galactic bulge”</a><br />
+[2] <a href="https://arxiv.org/abs/2410.10314">Wang &amp; Ryu, 2025, “Blue straggler stars”</a><br />
+[3] <a href="2015ApJ...801...67X">Xin et al., 2015, “The Binary Mass Transfer Origin of the Red Blue Straggler Sequence in M30”</a><br />
+[4] <a href="https://iopscience.iop.org/article/10.1088/0004-637X/778/2/135">Dalessandro et al., 2013, “Double Blue Straggler Sequences in Globular Clusters: the Case of NGC 362”</a><br />
+[5] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[6] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

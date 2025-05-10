@@ -383,6 +383,8 @@ nc反応によるニュートリノフラックスの値は、電子ニュート
 ![](/assets/images/stellar/sun_17.png)
 ![](/assets/images/stellar/sun_18.png)
 
+このSNOは、Arhur B. McDonaldに2015年ノーベル物理学賞をもたらしたことでも有名です。
+
 ### カムランド (KAMioka Liquid scintilator ANtineutrino Detector)
 
 遠くの原子炉からの電子反ニュートリノ ($$E \sim 9 \mathrm{MeV}$$)を$$\bar{\nu}_e + \mathrm{p} \rightarrow \mathrm{e}^+ + \mathrm{n}$$を利用して検出することにより、ニュートリノ振動を検証する目的で作られました。
@@ -434,8 +436,25 @@ Apslund et al. (2021)では恒星大気モデルの3次元計算を新しくす�
 
 ## 参考文献
 
-[] []()  
-[] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
-[] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
+[1] [Anandaram, 2014, "On the Tachocline Zone Location in the Sun, the Luminosity Transport time scale, the Rotational Inertia and their Time Variation in Standard Solar Evolution Models"](https://doi.org/10.12723/mjs.28.4)  
+[2] [Kosovichev et al., 1997, "Structure and Rotation of the Solar Interior: Initial Results from the MDI Medium-L Program"](1997SoPh..170...43K)  
+[3] [Turck-Chize et al., 2004, "Surprising Sun: A New Step Towards a Complete Picture?"](https://doi.org/10.1103/PhysRevLett.93.211102)  
+[4] [Cleveland et al., "Measurement of the Solar Electron Neutrino Flux with the Homestake Chlorine Detector"](https://iopscience.iop.org/article/10.1086/305343)  
+[5] [Nakahata, 2022, "History of Solar Neutrino Observations"](https://arxiv.org/abs/2202.12421)  
+[6] [Abe et al., 2024, "Solar neutrino measurements using the full data period of Super-Kamiokande-IV"](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.092001)  
+[7] [GNO Collaboration, 2005, "Complete results for five years of GNO solar neutrino observations"](https://www.sciencedirect.com/science/article/pii/S0370269305005149?via%3Dihub)  
+[8] [Abdurashitov et al., 2002, "Solar neutrino flux measurements by the Soviet-American gallium experiment (SAGE) for half the 22-year solar cycle"](https://link.springer.com/article/10.1134/1.1506424)  
+[9] [Jelly et al., 2009, "The Subdury Neutrino Observatory"](2009ARNPS..59..431J)  
+[10] [KamLAND Collaboration, 2003, "First Results from KamLAND: Evidence for Reactor Antineutrino Disappearance"](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.021802)  
+[11] [Hyper-Kamiokande Proto-Collaboration, 2018, "Hyper-Kamiokande Design Report"](https://arxiv.org/abs/1805.04163v2)  
+[12] [Asplund et al., 2021, "The chemical make-up of the Sun: A 2020 vision"](https://www.aanda.org/articles/aa/full_html/2021/09/aa40445-21/aa40445-21.html)  
+[13] [太陽の科学館](https://solarphys.com/knowledge/structure/)  
+[14] [SOHO](https://soho.nascom.nasa.gov/home.html)  
+[15] [天文学辞典, "5分振動 (太陽の)"](https://astro-dic.jp/solar-5-minute-oscillation/)  
+[16] [柴橋博資, 高田将郎, "太陽の内部を音波で見る"](https://seismology.astron.s.u-tokyo.ac.jp/old_seismology/httpdocs/helioseismology11.pdf)  
+[17] [ハイパーカミオカンデ](https://www-sk.icrr.u-tokyo.ac.jp/hk/)  
+[18] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
+[19] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
+[20] [桜井隆, 小島正宜, 小杉健郎, 柴田一成, "太陽"](https://amzn.to/3RYRa68)  
 
 {% include adsense.html %} 

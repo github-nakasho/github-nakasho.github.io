@@ -1,0 +1,127 @@
+I"J/
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#漸近巨星分枝星-asymptotic-giant-branch-stars-agb星" id="markdown-toc-漸近巨星分枝星-asymptotic-giant-branch-stars-agb星">漸近巨星分枝星 (Asymptotic Giant Branch Stars: AGB星)</a>    <ol>
+      <li><a href="#観測的特徴" id="markdown-toc-観測的特徴">観測的特徴</a></li>
+      <li><a href="#内部構造" id="markdown-toc-内部構造">内部構造</a></li>
+      <li><a href="#中心核の限界質量と熱パルス" id="markdown-toc-中心核の限界質量と熱パルス">中心核の限界質量と熱パルス</a></li>
+      <li><a href="#ダスト" id="markdown-toc-ダスト">ダスト</a></li>
+      <li><a href="#agb段階後の進化" id="markdown-toc-agb段階後の進化">AGB段階後の進化</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="漸近巨星分枝星-asymptotic-giant-branch-stars-agb星">漸近巨星分枝星 (Asymptotic Giant Branch Stars: AGB星)</h1>
+
+<p>ヘリウム燃焼終了後の進化は、形成された炭素・酸素中心核内で電子が縮退しているかどうかによって大きく異なります。
+初期質量が\(\sim 8 M_\odot\)より小さい恒星は、ヘリウム燃焼後に炭素・酸素中心核で電子が縮退するため、次の核融合反応(炭素燃焼)の点火が起こるほど温度が上昇しません。
+そのような星は、縮退した炭素酸素中心核・ヘリウム燃焼殻・ヘリウム層・水素燃焼殻、そしてその外側に対流の起こっている膨張した外層を持つ漸近巨星分枝 (Asymptotic Giant Branch: AGB)星となります。
+AGB星段階では強い質量放出が起こり、恒星の外層はほとんど失われ、白色矮星へと進化していきます。
+白色矮星となったあとは、その星が単独星の場合は冷えていくにつれて暗くなっていくだけです。
+しかし白色矮星が連星系の中にあり、伴星からガスを受け取ることができると、ときどき新星爆発を起こして明るくなります。
+また伴星からの質量降着率が十分大きい場合、白色矮星の質量が<a href="/compact/chandrasekhar_limit">チャンドラセカール限界質量 (\(\sim 1.4 M_\odot\))</a>に達することがあります。
+すると中心部で炭素燃焼が爆発的に起こり、超新星爆発 (Ia型)を起こします。
+この超新星爆発により、白色矮星を形成した物質は全て飛び散って、再び星間物質となります。
+次の図はAGB星を含む、HR図上での恒星の末期段階の進化の軌跡を表したものです。</p>
+
+<p><img src="/assets/images/stellar/agb_01.png" alt="" /><br />
+<a href="1985QJRAS..26....1I">Iben (1985)より</a></p>
+
+<h2 id="観測的特徴">観測的特徴</h2>
+
+<p>先述のように、AGB星は\(M \lesssim 8M_\odot\)の中・小質量星が中心でのヘリウム燃焼終了後に入る進化段階にある恒星のことです。
+明るく、外層が大きく膨張した構造を持ち、変光を示すとともに盛んに質量放出を行っています。
+AGB星が観測されるスペクトル型は、M, S, C型等です
+(M型星スペクトルでは、TiOなどの分子バンドが卓越し、温度が約4000K以下であることを示しています。
+S型星スペクトルは、TiOの代わりにZrOバンドが見られるもので、s過程元素が豊富にあることを示しています。
+またC型星スペクトルでは、炭素を含む分子バンドが卓越しており、炭素星のスペクトルとなります。)
+また質量放出により、星の周囲に厚いダスト層が形成されています。
+これにより可視光が遮られ、赤外線 (OH/IR星)として観測される場合もあります。</p>
+
+<h2 id="内部構造">内部構造</h2>
+
+<p>AGB星の中心核は炭素・酸素からなり、電子が縮退した状態になっています。
+その周囲にヘリウム燃焼殻があり、その外側に主にヘリウムからなる層、そしてその周囲に水素燃焼殻があります。
+その外側に水素を多く含む層が表面まで続いており、その層のほとんどの領域で対流が発生しています。
+中心核の質量は\(0.5 \lesssim M_\mathrm{core} / M_\odot \lesssim 1.4\)で、質量上限は<a href="/compact/chandrasekhar_limit">チャンドラセカール限界</a>に近い値です。
+この値を境に、炭素の爆発的燃焼が起こります。
+ヘリウム燃焼殻と水素燃焼殻との間の質量は\(10^{-3} M_\odot \sim 10^{-4} M_\odot\)です。
+幾何学的には、中心核は非常に小さく、恒星の表面の半径が\(10^2 R_\odot \sim 10^3 R_\odot\)程度であるのに対し、水素燃焼殻の中心からの距離はたった\(\sim 10^{-2} R_\odot\)にすぎません。<br />
+中心核の質量が大きいほど中心核の半径は小さくなるため、水素燃焼殻とヘリウム燃焼殻での重力が強く、高温となる影響から光度が大きくなります。</p>
+
+<h2 id="中心核の限界質量と熱パルス">中心核の限界質量と熱パルス</h2>
+
+<p>中心核の質量には、チャンドラセカール限界質量の上限が存在するため、それに対応する光度限界 \(L_\mathrm{bol} = -7.1\)が存在します
+(ただし、この限界は対流外層の底での水素燃焼(hot-bottom burning)により越えられる可能性があるため、古典限界とも呼ばれています。
+しかし実際にこの限界を越えられるかどうかは、定かではありません。)<br />
+ヘリウム燃焼殻は熱的に不安定で、水素燃焼殻の働きによりヘリウム層がある程度分厚くなると、ヘリウム燃焼が暴走的に起こります (ヘリウム殻フラッシュ。)
+これによりヘリウムを消費し、ヘリウム燃焼が治るというサイクルが繰り返し起こります。
+これを熱パルス　(thermal pulse: TP)と呼びます。
+熱パルスではヘリウム燃焼に加え、s過程中性子捕獲により、鉄よりも重い原子核が生成されます。</p>
+
+<p><img src="/assets/images/stellar/agb_02.png" alt="" /><br />
+<a href="https://adsabs.harvard.edu/full/1997IAUS..189..373L">Lattenzio &amp; Frost (1997)より</a></p>
+
+<p>熱パルスでのエネルギー放出により、その上部が膨張し温度が下がるため、熱パルス直後に対流外層が一時的にヘリウム燃焼殻まで侵入します。
+これによりヘリウム燃焼の影響を受けたガスが、対流外層の中に取り込まれる third dredge-up と呼ばれる現象が起こります。
+この過程により、AGB星の外層の元素組成が変化し、酸素よりも炭素含有量が多くなっている炭素星が生成されます。
+また対流層の底がヘリウム燃焼殻のすぐ外側に位置する場合、対流層の中で無視できないほどの核反応が起きます。
+これを hot-bottom burning と呼び、対流中での元素組成に変化をもたらします。
+このような現象と表面からの質量放出による外層質量の減少とが同時に起こることで、種々の表面元素組成をもつAGB星が形成されます。</p>
+
+<h2 id="ダスト">ダスト</h2>
+
+<p>AGB星は長周期で脈動し、ミラ型変光星となっています。
+その脈動は、AGB星からの質量放出に重要な働きをしていると考えられています。
+放出されたガスからはダストが形成されますが、星周ダストの層が分厚くなると、可視光が吸収されて見えなくなります。
+代わりに赤外線で明るく光る赤外線星　(OH/IR星)となります。
+最近、この段階で形成されたダストのごく一部が、そのまま隕石の中に保存されていることがわかり、その解析が進んでいます。
+太陽系形成の際に存在したほとんどのダストは気化し、太陽系内の物質の元素組成が均一化されました。
+しかし非常に稀に、隕石中に存在する微粒子には、含まれる原子の同位体比が太陽系のものと著しく異なるものがあることがわかりました。
+それらは太陽系形成時に気化されず、AGB星周囲で作られた星間塵の状態が保存されていると考えられています。
+この粒子は、presolar grains などと呼ばれています。
+個々のpresolar grainは直径数ミクロン程度で、種々の原子の同位体比はそれらが色々なAGB星から形成されたものであることを示唆しています。
+例えば炭化ケイ素 (silicon carbide: SiC) presolar grainsの\({}^{12} \mathrm{C} / {}^{13} \mathrm{C}\)は太陽系での値 (\(\sim 89\))よりも小さいものが多く、その分布は炭素星での値の分布に似ています。
+これらは多数の恒星からの寄与により、太陽系の物質ができていることを表しています
+(presolar grainsはSiCだけでなく、他の種類・他の起源 (超新星爆発など)のものも多く存在します。)</p>
+
+<h2 id="agb段階後の進化">AGB段階後の進化</h2>
+
+<p>質量放出により外層の質量が\(10^{-3} M_\odot\)程度になると、恒星の表面温度が上昇し、AGB段階を抜け出します。
+するとAGB段階で放出したガスを光らせる、惑星状星雲の中心星となり、やがて白色矮星の冷却シーケンスに沿って、暗くなっていきます。
+しかし場合によっては (AGBを離れる時のタイミング次第では) 惑星状星雲の中心星以後まで進化した後で、最後のヘリウム殻フラッシュが起こることがあります。
+このときは外層質量が小さいため、星の表面での影響が大きく、星は膨張して表面温度が減少し、HR図上のAGB領域付近まで戻ってくることがあります。
+この現象を final helium shell flash (or final thermal pulse)と呼び、膨張して巨星に戻った状態を born-again AGBなどと呼ばれます。
+このfinal helium shell flashは、post-AGB星の特異な元素組成の成因として重要な働きをしていると考えられます。
+また何年にもわたって増光している FG Sge や 桜井天体は、final helium shell flashをしている恒星であると考えられています。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="1985QJRAS..26....1I">Iben, 1985, “The life and times of an intermediate mass star - In isolation/in a close binary”</a><br />
+[2] <a href="https://adsabs.harvard.edu/full/1997IAUS..189..373L">Latttanzio &amp; Frost, 1997, “The asymptotic giant branch”</a><br />
+[3] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[4] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

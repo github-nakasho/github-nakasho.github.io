@@ -1,0 +1,67 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#最適性の1次の必要条件" id="markdown-toc-最適性の1次の必要条件">最適性の1次の必要条件</a>    <ol>
+      <li><a href="#内容" id="markdown-toc-内容">内容</a></li>
+      <li><a href="#証明" id="markdown-toc-証明">証明</a></li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="最適性の1次の必要条件">最適性の1次の必要条件</h1>
+
+<h2 id="内容">内容</h2>
+
+<p>等式制約のある最適化問題の目的関数を\(\mathrm{obj} (\mathbf{x})\)、そして制約条件を\(g_i (\mathbf{s}) \ (i = 0, \dots, N-1)\)とします。ここで\(N\)は制約の総数です。これらは微分可能であるとします。<br />
+\(\mathbf{x}^\ast\)が局所最適解かつ正則ならば</p>
+
+\[\nabla H (\mathbf{x}^\ast, \boldsymbol{\lambda}) 
+= \nabla \mathrm{obj} (\mathbf{x}^\ast) + \sum_i \lambda_i \nabla g_i (\mathbf{x}^\ast) 
+= \mathbf{0} \tag{1}\]
+
+<p>を満たす\(\boldsymbol{\lambda}\)が存在します。</p>
+
+<h2 id="証明">証明</h2>
+
+<p>\(\mathbf{x}^\ast\)が局所最適解とすると、\(\mathbf{x}^\ast\)から\(\mathbf{d}\)方向に少しズレた点を考えます。\(\alpha\)を十分小さな値とすると</p>
+
+\[H (\mathbf{x}^\ast + \alpha \mathbf{d}, \boldsymbol{\lambda}) - H (\mathbf{x}^\ast, \boldsymbol{\lambda})
+\geq 0\]
+
+<p>両辺を\(\alpha\)で割ると、微分の定義より</p>
+
+\[\frac{H (\mathbf{x}^\ast + \alpha \mathbf{d}, \boldsymbol{\lambda}) - H (\mathbf{x}^\ast, \boldsymbol{\lambda})}{\alpha} 
+\xrightarrow{\alpha \rightarrow 0} (\nabla_\mathbf{x} H (\mathbf{x}^\ast, \boldsymbol{\lambda}))^\top \mathbf{d} 
+\geq 0\]
+
+<p>任意の方向\(\mathbf{d}\)に対してこれが常に成り立つためには\(\nabla_\mathbf{x} H = \mathbf{0}\)でなければなりません。よって局所最適解ならば(1)式を満たすような\(\boldsymbol{\lambda}\)が存在することがわかります。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<ul>
+  <li>[1] 梅谷俊治, しっかり学ぶ数理最適化 モデルからアルゴリズムまで</li>
+  <li>[2] <a href="http://www-optima.amp.i.kyoto-u.ac.jp/~nobuo/Ryukoku/2002/course3.pdf">山下信雄, 数理計画法 第3回目: 最適性の条件1</a></li>
+</ul>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

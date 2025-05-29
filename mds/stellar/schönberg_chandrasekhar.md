@@ -1,0 +1,202 @@
+---
+layout: default
+title: シェーンベルグ・チャンドラセカール限界
+parent: 恒星物理学
+math: mathjax3
+permalink: /stellar/schönberg_chandrasekhar
+nav_order: 37
+---
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+{% include adsense.html %} 
+
+# シェーンベルグ・チャンドラセカール限界 (Schönberg-Chandrasekhar limit)
+
+## 概要
+
+恒星が主系列進化を終えると、中心にヘリウムからなる中心核が存在するようになります。
+そしてその周りで水素からヘリウムへの核融合 (水素殻燃焼)が起こることで、エネルギーが出ているような構造となります。
+中心核の質量の全質量に対する比を$$q_c$$と書くとき、$$q_c \lesssim 0.1　(\equiv q_\mathrm{sc})$$の場合にこの構造が安定となる、シェーンベルグ・チャンドラセカール限界と呼ばれるものが存在します。
+このような場合、ほぼ理想気体の等温中心核と水素燃焼殻の構造が保たれ、水素殻燃焼による中心核の質量増加に伴って比較的ゆっくりと恒星が進化していきます。
+しかし質量が比較的大きい($$M \gtrsim 3M_\odot$$)恒星の場合、主系列が終わった段階で$$q_c > q_\mathrm{sc}$$となっています。
+このとき、中心核の等温圧力勾配では自己重力を支えることができずに、重力収縮を始めます。
+中心核の収縮により水素燃焼殻の温度が上昇するため、エネルギーの発生率も上昇します。
+すると外層を支えるのに必要なエネルギー以上のエネルギーが発生するようになります。
+そうなると外層が膨張し、表面温度が減少して赤色巨星段階へと進化していきます。
+このときの進化は、中心核の重力収縮で支配されるため、非常に速い進化を行います。
+このため、HR図上で主系列と赤色巨星枝の間にはほとんど恒星は分布していません。
+この領域を、ヘルツシュプルングギャップなどと呼ぶこともあります。  
+質量の比較的小さい星においても、水素殻燃焼の働きにより、等温中心核の質量が増加していきます。
+そしてシェーンベルグ・チャンドラセカール極限を越えると、中心核が重力収縮を始めます。
+しかし$$M \lesssim 1.2 M_\odot$$の小質量星では密度が高いために、等温中心核の質量がシェーンベルグ・チャンドラセカール限界を越える前に電子の縮退の影響が大きくなります。
+すると中心核が縮退圧で支えられるようになるため、急速な重力収縮は起こりません。
+このような恒星では、水素殻燃焼によって中心核の質量が増加するのに伴って、HR図上を比較的ゆっくりと主系列から赤色巨星枝に移動しながら明るさを増していきます。
+年齢の古い散開星団や球状星団のHR図では、星が主系列から赤色巨星枝へと連続的に連なっているのは、この比較的ゆっくりな進化のためです。
+
+## シェーンベルグ・チャンドラセカール限界の計算
+
+以下では、簡単のためにいくつかの仮定をおくことで、シェーンベルグ・チャンドラセカール限界を求めてみましょう。
+静水圧平衡の式より
+
+$$
+\frac{dP}{dM_r} 
+= - \frac{GM_r}{4\pi r^4} \tag{1}
+$$
+
+両辺に$$4\pi r^3$$をかけ、恒星中心から等温中心核の表面まで積分しましょう。
+
+$$
+\int_0^{M_c} 4\pi r^3 \frac{dP}{dM_r} dM_r 
+= - \int_0^{M_c} \frac{GM_r}{r} dM_r \tag{2}
+$$
+
+左辺を部分積分して整理しましょう。
+等温中心核の表面での値に$$s$$の添え字をつけて表すと
+
+$$
+4\pi r_s^3 P_s - 3 \int_0^{M_c} \frac{P}{\rho} dM_r 
+= - q \frac{GM_c^2}{r_s} \tag{3}
+$$
+
+のようになります。
+ここで$$q$$は1のオーダーの定数です (密度一定の場合は$$q = 3/5$$などになります。)
+$$\frac{P}{\rho} = \frac{k_B T_c}{\mu m_\mathrm{H}} = \frac{\mathcal{R} T_c}{\mu}$$であることと、中心核は等温であることから、(3)式の積分は実行することができます。
+簡単のため、$$\mu = \mu_c$$も一定であるとすると
+
+$$
+4\pi r_s^3 P_s - 3 \frac{\mathcal{R} T}{\mu_c} M_c 
+= - q \frac{GM_c^2}{r_s} \ \Longrightarrow \ 
+P_s
+= \frac{3 \mathcal{R} T_c M_c}{4\pi r_s^3 \mu_c} - q \frac{GM_c^2}{4\pi r_s^4} \tag{4}
+$$
+
+$$P_s$$が最大となるコア半径$$r_s$$を求めてみましょう。
+
+$$
+\frac{dP_s}{dr_s} 
+= - \frac{9 \mathcal{R} T_c M_c}{4\pi r_c^4 \mu_c} + \frac{qGM_c^2}{\pi r_s^5} 
+= 0 \ \Longrightarrow \ 
+r_{s, \mathrm{max}} 
+= \frac{4q G}{9\mathcal{R}} \frac{M_c \mu_c}{T_c} \tag{5}
+$$
+
+これより、$$P_s$$の最大値は
+
+$$
+\begin{align}
+P_{s, \mathrm{max}} 
+&= \frac{3 \mathcal{R} T_c M_c}{4\pi \mu_c} \left( \frac{9\mathcal{R} T_c}{4q G M_c \mu_c}\right)^3 - \frac{q GM_c^2}{4\pi} \left( \frac{9\mathcal{R} T_c}{4q G M_c \mu_c}\right)^4 \notag \\
+&= \left( \frac{9\mathcal{R} T_c}{4q G M_c \mu_c}\right)^3 \left( \frac{3 \mathcal{R} T_c M_c}{4\pi \mu_c} - \frac{q GM_c^2}{4\pi} \frac{9\mathcal{R} T_c}{4q G M_c \mu_c} \right) \notag \\
+&= \frac{3 \mathcal{R} T_c M_c}{4\pi \mu_c} \left( \frac{9\mathcal{R} T_c}{4q G M_c \mu_c}\right)^3 \left( 1- \frac{3}{4} \right) 
+= \frac{3^7 \mathcal{R}^4 T_c^4}{2^{10} \pi q^3 G^3 M_c^2 \mu_c^4} \tag{6}
+\end{align}
+$$
+
+となります。  
+一方、(1)式を等温中心核から恒星表面まで積分すると
+
+$$
+(左辺) 
+= \int_{M_c}^M \frac{dP}{dM_r} dM_r 
+= \int_{P_e}^0 dP 
+= - P_e \tag{7}
+$$
+
+のようになります。
+ここで$$P_e$$は、$$r=r_s$$における外層側の圧力です。
+以上より
+
+$$
+P_e
+= \int_{M_c}^M \frac{GM_r}{4\pi r^4} dM_r 
+> \int_{M_c}^M \frac{GM_r}{4\pi R^4} dM_r 
+= \frac{G}{4\pi R^4} \frac{1}{2} (M^2 - M_c^2) 
+\approx \frac{G}{8\pi R^4} M^2 \quad (M \gg M_c) \tag{8}
+$$
+
+となります。
+簡単のため、外層の温度・密度は一定としましょう。
+また$$M \gg M_c$$より、恒星の質量は外層のみでまかなわれているとすると
+
+$$
+M 
+= \frac{4\pi}{3} R^3 \rho_e, \quad 
+P_e 
+= \frac{\mathcal{R}}{\mu_e} \rho_e T_e \tag{10}
+$$
+
+の関係式より
+
+$$
+P_e 
+\gtrsim \frac{G}{8 \pi R^4} M \frac{4\pi}{3} R^3 \rho_e 
+= \frac{GM}{6 R} \frac{\mu_e P_e}{\mathcal{R} T_e} \tag{11}
+$$
+
+となります。
+外層における圧力の最小値を考えると
+
+$$
+R 
+= \frac{GM \mu_e}{6 \mathcal{R} T_e} \tag{12}
+$$
+
+より、これを(8)式に代入すれば
+
+$$
+P_{e, \mathrm{min}} 
+= \frac{6^4 \mathcal{R}^4 T_e^4}{8\pi G^3 M^2 \mu_e^4} \tag{13}
+$$
+
+のようになります。
+もし$$P_e > P_s$$ならば、等温中心核は外層側の圧力に負け、潰れていくことになります。
+以上より、(6), (13)式から
+
+$$
+\frac{3^7 \mathcal{R}^4 T_c^4}{2^{10} \pi q^3 G^3 M_c^2 \mu_c^4} 
+\geq \frac{6^4 \mathcal{R}^4 T_e^4}{8\pi G^3 M^2 \mu_e^4} \ \Longrightarrow \ 
+\left( \frac{M_c}{M} \right)^2 
+\leq \frac{3^3}{2^{11} q^3} \left( \frac{\mu_e}{\mu_c}\right)^4 \tag{14}
+$$
+
+のように求まります。
+途中、$$r = r_s$$において、$$T_c \simeq T_e$$としました。
+一般に$$\mu_c > \mu_e$$であることから、$$q_c = M_c /M$$に上限があることが示せました。
+
+```
+(14)式の係数は、仮定の置き方や計算の厳密さなどにより、多少変化します。
+```
+
+{% include adsense.html %} 
+
+### 等温かつ一様密度コアだと何が問題か？
+
+[参考にさせていただいた明治大学のこちらの資料](https://www.isc.meiji.ac.jp/~toshiki/pdf/SC_limit.pdf)では、最後に次のような問題が掲載されています。
+
+> pdfのシェーンベルグ=チャンドラセカール限界の導出の際、「等温コア」で「一様密度」を仮定しました。この問題点を端的に示しなさい。
+
+もし中心核が等温かつ一様密度の場合、状態方程式$$P = \frac{\rho}{\mu m_\mathrm{H}} k_B T$$より、圧力も一様となることがわかります。
+すると圧力勾配が存在せず、これは重力に逆らう力がないことを意味します。
+これではそもそも静水圧平衡を保つことができず、勝手にヘリウム中心核が潰れていくことになり、問題を考えることができなくなってしまうという矛盾が生じます。  
+このような理由から、このウェブサイトでは一様密度は仮定せずに、シェーンベルグ・チャンドラセカール限界を導出させていただきました。
+
+## 参考文献
+
+[1] [Australian National University, The Stars, Lecture 10, "Low Mass Stellar Evolution"](https://www.mso.anu.edu.au/~krumholz/teaching/astr3007_s1_2017/notes10.pdf)  
+[2] [Princeton University, Stars and Star Formation (Part II), "Hayashi Track, Ignition Masses, and Schonberg-Chandrasekhar Limit"](https://www.astro.princeton.edu/~burrows/classes/403/hayashi.ignition.schon.pdf)  
+[3] [国立精華大学, "Main Sequence & Post-Main-Sequence Stellar Evolution"](http://orion.astr.nthu.edu.tw/ita/lectures/ita10.pdf)  
+[4] [明治大学 宇宙物理学実験研究室 "様々な"星の限界"の物理"](https://www.isc.meiji.ac.jp/~toshiki/pdf/SC_limit.pdf)  
+[5] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
+[6] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
+
+{% include adsense.html %} 

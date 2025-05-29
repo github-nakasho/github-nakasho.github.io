@@ -1,0 +1,163 @@
+I"�(
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#3-ガスの状態と光の吸収発光係数" id="markdown-toc-3-ガスの状態と光の吸収発光係数">3. ガスの状態と光の吸収・発光係数</a>    <ol>
+      <li><a href="#31-bound-bound遷移に対するeinstein係数" id="markdown-toc-31-bound-bound遷移に対するeinstein係数">3.1 Bound-bound遷移に対するEinstein係数</a>        <ol>
+          <li><a href="#esinstein係数" id="markdown-toc-esinstein係数">Esinstein係数</a></li>
+          <li><a href="#einstein関係式" id="markdown-toc-einstein関係式">Einstein関係式</a></li>
+          <li><a href="#2準位間の遷移のみを考えた場合のradiative-transfer-equation" id="markdown-toc-2準位間の遷移のみを考えた場合のradiative-transfer-equation">2準位間の遷移のみを考えた場合のRadiative transfer equation</a></li>
+          <li><a href="#メーザー" id="markdown-toc-メーザー">メーザー</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="3-ガスの状態と光の吸収発光係数">3. ガスの状態と光の吸収・発光係数</h1>
+
+<p>イオンに束縛された電子または自由電子による光の吸収・発光は束縛状態のエネルギー準位間のBound-bound遷移、束縛状態と自由状態間のBound-free遷移(電離または再結合)、自由状態間のFree-free遷移に伴って起こります。Bound-bound遷移は線吸収・発光を起こし、Bound-freeとFree-free遷移は連続吸収・発光を起こします。</p>
+
+<p><img src="/assets/images/atmos/transition.png" alt="Bound-bound, bound-free, free-free遷移。" /></p>
+
+<h2 id="31-bound-bound遷移に対するeinstein係数">3.1 Bound-bound遷移に対するEinstein係数</h2>
+
+<h3 id="esinstein係数">Esinstein係数</h3>
+
+<p>最初に2つのレベル間で起こるBound-Bound吸収について考察しましょう。下のレベルを\(l\)、上のレベルを\(u\)とし、それぞれの状態の統計的重率をそれぞれ\(g_l, g_u\)と書きます。また、それぞれのレベルにある原子の数密度をそれぞれ\(n_l, n_u\)とします。</p>
+
+<p><img src="/assets/images/atmos/2level.png" alt="2準位間の遷移。" /></p>
+
+<p>Intensity \(I_\nu\)の光を吸収して、レベル\(l\)からレベル\(u\)に遷移が起こる確率は</p>
+
+\[n_l B_{lu} I_\nu \frac{d\Omega}{4\pi} \tag{3.1}\]
+
+<p>のように書けます。ここで\(B_{lu}\)はEinstein係数の1つで、\(d\Omega\)は微小立体角を表します。この過程におけるエネルギー吸収率は</p>
+
+\[\rho \bar{\kappa}_{lu} I_\nu 
+= n_l \frac{B_{lu} h\nu}{4\pi} I_\nu \tag{3.2}\]
+
+<p>のようになります。ここで\(\bar{\kappa}_{lu}\)はこの過程による吸収係数(単位質量あたり)であり、吸収される振動数\(\nu\)は2つのレベルのエネルギー差と\(E_u-E_l = h\nu\)の関係にあります。<br />
+上のレベルから下のレベルへの遷移には2つの過程が考えられます。その1つは自然発生的に起こる自発遷移(Spontaneous transition)です。その遷移確率をEinstein係数の1つ\(A_{ul}\)で表すと、自発放射(Spontaneous emission)によるエネルギー放出率(単位立体角あたり)は</p>
+
+\[\rho \eta_\nu(\mathrm{spontaneous}) 
+= n_u \frac{A_{ul} h\nu}{4\pi} \tag{3.3}\]
+
+<p>のように表されます。もう1つの過程はInduced emission(誘導放射またはStimulated emission)です。遷移によって出る光子と同じエネルギーを持つ光子の存在に誘発されて起こります。その遷移率は同じ振動数の入射光Intensity \(I_\nu\)に比例するので、エネルギー放出率は</p>
+
+\[\rho \eta_\nu (\mathrm{induced}) 
+= n_u \frac{B_{ul} h\nu}{4\pi} I_\nu \tag{3.4}\]
+
+<p>のように書かれます。ここで\(B_{ul}\)はEinstein係数の1つです。誘導放射で放出された光の角度依存性は入射光と全く同じであるのに対して、自発放射は等方的に起こります。</p>
+
+<h3 id="einstein関係式">Einstein関係式</h3>
+
+<p><img src="" alt="" /></p>
+
+<p>熱平衡状態では\(I_\nu = B_\nu\)であり、\(n_l\)と\(n_u\)にはBoltzmann関係</p>
+
+\[\left( \frac{n_u}{n_l} \right)^\ast 
+= \frac{g_u}{g_l} e^{-\frac{h\nu}{k_B T}} \tag{3.5}\]
+
+<p>があります。\(\ast\)は熱平衡状態での量であることを表すためにつけてあります。上下の遷移が釣り合っていなくてはならないので</p>
+
+\[n_l B_{lu} B_\nu = n_u^\ast A_{ul} + n_u^\ast B_{ul} B_\nu \tag{3.6}\]
+
+<p>という関係が成り立ちます。これを\(B_\nu\)について解いて、(3.5)式を使うと</p>
+
+\[B_\nu 
+= \frac{n_u^\ast A_{ul}}{n_l^\ast B_{lu} - n_u^\ast B_{ul}} 
+= \frac{A_{ul}}{B_{ul}} \left( \frac{g_l B_{lu}}{g_u B_{ul}} e^{\frac{h\nu}{k_B T}} - 1\right)^{-1} \tag{3.7}\]
+
+<p>一方、Planck関数\(B_\nu\)は以下で与えられるのでした。</p>
+
+\[B_\nu 
+= \frac{2h\nu^3}{c^2} \left( e^{\frac{h\nu}{k_B T}} -1 \right)^{-1} \tag{3.8}\]
+
+<p>よって、(3.7), (3.8)式を比較すると以下の2つの関係を得ることができます。</p>
+
+\[A_{ul} 
+= \frac{2h\nu^3}{c^2} B_{ul} \tag{3.9}\]
+
+\[g_l B_{lu} 
+= g_u B_{ul} \tag{3.10}\]
+
+<p>これらの関係はEinstein relationsとして知られています。この関係式を導出するために熱平衡を仮定しましたが、Einstein relationsは温度に依存しない原子間の性質を表すものです。よって熱平衡であるかないかに関わらず成り立つ関係式です。</p>
+
+<h3 id="2準位間の遷移のみを考えた場合のradiative-transfer-equation">2準位間の遷移のみを考えた場合のRadiative transfer equation</h3>
+
+<p>2つのレベル間の遷移だけが起こるとした場合を考えましょう。散乱を無視\((\sigma_\nu = 0)\)したRadiative transfer equationは(3.2), (3.3), (3.4)式から</p>
+
+\[\begin{align}
+\mu \frac{d I_\nu}{dz} 
+&amp;= \rho \eta_\nu - (\kappa_\nu + \sigma_\nu) \rho I_\nu
+= n_u \frac{A_{ul} h\nu}{4\pi} + n_u \frac{B_{ul} h \nu}{4\pi} I_\nu - n_l \frac{B_{lu} h\nu}{4\pi} I_\nu \notag \\
+&amp;= \frac{h\nu}{4\pi} n_u A_{ul} - \frac{h\nu}{4\pi} (n_l B_{lu}-n_u B_{ul}) I_\nu \tag{3.11}
+\end{align}\]
+
+<p>のように書くことができます。上式より\(I_\nu\)に比例する項はInduced emissionを考慮に入れた(Induced emissionは負の吸収と考えます)吸収係数を</p>
+
+\[\rho \kappa_\nu 
+= \frac{h\nu}{4\pi} (n_l B_{lu}-n_u B_{ul}) 
+= \frac{h\nu}{4\pi} n_l B_{lu} \left( 1- \frac{n_u B_{ul}}{n_l B_{lu}} \right)
+\underbrace{=}_{(3.10)} \frac{h\nu}{4\pi} n_l B_{lu} ( 1- \underbrace{\frac{g_l n_u }{g_u n_l}}_{負の吸収} ) \tag{3.12}\]
+
+<p>と見なすことができます。実査にはエネルギー準位が有限の幅を持つことからくる線輪郭関数\(\phi (\nu)\)がかかりますが、ここでは省略しています\((\int\phi(\nu) d\nu = 1)\)。このとき、Source functionは</p>
+
+\[S_\nu 
+= \frac{\eta_\nu}{\kappa_\nu + \underbrace{\sigma_\nu}_{=0}} 
+\underbrace{=}_{(3.11)} \frac{n_u A_{ul}}{n_l B_{lu} -n_u B_{ul}} 
+= \frac{\frac{A_{ul}}{B_{ul}}}{\frac{n_l B_{lu}}{n_u B_{ul}}-1} 
+\underbrace{=}_{(3.9), (3.10)} \frac{2h\nu^3}{c^2} \left( \frac{g_u n_l}{g_l n_u} - 1\right)^{-1} \tag{3.13}\]
+
+<p>となります。吸収係数(3.12)は熱平衡のとき、ボルツマン関係(3.5)式より</p>
+
+\[\rho \kappa_\nu 
+= n_l B_{lu} (1-e^{-\frac{h\nu}{k_B T}}) \frac{h \nu}{4\pi} \tag{3.14}\]
+
+<p>ここで\((1-e^{-\frac{h\nu}{k_B T}})\)は熱平衡におけるInduced emissionが吸収係数に及ぼす効果を表しています。\(T\)が大きいとIndueced emissionはほとんど影響しませんが、\(\nu\)が小さい(波長が長い)と影響が出てきます。<br />
+また熱平衡の時のSouce functionは</p>
+
+\[S_\nu 
+= \frac{\eta_\nu}{\kappa_\nu} 
+= \frac{2h\nu^3}{c^2} (e^{\frac{h\nu}{k_B T}}-1)^{-1}
+= B_\nu \tag{3.15}\]
+
+<p>のようにPlanck関数に一致します。</p>
+
+<h3 id="メーザー">メーザー</h3>
+
+<p>恒星内部では起こりませんが、強い非熱平衡状態ではPopulation inversion(存在率の逆転); \((n_u/g_u) &gt; (n_l / g_l)\)が起こります。このときは(3.12)式からわかるように、誘導放射の方が吸収よりも大きくなり、吸収係数が負となります。その結果、その領域を通過する光は吸収されるのではなく、強められることになります。この現象はMaser (Microwave Amplification by Stimulated Emission of Radiation)やLaser(Light Amplification by Stimulated Emission of Radiation)として知られます。</p>
+
+<p><img src="/assets/images/atmos/maser.png" alt="メーザーが起こる例。" /></p>
+
+<p>低温・高密度・古い恒星の周星物質ではメーザーがよく見られます。これを用いるとガスの運動などがわかることから、脈動の様子などを調べることができます。</p>
+
+<p><img src="/assets/images/atmos/sio_maser.png" alt="実際に星周物質から観測されているSiOメーザーの様子。" /></p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p><a href="https://www.aanda.org/articles/aa/full/2005/11/aa1658/aa1658.right.html">Yi et al., 2005, “SiO mesers in TX Cam - Simultaneous VLBI observations of two 43 GHz masers at four epochs”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

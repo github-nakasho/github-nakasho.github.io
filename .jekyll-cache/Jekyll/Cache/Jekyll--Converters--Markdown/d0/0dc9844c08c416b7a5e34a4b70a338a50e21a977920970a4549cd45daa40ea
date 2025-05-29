@@ -1,0 +1,213 @@
+I"�O
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#レポート課題" id="markdown-toc-レポート課題">レポート課題</a>    <ol>
+      <li><a href="#229式から横軸を1beta-j縦軸をqとしたグラフを描画しなさい" id="markdown-toc-229式から横軸を1beta-j縦軸をqとしたグラフを描画しなさい">(2.29)式から横軸を\(1/\beta J\)、縦軸を\(q\)としたグラフを描画しなさい。</a>        <ol>
+          <li><a href="#まずは準備運動" id="markdown-toc-まずは準備運動">まずは準備運動</a></li>
+          <li><a href="#本題" id="markdown-toc-本題">本題</a></li>
+        </ol>
+      </li>
+      <li><a href="#328式でq-neq-0が解として相応しくない理由を論述しなさい" id="markdown-toc-328式でq-neq-0が解として相応しくない理由を論述しなさい">(3.28)式で\(q \neq 0\)が解として相応しくない理由を論述しなさい</a>        <ol>
+          <li><a href="#式変形から考える" id="markdown-toc-式変形から考える">式変形から考える</a></li>
+          <li><a href="#直感的に考察する" id="markdown-toc-直感的に考察する">直感的に考察する</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="レポート課題">レポート課題</h1>
+
+<h2 id="229式から横軸を1beta-j縦軸をqとしたグラフを描画しなさい">(2.29)式から横軸を\(1/\beta J\)、縦軸を\(q\)としたグラフを描画しなさい。</h2>
+
+<p>(2.29)式は以下のようなものでした。</p>
+
+\[q 
+= \int D_z \tanh^2 (\beta J \sqrt{q} z) \tag{R.1}\]
+
+<p>ここではこの描画を目標に見据えつつ、段階を踏んでこのスクリプト作成の理解を深めます。</p>
+
+<h3 id="まずは準備運動">まずは準備運動</h3>
+
+<p>いきなり難しい問題を解くのは骨が折れるので、まずは以下の式の描画スクリプトを考えてみることにしましょう。</p>
+
+\[m 
+= \tanh (\beta J m) \tag{R.2}\]
+
+<p>これは自己無撞着方程式と呼ばれるものです。これをPythonの便利なライブラリSciPyを用いて解いてみましょう。\(a = \frac{1}{\beta J}\)とおくと、今は\(f(m) = m -\tanh (m/a)\)の解を求めることになります。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># set function
+</span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>上述のような関数を定義しておき、これを<code class="language-plaintext highlighter-rouge">scipy.optimize.newton</code>で解きます(ニュートン法の解説は省略)。あとは<code class="language-plaintext highlighter-rouge">a</code>について区間[0, 2]で繰り返せば描きたいグラフを作成することができます。<br />
+以下にスクリプト全体を示します。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">newton</span>
+
+<span class="c1"># set function
+</span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set the number of divisions of a 
+</span>    <span class="n">ia</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="c1"># set range of a
+</span>    <span class="n">amin</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">amax</span> <span class="o">=</span> <span class="mf">2.0</span>
+    <span class="c1"># set a-coordinate
+</span>    <span class="n">a_coord</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">amin</span><span class="p">,</span> <span class="n">amax</span><span class="p">,</span> <span class="n">ia</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">m_2</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_coord</span><span class="p">:</span>
+        <span class="c1"># solve function
+</span>        <span class="n">m</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newton</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">)))</span>
+        <span class="n">m_2</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newton</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">)))</span>
+    <span class="c1"># make plot
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_coord</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_coord</span><span class="p">,</span> <span class="n">m_2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/βJ'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'m'</span><span class="p">)</span>
+    <span class="c1"># show plot
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>途中出てくる<code class="language-plaintext highlighter-rouge">newton(f, 1.1, args=(a, ))</code>は、関数<code class="language-plaintext highlighter-rouge">f(x, a)</code>を<code class="language-plaintext highlighter-rouge">x</code>の初期値x0=1.1からニュートン法で求解することを意味します。最後の<code class="language-plaintext highlighter-rouge">args=(a, )</code>は、関数<code class="language-plaintext highlighter-rouge">f</code>が<code class="language-plaintext highlighter-rouge">x</code>以外の引数を持つことを明示するためのものです。以上のスクリプトで作成したグラフは以下のようになります。</p>
+
+<p><img src="/assets/images/infostat/m.png" alt="磁化の様子。" /></p>
+
+<p>2つ曲線があるのは、ニュートン法の初期値依存性のためです。</p>
+
+<h3 id="本題">本題</h3>
+
+<p>再び、描画したい方程式を見てみましょう。</p>
+
+\[q 
+= \int_{-\infty}^\infty \frac{dz}{\sqrt{2\pi}} e^{-\frac{z^2}{2}} \tanh^2 (\beta J \sqrt{q} z) \tag{R.3}\]
+
+<p>まずは右辺を数値的に積分するスクリプトを考えましょう。SciPyの<code class="language-plaintext highlighter-rouge">integrate.quad</code>を用いて数値積分を行います(このアルゴリズムの説明については省略)。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># set integrand function
+</span><span class="k">def</span> <span class="nf">integrand</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="o">*</span><span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">quad</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="p">)))</span>
+</code></pre></div></div>
+
+<p>ここで<code class="language-plaintext highlighter-rouge">quad(integrand, -10, 10, args=(a, q, ))</code>は関数<code class="language-plaintext highlighter-rouge">integrand(x, a, q)</code>を\(-10 \leq {\rm x} \leq 10\)について数値積分することを意味します。最後の<code class="language-plaintext highlighter-rouge">args=(a, q, )</code>は、関数<code class="language-plaintext highlighter-rouge">integrand</code>が<code class="language-plaintext highlighter-rouge">x</code>以外の引数を明示するためのものです。<br />
+あとは上のスクリプトでa (=\(\frac{1}{\beta J}\))と\(q\)を与えれば、右辺の積分計算を実行できたことになります。(R.3)式を描画するスクリプトは、先ほどのNewton法での求解も合わせて以下のようになります。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">newton</span>
+
+<span class="c1"># set integrand function
+</span><span class="k">def</span> <span class="nf">integrand</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="o">*</span><span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># set function
+</span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">q</span> <span class="o">-</span> <span class="n">y</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="c1"># set the number of divisions of a 
+</span>    <span class="n">ia</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="c1"># set range of a
+</span>    <span class="n">amin</span> <span class="o">=</span> <span class="mf">0.01</span>
+    <span class="n">amax</span> <span class="o">=</span> <span class="mf">2.01</span>
+    <span class="c1"># set a-coordinate
+</span>    <span class="n">a_coord</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">amin</span><span class="p">,</span> <span class="n">amax</span><span class="p">,</span> <span class="n">ia</span><span class="p">)</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_coord</span><span class="p">:</span>
+        <span class="n">q</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newton</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">)))</span>
+    <span class="c1"># make plot
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_coord</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'1/βJ'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'q'</span><span class="p">)</span>
+    <span class="c1"># show plot
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>このスクリプトで作成されたグラフは以下のようになります。</p>
+
+<p><img src="/assets/images/infostat/q.png" alt="スピングラス秩序パラメータの様子。" /></p>
+
+<p>先ほどの\(m\)と違い、\(\frac{1}{\beta J} = 0\)近傍で線形な減少を示していることがわかります。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>試していませんが、途中の数値積分において2重指数関数型変換を行うと積分範囲に対する収束が早くなるかもしれません。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>同じ数値積分アルゴリズムでも、ロンバーグ積分(scipy.integrate.romberg)だと積分値が常に0となりました。アルゴリズムの問題？
+</code></pre></div></div>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="328式でq-neq-0が解として相応しくない理由を論述しなさい">(3.28)式で\(q \neq 0\)が解として相応しくない理由を論述しなさい</h2>
+
+<h3 id="式変形から考える">式変形から考える</h3>
+
+<p>(3.27)式より</p>
+
+\[q 
+= \frac{q}{(\lambda - (Q - q))^2} \tag{R.3}\]
+
+<p>\(q \neq 0\)の解を選択すると</p>
+
+\[1 
+= \frac{1}{(\lambda - (Q-q))^2} \ \Longrightarrow \ 
+\lambda-(Q-q) 
+= \pm 1 \ \Longrightarrow \ 
+Q 
+= \lambda \mp 1 + q\]
+
+<p>この\(Q\)を用いて、固有値分布\(\rho (\lambda)\)は</p>
+
+\[\rho (\lambda) 
+= \frac{1}{\pi} \mathrm{Im} (Q) 
+= \frac{1}{\pi} \mathrm{Im} (\lambda)\]
+
+<p>今、固有値\(\lambda\)は実数を考えているので、この式は\(\rho(\lambda) = 0\)となります。よって固有値分布が取れないことから、\(q \neq 0\)の解は不適であることがわかります。</p>
+
+<h3 id="直感的に考察する">直感的に考察する</h3>
+
+<p>\(q\)はスピングラス秩序パラメータであることを思い出しましょう。\(q = q^{ab} = \sum_{i=1}^N u_{i, a} u_{i,b} \ (a \neq b)\)より、\(q = 0\)は人工スピンの振る舞いが異なるレプリカごとに完全にランダムであることを意味します。それに対して\(q \neq 0\)は完全にランダムでなく、ある程度凍結を起こしている状態です。前者はランダム行列を生成するごとにバラバラな値を要素に持つ行列が生成されることに対応しますが、後者はランダム行列を何回か生成したときに同じような行列が生成されてしまうことを意味すると考えられます。よって\(q \neq 0\)はランダム行列を表現する方法としては不適切な解である、と考えることができます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

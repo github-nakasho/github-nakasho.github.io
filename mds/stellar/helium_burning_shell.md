@@ -226,10 +226,10 @@ AGB星の中でs過程の豊富な恒星や、酸素よりも炭素の含有量�
 
 ## 参考文献
 
-[] [Straniero et al., 1997, "Evolution and Nucleosynthesis in Low-Mass Asymptotic Giant Branch Stars. I. Formation of Population I Carbon Stars"](https://iopscience.iop.org/article/10.1086/303794)  
-[] [Iben, 1985, "The Life and Times of an Intermediate Mass Star - in Isolation/in a Close Binary"](https://adsabs.harvard.edu/full/1985QJRAS..26....1I)  
-[] [Lattanzio & Frost, 1997, "The asymptotic giant branch"](https://articles.adsabs.harvard.edu//full/1997IAUS..189..373L/0000375.000.html)  
-[] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
-[] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
+[1] [Straniero et al., 1997, "Evolution and Nucleosynthesis in Low-Mass Asymptotic Giant Branch Stars. I. Formation of Population I Carbon Stars"](https://iopscience.iop.org/article/10.1086/303794)  
+[2] [Iben, 1985, "The Life and Times of an Intermediate Mass Star - in Isolation/in a Close Binary"](https://adsabs.harvard.edu/full/1985QJRAS..26....1I)  
+[3] [Lattanzio & Frost, 1997, "The asymptotic giant branch"](https://articles.adsabs.harvard.edu//full/1997IAUS..189..373L/0000375.000.html)  
+[4] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
+[5] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
 
 {% include adsense.html %}

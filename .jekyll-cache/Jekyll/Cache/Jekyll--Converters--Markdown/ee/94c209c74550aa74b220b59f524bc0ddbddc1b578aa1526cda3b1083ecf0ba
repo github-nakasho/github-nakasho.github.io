@@ -1,0 +1,116 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#輻射駆動風-radiatively-driven-wind" id="markdown-toc-輻射駆動風-radiatively-driven-wind">輻射駆動風 (radiatively driven wind)</a>    <ol>
+      <li><a href="#光学的に厚い場合" id="markdown-toc-光学的に厚い場合">光学的に厚い場合</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="輻射駆動風-radiatively-driven-wind">輻射駆動風 (radiatively driven wind)</h1>
+
+<p>太陽風の場合は、輻射場の圧力はガス圧に比べて無視できましたが、早期型星では輻射場の効果によって恒星風が発生します。
+圧力をガス圧\(P_\mathrm{gas}\)と輻射圧\(P_\mathrm{rad}\)に分け、定常球対称風に対する運動方程式を書くと</p>
+
+\[v \frac{dv}{dr} 
+= -\frac{1}{\rho} \frac{dP_\mathrm{gas}}{dr} - \frac{1}{\rho} \frac{dP_\mathrm{rad}}{dr} - \frac{GM_r}{r^2} \tag{1}\]
+
+<p>のようになります。
+輻射圧は光子による運動量の輸送ですが、恒星内部のような光学的に厚く輻射に対して拡散近似が使える場合には、簡単な表現式が使えます。
+最初に光学的に厚い場合を考え、その後に一般的な場合を考えましょう。</p>
+
+<h2 id="光学的に厚い場合">光学的に厚い場合</h2>
+
+<p>恒星内部のような光学的に厚い状態では、輻射圧は温度だけの関数となり</p>
+
+\[P_\mathrm{rad} 
+= \frac{1}{3} a_\mathrm{R} T^4 \tag{2}\]
+
+<p>と書けます。
+ここで\(a_\mathrm{R}\)は輻射定数 (radiation constant)を表します。
+また</p>
+
+\[\frac{L_\mathrm{rad}}{4\pi r^2} 
+= - \frac{4a_\mathrm{R} c}{3\kappa \rho} T^3 \frac{dT}{dr} 
+= - \frac{c}{\kappa \rho} \frac{dP_\mathrm{rad}}{dr} \tag{3}\]
+
+<p>という関係があります。
+さらに</p>
+
+\[\frac{dP_\mathrm{gas}}{dr} 
+= \frac{d}{dr} \left( \frac{\rho}{\mu m_p} k_B T\right) 
+= \frac{k_B T}{\mu m_p} T \frac{d\rho}{dr} + \frac{\rho}{\mu m_p} k_B \frac{dT}{dr}
+= a^2 \frac{d\rho}{dr} + P_\mathrm{gas} \frac{d\ln T}{dr} 
+= a^2 \frac{d\rho}{dr} + \frac{P_\mathrm{gas}}{4 P_\mathrm{rad}} \frac{dP_\mathrm{rad}}{dr} \tag{4}\]
+
+<p>という関係も成り立ちます。
+ここで\(a^2 = \frac{k_B T}{\mu m_p}\)は等温の場合の音速です。
+これらの関係を運動方程式(1)に代入すると</p>
+
+\[\begin{align}
+v \frac{dv}{dr} 
+&amp;= - \frac{a^2}{\rho} \frac{d\rho}{dr} + \frac{P_\mathrm{gas}}{P_\mathrm{rad}} \frac{\kappa}{4c} \frac{L_\mathrm{rad}}{4\pi r^2} + \frac{\kappa L_\mathrm{rad}}{4\pi c r^2} - \frac{GM_r}{r^2} 
+= - \frac{a^2}{\rho} \frac{d\rho}{dr} + \frac{\kappa L_\mathrm{rad}}{4\pi c r^2} \left( 1 + \frac{P_\mathrm{gas}}{P_\mathrm{rad}}\right) - \frac{GM_r}{r^2} \notag \\
+&amp;= - \frac{a^2}{\rho} \frac{d\rho}{dr} - \frac{GM_r}{r^2} (1-\Gamma_\mathrm{rad}) \tag{5}
+\end{align}\]
+
+<p>が得られます。
+ここで\(\Gamma_\mathrm{rad}\)は、輻射力と重力の比で</p>
+
+\[\Gamma_\mathrm{rad} 
+\equiv \frac{\kappa L_\mathrm{rad}}{4\pi c r^2} \left( 1 + \frac{P_\mathrm{gas}}{P_\mathrm{rad}}\right) \frac{r^2}{GM_r} 
+= \frac{\kappa L_\mathrm{rad}}{4\pi c GM_r} \frac{P}{P_\mathrm{rad}} 
+= \frac{\kappa L_\mathrm{rad}}{4\pi c GM_r (1-\beta)} \tag{6}\]
+
+<p>のように定義されます。
+また\(\beta\)はガス圧と全圧との比で</p>
+
+\[\beta 
+\equiv \frac{P_\mathrm{gas}}{P}, \quad
+\frac{P_\mathrm{rad}}{P} 
+= \frac{P - P_\mathrm{gas}}{P} 
+= 1 - \beta \tag{7}\]
+
+<p>という関係があります。<br />
+\(\frac{d\rho}{dr} &lt; 0\)とすると、加速が起こるための必要条件は</p>
+
+\[L_\mathrm{rad} 
+\gtrsim \frac{4\pi c G M_r}{\kappa} 
+\equiv 局所エディントン限界 \tag{8}\]
+
+<p>となります。
+これはエディントン限界の電子散乱不透明度の場所に、\(\kappa\)を入れたものです。
+光度の高い星では密度が低いため、内部のほとんどの領域で不透明度は電子散乱不透明度に近い値を持ちます。
+そのため、このような加速が起こるためにはエディントン限界に近い光度を持つような恒星で起こりやすくなります
+(水素やヘリウムの電離領域では不透明度は大きな値を持ちますが、そこでは対流が発生しており、密度が比較的大きい場所では対流の効率が良いため \(L_\mathrm{rad} \ll L_r\)となっています。
+また密度が小さく対流の効率の悪い場所では、density inversionの存在で\(\frac{d\rho}{dr} &gt;0\)となっており、加速の起きにくい環境となっています。)
+新星爆発の途中で起こる質量放出は、光学的に厚い領域での加速が主に働いて起こっています。<br />
+等温のコロナ風の場合との比較のため、質量変換の式()</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3ZrHDbV">Lamers &amp; Cassinelli, “Introduction to Stellar Winds”</a><br />
+[] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

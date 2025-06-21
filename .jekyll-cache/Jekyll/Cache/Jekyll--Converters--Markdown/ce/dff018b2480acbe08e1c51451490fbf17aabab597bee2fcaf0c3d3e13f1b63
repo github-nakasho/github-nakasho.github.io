@@ -1,0 +1,171 @@
+I"�'
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ウォルフライエ星-wolf-rayet-stars" id="markdown-toc-ウォルフライエ星-wolf-rayet-stars">ウォルフ・ライエ星 (Wolf-Rayet stars)</a>    <ol>
+      <li><a href="#概要" id="markdown-toc-概要">概要</a></li>
+      <li><a href="#元素組成とスペクトル型" id="markdown-toc-元素組成とスペクトル型">元素組成とスペクトル型</a></li>
+      <li><a href="#質量放出率" id="markdown-toc-質量放出率">質量放出率</a></li>
+      <li><a href="#wr星としての寿命" id="markdown-toc-wr星としての寿命">WR星としての寿命</a></li>
+      <li><a href="#質量光度関係" id="markdown-toc-質量光度関係">質量光度関係</a></li>
+      <li><a href="#連星系を構成するwr星" id="markdown-toc-連星系を構成するwr星">連星系を構成するWR星</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ウォルフライエ星-wolf-rayet-stars">ウォルフ・ライエ星 (Wolf-Rayet stars)</h1>
+
+<h2 id="概要">概要</h2>
+
+<p>Wolf-Rayet (WR or W-R)星は、1867年にWolf, C.J.E.とRayet, G.A.P.によってスペクトルの眼視観測で発見された、高温(\((3-6) \times 10^4 \mathrm{K}\))の明るい\((L \sim 10^5 L_\odot)\)星です。
+可視光領域に幅の広い強い輝線 \((\sim 10^3 \mathrm{km/s})\)を持ち、多くの場合は吸収線は観測されません。
+輝線はWR星からの密度の濃い恒星風に起因します。
+密度の濃い恒星風の存在により、静的な光球は存在せず、通常の有効温度の定義は適用できません。
+またその膨大な質量放出により、形成時の組成を持つ外層はすでに失われています。</p>
+
+<h2 id="元素組成とスペクトル型">元素組成とスペクトル型</h2>
+
+<p>表面での水素含有量は少ないか全く観測されず、水素燃焼またはヘリウム燃焼の生成元素の含有率が大きくなります。
+WR星は、形成時の質量が\(\sim 35 M_\odot\)より大きい大質量星が進化したものなので、その年齢は\(10^7\)年より短いとされています。
+そのためWR星は星形成領域や、最近星形成が起こった場所に存在しています。</p>
+
+<p><img src="" alt="" /><br />
+<a href="https://ui.adsabs.harvard.edu/abs/1987ARA%26A..25..113A/abstract">Abbott &amp; Conti (1987)</a>より</p>
+
+<p>WR星のスペクトル型は、WN型とWC型に大別されます。
+WN型のスペクトルにはヘリウムと窒素の輝線が顕著で、WC型ではヘリウム輝線とともに炭素・酸素の輝線が顕著となっています。
+WC型の中で強いO IV輝線が観測されるものを、特にWO型とも呼ばれています。<br />
+WN型のWR星でのヘリウムと窒素含有量の過多は、CNOサイクルによる水素燃焼の生成物と説明されています。
+WN型星はHeI/HeII比および種々の窒素輝線の強度比に基づいて、WN2, …, WN9に細分類されます。
+これはhighest excitation (高温)からlowest excitationへの系列を表し、数字の小さい(大きい)グループはearly (late) typeと呼ばれます。<br />
+WC型WR星の表面元素組成は、ヘリウム燃焼生成物が表面に出てきていることを示しています。
+ヘリウム燃焼では温度が高い環境のもとで酸素がより多く生成されるため、WO型星はより質量放出が進み、内部深くでヘリウム燃焼が起こっていた場所が表面に出てきていると解釈できます。
+WC型は炭素イオン比と酸素イオン比から、WC4, …, WC9に細分類され、WO型はOIVとOVIの輝線強度比により、WO1, …, WO4に細分類されます。<br />
+次の図は、WR星のサブクラスと絶対光度との関係を表しています。
+明らかに、late type WR星の方が明るい傾向にあります。</p>
+
+<p><img src="" alt="" /></p>
+
+<h2 id="質量放出率">質量放出率</h2>
+
+<p>観測的に得られたWR型星の質量放出率は、光度と化学組成に依存し、経験式として</p>
+
+\[\dot{M} 
+\simeq 1.0 \times 10^{-11} \left(\frac{L}{L_\odot}\right)^{1.29} Y^{1.7} Z^{0.5} \ [M_\odot / \mathrm{yr}] \tag{1}\]
+
+<p>のように表されます (Nugis &amp; Lamers (2000))。<br />
+重元素量が多いと質量放出率が大きいという関係は、恒星風が輻射駆動であることと一致します。
+またこのことは、WC型とWN型の数比が銀河によって異なり、私たちの銀河内でも中心からの距離に依存するという観測事実に説明を与えます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p><img src="" alt="" /></p>
+
+<p>WR星の質量放出率は、同じ光度のO型星に比べて大きいことが判明しています。
+またWR星では、恒星風の運動量放出率と光の運動量放出率の比</p>
+
+\[\eta 
+\equiv \frac{\dot{M} v_\infty}{L/c} \tag{2}\]
+
+<p>が1より大きくなっています (大体 \(1.4 &lt; \eta \lesssim 18\)。)
+これを説明するためには、光子の多重散乱と光学的に厚い領域での加速を考える必要があります。<br />
+WR星の起源については、初期質量が\(35M_\odot\)より大きい星が、盛大な恒星風による質量損失および高光度青色変光星 (luminous blue variables)の段階での間欠的な質量損失により、水素を多く含む外層を失い、水素燃焼またはヘリウム燃焼の起こっていた層が表面に出てきた状態であると説明されます。
+質量放出の度合いが大きくなるにつれて、WN型、WC型、そしてWO型へと変わると考えられています。</p>
+
+<p><img src="" alt="" /></p>
+
+<h2 id="wr星としての寿命">WR星としての寿命</h2>
+
+<p>次の図は、各金属量ごとにWR星としての寿命を描画したものです。
+横軸には、初期質量をとっています。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>この図から</p>
+
+<ul>
+  <li>初期質量が大きいほど、WR星としての寿命が長い</li>
+  <li>重元素含有量が大きほど、小さい初期質量の星でもWR星になることができる</li>
+</ul>
+
+<p>ということがわかります。</p>
+
+<h2 id="質量光度関係">質量光度関係</h2>
+
+<p>次の図は、理論モデルに基づいたWR星の質量光度関係を表したものです。
+WR星の質量光度関係は、特に明るい部分で\(L \propto M\)の関係に近くなっています。
+この関係は、解析的にも導出することができます。<br />
+輻射によりエネルギーが運ばれる場合、局所光度 \(L_r\)は</p>
+
+\[L_r 
+= -4\pi r^2 \frac{4ac}{3\kappa \rho} T^3 \frac{dT}{dr} \tag{3}\]
+
+<p>のように表されます。
+この式に、輻射圧\(P_\mathrm{rad}\)が</p>
+
+\[P_\mathrm{rad} 
+= \frac{a}{3} T^4 
+= (1-\beta) P \quad (\beta \equiv P_\mathrm{gas} / P) \tag{4}\]
+
+<p>であることを用いると</p>
+
+\[L_r 
+= - 4\pi r^2 \frac{c}{\kappa \rho} \frac{d}{dr} \{(1-\beta) P\} \tag{5}\]
+
+<p>と置き換えることができます。
+そしてこの式に静水圧平衡の式 \(\frac{dP}{dr} = -\frac{GM_r \rho}{r^2}\)を用いると</p>
+
+\[L 
+= \frac{4\pi c GM}{\kappa} \frac{d}{dP} \{(1-\beta) P\} \tag{6}\]
+
+<p>のように書くことができます。
+ここでは、星の外層のみを考えることとし、\(L_r \simeq L, M_r \simeq M\)のようにしました。
+大質量星の外層は密度が低いため、不透明度は電子散乱が支配的で、\(\kappa \simeq 0.2 (!+X)\)のように定数と考えることができます。
+(6)式は積分できて</p>
+
+\[LP 
+= \frac{4\pi cGM}{\kappa} (1-\beta) P \ \Longrightarrow \ 
+L 
+= \frac{4\pi cGM}{\kappa} (1-\beta) \tag{7}\]
+
+<p>のようになります (積分定数は表面で\(P=0\)として決めました。)
+(7)式は、輻射圧が優勢 \((\beta \ll 1)\)のとき\(L \propto M\)となることを表しています。
+また\(\beta =0\)の極限では、(7)式は\(L\)がエディントン光度となることを表しています。
+大質量星の外層は密度が薄く、\(\beta \ll 1\)なので、それらの光度はエディントン光度に近いことがわかります。</p>
+
+<h2 id="連星系を構成するwr星">連星系を構成するWR星</h2>
+
+<p>WR星の約40%が、O型星との連星系をなします。
+伴星のO型星の方が質量が大きいことは、質量を大量に失ってWR星となったことを表しています。</p>
+
+<p><img src="" alt="" /></p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://ui.adsabs.harvard.edu/abs/1987ARA%26A..25..113A/abstract">Abbott &amp; Conti, 1987, “Wolf-rayet stars”</a><br />
+[] <a href=""></a><br />
+[] <a href="https://amzn.to/3ZrHDbV">Lamers &amp; Cassinelli, “Introduction to Stellar Winds”</a><br />
+[] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

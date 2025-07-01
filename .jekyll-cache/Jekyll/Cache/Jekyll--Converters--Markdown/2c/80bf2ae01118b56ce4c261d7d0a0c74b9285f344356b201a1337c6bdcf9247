@@ -1,0 +1,64 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#超新星" id="markdown-toc-超新星">超新星</a>    <ol>
+      <li><a href="#超新星のスペクトルと分類" id="markdown-toc-超新星のスペクトルと分類">超新星のスペクトルと分類</a></li>
+      <li><a href="#超新星爆発による元素合成" id="markdown-toc-超新星爆発による元素合成">超新星爆発による元素合成</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="超新星">超新星</h1>
+
+<h2 id="超新星のスペクトルと分類">超新星のスペクトルと分類</h2>
+
+<p>超新星のスペクトルは、大きく分けてI型とII型に分けられます。
+I型超新星は、そのスペクトルに水素の輝線が見られないのに対し、II型超新星のスペクトルには、強い水素輝線が見られます。
+I型は、さらにIa, Ib, Icと細分類されています。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>Ia型超新星はあらゆるタイプの銀河に出現しますが、渦巻銀河の渦状腕部分には出現しない傾向があります。
+これはIa型超新星にある親星が、(渦状腕部分で)生まれてからIa型超新星になるまでに(1.5Gyr程度)時間がかかるため、それまでに渦状腕部分から出てしまうことを示唆しています。
+一方、他のタイプの超新星は楕円銀河には出現せず、渦巻銀河の渦状腕部分に出現する傾向があります。これは、II・Ib・Ic型超新星の親星が生まれてから、数千万年以内に超新星となることを表しています。
+Ia型超新星は\(\sim 1.4 M_\odot\)の質量を持つ白色矮星の中心部での、炭素の爆発的燃焼による爆発で発生します。
+一方、II・Ib・Ic型超新星は、大質量星 \((\gtrsim 8 M_\odot)\)の鉄中心核の重力崩壊で中心部に中性子星が形成され、解放された重力エネルギーにより外層が吹き飛ばされる現象です。
+Ib・Ic型超新星で水素が観測されない (Ic型のスペクトルにはHeの輝線も見られない)のは、爆発を起こす段階に至るまでに強い恒星風または連星系中での質量交換により、水素を多く含む外層 (およびIc型ではヘリウムを含む層まで)を失ったものと説明されます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>超新星の初期(~1週間)のスペクトル線は幅が広いことが知られています。
+これは高速で飛び散るガスのドップラー効果によるものです。
+そしてほとんどの線はP Cygniプロファイルを示しています。
+水素輝線が観測されないI型超新星の中で、Ia型超新星のスペクトルは波長\(\sim 6200 \AA\)のSi IIの深い吸収線を持ちますが、Ib・Ic型には見られません。
+Ib型は強いヘリウムのスペクトル線 (He I \(\lambda 5846\))を持つことが、Ic型と異なる特徴です。</p>
+
+<h2 id="超新星爆発による元素合成">超新星爆発による元素合成</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/43pXiva">Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution”</a><br />
+[] <a href="https://amzn.to/4kHBvFv">野本憲一, 定金晃三, 佐藤勝彦, “恒星”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

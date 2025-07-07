@@ -183,332 +183,332 @@
   },"26": {
     "doc": "2021年振り返り",
     "title": "はじめに",
-    "content": "こちらは Qiitaさんの物理学アドベントカレンダー Advent Calendar 2021 21日目の「今年のarXiv/astrophチェックで面白かったものをご紹介」の記事です。 昨年からastro-phのチェックを(可能な限り)毎日行い始めました。そしてそれを記録に残すためにTwitterでの情報発信並びにGitHubのリポジトリのIssuesに登録する作業を行ってきました。今回は2021年にGitHubにissue登録されているものの中から、個人的に特に面白いと思ったものを抽出します。さらに論文内容の傾向から、2021年の研究ホットトピックスだったであろうと思われるものをご説明いたします。 . 注意: 筆者が宇宙物理系出身の中でも磁気流体シミュレーションによる研究テーマを扱っていたため、目を通した論文がそのテーマに偏っています。以下に記載されている情報が全てではないことをご留意ください。 . ",
-    "url": "/astroph/2021#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB",
-    
-    "relUrl": "/astroph/2021#はじめに"
-  },"27": {
-    "doc": "2021年振り返り",
-    "title": "2021年の研究動向・ホットトピックス",
-    "content": " ",
-    "url": "/astroph/2021#2021%E5%B9%B4%E3%81%AE%E7%A0%94%E7%A9%B6%E5%8B%95%E5%90%91%E3%83%9B%E3%83%83%E3%83%88%E3%83%88%E3%83%94%E3%83%83%E3%82%AF%E3%82%B9",
-    
-    "relUrl": "/astroph/2021#2021年の研究動向ホットトピックス"
-  },"28": {
-    "doc": "2021年振り返り",
-    "title": "次世代望遠鏡での観測を見据えた論文が続々",
-    "content": "2021年末にはハッブル宇宙望遠鏡の後継機と名高いJWST(James Webb Space Telescope)が打ち上げされます。また重力波検出から一気に盛り上がりを見せ、将来的には宇宙空間でのレーザー干渉計から重力波を検出する技術としてLISA(Laser Interferometer Space Antenna)や天琴(TianQin)などが計画されています。電波ではSKAなどに期待が寄せられています。このような観測技術の発達に伴う新しい望遠鏡での観測を見据えて、「この望遠鏡のこの感度ならこんな現象が検出できるのでは」という論文がたくさん出ているように見受けられました。 . ",
-    "url": "/astroph/2021#%E6%AC%A1%E4%B8%96%E4%BB%A3%E6%9C%9B%E9%81%A0%E9%8F%A1%E3%81%A7%E3%81%AE%E8%A6%B3%E6%B8%AC%E3%82%92%E8%A6%8B%E6%8D%AE%E3%81%88%E3%81%9F%E8%AB%96%E6%96%87%E3%81%8C%E7%B6%9A%E3%80%85",
-    
-    "relUrl": "/astroph/2021#次世代望遠鏡での観測を見据えた論文が続々"
-  },"29": {
-    "doc": "2021年振り返り",
-    "title": "天の川銀河の進化の歴史解明を目指す研究競争が加熱",
-    "content": "Gaiaなどの膨大なデータが出揃ったこともあり、天の川銀河円盤内部やハローにいる球状星団や恒星ストリームの研究が盛んに行われている印象を受けました。天の川銀河がどのように出来たのか、どのような進化を経て現在の姿に至っているのか、それが解明される時も近いかもしれません。 . ",
-    "url": "/astroph/2021#%E5%A4%A9%E3%81%AE%E5%B7%9D%E9%8A%80%E6%B2%B3%E3%81%AE%E9%80%B2%E5%8C%96%E3%81%AE%E6%AD%B4%E5%8F%B2%E8%A7%A3%E6%98%8E%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E7%A0%94%E7%A9%B6%E7%AB%B6%E4%BA%89%E3%81%8C%E5%8A%A0%E7%86%B1",
-    
-    "relUrl": "/astroph/2021#天の川銀河の進化の歴史解明を目指す研究競争が加熱"
-  },"30": {
-    "doc": "2021年振り返り",
-    "title": "AGN円盤中での恒星進化や連星進化研究のプチブームが来ている？",
-    "content": "AGN円盤はとても大きく、その中には多数の恒星や連星が埋もれていると考えられます。この中で起こる恒星への質量降着などが、恒星・連星進化に影響を与え、その最後には特別なBH形成などをもたらすのではないかと期待されています。またAGN円盤内でγ線バーストや連星中性子星合体が起こった場合、その見え方も普通のものと異なるなどが予想されています。今後の観測精度の向上から、このような天体の発見が期待されています。 . ",
-    "url": "/astroph/2021#agn%E5%86%86%E7%9B%A4%E4%B8%AD%E3%81%A7%E3%81%AE%E6%81%92%E6%98%9F%E9%80%B2%E5%8C%96%E3%82%84%E9%80%A3%E6%98%9F%E9%80%B2%E5%8C%96%E7%A0%94%E7%A9%B6%E3%81%AE%E3%83%97%E3%83%81%E3%83%96%E3%83%BC%E3%83%A0%E3%81%8C%E6%9D%A5%E3%81%A6%E3%81%84%E3%82%8B",
-    
-    "relUrl": "/astroph/2021#agn円盤中での恒星進化や連星進化研究のプチブームが来ている"
-  },"31": {
-    "doc": "2021年振り返り",
-    "title": "共通外層進化(Common Envelope Evolution)の波が到来？",
-    "content": "連星系において、主系列後に恒星の外層が膨張することでもう一方のコンパクト天体が飲み込まれる共通外層進化の理論が再び注目を集めいています。共通外層内部にいるコンパクト天体からジェットが噴き出したり、これまで説明できなかった新しいタイプの超新星を生み出すのではないかという期待によるものと推察されます。 . ",
-    "url": "/astroph/2021#%E5%85%B1%E9%80%9A%E5%A4%96%E5%B1%A4%E9%80%B2%E5%8C%96common-envelope-evolution%E3%81%AE%E6%B3%A2%E3%81%8C%E5%88%B0%E6%9D%A5",
-    
-    "relUrl": "/astroph/2021#共通外層進化common-envelope-evolutionの波が到来"
-  },"32": {
-    "doc": "2021年振り返り",
-    "title": "ブラックホールシャドウが天文研究人気を牽引？",
-    "content": "人類がブラックホールシャドウを直接撮像したという研究報告から早2年以上が経過しました。しかしそれでもまだ説明できていない物理過程が多く存在し、それを解明しようと様々な研究が世界中で巻き起こっています。また次世代のVLA, ngVLAでの観測提案も多くなされている現状です。 . ",
-    "url": "/astroph/2021#%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9B%E3%83%BC%E3%83%AB%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%81%8C%E5%A4%A9%E6%96%87%E7%A0%94%E7%A9%B6%E4%BA%BA%E6%B0%97%E3%82%92%E7%89%BD%E5%BC%95",
-    
-    "relUrl": "/astroph/2021#ブラックホールシャドウが天文研究人気を牽引"
-  },"33": {
-    "doc": "2021年振り返り",
-    "title": "高エネルギー業界は新発見が目白押し！",
-    "content": "メキシコに建設されたHAWCや中国に建設されたLHAASOなどのγ線・宇宙線観測施設が猛烈な成果を上げ始めています。また南極に建設されたニュートリノ観測所IceCubeによるニュートリノ観測データからも続々と新発見が相次いでおり、これを発展させたGen2構想も始まっています。高エネルギー観測業界の今後の発展と新発見に期待です。 . ",
-    "url": "/astroph/2021#%E9%AB%98%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E6%A5%AD%E7%95%8C%E3%81%AF%E6%96%B0%E7%99%BA%E8%A6%8B%E3%81%8C%E7%9B%AE%E7%99%BD%E6%8A%BC%E3%81%97",
-    
-    "relUrl": "/astroph/2021#高エネルギー業界は新発見が目白押し"
-  },"34": {
-    "doc": "2021年振り返り",
-    "title": "2021年arXiv総括",
-    "content": "特に面白いと感じたもののみを抽出したつもりですが、たくさんあります。 . ",
-    "url": "/astroph/2021#2021%E5%B9%B4arxiv%E7%B7%8F%E6%8B%AC",
-    
-    "relUrl": "/astroph/2021#2021年arxiv総括"
-  },"35": {
-    "doc": "2021年振り返り",
-    "title": "SR (太陽・恒星分野)",
-    "content": "SRタグが付いたものは全部で189本でした。 . Turbulent generation of magnetic switchbacks in the Alfvénic solar wind . PSPで示された磁気Switchbacksが粒状斑駆動のAlfvén波と太陽風乱流から発生するかを調査。数値計算により同じ特徴を持つ磁気Swithcbacksの再現に成功。解析からこのSwitchbackは磁場方向に不連続な大振幅(非線形)Alfvén波と判明。 ピックアップ理由: PSP観測を再現するシミュレーションを行ったもの。磁気流体計算に対する深い洞察から観測を説明するという素晴らしい論文とお見受けしました。 ArXiv . Dynamical coupling of a mean-field dynamo and its wind: Feedback loop over a stellar activity cycle . 恒星内部で起こるαΩダイナモ磁場と恒星風の関係を2.5DMHD計算。活動周期の相関関係から、コロナへのダイナモ活動の影響を追跡できることを示した。 ピックアップ理由: 恒星内部で起こる磁気活動がその恒星風に影響を与えることを示した論文。当然と言えばそうかもしれませんが、それを定量的に評価したことからピックアップしました。将来的には遠くの恒星のダイナモの様子を診断できるようになるかも？ ArXiv . The origin and evolution of magnetic white dwarfs in close binary stars . 強磁場白色矮星(WD)の進化モデルの考案。降着を起こしているWDの自転進化とコア結晶化と2つの磁場相互作用を含む連星進化モデルを計算したところ、結晶化と回転が駆動するdynamoが激変WDの強磁場を発生させると発見。Nature Astronomy. ピックアップ理由: 白色矮星の中でも強い磁場を持つものの進化の謎に迫った研究。磁場と聞くと面白そうに感じてしまうのでピックアップしました。 ArXiv . SPLUSJ210428.01-004934.2: An Ultra Metal-Poor Star Identified from Narrowband Photometry . 超金属欠乏(Ultra Metal-Poor; UMP)星を発見。[Fe/H]=-4.03で、これは金属を持たない30M_sunの恒星によって汚染されたガス雲から形成された第二世代星の可能性。ApJL. ピックアップ理由: 金属のない恒星、すなわち初代星の研究とも繋がる大発見であることから選出しました。 ArXiv . The role of non-axisymmetry of magnetic flux rope in constraining solar eruptions . 光球面で観測された磁場を用いて2015年1月30日に発生した閉じ込め噴火をデータ駆動型MHD計算。コロナ質量放出を伴わない太陽フレアの観測を再現。これは動径方向磁場や磁束ロープの非軸対称性に起因するものと判明。Nature. ピックアップ理由: CMEを伴わない太陽フレアの存在を個人的に初めて知ったことと、今後のフレアに伴う質量放出予測に大きな貢献をすることが予想されるため選出しました。 ArXiv . Zooming into the Collimation Zone in a Massive Protostellar Jet . 大質量原始星Cep A HW2からの電波jetを高分解能観測。このjetの形態はよく研究されている低質量原始星からのものとは大きく異なり、原始星/円盤系から吹き出す広角度の風と20-30au離れた場所に絞られた部分が存在した。ApJL. ピックアップ理由: 太陽・恒星分野の中でも原始星、そしてそれに付随する原始惑星系の理解に繋がるインパクトがあることから選出しました。 ArXiv . VVV-WIT-08: the giant star that blinked . VVV-WIT-08という巨星フェーズの恒星で2012年4月にfluxが97%も減少する事象を発見。この天体を17年間観測しているがこのような事象はこの1回きり。不透明度の高い楕円体による光の遮りによるモデル化を行ったが、全ては説明できなかった。 ピックアップ理由: 前代未聞の物理現象を観測したかもしれない、そのインパクトからピックアップしました。 ArXiv . M-dwarf’s Chromosphere, Corona and Wind Connection via the Nonlinear Alfvén Wave . 1DMHD計算から、恒星の光球-&gt;彩層-&gt;コロナ-&gt;惑星間空間へのAlfvén波の非線形伝搬を直接解明。特にAlfvén波の非線形モード結合により生成されるslow shockが彩層圏(恒星のスピキュール)のダイナミクスと恒星風加速に重要であると判明。 ピックアップ理由: MHD計算というと2Dや3Dシミュレーションばかりに目が行きますが、こちらは1D計算。次元が少ないからこそ、そこで起こる物理のエッセンスを抽出するような、深い洞察の論文であることから選出しました。 ArXiv . Spectroscopic evidence for a large spot on the dimming Betelgeuse . 2019年10月~2020年3月にかけて減光したベテルギウスを観測。ダストの遮蔽などが考えられたが、この観測では2020年1月31日にはベテルギウス有効温度が170K減少し、星表面に巨大なダークスポットが出現していたことが減光の原因と判明。Nature ピックアップ理由: 突然減光を始めたことで「そろそろ爆発するのでは？」と取り上げられたベテルギウス。その正体は恒星表面のダークスポットでした。この問題に決着をつける観測という意味でのインパクトの大きさから選出しました。 ArXiv . Asteroseismic Fingerprints of Stellar Mergers . 赤色巨星の星震データから、その恒星が合体を経ているかどうかを測定できる可能性を研究。合体前の主星が主系列にある場合や総質量が2M_sunの合体では判別が困難と判明。赤色巨星のカタログから、合体を経験した候補を15個見つけた。 ピックアップ理由: 恒星内部を診断するために発展してきた星震学、それを利用して恒星の合体の歴史まで紐解こうとする壮大さから選出しました。 ArXiv . Solar differential rotation reproduced with high-resolution simulation . 太陽の赤道が速く極が遅い差動回転を高解像度計算で再現。この差動回転の維持には対流に回転の影響を強く与える必要があった。小規模dynamoによる強い磁場が熱対流に大きな影響を及ぼすと判明。黒点活動11年周期の謎が解明されるときも近い？ ピックアップ理由: 富岳を用いた高解像度計算で長年の太陽の未解決問題を見事に解決した研究。その多大なインパクトから選出しました。 ArXiv . Probable detection of an eruptive filament from a superflare on a solar-type star . 若い太陽型恒星 EK Draconisの可視光スペクトルから、スーパーフレアを伴う恒星フィラメント噴出を検出。スペクトルの時間変化は太陽フィラメント噴出と一致。恒星CMEが発生したと見られ、その質量は太陽の最大のCMEの10倍と概算。ApJL ピックアップ理由: 恒星でスーパーフレアが起こることは存じておりましたが、そこから恒星フィラメントが噴き出す様子を観測で捉えることができるとは思いませんでした。その驚き、またスーパーフレアの物理過程の理解に大きなインパクトを与えるだろうことから選出しました。 ArXiv . ",
-    "url": "/astroph/2021#sr-%E5%A4%AA%E9%99%BD%E6%81%92%E6%98%9F%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#sr-太陽恒星分野"
-  },"36": {
-    "doc": "2021年振り返り",
-    "title": "IM (装置開発・シミュレーション技法等分野)",
-    "content": "IMタグが付いたものは全部で76本でした。 . Science and survival: insights from Astronomy . COVID-19感染拡大期に、天文学が社会にできることを概説。 ピックアップ理由: このパンデミック状況を鑑みて選出しました。 ArXiv . Touching the Stars: Using High-Resolution 3D Printing to Visualize Stellar Nurseries . 分子雲構造を3Dプリントを利用して可視化。Bitmapベースの3Dプリンティングにより、分子雲内の微妙な密度勾配分布を再現することに成功。複雑な天文データセットを直感的に理解したり、教育・広報活動に使えそう？ApJL. ピックアップ理由: 3Dプリンタでレッツ・アストロフィジックス！普通に商品として売ったら良さそう、というかほしい。 ArXiv . Writing Scientific Papers in Astronomy . 天文学における科学的な論文の書き方指南。英語を母国語としない方々が特に悩む文法やスペリングの問題についても説明。修士と博士学生に向けたものだが、さらにハイレベルな研究者やライティング指導者にも役立つものかもしれない。 ピックアップ理由: 私も英語ライティングは苦手なので… ArXiv . TULIPS: a Tool for Understanding the Lives, Interiors, and Physics of Stars . 恒星の構造・進化のわかりやすい図やアニメーションを生成するPythonパッケージ”TULIPS”を開発。「この分野で用いられている図は静的で複雑なものが多く、時として直感的でなかったり直感に反する場合がある。だからこれを解消したかった」 ピックアップ理由: このような地道なツール開発が後世の役に立つであろうことを鑑みて選出しました。 ArXiv . Multi-Resolution HEALPix Maps for Multi-Wavelength and Multi-Messenger Astronomy . 高エネルギー・重力波天文学分野で標準的に用いられるHEALPixで多分解能マップの作成・処理・分析が可能なPythonライブラリ”mhealpy”を開発。 ピックアップ理由: 重力波だけでなく宇宙論のCMB全天観測などにも役立つかもしれない可能性から選出しました。 ArXiv . ",
-    "url": "/astroph/2021#im-%E8%A3%85%E7%BD%AE%E9%96%8B%E7%99%BA%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E6%8A%80%E6%B3%95%E7%AD%89%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#im-装置開発シミュレーション技法等分野"
-  },"37": {
-    "doc": "2021年振り返り",
-    "title": "EP (太陽系・系外惑星系分野)",
-    "content": "EPタグが付いたものは全部で95本でした。 . The Habitable-zone Planet Finder Detects a Terrestrial-mass Planet Candidate Closely Orbiting Gliese 1151: The Likely Source of Coherent Low-frequency Radio Emission from an Inactive Star . フレア活動などのない静かなM4.5矮星からcoherentな低周波電波放射を観測。これは1-5日の軌道周期で回る地球サイズの惑星との恒星-惑星相互作用による理論予想と一致。そして近赤外観測から同様の惑星が検出。電波が系外惑星探査に使えるかも。ApJL. ピックアップ理由: 系外惑星観測に電波という新しい領域が追加される可能性から、ピックアップしました。 ArXiv . Jupiter’s “Cold” Formation in the Protosolar Disk Shadow: An Explanation for the Planet’s Uniformly Enriched Atmosphere . H2O snow lineに降り積もったダストが影を作ることで木星軌道周辺が冷やされ窒素や希ガスが氷を形成する理論。この氷が集まって木星大気に溶け出せば、原始木星が今の場所で形成しても木星大気の元素組成を説明できると判明。A&amp;A Letters. ピックアップ理由: 原始木星の形成理論に大きな一石を投じる理論であることから選定しました。 ArXiv . Past, Present and Future Stars that can see Earth as a Transiting Exoplanet . 地球から326光年より近い距離にある恒星1715個が、人類文明開始からこれまでの間に地球が太陽をトランジットしているのを観測するのに適した場所と判明。その中には7つの系外惑星の主星が含まれ、75個の恒星には人間が作った電波が届いている ピックアップ理由: もしも地球外知的生命体が地球の近くにいた場合、それらが地球を観測できるか、そして地球上に住む私たちの活動を検出できるのか、というSF的な研究から選出しました。 ArXiv . Reimagining the water snowline . 原始惑星系円盤AS205で観測された水輝線と物理化学モデルを比較したところ、通常の円盤内部の温度構造に矛盾があると判明。また円盤表面での水のsnowlineと円盤内部でのsnowlineが、垂直方向の混合により同じ位置に来ることがわかった。ApJL. ピックアップ理由: 原始惑星系円盤の重要な構造であるスノーラインの理論の発展に大きな貢献をすることから、ピックアップしました。 ArXiv . Polluted White Dwarfs Reveal Exotic Mantle Rock Types on Exoplanets in our Solar Neighborhood . かつて惑星を持っていたことで、それにより重元素汚染を受けた白色矮星の汚染具合から、惑星が持っていた岩石の種類を推定。大陸地殻やその他の地殻の証拠は発見できなかったものの、ケイ酸塩マントルは識別可能と判明。Nature ピックアップ理由: 不自然に重元素を持つ白色矮星が惑星を飲み込んだその痕跡から、どのような惑星が存在していたのかを探る研究。そんなことができるのかと素直に驚きです。 ArXiv . Mercury as the relic of Earth and Venus’ outward migration . 原始地球と原始金星の核が太陽近傍で形成された後、現在の位置に移動してきたことで水星が形成できる環境領域を形成するシナリオを提案。4つの地球型惑星の質量、地球と火星の同位体の違い、孤立した水星軌道などを簡単に説明できた。ApJL. ピックアップ理由: シンプルな理論から地球・金星形成についてのたくさんのことを説明できる理論構築、まさにオッカムの剃刀。 ArXiv . Painting Asteroids for Planetary Defense . 小惑星をアルカリ金属の薄膜(0.1µm)でコーティングすることでそのアルベド(反射率)を変化させ、太陽からの輻射力の影響を変えて軌道を曲げることで、地球への衝突を避ける手法。小惑星の半面だけでもトルクの変化が生まれて軌道をズラせる。 ピックアップ理由: 地球に衝突する小惑星などを破壊することで衝突を避けるアイデアなどが考案されている中、これは太陽からの輻射の力を借り流ことでそれを避けるというもの。そのひらめきに脱帽です。 ArXiv . ",
-    "url": "/astroph/2021#ep-%E5%A4%AA%E9%99%BD%E7%B3%BB%E7%B3%BB%E5%A4%96%E6%83%91%E6%98%9F%E7%B3%BB%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#ep-太陽系系外惑星系分野"
-  },"38": {
-    "doc": "2021年振り返り",
-    "title": "CO (宇宙論分野)",
-    "content": "COタグが付いたものは全部で102本でした。 . Towards Cosmological Simulations of Dark Matter on Quantum Computers . ダークマターを考慮に入れた宇宙論的シミュレーションを量子コンピュータ上で行うために、Schrodinger-Poisson方程式を量子古典ハイブリッド変分アルゴリズムに基づいて解くアプローチの概説。 ピックアップ理由: 宇宙論と量子技術の融合。量子コンピュータは発展途上の技術なので今後の進展に期待です。 ArXiv . Discovery of Magnetic Fields Along Stacked Cosmic Filaments as Revealed by Radio and X-Ray Emission . 複数の全天電波MapとX線Mapを用いて銀河団間の3Mpc以上の大規模構造FilamentからのSynchrotron放射と熱的放射を初検出。Synchrotronスペクトル指数はα~-1.0, 磁場強度は30nG≤B≤60nGと推定。 ピックアップ理由: 宇宙大規模構造の磁場を初検出したという偉業。これにより宇宙の種磁場の生成やその進化に制限がかけられる大きな研究であることから、ピックアップしました。 ArXiv . HyPhy: Deep Generative Conditional Posterior Mapping of Hydrodynamical Physics . 宇宙論的なN体計算から得られた暗黒物質(DM)場を条件として、流体場を生成する完全畳み込み型変分auto-encoder(VAE)を構築。1つの流体計算でモデルを学習した後、DMのみの新しい計算に対応する流体分布を確率的にマッピングする。 ピックアップ理由: ダークマターのみの宇宙論的計算さえしておけば、その流体計算は後からVAEで作れるというもの。計算コストの削減等に繋がる重要な結果としてピックアップしました。 ArXiv . Void replenishment: how voids accrete matter over cosmic history . ヴォイドを研究するための宇宙論的計算結果を詳細に解析。ヴォイドは予想されたよりも多くの質量流入を経験していることが判明。z~0のヴォイド質量の10%は密度が高い領域から流入したものであり、それらの半分は10Gyr程度ヴォイドにとどまる。 ピックアップ理由: 宇宙ヴォイド空間の環境、およびそこで起こる銀河形成などに大きく寄与する研究であることからピックアップしました。 ArXiv . A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team . 42個のIa型超新星の母銀河にあるセファイド星を用いたハッブル定数H0の詳細な推定。不確かさを1km/s/Mpcまで減少させることに成功し、その値を73.04と推定。Planckの推定値から5σの差がある。2011年ノーベル物理学賞のRiessさんが筆頭。 ピックアップ理由: ハッブル定数の推定は多くの研究でされていますが、これは段違いの精度で求めた論文。CMBから求めたものとの違いは何によるものなのか、その物理解明研究にも拍車をかけるような重要な結果を示したことからピックアップしました。 ArXiv . ",
-    "url": "/astroph/2021#co-%E5%AE%87%E5%AE%99%E8%AB%96%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#co-宇宙論分野"
-  },"39": {
-    "doc": "2021年振り返り",
-    "title": "GA (星間空間・星形成・銀河・銀河団分野)",
-    "content": "GAタグが付いたものは全部で264本でした。 . The Galactic center chimneys: The base of the multiphase outflow of the Milky Way . X線/電波/赤外データから,天の川銀河中心方向に数百pcにおよぶチムニーを発見.銀河中心からのoutflowによるものと考えられる.観測から得られた特徴から,銀河中心からの準連続的・断続的な活動とFermiバブルとを繋ぐチャンネルがこのチムニーと結論. ピックアップ理由: Fermiバブルの存在は10年ほど前から分かっていましたが、そのジェットの根本部分については定かでありませんでした。今後、天の川銀河におけるAGN活動を解き明かす重要な観測になるだろうことから選び出しました。 ArXiv . The first evidence for three-dimensional spin-velocity alignment in pulsars . パルサーPSR~J0538+2817とそれに付随する超新星残骸S147においてスピンと超新星爆発時に受けたキックによる運動速度に3次元的な関連の証拠を発見。Nature Astronomy. ピックアップ理由: 超新星爆発の物理機構解明に迫る重要な発見であることから選びました。 ArXiv . Tiny-scale Structure Discovered toward PSR B1557−50 . PSR B1557-50というパルサーを0.36年という短い間隔で観測を行ったところ吸収成分に変化が見られたことから、そのパルサーと我々の間にある星間空間の空間スケールを17auと算出。ApJL. ピックアップ理由: 私たちが住む太陽系の周りに存在する星間空間の物理状態の解明に貢献する研究として選定しました。 ArXiv . Diffuse Synchrotron Emission Associated with the Starburst in the Circumnuclear Disk of NGC 1275 . NGC1275の中心部で発見された分子ガス円盤に、空間的に一致するような拡散シンクロトロン放射成分を発見。この放射は超新星爆発によって供給された相対論的電子によるものの可能性が高く、銀河中心核円盤の星形成活動の証拠。ApJL. ピックアップ理由: 中心核に付随する中心核円盤、その中で起こる星形成活動の証拠を捉えた貴重な研究であることから選出しました。 ArXiv . Anisotropic satellite galaxy quenching modulated by supermassive black hole activity . 29631個のDM haloの中にある衛星銀河124163個について解析。星形成活動が止まっている衛星銀河は、中心銀河のminor axis方向には比較的少ないことが判明。Minor axis方向に噴出したAGN jetが銀河周辺物質を排除しram圧を下げるためと解釈。 ピックアップ理由: AGN活動が衛星銀河の星形成活動にも影響を与えることを示した、画期的な研究であることからピックアップしました。 ArXiv . Jets from MRC 0600-399 bent by magnetic fields in the cluster Abell 3376 . 合体銀河団Abell 3376を高解像度電波観測。Jetの方向が接触不連続面付近で90度向きを変えるdouble-scythe(2重鎌)構造を検出するとともに、これを数値計算で研究。不連続面に沿った揃った磁場がjetの方向変化に重要であると判明。Nature. ピックアップ理由: 銀河団およびその中にあるAGN jetのダイナミクスに磁場が大きく影響を及ぼすことを示した観測・数値計算論文。MHDは私を魅了して止みません。 ArXiv . A New Challenge for Dark Matter Models . 現在の暗黒物質(DM)代替案である自己相互作用DM・自己消滅DM・超軽量DMなどでは説明できない、またバリオン物理でも解決できないような高密度を天の川の衛星銀河で発見。”Too-dense-to-be-satellite”問題と名付けている。Phys. Rev. Letters. ピックアップ理由: Too-big-to-fail, core-cusp問題に続く未解決問題を投げかける重要性からピックアップしました。 ArXiv . An ancient massive quiescent galaxy found in a gas-rich z ~ 3 group . ALMAとHSTの観測からz=2.91の銀河群中に星形成が止まった大質量銀河を発見。恒星質量の大半がz&gt;6-8で急速に形成されたと見られ、3&lt;z&lt;6では受動的な進化をしてきた。冷たいガスが豊富にあることからガス降着停止は星形成活動停止には関係ない？ ピックアップ理由: ガスがたくさんあっても星形成が停止しているという面白い銀河。今後の銀河の星形成活動に影響を与える研究として選出しました。 ArXiv . A relic from a past merger event in the Large Magellanic Cloud . LMCが過去に経験した、星形成率が低く矮小楕円銀河と同じような恒星質量を持つ銀河との合体現象の可能性を発見。LMCにおいても、より小さい構造が降着・合体することで成長していく階層構造が判明？Nature Astronomy. ピックアップ理由: LMCも小さいものが合体してだんだん大きな構造に進化していく階層構造が確かめられた重要性から選出しました。 ArXiv . Rapid growth of seed black holes during early bulge formation . 恒星バルジ形成済みの原始銀河中心部での大質量種BHの初期成長をRHD計算。計算モデルではBH質量が2Myrで約10倍に成長すると判明。バルジ内ガスの大半が降着し切るまで急成長が続く。バルジに対して重たすぎるBHがz~15でJWSTで検出されるかも？ ピックアップ理由: JWSTで観測されるかもしれない高赤方偏移でのSMBHと、バルジ進化に対する重要な理論予想を示したことから選びました。 ArXiv . Active Galactic Nuclei Abundance in Cosmic Voids . z=0.2-0.7の範囲にある比較的明るいAGNと明るいAGNがヴォイドにいる割合を調査。z&gt;0.42ではヴォイドの内側は外側よりも割合が高くなっており、環境依存性が明らかに。低密度領域では1対1で効率よく銀河相互作用が起こっていることを示唆。ApJL ピックアップ理由: AGNの環境依存性を示した重要性からピックアップしました。 ArXiv . Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field . M87のジェットを電波で前例のない解像度で観測。根本から300pc-1kpc部分でジェットの2重螺旋構造があり、偏光度勾配がジェットの端で最大などの特徴を捉えた。Kelvin-Helmholtz不安定性により磁場の螺旋構造が大きなスケールまで維持？ApJL. ピックアップ理由: ブラックホールシャドウが撮影されたことで注目を集めたM87、そのジェットを詳細に観測したもの。今後のジェットの伝搬ダイナミクスに大きな制限をかけるだろう影響からピックアップしました。 ArXiv . ",
-    "url": "/astroph/2021#ga-%E6%98%9F%E9%96%93%E7%A9%BA%E9%96%93%E6%98%9F%E5%BD%A2%E6%88%90%E9%8A%80%E6%B2%B3%E9%8A%80%E6%B2%B3%E5%9B%A3%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#ga-星間空間星形成銀河銀河団分野"
-  },"40": {
-    "doc": "2021年振り返り",
-    "title": "HE (高エネルギー宇宙物理分野)",
-    "content": "HEタグが付いたものは全部で414本でした。 . The Imprint of Large Scale Structure on the Ultra-High-Energy Cosmic Ray Sky . 超高エネルギー宇宙線(UHECRs)の観測から、大・中角度スケールの異方性があることが判明。これはUHECRsの発生源が近傍宇宙の大規模構造の物質分布に沿っているとの仮定のもと、GZK horizonや銀河磁場を考慮すると説明することが可能。ApJL. ピックアップ理由: 未だ謎の部分が多いUHECRsに関する研究。この後のUHECRsの観測などに大きな影響を及ぼすと考え、ピックアップしました。 ArXiv . Evidence that Ultra-High-Energy Gamma Rays are a Universal Feature Near Powerful Pulsars . HAWCによるγ線観測データから、10個の活発なパルサーのある場所と56TeV以上の超高エネルギー(UHE)γ線の相関を探索。その結果、UHE γ線放射はパルサーの一般的な特徴であることが判明。ApJL. ピックアップ理由: HAWCにより徐々に明らかになりつつある超高エネルギー現象、それを象徴する論文として選出しました。 ArXiv . Mildly relativistic magnetized shocks in electron-ion plasmas – II. Particle acceleration and heating . 電子イオンプラズマ中の準相対論的磁気衝撃波における粒子加速/加熱を2DPIC超高解像度数値計算。Shock rippling(衝撃波の波打ち)が電子のエネルギー獲得に重要であることを初めて示した。 ピックアップ理由: 近年の技術の発展からPIC計算の高解像度化が進み、このようなすごいことまで明らかになるようになったのだなと感心したことから。 ArXiv . High Energy Neutrinos from Choked Gamma-Ray Bursts in AGN Accretion Disks . AGN円盤内で起こったGRB jetを解析したところ、円盤物質に埋もれて窒息するjetとなることが判明。Reverse shockにより宇宙線が効率よく加速、高エネルギーニュートリノを放出する。100Mpcの距離で10^53ergのchocked-long-GRBならIceCubeで観測可能。 ピックアップ理由: AGN円盤内で起こるエキセントリックなGRBジェットの進化と、さらにIceCubeでの観測可能性を示したその重要性からピックアップしました。 ArXiv . Observational properties of a general relativistic instability supernova from a primordial supermassive star . 55500MsunのPop-III星が起こす一般相対論的不安定超新星(GRSNe)から期待される観測特徴を研究。RHD計算を行ったところ光球温度が5000K程度、550日間もの間1.5x10^44erg/sで輝くplateau phaseがあることが判明。High-zだと数十年に渡って輝く? ピックアップ理由: 超大質量Pop IIIの一般相対論的不安定超新星の光度曲線を計算したもの。もし存在するなら数十年にわたって明るく輝くという面白さからピックアップしました。 ArXiv . HAWC observations of the acceleration of very-high-energy cosmic rays in the Cygnus Cocoon . これまではSNRや銀河中心が超高エネルギー宇宙線加速領域と思われてきたが、HAWCの観測でCygnus Cocoonと呼ばれる領域から1-100TeVのγ線を検出。これはCygnus OB2大質量星形成領域で生まれた10-1000TeVの新鮮な宇宙線によって生成されたものと考えられる。 ピックアップ理由: 1-100TeVという超高エネルギーγ線を検出したもの。大質量星形成でもこのような超高エネルギーγ線を生み出す宇宙線の生成がされていることを示した重要な論文として選出しました。 ArXiv . First Detection of sub-PeV Diffuse Gamma Rays from the Galactic Disk: Evidence for Ubiquitous Galactic Cosmic Rays beyond PeV Energies . 天の川銀河円盤中から、100TeVから1PeVまでのdiffuse γ線を初検出。特に398TeV以上のものは既知のTeV γ線源とは別に観測されており、これは相対論的陽子が星間物質と相互作用することにより生まれたπ0粒子崩壊からのγ線シナリオに一致。 ピックアップ理由: 1PeVにまで到達するような高エネルギーの拡散γ線成分を発見した観測。理論との一致も示されており、星間空間中の宇宙線伝搬過程の解明に大きな一歩をもたらす研究であることから選びました。 ArXiv . Extended Very-High-Energy Gamma-Ray Emission Surrounding PSR J0622 + 3749 Observed by LHAASO-KM2A . LHAASOでPSR PSR J0622+3749というパルサー付近から広がった超高エネルギー(VHE)γ線源を発見。対応天体が見つかっていないことから、これはパルサーから脱出したVHE電子によるものという”パルサーハロー”シナリオに一致。Phys. Rev. Letters. ピックアップ理由: 高エネルギー観測の躍進を象徴するような研究であることから選出しました。 ArXiv . Magnetic field generation by charge exchange in a supernova remnant in the early universe . 初期宇宙において部分電離プラズマ中を伝搬する超新星残骸衝撃波による磁場増幅機構。上流では中性水素だが、それが衝撃波下流でイオン化されると冷たい陽子ビームとなり、電子のreturn currentを生成。種磁場がなくても磁場の生成ができる。 ピックアップ理由: 宇宙初期のビッグバンやインフレーション時に特殊な種磁場を仮定しなくても、それを天体物理的な物理機構から生成することができる理論。そのリーズナブルさに感銘を受け、ピックアップしました。 ArXiv . Observation of gravitational waves from two neutron star-black hole coalescences . GW200105とGW200115という、2つの中性子星(NS)-ブラックホール(BH)合体からの重力波を検出。前者は8.9, 1.9M_sun、後者は5.7, 1.5M_sunの合体。ApJL. ピックアップ理由: 連星ブラックホール、連星中性子星に続き、ブラックホールと中性子星からなる連星からの重力波を検出。重力波天文学のさらなる飛躍に期待という意味でピックアップしました。 ArXiv . Beamed emission from a neutron-star ULX in a GRRMHD simulation . 中性子星への超臨界降着を2.5D GRRMHD計算。降着円盤からのアウトフローによりビーム化された放射が放出されると判明。視野角の関数である見かけの等方的光度は最大で100L_EddにもなりULX(超光度X線天体)で観測される光度と一致。ApJL. ピックアップ理由: 長い間未解決だったUltra-Luminou X-ray sourceをシミュレーションすることに成功したもの。その画期的な計算からピックアップしました。 ArXiv . RAIKOU: A General Relativistic, Multi-wavelength Radiative Transfer Code . カーブラックホール周辺のブラックホールシャドウを含む画像やスペクトルの多波長研究のための、一般相対論的ray-tracing輻射輸送コード RAIKOU(来光)の開発。宇宙線研の川島さんの論文。以前からその存在は知っていたけれど、ついに論文化！ ピックアップ理由: EHTによるブラックホール直接撮像で盛り上がりを見せるカーブラックホール業界、理論と観測の比較という意味で大きな貢献をもたらすことから選出しました。ただ単に私が読んでみたいと思ったというのもある。 ArXiv . Black hole flares: ejection of accreted magnetic flux {through 3D plasmoid-mediated} reconnection . 超高解像度3D GRMHD計算から、magnetically arrested diskでプラズモイドを介した磁気リコネクションを計算することに成功。リコネクションにより加熱され、それがBHから脱出すると低密度のホットスポットとなる。これはSgr A*の観測と一致。 ピックアップ理由: 超高解像度計算、それだけでロマンを感じます。 ArXiv . A snapshot of the oldest AGN feedback phases . LOFARにより、ある銀河群での複数世代の宇宙線AGNバブルの後期段階進化を高解像度で明らかに。バブルの浮力は銀河群内物質の放射冷却を効率的に抑制するが、磁場によりバブルは数億年経過しても完全に混合していなかった。Nature Astronomy ピックアップ理由: 銀河団内に存在するAGNジェットでできたバブル構造、それを詳細に観測した論文。銀河団プラズマの理論に大きな影響を与える観測と判断し選出しました。 ArXiv . High-entropy ejecta plumes in Cassiopeia A from neutrino-driven convection . 超新星残骸Cassiopeia Aにおいて、高エントロピー核燃焼領域での合成元素である安定したTi, Crを検出。ニュートリノ加熱によって生じる対流型超新星エンジンの存在を示した。Nature. ピックアップ理由: 超新星爆発の理解に大きな影響を及ぼす論文としてピックアップしました。 ArXiv . Morphological transition of the compact radio lobe in 3C84 via the strong jet-cloud collision . 電波銀河3C84(NGC1275)のコンパクト電波ローブを2016-2020年にかけて観測。2017年にはホットスポットがコンパクトガス雲とぶつかっていたが、その後またホットスポットと電波ローブが移動。FR IIからFR Iに形態が変化した。ApJL ピックアップ理由: AGNの形態理論や観測に重要な示唆をもたらす観測であることから選出しました。 ArXiv . State-of-the-art energetic and morphological modelling of the launching site of the M87 jet . GRMHD+GRRT計算によりM87 jetの電波-近赤外領域までの広帯域スペクトルを再現、同時にM87 jetのコリメーションプロファイルと一致させることができた。計算モデルからM87の無次元スピンは0.5≤a≤1.0で高いスピンが示唆。Nature Astronomy ピックアップ理由: ブラッkホール周りのMAD(Magnetic Arrested Disk)の計算からジェットの伝搬までを計算、輻射輸送も同時に解くことで観測を再現することに成功した、スパコン計算の勝利とも言うべき研究。今後の計算機とアルゴリズムの発展への期待も込めてピックアップしました。 ArXiv . Peta-electron volt gamma-ray emission from the Crab Nebula . かに星雲から5x10^-4から1.1PeV γ線を検出。これは絶対理論限界の15%を超える加速率を持つPeV電子加速器の存在を示している。パルサー風の終端でパルスでないγ線が生成されてるとすると、加速器の大きさは0.025-0.1pc、磁場は110µG。Science ピックアップ理由: パルサーでの粒子加速の理論に制限を与える大きな成果として選出しました。 ArXiv . ",
-    "url": "/astroph/2021#he-%E9%AB%98%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E5%88%86%E9%87%8E",
-    
-    "relUrl": "/astroph/2021#he-高エネルギー宇宙物理分野"
-  },"41": {
-    "doc": "2021年振り返り",
-    "title": "統計情報",
-    "content": "以下にarXiv/astro-phの登録論文推移を示します。 . ",
-    "url": "/astroph/2021#%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1",
-    
-    "relUrl": "/astroph/2021#統計情報"
-  },"42": {
-    "doc": "2021年振り返り",
-    "title": "近年の登録推移",
-    "content": ". ",
-    "url": "/astroph/2021#%E8%BF%91%E5%B9%B4%E3%81%AE%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
-    
-    "relUrl": "/astroph/2021#近年の登録推移"
-  },"43": {
-    "doc": "2021年振り返り",
-    "title": "今年の月別登録推移",
-    "content": ". ",
-    "url": "/astroph/2021#%E4%BB%8A%E5%B9%B4%E3%81%AE%E6%9C%88%E5%88%A5%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
-    
-    "relUrl": "/astroph/2021#今年の月別登録推移"
-  },"44": {
-    "doc": "2021年振り返り",
-    "title": "結言",
-    "content": "2021年はプライベートの忙しさや体調不良などを除いて、毎日arXiv/astro-phのabstractをチェックすることができました。もちろんここに挙げたものだけが全てではありません。私が見逃したものも含めて、もし今年発表された論文で面白いものがございましたら、お教えいただけると助かります。 . ",
-    "url": "/astroph/2021#%E7%B5%90%E8%A8%80",
-    
-    "relUrl": "/astroph/2021#結言"
-  },"45": {
-    "doc": "2021年振り返り",
-    "title": "2021年振り返り",
-    "content": ". | はじめに | 2021年の研究動向・ホットトピックス . | 次世代望遠鏡での観測を見据えた論文が続々 | 天の川銀河の進化の歴史解明を目指す研究競争が加熱 | AGN円盤中での恒星進化や連星進化研究のプチブームが来ている？ | 共通外層進化(Common Envelope Evolution)の波が到来？ | ブラックホールシャドウが天文研究人気を牽引？ | 高エネルギー業界は新発見が目白押し！ | . | 2021年arXiv総括 . | SR (太陽・恒星分野) . | Turbulent generation of magnetic switchbacks in the Alfvénic solar wind | Dynamical coupling of a mean-field dynamo and its wind: Feedback loop over a stellar activity cycle | The origin and evolution of magnetic white dwarfs in close binary stars | SPLUSJ210428.01-004934.2: An Ultra Metal-Poor Star Identified from Narrowband Photometry | The role of non-axisymmetry of magnetic flux rope in constraining solar eruptions | Zooming into the Collimation Zone in a Massive Protostellar Jet | VVV-WIT-08: the giant star that blinked | M-dwarf’s Chromosphere, Corona and Wind Connection via the Nonlinear Alfvén Wave | Spectroscopic evidence for a large spot on the dimming Betelgeuse | Asteroseismic Fingerprints of Stellar Mergers | Solar differential rotation reproduced with high-resolution simulation | Probable detection of an eruptive filament from a superflare on a solar-type star | . | IM (装置開発・シミュレーション技法等分野) . | Science and survival: insights from Astronomy | Touching the Stars: Using High-Resolution 3D Printing to Visualize Stellar Nurseries | Writing Scientific Papers in Astronomy | TULIPS: a Tool for Understanding the Lives, Interiors, and Physics of Stars | Multi-Resolution HEALPix Maps for Multi-Wavelength and Multi-Messenger Astronomy | . | EP (太陽系・系外惑星系分野) . | The Habitable-zone Planet Finder Detects a Terrestrial-mass Planet Candidate Closely Orbiting Gliese 1151: The Likely Source of Coherent Low-frequency Radio Emission from an Inactive Star | Jupiter’s “Cold” Formation in the Protosolar Disk Shadow: An Explanation for the Planet’s Uniformly Enriched Atmosphere | Past, Present and Future Stars that can see Earth as a Transiting Exoplanet | Reimagining the water snowline | Polluted White Dwarfs Reveal Exotic Mantle Rock Types on Exoplanets in our Solar Neighborhood | Mercury as the relic of Earth and Venus’ outward migration | Painting Asteroids for Planetary Defense | . | CO (宇宙論分野) . | Towards Cosmological Simulations of Dark Matter on Quantum Computers | Discovery of Magnetic Fields Along Stacked Cosmic Filaments as Revealed by Radio and X-Ray Emission | HyPhy: Deep Generative Conditional Posterior Mapping of Hydrodynamical Physics | Void replenishment: how voids accrete matter over cosmic history | A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team | . | GA (星間空間・星形成・銀河・銀河団分野) . | The Galactic center chimneys: The base of the multiphase outflow of the Milky Way | The first evidence for three-dimensional spin-velocity alignment in pulsars | Tiny-scale Structure Discovered toward PSR B1557−50 | Diffuse Synchrotron Emission Associated with the Starburst in the Circumnuclear Disk of NGC 1275 | Anisotropic satellite galaxy quenching modulated by supermassive black hole activity | Jets from MRC 0600-399 bent by magnetic fields in the cluster Abell 3376 | A New Challenge for Dark Matter Models | An ancient massive quiescent galaxy found in a gas-rich z ~ 3 group | A relic from a past merger event in the Large Magellanic Cloud | Rapid growth of seed black holes during early bulge formation | Active Galactic Nuclei Abundance in Cosmic Voids | Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field | . | HE (高エネルギー宇宙物理分野) . | The Imprint of Large Scale Structure on the Ultra-High-Energy Cosmic Ray Sky | Evidence that Ultra-High-Energy Gamma Rays are a Universal Feature Near Powerful Pulsars | Mildly relativistic magnetized shocks in electron-ion plasmas – II. Particle acceleration and heating | High Energy Neutrinos from Choked Gamma-Ray Bursts in AGN Accretion Disks | Observational properties of a general relativistic instability supernova from a primordial supermassive star | HAWC observations of the acceleration of very-high-energy cosmic rays in the Cygnus Cocoon | First Detection of sub-PeV Diffuse Gamma Rays from the Galactic Disk: Evidence for Ubiquitous Galactic Cosmic Rays beyond PeV Energies | Extended Very-High-Energy Gamma-Ray Emission Surrounding PSR J0622 + 3749 Observed by LHAASO-KM2A | Magnetic field generation by charge exchange in a supernova remnant in the early universe | Observation of gravitational waves from two neutron star-black hole coalescences | Beamed emission from a neutron-star ULX in a GRRMHD simulation | RAIKOU: A General Relativistic, Multi-wavelength Radiative Transfer Code | Black hole flares: ejection of accreted magnetic flux {through 3D plasmoid-mediated} reconnection | A snapshot of the oldest AGN feedback phases | High-entropy ejecta plumes in Cassiopeia A from neutrino-driven convection | Morphological transition of the compact radio lobe in 3C84 via the strong jet-cloud collision | State-of-the-art energetic and morphological modelling of the launching site of the M87 jet | Peta-electron volt gamma-ray emission from the Crab Nebula | . | . | 統計情報 . | 近年の登録推移 | 今年の月別登録推移 | . | 結言 | . ",
-    "url": "/astroph/2021",
-    
-    "relUrl": "/astroph/2021"
-  },"46": {
-    "doc": "2021年振り返り",
-    "title": "はじめに",
     "content": "こちらは Qiitaさんの量子コンピュータアドベントカレンダー Advent Calendar 2021 23日目の「今年のarXiv/quantphチェックで面白かったものをご紹介」の記事です。 昨年の4月からquantphのチェックを(可能な限り)毎日行い始めました。そしてそれを記録に残すためにTwitterでの情報発信並びにGitHubのリポジトリのIssuesに登録する作業を行ってきました。今回は2021年にGitHubにissue登録されているものの中から、個人的に特に面白いと思ったものを抽出します。 . 注意: 量子コンピュータについてはまだまだ門外漢のため、間違った解釈をしているものもあるかもしれません。またここに記載されたものが全てではないことにもご留意ください。 . ",
     "url": "/quantph/2021#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB",
     
     "relUrl": "/quantph/2021#はじめに"
-  },"47": {
+  },"27": {
     "doc": "2021年振り返り",
     "title": "2021年arXiv総括",
     "content": "特に面白いと感じたもののみを抽出したつもりですが、たくさんあります。 . ",
     "url": "/quantph/2021#2021%E5%B9%B4arxiv%E7%B7%8F%E6%8B%AC",
     
     "relUrl": "/quantph/2021#2021年arxiv総括"
-  },"48": {
+  },"28": {
     "doc": "2021年振り返り",
     "title": "量子アルゴリズム分野",
     "content": "量子アルゴリズムタグがついたものは174本ありました。 . Quantum algorithm for Feynman loop integrals . Feynman loop積分を計算する量子アルゴリズムの考案。Groverのアルゴリズムを効率的に修正したものを用いることで、O(1)の反復回数しか必要としない。 ピックアップ理由: O(1)の反復回数という強力な手法であることと、Feynman積分の計算の幅が広がることからピックアップしました。 ArXiv . Demonstrating robust simulation of driven-dissipative problems on near-term quantum computers . 量子力学の難問である駆動散逸多体問題を解くアルゴリズムがエラーに対して本質的にロバストであることを示した。ノイズの多いハードウェア上で、散逸問題をシミュレーションするアルゴリズムが非散逸アルゴリズムを凌駕する結果に。 ピックアップ理由: 散逸問題のシミュレータとして、NISQの可能性の1つを提示したすごい論文と感じました。 ArXiv . Quantum Rounding . 有限精度の量子演算精度を向上させる丸め込み手法。複数サンプルを用いることで確率的に丸め誤差を抑制。量子レジスタに格納された固定変数乗算において、同じ量子ビット数で2-3倍のゲート数とdepth削減。ゴールドマンサックスの論文。 ピックアップ理由: 数値計算などで重要な問題となる丸め誤差、それを量子コンピュータ上で考えるという意欲的な研究であることから選出しました。 ArXiv . Pricing multi-asset derivatives by finite difference method on a quantum computer . ブラック・ショールズ偏微分方程式を有限差分法で解く量子アルゴリズムの提案。量子線形系アルゴリズムに基づいて微分方程式を解くための量子アルゴリズムを利用しており、次元に対して指数関数的な高速化を達成。大阪大とメルカリの論文。 ピックアップ理由: 金融工学の基礎となる方程式を解く量子アルゴリズムの考案したもの。しかも指数関数的な高速化を達成しており、今後の量子コンピュータ金融計算に拍車をかける論文としてピックアップしました。 ArXiv . Conditions for Advantageous Quantum Bitcoin Mining . 量子コンピュータを用いたビットコインマイニング。Q&lt;Crbの場合に量子採掘が古典より効率的になると判明(Q: Groverの反復コスト, C: 古典ハッシュコスト, r:1秒間に行うGrover反復回数, b: 最適なマイニング手順を用いた場合に最大となる定数) ピックアップ理由: 最近流行りのビットコイン。現在そのマイニングはGPUなどを用いた並列計算が主流となっていますが、これを量子コンピュータでやろうとしたもの。その話題性からピックアップしました。 ArXiv . Quantum Algorithm for Solving Quadratic Nonlinear System of Equations . n次元の2次非線形方程式を解く量子アルゴリズム。ホモトピー摂動法と線形化手法を用いて有限次元の線型方程式に埋め込み、量子線形系ソルバーを用いてこれを解き、元の非線形方程式の規格化された厳密解に誤差ε, 成功確率Ω(1)で得る。 ピックアップ理由: 量子コンピュータでここまで複雑な計算ができるようになるとは、という驚きも含めて選出しました。成功確率がちゃんと1のオーダーになることも理由の1つです。 ArXiv . Quantum Interior Point Methods for Semidefinite Optimization . 半正定値最適化問題に対する2つの量子内点法を提案。1. 古典に近い解法で、探索方向が不正確かつ実行可能解のみの探索が保証されない。2. ニュートン線形系のゼロ空間表現を用いて、不正確な探索方向でも実行可能であることを保証する手法。 ピックアップ理由: 連続最適化のアルゴリズムとして知られる内点法の量子バージョンを考案した論文。私自身が最適化に執心していることもあり選びました(量子古典ハイブリッドタグとも迷いましたが、量子アルゴリズムタグでの選出となりました)。 ArXiv . Quantum Signal Processing (QSP) for simulating cold plasma waves . 冷たいプラズマ中の波、特に非一様な1次元プラズマ中を伝搬するX波について計算する量子アルゴリズムを考案。量子回路エミュレータを用いて計算したところ、従来の古典計算と一致する結果を得た。量子回路でプラズマ計算…めっちゃ気になる！ ピックアップ理由: 大学院時代にプラズマ物理を少し学んだことがある経緯から、とても面白そうに見えた論文。今後これが発展し、核融合プラズマを量子コンピュータで計算するような時代がもうすぐそこまで来ているかも？ ArXiv . Deterministic Grover search with a restricted oracle . Groverのアルゴリズムにおいて、量子探索オラクルをユーザが制御することなく正しい結果を確実に返すように改良。オリジナルのGrover探索での最適なステップ回数と比較して、1回以上の追加反復で100%の成功率を達成。 ピックアップ理由: Groverをさらに高速化したもの。1回以上の追加反復、という強力さから選出しました。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E5%88%86%E9%87%8E",
     
     "relUrl": "/quantph/2021#量子アルゴリズム分野"
-  },"49": {
+  },"29": {
     "doc": "2021年振り返り",
     "title": "量子古典ハイブリッド分野",
     "content": "量子古典ハイブリッドタグがついたものは168本でした。 . Solving partial differential equations in quantum computers . 偏微分方程式を解くための変分量子アルゴリズムの考案。対称性のある滑らかな関数を表現するための変分回路をansatzとして実装し、古典optimizerと組み合わせる。論文では1次元調和振動子を3量子ビットで10^-5誤差で計算できたと報告。 ピックアップ理由: NISQを用いた数値計算の幅が広がる研究として選出しました。 ArXiv . Avoiding local minima in Variational Quantum Algorithms with Neural Networks . 量子回路から古典ニューラルネットワークにアウトプットすることで、変分量子回路最適化のための勾配ベースアプローチを改善する手法。コスト関数の概形自体を修正することで局所解を回避することができる。 ピックアップ理由: その組合せを上手に用いた改善研究に脱帽しました。量子アニーリングでも同様のことができるのか？とか他にも発展させることができそうです。 ArXiv . Quantum Monte Carlo simulation of many-body dynamics with mitigated error on noisy quantum computer . 量子モンテカルロ法をNISQで高速化するための新アルゴリズム。Fault-tolerant量子コンピュータ上でのアルゴリズムの複雑性は従来のものと同じ多項式、NISQでは誤差軽減をするこのアルゴリズムにより、モンテカルロ法の符号問題を緩和できる。 ピックアップ理由: 量子モンテカルロ法で必ず壁となる不符号問題の解決の糸口となるかもしれない、その重要性から選出しました。 ArXiv . Variational Quantum Optimization with Multi-Basis Encodings . 多基底グラフエンコーディングと非線形活性関数を用いることで、非常に回路depthが浅くても既存手法を凌駕する変分量子アルゴリズムの開発。1つのGPUで512頂点(量子ビット)の高連結MaxCut問題を最適化することに成功。NVIDIAなどの研究。 ピックアップ理由: 回路のdepthを大幅に削減した画期的な手法。最近、量子関連でNVIDIAを見かけることも多くなってきました。 ArXiv . Advancing Hybrid Quantum-Classical Algorithms via Mean-Operators . 量子多体系のエンタングルメント計算に必要となる量子ビット・量子演算の膨大な数を解消するためにハイブリッドアルゴリズムと物性物理の平均場理論を組合せた手法。平均演算子により多体状態を準備するための量子演算回数を大幅に減少させた ピックアップ理由: 物性・統計物理の平均場をNISQアルゴリズムに組合わせるという斬新な手法。これからもこのような物理に触発された素晴らしいアルゴリズムの誕生に期待を込めて選出しました。 ArXiv . An exponentially more efficient optimization algorithm for noisy quantum computers . QAOAに比べて指数関数的に少ない量子ビット数でありながら、MaxCut問題を解くのに必要な量子演算数を大幅に削減した新しい量子最適化アルゴリズム。32ノードグラフを5量子ビットで、グラフ分割などの前処理なしに解くことができた。 ピックアップ理由: 最適化問題を量子回路で解くQAOAより超効率的な解法。今後の発展や応用に期待を込めて選びました。 ArXiv . NISQ-HHL: Portfolio Optimization for Near-Term Quantum Hardware . NISQで小規模なportfolio最適化問題をend-to-endで実行するハイブリッドHHL, NISQ-HHL. これまでのハイブリッドHHLを拡張して量子ハードウェアの新機能である回路途中の測定・量子条件論理(QCL)・量子ビットリセット・再利用を用いている。 ピックアップ理由: 小規模ながら着実にNISQの応用が広がっていることから選出しました。最近の機能を積極的に用いているというのもポイントが高い。 ArXiv . Variational Hamiltonian Ansatz for 1D Hubbard chains in a broad range of parameter values . 1次元Hubbard鎖の物理は変分ハミルトニアンアンザッツ(VHA)によってどの程度記述できるかを調べた。低fidelityの解でもエネルギーや2重占有サイトの数をよく捉えることができるが、スピン-スピン相関は高fidelityでもあまり捉えられないと判明 ピックアップ理由: NISQでの量子古典ハイブリッドアルゴリズムではFidelityだけでなく、他の関係量なども考えなければならないことを示したもの。今後のNISQアルゴリズム開発の重要な指針になることからピックアップしました。 ArXiv . Observing ground-state properties of the Fermi-Hubbard model using a scalable algorithm on a quantum computer . 効率的でパラメータ数の少ない低depthの変分量子アルゴリズムが、Fermi-Hubbardモデルの中規模サイズのインスタンスの重要な性質を再現できることを実験的に示した。これは古典で解くことができる1次元のインスタンスを凌駕。Googleなどの研究 ピックアップ理由: こちらは対照的にNISQの可能性を感じさせる論文。今後も難しい問題が量子コンピュータで解かれていってほしいという期待から選びました。 ArXiv . Markov Chain Monte-Carlo Enhanced Variational Quantum Algorithms . 古典MCMCを用いて大域最適解に確実に収束する変分量子アルゴリズム。このアルゴリズムの状態空間のエルゴード性から性能が保証されており、時間複雑性が解析的に分かる。MaxCutを用いて実際にこの手法の有効性を検証した。IBMなどの研究。 ピックアップ理由: 大域最適解に確実に収束するという強力性から選びました。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E5%8F%A4%E5%85%B8%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E5%88%86%E9%87%8E",
     
     "relUrl": "/quantph/2021#量子古典ハイブリッド分野"
-  },"50": {
+  },"30": {
     "doc": "2021年振り返り",
     "title": "量子機械学習分野",
     "content": "量子機械学習タグがついたものは128本でした。 . Towards understanding the power of quantum kernels in the NISQ era . 量子機械学習における量子カーネルがエラーの多いNISQでも有効かどうか調査。データセットが大きい・測定回数が少ない・システムノイズが大きい場合、量子カーネルの優位性が失われると判明。 ピックアップ理由: 「結局のところfault tolerant量子コンピュータができないと量子機械学習も機能しないんだな」と再考させられる論文です。 ArXiv . A Quantum Convolutional Neutral Network on NISQ Devices . NISQデバイスで、古典よりも計算複雑性を大幅に削減した量子畳み込みニューラルネットワーク(QCNN)。画像認識においてある種のノイズに対して安定で、必要なパラメータが入力サイズに依存しないため、NISQで有効。 ピックアップ理由: 量子畳み込みニューラルネットワークをNISQでも実行できるように改良したもの。ますます量子機械学習が身近なものになりました。 ArXiv . The dilemma of quantum neural networks . 実験の結果、現在の量子ニューラルネットワーク(QNN)が古典学習モデルに比べて何の利点ももたらさないことが経験的に観察された。有効なモデル容量が限られることと、QNNの学習可能性が正則化テクニックの影響を受けないことが要因と推察。 ピックアップ理由: 量子機械学習はまだ発展途上の研究分野であることを示した論文。今後の理論展開に期待です。 ArXiv . QFCNN: Quantum Fourier Convolutional Neural Network . 新しい量子・古典ハイブリッド回路である量子フーリエ畳み込みネットワーク(QFCNN)の提案。古典CNNに比べて理論的に指数関数的な高速化を達成、既存のQCNNの最良の結果を上回った。ふえぇ…すごいよぉ ピックアップ理由: 今後のQCNN研究に拍車をかけそうなすごい論文です。ちゃんと理解したい。 ArXiv . QDataset: Quantum Datasets for Machine Learning . 量子機械学習アルゴリズム開発を促進するために設計されたデータセット“QDataSet”。1, 2量子ビットの計算から得られた52個の高品質データを用意している。機械学習実務者が量子制御・量子分光・量子トモグラフィーなどに使えるように豊富な情報を提供。 ピックアップ理由: このような地道な整備が研究を後押しすると信じています。 ArXiv . Quantum reservoir computation utilising scale-free networks . スケールフリーなネットワークを用いて量子優位性を示すパターン認識のための量子リザーバ・コンピューティングモデル。スケールフリーネットワークに内在する複雑性を利用するため、量子レイヤのプログラミングや最適化を必要としない。 ピックアップ理由: スケールフリーネットワークの性質をそのまま用いることで、そちらに煩雑な部分を押し付けるという工夫をしたもの。発想の面白さから選びました。 ArXiv . Exponentially Many Local Minima in Quantum Neural Networks . QNN損失関数のランドスケープを定量的に調査。パラメータ不足のQNNに対して、パラメータ数に依存して指数関数的に局所解が増えるインスタンスを作れると判明。古典ではこの局所最小は非線形活性化によるものだが、QNNでは量子干渉によるもの。 ピックアップ理由: Barren plateauの研究ばかり目にするような気がしますが、これは局所解の数に着目したもの。量子ニューラルネットワークを用いて大域解を目指す上で重要な研究です。 ArXiv . Subtleties in the trainability of quantum machine learning models . VQAのパラメータ学習可能性とQMLについての枠組みを橋渡し、VQAの勾配スケーリング結果がQMLの勾配スケーリングの研究にも適用できると判明。VQAで悪影響を及ぼす特徴はQMLでもbarren plateauのような問題を引き起こす可能性を示唆。 ピックアップ理由: VQAでのbarren plateau回避の研究が、そのまま量子機械学習に光明をもたらすことになるかも？ ArXiv . Importance of Kernel Bandwidth in Quantum Machine Learning . 量子カーネル帯域幅を最適化することでカーネル法の性能を、ランダムな推測から最良の古典手法に匹敵するものへ改善できると判明。通常のカーネル値はqubit数に応じて指数減少するが、帯域幅最適化を行うとqubit数増加に伴って性能が向上。 ピックアップ理由: 何かとすごいカーネル法、その量子版である量子カーネルの性能を向上させる研究。今後、この研究が発展すれば古典を凌駕する量子カーネルが生まれるかも？ ArXiv . Quantum advantage in learning from experiments . 物理状態の学習と物理ダイナミクスの学習という2つのタスクにおいて、従来よりも指数関数的に少ない回数で学習できる量子優位性を実証した。Google Quantum AI, Microsoft Research AI, AWSなどが共著のすごい論文や！ ピックアップ理由: 量子マシンを使えば効率的に自然界を理解することが可能になることを示した素晴らしい論文です。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E5%88%86%E9%87%8E",
     
     "relUrl": "/quantph/2021#量子機械学習分野"
-  },"51": {
+  },"31": {
     "doc": "2021年振り返り",
     "title": "古典計算・古典アルゴリズム",
     "content": "量子機械学習タグがついたものは87本でした。 . An explicit vector algorithm for high-girth MaxCut . MaxCutを解くための近似アルゴリズム。MaxCutの半正定値緩和の陽的なベクトル解を構築、超平面丸め込みを適用するというもの。この手法はこれまでの古典・量子アルゴリズム全てを凌駕するものらしい。 ピックアップ理由: MaxCutにしか使えないのか？という感じですが、今後も古典アルゴリズムが発展すれば、量子優位性を示すのは難しそうという意味を込めてピックアップしました。 ArXiv . Large scale multi-node simulations of ℤ2 gauge theory quantum circuits using Google Cloud Platform . Google Cloud Platformを用いたqsimのマルチノード実装による大規模計算。TPUを用いて大規模な量子回路シミュレーションが劇的に高速化できることを示した。また最大36量子ビットのシステムサイズでZ2量子場理論を計算した。 ピックアップ理由: GoogleのTPUは機械学習専用という感じでしたが、これを機にTPUを使った高効率量子回路シミュレーションが活発になるかもしれないという期待から選出しました。量子回路シミュレーションといえばテンソルネットワーク、という時代に一石を投じる研究となるかもしれない。この論文以外にも同様にTPUを利用した高効率計算を研究しているのも面白いです。 ArXiv . Closing the “Quantum Supremacy” Gap: Achieving Real-Time Simulation of a Random Quantum Circuit Using a New Sunway Supercomputer . スパコンSunway上でテンソルベースの高性能なランダム量子回路シミュレータを開発。4200万コア対応の3段階並列化手法などにより、1010(qubits)(1+40+1)(depth)まで計算可能に。Sycamoreのシミュレーション時間を1万年から304秒まで短縮した ピックアップ理由: Googleの量子超越性にトドメを刺した研究。今後も古典と量子がしのぎを削り、両者ともに発展していくことが見て取れます。また量子優位性・超越性を示すには数学的にきっちり示されなければならない警鐘も鳴らしました。 ArXiv . Discovering hydrodynamic equations of many-body quantum systems . 量子多体系の限られたデータから有効な方程式を自動的に発見する新しい機械学習フレームワーク。これまで知られていたある種の極限において流体力学方程式になることを再現し、さらに新しい方程式も発見した。可能な限りその導出も行なった。 ピックアップ理由: 量子多体系を機械学習で理解するという新潮流、その可能性を広げるものとしてピックアップしました。 ArXiv . Revisiting dequantization and quantum advantage in learning tasks . xベクトルへのSQ(Sample and Query)アクセスをもつ古典アルゴリズムが、量子状態を入力する量子アルゴリズムよりも指数関数的に高速にいくつかの学習タスクを達成できると証明。量子優位性が得られないのはSQアクセスが強力すぎるため？ ピックアップ理由: 強力すぎる古典アルゴリズムの例。今後これを破る量子アルゴリズムが現れることを期待してピックアップしました。 ArXiv . ",
     "url": "/quantph/2021#%E5%8F%A4%E5%85%B8%E8%A8%88%E7%AE%97%E5%8F%A4%E5%85%B8%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0",
     
     "relUrl": "/quantph/2021#古典計算古典アルゴリズム"
-  },"52": {
+  },"32": {
     "doc": "2021年振り返り",
     "title": "量子ビット・ゲート・ハード開発",
     "content": "量子機械学習タグがついたものは80本でした。 . Resolving catastrophic error bursts from cosmic rays in large arrays of superconducting qubits . 大規模量子プロセッサに衝突する高エネルギー宇宙線を直接観測。衝突粒子が基盤をイオン化、高エネルギーフォノンを放射し準粒子のバーストを誘発する。この実験ではチップ全体の故障原因となる大規模な準粒子バーストを特定した。 ピックアップ理由: 高エネルギー宇宙線の物理学が量子コンピュータ製作に大きく関わることを示した重要な研究です。また量子ビット製造の困難性を浮き彫りにした研究でもあります。 ArXiv . Strong quantum computational advantage using a superconducting quantum processor . 66量子ビットの2次元プログラマブル超伝導量子プロセッサZuchongzhiを開発。そのうちの56量子ビットまでを用いてランダムな量子回路サンプリングを行った。Zuchongzhiが1.2時間で終えたタスクはスパコンで最低8年かかり、量子優位性を示した。 ピックアップ理由: 量子コンピュータ業界における中国の躍進を感じさせる論文。量子ハードウェア技術はもはや中国が世界一？ ArXiv . A universal qudit quantum processor with trapped ions . 7次元ヒルベルト空間を持つイオントラップで普遍的な量子プロセッサを実証実験。現在の多くの量子ビットは古典からのアナロジーで2進法で動作しているが、高次元が必要な量子計算や量子ビットを基本にしたアルゴリズムの実装が可能となる。 ピックアップ理由: 8準位系を用いた量子計算の実現なるか？今後もより効率的に量子計算を行うための量子ビット開発が進むかもしれません。 ArXiv . Magnon Bose-Einstein condensate based qubit calculus . イットリウム・鉄・ガーネットのフェリ磁性膜中の2つの室温マグノン・ボーズ・アインシュタイン凝縮(BEC)状態を用いた、室温量子コンピューティングを提案。2つのBECは群速度0で静止しており、量子ビットを形成する直交基底状態として機能。 ピックアップ理由: 室温でも動作する量子ビットが作れれば、量子コンピュータも一気に普及するだろうという期待をこめてピックアップしました。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%83%93%E3%83%83%E3%83%88%E3%82%B2%E3%83%BC%E3%83%88%E3%83%8F%E3%83%BC%E3%83%89%E9%96%8B%E7%99%BA",
     
     "relUrl": "/quantph/2021#量子ビットゲートハード開発"
-  },"53": {
+  },"33": {
     "doc": "2021年振り返り",
     "title": "量子誤り訂正・軽減",
     "content": "量子誤り訂正・軽減タグがついたものは76本でした。 . Dynamically Generated Logical Qubits . 動的に生成された論理量子ビットを用いた量子誤り訂正。このコードは論理量子ビットを持たなたいが測定パターンによって論理量子ビットが生成されるため、fault-tolerant量子メモリとして機能する。Microsoftの論文。 ピックアップ理由: 動的に論理量子ビットを生成するため、論理量子ビットを持たない符号。まだまだ誤り訂正は基礎勉強が必要ですが面白そうなのでピックアップしました。 ArXiv . Measurement-Free Ultrafast Quantum Error Correction by Using Multi-Controlled Gates in Higher-Dimensional State Space . より高次元の状態空間に基づく多制御ゲートを用いて実現した、測定を用いないリアルタイム誤り訂正。測定が必要な誤り訂正に比べて誤り訂正およびアンシラ量子ビットのリセットにかかる時間を短縮した。東大の研究、スゴイ… ピックアップ理由: リアルタイムかつ測定を用いない誤り訂正。これが実用化されれば、文字通りリアルタイムに量子誤り訂正ができるようになるインパクトからピックアップしました。 ArXiv . Noise-Resistant Quantum State Compression Readout . 量子ビットの状態を1つのアンシラ量子ビットに圧縮し、それを測定することで多量子ビット測定に起因するエラーを回避する「圧縮読み出し法」の提案。量子ビット数の大規模化に伴う読み出しに対する耐性を大幅に向上させた。 ピックアップ理由: 今後の大規模化に必要なエラー回避手法として選出しました。 ArXiv . Realizing Repeated Quantum Error Correction in a Distance-Three Surface Code . 表面符号を用いた量子誤り訂正を実証。17物理量子ビットの超伝導回路においてわずか1.1µsの誤り訂正サイクルで、論理量子ビットの4つの主要な状態の保存。このサイクルを繰り返すことでビット/位相反転エラーシンドロームを測定・デコード可能 ピックアップ理由: 理論発展が中心的だった量子誤り訂正、そのうちの表面符号が実験室でついに実現。そのインパクトからピックアップしました。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E8%AA%A4%E3%82%8A%E8%A8%82%E6%AD%A3%E8%BB%BD%E6%B8%9B",
     
     "relUrl": "/quantph/2021#量子誤り訂正軽減"
-  },"54": {
+  },"34": {
     "doc": "2021年振り返り",
     "title": "統計物理学",
     "content": "統計物理学タグがついたものは71本でした。 . Realizing topologically ordered states on a quantum processor . トポロジカル秩序状態を超伝導量子プロセッサ上で実現。量子プロセッサがトポロジカル量子物質や量子誤り訂正に新しい光をもたらすかも？Google Quantum AIの論文。 ピックアップ理由: 統計物理として面白いだけでなく、量子誤り訂正などへの応用も期待される研究であることから選出しました。 ArXiv . Mean Field Approximation for solving QUBO problems . NP困難なQUBO問題を解くための、平均場アニーリングによる統計物理的なアプローチと量子力学的なアプローチが同じ結果となることを示した。 ピックアップ理由: 統計物理的なダイナミクスが量子力学ダイナミクスと等価であることを示したもの。量子アニーリングなどの理解促進につながるかも？ ArXiv . A Quantum Inspired Approach to Exploit Turbulence Structures . 量子多体系物理から触発された乱流の構造を分析する方法。異なる長さスケール間の相関を定量化、tensor network理論を用いて乱流計算の構造を分解。従来手法に比べて1桁少ない計算スペースで非圧縮ナビエ・ストークス方程式を解けた。ﾏｼﾞ!? ピックアップ理由: 統計物理と流体力学の奇妙な関係を示し、さらに非圧縮Navier-Stokesを高効率で計算できたというすごい論文です。 ArXiv . Observation of Time-Crystalline Eigenstate Order on a Quantum Processor . 超伝導量子ビットのアレイ上に可変CPHASEゲート群を実装、これにより固有状態の秩序化した離散時間結晶(DTC)を実験的に観測。さらに実験的な有限サイズ解析によりDTCでなくなる相転移位置を特定。Google Quantum AIの論文。 ピックアップ理由: 時間結晶をQPU上で実験的に実現したもの。ますます非平衡物理解明が量子コンピュータ上で進みそう。 ArXiv . Storage properties of a quantum perceptron . 統計力学を用いて特定の量子パーセプトロンアーキテクチャの記憶容量を調査、その解析を古典的なスピングラス理論に結びつけた。ニューラルネットワークのさらなる研究に統計力学手法を用いることについてもコメントしている。 ピックアップ理由: 情報統計力学と呼ばれる分野の研究、ただしこれは古典ではなく量子パーセプトロン。古典と量子でどのように解析が異なるのか、またこの結果を受けて量子パーセプトロン研究がどのように広がるのかが面白そうです。 ArXiv . Digitized-Counterdiabatic Quantum Optimization . 組合せ最適化問題の全クラスを含むIsing spin-glassに対して、断熱量子最適化よりも多項式強化を達成するDegitized-Counterdiabatic Quantum Optimization。常にstoquastic Hamiltonianの断熱量子計算より優れた結果に。時代はspin-glassや! ピックアップ理由: スピングラスの勉強・研究がますます楽しくなりそうな研究。2021年ノーベル物理学賞にもスピングラス研究が貢献したことから、今後ますます発展しそうです。 ArXiv . ",
     "url": "/quantph/2021#%E7%B5%B1%E8%A8%88%E7%89%A9%E7%90%86%E5%AD%A6",
     
     "relUrl": "/quantph/2021#統計物理学"
-  },"55": {
+  },"35": {
     "doc": "2021年振り返り",
     "title": "量子アニーリング",
     "content": "量子アニーリングタグがついたものは60本でした。 . Simulated quantum annealing as a simulator of non-equilibrium quantum dynamics . 経路積分モンテカルロ法によるシミュレーテッド量子アニーリング(SQA)が量子アニーリングの量子力学を正しく再現できているかを、一般化Kibble-Zurek機構を用いて研究。SQAは一部を再現すると判明。東工大西森さんが共著。 ピックアップ理由: SNSなどで「古典で量子アニーリングをシミュレートできない」という議論を巻き起こした研究。ちゃんと読んでみるとSQAアルゴリズムが量子アニーリングを一部正しく表現できないということを示したものでした。今後の発展次第で、量子アニーリングの原理解明や性能刷新が起こるかもしれません。 ArXiv . Diversity metric for evaluation of quantum annealing . 発見される解の多様性の定量的な評価指標 Time-to diversity(TTD)を用いてQAと古典を比較。QAは古典より優れているか同等の性能であると判明。高品質で多様な解のセットが必要なポートフォリオなどではQAが有利かも？ ピックアップ理由: TTSならぬTTD。量子アニーリングの性能評価の指標として、新しい潮流を開くかも？ ArXiv . Diversity measure for discrete optimization: Sampling rare solutions via algorithmic quantum annealing . NP困難な最適化問題に対して独立した近似解の数を定量化するための多様性指標を導入。不均一なQAスケジュールは、TTS, TTDの両方に関して標準的なQAスケジュールよりも有利になると判明。 ピックアップ理由: 先程のTTDを用いて量子アニーリングの性能を評価したもの。不均一性がなぜ標準よりも良いのか、その理解が求められます。 ArXiv . Greedy parameter optimization for diabatic quantum annealing . 横磁場イジングにy軸磁場を加えることでパラメータを可変的に決定する方法。短いアニーリングによる出力から、y方向磁場項の係数符号を貪欲法で最適化。アニーリング時間が短い場合にQA, SAより優れた結果に。QAの門脇さん, 西森さんの共著。 ピックアップ理由: x磁場だけでなくy磁場を加えるとなぜか上手くいくというもの。こちらも今後の理論展開が待たれます。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%82%A2%E3%83%8B%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0",
     
     "relUrl": "/quantph/2021#量子アニーリング"
-  },"56": {
+  },"36": {
     "doc": "2021年振り返り",
     "title": "量子力学・場の理論など",
     "content": "量子力学・馬の理論などのタグがついたものは86本でした。 . Negative radiation pressure on an ensemble of atoms in free space . 古典では輻射圧が物質に押す力を与えるが、量子力学的に扱うと不均等な遷移速度から負の輻射圧が生じることを発見。この力は光の強度・原子の数・アンサンブルの初期温度に依存。 ピックアップ理由: 言われてみれば当たり前、でもそれを示すことが難しい。まさにコロンブスの卵です。 ArXiv . Quantum Wheatstone Bridge . 古典電磁気に登場するホイートストンブリッジ回路の量子版を提案。量子効果を利用したスピン鎖からなり、未知のカップリングに対して高い感度を持つ。はぁー面白そう！ ピックアップ理由: 量子ホイートストンブリッジ回路！図を見た限りでは電磁気というより量子熱力学っぽい感じですごく面白そうです。 ArXiv . An Open Quantum Systems approach to proton tunnelling in DNA . DNAの水素結合に沿って起こる陽子移動において、量子性がどの程度重要かを調査。グアニン-シトシン間で解析を行ったところ、量子トンネル効果が古典的な寄与よりも数桁大きいことが判明。現在の遺伝子変異モデルに一石を投じる結果？ ピックアップ理由: 量子力学が生物学や遺伝にまで影響していると考えると、すごくワクワクします。 ArXiv . Quantum vacuum Sagnac effect . 中性ナノ粒子の高速回転により、その近傍を伝播する原子波に励起されるSagnac位相(Sagnac効果は回転する観測者から見ると時間のズレが移動経路に依存して生じるという効果)の量子電磁気学的なアナロジーについて報告した研究。 ピックアップ理由: この効果は初めて耳にしたのですが、今後も相対論的な効果が量子実験から明らかになっていくことに期待を込めてピックアップしました。 ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%A0%B4%E3%81%AE%E7%90%86%E8%AB%96%E3%81%AA%E3%81%A9",
     
     "relUrl": "/quantph/2021#量子力学場の理論など"
-  },"57": {
+  },"37": {
     "doc": "2021年振り返り",
     "title": "PoC",
     "content": "PoCタグがついたものは69本でした。 . qRobot: A Quantum computing approach in mobile robot order picking and batching problem solver optimization . 倉庫や配送センターで注文された品を拾集する際の移動距離を最小化する量子アルゴリズムを開発と、ラズパイとクラウドを用いたPoCの提案。 ピックアップ理由: ラズパイを用いた拾集機と量子コンピュータの夢のコラボレーション！今後も量子コンピュータによる物流最適化が発展していくことから選びました。 ArXiv . Experimental Quantum Embedding for Machine Learning . 古典データを量子データに埋め込むことでデータ分類を効率的に行う先行研究を受けて、この方法を光/超低温原子/Rigetti超伝導量子コンピュータの3つで実証実験。このアプローチが実験レベルで上手く機能することが判明。 ピックアップ理由: 量子機械学習がちゃんと実験レベルで上手くいった例としてピックアップしました。 ArXiv . A Quantum Annealing Approach to Reduce Covid-19 Spread on College Campuses . Max-Cut問題を最適化するための量子アニーリングアルゴリズムを再帰的に適用、学生をコホートにグループ化することで大学キャンパス内で教室を共有することによるCovid-19感染可能性を最小化する手法を考案。後で論文を再現してみよう。 ピックアップ理由: QAを用いて学生をCOVID-19感染から守る！最近の流行り病に関係しているということもあり、選出しました。 ArXiv . ",
     "url": "/quantph/2021#poc",
     
     "relUrl": "/quantph/2021#poc"
-  },"58": {
+  },"38": {
     "doc": "2021年振り返り",
     "title": "量子実験",
     "content": "量子実験タグがついたものは49本でした。 . Proposal for measuring Newtonian constant of gravitation at an exceptional point in an optomechanical system . ニュートンの万有引力定数Gを量子力学的に測定する手法を考案。2つのcavity, 2つのmembrane共振器を用いた系に質量のある物体を加えることでsupermodeの固有振動数がシフト、それを検出することでGを測定できるというもの。 ピックアップ理由: 万有引力定数の測定にはねじり秤などがありますが、量子力学的な検知からそれに迫る実験提案。実現を願う意味で選択しました。 ArXiv . Experimental Realization of Rabi-Hubbard Model with Trapped Ions . 最大16個のトラップイオンを用いて、Rabi-Hubbard模型を実験室で実現。結合強度をゆっくりと減少させることで基底状態の量子相転移を調査。16イオンと16フォノンの系はヒルベルト空間次元数が257を超えるため、スパコンでも計算が難しい。 ピックアップ理由: 古典で計算が難しい、いわゆるアナログ量子計算。今後の量子コンピュータの性能発展次第で、これが計算される日が楽しみです。 ArXiv . On-chip black hole: Hawking radiation and curved spacetime in a superconducting quantum circuit with tunable couplers . 10個の超伝導トランズモン量子ビット上でアナログブラックホールを実現。湾曲時空での準粒子の量子ウォークはホーキング放射のように振る舞うことから、アナログの事象の地平線の外側にある量子ビットを測定することでホーキング放射を検証。 ピックアップ理由: ボーズ・アインシュタイン凝縮による音響ブラックホールからのホーキング放射を捉えたという実験がありますが、これは量子ビットを用いたもの。量子技術が相対論の理解に発展をもたらす？ ArXiv . 以下は工事中…今しばらくお待ちくださいm(-_-)m . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E5%AE%9F%E9%A8%93",
     
     "relUrl": "/quantph/2021#量子実験"
-  },"59": {
+  },"39": {
     "doc": "2021年振り返り",
     "title": "量子鍵配送・量子通信・量子暗号",
     "content": "### . {} ピックアップ理由: {} ArXiv . ### . {} ピックアップ理由: {} ArXiv . ### . {} ピックアップ理由: {} ArXiv . ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E9%8D%B5%E9%85%8D%E9%80%81%E9%87%8F%E5%AD%90%E9%80%9A%E4%BF%A1%E9%87%8F%E5%AD%90%E6%9A%97%E5%8F%B7",
     
     "relUrl": "/quantph/2021#量子鍵配送量子通信量子暗号"
-  },"60": {
+  },"40": {
     "doc": "2021年振り返り",
     "title": "ソフトウェア開発",
     "content": " ",
     "url": "/quantph/2021#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA",
     
     "relUrl": "/quantph/2021#ソフトウェア開発"
-  },"61": {
+  },"41": {
     "doc": "2021年振り返り",
     "title": "量子コンパイラ",
     "content": " ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9",
     
     "relUrl": "/quantph/2021#量子コンパイラ"
-  },"62": {
+  },"42": {
     "doc": "2021年振り返り",
     "title": "数学・計算量",
     "content": " ",
     "url": "/quantph/2021#%E6%95%B0%E5%AD%A6%E8%A8%88%E7%AE%97%E9%87%8F",
     
     "relUrl": "/quantph/2021#数学計算量"
-  },"63": {
+  },"43": {
     "doc": "2021年振り返り",
     "title": "量子ウォーク",
     "content": " ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF",
     
     "relUrl": "/quantph/2021#量子ウォーク"
-  },"64": {
+  },"44": {
     "doc": "2021年振り返り",
     "title": "量子センシング",
     "content": " ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0",
     
     "relUrl": "/quantph/2021#量子センシング"
-  },"65": {
+  },"45": {
     "doc": "2021年振り返り",
     "title": "量子教育・技術育成など",
     "content": " ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E6%95%99%E8%82%B2%E6%8A%80%E8%A1%93%E8%82%B2%E6%88%90%E3%81%AA%E3%81%A9",
     
     "relUrl": "/quantph/2021#量子教育技術育成など"
-  },"66": {
+  },"46": {
     "doc": "2021年振り返り",
     "title": "(量子)測定・制御",
     "content": " ",
     "url": "/quantph/2021#%E9%87%8F%E5%AD%90%E6%B8%AC%E5%AE%9A%E5%88%B6%E5%BE%A1",
     
     "relUrl": "/quantph/2021#量子測定制御"
-  },"67": {
+  },"47": {
     "doc": "2021年振り返り",
     "title": "分散・並列量子計算",
     "content": " ",
     "url": "/quantph/2021#%E5%88%86%E6%95%A3%E4%B8%A6%E5%88%97%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97",
     
     "relUrl": "/quantph/2021#分散並列量子計算"
-  },"68": {
+  },"48": {
     "doc": "2021年振り返り",
     "title": "統計情報",
     "content": "以下にarXiv/quant-phの登録論文推移を示します。 . ",
     "url": "/quantph/2021#%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1",
     
     "relUrl": "/quantph/2021#統計情報"
-  },"69": {
+  },"49": {
     "doc": "2021年振り返り",
     "title": "近年の登録推移",
     "content": ". 量子コンピュータ・量子アルゴリズム・量子通信技術などもquantphに含まれていることもあってか、指数的にその数が増えているように見えます。 . ",
     "url": "/quantph/2021#%E8%BF%91%E5%B9%B4%E3%81%AE%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
     
     "relUrl": "/quantph/2021#近年の登録推移"
-  },"70": {
+  },"50": {
     "doc": "2021年振り返り",
     "title": "今年の月別登録推移",
     "content": ". ",
     "url": "/quantph/2021#%E4%BB%8A%E5%B9%B4%E3%81%AE%E6%9C%88%E5%88%A5%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
     
     "relUrl": "/quantph/2021#今年の月別登録推移"
-  },"71": {
+  },"51": {
     "doc": "2021年振り返り",
     "title": "結言",
     "content": "2021年はプライベートの忙しさや体調不良などを除いて、ほぼ毎日arXiv/quant-phのabstractをチェックすることができました。もちろんここに挙げたものだけが全てではありません。私が見逃したものも含めて、もし今年発表された論文で面白いものがございましたら、お教えいただけると助かります。 . ",
     "url": "/quantph/2021#%E7%B5%90%E8%A8%80",
     
     "relUrl": "/quantph/2021#結言"
-  },"72": {
+  },"52": {
     "doc": "2021年振り返り",
     "title": "2021年振り返り",
     "content": ". | はじめに | 2021年arXiv総括 . | 量子アルゴリズム分野 . | Quantum algorithm for Feynman loop integrals | Demonstrating robust simulation of driven-dissipative problems on near-term quantum computers | Quantum Rounding | Pricing multi-asset derivatives by finite difference method on a quantum computer | Conditions for Advantageous Quantum Bitcoin Mining | Quantum Algorithm for Solving Quadratic Nonlinear System of Equations | Quantum Interior Point Methods for Semidefinite Optimization | Quantum Signal Processing (QSP) for simulating cold plasma waves | Deterministic Grover search with a restricted oracle | . | 量子古典ハイブリッド分野 . | Solving partial differential equations in quantum computers | Avoiding local minima in Variational Quantum Algorithms with Neural Networks | Quantum Monte Carlo simulation of many-body dynamics with mitigated error on noisy quantum computer | Variational Quantum Optimization with Multi-Basis Encodings | Advancing Hybrid Quantum-Classical Algorithms via Mean-Operators | An exponentially more efficient optimization algorithm for noisy quantum computers | NISQ-HHL: Portfolio Optimization for Near-Term Quantum Hardware | Variational Hamiltonian Ansatz for 1D Hubbard chains in a broad range of parameter values | Observing ground-state properties of the Fermi-Hubbard model using a scalable algorithm on a quantum computer | Markov Chain Monte-Carlo Enhanced Variational Quantum Algorithms | . | 量子機械学習分野 . | Towards understanding the power of quantum kernels in the NISQ era | A Quantum Convolutional Neutral Network on NISQ Devices | The dilemma of quantum neural networks | QFCNN: Quantum Fourier Convolutional Neural Network | QDataset: Quantum Datasets for Machine Learning | Quantum reservoir computation utilising scale-free networks | Exponentially Many Local Minima in Quantum Neural Networks | Subtleties in the trainability of quantum machine learning models | Importance of Kernel Bandwidth in Quantum Machine Learning | Quantum advantage in learning from experiments | . | 古典計算・古典アルゴリズム . | An explicit vector algorithm for high-girth MaxCut | Large scale multi-node simulations of ℤ2 gauge theory quantum circuits using Google Cloud Platform | Closing the “Quantum Supremacy” Gap: Achieving Real-Time Simulation of a Random Quantum Circuit Using a New Sunway Supercomputer | Discovering hydrodynamic equations of many-body quantum systems | Revisiting dequantization and quantum advantage in learning tasks | . | 量子ビット・ゲート・ハード開発 . | Resolving catastrophic error bursts from cosmic rays in large arrays of superconducting qubits | Strong quantum computational advantage using a superconducting quantum processor | A universal qudit quantum processor with trapped ions | Magnon Bose-Einstein condensate based qubit calculus | . | 量子誤り訂正・軽減 . | Dynamically Generated Logical Qubits | Measurement-Free Ultrafast Quantum Error Correction by Using Multi-Controlled Gates in Higher-Dimensional State Space | Noise-Resistant Quantum State Compression Readout | Realizing Repeated Quantum Error Correction in a Distance-Three Surface Code | . | 統計物理学 . | Realizing topologically ordered states on a quantum processor | Mean Field Approximation for solving QUBO problems | A Quantum Inspired Approach to Exploit Turbulence Structures | Observation of Time-Crystalline Eigenstate Order on a Quantum Processor | Storage properties of a quantum perceptron | Digitized-Counterdiabatic Quantum Optimization | . | 量子アニーリング . | Simulated quantum annealing as a simulator of non-equilibrium quantum dynamics | Diversity metric for evaluation of quantum annealing | Diversity measure for discrete optimization: Sampling rare solutions via algorithmic quantum annealing | Greedy parameter optimization for diabatic quantum annealing | . | 量子力学・場の理論など . | Negative radiation pressure on an ensemble of atoms in free space | Quantum Wheatstone Bridge | An Open Quantum Systems approach to proton tunnelling in DNA | Quantum vacuum Sagnac effect | . | PoC . | qRobot: A Quantum computing approach in mobile robot order picking and batching problem solver optimization | Experimental Quantum Embedding for Machine Learning | A Quantum Annealing Approach to Reduce Covid-19 Spread on College Campuses | . | 量子実験 . | Proposal for measuring Newtonian constant of gravitation at an exceptional point in an optomechanical system | Experimental Realization of Rabi-Hubbard Model with Trapped Ions | On-chip black hole: Hawking radiation and curved spacetime in a superconducting quantum circuit with tunable couplers | . | 量子鍵配送・量子通信・量子暗号 | ソフトウェア開発 | 量子コンパイラ | 数学・計算量 | 量子ウォーク | 量子センシング | 量子教育・技術育成など | (量子)測定・制御 | 分散・並列量子計算 | . | 統計情報 . | 近年の登録推移 | 今年の月別登録推移 | . | 結言 | . ",
     "url": "/quantph/2021",
     
     "relUrl": "/quantph/2021"
+  },"53": {
+    "doc": "2021年振り返り",
+    "title": "はじめに",
+    "content": "こちらは Qiitaさんの物理学アドベントカレンダー Advent Calendar 2021 21日目の「今年のarXiv/astrophチェックで面白かったものをご紹介」の記事です。 昨年からastro-phのチェックを(可能な限り)毎日行い始めました。そしてそれを記録に残すためにTwitterでの情報発信並びにGitHubのリポジトリのIssuesに登録する作業を行ってきました。今回は2021年にGitHubにissue登録されているものの中から、個人的に特に面白いと思ったものを抽出します。さらに論文内容の傾向から、2021年の研究ホットトピックスだったであろうと思われるものをご説明いたします。 . 注意: 筆者が宇宙物理系出身の中でも磁気流体シミュレーションによる研究テーマを扱っていたため、目を通した論文がそのテーマに偏っています。以下に記載されている情報が全てではないことをご留意ください。 . ",
+    "url": "/astroph/2021#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB",
+    
+    "relUrl": "/astroph/2021#はじめに"
+  },"54": {
+    "doc": "2021年振り返り",
+    "title": "2021年の研究動向・ホットトピックス",
+    "content": " ",
+    "url": "/astroph/2021#2021%E5%B9%B4%E3%81%AE%E7%A0%94%E7%A9%B6%E5%8B%95%E5%90%91%E3%83%9B%E3%83%83%E3%83%88%E3%83%88%E3%83%94%E3%83%83%E3%82%AF%E3%82%B9",
+    
+    "relUrl": "/astroph/2021#2021年の研究動向ホットトピックス"
+  },"55": {
+    "doc": "2021年振り返り",
+    "title": "次世代望遠鏡での観測を見据えた論文が続々",
+    "content": "2021年末にはハッブル宇宙望遠鏡の後継機と名高いJWST(James Webb Space Telescope)が打ち上げされます。また重力波検出から一気に盛り上がりを見せ、将来的には宇宙空間でのレーザー干渉計から重力波を検出する技術としてLISA(Laser Interferometer Space Antenna)や天琴(TianQin)などが計画されています。電波ではSKAなどに期待が寄せられています。このような観測技術の発達に伴う新しい望遠鏡での観測を見据えて、「この望遠鏡のこの感度ならこんな現象が検出できるのでは」という論文がたくさん出ているように見受けられました。 . ",
+    "url": "/astroph/2021#%E6%AC%A1%E4%B8%96%E4%BB%A3%E6%9C%9B%E9%81%A0%E9%8F%A1%E3%81%A7%E3%81%AE%E8%A6%B3%E6%B8%AC%E3%82%92%E8%A6%8B%E6%8D%AE%E3%81%88%E3%81%9F%E8%AB%96%E6%96%87%E3%81%8C%E7%B6%9A%E3%80%85",
+    
+    "relUrl": "/astroph/2021#次世代望遠鏡での観測を見据えた論文が続々"
+  },"56": {
+    "doc": "2021年振り返り",
+    "title": "天の川銀河の進化の歴史解明を目指す研究競争が加熱",
+    "content": "Gaiaなどの膨大なデータが出揃ったこともあり、天の川銀河円盤内部やハローにいる球状星団や恒星ストリームの研究が盛んに行われている印象を受けました。天の川銀河がどのように出来たのか、どのような進化を経て現在の姿に至っているのか、それが解明される時も近いかもしれません。 . ",
+    "url": "/astroph/2021#%E5%A4%A9%E3%81%AE%E5%B7%9D%E9%8A%80%E6%B2%B3%E3%81%AE%E9%80%B2%E5%8C%96%E3%81%AE%E6%AD%B4%E5%8F%B2%E8%A7%A3%E6%98%8E%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%E7%A0%94%E7%A9%B6%E7%AB%B6%E4%BA%89%E3%81%8C%E5%8A%A0%E7%86%B1",
+    
+    "relUrl": "/astroph/2021#天の川銀河の進化の歴史解明を目指す研究競争が加熱"
+  },"57": {
+    "doc": "2021年振り返り",
+    "title": "AGN円盤中での恒星進化や連星進化研究のプチブームが来ている？",
+    "content": "AGN円盤はとても大きく、その中には多数の恒星や連星が埋もれていると考えられます。この中で起こる恒星への質量降着などが、恒星・連星進化に影響を与え、その最後には特別なBH形成などをもたらすのではないかと期待されています。またAGN円盤内でγ線バーストや連星中性子星合体が起こった場合、その見え方も普通のものと異なるなどが予想されています。今後の観測精度の向上から、このような天体の発見が期待されています。 . ",
+    "url": "/astroph/2021#agn%E5%86%86%E7%9B%A4%E4%B8%AD%E3%81%A7%E3%81%AE%E6%81%92%E6%98%9F%E9%80%B2%E5%8C%96%E3%82%84%E9%80%A3%E6%98%9F%E9%80%B2%E5%8C%96%E7%A0%94%E7%A9%B6%E3%81%AE%E3%83%97%E3%83%81%E3%83%96%E3%83%BC%E3%83%A0%E3%81%8C%E6%9D%A5%E3%81%A6%E3%81%84%E3%82%8B",
+    
+    "relUrl": "/astroph/2021#agn円盤中での恒星進化や連星進化研究のプチブームが来ている"
+  },"58": {
+    "doc": "2021年振り返り",
+    "title": "共通外層進化(Common Envelope Evolution)の波が到来？",
+    "content": "連星系において、主系列後に恒星の外層が膨張することでもう一方のコンパクト天体が飲み込まれる共通外層進化の理論が再び注目を集めいています。共通外層内部にいるコンパクト天体からジェットが噴き出したり、これまで説明できなかった新しいタイプの超新星を生み出すのではないかという期待によるものと推察されます。 . ",
+    "url": "/astroph/2021#%E5%85%B1%E9%80%9A%E5%A4%96%E5%B1%A4%E9%80%B2%E5%8C%96common-envelope-evolution%E3%81%AE%E6%B3%A2%E3%81%8C%E5%88%B0%E6%9D%A5",
+    
+    "relUrl": "/astroph/2021#共通外層進化common-envelope-evolutionの波が到来"
+  },"59": {
+    "doc": "2021年振り返り",
+    "title": "ブラックホールシャドウが天文研究人気を牽引？",
+    "content": "人類がブラックホールシャドウを直接撮像したという研究報告から早2年以上が経過しました。しかしそれでもまだ説明できていない物理過程が多く存在し、それを解明しようと様々な研究が世界中で巻き起こっています。また次世代のVLA, ngVLAでの観測提案も多くなされている現状です。 . ",
+    "url": "/astroph/2021#%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9B%E3%83%BC%E3%83%AB%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%81%8C%E5%A4%A9%E6%96%87%E7%A0%94%E7%A9%B6%E4%BA%BA%E6%B0%97%E3%82%92%E7%89%BD%E5%BC%95",
+    
+    "relUrl": "/astroph/2021#ブラックホールシャドウが天文研究人気を牽引"
+  },"60": {
+    "doc": "2021年振り返り",
+    "title": "高エネルギー業界は新発見が目白押し！",
+    "content": "メキシコに建設されたHAWCや中国に建設されたLHAASOなどのγ線・宇宙線観測施設が猛烈な成果を上げ始めています。また南極に建設されたニュートリノ観測所IceCubeによるニュートリノ観測データからも続々と新発見が相次いでおり、これを発展させたGen2構想も始まっています。高エネルギー観測業界の今後の発展と新発見に期待です。 . ",
+    "url": "/astroph/2021#%E9%AB%98%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E6%A5%AD%E7%95%8C%E3%81%AF%E6%96%B0%E7%99%BA%E8%A6%8B%E3%81%8C%E7%9B%AE%E7%99%BD%E6%8A%BC%E3%81%97",
+    
+    "relUrl": "/astroph/2021#高エネルギー業界は新発見が目白押し"
+  },"61": {
+    "doc": "2021年振り返り",
+    "title": "2021年arXiv総括",
+    "content": "特に面白いと感じたもののみを抽出したつもりですが、たくさんあります。 . ",
+    "url": "/astroph/2021#2021%E5%B9%B4arxiv%E7%B7%8F%E6%8B%AC",
+    
+    "relUrl": "/astroph/2021#2021年arxiv総括"
+  },"62": {
+    "doc": "2021年振り返り",
+    "title": "SR (太陽・恒星分野)",
+    "content": "SRタグが付いたものは全部で189本でした。 . Turbulent generation of magnetic switchbacks in the Alfvénic solar wind . PSPで示された磁気Switchbacksが粒状斑駆動のAlfvén波と太陽風乱流から発生するかを調査。数値計算により同じ特徴を持つ磁気Swithcbacksの再現に成功。解析からこのSwitchbackは磁場方向に不連続な大振幅(非線形)Alfvén波と判明。 ピックアップ理由: PSP観測を再現するシミュレーションを行ったもの。磁気流体計算に対する深い洞察から観測を説明するという素晴らしい論文とお見受けしました。 ArXiv . Dynamical coupling of a mean-field dynamo and its wind: Feedback loop over a stellar activity cycle . 恒星内部で起こるαΩダイナモ磁場と恒星風の関係を2.5DMHD計算。活動周期の相関関係から、コロナへのダイナモ活動の影響を追跡できることを示した。 ピックアップ理由: 恒星内部で起こる磁気活動がその恒星風に影響を与えることを示した論文。当然と言えばそうかもしれませんが、それを定量的に評価したことからピックアップしました。将来的には遠くの恒星のダイナモの様子を診断できるようになるかも？ ArXiv . The origin and evolution of magnetic white dwarfs in close binary stars . 強磁場白色矮星(WD)の進化モデルの考案。降着を起こしているWDの自転進化とコア結晶化と2つの磁場相互作用を含む連星進化モデルを計算したところ、結晶化と回転が駆動するdynamoが激変WDの強磁場を発生させると発見。Nature Astronomy. ピックアップ理由: 白色矮星の中でも強い磁場を持つものの進化の謎に迫った研究。磁場と聞くと面白そうに感じてしまうのでピックアップしました。 ArXiv . SPLUSJ210428.01-004934.2: An Ultra Metal-Poor Star Identified from Narrowband Photometry . 超金属欠乏(Ultra Metal-Poor; UMP)星を発見。[Fe/H]=-4.03で、これは金属を持たない30M_sunの恒星によって汚染されたガス雲から形成された第二世代星の可能性。ApJL. ピックアップ理由: 金属のない恒星、すなわち初代星の研究とも繋がる大発見であることから選出しました。 ArXiv . The role of non-axisymmetry of magnetic flux rope in constraining solar eruptions . 光球面で観測された磁場を用いて2015年1月30日に発生した閉じ込め噴火をデータ駆動型MHD計算。コロナ質量放出を伴わない太陽フレアの観測を再現。これは動径方向磁場や磁束ロープの非軸対称性に起因するものと判明。Nature. ピックアップ理由: CMEを伴わない太陽フレアの存在を個人的に初めて知ったことと、今後のフレアに伴う質量放出予測に大きな貢献をすることが予想されるため選出しました。 ArXiv . Zooming into the Collimation Zone in a Massive Protostellar Jet . 大質量原始星Cep A HW2からの電波jetを高分解能観測。このjetの形態はよく研究されている低質量原始星からのものとは大きく異なり、原始星/円盤系から吹き出す広角度の風と20-30au離れた場所に絞られた部分が存在した。ApJL. ピックアップ理由: 太陽・恒星分野の中でも原始星、そしてそれに付随する原始惑星系の理解に繋がるインパクトがあることから選出しました。 ArXiv . VVV-WIT-08: the giant star that blinked . VVV-WIT-08という巨星フェーズの恒星で2012年4月にfluxが97%も減少する事象を発見。この天体を17年間観測しているがこのような事象はこの1回きり。不透明度の高い楕円体による光の遮りによるモデル化を行ったが、全ては説明できなかった。 ピックアップ理由: 前代未聞の物理現象を観測したかもしれない、そのインパクトからピックアップしました。 ArXiv . M-dwarf’s Chromosphere, Corona and Wind Connection via the Nonlinear Alfvén Wave . 1DMHD計算から、恒星の光球-&gt;彩層-&gt;コロナ-&gt;惑星間空間へのAlfvén波の非線形伝搬を直接解明。特にAlfvén波の非線形モード結合により生成されるslow shockが彩層圏(恒星のスピキュール)のダイナミクスと恒星風加速に重要であると判明。 ピックアップ理由: MHD計算というと2Dや3Dシミュレーションばかりに目が行きますが、こちらは1D計算。次元が少ないからこそ、そこで起こる物理のエッセンスを抽出するような、深い洞察の論文であることから選出しました。 ArXiv . Spectroscopic evidence for a large spot on the dimming Betelgeuse . 2019年10月~2020年3月にかけて減光したベテルギウスを観測。ダストの遮蔽などが考えられたが、この観測では2020年1月31日にはベテルギウス有効温度が170K減少し、星表面に巨大なダークスポットが出現していたことが減光の原因と判明。Nature ピックアップ理由: 突然減光を始めたことで「そろそろ爆発するのでは？」と取り上げられたベテルギウス。その正体は恒星表面のダークスポットでした。この問題に決着をつける観測という意味でのインパクトの大きさから選出しました。 ArXiv . Asteroseismic Fingerprints of Stellar Mergers . 赤色巨星の星震データから、その恒星が合体を経ているかどうかを測定できる可能性を研究。合体前の主星が主系列にある場合や総質量が2M_sunの合体では判別が困難と判明。赤色巨星のカタログから、合体を経験した候補を15個見つけた。 ピックアップ理由: 恒星内部を診断するために発展してきた星震学、それを利用して恒星の合体の歴史まで紐解こうとする壮大さから選出しました。 ArXiv . Solar differential rotation reproduced with high-resolution simulation . 太陽の赤道が速く極が遅い差動回転を高解像度計算で再現。この差動回転の維持には対流に回転の影響を強く与える必要があった。小規模dynamoによる強い磁場が熱対流に大きな影響を及ぼすと判明。黒点活動11年周期の謎が解明されるときも近い？ ピックアップ理由: 富岳を用いた高解像度計算で長年の太陽の未解決問題を見事に解決した研究。その多大なインパクトから選出しました。 ArXiv . Probable detection of an eruptive filament from a superflare on a solar-type star . 若い太陽型恒星 EK Draconisの可視光スペクトルから、スーパーフレアを伴う恒星フィラメント噴出を検出。スペクトルの時間変化は太陽フィラメント噴出と一致。恒星CMEが発生したと見られ、その質量は太陽の最大のCMEの10倍と概算。ApJL ピックアップ理由: 恒星でスーパーフレアが起こることは存じておりましたが、そこから恒星フィラメントが噴き出す様子を観測で捉えることができるとは思いませんでした。その驚き、またスーパーフレアの物理過程の理解に大きなインパクトを与えるだろうことから選出しました。 ArXiv . ",
+    "url": "/astroph/2021#sr-%E5%A4%AA%E9%99%BD%E6%81%92%E6%98%9F%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#sr-太陽恒星分野"
+  },"63": {
+    "doc": "2021年振り返り",
+    "title": "IM (装置開発・シミュレーション技法等分野)",
+    "content": "IMタグが付いたものは全部で76本でした。 . Science and survival: insights from Astronomy . COVID-19感染拡大期に、天文学が社会にできることを概説。 ピックアップ理由: このパンデミック状況を鑑みて選出しました。 ArXiv . Touching the Stars: Using High-Resolution 3D Printing to Visualize Stellar Nurseries . 分子雲構造を3Dプリントを利用して可視化。Bitmapベースの3Dプリンティングにより、分子雲内の微妙な密度勾配分布を再現することに成功。複雑な天文データセットを直感的に理解したり、教育・広報活動に使えそう？ApJL. ピックアップ理由: 3Dプリンタでレッツ・アストロフィジックス！普通に商品として売ったら良さそう、というかほしい。 ArXiv . Writing Scientific Papers in Astronomy . 天文学における科学的な論文の書き方指南。英語を母国語としない方々が特に悩む文法やスペリングの問題についても説明。修士と博士学生に向けたものだが、さらにハイレベルな研究者やライティング指導者にも役立つものかもしれない。 ピックアップ理由: 私も英語ライティングは苦手なので… ArXiv . TULIPS: a Tool for Understanding the Lives, Interiors, and Physics of Stars . 恒星の構造・進化のわかりやすい図やアニメーションを生成するPythonパッケージ”TULIPS”を開発。「この分野で用いられている図は静的で複雑なものが多く、時として直感的でなかったり直感に反する場合がある。だからこれを解消したかった」 ピックアップ理由: このような地道なツール開発が後世の役に立つであろうことを鑑みて選出しました。 ArXiv . Multi-Resolution HEALPix Maps for Multi-Wavelength and Multi-Messenger Astronomy . 高エネルギー・重力波天文学分野で標準的に用いられるHEALPixで多分解能マップの作成・処理・分析が可能なPythonライブラリ”mhealpy”を開発。 ピックアップ理由: 重力波だけでなく宇宙論のCMB全天観測などにも役立つかもしれない可能性から選出しました。 ArXiv . ",
+    "url": "/astroph/2021#im-%E8%A3%85%E7%BD%AE%E9%96%8B%E7%99%BA%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E6%8A%80%E6%B3%95%E7%AD%89%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#im-装置開発シミュレーション技法等分野"
+  },"64": {
+    "doc": "2021年振り返り",
+    "title": "EP (太陽系・系外惑星系分野)",
+    "content": "EPタグが付いたものは全部で95本でした。 . The Habitable-zone Planet Finder Detects a Terrestrial-mass Planet Candidate Closely Orbiting Gliese 1151: The Likely Source of Coherent Low-frequency Radio Emission from an Inactive Star . フレア活動などのない静かなM4.5矮星からcoherentな低周波電波放射を観測。これは1-5日の軌道周期で回る地球サイズの惑星との恒星-惑星相互作用による理論予想と一致。そして近赤外観測から同様の惑星が検出。電波が系外惑星探査に使えるかも。ApJL. ピックアップ理由: 系外惑星観測に電波という新しい領域が追加される可能性から、ピックアップしました。 ArXiv . Jupiter’s “Cold” Formation in the Protosolar Disk Shadow: An Explanation for the Planet’s Uniformly Enriched Atmosphere . H2O snow lineに降り積もったダストが影を作ることで木星軌道周辺が冷やされ窒素や希ガスが氷を形成する理論。この氷が集まって木星大気に溶け出せば、原始木星が今の場所で形成しても木星大気の元素組成を説明できると判明。A&amp;A Letters. ピックアップ理由: 原始木星の形成理論に大きな一石を投じる理論であることから選定しました。 ArXiv . Past, Present and Future Stars that can see Earth as a Transiting Exoplanet . 地球から326光年より近い距離にある恒星1715個が、人類文明開始からこれまでの間に地球が太陽をトランジットしているのを観測するのに適した場所と判明。その中には7つの系外惑星の主星が含まれ、75個の恒星には人間が作った電波が届いている ピックアップ理由: もしも地球外知的生命体が地球の近くにいた場合、それらが地球を観測できるか、そして地球上に住む私たちの活動を検出できるのか、というSF的な研究から選出しました。 ArXiv . Reimagining the water snowline . 原始惑星系円盤AS205で観測された水輝線と物理化学モデルを比較したところ、通常の円盤内部の温度構造に矛盾があると判明。また円盤表面での水のsnowlineと円盤内部でのsnowlineが、垂直方向の混合により同じ位置に来ることがわかった。ApJL. ピックアップ理由: 原始惑星系円盤の重要な構造であるスノーラインの理論の発展に大きな貢献をすることから、ピックアップしました。 ArXiv . Polluted White Dwarfs Reveal Exotic Mantle Rock Types on Exoplanets in our Solar Neighborhood . かつて惑星を持っていたことで、それにより重元素汚染を受けた白色矮星の汚染具合から、惑星が持っていた岩石の種類を推定。大陸地殻やその他の地殻の証拠は発見できなかったものの、ケイ酸塩マントルは識別可能と判明。Nature ピックアップ理由: 不自然に重元素を持つ白色矮星が惑星を飲み込んだその痕跡から、どのような惑星が存在していたのかを探る研究。そんなことができるのかと素直に驚きです。 ArXiv . Mercury as the relic of Earth and Venus’ outward migration . 原始地球と原始金星の核が太陽近傍で形成された後、現在の位置に移動してきたことで水星が形成できる環境領域を形成するシナリオを提案。4つの地球型惑星の質量、地球と火星の同位体の違い、孤立した水星軌道などを簡単に説明できた。ApJL. ピックアップ理由: シンプルな理論から地球・金星形成についてのたくさんのことを説明できる理論構築、まさにオッカムの剃刀。 ArXiv . Painting Asteroids for Planetary Defense . 小惑星をアルカリ金属の薄膜(0.1µm)でコーティングすることでそのアルベド(反射率)を変化させ、太陽からの輻射力の影響を変えて軌道を曲げることで、地球への衝突を避ける手法。小惑星の半面だけでもトルクの変化が生まれて軌道をズラせる。 ピックアップ理由: 地球に衝突する小惑星などを破壊することで衝突を避けるアイデアなどが考案されている中、これは太陽からの輻射の力を借り流ことでそれを避けるというもの。そのひらめきに脱帽です。 ArXiv . ",
+    "url": "/astroph/2021#ep-%E5%A4%AA%E9%99%BD%E7%B3%BB%E7%B3%BB%E5%A4%96%E6%83%91%E6%98%9F%E7%B3%BB%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#ep-太陽系系外惑星系分野"
+  },"65": {
+    "doc": "2021年振り返り",
+    "title": "CO (宇宙論分野)",
+    "content": "COタグが付いたものは全部で102本でした。 . Towards Cosmological Simulations of Dark Matter on Quantum Computers . ダークマターを考慮に入れた宇宙論的シミュレーションを量子コンピュータ上で行うために、Schrodinger-Poisson方程式を量子古典ハイブリッド変分アルゴリズムに基づいて解くアプローチの概説。 ピックアップ理由: 宇宙論と量子技術の融合。量子コンピュータは発展途上の技術なので今後の進展に期待です。 ArXiv . Discovery of Magnetic Fields Along Stacked Cosmic Filaments as Revealed by Radio and X-Ray Emission . 複数の全天電波MapとX線Mapを用いて銀河団間の3Mpc以上の大規模構造FilamentからのSynchrotron放射と熱的放射を初検出。Synchrotronスペクトル指数はα~-1.0, 磁場強度は30nG≤B≤60nGと推定。 ピックアップ理由: 宇宙大規模構造の磁場を初検出したという偉業。これにより宇宙の種磁場の生成やその進化に制限がかけられる大きな研究であることから、ピックアップしました。 ArXiv . HyPhy: Deep Generative Conditional Posterior Mapping of Hydrodynamical Physics . 宇宙論的なN体計算から得られた暗黒物質(DM)場を条件として、流体場を生成する完全畳み込み型変分auto-encoder(VAE)を構築。1つの流体計算でモデルを学習した後、DMのみの新しい計算に対応する流体分布を確率的にマッピングする。 ピックアップ理由: ダークマターのみの宇宙論的計算さえしておけば、その流体計算は後からVAEで作れるというもの。計算コストの削減等に繋がる重要な結果としてピックアップしました。 ArXiv . Void replenishment: how voids accrete matter over cosmic history . ヴォイドを研究するための宇宙論的計算結果を詳細に解析。ヴォイドは予想されたよりも多くの質量流入を経験していることが判明。z~0のヴォイド質量の10%は密度が高い領域から流入したものであり、それらの半分は10Gyr程度ヴォイドにとどまる。 ピックアップ理由: 宇宙ヴォイド空間の環境、およびそこで起こる銀河形成などに大きく寄与する研究であることからピックアップしました。 ArXiv . A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team . 42個のIa型超新星の母銀河にあるセファイド星を用いたハッブル定数H0の詳細な推定。不確かさを1km/s/Mpcまで減少させることに成功し、その値を73.04と推定。Planckの推定値から5σの差がある。2011年ノーベル物理学賞のRiessさんが筆頭。 ピックアップ理由: ハッブル定数の推定は多くの研究でされていますが、これは段違いの精度で求めた論文。CMBから求めたものとの違いは何によるものなのか、その物理解明研究にも拍車をかけるような重要な結果を示したことからピックアップしました。 ArXiv . ",
+    "url": "/astroph/2021#co-%E5%AE%87%E5%AE%99%E8%AB%96%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#co-宇宙論分野"
+  },"66": {
+    "doc": "2021年振り返り",
+    "title": "GA (星間空間・星形成・銀河・銀河団分野)",
+    "content": "GAタグが付いたものは全部で264本でした。 . The Galactic center chimneys: The base of the multiphase outflow of the Milky Way . X線/電波/赤外データから,天の川銀河中心方向に数百pcにおよぶチムニーを発見.銀河中心からのoutflowによるものと考えられる.観測から得られた特徴から,銀河中心からの準連続的・断続的な活動とFermiバブルとを繋ぐチャンネルがこのチムニーと結論. ピックアップ理由: Fermiバブルの存在は10年ほど前から分かっていましたが、そのジェットの根本部分については定かでありませんでした。今後、天の川銀河におけるAGN活動を解き明かす重要な観測になるだろうことから選び出しました。 ArXiv . The first evidence for three-dimensional spin-velocity alignment in pulsars . パルサーPSR~J0538+2817とそれに付随する超新星残骸S147においてスピンと超新星爆発時に受けたキックによる運動速度に3次元的な関連の証拠を発見。Nature Astronomy. ピックアップ理由: 超新星爆発の物理機構解明に迫る重要な発見であることから選びました。 ArXiv . Tiny-scale Structure Discovered toward PSR B1557−50 . PSR B1557-50というパルサーを0.36年という短い間隔で観測を行ったところ吸収成分に変化が見られたことから、そのパルサーと我々の間にある星間空間の空間スケールを17auと算出。ApJL. ピックアップ理由: 私たちが住む太陽系の周りに存在する星間空間の物理状態の解明に貢献する研究として選定しました。 ArXiv . Diffuse Synchrotron Emission Associated with the Starburst in the Circumnuclear Disk of NGC 1275 . NGC1275の中心部で発見された分子ガス円盤に、空間的に一致するような拡散シンクロトロン放射成分を発見。この放射は超新星爆発によって供給された相対論的電子によるものの可能性が高く、銀河中心核円盤の星形成活動の証拠。ApJL. ピックアップ理由: 中心核に付随する中心核円盤、その中で起こる星形成活動の証拠を捉えた貴重な研究であることから選出しました。 ArXiv . Anisotropic satellite galaxy quenching modulated by supermassive black hole activity . 29631個のDM haloの中にある衛星銀河124163個について解析。星形成活動が止まっている衛星銀河は、中心銀河のminor axis方向には比較的少ないことが判明。Minor axis方向に噴出したAGN jetが銀河周辺物質を排除しram圧を下げるためと解釈。 ピックアップ理由: AGN活動が衛星銀河の星形成活動にも影響を与えることを示した、画期的な研究であることからピックアップしました。 ArXiv . Jets from MRC 0600-399 bent by magnetic fields in the cluster Abell 3376 . 合体銀河団Abell 3376を高解像度電波観測。Jetの方向が接触不連続面付近で90度向きを変えるdouble-scythe(2重鎌)構造を検出するとともに、これを数値計算で研究。不連続面に沿った揃った磁場がjetの方向変化に重要であると判明。Nature. ピックアップ理由: 銀河団およびその中にあるAGN jetのダイナミクスに磁場が大きく影響を及ぼすことを示した観測・数値計算論文。MHDは私を魅了して止みません。 ArXiv . A New Challenge for Dark Matter Models . 現在の暗黒物質(DM)代替案である自己相互作用DM・自己消滅DM・超軽量DMなどでは説明できない、またバリオン物理でも解決できないような高密度を天の川の衛星銀河で発見。”Too-dense-to-be-satellite”問題と名付けている。Phys. Rev. Letters. ピックアップ理由: Too-big-to-fail, core-cusp問題に続く未解決問題を投げかける重要性からピックアップしました。 ArXiv . An ancient massive quiescent galaxy found in a gas-rich z ~ 3 group . ALMAとHSTの観測からz=2.91の銀河群中に星形成が止まった大質量銀河を発見。恒星質量の大半がz&gt;6-8で急速に形成されたと見られ、3&lt;z&lt;6では受動的な進化をしてきた。冷たいガスが豊富にあることからガス降着停止は星形成活動停止には関係ない？ ピックアップ理由: ガスがたくさんあっても星形成が停止しているという面白い銀河。今後の銀河の星形成活動に影響を与える研究として選出しました。 ArXiv . A relic from a past merger event in the Large Magellanic Cloud . LMCが過去に経験した、星形成率が低く矮小楕円銀河と同じような恒星質量を持つ銀河との合体現象の可能性を発見。LMCにおいても、より小さい構造が降着・合体することで成長していく階層構造が判明？Nature Astronomy. ピックアップ理由: LMCも小さいものが合体してだんだん大きな構造に進化していく階層構造が確かめられた重要性から選出しました。 ArXiv . Rapid growth of seed black holes during early bulge formation . 恒星バルジ形成済みの原始銀河中心部での大質量種BHの初期成長をRHD計算。計算モデルではBH質量が2Myrで約10倍に成長すると判明。バルジ内ガスの大半が降着し切るまで急成長が続く。バルジに対して重たすぎるBHがz~15でJWSTで検出されるかも？ ピックアップ理由: JWSTで観測されるかもしれない高赤方偏移でのSMBHと、バルジ進化に対する重要な理論予想を示したことから選びました。 ArXiv . Active Galactic Nuclei Abundance in Cosmic Voids . z=0.2-0.7の範囲にある比較的明るいAGNと明るいAGNがヴォイドにいる割合を調査。z&gt;0.42ではヴォイドの内側は外側よりも割合が高くなっており、環境依存性が明らかに。低密度領域では1対1で効率よく銀河相互作用が起こっていることを示唆。ApJL ピックアップ理由: AGNの環境依存性を示した重要性からピックアップしました。 ArXiv . Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field . M87のジェットを電波で前例のない解像度で観測。根本から300pc-1kpc部分でジェットの2重螺旋構造があり、偏光度勾配がジェットの端で最大などの特徴を捉えた。Kelvin-Helmholtz不安定性により磁場の螺旋構造が大きなスケールまで維持？ApJL. ピックアップ理由: ブラックホールシャドウが撮影されたことで注目を集めたM87、そのジェットを詳細に観測したもの。今後のジェットの伝搬ダイナミクスに大きな制限をかけるだろう影響からピックアップしました。 ArXiv . ",
+    "url": "/astroph/2021#ga-%E6%98%9F%E9%96%93%E7%A9%BA%E9%96%93%E6%98%9F%E5%BD%A2%E6%88%90%E9%8A%80%E6%B2%B3%E9%8A%80%E6%B2%B3%E5%9B%A3%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#ga-星間空間星形成銀河銀河団分野"
+  },"67": {
+    "doc": "2021年振り返り",
+    "title": "HE (高エネルギー宇宙物理分野)",
+    "content": "HEタグが付いたものは全部で414本でした。 . The Imprint of Large Scale Structure on the Ultra-High-Energy Cosmic Ray Sky . 超高エネルギー宇宙線(UHECRs)の観測から、大・中角度スケールの異方性があることが判明。これはUHECRsの発生源が近傍宇宙の大規模構造の物質分布に沿っているとの仮定のもと、GZK horizonや銀河磁場を考慮すると説明することが可能。ApJL. ピックアップ理由: 未だ謎の部分が多いUHECRsに関する研究。この後のUHECRsの観測などに大きな影響を及ぼすと考え、ピックアップしました。 ArXiv . Evidence that Ultra-High-Energy Gamma Rays are a Universal Feature Near Powerful Pulsars . HAWCによるγ線観測データから、10個の活発なパルサーのある場所と56TeV以上の超高エネルギー(UHE)γ線の相関を探索。その結果、UHE γ線放射はパルサーの一般的な特徴であることが判明。ApJL. ピックアップ理由: HAWCにより徐々に明らかになりつつある超高エネルギー現象、それを象徴する論文として選出しました。 ArXiv . Mildly relativistic magnetized shocks in electron-ion plasmas – II. Particle acceleration and heating . 電子イオンプラズマ中の準相対論的磁気衝撃波における粒子加速/加熱を2DPIC超高解像度数値計算。Shock rippling(衝撃波の波打ち)が電子のエネルギー獲得に重要であることを初めて示した。 ピックアップ理由: 近年の技術の発展からPIC計算の高解像度化が進み、このようなすごいことまで明らかになるようになったのだなと感心したことから。 ArXiv . High Energy Neutrinos from Choked Gamma-Ray Bursts in AGN Accretion Disks . AGN円盤内で起こったGRB jetを解析したところ、円盤物質に埋もれて窒息するjetとなることが判明。Reverse shockにより宇宙線が効率よく加速、高エネルギーニュートリノを放出する。100Mpcの距離で10^53ergのchocked-long-GRBならIceCubeで観測可能。 ピックアップ理由: AGN円盤内で起こるエキセントリックなGRBジェットの進化と、さらにIceCubeでの観測可能性を示したその重要性からピックアップしました。 ArXiv . Observational properties of a general relativistic instability supernova from a primordial supermassive star . 55500MsunのPop-III星が起こす一般相対論的不安定超新星(GRSNe)から期待される観測特徴を研究。RHD計算を行ったところ光球温度が5000K程度、550日間もの間1.5x10^44erg/sで輝くplateau phaseがあることが判明。High-zだと数十年に渡って輝く? ピックアップ理由: 超大質量Pop IIIの一般相対論的不安定超新星の光度曲線を計算したもの。もし存在するなら数十年にわたって明るく輝くという面白さからピックアップしました。 ArXiv . HAWC observations of the acceleration of very-high-energy cosmic rays in the Cygnus Cocoon . これまではSNRや銀河中心が超高エネルギー宇宙線加速領域と思われてきたが、HAWCの観測でCygnus Cocoonと呼ばれる領域から1-100TeVのγ線を検出。これはCygnus OB2大質量星形成領域で生まれた10-1000TeVの新鮮な宇宙線によって生成されたものと考えられる。 ピックアップ理由: 1-100TeVという超高エネルギーγ線を検出したもの。大質量星形成でもこのような超高エネルギーγ線を生み出す宇宙線の生成がされていることを示した重要な論文として選出しました。 ArXiv . First Detection of sub-PeV Diffuse Gamma Rays from the Galactic Disk: Evidence for Ubiquitous Galactic Cosmic Rays beyond PeV Energies . 天の川銀河円盤中から、100TeVから1PeVまでのdiffuse γ線を初検出。特に398TeV以上のものは既知のTeV γ線源とは別に観測されており、これは相対論的陽子が星間物質と相互作用することにより生まれたπ0粒子崩壊からのγ線シナリオに一致。 ピックアップ理由: 1PeVにまで到達するような高エネルギーの拡散γ線成分を発見した観測。理論との一致も示されており、星間空間中の宇宙線伝搬過程の解明に大きな一歩をもたらす研究であることから選びました。 ArXiv . Extended Very-High-Energy Gamma-Ray Emission Surrounding PSR J0622 + 3749 Observed by LHAASO-KM2A . LHAASOでPSR PSR J0622+3749というパルサー付近から広がった超高エネルギー(VHE)γ線源を発見。対応天体が見つかっていないことから、これはパルサーから脱出したVHE電子によるものという”パルサーハロー”シナリオに一致。Phys. Rev. Letters. ピックアップ理由: 高エネルギー観測の躍進を象徴するような研究であることから選出しました。 ArXiv . Magnetic field generation by charge exchange in a supernova remnant in the early universe . 初期宇宙において部分電離プラズマ中を伝搬する超新星残骸衝撃波による磁場増幅機構。上流では中性水素だが、それが衝撃波下流でイオン化されると冷たい陽子ビームとなり、電子のreturn currentを生成。種磁場がなくても磁場の生成ができる。 ピックアップ理由: 宇宙初期のビッグバンやインフレーション時に特殊な種磁場を仮定しなくても、それを天体物理的な物理機構から生成することができる理論。そのリーズナブルさに感銘を受け、ピックアップしました。 ArXiv . Observation of gravitational waves from two neutron star-black hole coalescences . GW200105とGW200115という、2つの中性子星(NS)-ブラックホール(BH)合体からの重力波を検出。前者は8.9, 1.9M_sun、後者は5.7, 1.5M_sunの合体。ApJL. ピックアップ理由: 連星ブラックホール、連星中性子星に続き、ブラックホールと中性子星からなる連星からの重力波を検出。重力波天文学のさらなる飛躍に期待という意味でピックアップしました。 ArXiv . Beamed emission from a neutron-star ULX in a GRRMHD simulation . 中性子星への超臨界降着を2.5D GRRMHD計算。降着円盤からのアウトフローによりビーム化された放射が放出されると判明。視野角の関数である見かけの等方的光度は最大で100L_EddにもなりULX(超光度X線天体)で観測される光度と一致。ApJL. ピックアップ理由: 長い間未解決だったUltra-Luminou X-ray sourceをシミュレーションすることに成功したもの。その画期的な計算からピックアップしました。 ArXiv . RAIKOU: A General Relativistic, Multi-wavelength Radiative Transfer Code . カーブラックホール周辺のブラックホールシャドウを含む画像やスペクトルの多波長研究のための、一般相対論的ray-tracing輻射輸送コード RAIKOU(来光)の開発。宇宙線研の川島さんの論文。以前からその存在は知っていたけれど、ついに論文化！ ピックアップ理由: EHTによるブラックホール直接撮像で盛り上がりを見せるカーブラックホール業界、理論と観測の比較という意味で大きな貢献をもたらすことから選出しました。ただ単に私が読んでみたいと思ったというのもある。 ArXiv . Black hole flares: ejection of accreted magnetic flux {through 3D plasmoid-mediated} reconnection . 超高解像度3D GRMHD計算から、magnetically arrested diskでプラズモイドを介した磁気リコネクションを計算することに成功。リコネクションにより加熱され、それがBHから脱出すると低密度のホットスポットとなる。これはSgr A*の観測と一致。 ピックアップ理由: 超高解像度計算、それだけでロマンを感じます。 ArXiv . A snapshot of the oldest AGN feedback phases . LOFARにより、ある銀河群での複数世代の宇宙線AGNバブルの後期段階進化を高解像度で明らかに。バブルの浮力は銀河群内物質の放射冷却を効率的に抑制するが、磁場によりバブルは数億年経過しても完全に混合していなかった。Nature Astronomy ピックアップ理由: 銀河団内に存在するAGNジェットでできたバブル構造、それを詳細に観測した論文。銀河団プラズマの理論に大きな影響を与える観測と判断し選出しました。 ArXiv . High-entropy ejecta plumes in Cassiopeia A from neutrino-driven convection . 超新星残骸Cassiopeia Aにおいて、高エントロピー核燃焼領域での合成元素である安定したTi, Crを検出。ニュートリノ加熱によって生じる対流型超新星エンジンの存在を示した。Nature. ピックアップ理由: 超新星爆発の理解に大きな影響を及ぼす論文としてピックアップしました。 ArXiv . Morphological transition of the compact radio lobe in 3C84 via the strong jet-cloud collision . 電波銀河3C84(NGC1275)のコンパクト電波ローブを2016-2020年にかけて観測。2017年にはホットスポットがコンパクトガス雲とぶつかっていたが、その後またホットスポットと電波ローブが移動。FR IIからFR Iに形態が変化した。ApJL ピックアップ理由: AGNの形態理論や観測に重要な示唆をもたらす観測であることから選出しました。 ArXiv . State-of-the-art energetic and morphological modelling of the launching site of the M87 jet . GRMHD+GRRT計算によりM87 jetの電波-近赤外領域までの広帯域スペクトルを再現、同時にM87 jetのコリメーションプロファイルと一致させることができた。計算モデルからM87の無次元スピンは0.5≤a≤1.0で高いスピンが示唆。Nature Astronomy ピックアップ理由: ブラッkホール周りのMAD(Magnetic Arrested Disk)の計算からジェットの伝搬までを計算、輻射輸送も同時に解くことで観測を再現することに成功した、スパコン計算の勝利とも言うべき研究。今後の計算機とアルゴリズムの発展への期待も込めてピックアップしました。 ArXiv . Peta-electron volt gamma-ray emission from the Crab Nebula . かに星雲から5x10^-4から1.1PeV γ線を検出。これは絶対理論限界の15%を超える加速率を持つPeV電子加速器の存在を示している。パルサー風の終端でパルスでないγ線が生成されてるとすると、加速器の大きさは0.025-0.1pc、磁場は110µG。Science ピックアップ理由: パルサーでの粒子加速の理論に制限を与える大きな成果として選出しました。 ArXiv . ",
+    "url": "/astroph/2021#he-%E9%AB%98%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E5%88%86%E9%87%8E",
+    
+    "relUrl": "/astroph/2021#he-高エネルギー宇宙物理分野"
+  },"68": {
+    "doc": "2021年振り返り",
+    "title": "統計情報",
+    "content": "以下にarXiv/astro-phの登録論文推移を示します。 . ",
+    "url": "/astroph/2021#%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1",
+    
+    "relUrl": "/astroph/2021#統計情報"
+  },"69": {
+    "doc": "2021年振り返り",
+    "title": "近年の登録推移",
+    "content": ". ",
+    "url": "/astroph/2021#%E8%BF%91%E5%B9%B4%E3%81%AE%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
+    
+    "relUrl": "/astroph/2021#近年の登録推移"
+  },"70": {
+    "doc": "2021年振り返り",
+    "title": "今年の月別登録推移",
+    "content": ". ",
+    "url": "/astroph/2021#%E4%BB%8A%E5%B9%B4%E3%81%AE%E6%9C%88%E5%88%A5%E7%99%BB%E9%8C%B2%E6%8E%A8%E7%A7%BB",
+    
+    "relUrl": "/astroph/2021#今年の月別登録推移"
+  },"71": {
+    "doc": "2021年振り返り",
+    "title": "結言",
+    "content": "2021年はプライベートの忙しさや体調不良などを除いて、毎日arXiv/astro-phのabstractをチェックすることができました。もちろんここに挙げたものだけが全てではありません。私が見逃したものも含めて、もし今年発表された論文で面白いものがございましたら、お教えいただけると助かります。 . ",
+    "url": "/astroph/2021#%E7%B5%90%E8%A8%80",
+    
+    "relUrl": "/astroph/2021#結言"
+  },"72": {
+    "doc": "2021年振り返り",
+    "title": "2021年振り返り",
+    "content": ". | はじめに | 2021年の研究動向・ホットトピックス . | 次世代望遠鏡での観測を見据えた論文が続々 | 天の川銀河の進化の歴史解明を目指す研究競争が加熱 | AGN円盤中での恒星進化や連星進化研究のプチブームが来ている？ | 共通外層進化(Common Envelope Evolution)の波が到来？ | ブラックホールシャドウが天文研究人気を牽引？ | 高エネルギー業界は新発見が目白押し！ | . | 2021年arXiv総括 . | SR (太陽・恒星分野) . | Turbulent generation of magnetic switchbacks in the Alfvénic solar wind | Dynamical coupling of a mean-field dynamo and its wind: Feedback loop over a stellar activity cycle | The origin and evolution of magnetic white dwarfs in close binary stars | SPLUSJ210428.01-004934.2: An Ultra Metal-Poor Star Identified from Narrowband Photometry | The role of non-axisymmetry of magnetic flux rope in constraining solar eruptions | Zooming into the Collimation Zone in a Massive Protostellar Jet | VVV-WIT-08: the giant star that blinked | M-dwarf’s Chromosphere, Corona and Wind Connection via the Nonlinear Alfvén Wave | Spectroscopic evidence for a large spot on the dimming Betelgeuse | Asteroseismic Fingerprints of Stellar Mergers | Solar differential rotation reproduced with high-resolution simulation | Probable detection of an eruptive filament from a superflare on a solar-type star | . | IM (装置開発・シミュレーション技法等分野) . | Science and survival: insights from Astronomy | Touching the Stars: Using High-Resolution 3D Printing to Visualize Stellar Nurseries | Writing Scientific Papers in Astronomy | TULIPS: a Tool for Understanding the Lives, Interiors, and Physics of Stars | Multi-Resolution HEALPix Maps for Multi-Wavelength and Multi-Messenger Astronomy | . | EP (太陽系・系外惑星系分野) . | The Habitable-zone Planet Finder Detects a Terrestrial-mass Planet Candidate Closely Orbiting Gliese 1151: The Likely Source of Coherent Low-frequency Radio Emission from an Inactive Star | Jupiter’s “Cold” Formation in the Protosolar Disk Shadow: An Explanation for the Planet’s Uniformly Enriched Atmosphere | Past, Present and Future Stars that can see Earth as a Transiting Exoplanet | Reimagining the water snowline | Polluted White Dwarfs Reveal Exotic Mantle Rock Types on Exoplanets in our Solar Neighborhood | Mercury as the relic of Earth and Venus’ outward migration | Painting Asteroids for Planetary Defense | . | CO (宇宙論分野) . | Towards Cosmological Simulations of Dark Matter on Quantum Computers | Discovery of Magnetic Fields Along Stacked Cosmic Filaments as Revealed by Radio and X-Ray Emission | HyPhy: Deep Generative Conditional Posterior Mapping of Hydrodynamical Physics | Void replenishment: how voids accrete matter over cosmic history | A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team | . | GA (星間空間・星形成・銀河・銀河団分野) . | The Galactic center chimneys: The base of the multiphase outflow of the Milky Way | The first evidence for three-dimensional spin-velocity alignment in pulsars | Tiny-scale Structure Discovered toward PSR B1557−50 | Diffuse Synchrotron Emission Associated with the Starburst in the Circumnuclear Disk of NGC 1275 | Anisotropic satellite galaxy quenching modulated by supermassive black hole activity | Jets from MRC 0600-399 bent by magnetic fields in the cluster Abell 3376 | A New Challenge for Dark Matter Models | An ancient massive quiescent galaxy found in a gas-rich z ~ 3 group | A relic from a past merger event in the Large Magellanic Cloud | Rapid growth of seed black holes during early bulge formation | Active Galactic Nuclei Abundance in Cosmic Voids | Reading M87’s DNA: A Double Helix revealing a large scale Helical Magnetic Field | . | HE (高エネルギー宇宙物理分野) . | The Imprint of Large Scale Structure on the Ultra-High-Energy Cosmic Ray Sky | Evidence that Ultra-High-Energy Gamma Rays are a Universal Feature Near Powerful Pulsars | Mildly relativistic magnetized shocks in electron-ion plasmas – II. Particle acceleration and heating | High Energy Neutrinos from Choked Gamma-Ray Bursts in AGN Accretion Disks | Observational properties of a general relativistic instability supernova from a primordial supermassive star | HAWC observations of the acceleration of very-high-energy cosmic rays in the Cygnus Cocoon | First Detection of sub-PeV Diffuse Gamma Rays from the Galactic Disk: Evidence for Ubiquitous Galactic Cosmic Rays beyond PeV Energies | Extended Very-High-Energy Gamma-Ray Emission Surrounding PSR J0622 + 3749 Observed by LHAASO-KM2A | Magnetic field generation by charge exchange in a supernova remnant in the early universe | Observation of gravitational waves from two neutron star-black hole coalescences | Beamed emission from a neutron-star ULX in a GRRMHD simulation | RAIKOU: A General Relativistic, Multi-wavelength Radiative Transfer Code | Black hole flares: ejection of accreted magnetic flux {through 3D plasmoid-mediated} reconnection | A snapshot of the oldest AGN feedback phases | High-entropy ejecta plumes in Cassiopeia A from neutrino-driven convection | Morphological transition of the compact radio lobe in 3C84 via the strong jet-cloud collision | State-of-the-art energetic and morphological modelling of the launching site of the M87 jet | Peta-electron volt gamma-ray emission from the Crab Nebula | . | . | 統計情報 . | 近年の登録推移 | 今年の月別登録推移 | . | 結言 | . ",
+    "url": "/astroph/2021",
+    
+    "relUrl": "/astroph/2021"
   },"73": {
     "doc": "吸収線吸収係数",
     "title": "吸収線吸収係数",
@@ -7631,150 +7631,150 @@
   },"1090": {
     "doc": "機械学習",
     "title": "機械学習 (Machine Learning)",
-    "content": " ",
-    "url": "/infostat/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
-    
-    "relUrl": "/infostat/ml#機械学習-machine-learning"
-  },"1091": {
-    "doc": "機械学習",
-    "title": "教師あり学習 (Supervised learning)",
-    "content": "まず、入出力関係を定義しましょう。 . \\[y = f(\\mathbf{x}) \\tag{4.1}\\] ここで\\(\\mathbf{x}\\)は入力(Input)、\\(y\\)は出力(Output)です。例えば、入力が画像データ、出力がその画像に写っている動物とすると、この関数\\(f\\)は動物を判定するための関数であることがわかります。この分類を機械に任せたいというのが、機械学習の目標です。言い換えれば、関数\\(f\\)を真似した人工的な関数\\(g\\)を作ることが目標となります。 . \\[y \\simeq g(\\mathbf{x}) (\\simeq f(\\mathbf{x})) \\tag{4.2}\\] 関数\\(f\\)を真似するために\\(g\\)を様々変化させることを、機械学習で行います。しかし真の\\(f\\)はわからないので、その指標として入力と出力の結果(やその関係性)を用います。真似るための指標(教師)として、データセットを最初に提供します。 . \\[D = (\\mathbf{x}_\\mu, y_\\mu) \\qquad (\\mu = 1, 2, \\cdots , M) \\tag{4.3}\\] ",
-    "url": "/infostat/ml#%E6%95%99%E5%B8%AB%E3%81%82%E3%82%8A%E5%AD%A6%E7%BF%92-supervised-learning",
-    
-    "relUrl": "/infostat/ml#教師あり学習-supervised-learning"
-  },"1092": {
-    "doc": "機械学習",
-    "title": "Loss function (error, 損失関数、誤差関数)",
-    "content": "機械学習の結果が間違っているかどうかを、人間側が指導する必要があります。これをLoss functionと呼びます。これには決まった定義はなく、最終的に答えを出す人間が適切に決定します。例として、以下のようなものがあります。 . \\[\\min_{g} \\left\\{ \\frac{1}{2} \\sum_{\\mu = 1}^2 (y_\\mu - g(\\mathbf{x}_\\mu))^2 \\right\\} \\tag{4.4}\\] データセットとして与えられている答え\\(y_\\mu\\)と機械が予測した結果\\(g(\\mathbf{x}_\\mu)\\)の差を全ての添字に対して和を撮ったものが、最小になるように関数\\(g\\)を最適化することが、機械学習の目標となります。関数\\(f\\)は皆目見当がつかないものですが、とりあえず\\(g\\)をモデルとして用意して後から結果に合うように\\(g\\)を合わせます。 . 変える余地のある(パラメータを多数持つような)関数を最適化するのが深層学習です。厳密な物理・数学の世界からみたら愚の骨頂？ . 深層学習を用いて問題を解くことで、我々は賢くなったのでしょうか？答えは否。ただし深層学習を用いて出てきた結果を考察することで次のステップに行くことができます。どんな関数なら上手くいくのかを解析することもできるでしょう。これはデータサイエンス研究手法の新しい形です。 . 上述のように、機械学習は1. \\(g(\\mathbf{x})\\)を定義する、2. Loss functionを定義する、3. 最適化する、という手順で行います。 . ",
-    "url": "/infostat/ml#loss-function-error-%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0%E8%AA%A4%E5%B7%AE%E9%96%A2%E6%95%B0",
-    
-    "relUrl": "/infostat/ml#loss-function-error-損失関数誤差関数"
-  },"1093": {
-    "doc": "機械学習",
-    "title": "Perceptron (パーセプトロン)",
-    "content": "最初のstepとして、パーセプトロンを考えましょう。これは統計力学におけるIsing modelのように、機械学習や人工知能におけるトイモデルとして広く知られています。 . \\[y_\\mu = f(\\mathbf{x}_\\mu) \\qquad (y \\in \\{ -1, +1\\}) \\tag{4.5}\\] を真似るものとして . \\[y_\\mu \\simeq \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) \\tag{4.6}\\] を考えます。これは以下のように入力層と出力層で図示することができます。 . 機械学習で行っているのは入力データに対して線形変換と非線形変換を繰り返しです。これにより複雑な関数を形成することができます。 次に(4.5), (4.6)式がどれくらい似ているかを決めましょう。一例として、以下のようなものが考えられます。 . \\[\\min_{\\mathbf{w}} \\left\\{ - \\sum_\\mu y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu )\\right\\} \\tag{4.7}\\] \\(y_\\mu\\)の符号と\\(\\mathrm{sign} (\\cdots)\\)の符号が一致していれば良いので、これの和にマイナスをつけたものが最小となるように最適化すれば良いことがわかります。 これを見てわかるように、このLoss functionは物理学で言うところのエネルギー\\(E(\\mathbf{w})\\)と見なすことができます。\\(\\mathbf{w}\\)は物理系の自由度を表現していると言えるでしょう。その意味では機械学習の系を最適化することは、我々のコンピュータを冷凍機としてその人工的な系のエネルギーを最小化することと同義です。このような理由から低温物理学や統計物理学とのアナロジーが使えることがわかります。 . 同様の考え方から、量子機械学習を考えるのは至極当然の流れと言えるでしょう。 . ",
-    "url": "/infostat/ml#perceptron-%E3%83%91%E3%83%BC%E3%82%BB%E3%83%97%E3%83%88%E3%83%AD%E3%83%B3",
-    
-    "relUrl": "/infostat/ml#perceptron-パーセプトロン"
-  },"1094": {
-    "doc": "機械学習",
-    "title": "Statistical Mechanics",
-    "content": "以下では単純に入力データがガウス分布に従うとしましょう。 . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right) \\tag{4.8}\\] ここで\\(N\\)はベクトルの成分の数、\\(M\\)はデータの数です。そして、\\(y_\\mu\\)は{-1, 1}の分布しか持たないような分布を考えます。 . \\[P(y_\\mu) = \\frac{1}{2} \\{\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) \\} \\tag{4.9}\\] 今、考えているのは(4.7)式のように大きさを考えない系なので、\\(\\mathbf{w}^2 = N\\)のように規格化されているものとして以降の計算を行います。すると分配関数は . \\[Z = \\int d\\mathbf{w} \\delta (\\mathbf{w}^T \\mathbf{w}-N) \\exp \\left( \\sum_{\\mu = 1}^M \\beta y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.10}\\] \\(y, x\\)を固定した(quench randomnesした)元で\\(w\\)について最適化することを考えます(\\(y, x\\)は教師データなので予め与えられたものであることから)。すると\\(x, y\\)は固定されたスピンと考えることができるので、これはスピングラスの理論(レプリカ法)で計算を進めることができます。 . このような系はquenched系ですが、y, w, xが全て同時に動く場合にはannealed系です。前者はデータを与えきった後に学習を行う「オフライン学習」、後者はデータを与えるたびに$$w$$が変化するような学習を「オンライン学習」に対応します。計算したい系によって計算テクニックを使い分けます。 . ではレプリカ法を用いて計算を行っていきましょう。 . \\[[Z^n]_D = \\prod_a \\int d\\mathbf{w}_a \\delta (\\mathbf{w}_a^T \\mathbf{w}_a -N) \\prod_{\\mu=1}^M \\left[ \\exp (\\beta y_\\mu \\mathrm{sign} (\\mathbf{w}_a^T \\mathbf{x}_\\mu)) \\right]_{y_\\mu, \\mathbf{x}_\\mu} \\tag{4.11}\\] ",
-    "url": "/infostat/ml#statistical-mechanics",
-    
-    "relUrl": "/infostat/ml#statistical-mechanics"
-  },"1095": {
-    "doc": "機械学習",
-    "title": "\\(u_\\mu^{a=1, 2, \\cdots, n}\\) property",
-    "content": "ここで\\(u_\\mu^a \\equiv \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)を定義します。この変数が従う確率分布を計算してみましょう。 . \\[P (\\mathbf{u}_\\mu) = \\int d\\mathbf{x}_\\mu P(\\mathbf{x}_\\mu) \\prod_a \\delta (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu) = \\int d\\mathbf{x}_\\mu \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu + i \\sum \\tilde{u}_\\mu^a (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.12}\\] \\(e\\)の肩を計算しましょう。 . \\[-\\frac{N}{2} \\left( \\mathbf{x}_\\mu-i \\sum_a \\tilde{u}_\\mu^a \\frac{\\mathbf{w}_a}{N} \\right)^2 - \\frac{1}{2N} \\left( \\sum_a \\tilde{u}_\\mu^a \\mathbf{w}_a \\right)^2\\] より、(4.12)式は\\(\\mathbf{x}_\\mu\\)での積分が実行できて . \\[P(\\mathbf{u}_\\mu) \\propto \\int \\tilde{u}_\\mu^a \\exp \\left( -\\frac{1}{2N} \\sum_{a, b} \\tilde{u}_\\mu^a (\\mathbf{w}_a^T \\mathbf{w}_b) \\tilde{u}_\\mu^b + i \\sum_a u_\\mu^a \\tilde{u}_\\mu^a \\right) \\propto \\exp \\left( - \\frac{1}{2} \\sum_{a, b} u_\\mu^a (Q^{-1})_{ab} u_\\mu^b \\right) \\tag{4.13}\\] ここで\\(q_{ab} \\equiv \\frac{1}{N} \\mathbf{w}_a^T \\mathbf{w}_b\\)はこの系のスピングラス秩序パラメータ、\\(Q = (q_{ab})\\)はその行列です。(4.13)式の形から、\\(u_\\mu^a\\)は平均0、分散\\(q_{ab}\\)のガウス分布に従うことがわかります。これは中心極限定理と同じ形です。 . ",
-    "url": "/infostat/ml#u_mua1-2-cdots-n-property",
-    
-    "relUrl": "/infostat/ml#u_mua1-2-cdots-n-property"
-  },"1096": {
-    "doc": "機械学習",
-    "title": "Equivalence representation",
-    "content": "等価定理による表現は以下のようなものでした。 . \\[[f(\\mathbf{u}_\\mu)]_{\\mathbf{x}_\\mu, y_\\mu} = \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) f(\\mathbf{u}_\\mu) \\right]\\] これより . \\[[Z] = \\int dQ \\prod_a \\int d\\mathbf{w}_a \\prod_\\mu \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_a \\exp (\\beta y_\\mu \\mathrm{sign}(u_\\mu^a))\\right]_{y_\\mu} \\times \\prod_{a, b} \\delta (N q^{ab} - \\mathbf{w}_a \\cdot \\mathbf{w}_b) \\tag{4.14}\\] このようにすることで\\(u\\)の積分と\\(w\\)の積分に分けることができます。すると\\(\\prod_a \\int d\\mathbf{w}_a \\prod_{a, b} \\delta(Nq^{ab}-\\mathbf{w}_a \\cdot \\mathbf{w}_b)\\)の部分は、これまで計算してきたものと同じくエントロピーを表しているとわかります。これまでの計算と違いが現れているのは\\([\\cdots]_{y_\\mu}\\)の部分のみです。エネルギーの部分を\\(e^{-N\\beta e(Q)}\\)、エントロピー部分を\\(e^{NS(Q)}\\)とおくと . \\[[Z] = \\int dQ \\exp (-N \\beta e(Q) + N S(Q))\\] となります。 . ",
-    "url": "/infostat/ml#equivalence-representation",
-    
-    "relUrl": "/infostat/ml#equivalence-representation"
-  },"1097": {
-    "doc": "機械学習",
-    "title": "エネルギーの計算",
-    "content": "それではエネルギーの計算を進めていきましょう。 . \\[-\\beta e(Q) = \\frac{1}{N} \\log \\prod_{\\mu} \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_{a=1}^n e^{\\beta y_\\mu \\mathrm{sign} (u_\\mu^a)} \\right]_{y_\\mu} \\tag{4.15}\\] ここで\\(u_\\mu^a\\)の平均が0, 分散が\\(q^{ab} = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)ということと、レプリカ対称性 . \\[Q = \\left( \\begin{array}{cccc} 1 &amp; q &amp; \\cdots &amp; q \\\\ q &amp; 1 &amp; \\ddots &amp; \\vdots \\\\ \\vdots &amp; \\ddots &amp; \\ddots &amp; q\\\\ q &amp; \\cdots &amp; q&amp; 1 \\end{array} \\right)\\] より\\(u_\\mu^a = \\sqrt{q} z + \\sqrt{1-q} x_a\\)と表現することができます。ここで\\(z, x_a\\)は(0,1)のガウス分布に従う変数です。すると . \\[[u_\\mu^a] = 0\\] \\[\\begin{aligned} [u_\\mu^a u_\\mu^b] &amp;= [(\\sqrt{q} z + \\sqrt{1-q} x_a)(\\sqrt{q} z + \\sqrt{1-q} x_b)] = [q z^2] + \\sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] \\\\ &amp;= q + (1-q) \\delta_{ab} \\end{aligned}\\] となります。よって\\(u_\\mu^a\\)を\\(z, x_a\\)で書き換えましょう。 . \\[-\\beta e(Q) = \\frac{M}{N} \\log \\left[ \\int D_z \\left( \\int D_x \\exp (\\beta y_\\mu \\mathrm{sign}(\\sqrt{q}z + \\sqrt{1-q}x))\\right)^n \\right]_{y_\\mu} \\tag{4.16}\\] \\(n\\)乗は\\(a = 1, 2, \\cdots, n\\)の場合の計算が全て一致することから出てきます。 機械学習の一般形として、エネルギーを\\(e^{-\\beta f(\\mathbf{w} \\cdot \\mathbf{x}_\\mu)}\\)と書くことができます。これは線形変換と非線形変換を施した形になっているため、これが一般形になっていることがわかります。これまでの議論から\\(u_\\mu^a = \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)と書け、これはさらに等価定理で\\(z, x_a\\)で表現することができます…という議論の進め方を(公式のように)覚えてしまえば、あとは手を動かすだけで研究ができます。 (4.18)式の変形をさらに進めます。 . \\[\\begin{align} -\\beta e(Q) &amp;= \\frac{M}{N} \\log \\left[ \\int D_z e^{\\log (\\cdots)^n} \\right] = \\frac{M}{N} \\log \\left[ \\int D_z e^{n \\log (\\cdots)} \\right] \\notag \\\\ &amp;\\xrightarrow{n \\rightarrow 0} \\frac{M}{N} \\log \\left[ \\int D_z (1 + n \\log (\\cdots)) \\right] = \\frac{M}{N} \\log \\left[ 1 + n \\int D_z \\log (\\cdots) \\right] \\notag \\\\ &amp;\\simeq \\frac{M}{N} \\log \\left[ e^{n \\int D_z \\log (\\cdots)} \\right] = \\frac{M}{N} n \\int D_z \\log (\\cdots) \\tag{4.17} \\end{align}\\] \\((\\cdots)\\)の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。 . \\[\\int_{-\\infty}^{-\\sqrt{\\frac{q}{1-q}} z} D_x e^{-\\beta y_\\mu} + \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_x e^{\\beta y_\\mu} \\tag{4.18}\\] 相補誤差関数 . \\[H(x) = \\int_x^\\infty D_z \\tag{4.19}\\] を用いると . \\[H(-x) = \\int_{-x}^\\infty D_z = \\int_{-\\infty}^\\infty D_z - \\int_{-\\infty}^{-x} D_z \\underbrace{=}_{z \\rightarrow -z} 1 + \\int_\\infty^x D_x = 1 - H(x) \\tag{4.20}\\] より . \\[\\begin{align} (4.18) &amp;= e^{\\beta y_\\mu} H \\left( - \\sqrt{\\frac{q}{1-q}} z\\right) + \\left( \\int_{-\\infty}^\\infty D_z - \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_z\\right) e^{-\\beta y_\\mu} \\notag \\\\ &amp;= e^{\\beta y_\\mu} H \\left( -\\sqrt{\\frac{q}{1-q}} z \\right) + e^{-\\beta y_\\mu} \\left( 1- H \\left( -\\sqrt{\\frac{q}{1-q}} z\\right)\\right) \\notag \\\\ &amp;= e^{\\beta y_\\mu} \\left( 1- H \\left( \\sqrt{\\frac{q}{1-q}} z\\right)\\right) + e^{-\\beta y_\\mu} H\\left( \\sqrt{\\frac{q}{1-q}} z\\right) \\tag{4.21} \\end{align}\\] となります。以上より . \\[-\\beta e(Q) = \\alpha n \\left[ \\int D_z \\log (e^{-\\beta y_\\mu} H + e^{\\beta y_\\mu} (1-H)) \\right]_{y_\\mu} \\tag{4.22}\\] ここで\\(\\alpha \\equiv M/N, H \\equiv H (\\sqrt{\\frac{q}{1-q}} z)\\)です。 . ",
-    "url": "/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
-    
-    "relUrl": "/infostat/ml#エネルギーの計算"
-  },"1098": {
-    "doc": "機械学習",
-    "title": "エントロピーの計算",
-    "content": "残りのエントロピーの計算を行いましょう。 . \\[\\begin{align} &amp;\\prod_{a=1}^n \\int d\\mathbf{w}_a \\prod_{a\\neq b} \\delta (Nq - \\mathbf{w}_a^T \\mathbf{w}_b) \\prod_a \\delta (N- \\mathbf{w}_a^T \\mathbf{w}_a) \\notag \\\\ &amp;= \\prod_a \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( \\frac{1}{2} \\tilde{Q} \\sum_a (N-\\mathbf{w}_a \\mathbf{w}_a)\\right) \\exp \\left( -\\frac{\\tilde{q}}{2} \\sum_{a\\neq b} (Nq - \\mathbf{w}_a \\cdot \\mathbf{w}_b)\\right) \\tag{4.23} \\end{align}\\] \\(e\\)の肩の部分を整理すると . \\[\\frac{1}{2} nN \\tilde{Q} - \\frac{1}{2} \\tilde{q} q N n(n-1) - \\frac{\\tilde{Q}}{2} \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\frac{\\tilde{q}}{2} \\sum_{a \\neq b} \\mathbf{w}_a \\cdot \\mathbf{w}_b \\tag{4.24}\\] 最後の項を整理すると . \\[\\frac{\\tilde{q}}{2} \\left\\{ \\left( \\sum_a \\mathbf{w}_a\\right)^2 - \\sum_a \\mathbf{w}_a^2\\right\\} \\tag{4.25}\\] この\\((\\sum_a \\mathbf{w}_a)^2\\)の部分にHubbard-Stratonovich変換をして\\(\\sqrt{\\tilde{q}}\\mathbf{z} \\sum_a \\mathbf{w}_a\\)とすると . \\[(4.23) = \\int D_z \\prod_{a=1}^n \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( nN \\left( \\frac{1}{2} \\tilde{Q} + \\frac{1}{2} q \\tilde{q} \\right) \\right) \\exp \\left( -\\frac{1}{2} (\\tilde{Q} + \\tilde{q}) \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\sqrt{\\tilde{q}} \\mathbf{z} \\sum_a \\mathbf{w}_a \\right) \\tag{4.26}\\] 上式において\\(\\prod_a \\int d\\mathbf{w}_a \\exp (\\cdots)\\)の部分でガウス積分を実行すると\\(\\left( \\sqrt{\\frac{2\\pi}{\\tilde{Q} + \\tilde{q}}} \\exp \\left( \\frac{\\tilde{q} \\mathbf{z}^2}{2(\\tilde{Q} + \\tilde(q))}\\right)\\right)^{nN}\\)となります。計算していくと . \\[S(Q) = \\frac{1}{N} \\log \\prod_a \\int d\\mathbf{w}_a \\cdots = \\frac{n}{2} (\\tilde{Q} + q \\tilde{q}) - \\frac{n}{2} \\log(\\tilde{Q} + \\tilde{q}) + \\frac{n}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} \\tag{4.27}\\] ",
-    "url": "/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
-    
-    "relUrl": "/infostat/ml#エントロピーの計算"
-  },"1099": {
-    "doc": "機械学習",
-    "title": "エントロピーに鞍点法を適用",
-    "content": "\\[\\frac{\\partial S}{\\partial \\tilde{Q}} = \\frac{1}{2} - \\frac{1}{2} \\frac{1}{\\tilde{Q} + \\tilde{q}} - \\frac{1}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} = 0 \\ \\Longrightarrow \\  \\therefore \\ 1 = \\frac{1}{\\tilde{Q} + \\tilde{q}} + \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.28}\\] \\[\\frac{\\partial S}{\\partial \\tilde{q}} = \\frac{1}{2} q - \\frac{\\tilde{q}}{2 (\\tilde{Q} + \\tilde{q})^2} = 0 \\ \\Longrightarrow \\  \\therefore \\ q = \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.29}\\] 以上より . \\[1-q = \\frac{1}{\\tilde{Q} + \\tilde{q}}, \\ q = (1-q^2) \\tilde{q} \\tag{4.30}\\] という恒等式を得ます。 . ",
-    "url": "/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
-    
-    "relUrl": "/infostat/ml#エントロピーに鞍点法を適用"
-  },"1100": {
-    "doc": "機械学習",
-    "title": "エネルギーに鞍点法を適用",
-    "content": "(4.21)式よりエネルギーは以下のように書けたのでした。 . \\[-\\beta e(Q) = \\alpha n \\int D_z \\log(e^{-\\beta} H + e^{\\beta}(1-H))\\] ここで\\(H = H (\\sqrt{\\frac{q}{1-q}}z)\\)です。logの中身を\\(Y\\)と定義すると、エントロピー項から\\(\\frac{1}{2} q \\tilde{q}\\)が出てくることを合わせて . \\[\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\alpha \\int D_z \\frac{1}{Y} \\left[ e^{-\\beta} - e^\\beta \\right] H' \\left( \\frac{1}{2} \\frac{z}{\\sqrt{q} \\sqrt{1-q}} + \\frac{1}{2} \\frac{\\sqrt{q}z}{(1-q)^{3/2}}\\right) = 0 \\tag{4.31}\\] ここで . \\[\\int D_z z f(az) = \\int D_z a f'(az)\\] を用いると . \\[\\begin{align} &amp;\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\frac{\\alpha}{2} \\int D_z \\left[ \\frac{e^{-\\beta}-e^\\beta}{Y} H'' \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right) - \\frac{1}{Y^2} (e^{-\\beta} -e^\\beta)^2 (H')^2 \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right)\\right] = 0 \\notag \\\\ &amp;\\Longrightarrow \\  \\tilde{q} = - \\frac{\\alpha}{(1-q)^2} \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.32} \\end{align}\\] (4.30), (4.32)式より . \\[q = -\\alpha \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.33}\\] これは\\(q\\)についての自己無撞着方程式になっています。この式において\\(\\beta \\rightarrow \\infty\\)を考えましょう。すると\\(Y = e^{-\\beta} H + e^\\beta (1-H)\\)より . \\[q \\rightarrow \\alpha \\int D_z \\left( \\frac{H''}{1-H} - \\left( \\frac{H'}{1-H}\\right)^2\\right) \\tag{4.34}\\] となります。\\(\\beta \\rightarrow \\infty\\)極限の\\(q\\)を横軸\\(\\alpha\\)で図示すると以下のようになります。 . この図の再現ができない...どこかで計算ミス？それとも作成したスクリプトのアルゴリズムの問題？ . この図から、\\(\\alpha &gt; 2\\)でスピン秩序パラメータが\\(q=1\\)に凍結することを表しています。ここで\\(q = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)です。この意味を考えるために、2種類のデータを分類することを考えましょう。\\(\\alpha = M/N\\)より、\\(\\alpha\\)はデータの数に比例しています。これが大きいとデータ分類の境界線がある狭い領域にのみ現れるようになり、同じ答えしか出せなくなります。これはパーセプトロンの性能限界を表していることがわかります。 . ",
-    "url": "/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
-    
-    "relUrl": "/infostat/ml#エネルギーに鞍点法を適用"
-  },"1101": {
-    "doc": "機械学習",
-    "title": "Hidden Manifold Model (arXiv: 2002.09339)",
-    "content": "これまで行ってきた計算には実は大問題があります。 . ",
-    "url": "/infostat/ml#hidden-manifold-model-arxiv-200209339",
-    
-    "relUrl": "/infostat/ml#hidden-manifold-model-arxiv-200209339"
-  },"1102": {
-    "doc": "機械学習",
-    "title": "古典的なモデル",
-    "content": "入力データがガウス分布に従っているとして . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( - \\frac{1}{2N} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right)\\] さらに出力は . \\[P(y_\\mu) = \\frac{1}{2} (\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) ) \\ \\mathrm{or} \\  y_\\mu = \\left\\{ \\begin{array}{ll} \\mathrm{sign} (\\mathbf{w}_0^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Teacher}) \\\\ \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Student}) \\end{array} \\right.\\] のように、教師モデルを模倣して生徒もモデルを考えます。これは古典的なモデルとして、1990年代にたくさん計算されました。 . ",
-    "url": "/infostat/ml#%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
-    
-    "relUrl": "/infostat/ml#古典的なモデル"
-  },"1103": {
-    "doc": "機械学習",
-    "title": "現実的なモデル",
-    "content": "しかし、現実は異なります。古典的な方法論に従って、複雑なモデルがたくさん生み出されました。しかし、それはこの機械学習の本質ではなく、これは現実を表すための重要な側面とは言えませんでした。重要なのはデータです。これまでの計算で用いられてきたランダムな分布のデータというものは本来ありえません(例えば、猫の画像は猫の構造を持っており、その時点でランダムではありません)。 \\(x, y\\)は何かしらの相関を持っており、そのような関係性がないデータを学習しても意味がありません。Hidden Manifold Modelとは\\(x, y\\)が何かしらの鍵を用いて生成されていると考えます。 . 簡単なものとして以下のようなものがあります。入力は . \\[\\mathbf{x}_\\mu = \\sigma \\left( \\frac{1}{\\sqrt{d}}F \\cdot \\mathbf{C}_\\mu \\right) \\qquad (F \\in \\mathbb{R}^{d \\times \\rho}, \\mathbf{C} \\in \\mathbb{R}^\\rho) \\tag{4.35}\\] そして出力は、入力と相関する形として . \\[y_\\mu = f\\left( \\frac{1}{\\sqrt{d}} \\mathbf{C}_\\mu^T \\mathbf{w}_0 \\right) \\tag{4.36}\\] 本質的なものは深い複雑な構造にあるのではなくて、データの相関にあるということを覚えておきましょう。 . 機械学習が上手くその性能を発揮しない背景には、入力と出力の相関が無いようなデータを持ってきていることが挙げられます。 深層学習の構造はどのような関数も近似できる(Universal approximator)ので、原理的にはどのような問題も最適化できるはずです。 . ",
-    "url": "/infostat/ml#%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
-    
-    "relUrl": "/infostat/ml#現実的なモデル"
-  },"1104": {
-    "doc": "機械学習",
-    "title": "Statistical Mechanics",
-    "content": "以降の文章は未完です。そのうち、授業で紹介された論文を読みつつ式を追います。 . (4.34), (4.35)から分配関数を計算します。 . \\[Z = \\int d\\mathbf{w} \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right)\\] ここでエネルギー部分に . \\[E(\\mathbf{w}) = \\frac{1}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x})^2 + \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w}\\] のように余分な項を付け足すことで過適合(overfitting)を避けます。レプリカ法を用いて . \\[[Z^n]_{\\mathbf{C}} = \\prod_a \\int d\\mathbf{w} \\left[ \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right) \\right]_{\\mathbf{C}} \\exp \\left( - \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w} \\right)\\] この計算においては\\(y\\)も\\(C\\)と\\(w\\)の内積になっているので、注意が必要です。ここではGaussian Equivalent Theorem(GET)という計算テクニックを用います。 . \\[\\lambda_\\mu^a = \\frac{1}{\\sqrt{d}} \\mathbf{w}_a^T \\sigma (\\frac{1}{\\sqrt{d}} F^T \\mathbf{C}_\\mu^T)\\] これから . \\[P(\\mathbb{\\lambda}_\\mu, \\nu_\\mu) \\propto \\exp \\left( -\\frac{1}{2} \\sum_{a, b} \\lambda_\\mu^a (A_\\mu^{-1})_{ab} \\lambda_\\mu^b- \\frac{1}{2} \\nu_\\mu A_0^{-1} \\nu_\\mu - \\frac{1}{2} \\sum_a \\nu_\\mu \\mathbf{B}_\\mu^T \\mathbf{\\lambda}_\\mu^a\\right)\\] ここで\\(A_n = \\frac{a^2}{d} \\mathbf{w}^a \\mathbf{w}^b+ \\frac{b^2}{d}\\mathbf{s}^a \\mathbf{s}^b, A_0 = \\frac{1}{d} \\mathbf{w}_0^T \\mathbf{w}_0, \\mathbf{B}_n = \\frac{b}{d} \\mathbf{s}^a \\cdot \\mathbf{w}_0\\)などです。 . ",
-    "url": "/infostat/ml#statistical-mechanics-1",
-    
-    "relUrl": "/infostat/ml#statistical-mechanics-1"
-  },"1105": {
-    "doc": "機械学習",
-    "title": "Appendix 1: \\(0&lt;n&lt;1\\)の系",
-    "content": "以前の講義で\\(n=0\\)はquenched系、\\(n=1\\)のannealed系に対応すると学びました。しかし、\\(0 &lt; n &lt;1\\)の系も存在します。これをpartial annealed系と呼びます。どちらの変数も動くが、動くスピードが違う(ゆっくり動く)とイメージできます。データを変えながら最適化を行う場合には、このような中途半端な\\(n\\)の値の系が実際の機械学習の系ではないかとされています。 . ",
-    "url": "/infostat/ml#appendix-1-0n1%E3%81%AE%E7%B3%BB",
-    
-    "relUrl": "/infostat/ml#appendix-1-0n1の系"
-  },"1106": {
-    "doc": "機械学習",
-    "title": "Appendix 2: レプリカ法のアプリケーション例",
-    "content": "量子アニーリングを用いて最適化問題を解く(イジングの基底状態を求める)という応用例があることから、量子ゆらぎの計算を導入します。その時の計算方法にレプリカ法が用いられます。最近ではAdS/CFT対応の文脈でもレプリカ法が用いられており、論文数が増えていると言われています。 . ",
-    "url": "/infostat/ml#appendix-2-%E3%83%AC%E3%83%97%E3%83%AA%E3%82%AB%E6%B3%95%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%BE%8B",
-    
-    "relUrl": "/infostat/ml#appendix-2-レプリカ法のアプリケーション例"
-  },"1107": {
-    "doc": "機械学習",
-    "title": "参考文献及びリンク",
-    "content": ". | [1] 大関真之 YouTube動画 “Statistical physics and information processing vol. 3 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】” | . ",
-    "url": "/infostat/ml#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E3%81%B3%E3%83%AA%E3%83%B3%E3%82%AF",
-    
-    "relUrl": "/infostat/ml#参考文献及びリンク"
-  },"1108": {
-    "doc": "機械学習",
-    "title": "機械学習",
-    "content": ". | 機械学習 (Machine Learning) . | 教師あり学習 (Supervised learning) | Loss function (error, 損失関数、誤差関数) | Perceptron (パーセプトロン) | Statistical Mechanics | \\(u_\\mu^{a=1, 2, \\cdots, n}\\) property | Equivalence representation | エネルギーの計算 | エントロピーの計算 | エントロピーに鞍点法を適用 | エネルギーに鞍点法を適用 | . | Hidden Manifold Model (arXiv: 2002.09339) . | 古典的なモデル | 現実的なモデル | Statistical Mechanics | . | Appendix 1: \\(0&lt;n&lt;1\\)の系 | Appendix 2: レプリカ法のアプリケーション例 | 参考文献及びリンク | . ",
-    "url": "/infostat/ml",
-    
-    "relUrl": "/infostat/ml"
-  },"1109": {
-    "doc": "機械学習",
-    "title": "機械学習 (Machine Learning)",
     "content": "ここでは機械学習の勉強メモを掲載していきます。 . ",
     "url": "/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
     
     "relUrl": "/ml#機械学習-machine-learning"
-  },"1110": {
+  },"1091": {
     "doc": "機械学習",
     "title": "機械学習",
     "content": ". ",
     "url": "/ml",
     
     "relUrl": "/ml"
+  },"1092": {
+    "doc": "機械学習",
+    "title": "機械学習 (Machine Learning)",
+    "content": " ",
+    "url": "/infostat/ml#%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92-machine-learning",
+    
+    "relUrl": "/infostat/ml#機械学習-machine-learning"
+  },"1093": {
+    "doc": "機械学習",
+    "title": "教師あり学習 (Supervised learning)",
+    "content": "まず、入出力関係を定義しましょう。 . \\[y = f(\\mathbf{x}) \\tag{4.1}\\] ここで\\(\\mathbf{x}\\)は入力(Input)、\\(y\\)は出力(Output)です。例えば、入力が画像データ、出力がその画像に写っている動物とすると、この関数\\(f\\)は動物を判定するための関数であることがわかります。この分類を機械に任せたいというのが、機械学習の目標です。言い換えれば、関数\\(f\\)を真似した人工的な関数\\(g\\)を作ることが目標となります。 . \\[y \\simeq g(\\mathbf{x}) (\\simeq f(\\mathbf{x})) \\tag{4.2}\\] 関数\\(f\\)を真似するために\\(g\\)を様々変化させることを、機械学習で行います。しかし真の\\(f\\)はわからないので、その指標として入力と出力の結果(やその関係性)を用います。真似るための指標(教師)として、データセットを最初に提供します。 . \\[D = (\\mathbf{x}_\\mu, y_\\mu) \\qquad (\\mu = 1, 2, \\cdots , M) \\tag{4.3}\\] ",
+    "url": "/infostat/ml#%E6%95%99%E5%B8%AB%E3%81%82%E3%82%8A%E5%AD%A6%E7%BF%92-supervised-learning",
+    
+    "relUrl": "/infostat/ml#教師あり学習-supervised-learning"
+  },"1094": {
+    "doc": "機械学習",
+    "title": "Loss function (error, 損失関数、誤差関数)",
+    "content": "機械学習の結果が間違っているかどうかを、人間側が指導する必要があります。これをLoss functionと呼びます。これには決まった定義はなく、最終的に答えを出す人間が適切に決定します。例として、以下のようなものがあります。 . \\[\\min_{g} \\left\\{ \\frac{1}{2} \\sum_{\\mu = 1}^2 (y_\\mu - g(\\mathbf{x}_\\mu))^2 \\right\\} \\tag{4.4}\\] データセットとして与えられている答え\\(y_\\mu\\)と機械が予測した結果\\(g(\\mathbf{x}_\\mu)\\)の差を全ての添字に対して和を撮ったものが、最小になるように関数\\(g\\)を最適化することが、機械学習の目標となります。関数\\(f\\)は皆目見当がつかないものですが、とりあえず\\(g\\)をモデルとして用意して後から結果に合うように\\(g\\)を合わせます。 . 変える余地のある(パラメータを多数持つような)関数を最適化するのが深層学習です。厳密な物理・数学の世界からみたら愚の骨頂？ . 深層学習を用いて問題を解くことで、我々は賢くなったのでしょうか？答えは否。ただし深層学習を用いて出てきた結果を考察することで次のステップに行くことができます。どんな関数なら上手くいくのかを解析することもできるでしょう。これはデータサイエンス研究手法の新しい形です。 . 上述のように、機械学習は1. \\(g(\\mathbf{x})\\)を定義する、2. Loss functionを定義する、3. 最適化する、という手順で行います。 . ",
+    "url": "/infostat/ml#loss-function-error-%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0%E8%AA%A4%E5%B7%AE%E9%96%A2%E6%95%B0",
+    
+    "relUrl": "/infostat/ml#loss-function-error-損失関数誤差関数"
+  },"1095": {
+    "doc": "機械学習",
+    "title": "Perceptron (パーセプトロン)",
+    "content": "最初のstepとして、パーセプトロンを考えましょう。これは統計力学におけるIsing modelのように、機械学習や人工知能におけるトイモデルとして広く知られています。 . \\[y_\\mu = f(\\mathbf{x}_\\mu) \\qquad (y \\in \\{ -1, +1\\}) \\tag{4.5}\\] を真似るものとして . \\[y_\\mu \\simeq \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) \\tag{4.6}\\] を考えます。これは以下のように入力層と出力層で図示することができます。 . 機械学習で行っているのは入力データに対して線形変換と非線形変換を繰り返しです。これにより複雑な関数を形成することができます。 次に(4.5), (4.6)式がどれくらい似ているかを決めましょう。一例として、以下のようなものが考えられます。 . \\[\\min_{\\mathbf{w}} \\left\\{ - \\sum_\\mu y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu )\\right\\} \\tag{4.7}\\] \\(y_\\mu\\)の符号と\\(\\mathrm{sign} (\\cdots)\\)の符号が一致していれば良いので、これの和にマイナスをつけたものが最小となるように最適化すれば良いことがわかります。 これを見てわかるように、このLoss functionは物理学で言うところのエネルギー\\(E(\\mathbf{w})\\)と見なすことができます。\\(\\mathbf{w}\\)は物理系の自由度を表現していると言えるでしょう。その意味では機械学習の系を最適化することは、我々のコンピュータを冷凍機としてその人工的な系のエネルギーを最小化することと同義です。このような理由から低温物理学や統計物理学とのアナロジーが使えることがわかります。 . 同様の考え方から、量子機械学習を考えるのは至極当然の流れと言えるでしょう。 . ",
+    "url": "/infostat/ml#perceptron-%E3%83%91%E3%83%BC%E3%82%BB%E3%83%97%E3%83%88%E3%83%AD%E3%83%B3",
+    
+    "relUrl": "/infostat/ml#perceptron-パーセプトロン"
+  },"1096": {
+    "doc": "機械学習",
+    "title": "Statistical Mechanics",
+    "content": "以下では単純に入力データがガウス分布に従うとしましょう。 . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right) \\tag{4.8}\\] ここで\\(N\\)はベクトルの成分の数、\\(M\\)はデータの数です。そして、\\(y_\\mu\\)は{-1, 1}の分布しか持たないような分布を考えます。 . \\[P(y_\\mu) = \\frac{1}{2} \\{\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) \\} \\tag{4.9}\\] 今、考えているのは(4.7)式のように大きさを考えない系なので、\\(\\mathbf{w}^2 = N\\)のように規格化されているものとして以降の計算を行います。すると分配関数は . \\[Z = \\int d\\mathbf{w} \\delta (\\mathbf{w}^T \\mathbf{w}-N) \\exp \\left( \\sum_{\\mu = 1}^M \\beta y_\\mu \\mathrm{sign} (\\mathbf{w} \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.10}\\] \\(y, x\\)を固定した(quench randomnesした)元で\\(w\\)について最適化することを考えます(\\(y, x\\)は教師データなので予め与えられたものであることから)。すると\\(x, y\\)は固定されたスピンと考えることができるので、これはスピングラスの理論(レプリカ法)で計算を進めることができます。 . このような系はquenched系ですが、y, w, xが全て同時に動く場合にはannealed系です。前者はデータを与えきった後に学習を行う「オフライン学習」、後者はデータを与えるたびに$$w$$が変化するような学習を「オンライン学習」に対応します。計算したい系によって計算テクニックを使い分けます。 . ではレプリカ法を用いて計算を行っていきましょう。 . \\[[Z^n]_D = \\prod_a \\int d\\mathbf{w}_a \\delta (\\mathbf{w}_a^T \\mathbf{w}_a -N) \\prod_{\\mu=1}^M \\left[ \\exp (\\beta y_\\mu \\mathrm{sign} (\\mathbf{w}_a^T \\mathbf{x}_\\mu)) \\right]_{y_\\mu, \\mathbf{x}_\\mu} \\tag{4.11}\\] ",
+    "url": "/infostat/ml#statistical-mechanics",
+    
+    "relUrl": "/infostat/ml#statistical-mechanics"
+  },"1097": {
+    "doc": "機械学習",
+    "title": "\\(u_\\mu^{a=1, 2, \\cdots, n}\\) property",
+    "content": "ここで\\(u_\\mu^a \\equiv \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)を定義します。この変数が従う確率分布を計算してみましょう。 . \\[P (\\mathbf{u}_\\mu) = \\int d\\mathbf{x}_\\mu P(\\mathbf{x}_\\mu) \\prod_a \\delta (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu) = \\int d\\mathbf{x}_\\mu \\exp \\left( -\\frac{N}{2} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu + i \\sum \\tilde{u}_\\mu^a (u_\\mu^a - \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu)\\right) \\tag{4.12}\\] \\(e\\)の肩を計算しましょう。 . \\[-\\frac{N}{2} \\left( \\mathbf{x}_\\mu-i \\sum_a \\tilde{u}_\\mu^a \\frac{\\mathbf{w}_a}{N} \\right)^2 - \\frac{1}{2N} \\left( \\sum_a \\tilde{u}_\\mu^a \\mathbf{w}_a \\right)^2\\] より、(4.12)式は\\(\\mathbf{x}_\\mu\\)での積分が実行できて . \\[P(\\mathbf{u}_\\mu) \\propto \\int \\tilde{u}_\\mu^a \\exp \\left( -\\frac{1}{2N} \\sum_{a, b} \\tilde{u}_\\mu^a (\\mathbf{w}_a^T \\mathbf{w}_b) \\tilde{u}_\\mu^b + i \\sum_a u_\\mu^a \\tilde{u}_\\mu^a \\right) \\propto \\exp \\left( - \\frac{1}{2} \\sum_{a, b} u_\\mu^a (Q^{-1})_{ab} u_\\mu^b \\right) \\tag{4.13}\\] ここで\\(q_{ab} \\equiv \\frac{1}{N} \\mathbf{w}_a^T \\mathbf{w}_b\\)はこの系のスピングラス秩序パラメータ、\\(Q = (q_{ab})\\)はその行列です。(4.13)式の形から、\\(u_\\mu^a\\)は平均0、分散\\(q_{ab}\\)のガウス分布に従うことがわかります。これは中心極限定理と同じ形です。 . ",
+    "url": "/infostat/ml#u_mua1-2-cdots-n-property",
+    
+    "relUrl": "/infostat/ml#u_mua1-2-cdots-n-property"
+  },"1098": {
+    "doc": "機械学習",
+    "title": "Equivalence representation",
+    "content": "等価定理による表現は以下のようなものでした。 . \\[[f(\\mathbf{u}_\\mu)]_{\\mathbf{x}_\\mu, y_\\mu} = \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) f(\\mathbf{u}_\\mu) \\right]\\] これより . \\[[Z] = \\int dQ \\prod_a \\int d\\mathbf{w}_a \\prod_\\mu \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_a \\exp (\\beta y_\\mu \\mathrm{sign}(u_\\mu^a))\\right]_{y_\\mu} \\times \\prod_{a, b} \\delta (N q^{ab} - \\mathbf{w}_a \\cdot \\mathbf{w}_b) \\tag{4.14}\\] このようにすることで\\(u\\)の積分と\\(w\\)の積分に分けることができます。すると\\(\\prod_a \\int d\\mathbf{w}_a \\prod_{a, b} \\delta(Nq^{ab}-\\mathbf{w}_a \\cdot \\mathbf{w}_b)\\)の部分は、これまで計算してきたものと同じくエントロピーを表しているとわかります。これまでの計算と違いが現れているのは\\([\\cdots]_{y_\\mu}\\)の部分のみです。エネルギーの部分を\\(e^{-N\\beta e(Q)}\\)、エントロピー部分を\\(e^{NS(Q)}\\)とおくと . \\[[Z] = \\int dQ \\exp (-N \\beta e(Q) + N S(Q))\\] となります。 . ",
+    "url": "/infostat/ml#equivalence-representation",
+    
+    "relUrl": "/infostat/ml#equivalence-representation"
+  },"1099": {
+    "doc": "機械学習",
+    "title": "エネルギーの計算",
+    "content": "それではエネルギーの計算を進めていきましょう。 . \\[-\\beta e(Q) = \\frac{1}{N} \\log \\prod_{\\mu} \\left[ \\int d\\mathbf{u}_\\mu P(\\mathbf{u}_\\mu) \\prod_{a=1}^n e^{\\beta y_\\mu \\mathrm{sign} (u_\\mu^a)} \\right]_{y_\\mu} \\tag{4.15}\\] ここで\\(u_\\mu^a\\)の平均が0, 分散が\\(q^{ab} = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)ということと、レプリカ対称性 . \\[Q = \\left( \\begin{array}{cccc} 1 &amp; q &amp; \\cdots &amp; q \\\\ q &amp; 1 &amp; \\ddots &amp; \\vdots \\\\ \\vdots &amp; \\ddots &amp; \\ddots &amp; q\\\\ q &amp; \\cdots &amp; q&amp; 1 \\end{array} \\right)\\] より\\(u_\\mu^a = \\sqrt{q} z + \\sqrt{1-q} x_a\\)と表現することができます。ここで\\(z, x_a\\)は(0,1)のガウス分布に従う変数です。すると . \\[[u_\\mu^a] = 0\\] \\[\\begin{aligned} [u_\\mu^a u_\\mu^b] &amp;= [(\\sqrt{q} z + \\sqrt{1-q} x_a)(\\sqrt{q} z + \\sqrt{1-q} x_b)] = [q z^2] + \\sqrt{q(1-q)} [z(x_a+x_b)] + (1-q) [x_a x_b] \\\\ &amp;= q + (1-q) \\delta_{ab} \\end{aligned}\\] となります。よって\\(u_\\mu^a\\)を\\(z, x_a\\)で書き換えましょう。 . \\[-\\beta e(Q) = \\frac{M}{N} \\log \\left[ \\int D_z \\left( \\int D_x \\exp (\\beta y_\\mu \\mathrm{sign}(\\sqrt{q}z + \\sqrt{1-q}x))\\right)^n \\right]_{y_\\mu} \\tag{4.16}\\] \\(n\\)乗は\\(a = 1, 2, \\cdots, n\\)の場合の計算が全て一致することから出てきます。 機械学習の一般形として、エネルギーを\\(e^{-\\beta f(\\mathbf{w} \\cdot \\mathbf{x}_\\mu)}\\)と書くことができます。これは線形変換と非線形変換を施した形になっているため、これが一般形になっていることがわかります。これまでの議論から\\(u_\\mu^a = \\mathbf{w}_a \\cdot \\mathbf{x}_\\mu\\)と書け、これはさらに等価定理で\\(z, x_a\\)で表現することができます…という議論の進め方を(公式のように)覚えてしまえば、あとは手を動かすだけで研究ができます。 (4.18)式の変形をさらに進めます。 . \\[\\begin{align} -\\beta e(Q) &amp;= \\frac{M}{N} \\log \\left[ \\int D_z e^{\\log (\\cdots)^n} \\right] = \\frac{M}{N} \\log \\left[ \\int D_z e^{n \\log (\\cdots)} \\right] \\notag \\\\ &amp;\\xrightarrow{n \\rightarrow 0} \\frac{M}{N} \\log \\left[ \\int D_z (1 + n \\log (\\cdots)) \\right] = \\frac{M}{N} \\log \\left[ 1 + n \\int D_z \\log (\\cdots) \\right] \\notag \\\\ &amp;\\simeq \\frac{M}{N} \\log \\left[ e^{n \\int D_z \\log (\\cdots)} \\right] = \\frac{M}{N} n \\int D_z \\log (\\cdots) \\tag{4.17} \\end{align}\\] \\((\\cdots)\\)の中を整理しましょう。被積分関数の中にsignがあるので、場合分けが必要です。 . \\[\\int_{-\\infty}^{-\\sqrt{\\frac{q}{1-q}} z} D_x e^{-\\beta y_\\mu} + \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_x e^{\\beta y_\\mu} \\tag{4.18}\\] 相補誤差関数 . \\[H(x) = \\int_x^\\infty D_z \\tag{4.19}\\] を用いると . \\[H(-x) = \\int_{-x}^\\infty D_z = \\int_{-\\infty}^\\infty D_z - \\int_{-\\infty}^{-x} D_z \\underbrace{=}_{z \\rightarrow -z} 1 + \\int_\\infty^x D_x = 1 - H(x) \\tag{4.20}\\] より . \\[\\begin{align} (4.18) &amp;= e^{\\beta y_\\mu} H \\left( - \\sqrt{\\frac{q}{1-q}} z\\right) + \\left( \\int_{-\\infty}^\\infty D_z - \\int_{-\\sqrt{\\frac{q}{1-q}} z}^\\infty D_z\\right) e^{-\\beta y_\\mu} \\notag \\\\ &amp;= e^{\\beta y_\\mu} H \\left( -\\sqrt{\\frac{q}{1-q}} z \\right) + e^{-\\beta y_\\mu} \\left( 1- H \\left( -\\sqrt{\\frac{q}{1-q}} z\\right)\\right) \\notag \\\\ &amp;= e^{\\beta y_\\mu} \\left( 1- H \\left( \\sqrt{\\frac{q}{1-q}} z\\right)\\right) + e^{-\\beta y_\\mu} H\\left( \\sqrt{\\frac{q}{1-q}} z\\right) \\tag{4.21} \\end{align}\\] となります。以上より . \\[-\\beta e(Q) = \\alpha n \\left[ \\int D_z \\log (e^{-\\beta y_\\mu} H + e^{\\beta y_\\mu} (1-H)) \\right]_{y_\\mu} \\tag{4.22}\\] ここで\\(\\alpha \\equiv M/N, H \\equiv H (\\sqrt{\\frac{q}{1-q}} z)\\)です。 . ",
+    "url": "/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
+    
+    "relUrl": "/infostat/ml#エネルギーの計算"
+  },"1100": {
+    "doc": "機械学習",
+    "title": "エントロピーの計算",
+    "content": "残りのエントロピーの計算を行いましょう。 . \\[\\begin{align} &amp;\\prod_{a=1}^n \\int d\\mathbf{w}_a \\prod_{a\\neq b} \\delta (Nq - \\mathbf{w}_a^T \\mathbf{w}_b) \\prod_a \\delta (N- \\mathbf{w}_a^T \\mathbf{w}_a) \\notag \\\\ &amp;= \\prod_a \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( \\frac{1}{2} \\tilde{Q} \\sum_a (N-\\mathbf{w}_a \\mathbf{w}_a)\\right) \\exp \\left( -\\frac{\\tilde{q}}{2} \\sum_{a\\neq b} (Nq - \\mathbf{w}_a \\cdot \\mathbf{w}_b)\\right) \\tag{4.23} \\end{align}\\] \\(e\\)の肩の部分を整理すると . \\[\\frac{1}{2} nN \\tilde{Q} - \\frac{1}{2} \\tilde{q} q N n(n-1) - \\frac{\\tilde{Q}}{2} \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\frac{\\tilde{q}}{2} \\sum_{a \\neq b} \\mathbf{w}_a \\cdot \\mathbf{w}_b \\tag{4.24}\\] 最後の項を整理すると . \\[\\frac{\\tilde{q}}{2} \\left\\{ \\left( \\sum_a \\mathbf{w}_a\\right)^2 - \\sum_a \\mathbf{w}_a^2\\right\\} \\tag{4.25}\\] この\\((\\sum_a \\mathbf{w}_a)^2\\)の部分にHubbard-Stratonovich変換をして\\(\\sqrt{\\tilde{q}}\\mathbf{z} \\sum_a \\mathbf{w}_a\\)とすると . \\[(4.23) = \\int D_z \\prod_{a=1}^n \\int d\\mathbf{w}_a \\int d\\tilde{Q} \\int d\\tilde{q} \\exp \\left( nN \\left( \\frac{1}{2} \\tilde{Q} + \\frac{1}{2} q \\tilde{q} \\right) \\right) \\exp \\left( -\\frac{1}{2} (\\tilde{Q} + \\tilde{q}) \\sum_a \\mathbf{w}_a \\cdot \\mathbf{w}_a + \\sqrt{\\tilde{q}} \\mathbf{z} \\sum_a \\mathbf{w}_a \\right) \\tag{4.26}\\] 上式において\\(\\prod_a \\int d\\mathbf{w}_a \\exp (\\cdots)\\)の部分でガウス積分を実行すると\\(\\left( \\sqrt{\\frac{2\\pi}{\\tilde{Q} + \\tilde{q}}} \\exp \\left( \\frac{\\tilde{q} \\mathbf{z}^2}{2(\\tilde{Q} + \\tilde(q))}\\right)\\right)^{nN}\\)となります。計算していくと . \\[S(Q) = \\frac{1}{N} \\log \\prod_a \\int d\\mathbf{w}_a \\cdots = \\frac{n}{2} (\\tilde{Q} + q \\tilde{q}) - \\frac{n}{2} \\log(\\tilde{Q} + \\tilde{q}) + \\frac{n}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} \\tag{4.27}\\] ",
+    "url": "/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AE%E8%A8%88%E7%AE%97",
+    
+    "relUrl": "/infostat/ml#エントロピーの計算"
+  },"1101": {
+    "doc": "機械学習",
+    "title": "エントロピーに鞍点法を適用",
+    "content": "\\[\\frac{\\partial S}{\\partial \\tilde{Q}} = \\frac{1}{2} - \\frac{1}{2} \\frac{1}{\\tilde{Q} + \\tilde{q}} - \\frac{1}{2} \\frac{\\tilde{q}}{\\tilde{Q} + \\tilde{q}} = 0 \\ \\Longrightarrow \\  \\therefore \\ 1 = \\frac{1}{\\tilde{Q} + \\tilde{q}} + \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.28}\\] \\[\\frac{\\partial S}{\\partial \\tilde{q}} = \\frac{1}{2} q - \\frac{\\tilde{q}}{2 (\\tilde{Q} + \\tilde{q})^2} = 0 \\ \\Longrightarrow \\  \\therefore \\ q = \\frac{\\tilde{q}}{(\\tilde{Q} + \\tilde{q})^2} \\tag{4.29}\\] 以上より . \\[1-q = \\frac{1}{\\tilde{Q} + \\tilde{q}}, \\ q = (1-q^2) \\tilde{q} \\tag{4.30}\\] という恒等式を得ます。 . ",
+    "url": "/infostat/ml#%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
+    
+    "relUrl": "/infostat/ml#エントロピーに鞍点法を適用"
+  },"1102": {
+    "doc": "機械学習",
+    "title": "エネルギーに鞍点法を適用",
+    "content": "(4.21)式よりエネルギーは以下のように書けたのでした。 . \\[-\\beta e(Q) = \\alpha n \\int D_z \\log(e^{-\\beta} H + e^{\\beta}(1-H))\\] ここで\\(H = H (\\sqrt{\\frac{q}{1-q}}z)\\)です。logの中身を\\(Y\\)と定義すると、エントロピー項から\\(\\frac{1}{2} q \\tilde{q}\\)が出てくることを合わせて . \\[\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\alpha \\int D_z \\frac{1}{Y} \\left[ e^{-\\beta} - e^\\beta \\right] H' \\left( \\frac{1}{2} \\frac{z}{\\sqrt{q} \\sqrt{1-q}} + \\frac{1}{2} \\frac{\\sqrt{q}z}{(1-q)^{3/2}}\\right) = 0 \\tag{4.31}\\] ここで . \\[\\int D_z z f(az) = \\int D_z a f'(az)\\] を用いると . \\[\\begin{align} &amp;\\frac{\\partial e}{\\partial q} = \\frac{1}{2} \\tilde{q} + \\frac{\\alpha}{2} \\int D_z \\left[ \\frac{e^{-\\beta}-e^\\beta}{Y} H'' \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right) - \\frac{1}{Y^2} (e^{-\\beta} -e^\\beta)^2 (H')^2 \\left( \\frac{1}{1-q} + \\frac{q}{(1-q)^2}\\right)\\right] = 0 \\notag \\\\ &amp;\\Longrightarrow \\  \\tilde{q} = - \\frac{\\alpha}{(1-q)^2} \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.32} \\end{align}\\] (4.30), (4.32)式より . \\[q = -\\alpha \\int D_z \\left[ \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H'' - \\left( \\frac{1}{Y} (e^{-\\beta} - e^\\beta) H' \\right)^2\\right] \\tag{4.33}\\] これは\\(q\\)についての自己無撞着方程式になっています。この式において\\(\\beta \\rightarrow \\infty\\)を考えましょう。すると\\(Y = e^{-\\beta} H + e^\\beta (1-H)\\)より . \\[q \\rightarrow \\alpha \\int D_z \\left( \\frac{H''}{1-H} - \\left( \\frac{H'}{1-H}\\right)^2\\right) \\tag{4.34}\\] となります。\\(\\beta \\rightarrow \\infty\\)極限の\\(q\\)を横軸\\(\\alpha\\)で図示すると以下のようになります。 . この図の再現ができない...どこかで計算ミス？それとも作成したスクリプトのアルゴリズムの問題？ . この図から、\\(\\alpha &gt; 2\\)でスピン秩序パラメータが\\(q=1\\)に凍結することを表しています。ここで\\(q = \\frac{1}{N} \\mathbf{w}_a \\mathbf{w}_b\\)です。この意味を考えるために、2種類のデータを分類することを考えましょう。\\(\\alpha = M/N\\)より、\\(\\alpha\\)はデータの数に比例しています。これが大きいとデータ分類の境界線がある狭い領域にのみ現れるようになり、同じ答えしか出せなくなります。これはパーセプトロンの性能限界を表していることがわかります。 . ",
+    "url": "/infostat/ml#%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AB%E9%9E%8D%E7%82%B9%E6%B3%95%E3%82%92%E9%81%A9%E7%94%A8",
+    
+    "relUrl": "/infostat/ml#エネルギーに鞍点法を適用"
+  },"1103": {
+    "doc": "機械学習",
+    "title": "Hidden Manifold Model (arXiv: 2002.09339)",
+    "content": "これまで行ってきた計算には実は大問題があります。 . ",
+    "url": "/infostat/ml#hidden-manifold-model-arxiv-200209339",
+    
+    "relUrl": "/infostat/ml#hidden-manifold-model-arxiv-200209339"
+  },"1104": {
+    "doc": "機械学習",
+    "title": "古典的なモデル",
+    "content": "入力データがガウス分布に従っているとして . \\[P (\\mathbf{x}_\\mu) = \\sqrt{\\frac{N}{2\\pi}} \\exp \\left( - \\frac{1}{2N} \\mathbf{x}_\\mu^T \\mathbf{x}_\\mu \\right)\\] さらに出力は . \\[P(y_\\mu) = \\frac{1}{2} (\\delta (y_\\mu -1) + \\delta (y_\\mu + 1) ) \\ \\mathrm{or} \\  y_\\mu = \\left\\{ \\begin{array}{ll} \\mathrm{sign} (\\mathbf{w}_0^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Teacher}) \\\\ \\mathrm{sign} (\\mathbf{w}^T \\mathbf{x}_\\mu) &amp; (\\mathrm{Student}) \\end{array} \\right.\\] のように、教師モデルを模倣して生徒もモデルを考えます。これは古典的なモデルとして、1990年代にたくさん計算されました。 . ",
+    "url": "/infostat/ml#%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
+    
+    "relUrl": "/infostat/ml#古典的なモデル"
+  },"1105": {
+    "doc": "機械学習",
+    "title": "現実的なモデル",
+    "content": "しかし、現実は異なります。古典的な方法論に従って、複雑なモデルがたくさん生み出されました。しかし、それはこの機械学習の本質ではなく、これは現実を表すための重要な側面とは言えませんでした。重要なのはデータです。これまでの計算で用いられてきたランダムな分布のデータというものは本来ありえません(例えば、猫の画像は猫の構造を持っており、その時点でランダムではありません)。 \\(x, y\\)は何かしらの相関を持っており、そのような関係性がないデータを学習しても意味がありません。Hidden Manifold Modelとは\\(x, y\\)が何かしらの鍵を用いて生成されていると考えます。 . 簡単なものとして以下のようなものがあります。入力は . \\[\\mathbf{x}_\\mu = \\sigma \\left( \\frac{1}{\\sqrt{d}}F \\cdot \\mathbf{C}_\\mu \\right) \\qquad (F \\in \\mathbb{R}^{d \\times \\rho}, \\mathbf{C} \\in \\mathbb{R}^\\rho) \\tag{4.35}\\] そして出力は、入力と相関する形として . \\[y_\\mu = f\\left( \\frac{1}{\\sqrt{d}} \\mathbf{C}_\\mu^T \\mathbf{w}_0 \\right) \\tag{4.36}\\] 本質的なものは深い複雑な構造にあるのではなくて、データの相関にあるということを覚えておきましょう。 . 機械学習が上手くその性能を発揮しない背景には、入力と出力の相関が無いようなデータを持ってきていることが挙げられます。 深層学習の構造はどのような関数も近似できる(Universal approximator)ので、原理的にはどのような問題も最適化できるはずです。 . ",
+    "url": "/infostat/ml#%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E3%83%A2%E3%83%87%E3%83%AB",
+    
+    "relUrl": "/infostat/ml#現実的なモデル"
+  },"1106": {
+    "doc": "機械学習",
+    "title": "Statistical Mechanics",
+    "content": "以降の文章は未完です。そのうち、授業で紹介された論文を読みつつ式を追います。 . (4.34), (4.35)から分配関数を計算します。 . \\[Z = \\int d\\mathbf{w} \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right)\\] ここでエネルギー部分に . \\[E(\\mathbf{w}) = \\frac{1}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x})^2 + \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w}\\] のように余分な項を付け足すことで過適合(overfitting)を避けます。レプリカ法を用いて . \\[[Z^n]_{\\mathbf{C}} = \\prod_a \\int d\\mathbf{w} \\left[ \\exp \\left( -\\frac{\\beta}{2} \\sum_\\mu (y_\\mu - \\mathbf{w} \\cdot \\mathbf{x}_\\mu)^2\\right) \\right]_{\\mathbf{C}} \\exp \\left( - \\frac{\\lambda}{2} \\mathbf{w}^T \\mathbf{w} \\right)\\] この計算においては\\(y\\)も\\(C\\)と\\(w\\)の内積になっているので、注意が必要です。ここではGaussian Equivalent Theorem(GET)という計算テクニックを用います。 . \\[\\lambda_\\mu^a = \\frac{1}{\\sqrt{d}} \\mathbf{w}_a^T \\sigma (\\frac{1}{\\sqrt{d}} F^T \\mathbf{C}_\\mu^T)\\] これから . \\[P(\\mathbb{\\lambda}_\\mu, \\nu_\\mu) \\propto \\exp \\left( -\\frac{1}{2} \\sum_{a, b} \\lambda_\\mu^a (A_\\mu^{-1})_{ab} \\lambda_\\mu^b- \\frac{1}{2} \\nu_\\mu A_0^{-1} \\nu_\\mu - \\frac{1}{2} \\sum_a \\nu_\\mu \\mathbf{B}_\\mu^T \\mathbf{\\lambda}_\\mu^a\\right)\\] ここで\\(A_n = \\frac{a^2}{d} \\mathbf{w}^a \\mathbf{w}^b+ \\frac{b^2}{d}\\mathbf{s}^a \\mathbf{s}^b, A_0 = \\frac{1}{d} \\mathbf{w}_0^T \\mathbf{w}_0, \\mathbf{B}_n = \\frac{b}{d} \\mathbf{s}^a \\cdot \\mathbf{w}_0\\)などです。 . ",
+    "url": "/infostat/ml#statistical-mechanics-1",
+    
+    "relUrl": "/infostat/ml#statistical-mechanics-1"
+  },"1107": {
+    "doc": "機械学習",
+    "title": "Appendix 1: \\(0&lt;n&lt;1\\)の系",
+    "content": "以前の講義で\\(n=0\\)はquenched系、\\(n=1\\)のannealed系に対応すると学びました。しかし、\\(0 &lt; n &lt;1\\)の系も存在します。これをpartial annealed系と呼びます。どちらの変数も動くが、動くスピードが違う(ゆっくり動く)とイメージできます。データを変えながら最適化を行う場合には、このような中途半端な\\(n\\)の値の系が実際の機械学習の系ではないかとされています。 . ",
+    "url": "/infostat/ml#appendix-1-0n1%E3%81%AE%E7%B3%BB",
+    
+    "relUrl": "/infostat/ml#appendix-1-0n1の系"
+  },"1108": {
+    "doc": "機械学習",
+    "title": "Appendix 2: レプリカ法のアプリケーション例",
+    "content": "量子アニーリングを用いて最適化問題を解く(イジングの基底状態を求める)という応用例があることから、量子ゆらぎの計算を導入します。その時の計算方法にレプリカ法が用いられます。最近ではAdS/CFT対応の文脈でもレプリカ法が用いられており、論文数が増えていると言われています。 . ",
+    "url": "/infostat/ml#appendix-2-%E3%83%AC%E3%83%97%E3%83%AA%E3%82%AB%E6%B3%95%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%BE%8B",
+    
+    "relUrl": "/infostat/ml#appendix-2-レプリカ法のアプリケーション例"
+  },"1109": {
+    "doc": "機械学習",
+    "title": "参考文献及びリンク",
+    "content": ". | [1] 大関真之 YouTube動画 “Statistical physics and information processing vol. 3 (情報統計物理) 【Tokyo Tech Lecture Live Streaming】” | . ",
+    "url": "/infostat/ml#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E3%81%B3%E3%83%AA%E3%83%B3%E3%82%AF",
+    
+    "relUrl": "/infostat/ml#参考文献及びリンク"
+  },"1110": {
+    "doc": "機械学習",
+    "title": "機械学習",
+    "content": ". | 機械学習 (Machine Learning) . | 教師あり学習 (Supervised learning) | Loss function (error, 損失関数、誤差関数) | Perceptron (パーセプトロン) | Statistical Mechanics | \\(u_\\mu^{a=1, 2, \\cdots, n}\\) property | Equivalence representation | エネルギーの計算 | エントロピーの計算 | エントロピーに鞍点法を適用 | エネルギーに鞍点法を適用 | . | Hidden Manifold Model (arXiv: 2002.09339) . | 古典的なモデル | 現実的なモデル | Statistical Mechanics | . | Appendix 1: \\(0&lt;n&lt;1\\)の系 | Appendix 2: レプリカ法のアプリケーション例 | 参考文献及びリンク | . ",
+    "url": "/infostat/ml",
+    
+    "relUrl": "/infostat/ml"
   },"1111": {
     "doc": "数理最適化",
     "title": "数理最適化 (Mathematical Optimization)",
@@ -10583,68 +10583,68 @@
     
     "relUrl": "/math/rayleigh_expansion"
   },"1512": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
-    "url": "/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
-    
-    "relUrl": "/cosmo/redshift#赤方偏移"
-  },"1513": {
-    "doc": "赤方偏移",
-    "title": "光の経路",
-    "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
-    "url": "/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
-    
-    "relUrl": "/cosmo/redshift#光の経路"
-  },"1514": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
-    "url": "/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
-    
-    "relUrl": "/cosmo/redshift#赤方偏移-1"
-  },"1515": {
-    "doc": "赤方偏移",
-    "title": "赤方偏移",
-    "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
-    "url": "/cosmo/redshift",
-    
-    "relUrl": "/cosmo/redshift"
-  },"1516": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": " ",
     "url": "/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
     
     "relUrl": "/gr/redshift#重力赤方偏移"
-  },"1517": {
+  },"1513": {
     "doc": "重力赤方偏移",
     "title": "計算",
     "content": "測地線方程式より . \\[\\frac{dp_\\nu}{dx^0} = \\frac{1}{2p^0} p^\\mu p^\\beta g_{\\beta \\mu, \\nu}\\] これの第0成分を考えましょう。ただしメトリックテンソルが弱重力場極限 . \\[(g^{\\mu \\nu}) = \\left( \\begin{array}{cccc} -(1-2\\Phi / c^2) &amp; &amp; &amp; {\\bf 0}\\\\ &amp; 1+2\\Phi/c^2 &amp; &amp; \\\\ &amp; &amp; 1+2\\Phi/c^2 &amp; \\\\ {\\bf 0} &amp; &amp; &amp; 1+2\\Phi/c^2 \\end{array} \\right)\\] で書けるものとします。 光子の周波数は局所慣性系で定義します。すなわち . \\[p^0 = \\frac{d\\bar{x}^0}{d\\lambda} = \\frac{h\\nu}{c}\\] です。光子のエネルギーを\\(\\epsilon = h\\nu\\)で表します。局所慣性系では\\(\\bar{p}_0 = \\eta_{00} \\bar{p}^0 = -\\epsilon/c\\)であり、一般座標への変換則は . \\[p_0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\bar{p}_\\mu\\] 変換係数は、局所慣性系から一般座標系へのメトリックテンソルの変換で与えられる以下の連立方程式を解くことで得られます。 . \\[g_{00} = -(1+2\\Phi/c^2) = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^0} \\eta_{\\mu \\nu} \\tag{1}\\] \\[g_{0i} = 0 = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^0} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^i} \\eta_{\\mu \\nu} \\tag{2}\\] \\[g_{ij} = (1-2\\Phi/c^2)\\delta_{ij} = \\frac{\\partial \\bar{x}^\\mu}{\\partial x^i} \\frac{\\partial \\bar{x}^\\nu}{\\partial x^j} \\eta_{\\mu \\nu} \\tag{3}\\] そして . \\[\\frac{\\partial \\bar{x}^0}{\\partial x^0} = 1+\\Phi /c^2, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^0} = 0, \\ \\frac{\\partial \\bar{x}^0}{\\partial x^i} = 0, \\ \\frac{\\partial \\bar{x}^i}{\\partial x^j} = (1-\\Phi /c^2) \\delta_{ij}\\] が、\\(|\\Phi/c^2|\\)の1次までで、上の方程式群を満たす解の一つであることがわかります。 ここで変換係数は\\(4\\times 4\\)行列で16個の未定成分を持ちますが、それを決定する方程式(1)~(3)式はメトリックテンソルが対称であるため、独立のものは10個のみです。したがって変換係数のうちの6個は未定となります。この6つはそれぞれ\\(x, y, z\\)軸周りの座標回転の自由度3つと\\(x, y, z\\)軸方向にそれぞれ等速直線運動する系へのローレンツ変換の自由度3つの合計6つの自由度に対応しています。よって、これらの変換を施しても同じメトリックが与えられることが予想できます。ここでは変換行列の非対角要素を0としましたが、これは出発点として使用した局所慣性系に対して相対運動をしておらず、空間の各軸は直行しているという自然な仮定を暗黙のうちにしていることに対応します。 . よって . \\[p_0 = -(1+\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] 簡単のために光子の進行方向を\\(x_1\\)方向とし、重力レンズ効果による経路の曲がりが小さく、直進すると仮定する近似を適用します(ボルン近似)。測地線方程式より . \\[-\\frac{d}{dx^0} ((1+\\frac{\\Phi}{c^2}) \\epsilon) = \\frac{1}{2} g_{\\alpha \\beta, 0} \\frac{p^\\alpha p^\\beta}{p^0} = \\frac{1}{2} (g_{00,0}p^0 + g_{11, 0} \\frac{(p^1)^2}{p^0}) = \\frac{1}{p^0} (-\\frac{\\dot{\\Phi}}{c^3} (p^0)^2 -\\frac{\\dot{\\Phi}}{c^3} (p^1)^2)\\] ここで . \\[0 = g_{\\mu \\nu} p^\\mu p^\\nu = -(1+\\frac{2\\Phi}{c^2}) (p^0)^2 + (1-\\frac{2\\Phi}{c^2}) (p^1)^2\\] を用いて\\((p^1)^2\\)を消去すると . \\[\\frac{d}{dx^0}((1+\\frac{\\Phi}{c^2})\\frac{\\epsilon}{c}) = \\frac{2\\dot{\\Phi}}{c^3} p^0\\] となります。さらに . \\[p^0 = g^{00} p_0 = - (1-\\frac{2\\Phi}{c^2}) p_0 \\simeq (1-\\frac{\\Phi}{c^2}) \\frac{\\epsilon}{c}\\] を代入し、整理すると . \\[\\frac{d}{dt} (\\epsilon + \\epsilon \\frac{\\Phi}{c^2}) =\\frac{2\\epsilon}{c^2} \\frac{\\partial \\Phi}{\\partial t} \\tag{4}\\] となります。これが重力場中を伝搬する光子のエネルギーの発展方程式です。 . ",
     "url": "/gr/redshift#%E8%A8%88%E7%AE%97",
     
     "relUrl": "/gr/redshift#計算"
-  },"1518": {
+  },"1514": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": "(4)の式に置いて重力ポテンシャルが時間に依存しないとき、右辺は0になります。したがって光子の全力学的エネルギー\\(\\epsilon + \\epsilon \\Phi/c^2\\)が保存します。第2項は重力ポテンシャルエネルギーです。 . 重力ポテンシャルエネルギーが低い場所から光子が出発し、重力に逆らってポテンシャルエネルギーが高いところへ移動するにつれて光子のエネルギーが小さくなります。端的に言えば、光の波長が伸びることになり、これを重力赤方偏移と呼びます。 . 宇宙論ではザックス・ヴォルフェ効果(Sachs-Wolfe effect)として、CMBの温度揺らぎの大角度スケールの揺らぎの振幅の決定に重要な役割を果たします。 . ",
     "url": "/gr/redshift#%E9%87%8D%E5%8A%9B%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
     
     "relUrl": "/gr/redshift#重力赤方偏移-1"
-  },"1519": {
+  },"1515": {
     "doc": "重力赤方偏移",
     "title": "積分ザックス・ヴォルフェ効果",
     "content": "(4)式の右辺は、光子が伝搬する途中で重力ポテンシャルが時間 変化することで光子のエネルギー変化を生じる効果を示しています。宇宙では、銀河や銀河団といった巨大な質量をもった天体は、固有速度を持って宇宙空間を運動しています。これら天体の背景の天体から放出された光が、これらの天体の通過する時に重力ポテンシャルの時間変化を感じ光子のエネルギーが変化します。 増減は、人工衛星のスイングバイの場合と同じで、衝突方向の入射でエネルギーが増加即ちブルーシフトし、追突方向の入射で減少即ちレッドシフトします。光が重力源により散乱される事でエネルギーが増減する効果なので重力散乱とも呼びます。 宇宙に存在する天体は、インフーレーションと呼ばれる宇宙創成期に量子揺らぎによって生成された物質密度のシワが、重力によって徐々に集まってきて形成されたと考えられています。もし宇宙のエネルギーが物質だけで構成され、幾何学的に平坦であるなら、揺らぎの振幅が十分小さい線形段階の揺らぎの成長過程で重力ポテンシャルは時間変化しません。観測から現在の宇宙は、幾何学的に平坦であるが、宇宙のエネルギーは物質がおよそ30%で残り70%はダークエネルギーと呼ばれる正体不明でその重力により宇宙を加速させる物質で構成されていることが明らかになっています。ダークエネルギーが存在すると揺らぎの振幅が十分小さい線形段階の揺らぎの成長段階の重力ポテンシャルに時間変化が生じます。そのため、CMBが我々に届く間にこの重力ポテンシャルの時間変化を感じてそのエネルギーに変化を生じます。密度揺らぎの進化によって生じる重力ポテンシャルの時間変化であるため、伝搬する方向によってどれだけエネルギーが変化するか異なります。この結果、CMBの温度揺らぎに特徴的な情報が刻印されます。伝搬過程での重力ポテンシャルの時間変化の積算量が観測されるのでこの効果を後期積分ザックス・ヴォルフェ効果(late integrated Sachs-Wolfe effect)と呼びます。これを利用してCMBの温度揺らぎの詳細を観測することでダークエネルギーに関する情報を引き出すことができます。 CMBが放たれる宇宙晴れ上がり期は物質優勢期ですが、輻射のエネルギー密度も宇宙膨張へ無視し得ない影響を持ちます。そのため宇宙晴れ上がり期からしばらくの期間は、密度揺らぎの成長に伴う重力ポテンシャルの時間変化が現れます。この結果、CMBの温度揺 らぎに特徴的なパターンが刻印されます。この効果を前期積分ザックス・ヴォルフェ効果(early integrated Sachs-Wolfe effect)と呼ばれ、宇宙の物質密度の測定に用いられます。 . ",
     "url": "/gr/redshift#%E7%A9%8D%E5%88%86%E3%82%B6%E3%83%83%E3%82%AF%E3%82%B9%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A7%E5%8A%B9%E6%9E%9C",
     
     "relUrl": "/gr/redshift#積分ザックスヴォルフェ効果"
-  },"1520": {
+  },"1516": {
     "doc": "重力赤方偏移",
     "title": "重力赤方偏移",
     "content": ". | 重力赤方偏移 . | 計算 | 重力赤方偏移 | 積分ザックス・ヴォルフェ効果 | . | . ",
     "url": "/gr/redshift",
     
     "relUrl": "/gr/redshift"
+  },"1517": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": "ここでは宇宙論的な赤方偏移(cosmological redshift)を導出しています。 . ",
+    "url": "/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB",
+    
+    "relUrl": "/cosmo/redshift#赤方偏移"
+  },"1518": {
+    "doc": "赤方偏移",
+    "title": "光の経路",
+    "content": "光は\\(ds^2 = 0\\)の経路を通るので . \\[ds^2 = -c^2 dt^2 + a^2 (t) (\\frac{dr^2}{1-Kr^2} r^2 (d\\theta^2 + \\sin^2 \\theta)) = 0\\] \\(d\\theta = d\\varphi = 0\\)で光が直進しているとすると . \\[cdt = - \\frac{a(t) dr}{\\sqrt{1-Kr^2}} = -a(t) d\\chi \\ \\Longrightarrow \\  d\\chi = -\\frac{cdt}{a(t)}\\] ",
+    "url": "/cosmo/redshift#%E5%85%89%E3%81%AE%E7%B5%8C%E8%B7%AF",
+    
+    "relUrl": "/cosmo/redshift#光の経路"
+  },"1519": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": "この両辺を積分します。\\(t_1\\)に発せられた光が\\(t_0\\)に観測者に到達すると考えます。光源までの距離を\\(\\chi_1\\)とすると . \\[\\int_{t_1}^{t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] 同じく、\\(t_1 + \\Delta t_1\\)に発せられた光が\\(t_0 + \\Delta t_0\\)に観測者に到達すると考えると、同様に . \\[\\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt = -\\int_{\\chi_1}^0 d\\chi = \\chi_1\\] この2式の両辺を引くと . \\[\\begin{aligned} \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt -\\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt &amp;= \\int_{t_1 + \\Delta t_1}^{t_0 + \\Delta t_0} \\frac{c}{a(t)}dt + \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_0}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt - \\int_{t_1 }^{t_0 } \\frac{c}{a(t)} dt \\\\ &amp;= \\int_{t_0}^{t_0 + \\Delta t_0} \\frac{c}{a(t)} dt -\\int_{t_1}^{t_1 + \\Delta t_1} \\frac{c}{a(t)} dt \\end{aligned}\\] \\(\\Delta t_0, \\Delta t_1\\)は光の周期くらい短いと考えて、宇宙膨張を示すパラメータ\\(a(t)\\)は積分範囲内で定数と考えると\\(c\\Delta t = \\lambda, a(t_0) = 1\\)より . \\[\\frac{c\\Delta t_1}{a(t_1)} = \\frac{\\lambda_1}{a(t_1)} = \\frac{c\\Delta t_0}{a(t_0)} = \\lambda_0\\] 赤方偏移を\\(1/a(t_1) \\equiv 1+ z_1\\)とすると . \\[\\lambda_0 = \\lambda_1 (1+z_1)\\] 振動数に直すと . \\[\\nu_0 = \\frac{\\nu_1}{1+z_1}\\] これが宇宙膨張による光の赤方偏移、cosmological redshiftです。 . ",
+    "url": "/cosmo/redshift#%E8%B5%A4%E6%96%B9%E5%81%8F%E7%A7%BB-1",
+    
+    "relUrl": "/cosmo/redshift#赤方偏移-1"
+  },"1520": {
+    "doc": "赤方偏移",
+    "title": "赤方偏移",
+    "content": ". | 赤方偏移 . | 光の経路 | 赤方偏移 | . | . ",
+    "url": "/cosmo/redshift",
+    
+    "relUrl": "/cosmo/redshift"
   },"1521": {
     "doc": "相対論的ビーミング効果",
     "title": "相対論的ビーミング",
@@ -14664,230 +14664,272 @@
     
     "relUrl": "/gr/weakfield"
   },"2095": {
+    "doc": "白色矮星",
+    "title": "白色矮星",
+    "content": "ここでは、コンパクト天体の1つである白色矮星の特徴をまとめています。 . ",
+    "url": "/compact/white_dwarfs#%E7%99%BD%E8%89%B2%E7%9F%AE%E6%98%9F",
+    
+    "relUrl": "/compact/white_dwarfs#白色矮星"
+  },"2096": {
+    "doc": "白色矮星",
+    "title": "観測的特徴",
+    "content": "白色矮星は、初期質量が\\(\\sim 8 M_\\odot\\)より小さい恒星が、AGB段階で水素を多く含む外層のほとんどを失い中心核だとなった恒星です。 そのため、核融合反応は起こしていません。 内部は電子の縮退圧で支えられており、構造は温度にほとんど依存しないことから、重力収縮をせずにゆっくりと冷えつつある段階です。 電子の縮退した中心核では、電子による熱伝導が非常に良いため、ほぼ等温になっています。 その外側に薄いヘリウムの層と水素の層が存在し、その中で温度が中心温度\\((10^6 \\sim 10^8 \\mathrm{K})\\)から表面温度へと変化します。 この薄い外挿は、中心核の温度を保つブランケットのはたらきをします。 白色矮星の進化経路 (cooling sequence) は、HR図上で、高温で明るい惑星状星雲中心核領域から主系列の高温側に主系列とほぼ平行に、暗く温度が低い領域へと伸びています。 . Gaia Collaboration (2018)より。上図はHR図全体、下図は白色矮星部分のみを拡大したもの。 . 白色矮星の典型的な半径は\\(\\sim 10^{-2} R_\\odot\\)で、典型的な表面温度は\\(\\sim 4 \\times 10^3 \\sim 10^5 \\mathrm{K}\\)の範囲を持ちます。 典型的な質量は\\(\\sim 0.6 M_\\odot\\)で、平均密度は太陽の\\(10^6\\)倍程度になります。 また表面重力は\\(\\log g \\sim 8\\)です。 白色矮星の自転は遅く、自転周期は数時間以上です。 太陽が仮に角運動量を保存したまま白色矮星サイズになったとすると、自転周期は数分程度になるはずです。 このことは、主系列星から白色矮星に至る進化の途中で、角運動量の多くが失われてなくてはならないことを意味します。 また、白色矮星には周期\\(100 \\sim 10^3\\)秒で変光を示すものが多くあります。 これは、白色矮星の薄い外層の非動径方向のgモード振動によるもので、その観測から質量・自転周期・水素外層の厚さ・冷却時間スケールなどの情報を引き出すことができます。 また白色矮星の10%以上が、\\(10 \\mathrm{KG} \\sim 10^9 \\mathrm{G}\\)の磁場を持つことが知られています。 白色矮星は、DA, DB, DC, DO, DZ, DQのようにスペクトル分類されます。 . | DA: 水素のバルマー線だけが観測され、ヘリウムや金属線は観測されません。白色矮星の80%凍度がDA型白色矮星に分類されます。強い重力により最も軽い水素が浮き上がり、純粋に近い水素の層を作っています。その層の厚さは\\(10^{-4} M_\\odot\\)以下であり、その下には純粋に近いヘリウムの層が存在すると推測されています。 | DB: 中性ヘリウムのスペクトル線が強く、水素または金属の輝線は観測されません。つまり、この白色矮星の大気はほぼ純粋なヘリウムで構成されています。全体の約20%がDB型白色矮星です。白色矮星のほとんどはDA, DBに分類されます。 | DC: 連続スペクトルで、目立つ輝線が見られないのが特徴です。 | DO: HeIIのスペクトル輝線が支配的に見られます。これは高温\\((T \\sim 10^5 \\mathrm{K})\\)の白色矮星です。 | DZ: 金属による輝線だけが観測されます。 | DQ: 炭素、または炭素を含む分子のスペクトル線が見られます。 | . その他にも、以下のような記号が用いられます。 . | P: 偏光が観測される強磁場白色矮星です。 | H: 偏光が観測されない強磁場白色矮星です。 | X: 特異なスペクトルや、分類不能なものを、Xと表します。 | E: 輝線が見られます。 | ?: 分類が不確定なものを表します。 | V: 変光をする場合に記載される記号です。 | . 白色矮星の表面元素組成は、対流外層の勢力や水素の浮揚効果により、白色矮星進化の途中でも変化する場合があります。 比較的温度の低い白色矮星では、(周囲の水素をイオン化しないため)星間物質からの降着 (\\(\\sim 10^{-17} M_\\odot / \\mathrm{yr}\\))を受け、それによる表面元素組成変化の効果も重要となる可能性もあります。 \\(T_\\mathrm{eff}\\)が30000-45000Kの領域はDBギャップと呼ばれ、その領域ではDB型白色矮星は存在しません。 それはわずかに外層に混合していた水素が浮き上がってきて、表面に純粋な水素の層を形成するためと考えられています。 30000Kよりも低くなると、\\({}^+ \\mathrm{He}\\)の不完全電離層により対流が発生します。 すると水素層が薄い場合は混合から表面がほとんどヘリウムとなり、DB型白色矮星となります。 比較的\\(T_\\mathrm{eff}\\)の低い領域では、DA型白色矮星の割合が表面温度が下がるほど小さくなる傾向にあります。 これは、低温になると水素電離に伴う表面対流層が発達するためです。 水素の層が薄いものほど高い表面温度で、下のヘリウム層との混合が起こり、水素層が薄い場合は水素の層がなくなるためと推測されます。 . Liebert et al. (1988)より。白色矮星の有効温度分布を示したもの。 Bergeron et al. (1997)より。DA型とそうでないものの、有効温度に対する頻度分布。 . ",
+    "url": "/compact/white_dwarfs#%E8%A6%B3%E6%B8%AC%E7%9A%84%E7%89%B9%E5%BE%B4",
+    
+    "relUrl": "/compact/white_dwarfs#観測的特徴"
+  },"2097": {
+    "doc": "白色矮星",
+    "title": "質量-半径関係",
+    "content": "白色矮星の質量と半径の関係は、電子の縮退とチャンドラセカール限界質量のページをご覧ください。 これによると、白色矮星の限界質量は . \\[M_\\mathrm{Ch} = 1.46 \\left( \\frac{2}{\\mu_\\mathrm{e}}\\right)^2 M_\\odot\\] のようになります。 しかしこの議論では、原子核の効果が無視されています。 実際の白色矮星内部では、原子核の電荷はその静電場により電子を引き寄せるため、電子の自由な運動を妨げる効果を持ちます。 そのため、原子核の効果を無視した場合に比べ圧力は小さくなり、ある質量に対する白色矮星の半径も小さくなります。 この効果は、白色矮星を構成する原子核が重たい原子核であるほど、大きくなります。 . Shapiro &amp; Teukolsky, “Black Holes, White Dwarfs, and Neutron Stars”より。上表は、各種原子核が中性子化あるいは中性子過剰原子核になるのに必要なエネルギーと質量密度。真ん中図は、実際に観測されている白色矮星を、質量-半径の図にプロットしたもの。実線はゼロ温度での\\({}^{4} \\mathrm{He}, {}^{12} \\mathrm{C}, {}^{24} \\mathrm{Mg}, {}^{56} \\mathrm{Fe}\\)からなるモデルでの質量-半径関係の曲線。下図は真ん中図と同じものを、横軸を密度の対数、縦軸を質量にしたもの。 . 白色矮星の質量が増加し、限界質量近くになったとしましょう。 すると密度が非常に大きいため、温度が低くても種々の原子核反応が起こります。 中心付近に炭素が含まれている場合、\\(\\rho \\gtrsim 10^{10} \\mathrm{g/cm^3}\\)になると\\({}^{12} \\mathrm{C} + {}^{12} \\mathrm{C}\\)の反応が爆発的に起こり、Ia型超新星爆発が起こります。 このとき、星の全エネルギーが正となり、星全体が飛び散ってしまいます。 また炭素がなくO, Ne, Mgなどからなる場合は、電子が原子核に取り込まれ、中性子過剰な原子核になっていきます。 このとき、圧力を担っている電子の数が減少するため、収縮が起こりさらに電子捕獲が進みます。 そのため、白色矮星はつぶれ、中性子星になります。 . ",
+    "url": "/compact/white_dwarfs#%E8%B3%AA%E9%87%8F-%E5%8D%8A%E5%BE%84%E9%96%A2%E4%BF%82",
+    
+    "relUrl": "/compact/white_dwarfs#質量-半径関係"
+  },"2098": {
+    "doc": "白色矮星",
+    "title": "質量分布",
+    "content": "連星系を構成していない単独の白色矮星の質量は、水素バルマー線の形状を用いて評価されます。 白色矮星のスペクトル線は、白色矮星大気の密度が高いために周囲の粒子からの摂動によって広がっています (pressure broadening。) 光球面での密度は重力が強いほど大きくなるため、スペクトル線の幅を理論的に計算された形状と比較することで、表面重力\\(g\\)の値を知ることができます。 . Tremblay &amp; Bergeron (2009)より . \\(g = GM / R^2\\)より、先ほどの質量-半径関係を用いれば、質量を求めることができます。 このようにして求められた白色矮星の質量に対する頻度分布は、\\(\\sim 0.6 M_\\odot\\)に鋭いピークを持ちます。 これは、AGB段階で中心核の質量が\\(\\sim 0.6 M_\\odot\\)に対応する光度になると、非常に強い恒星風により外層が飛ばされてしまうことを示唆しています。 また\\(\\sim 0.4 M_\\odot\\)あたりの小さなピークは、近接連星進化における質量交換によってできたと考えられています。 次の図は、SDSSのデータから求められたDA型白色矮星の質量分布 (volume limitted)を表しています。 . Kepler et al. (2007)より . そして次の図は、白色矮星の質量とそれが主系列星だった時点での質量との関係 (initial-to-final mass relation)を表します。 この関係は非常に不確定ですが、銀河内の散開星団中の白色矮星の質量 (\\(\\log g\\)から求められたもの)と、主系列転向質量 (turn-off mass)との関係などから、経験的に求められたものです。 図の直線は最小2乗法により求められたもので、曲線は白色矮星の質量分布と population synthesis model を用いて得られたものです。 . Ferrario et al. (2005)より . また質量放出率の光度や半径依存性に適当な式を仮定して計算された、主系列星から白色矮星までの進化モデルによってもinitial-to-final mass relationが得られます。 しかし白色矮星が連星系中にある場合、質量移動・降着が起こる場合があることに注意が必要です。 . ",
+    "url": "/compact/white_dwarfs#%E8%B3%AA%E9%87%8F%E5%88%86%E5%B8%83",
+    
+    "relUrl": "/compact/white_dwarfs#質量分布"
+  },"2099": {
+    "doc": "白色矮星",
+    "title": "参考文献",
+    "content": "[1] Gaia Collaboration, 2018, “Gaia Data Release 2: Observational Hertzsprung-Russell diagrams” [2] Liebert &amp; Sion, 1994, “The Spectroscopic Classification of White Dwarfs: Unique Requirements and Challenges” [3] Liebert et al., 1988, “The Luminosity Function of White Dwarfs” [4] Bergeron et al., 1997, “The Chemical Evolution of Cool White Dwarfs and the Age of the Local Galactic Disk” [5] Tremblay &amp; Bergeron, 2009, “Spectroscopic Analysis of DA White Dwarfs: Stark Broadening of Hydrogen Lines Including Nonideal Effects” [6] Kepler et al., 2007, “White dwarf mass distribution in the SDSS” [7] Ferrario et al., 2005, “The open-cluster initial-final mass relationship and the high-mass tail of the white dwarf distribution” [8] Shapiro &amp; Teukolsky, “Black Holes, White Dwarfs, and Neutron Stars” . ",
+    "url": "/compact/white_dwarfs#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    
+    "relUrl": "/compact/white_dwarfs#参考文献"
+  },"2100": {
+    "doc": "白色矮星",
+    "title": "白色矮星",
+    "content": ". | 白色矮星 . | 観測的特徴 | 質量-半径関係 | 質量分布 | 参考文献 | . | . ",
+    "url": "/compact/white_dwarfs",
+    
+    "relUrl": "/compact/white_dwarfs"
+  },"2101": {
     "doc": "ウォルフ・ライエ星",
     "title": "ウォルフ・ライエ星 (Wolf-Rayet stars)",
     "content": " ",
     "url": "/stellar/wolf_rayet_stars#%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E6%98%9F-wolf-rayet-stars",
     
     "relUrl": "/stellar/wolf_rayet_stars#ウォルフライエ星-wolf-rayet-stars"
-  },"2096": {
+  },"2102": {
     "doc": "ウォルフ・ライエ星",
     "title": "概要",
     "content": "Wolf-Rayet (WR or W-R)星は、1867年にWolf, C.J.E.とRayet, G.A.P.によってスペクトルの眼視観測で発見された、高温(\\((3-6) \\times 10^4 \\mathrm{K}\\))の明るい\\((L \\sim 10^5 L_\\odot)\\)星です。 可視光領域に幅の広い強い輝線 \\((\\sim 10^3 \\mathrm{km/s})\\)を持ち、多くの場合は吸収線は観測されません。 輝線はWR星からの密度の濃い恒星風に起因します。 密度の濃い恒星風の存在により、静的な光球は存在せず、通常の有効温度の定義は適用できません。 またその膨大な質量放出により、形成時の組成を持つ外層はすでに失われています。 . ",
     "url": "/stellar/wolf_rayet_stars#%E6%A6%82%E8%A6%81",
     
     "relUrl": "/stellar/wolf_rayet_stars#概要"
-  },"2097": {
+  },"2103": {
     "doc": "ウォルフ・ライエ星",
     "title": "元素組成とスペクトル型",
     "content": "表面での水素含有量は少ないか全く観測されず、水素燃焼またはヘリウム燃焼の生成元素の含有率が大きくなります。 WR星は、形成時の質量が\\(\\sim 35 M_\\odot\\)より大きい大質量星が進化したものなので、その年齢は\\(10^7\\)年より短いとされています。 そのためWR星は星形成領域や、最近星形成が起こった場所に存在しています。 . Abbott &amp; Conti (1987)より . WR星のスペクトル型は、WN型とWC型に大別されます。 WN型のスペクトルにはヘリウムと窒素の輝線が顕著で、WC型ではヘリウム輝線とともに炭素・酸素の輝線が顕著となっています。 WC型の中で強いO IV輝線が観測されるものを、特にWO型とも呼ばれています。 WN型のWR星でのヘリウムと窒素含有量の過多は、CNOサイクルによる水素燃焼の生成物と説明されています。 WN型星はHeI/HeII比および種々の窒素輝線の強度比に基づいて、WN2, …, WN9に細分類されます。 これはhighest excitation (高温)からlowest excitationへの系列を表し、数字の小さい(大きい)グループはearly (late) typeと呼ばれます。 WC型WR星の表面元素組成は、ヘリウム燃焼生成物が表面に出てきていることを示しています。 ヘリウム燃焼では温度が高い環境のもとで酸素がより多く生成されるため、WO型星はより質量放出が進み、内部深くでヘリウム燃焼が起こっていた場所が表面に出てきていると解釈できます。 WC型は炭素イオン比と酸素イオン比から、WC4, …, WC9に細分類され、WO型はOIVとOVIの輝線強度比により、WO1, …, WO4に細分類されます。 次の図は、WR星のサブクラスと絶対光度との関係を表しています。 明らかに、late type WR星の方が明るい傾向にあります。 . Abbott &amp; Conti (1987)より . ",
     "url": "/stellar/wolf_rayet_stars#%E5%85%83%E7%B4%A0%E7%B5%84%E6%88%90%E3%81%A8%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%9E%8B",
     
     "relUrl": "/stellar/wolf_rayet_stars#元素組成とスペクトル型"
-  },"2098": {
+  },"2104": {
     "doc": "ウォルフ・ライエ星",
     "title": "質量放出率",
     "content": "観測的に得られたWR型星の質量放出率は、光度と化学組成に依存し、経験式として . \\[\\dot{M} \\simeq 1.0 \\times 10^{-11} \\left(\\frac{L}{L_\\odot}\\right)^{1.29} Y^{1.7} Z^{0.5} \\ [M_\\odot / \\mathrm{yr}] \\tag{1}\\] のように表されます (Nugis &amp; Lamers (2000))。 重元素量が多いと質量放出率が大きいという関係は、恒星風が輻射駆動であることと一致します。 またこのことは、WC型とWN型の数比が銀河によって異なり、私たちの銀河内でも中心からの距離に依存するという観測事実に説明を与えます。 . Abbott &amp; Conti (1987)より . Massey &amp; Johnson (1998)より . WR星の質量放出率は、同じ光度のO型星に比べて大きいことが判明しています。 またWR星では、恒星風の運動量放出率と光の運動量放出率の比 . \\[\\eta \\equiv \\frac{\\dot{M} v_\\infty}{L/c} \\tag{2}\\] が1より大きくなっています (大体 \\(1.4 &lt; \\eta \\lesssim 18\\)。) これを説明するためには、光子の多重散乱と光学的に厚い領域での加速を考える必要があります。 WR星の起源については、初期質量が\\(35M_\\odot\\)より大きい星が、盛大な恒星風による質量損失および高光度青色変光星 (luminous blue variables)の段階での間欠的な質量損失により、水素を多く含む外層を失い、水素燃焼またはヘリウム燃焼の起こっていた層が表面に出てきた状態であると説明されます。 質量放出の度合いが大きくなるにつれて、WN型、WC型、そしてWO型へと変わると考えられています。 . Hamann &amp; Koesterke (1998)より . ",
     "url": "/stellar/wolf_rayet_stars#%E8%B3%AA%E9%87%8F%E6%94%BE%E5%87%BA%E7%8E%87",
     
     "relUrl": "/stellar/wolf_rayet_stars#質量放出率"
-  },"2099": {
+  },"2105": {
     "doc": "ウォルフ・ライエ星",
     "title": "WR星としての寿命",
     "content": "次の図は、各金属量ごとにWR星としての寿命を描画したものです。 横軸には、初期質量をとっています。 . Maeder &amp; Meynet (1994)より . 実線は標準的な質量損失率、破線は大きな質量損失率のモデルを計算したものです。 この図から . | 初期質量が大きいほど、WR星としての寿命が長い | 重元素含有量が大きいほど、小さい初期質量の星でもWR星になることができる | 質量損失率が大きいほど、WR星としての寿命は短い | . ということがわかります。 . ",
     "url": "/stellar/wolf_rayet_stars#wr%E6%98%9F%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E5%AF%BF%E5%91%BD",
     
     "relUrl": "/stellar/wolf_rayet_stars#wr星としての寿命"
-  },"2100": {
+  },"2106": {
     "doc": "ウォルフ・ライエ星",
     "title": "質量光度関係",
     "content": "次の図は、理論モデルに基づいたWR星の質量光度関係を表したものです。 WR星の質量光度関係は、特に明るい部分で\\(L \\propto M\\)の関係に近くなっています。 この関係は、解析的にも導出することができます。 輻射によりエネルギーが運ばれる場合、局所光度 \\(L_r\\)は . \\[L_r = -4\\pi r^2 \\frac{4ac}{3\\kappa \\rho} T^3 \\frac{dT}{dr} \\tag{3}\\] のように表されます。 この式に、輻射圧\\(P_\\mathrm{rad}\\)が . \\[P_\\mathrm{rad} = \\frac{a}{3} T^4 = (1-\\beta) P \\quad (\\beta \\equiv P_\\mathrm{gas} / P) \\tag{4}\\] であることを用いると . \\[\\frac{dP_\\mathrm{rad}}{dr} = \\frac{4a}{3} T^3 \\frac{dT}{dr} \\ \\Longrightarrow \\ T^3 \\frac{dT}{dr} = \\frac{3}{4a} \\frac{dP_\\mathrm{rad}}{dr} \\tag{5}\\] より . \\[L_r = - \\frac{4\\pi c r^2}{\\kappa \\rho} \\frac{d}{dr} \\{(1-\\beta) P\\} = - \\frac{4\\pi c r^2}{\\kappa \\rho} \\frac{dP}{dr} \\frac{d}{dP} \\{(1-\\beta) P\\} \\tag{6}\\] と置き換えることができます。 そしてこの式に静水圧平衡の式 \\(\\frac{dP}{dr} = -\\frac{GM_r \\rho}{r^2}\\)を用いると . \\[L = \\frac{4\\pi c GM}{\\kappa} \\frac{d}{dP} \\{(1-\\beta) P\\} \\tag{7}\\] のように書くことができます。 ここでは、星の外層のみを考えることとし、\\(L_r \\simeq L, M_r \\simeq M\\)のようにしました。 大質量星の外層は密度が低いため、不透明度は電子散乱が支配的で、\\(\\kappa \\simeq 0.2 (1+X)\\)のように定数と考えることができます。 (7)式は積分できて . \\[LP = \\frac{4\\pi cGM}{\\kappa} (1-\\beta) P \\ \\Longrightarrow \\ L = \\frac{4\\pi cGM}{\\kappa} (1-\\beta) \\tag{8}\\] のようになります (積分定数は表面で\\(P=0\\)として決めました。) (8)式は、輻射圧が優勢 \\((\\beta \\ll 1)\\)のとき\\(L \\propto M\\)となることを表しています。 また\\(\\beta =0\\)の極限では、(8)式は\\(L\\)がエディントン光度となることを表しています。 大質量星の外層は密度が薄く、\\(\\beta \\ll 1\\)なので、それらの光度はエディントン光度に近いことがわかります。 . ",
     "url": "/stellar/wolf_rayet_stars#%E8%B3%AA%E9%87%8F%E5%85%89%E5%BA%A6%E9%96%A2%E4%BF%82",
     
     "relUrl": "/stellar/wolf_rayet_stars#質量光度関係"
-  },"2101": {
+  },"2107": {
     "doc": "ウォルフ・ライエ星",
     "title": "連星系を構成するWR星",
     "content": "WR星の約40%が、O型星との連星系をなします。 伴星のO型星の方が質量が大きいことは、質量を大量に失ってWR星となったことを表しています。 . van der Hucht &amp; Karel (2001)より . ",
     "url": "/stellar/wolf_rayet_stars#%E9%80%A3%E6%98%9F%E7%B3%BB%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8Bwr%E6%98%9F",
     
     "relUrl": "/stellar/wolf_rayet_stars#連星系を構成するwr星"
-  },"2102": {
+  },"2108": {
     "doc": "ウォルフ・ライエ星",
     "title": "最近のWR星研究",
     "content": "JWSTによるWR 140の詳細な観測 . 2021年に打ち上げられたJames Webb Space Telescope (JWST)は、観測を開始してから目覚ましい成果をあげています。 そのJWSTがWR星を観測し、そのデータを解析した研究の一つに、Lau et al. (2022)があります。 この研究では、WR140と呼ばれる連星系中にあるWR星の観測を行い、その周囲でのダスト形成や化学組成を詳細に解析しました。 . Lau et al. (2022)より . 一番大きな図の中心から伸びる青い8本の線は、中心に位置する連星からの光が飽和している(saturation, 宇宙物理を研究している方々はこれを「サチる」とも呼びます)ことから出る光学像であり、実際にこのような光が放たれているわけではありません。 このことからも、JWSTの観測装置の感度の良さがわかります。 そして、その中心部から波状に出ている模様が、この連星系から放出されたダストシェルを表しています。 観測から17個のシェルの存在が確認され、これらは130年以上かけて形成されていることがわかりました。 右の2つのパネルは、中心部の違う領域を拡大したものになります。 論文では、この波状模様やスペクトルを再現するモデルを考案・観測データとの比較を行うなどしています。 . チャンドラによる天の川銀河中心星団中のWR星の観測 . 1997年に打ち上げられたチャンドラ X線観測衛星は、今なお成果をあげています。 WR星に関する最近の研究では、例としてHua &amp; Li (2025)が挙げられます。 この論文では、天の川銀河中心に存在する星団をいくつか観測し、その中に含まれているWR星について詳細にデータ解析を行いました。 星団によって異なる化学組成を持つことが判明し、ここから星団内でのダスト喪失や親星の内部混合による核融合の影響を議論しています。 . Hua &amp; Li (2025)より . ",
     "url": "/stellar/wolf_rayet_stars#%E6%9C%80%E8%BF%91%E3%81%AEwr%E6%98%9F%E7%A0%94%E7%A9%B6",
     
     "relUrl": "/stellar/wolf_rayet_stars#最近のwr星研究"
-  },"2103": {
+  },"2109": {
     "doc": "ウォルフ・ライエ星",
     "title": "参考文献",
     "content": "[1] Abbott &amp; Conti, 1987, “Wolf-rayet stars” [2] Massey &amp; Johnson, 1998, “Evolved Massive Stars in the Local Group. II. A New Survey for Wolf-Rayet Stars in M33 and Its Implications for Massive Star Evolution: Evidence of the “Conti Scenario” in Action” [3] Hamann &amp; Koesterke, 1998, “The nitrogen spectra of Wolf-Rayet stars. A grid of models and its application to the Galactic WN sample” [4] Maeder &amp; Meynet, 1994, “New models of Wolf-Rayet stars and comparison with data in galaxies” [5] van der Hucht &amp; Karel, 2001, “The VIIth catalogue of galactic Wolf-Rayet stars” [6] Lau et al., 2022, “Nested dust shells around the Wolf–Rayet binary WR 140 observed with JWST” [7] Hua &amp; Li, 2025, “Chandra X-ray Measurement of Heavy Element Abundances of Wolf-Rayet Stars in the Galactic Center” [8] James Webb Space Telescope [9] Chandra X-ray Observatory [10] Lamers &amp; Cassinelli, “Introduction to Stellar Winds” [11] Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution” [12] 野本憲一, 定金晃三, 佐藤勝彦, “恒星” . ",
     "url": "/stellar/wolf_rayet_stars#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/stellar/wolf_rayet_stars#参考文献"
-  },"2104": {
+  },"2110": {
     "doc": "ウォルフ・ライエ星",
     "title": "ウォルフ・ライエ星",
     "content": ". | ウォルフ・ライエ星 (Wolf-Rayet stars) . | 概要 | 元素組成とスペクトル型 | 質量放出率 | WR星としての寿命 | 質量光度関係 | 連星系を構成するWR星 | 最近のWR星研究 . | JWSTによるWR 140の詳細な観測 | チャンドラによる天の川銀河中心星団中のWR星の観測 | . | 参考文献 | . | . ",
     "url": "/stellar/wolf_rayet_stars",
     
     "relUrl": "/stellar/wolf_rayet_stars"
-  },"2105": {
+  },"2111": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     
     "relUrl": "/nucl/wu#wuの実験"
-  },"2106": {
+  },"2112": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "/nucl/wu#who-is-wu",
     
     "relUrl": "/nucl/wu#who-is-wu"
-  },"2107": {
+  },"2113": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"2108": {
+  },"2114": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     
     "relUrl": "/nucl/wu#パリティ変換"
-  },"2109": {
+  },"2115": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "/nucl/wu#%E4%BE%8B%E9%A1%8C",
     
     "relUrl": "/nucl/wu#例題"
-  },"2110": {
+  },"2116": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"2111": {
+  },"2117": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     
     "relUrl": "/nucl/wu#実験結果"
-  },"2112": {
+  },"2118": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"2113": {
+  },"2119": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/nucl/wu#参考文献"
-  },"2114": {
+  },"2120": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "/nucl/wu",
     
     "relUrl": "/nucl/wu"
-  },"2115": {
+  },"2121": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": "デバイ・ヒュッケルの理論で出現した以下のポテンシャルを、もとの方程式から求めてみましょう。 ここでは\\(\\mu = 1/\\lambda_D\\)とした、以下の方程式の解を求めます。 . \\[\\left( \\Delta - \\mu^2 \\right) \\phi = - 4\\pi q_0 \\delta^3(\\mathbf{r}) \\tag{1}\\] ",
     "url": "/plasma/yukawa_pot#%E6%B9%AF%E5%B7%9D%E5%9E%8B%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%81%AE%E5%B0%8E%E5%87%BA",
     
     "relUrl": "/plasma/yukawa_pot#湯川型ポテンシャルの導出"
-  },"2116": {
+  },"2122": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "フーリエ変換による方法",
     "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\begin{align} \\phi(\\mathbf{r}) &amp;= \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\notag \\\\ &amp;\\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk \\notag \\\\ &amp;= \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5} \\end{align}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (r) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] . ",
     "url": "/plasma/yukawa_pot#%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AB%E3%82%88%E3%82%8B%E6%96%B9%E6%B3%95",
     
     "relUrl": "/plasma/yukawa_pot#フーリエ変換による方法"
-  },"2117": {
+  },"2123": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "複素平面上での積分",
     "content": "(6)式の積分を計算するために . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} \\quad (z = x+ iy) \\tag{7}\\] を、下図左パネルの複素平面上の閉曲路で積分することを考えましょう。 . \\[\\left\\{ \\begin{array}{lll} C_1 &amp; : &amp; 実軸上 -R \\rightarrow R \\\\ C_2 &amp; : &amp; z = R e^{i\\theta} \\quad (\\theta : 0 \\rightarrow \\pi) \\end{array} \\right. \\tag{8}\\] ただし、\\(R &gt; \\mu\\)とします。 留数定理より . \\[\\oint_{C_1 + C_2} f(z) dz = 2\\pi i \\mathrm{Res} (f; i\\mu) \\tag{9}\\] です。 ここで\\(\\mathrm{Res} (f; i\\mu)\\)は、関数\\(f(z)\\)の\\(z = i\\mu\\)における留数(residue)を表すものです。 留数を求めるために、\\(f(z)\\)を変形しましょう。 . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} = \\frac{1}{2} \\left( \\frac{1}{z-i\\mu} + \\frac{1}{z+ i\\mu} \\right) e^{irz} \\tag{10}\\] \\(e^{irz}\\)を\\(z = i\\mu\\)の周りでテイラー展開すると . \\[e^{irz} = e^{-r\\mu} + ir e^{-r\\mu} (z-i\\mu) + ((z-i\\mu)の2次以上の項)\\] のようになるため、 . \\[f(z) = \\frac{1}{2} \\frac{e^{-r\\mu}}{z-i\\mu} + \\frac{1}{2} ir e^{-r\\mu} + ((z-i\\mu)の1次以上の項) + \\frac{1}{2} \\frac{e^{irz}}{z+i\\mu} \\tag{11}\\] を得ます。 右辺において第一項以外は\\(z=i\\mu\\)で正則なので . \\[\\mathrm{Res}(f; i\\mu) = \\frac{1}{2} e^{-r\\mu} \\tag{12}\\] となります。 (9), (12)式より . \\[\\int_{-R}^R f(x) dx + \\int_{C_2} f(z) dz = i\\pi e^{-r\\mu} \\ \\underbrace{\\Longrightarrow}_{R \\rightarrow \\infty} \\ \\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r\\mu} - \\lim_{R \\rightarrow \\infty} \\int_{C_2} f(z) dz \\tag{13}\\] (13)式の極限部分の値を求めましょう。 \\(C_2\\)上では\\(z = R e^{i\\theta}, dz = iR e^{i\\theta} d\\theta\\)より . \\[\\begin{align} \\lim_{R\\rightarrow \\infty} \\left| \\int_{C_2} f(z) dz \\right| &amp;= \\lim_{R\\rightarrow \\infty} \\left| \\int_0^\\pi iR e^{i\\theta} \\frac{R e^{i\\theta}}{R^2 e^{2i\\theta} + \\mu^2} e^{irR e^{i\\theta}} d\\theta \\right| \\notag \\\\ &amp;\\leq \\lim_{R\\rightarrow \\infty} \\int_0^\\pi \\left| \\frac{i R^2 e^{2i\\theta}}{R^2 e^{2i\\theta} + \\mu^2}\\right| \\left| e^{irR\\cos \\theta} e^{-rR\\sin \\theta}\\right| d\\theta \\notag \\\\ &amp;\\leq \\lim_{R \\rightarrow \\infty} \\int_0^\\pi \\frac{R^2}{R^2 - \\mu^2} e^{-rR \\sin \\theta} d\\theta \\tag{14} \\end{align}\\] のように大きさを評価することができます。 最後の指数部分において、\\(0 \\leq \\sin \\theta \\leq 1 \\ (0 \\leq \\theta \\leq \\pi)\\)より、この極限値は0となります。 よって . \\[\\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r \\mu} \\tag{15}\\] と求まります。 同様に(6)式の第二項を計算するために . \\[g(z) = \\frac{z}{z^2 + \\mu^2} e^{-irz} \\quad (z = x + iy) \\tag{16}\\] を、上図右パネルの複素平面上の閉曲路で積分を行います。 この場合は\\(z= -i\\mu\\)での留数を考えて計算を行うこと、そして経路が時計回りであることから符号に注意すると、次のようになります。 . \\[\\int_{-\\infty}^\\infty g(x) dx = -i\\pi e^{-r\\mu} \\tag{17}\\] (6), (15), (17)式より . \\[\\phi (r) = \\frac{q_0}{r} e^{-\\mu r} \\tag{18}\\] のようになります。 比較のために、普通のクーロンポテンシャル\\(\\phi(r) = q_0 / r\\)とともに図示したグラフを示します。 このグラフでは\\(q_0 = 1, \\mu = 1\\)として可視化しています。 . 青線はクーロンポテンシャル、橙線は湯川型ポテンシャルです。 (18)式からも明らかですが、湯川型ポテンシャルはクーロンポテンシャルよりも素早く減衰します。 \\(r=1/\\mu = 1.0\\)ではクーロンポテンシャルの\\(1/e\\)倍になります。 このことから\\(r=1/\\mu\\)程度が、ポテンシャルの影響がある範囲と見ることができます。 デバイ・ヒュッケルの理論から導かれた、弱結合プラズマ中での静電ポテンシャル\\(\\phi (r) = \\frac{q_0}{r} e^{-r/\\lambda_D}\\)では、\\(r = \\lambda_D\\)程度しかポテンシャルの影響がないことがわかります。 当然ながら、\\(\\mu = 1/\\lambda_D = 0\\)ではクーロンポテンシャルと等しくなります。 これは、元の数式である(1)式が . \\[\\Delta \\phi = - 4\\pi q_0 \\tag{19}\\] のように、真空中で点電荷を原点に置いた場合に一致することからもわかります。 . ",
     "url": "/plasma/yukawa_pot#%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2%E4%B8%8A%E3%81%A7%E3%81%AE%E7%A9%8D%E5%88%86",
     
     "relUrl": "/plasma/yukawa_pot#複素平面上での積分"
-  },"2118": {
+  },"2124": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "補遺: Juliaスクリプト",
     "content": "using Plots gr() len = 100 r = range(0.1, 2.0, length=len) coulomb = 1.0 ./ r yukawa = exp.(-r) ./ r plot(r, coulomb, linewidth=3, xlabel=\"r\", ylabel=\"Potential\", label=\"Coulomb\") plot!(r, yukawa, linewidth=3, label=\"Yukawa\") savefig(\"yukawa_pot_02.png\") . ",
     "url": "/plasma/yukawa_pot#%E8%A3%9C%E9%81%BA-julia%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88",
     
     "relUrl": "/plasma/yukawa_pot#補遺-juliaスクリプト"
-  },"2119": {
+  },"2125": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "参考文献",
     "content": "[1] Chen, “プラズマ物理入門” [2] 小野高幸, 三好由純, “太陽地球圏” [3] 田中基彦, 西川恭治, “高温プラズマの物理学” . ",
     "url": "/plasma/yukawa_pot#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/plasma/yukawa_pot#参考文献"
-  },"2120": {
+  },"2126": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | 補遺: Juliaスクリプト | 参考文献 | . | . ",
     "url": "/plasma/yukawa_pot",
     
     "relUrl": "/plasma/yukawa_pot"
-  },"2121": {
+  },"2127": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "/math/zeta#zeta%E9%96%A2%E6%95%B0",
     
     "relUrl": "/math/zeta#zeta関数"
-  },"2122": {
+  },"2128": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "/math/zeta#%E5%AE%9A%E7%BE%A9",
     
     "relUrl": "/math/zeta#定義"
-  },"2123": {
+  },"2129": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"2124": {
+  },"2130": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"2125": {
+  },"2131": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"2126": {
+  },"2132": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/math/zeta#参考文献"
-  },"2127": {
+  },"2133": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

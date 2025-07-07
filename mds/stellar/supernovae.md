@@ -106,6 +106,8 @@ Ia型超新星の光度曲線は、どれも類似していることが知られ
 ![](/assets/images/stellar/supernovae_09.png)  
 [Riess et al. (1995)](https://ui.adsabs.harvard.edu/abs/1995ApJ...438L..17R/abstract)より  
 
+{% include adsense.html %} 
+
 ### 極超新星 (hypernovae)
 
 超新星爆発の運動エネルギーは、一般に$$\sim 10^{51} \mathrm{erg}$$とされています。
@@ -168,6 +170,8 @@ Ia型超新星とそれ以外のタイプの超新星では、合成され放出
 
 ![](/assets/images/stellar/supernovae_13.png)  
 [Yoshii et al. (1996)](https://ui.adsabs.harvard.edu/abs/1996ApJ...462..266Y/abstract)より。横軸は[Fe/H]。  
+
+{% include adsense.html %} 
 
 ## 余談: Ia型超新星を用いたハッブル定数の精密検証
 

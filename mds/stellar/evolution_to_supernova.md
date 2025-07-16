@@ -107,10 +107,27 @@ $$Z=0$$であることにより、質量損失が著しく抑制されている�
 ![](/assets/images/stellar/evolution_to_supernova_03.png)  
 [Woosley et al. (2002)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.74.1015)より
 
+## 最近の話題: 電子捕獲型超新星の発見
+
+白色矮星と鉄コア崩壊型超新星の間の質量範囲$$8 \sim 10 M_\odot$$では、電子捕獲型超新星が起こるとされています。
+この超新星は、[Miyaji et al. (1980)](https://ui.adsabs.harvard.edu/abs/1980PASJ...32..303M/abstract)で理論的に提唱されましたが、$$8 \sim 10 M_\odot$$という狭い質量範囲の恒星が超新星爆発を起こさなければならないというレアさから、これまで対応天体が発見されていませんでした。
+しかし最近になり、SN 2018zdという超新星が、電子捕獲型超新星の強い候補である論文が出版されました ([Hiramatsu et al. (2021)](https://www.nature.com/articles/s41550-021-01384-2)。)
+
+![](/assets/images/stellar/evolution_to_supernova_04.png)  
+[Hiramatsu et al. (2021)](https://www.nature.com/articles/s41550-021-01384-2)より  
+
+この論文では、星周物質・化学組成や爆発のエネルギーから、2018zdを電子捕獲型超新星と結論づけています。
+しかしその質量範囲の狭さから、これは電子捕獲型ではなく、低質量赤色超巨星からの鉄のコア崩壊型超新星爆発ではないかという反証論文も発表されました ([Callis et al. (2021)](https://arxiv.org/abs/2109.12943)。)
+先程の[Hiramatsu et al. (2021)](https://www.nature.com/articles/s41550-021-01384-2)の論文の前にも、SN 2018zdは$$12 M_\odot$$のII型超新星爆発であるという論文も出版されており、まだまだ議論の余地がありそうです([Zhang et al. (2020)](https://doi.org/10.1093/mnras/staa2273)。)
+
 # 参考文献
 
 [1] [Wooskey et al., 2002, "The evolution and explosion of massive stars"](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.74.1015)  
-[2] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
-[3] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
+[2] [Miyaji et al., 1980, "Supernova triggered by electron captures"](https://ui.adsabs.harvard.edu/abs/1980PASJ...32..303M/abstract)  
+[3] [Hiramatsu et al., 2021, "The electron-capture origin of supernova 2018zd"](https://www.nature.com/articles/s41550-021-01384-2)  
+[4] [Callis et al., 2021, "How low can you go? SN 2018zd as a low-mass Fe core-collapse supernova"](https://arxiv.org/abs/2109.12943)  
+[5] [Zhang et al., 2020, "SN 2018zd: an unusual stellar explosion as part of the diverse Type II Supernova landscape"](https://doi.org/10.1093/mnras/staa2273)  
+[6] [Kippenhahn, Weigert & Weiss, "Stellar Structure and Evolution"](https://amzn.to/43pXiva)  
+[7] [野本憲一, 定金晃三, 佐藤勝彦, "恒星"](https://amzn.to/4kHBvFv)  
 
 {% include adsense.html %}

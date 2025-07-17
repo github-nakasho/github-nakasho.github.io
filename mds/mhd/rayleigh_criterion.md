@@ -60,6 +60,7 @@ $$
 = \frac{R_1^4 \Omega(R_1)^2}{(R_1 + dR)^3} < (R_1 + dR) \Omega(R_1 + dR)^2 \notag \\
 &\Longrightarrow \ 
 R_1^4 \Omega(R_1)^2 - (R_1+dR)^4 \Omega(R_1 + dR)^2 < 0 \tag{4}
+\end{align}
 $$
 
 $$dR$$を微小としているので、微分の定義から求めたかった安定条件は

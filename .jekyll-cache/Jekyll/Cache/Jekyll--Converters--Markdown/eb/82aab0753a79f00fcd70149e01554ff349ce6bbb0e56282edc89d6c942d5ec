@@ -1,0 +1,496 @@
+I"6f
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#パパロイゾウプリングル不安定性-papaloizou-pringle-instability-ppi" id="markdown-toc-パパロイゾウプリングル不安定性-papaloizou-pringle-instability-ppi">パパロイゾウ・プリングル不安定性 (Papaloizou-Pringle Instability: PPI)</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a>        <ol>
+          <li><a href="#基礎方程式の線形化" id="markdown-toc-基礎方程式の線形化">基礎方程式の線形化</a></li>
+          <li><a href="#平衡状態-ブラックホール周りのトーラス" id="markdown-toc-平衡状態-ブラックホール周りのトーラス">平衡状態: ブラックホール周りのトーラス</a></li>
+          <li><a href="#方程式の線形化" id="markdown-toc-方程式の線形化">方程式の線形化</a></li>
+          <li><a href="#フーリエモード" id="markdown-toc-フーリエモード">フーリエモード</a></li>
+        </ol>
+      </li>
+      <li><a href="#一定の比角運動量トーラスの安定性" id="markdown-toc-一定の比角運動量トーラスの安定性">一定の比角運動量トーラスの安定性</a>        <ol>
+          <li><a href="#一般固有値問題" id="markdown-toc-一般固有値問題">一般固有値問題</a></li>
+          <li><a href="#クラインゴルドン方程式とのアナロジー" id="markdown-toc-クラインゴルドン方程式とのアナロジー">クライン・ゴルドン方程式とのアナロジー</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="パパロイゾウプリングル不安定性-papaloizou-pringle-instability-ppi">パパロイゾウ・プリングル不安定性 (Papaloizou-Pringle Instability: PPI)</h1>
+
+<p>ここでは、コンパクト天体などの周囲に存在するトーラスの安定性について調べた、Papaloizou &amp; Pringle (1984)について勉強したことをメモします。</p>
+
+<h2 id="導出">導出</h2>
+
+<h3 id="基礎方程式の線形化">基礎方程式の線形化</h3>
+
+<p>まずは基礎方程式を考えましょう。
+質量保存の式は</p>
+
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) 
+= 0 \tag{1}\]
+
+<p>です。
+続いて運動方程式は</p>
+
+\[\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} 
+= - \frac{1}{\rho} \nabla P - \nabla \psi \tag{2}\]
+
+<p>と書けます。
+ここで\(\psi\)は、ブラックホールなどの中心天体が作る重力ポテンシャルで</p>
+
+\[\psi 
+= - \frac{GM}{\sqrt{R^2 + z^2}} \tag{3}\]
+
+<p>のように書かれます。
+最後に、状態方程式としてポリトロープを仮定しましょう。</p>
+
+\[P 
+= A \rho^\gamma \quad \left( \gamma \equiv 1 + \frac{1}{n} \right) \tag{4}\]
+
+<p>以上が基礎方程式となります。</p>
+
+<h3 id="平衡状態-ブラックホール周りのトーラス">平衡状態: ブラックホール周りのトーラス</h3>
+
+<p>次に平衡状態として、ブラックホール周りのトーラス (ドーナツ状の構造) を考えましょう。
+その\(z=0\)面内での運動や密度・圧力の変化について考察していきます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>このとき、平衡状態の流体の運動\(\mathbf{v}_0\)は、\(z=0\)面内で半径\(R\)の場所を円運動しているとします。</p>
+
+\[\mathbf{v}_0 (R)
+= R \Omega (R) \mathbf{e}_\varphi \tag{5}\]
+
+<p>また平衡状態の密度と圧力をそれぞれ\(\rho_0 (R, z), P_0(R, z)\)としましょう。
+トーラスは時間に依存せず、定常的にその形を保っているため、この平衡状態は以下の式を満たします。</p>
+
+\[\frac{\partial \rho_0}{\partial t}
+= 0, \quad \frac{\partial P_0}{\partial t} 
+= 0, \quad \frac{\partial \mathbf{v}_0}{\partial t} 
+= \mathbf{0} \tag{6}\]
+
+<p>(6)式と(1), (2), (4)より</p>
+
+\[\nabla \cdot (\rho_0 \mathbf{v}_0) 
+= 0 \tag{7}\]
+
+\[(\mathbf{v}_0 \cdot \nabla ) \mathbf{v}_0 
+= - \frac{1}{\rho_0} \nabla P_0 - \nabla \psi \tag{8}\]
+
+\[P_0 
+= A \rho_0^\gamma \tag{9}\]
+
+<p>も満たすことがわかります。</p>
+
+<h3 id="方程式の線形化">方程式の線形化</h3>
+
+<p>次に、この系に摂動が加わった場合を考えていきましょう。
+摂動量には1の添え字をつけて表現することにします。
+すなわち</p>
+
+\[\rho 
+= \rho_0 + \rho_1, \quad P 
+= P_0 + P_1, \quad \mathbf{v} 
+= \mathbf{v}_0 + \mathbf{v}_1 \tag{10}\]
+
+<p>のように状態が変化したとします。
+このとき\(\rho_1, P_1, \vert \mathbf{v}_1 \vert\)は微小量であることから、1の添え字がついた量に対しては1次の項だけを残すことにし、2次以上の高次の項は無視します。
+(1)式より</p>
+
+\[\begin{align}
+\frac{\partial}{\partial t} (\rho_0 + \rho_1) + \nabla \cdot \{(\rho_0 + \rho_1) (\mathbf{v}_0 + \mathbf{v}_1)\}
+&amp;\underbrace{=}_{(6)} \frac{\partial \rho_1}{\partial t} + \nabla \cdot (\rho_0 \mathbf{v}_0 + \rho_1 \mathbf{v}_0 + \rho_0 \mathbf{v}_1) \notag \\
+&amp;\underbrace{=}_{(7)} \frac{\partial \rho_1}{\partial t} + \nabla \cdot (\rho_1 \mathbf{v}_0 + \rho_0 \mathbf{v}_1) 
+= 0 \tag{11}
+\end{align}\]
+
+<p>です。
+続いて、(4)式より</p>
+
+\[\begin{align}
+P_0 + P_1 
+&amp;= A (\rho_0 + \rho_1)^\gamma 
+= A \rho_0^\gamma \left( 1 + \frac{\rho_1}{\rho_0}\right)^\gamma 
+\approx A \rho_0^\gamma \left( 1 + \frac{\gamma \rho_1}{\rho_0}\right) 
+= A \rho_0^\gamma + \gamma A \rho_0^\gamma \frac{\rho_1}{\rho_0} \notag \\
+&amp;\underbrace{=}_{(9)} P_0 + \gamma P_0 \frac{\rho_1}{\rho_0} 
+\ \Longrightarrow \ 
+P_1 
+= \gamma P_0 \frac{\rho_1}{\rho_0} \tag{12} 
+\end{align}\]
+
+<p>となります。
+最後に、(2)式について考えましょう。</p>
+
+\[\begin{aligned}
+(左辺) 
+&amp;= \frac{\partial}{\partial t} (\mathbf{v}_0 + \mathbf{v}_1) + \{(\mathbf{v}_0 + \mathbf{v}_1) \cdot \nabla\} (\mathbf{v}_0 + \mathbf{v}_1) \notag \\
+&amp;\underbrace{=}_{(6)} \frac{\partial \mathbf{v}_1}{\partial t} + (\mathbf{v}_0 \cdot \nabla) \mathbf{v}_0 + (\mathbf{v}_1 \cdot \nabla ) \mathbf{v}_0 + (\mathbf{v}_0 \cdot \nabla) \mathbf{v}_1
+\end{aligned}\]
+
+\[\begin{aligned}
+(右辺) 
+&amp;= - \frac{1}{\rho_0 + \rho_1} \nabla (P_0 + P_1) - \nabla \psi
+= - \frac{1}{\rho_0} \frac{1}{1 + \rho_1 / \rho_0} \nabla (P_0 + P_1) - \nabla \psi \notag \\
+&amp;\approx - \frac{1}{\rho_0} \left( 1 - \frac{\rho_1}{\rho_0}\right) \nabla (P_0 + P_1) - \nabla \psi 
+= - \frac{1}{\rho_0} \nabla P_0 + \frac{\rho_1}{\rho_0^2} \nabla P_0 - \frac{1}{\rho_0} \nabla P_1 - \nabla \psi 
+\end{aligned}\]
+
+<p>これらと(8)式より</p>
+
+\[\frac{\partial \mathbf{v}_1}{\partial t} + (\mathbf{v}_1 \cdot \nabla) \mathbf{v}_0 + (\mathbf{v}_0 \cdot \nabla) \mathbf{v}_1 
+= \frac{\rho_1}{\rho_0^2} \nabla P_0 - \frac{1}{\rho_0} \nabla P_1 \tag{13}\]
+
+<p>のようになります。
+さらに</p>
+
+\[\frac{\rho_1}{\rho_0^2} \nabla P_0 
+\underbrace{=}_{(9)} \frac{\rho_1}{\rho_0^2} A \gamma \rho_0^{\gamma -1} \nabla \rho_0 
+= \frac{\gamma \rho_1 P_0}{\rho_0^3} \nabla \rho_0 
+\underbrace{=}_{(12)} \frac{P_1}{\rho_0^2} \nabla \rho_0 \tag{14}\]
+
+<p>のように変形できることから</p>
+
+\[\frac{\partial \mathbf{v}_1}{\partial t} + (\mathbf{v}_1 \cdot \nabla) \mathbf{v}_0 + (\mathbf{v}_0 \cdot \nabla) \mathbf{v}_1 
+= \frac{P_1}{\rho_0^2} \nabla \rho_0 - \frac{1}{\rho_0} \nabla P_1  
+= - \nabla \left(\frac{P_1}{\rho_0} \right) 
+= - \nabla \left(\frac{P_1}{\rho} \right) \tag{15}\]
+
+<p>のようになります。
+ここで微小量の2次の項は無視することから、最後の等号では\(\frac{P_1}{\rho_0} = \frac{P_1}{\rho_0 + \rho_1} = \frac{P_1}{\rho}\)のようにしました。</p>
+
+<h3 id="フーリエモード">フーリエモード</h3>
+
+<p>\(\varphi, t\)に対する摂動フーリエモードのみを考えることにしましょう。
+すなわち\(\rho_1, p_1, v_{R 1}, v_{\varphi 1}, v_z \propto \exp \{i (m \varphi + \sigma t)\}\)の形で式を変形していきます。
+すると(11)式より</p>
+
+\[\begin{align}
+&amp;i\sigma \rho_1 + \mathbf{v}_0 \cdot (\nabla \rho_1) + \rho_1 \underbrace{(\nabla \cdot \mathbf{v}_0)}_{=0} + \nabla \cdot (\rho_0 \mathbf{v}_1)
+= i \sigma \rho_1 + im \Omega \rho_1 + \nabla \cdot (\rho_0 \mathbf{v}_1) 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+i (\sigma + m \Omega) \rho_1 
+= - \nabla \cdot (\rho \mathbf{v}_1) \tag{16}
+\end{align}\]
+
+<p>ここでも、\(\rho_0 \mathbf{v}_1 = (\rho_0 + \rho_1) \mathbf{v}_1 = \rho \mathbf{v}_1\)のようにしました。
+同様に(15)式の\(R, \varphi, z\)成分それぞれについても書き下してみましょう。
+まずは\(R\)成分からです。</p>
+
+\[\frac{\partial v_{1R}}{\partial t} + \left( - \frac{v_{1\varphi} v_{0\varphi}}{R} \right) + \left( \frac{v_{0\varphi}}{R} \frac{\partial v_{1R}}{\partial \varphi} - \frac{v_{0\varphi} v_{1\varphi}}{R} \right)
+= i (\sigma + m \Omega) v_{1R} - 2\Omega v_{1\varphi} 
+= - \frac{\partial}{\partial R} \left( \frac{P_1}{\rho} \right)\]
+
+<p>さらに右辺は</p>
+
+\[\frac{\partial}{\partial R} \left\{ (\sigma + m \Omega) \frac{P_1}{\rho (\sigma + m\Omega)} \right\} 
+= (\sigma + m\Omega) \frac{\partial W}{\partial R} + m W \frac{\partial \Omega}{\partial R} 
+= (\sigma + m\Omega) \frac{\partial W}{\partial R} - \frac{3m \Omega W}{2R}\]
+
+<p>のように変形されます。
+ここで</p>
+
+\[W 
+\equiv \frac{P_1}{\rho (\sigma + m \Omega)} \tag{17}\]
+
+<p>と定義し、さらに</p>
+
+\[\frac{\partial \Omega}{\partial R} 
+= \frac{\partial}{\partial R} \sqrt{\frac{GM}{R^3}} 
+= - \frac{3}{2} \sqrt{\frac{GM}{R^5}} 
+= - \frac{3\Omega}{2R}\]
+
+<p>のようにしました。
+以上から\(R\)成分の式は</p>
+
+\[v_{1R} + \frac{2 i \Omega}{\sigma + m\Omega } v_{1\varphi} 
+= i \frac{\partial W}{\partial R} + \frac{3m \Omega W}{2iR (\sigma + m\Omega)} \tag{18}\]
+
+<p>次に\(\varphi\)成分です。</p>
+
+\[\begin{align}
+\frac{\partial v_{1\varphi}}{\partial t} + \left( v_{1R} \frac{\partial v_{0\varphi}}{\partial R}\right) + \left( \frac{v_{0\varphi}}{R} \frac{\partial v_{1\varphi}}{\partial \varphi} + \frac{v_{0\varphi} v_{1R}}{R}\right) 
+&amp;= i\sigma v_{1\varphi} + v_{1R} \frac{d}{dR} (R \Omega) + im \Omega v_{1\varphi} + \Omega v_{1R} \notag \\
+&amp;= i(\sigma + m \Omega) v_{1\varphi} + v_{1R} \left( R \frac{d\Omega}{dR} + 2\Omega \right) \notag \\
+&amp;= i(\sigma + m \Omega) v_{1\varphi} + \frac{v_{1R}}{R} \left( R^2 \frac{d\Omega}{dR} + 2R \Omega \right) \notag \\
+&amp;= i(\sigma + m \Omega) v_{1\varphi} + \frac{v_{1R}}{R} \frac{d}{dR} (R^2 \Omega) 
+= - \frac{im}{R} \frac{P_1}{\rho} \tag{19}
+\end{align}\]
+
+<p>ここで、エピサイクリック振動数</p>
+
+\[\kappa^2 
+= \frac{2\Omega}{R} \frac{d}{dR} (R^2 \Omega) \tag{20}\]
+
+<p>を用いると</p>
+
+\[v_{1\varphi} + \frac{\kappa^2}{2i \Omega (\sigma + m\Omega) }v_{1R} 
+= - \frac{mW}{R} \tag{21}\]
+
+<p>を得ます。
+最後に\(z\)成分です。</p>
+
+\[\frac{\partial v_{1z}}{\partial t} + \frac{v_{0\varphi}}{R} \frac{\partial v_{1z}}{\partial \varphi} 
+= i (\sigma + m \Omega) v_{1z} 
+= - \frac{\partial}{\partial z} \left( \frac{P_1}{\rho} \right) 
+\ \Longrightarrow \ 
+v_{1z} 
+= i \frac{\partial W}{\partial z}\tag{21}\]
+
+<p>(18), (21)式より</p>
+
+\[v_{1\varphi} 
+= \frac{\bar{\sigma}^2}{\bar{\sigma}^2 - \kappa^2} \left( - \frac{\kappa^2}{2\bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4\bar{\sigma}^2 R} - \frac{mW}{R}\right) \tag{22}\]
+
+<p>これを(18)に代入すれば</p>
+
+\[\begin{align}
+v_{1R} 
+&amp;= - \frac{2i\Omega}{\sigma + m \Omega} \frac{\bar{\sigma}^2}{\bar{\sigma}^2 - \kappa^2} \left( - \frac{\kappa^2}{2\bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4\bar{\sigma}^2 R} - \frac{mW}{R}\right) + i \frac{\partial W}{\partial R} + \frac{3m\Omega W}{2iR\bar{\sigma}} \notag \\
+&amp;= i \frac{\bar{\sigma}^2}{\bar{\sigma}^2 - \kappa^2} \left( \frac{\partial W}{\partial R} + \frac{m\Omega W}{2 \bar{\sigma} R}\right) \tag{23}
+\end{align}\]
+
+<p>を得ます。
+(21), (22), (23)式を(16)式に入れて整理することで、\(W\)に関する微分方程式を得ることができます。</p>
+
+\[\begin{align}
+i \bar{\sigma} \rho_1 
+&amp;= - \frac{1}{R} \frac{\partial}{\partial R} (\rho R v_{1R}) - \frac{1}{R} \frac{\partial}{\partial \varphi} (\rho v_{1\varphi}) - \frac{\partial}{\partial z} (\rho v_{1z}) \notag \\
+&amp;= - \frac{1}{R} \frac{\partial}{\partial R} \left\{ i \rho R \frac{\bar{\sigma}^2}{\bar{\sigma}^2 - \kappa^2} \left( \frac{\partial W}{\partial R} + \frac{m\Omega W}{2 \bar{\sigma} R}\right)\right\} \notag \\
+&amp; \qquad \qquad - \frac{1}{R} \frac{\partial}{\partial \varphi} \left\{ \rho \frac{\bar{\sigma}^2}{\bar{\sigma}^2 - \kappa^2} \left( - \frac{\kappa^2}{2 \bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4 \bar{\sigma}^2 R} - \frac{mW}{R} \right)\right\} - \frac{\partial}{\partial z} \left( i \rho \frac{\partial W}{\partial z} \right) \notag 
+\end{align}\]
+
+<p>第二項において、\(W = \frac{P_1}{\rho \bar{\sigma}}\)は1次の微小量なので、\(\rho\)は\(\rho_0\)として扱うことができます。
+今は軸対称なトーラス構造を考えているため、\(\frac{\partial \rho}{\partial \varphi}= 0\)とできます。
+そして\(D \equiv \bar{\sigma}^2 - \kappa^2\)を定義し、さらに\(\frac{\partial W}{\partial \varphi} = i m W\)であることを用いると</p>
+
+\[\begin{align}
+&amp;i \bar{\sigma} \rho_1 
+= - \frac{i}{R} \frac{\partial}{\partial R} \left\{ \frac{\rho \bar{\sigma}^2 R}{D} \left( \frac{\partial W}{\partial R} + \frac{m\Omega W}{2 \bar{\sigma} R}\right) \right\} - \frac{im \rho \bar{\sigma}^2}{RD} \left( - \frac{\kappa^2}{2 \bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4 \bar{\sigma}^2 R} - \frac{mW}{R} \right) - i \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z} \right) \notag \\
+&amp;\underbrace{\Longrightarrow}_{(12)} \ 
+\frac{1}{R} \frac{\partial}{\partial R} \left\{ \frac{\rho \bar{\sigma}^2 R}{D} \left( \frac{\partial W}{\partial R} + \frac{m\Omega W}{2 \bar{\sigma} R}\right) \right\} + \frac{m \rho \bar{\sigma}^2}{RD} \left( - \frac{\kappa^2}{2 \bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4 \bar{\sigma}^2 R} - \frac{mW}{R} \right) \notag \\
+&amp; \qquad \qquad \qquad + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z} \right) + \frac{\bar{\sigma}^2 \rho^2 W}{\gamma P} 
+= 0 \tag{24}
+\end{align}\]
+
+<p>のようになります。
+ケプラー運動においては</p>
+
+\[\kappa^2 
+= \frac{2\Omega}{R} \frac{d}{dR} \left( R^2 \Omega \right) 
+= \frac{2\Omega}{R} \left( 2R \Omega + R^2\frac{d\Omega}{dR} \right) 
+= \frac{2\Omega}{R} \left( 2R \Omega - R^2 \frac{3\Omega}{2R}\right) 
+= \Omega^2\]
+
+<p>より、最終的に</p>
+
+\[\begin{align}
+&amp;\frac{1}{R} \frac{\partial}{\partial R} \left\{ \frac{\rho \bar{\sigma}^2 R}{D} \left( \frac{\partial W}{\partial R} + \frac{m\kappa^2 W}{2 \bar{\sigma} R \Omega}\right) \right\} + \frac{m \rho \bar{\sigma}^2}{RD} \left( - \frac{\kappa^2}{2 \bar{\sigma} \Omega} \frac{\partial W}{\partial R} + \frac{3m\kappa^2 W}{4 \bar{\sigma}^2 R} - \frac{mW}{R} \right) \notag \\
+&amp; \qquad \qquad \qquad + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z} \right) + \frac{\bar{\sigma}^2 \rho^2 W}{\gamma P} 
+= 0 \tag{25}
+\end{align}\]
+
+<p>を得ます。
+一般のトーラス構造の場合を考えるのは困難を極めるため、以下ではより簡単な場合について見ていきましょう。</p>
+
+<h2 id="一定の比角運動量トーラスの安定性">一定の比角運動量トーラスの安定性</h2>
+
+<p>比角運動量\(h = R^2 \Omega\)が一定の場合を考えましょう。
+このとき\(\kappa = 0\)、そして\(D = \bar{\sigma}^2\)となることから、(25)式は以下のようになります。</p>
+
+\[\frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R} \right) - \frac{m^2}{R^2} \rho W + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) + \frac{\bar{\sigma}^2 \rho^2 W}{\gamma P} 
+= 0 \tag{26}\]
+
+<p>この式をさらに整理するために、\(\sigma_c \equiv \sigma + m \Omega_c\)を定義しておきましょう。
+ここで\(\Omega_c\)はある一定の角速度です(この値については後述。)
+すると</p>
+
+\[\bar{\sigma}^2 
+= (\sigma + m \Omega + m \Omega_c - m \Omega_c)^2 
+= (\sigma_c + m \Omega - m \Omega_c)^2 
+= \sigma_c^2 + 2m(\Omega - \Omega_c) \sigma_c + m^2 (\Omega - \Omega_c)^2 \tag{27}\]
+
+<p>のように変形されるため</p>
+
+\[\begin{align}
+&amp;\frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R} \right) - \frac{m^2}{R^2} \rho W + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) + \frac{\rho^2 W}{\gamma P} \{ \sigma_c^2 + 2m(\Omega - \Omega_c) \sigma_c + m^2 (\Omega - \Omega_c)^2 \} \notag \\
+&amp;= \sigma_c^2 \frac{\rho^2}{\gamma P} W + 2m (\Omega - \Omega_c) \sigma_c \frac{\rho^2}{\gamma P} W + \frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R} \right) - \frac{m^2}{R^2} \rho W + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) + \frac{m^2 (\Omega - \Omega_c)^2 \rho^2}{\gamma P} W \notag \\ 
+&amp;= \sigma_c^2 A W + \sigma_c B W + CW 
+= 0 \tag{28}
+\end{align}\]
+
+<p>となります。
+ここで</p>
+
+\[A = \frac{\rho^2}{\gamma P}, \quad 
+B = \frac{2m(\Omega - \Omega_c) \rho^2}{\gamma P} \tag{29}\]
+
+<p>であり、\(C\)は楕円作用素と呼ばれるもので</p>
+
+\[CW 
+= \frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R}\right) + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) + \rho m^2 W \left\{ \frac{\rho (\Omega - \Omega_c)^2}{\gamma P} - \frac{1}{R^2}\right\} \tag{30}\]
+
+<p>のように定義されます。
+次に、(28)式の両辺に\(RW^\ast\)をかけ、それを\((R, z)\)平面内のトーラスの存在する領域で積分します。
+ただし、\(\ast\)は複素共役を意味します。
+すると</p>
+
+\[(第一項) 
+= \iint \sigma_c^2 A \vert W \vert^2 A R dR dz 
+= \sigma_c^2 \bar{A} \tag{31}\]
+
+\[(第二項) 
+= \iint \sigma_c B \vert W \vert^2 R dR dz 
+= \sigma_c \bar{B} \tag{32}\]
+
+<p>第三項において、トーラスの内縁と外縁では\(\rho(R_\mathrm{in}, z) = \rho(R_\mathrm{out}, z) = 0\)であることを用いると</p>
+
+\[\begin{align}
+\int_{R_\mathrm{in}}^{R_\mathrm{out}} \frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R}\right) W^\ast R dR
+&amp;= \left[ \rho R \frac{\partial W}{\partial R} W^\ast \right]_{R_\mathrm{in}}^{R_\mathrm{out}} - \int_{R_\mathrm{in}}^{R_\mathrm{out}} \rho R \frac{\partial W}{\partial R} \frac{\partial W^\ast}{\partial R} dR \notag \\
+&amp;= - \int_{R_\mathrm{in}}^{R_\mathrm{out}} \rho R \left\vert \frac{\partial W}{\partial R} \right\vert^2 dR \tag{33}
+\end{align}\]
+
+<p>さらに\(\rho(R, z_\mathrm{bottom}) = \rho(R, z_\mathrm{top}) = 0\)であることを用いれば</p>
+
+\[\begin{align}
+\int_{z_\mathrm{bottom}}^{z_\mathrm{top}} \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) W^\ast dz 
+&amp;= \left[ \rho \frac{\partial W}{\partial z} W^\ast \right]_{z_\mathrm{bottom}}^{z_\mathrm{top}} - \int_{z_\mathrm{bottom}}^{z_\mathrm{top}} \rho \frac{\partial W}{\partial z} \frac{\partial W^\ast}{\partial z} dz \notag \\
+&amp;= - \int_{z_\mathrm{bottom}}^{z_\mathrm{top}} \rho \left\vert \frac{\partial W}{\partial z} \right\vert^2 dz \tag{34}
+\end{align}\]
+
+<p>より</p>
+
+\[\begin{align}
+(第三項) 
+&amp;= \iint CW R W^\ast dR dz \notag \\
+&amp;= - \iint \rho \left[ \left\vert \frac{\partial W}{\partial R}\right\vert^2 + \left\vert \frac{\partial W}{\partial z}\right\vert^2 + m^2 \vert W \vert^2 \left\{ \frac{1}{R^2} - \frac{\rho (\Omega - \Omega_c)^2}{\gamma P}\right\} \right] R dR dz \notag \\
+&amp;= - \bar{C} \tag{35}
+\end{align}\]
+
+<p>のように整理されます。
+以上から(28)式は</p>
+
+\[\sigma_c^2 \bar{A} + \sigma_c \bar{B} - \bar{C} 
+= 0 \tag{36}\]
+
+<p>のようになります。
+この式は\(\sigma_c\)の2次関数なので、解は</p>
+
+\[\sigma_c 
+= \frac{-\bar{B} \pm \sqrt{\bar{B}^2 + 4 \bar{A} \bar{C}}}{2\bar{A}} \tag{37}\]
+
+<p>となります。
+ここで\(\bar{A}, \bar{B}, \bar{C}\)は全て実数です。
+\(\sigma_c\)が実数であれば、\(\sigma\)も実数となります。
+これはフーリエモードの形\(\exp \{i(m \varphi + \sigma t)\}\)から、全ての\(m\)に対して安定な振動となることがわかります。
+逆に\(\sigma_c\)が複素数となれば、\(\sigma\)も虚数を持つことになり、これは不安定な波動となります。
+このことから(37)式で\(\bar{C}\)が負になることが、不安定性が発生する条件となります。
+(35)式を見ると、マイナス符号を持つのは\(- \frac{\rho (\Omega - \Omega_c)^2}{\gamma P}\)の部分のみです。
+もし\(\gamma \rightarrow \infty\)の非圧縮極限ならば、(\(P/\rho\)が有限という仮定のもとで)全ての\(m\)に対して安定となることがわかります。
+このことから、この系の不安定性は、音速が有限の値となることから発生すると考えることができます。</p>
+
+<h3 id="一般固有値問題">一般固有値問題</h3>
+
+<p>ここでは一般固有値問題として、(26)式の固有値が複素数になるかどうかを調べてみましょう。
+この議論をするためには、\(W\)に対する境界条件が必要となります。
+トーラスの境界部分では\(\rho = 0\)であることを考えてきましたが、解析的に求めるためには\(W\)は正則でなければなりません。
+そこで、境界部分では\(\rho\)は小さい値ながら、有限であるとします。<br />
+以下のような線形な演算子を定義しましょう。</p>
+
+\[L(W) 
+= \frac{1}{R} \frac{\partial}{\partial R} \left( \rho R \frac{\partial W}{\partial R}\right) + \frac{\partial}{\partial z} \left( \rho \frac{\partial W}{\partial z}\right) - \frac{m^2 \rho W}{R^2} \tag{38}\]
+
+<p>すると(26)式は</p>
+
+\[L(W) 
+= - \frac{(\sigma + m\Omega)^2 \rho^2 W}{\gamma P} \tag{39}\]
+
+<p>となります。
+この方程式に\(L\)の逆変換を作用させることで、積分方程式を得ることができます。
+(39)式を\(L(W) = S\)のように書くことにすると</p>
+
+\[W 
+= L^{-1} (S) 
+= \iint G(R, z, R', z') S(R', z') dR' dz' \tag{40}\]
+
+<p>を得ます。
+ここで\(G(R, z, R', z')\)は適切に選択されたグリーン関数です。
+以上から、この固有値問題は</p>
+
+\[W + L^{-1} \left( \frac{(\sigma + m\Omega)^2 \rho^2 W}{\gamma P}\right) 
+= 0 \tag{41}\]
+
+<p>のようになります。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>この方程式を解く議論は私には難しすぎました...とりあえずこの説明はここまでですorz
+</code></pre></div></div>
+
+<h3 id="クラインゴルドン方程式とのアナロジー">クライン・ゴルドン方程式とのアナロジー</h3>
+
+<p>後のために、(39)式を次のように書き直しておきましょう。</p>
+
+\[L(W) 
+= - \frac{\alpha^2 m^2 (\nu + \Omega)^2}{\gamma P} \rho^2 W \tag{42}\]
+
+<p>ここで\(\nu \equiv \sigma /m\)です。
+そして\(\alpha\)は適当なパラメータで、\(\alpha = \pm 1\)の場合には(39)式に一致します。<br />
+この方程式において不安定となる\(\nu\)の固有値は、実はクライン・ゴルドン方程式からの類推から予想することができます。
+電荷\(e\)と質量\(m\)を持つ粒子の波動関数を\(\psi\)、そして静電ポテンシャルを\(\phi\)とすると</p>
+
+\[-c^2 \hbar^2 \nabla^2 \psi + m^2 c^4 \psi 
+= (E-e\phi)^2 \psi \tag{43}\]
+
+<p>のように書かれます。
+ここで\(E\)はエネルギー固有値です。
+もし粒子が有限領域に閉じ込められているとき(すなわち\(\psi\)が境界でゼロとなるとき)、固有値は離散化されます。
+そしてもし\(\phi\)が小さければ、固有値\(E\)は正負どちらもとる実数となります。
+\(\phi\)の大きさが\(2mc^2\)を超えると、正の最低エネルギー固有値と負の最高エネルギー固有値が合体し、固有値の複素数ペアを生み出します。
+これはクラインのパラドックスと呼ばれ、のちにこれは粒子・反粒子の生成を意味します。
+クライン・ゴルドン方程式において、\(E = -\alpha \nu, \phi = \alpha \Omega /e\)のように定義し、さらに楕円作用素を</p>
+
+\[L' (\psi) 
+\equiv -m^2 c^4 \psi + \hbar^2 c^2 \nabla^2 \psi \tag{44}\]
+
+<p>としましょう。
+すると(43)式は</p>
+
+\[L'(\psi) 
+= -\alpha^2 (\nu + \Omega)^2 \psi \tag{45}\]
+
+<p>のようになります。
+これは(39)式に類似しています。
+楕円作用素\(L'\)は\(L\)と少しだけ異なりますが、同じ数学的特徴を持ちます。
+このことから、</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

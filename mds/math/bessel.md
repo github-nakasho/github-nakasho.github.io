@@ -969,6 +969,74 @@ $$
 
 という公式も導くことができました。
 
+## ベッセル関数の漸近的振る舞い
+
+$$
+J_\nu (z) 
+= \frac{1}{\pi} \int_0^\pi \cos(z\sin \theta - n \theta) d\theta 
+= \frac{1}{\pi} \mathrm{Re} \int_0^\pi e^{i(z\sin \theta - n \theta)} d\theta
+$$
+
+において、$$z \gg 1$$の場合の漸近的な振る舞いを示してみましょう。
+積分で一番寄与が大きいのは、指数の肩の部分が最大値の部分です。
+すなわち
+
+$$
+\frac{d}{d\theta} (z\sin \theta - n \theta) 
+= z\cos \theta - n 
+= 0 \ \Longrightarrow \ \cos \theta_0 
+= \frac{\nu}{z}
+$$
+
+およびその近傍の値のみで、積分を計算していくことにしましょう。
+このとき
+
+$$
+\sin \theta_0 
+= \sqrt{1 - \frac{\nu^2}{z^2}} 
+= \frac{\sqrt{z^2 - \nu^2}}{z} 
+$$
+
+です。
+このような鞍点$$\theta_0$$周りで、$$\theta = \theta_0 + t$$として展開しましょう。
+
+$$
+z\sin \theta - n\theta 
+\approx (z\sin \theta_0 - n \theta_0) + \frac{1}{2} (-z \sin \theta_0) t^2 
+= \sqrt{z^2 - \nu^2} - n \theta_0 - \frac{\sqrt{z^2 - \nu^2}}{2} t^2 
+$$
+
+途中、鞍点から一階微分はゼロとしました。
+よって
+
+$$
+J_\nu (z) 
+= \frac{1}{\pi} \mathrm{Re} \ e^{i\left\{ \sqrt{z^2 - \nu^2}- n \theta_0 \right\}} \int_0^\pi e^{-i \frac{\sqrt{z^2 -\nu^2}}{2} t^2} d\theta
+$$
+
+のようになります。
+積分する変数を$$\theta: 0 \rightarrow \pi$$から$$t$$に変換しましょう。
+このとき被積分関数は$$t=0$$で鋭いピークを持つことから、積分範囲を$$-\infty < t < \infty$$に拡張します。
+するとガウス積分から
+
+$$
+\int_{-\infty}^\infty e^{-i \frac{\sqrt{z^2 - \nu^2}}{2} t^2} dt 
+= \sqrt{\frac{2\pi}{\sqrt{z^2 - \nu^2}}} e^{-i\pi / 4}
+$$
+
+です。
+今回は$$z\gg 1$$の振る舞いを考えているため、$$\sqrt{z^2 - \nu^2} \approx z, z \sin \theta_0 - n\theta_0 \approx z - \nu \frac{\pi}{2}$$として良いでしょう。
+よって
+
+$$
+J_\nu(z) 
+\approx \frac{1}{\pi} \mathrm{Re} \left[ e^{i\left( z - \frac{\nu \pi}{2}\right)} \sqrt{\frac{2\pi}{z}} e^{-i\pi / 4}\right] 
+= \sqrt{\frac{2}{\pi z}} \cos \left( z -\frac{2\nu + 1}{4} \pi\right) \tag{23}
+$$
+
+のようになります。
+$$z \gg 1$$では、ベッセル関数は$$\cos$$で振動しつつ、$$z^{-1/2}$$でその振幅を減衰させるような関数であるとわかります。
+
 ## ベッセル関数の概形
 
 以下にいくつかの$$n$$に対するベッセル関数を図示するスクリプトを示します。

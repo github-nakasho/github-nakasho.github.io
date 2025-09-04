@@ -1,0 +1,269 @@
+I"�(
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#輻射によるプラズマ流の加速" id="markdown-toc-輻射によるプラズマ流の加速">輻射によるプラズマ流の加速</a>    <ol>
+      <li><a href="#光子のエネルギー運動量テンソル" id="markdown-toc-光子のエネルギー運動量テンソル">光子のエネルギー運動量テンソル</a></li>
+      <li><a href="#運動方程式" id="markdown-toc-運動方程式">運動方程式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="輻射によるプラズマ流の加速">輻射によるプラズマ流の加速</h1>
+
+<p>X線星や活動銀河中心核、あるいはガンマ線バーストなどの高エネルギー天体現象では、非等方的な輻射場がプラズマに及ぼす力学的効果が重要となります。
+極端な場合には、プラズマが相対論的速度まで加速される可能性もあり、相対論的ジェットの加速機構のひとつとして調べられてきました。
+この機構を輻射加速と呼びます。<br />
+ここでは、この輻射加速についてメモします。
+前提知識として、特殊相対論を必要とします。</p>
+
+<h2 id="光子のエネルギー運動量テンソル">光子のエネルギー運動量テンソル</h2>
+
+<p>輻射場を格子の集団として記述することにしましょう。
+光子分布が定常軸対称(例えば降着円盤の周辺など)だとして、対称軸を\(z\)軸にとることにします。</p>
+
+<p><img src="/assets/images/astroelec/radiation_driven_acceleration_01.png" alt="" /></p>
+
+<p>光子の位相空間分布関数を\(f(z, \mathbf{p})\)とします。
+光子のエネルギー運動量テンソルは</p>
+
+\[T^{\mu \nu} (z) 
+= \int f(z, \mathbf{p}) p^\mu p^\nu c^2 \frac{d^3 \mathbf{p}}{E} \tag{1}\]
+
+<p>で定義されます。
+ここで\(cp^\mu = (E, c\mathbf{p})\)は4元運動量、\(E\)は光子のエネルギー、そして\(\mathbf{p}\)は光子の3次元運動量です。
+光子については</p>
+
+\[c^2 p^\mu p_\mu 
+= E^2 - c^2 \mathbf{p}^2 
+= 0 \ \Longrightarrow \ 
+E 
+= cp \tag{2}\]
+
+<p>が成り立ちます。
+よって、光子の進行方向が\(z\)軸となす角を\(\theta\)としたとき</p>
+
+\[p_z 
+= p \cos \theta 
+= \frac{E}{c} \cos \theta \tag{3}\]
+
+<p>と求まります。
+これを用いて(1)式を計算しましょう。</p>
+
+\[T^{00} 
+= \int f(z, \mathbf{p}) \frac{E}{c} \frac{E}{c} c^2 \frac{d^3 \mathbf{p}}{E} 
+= \int f(z, \mathbf{p}) E d^3 \mathbf{p} 
+\equiv J \tag{4}\]
+
+\[T^{03} 
+= \int f(z, \mathbf{p}) p^0 p^3 c^2 \frac{d^3 \mathbf{p}}{E}
+= \int f(z, \mathbf{p}) \frac{E}{c} \frac{E}{c} \cos \theta c^2 \frac{d^3 \mathbf{p}}{E} 
+= \int f(z, \mathbf{p}) E \cos \theta d^3 \mathbf{p} 
+\equiv H \tag{5}\]
+
+\[T^{33} 
+= \int f(z, \mathbf{p}) p^3 p^3 c^2 \frac{d^3 \mathbf{p}}{E} 
+= \int f(z, \mathbf{p}) E \cos^2 \theta d^3 \mathbf{p} 
+\equiv K \tag{6}\]
+
+<p>ここで\(J, H, K\)はそれぞれ、エネルギー密度、\(z\)方向のエネルギー流束密度 (運動量密度)、\(z\)方向への輻射圧を表します。</p>
+
+\[\begin{align}
+T^{11} 
+&amp;= \int f(z, \mathbf{p}) p^1 p^1 c^2 \frac{d^3 \mathbf{p}}{E} 
+= \int f(z, \mathbf{p}) E \sin^2 \theta \cos^2 \varphi d^3 \mathbf{p} 
+= \int f(z, \mathbf{p}) E (1-\cos^2 \theta) \cos^2 \varphi \cdot p \sin \theta dp d\theta d\varphi \notag \\
+&amp;\underbrace{=}_{(4), (6)} J - K \tag{7}
+\end{align}\]
+
+\[T^{22} 
+= \int f(z, \mathbf{p}) p^2 p^2 c^2 \frac{d^3 \mathbf{p}}{E} 
+=\]
+
+<p>以上より、光子のエネルギー運動量テンソルが</p>
+
+\[(T^{\mu \nu}) 
+= \left( \begin{array}{cccc}
+J &amp; 0 &amp; 0 &amp; H \\
+0 &amp; \frac{1}{2} (J-K) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{2} (J-K) &amp; 0 \\
+H &amp; 0 &amp; 0 &amp; K
+\end{array} \right) \tag{}\]
+
+<p>と求まりました。</p>
+
+<h2 id="運動方程式">運動方程式</h2>
+
+<p>\(z\)軸上にある電子と光子の<a href="/astroelec/compton">コンプトン散乱</a>による相互作用を考えましょう。
+ただし簡単のため、断面積はトムソン散乱断面積\(\sigma_\mathrm{T}\)で与えられるものとします。
+1個の電子の受ける散乱頻度は、電子が静止して見える系で</p>
+
+\[c \sigma_\mathrm{T} \int f'(\mathbf{p}') d^3 \mathbf{p}' \tag{}\]
+
+<p>のように与えられます。
+ここで\('\)は、電子の
+ここから、散乱で単位時間あたりに得る運動量は、1回の散乱で受ける\(z\)方向の平均の運動量移行とすると</p>
+
+\[\frac{dq_z'}{d\tau} 
+= c \sigma_\mathrm{T} \int f'(\mathbf{p}') \Delta p_z' d^3 \mathbf{p}' \tag{}\]
+
+<p>と書くことができます。
+1つの光子の衝突による散乱角を\(\theta_s'\)とすると、入射光子の運動方向への運動量輸送は\(\frac{E'}{c} (1-\cos \theta_s')\)となります。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>これを散乱角で平均すると、結局</p>
+
+\[\Delta p_z' 
+= \frac{1}{\pi} \int_0^\pi \frac{E'}{c} (1-\cos \theta_s') d\theta_s' 
+= \frac{E'}{c} 
+= p_z' \tag{}\]
+
+<p>のようになるため、運動方程式()は</p>
+
+\[\frac{dq_z'}{d\tau} 
+= \sigma_\mathrm{T} H' \tag{}\]
+
+<p>のようになります。　　
+電子が運動して見える元の座標系では、電子は速度\(v\)で\(z\)方向に運動しているとしましょう。
+このとき、4元力は\(F^\mu = (0, 0, 0, \sigma_\mathrm{T} H')\)のように書かることから、元の座標系での4元力は、この4元力のローレンツ変換より</p>
+
+\[(\Lambda^\nu_{\ \ \mu} F^\mu) 
+= \left( \begin{array}{cccc} 
+\gamma &amp; 0 &amp; 0 &amp; \frac{v}{c} \gamma \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+\frac{v}{c} \gamma &amp; 0 &amp; 0 &amp; \gamma 
+\end{array}\right) \left( \begin{array}{c} 
+0 \\ 
+0 \\
+0 \\
+\sigma_\mathrm{T} H'
+\end{array}\right) 
+= \left( \begin{array}{c} 
+\frac{v}{c} \gamma \sigma_\mathrm{T} H' \\ 
+0 \\
+0 \\
+\gamma \sigma_\mathrm{T} H'
+\end{array}\right) \tag{}\]
+
+<p>のように計算されます。
+以上から、元の座標系での電子の運動方程式が</p>
+
+\[\frac{d mc \gamma}{d\tau} 
+= \gamma \frac{v}{c} \sigma_\mathrm{T} H' \tag{}\]
+
+\[\frac{d mv \gamma}{d\tau} 
+= \gamma \sigma_\mathrm{T} H' \tag{}\]
+
+<p>と求まります。
+固有時間は\(\tau = t / \gamma\)と()式より</p>
+
+\[\frac{d\gamma}{dt} 
+= \frac{\sigma_\mathrm{T}}{mc^2} v H' \tag{}\]
+
+<p>ですが、これを\(z\)軸上の運動の軌跡に沿っての変化を考えると、\(dz = v dt\)より</p>
+
+\[\frac{d\gamma}{dz} 
+= \frac{\sigma_\mathrm{T}}{mc^2} H' \tag{}\]
+
+<p>のように書くこともできます。
+エネルギー運動量テンソルのローレンツ変換を計算しましょう。
+すると</p>
+
+\[\begin{align}
+(T^{\mu \nu '}) 
+&amp;= (\Lambda^\mu_{\ \ \alpha} T^{\alpha \beta} \Lambda^\nu_{\ \ \beta} \notag \\
+&amp;= \left( \begin{array}{cccc} 
+\gamma &amp; 0 &amp; 0 &amp; -\beta \gamma\\
+0 &amp; 1 &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; 1 &amp; 0 \\ 
+-\beta \gamma &amp; 0 &amp; 0 &amp; \gamma 
+\end{array}\right)
+\left( \begin{array}{cccc} 
+J &amp; 0 &amp; 0 &amp; H \\
+0 &amp; \frac{1}{2} (J-K) &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; \frac{1}{2} (J-K) &amp; 0 \\ 
+H &amp; 0 &amp; 0 &amp; K 
+\end{array}\right)
+\left( \begin{array}{cccc} 
+\gamma &amp; 0 &amp; 0 &amp; -\beta \gamma\\
+0 &amp; 1 &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; 1 &amp; 0 \\ 
+-\beta \gamma &amp; 0 &amp; 0 &amp; \gamma 
+\end{array}\right) \notag \\
+&amp;= 
+\left( \begin{array}{cccc} 
+\gamma J-\beta \gamma H &amp; 0 &amp; 0 &amp; \gamma H-\beta \gamma K \\
+0 &amp; \frac{1}{2} (J-K) &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; \frac{1}{2} (J-K) &amp; 0 \\ 
+-\beta \gamma J+\gamma H &amp; 0 &amp; 0 &amp; -\beta \gamma H+\gamma K 
+\end{array}\right)
+\left( \begin{array}{cccc} 
+\gamma &amp; 0 &amp; 0 &amp; -\beta \gamma\\
+0 &amp; 1 &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; 1 &amp; 0 \\ 
+-\beta \gamma &amp; 0 &amp; 0 &amp; \gamma 
+\end{array}\right) \notag \\
+&amp;= \left( \begin{array}{cccc} 
+\gamma^2 J-\beta \gamma^2 H - \beta \gamma^2 H + \beta^2 \gamma^2 K &amp; 0 &amp; 0 &amp; -\beta \gamma^2 J + \beta^2 \gamma^2 H + \gamma^2 H - \beta \gamma^2 K \\
+0 &amp; \frac{1}{2} (J-K) &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; \frac{1}{2} (J-K) &amp; 0 \\ 
+-\beta \gamma^2 J + \gamma^2 H + \beta^2 \gamma^2 H - \beta \gamma^2 K &amp; 0 &amp; 0 &amp; \beta^2 \gamma^2 J - \beta \gamma^2 H - \beta \gamma^2 H + \gamma^2 K 
+\end{array}\right) \tag()
+\end{align}\]
+
+<p>より</p>
+
+\[H' 
+= \gamma^2 \{ (1+\beta^2) H - \beta (J+K) \} \tag{}\]
+
+<p>となります。
+加速が起こらない、すなわち()式がゼロとなるときを求めてみましょう。
+そのときを\(\beta_\mathrm{eq}\)と書くことにしましょう。</p>
+
+\[\begin{align}
+&amp;H \beta^2 - (J+K) \beta + H 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+\beta_\mathrm{eq} 
+= \frac{(J+K) \pm \sqrt{(J+K)^2 - 4H^2}}{2H} 
+= \frac{1 \pm \sqrt{1-A^2}}{A} \quad \left( A \equiv \frac{2H}{J+K} \right) \tag{}
+\end{align}\]
+
+<p>\(0 \leq \beta &lt; 1\)より、マイナス符号が\(\beta_\mathrm{eq}\)として用いることにします。
+ここから</p>
+
+\[\gamma_\mathrm{eq}^2 
+= \frac{1}{1-\beta^2} 
+= \frac{1}{1 - \left( \frac{1-\sqrt{1-A^2}}{A} \right)^2} 
+= \frac{1}{\frac{2A^2 + 2\sqrt{1-A^2} - 2}{A^2}} 
+= \frac{A^2}{2 \sqrt{1-A^2} (1-\sqrt{1-A^2})} 
+= \frac{A^2 (1+\sqrt{1-A^2})}{2 \sqrt{1-A^2} (1 - 1 + A^2)}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

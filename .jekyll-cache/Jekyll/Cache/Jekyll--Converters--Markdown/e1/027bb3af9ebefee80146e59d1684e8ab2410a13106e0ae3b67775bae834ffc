@@ -1,0 +1,117 @@
+I"p
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#パルサー磁気圏" id="markdown-toc-パルサー磁気圏">パルサー磁気圏</a>    <ol>
+      <li><a href="#goldreich--julian-1969の磁気圏モデル" id="markdown-toc-goldreich--julian-1969の磁気圏モデル">Goldreich &amp; Julian (1969)の磁気圏モデル</a></li>
+      <li><a href="#重力と電磁気力はどちらが支配的" id="markdown-toc-重力と電磁気力はどちらが支配的">重力と電磁気力はどちらが支配的？</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="パルサー磁気圏">パルサー磁気圏</h1>
+
+<p>ここでは、パルサー磁気圏について勉強したものをメモしていきます。
+そこまで詳細には触れず、簡単化されたモデルを見ていきましょう。</p>
+
+<h2 id="goldreich--julian-1969の磁気圏モデル">Goldreich &amp; Julian (1969)の磁気圏モデル</h2>
+
+<p>ここでは、自転する中性子星が双極子磁場を持っているとします。
+ただしこの双極子磁場の軸は、回転軸と一致しているものとします。
+すると中性子星外部の磁場は、以下のように書くことができます。</p>
+
+\[\mathbf{B}^\mathrm{(out)} 
+= B_p R^3 \left( \frac{\cos \theta}{r^3} \mathbf{e}_r + \frac{\sin \theta}{2r^3} \mathbf{e}_\theta \right) \tag{1}\]
+
+<p>ここで\(R\)は中性子星の半径、\(B_p\)は双極子磁場の大きさを表す定数です。
+中性子星内部は電気伝導度がとても高く、完全導体のように扱うことができるとします。
+すると、導体内は電場が存在しないため、次の式を満たす必要があります。</p>
+
+\[\mathbf{E}^\mathrm{(in)} + (\boldsymbol{\Omega} \times \mathbf{r}) \times \frac{\mathbf{B}^\mathrm{in}}{c} 
+= \mathbf{0} \tag{2}\]
+
+<p>さらに中性子星表面には電流は流れておらず、中性子星は定常状態に落ち着いているとしましょう。
+すると、\(\mathbf{B}\)の成分は連続でなければならないことがわかります。
+ここから、中性子星表面から少しだけ内側の磁場が</p>
+
+\[\mathbf{B}^\mathrm{(in)} 
+= B_p \left( \cos \theta \mathbf{e}_r + \frac{\sin \theta}{2} \mathbf{e}_\theta \right) \tag{3}\]
+
+<p>とわかります。
+(3)式を(2)式に入れることで、表面から少し内側の電場は</p>
+
+\[\mathbf{E}^\mathrm{(in)} 
+= - (\boldsymbol{\Omega} \times \mathbf{R})\frac{\mathbf{B}^\mathrm{(in)}}{c} 
+= - R \Omega \sin \theta \mathbf{e}_\varphi \times \frac{B_p}{c} \left( \cos \theta \mathbf{e}_r + \frac{\sin \theta}{2} \mathbf{e}_\theta \right) 
+= - \frac{R \Omega B_p \sin \theta}{c} \left( \cos \theta \mathbf{e}_\theta - \frac{\sin \theta}{2} \mathbf{e}_r \right) \tag{4}\]
+
+<p>のように計算されます。
+完全導体表面では、電場\(\mathbf{E}\)の接線方向\(E_\theta\)が連続でなければなりません。
+すると(4)式から</p>
+
+\[E_\theta^\mathrm{(out)} 
+= - \frac{R \Omega B_p}{c} \sin \theta \cos \theta 
+= - \frac{R \Omega B_p}{2c} \frac{\partial}{\partial \theta} \sin^2 \theta\]
+
+<p>です。
+ここで、ルジャンドル多項式 \(P_2 (\cos \theta) = \frac{1}{2} (3\cos^2 \theta - 1)\)より</p>
+
+\[E_\theta^\mathrm{(out)} 
+= \frac{R \Omega B_p}{3c} \frac{\partial }{\partial \theta} \left( P_2 (\cos \theta) - 1 \right) 
+= \frac{R \Omega B_p}{3c} \frac{\partial P_2 (\cos \theta)}{\partial \theta} \tag{5}\]
+
+<p>のように整理されます。
+中性子星の外側は真空であるとすると、電場およびその静電ポテンシャルは</p>
+
+\[\mathbf{E}^\mathrm{(out)} 
+= - \nabla \phi, \quad \nabla^2 \phi 
+= 0 \tag{6}\]
+
+<p>を満たします。
+\(r = R\)での境界条件(5)式を満たすような静電ポテンシャルを計算しましょう。</p>
+
+\[- \frac{1}{R} \frac{\partial \phi}{\partial \theta} 
+= \frac{R \Omega B_p}{3c} \frac{\partial P_2 (\cos \theta)}{\partial \theta} \ \Longrightarrow \ 
+\phi (R, \theta) 
+= - \frac{R^2 \Omega B_p}{3c} P_2 (\cos \theta)\]
+
+<p>のようになります。
+電気双極子の静電ポテンシャルが\(r^{-3}\)で減衰することを既知の事実として用いると</p>
+
+\[\phi (r, \theta) 
+= - \frac{B_p \Omega}{3c} \frac{R^5}{r^3} P_2 (\cos \theta) \tag{7}\]
+
+<p>のように、中性子星外部の静電ポテンシャルを求めることができました。</p>
+
+<h2 id="重力と電磁気力はどちらが支配的">重力と電磁気力はどちらが支配的？</h2>
+
+<p>中性子星内部において</p>
+
+\[\mathbf{E}^\mathrm{(in)} \cdot \mathbf{B}^\mathrm{(out)} 
+\underbrace{=}_{(2)} -\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="">”Black holes white dwarfs and neutron stars”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

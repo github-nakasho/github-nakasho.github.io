@@ -1,0 +1,54 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#パルサーグリッチ" id="markdown-toc-パルサーグリッチ">パルサーグリッチ</a>    <ol>
+      <li><a href="#グリッチの原因" id="markdown-toc-グリッチの原因">グリッチの原因</a></li>
+      <li><a href="#グリッチの分類" id="markdown-toc-グリッチの分類">グリッチの分類</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="パルサーグリッチ">パルサーグリッチ</h1>
+
+<p>パルサーの回転エネルギーが電磁放射や粒子加速で失われることで、パルサーのパルス周期は徐々に長くなって(スピンダウンして)いきます。
+しかしいくつかのパルサーでは、パルス周期が突然短い時間スケールで短くなる(スピンアップする)現象が確認されており、これをグリッチ(glitches)と呼びます。
+グリッチが起きてパルス周期が短くなった後、徐々に元のパルス周期に戻っていきます。</p>
+
+<h2 id="グリッチの原因">グリッチの原因</h2>
+
+<p>中性子星は内部コアと外部のクラストから構成されています。
+コアとクラストの間には回転のズレが生じており、コアの自転角速度がわずかに速いとされています。
+時間と共にコアとクラストの回転速度が大きくなると、ある時点でコアが持つ角運動量がクラストに輸送され、両者の回転速度が等しくなります。
+これがグリッチの原因として考えられているモデルの一つです。
+このモデルの理解には、超流動体となっているコアでの渦糸のダイナミクスが必要となります。<br />
+その他にも、クラストで起こる地震 (starquake, crustquake) や、中性子星内部の磁束管と渦糸との相互作用モデルなどが提案されていますが、まだ未解明な部分が多く残っています。</p>
+
+<h2 id="グリッチの分類">グリッチの分類</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://arxiv.org/abs/2211.13885">Zhou et al., 2022, “Pulsar Glitches: A Review”</a><br />
+[] <a href="https://amzn.to/42dkVFZ">Shapiro &amp; Teukolsky, ”Black holes white dwarfs and neutron stars”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

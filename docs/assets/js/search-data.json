@@ -6964,61 +6964,61 @@
     
     "relUrl": "/tips/links"
   },"995": {
-    "doc": "LTE",
-    "title": "3.4 Local Thermodynamic Equilibrium (LTE)",
-    "content": "多くの場合、ガス粒子の平均自由行程は恒星大気内で温度・圧力などの物理量が変化する距離に比べて非常に小さいです。よってガスの状態はそれぞれの場所の温度・密度に対する熱平衡状態(LTE)になっている場合が多いです。LTEの場合、ガス粒子の性質が場所場所の温度・密度だけで決まるため、取り扱いが簡単になります。 . ",
-    "url": "/atmos/lte#34-local-thermodynamic-equilibrium-lte",
-    
-    "relUrl": "/atmos/lte#34-local-thermodynamic-equilibrium-lte"
-  },"996": {
-    "doc": "LTE",
-    "title": "3.4.1 Maxwell分布",
-    "content": "十分に希薄で熱平衡なガスの運動はMaxwell分布 . \\[f(v) dv = \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} e^{-\\frac{mv^2}{2k_B T}} 4\\pi v^2 dv \\tag{3.42}\\] で与えられます。このとき、速度の2乗の平均の平方根(Root-mean-square velocity)は\\(\\sqrt{\\langle v^2 \\rangle} = \\sqrt{\\frac{3k_B T}{m}}\\)です。 . ",
-    "url": "/atmos/lte#341-maxwell%E5%88%86%E5%B8%83",
-    
-    "relUrl": "/atmos/lte#341-maxwell分布"
-  },"997": {
-    "doc": "LTE",
-    "title": "3.4.2 Boltzmannの励起法則",
-    "content": "熱平衡状態では、原子またはイオンの各エネルギー準位状態にある確率はBoltzmannの法則で与えられます。ある原子(またはイオン)\\(i\\)に対して、基底状態にある\\(n_{i, 0}\\)と、ある励起状態\\(k\\)にある数\\(n_{i, k}\\)との比は . \\[\\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast = \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.43}\\] のように与えられます。ここで\\(\\chi_{i, k}\\)は状態\\(k\\)の励起エネルギーを表し、\\(g_{i, 0}, g_{i, k}\\)はそれぞれ基底状態と励起状態\\(k\\)の統計的重率(Statistical weight)を表します。さらに\\(\\ast\\)は熱平衡状態の値であることを表します。 \\(N_i\\)を原子\\(i\\)の数密度とすると、熱平衡状態では . \\[\\begin{align} N_i &amp;= \\sum_{k=0}^\\infty n_{i, k} = n_{i, 0}^\\ast \\sum_{k=0}^\\infty \\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast \\underbrace{=}_{(3.43)} n_{i, 0}^\\ast \\sum_{k=0}^\\infty \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} = \\frac{n_{i, 0}^\\ast}{g_{i, 0}} \\left( g_{i, 0} + \\sum_{k=1}^\\infty g_{i, k} e^{-\\frac{\\chi_{i, k}}{k_B T}}\\right) \\notag \\\\ &amp;= \\frac{n_{i, 0}^\\ast}{g_{i, 0}} U_i (T) \\tag{3.44} \\end{align}\\] のように書けます。ここで\\(U_i(T)\\)は . \\[U_i (T) \\equiv \\sum_{k=0}^\\infty g_{i, k} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.45}\\] のように定義される分配関数(Partition function)です。ちなみに、この式では\\(\\chi_{i, 0}= 0\\)です。この式は分配関数が各エネルギー状態の統計的重率を、そのエネルギー準位の実現確率をWeightにして加えたものであることを示しています。したがって、分配関数はある与えられた温度に対して、原子の状態の平均的自由度を表していると言えます。 今後のために、以下のように式変形を行いましょう。 . \\[\\frac{n_{i, k}^\\ast}{N_i} = \\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast \\frac{n_{i, 0}^\\ast}{N_i} \\underbrace{=}_{(3.43), (3.44)} \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\frac{n_{i, 0}^\\ast g_{i, 0}}{n_{i, 0}^\\ast U_i (T)} = \\frac{g_{i, k}}{U_i (T)} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.46}\\] ",
-    "url": "/atmos/lte#342-boltzmann%E3%81%AE%E5%8A%B1%E8%B5%B7%E6%B3%95%E5%89%87",
-    
-    "relUrl": "/atmos/lte#342-boltzmannの励起法則"
-  },"998": {
-    "doc": "LTE",
-    "title": "3.4.3 Sahaの電離式",
-    "content": "電離したものとしていないものとの数の比を得るために、Boltzmannの法則を使います。原子\\(i\\)が1回電離してイオン\\(i+1\\)ができたとして、その数を\\(N_{i+1}\\)とします。(3.44)と同様に . \\[N_{i+1} = \\frac{n_{i+1, 0}^\\ast}{g_{i+1, 0}} U_{i+1} (T) \\tag{3.47}\\] が成り立つので . \\[\\frac{N_{i+1}}{N_i} = \\frac{g_{i, 0}}{g_{i+1, 0}} \\frac{U_{i+1}}{U_i} \\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast \\tag{3.48}\\] と書くことができます。この式に現れる\\(\\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast\\)にBoltzmannの法則を適用します。これら2つの状態のエネルギー差は電離エネルギーで、それを\\(\\chi_I\\)と書きましょう。電離した状態の統計的重率は、イオン自体の統計的重率\\(g_{i+1, 0}\\)と自由電子の分配関数\\(U_e\\)を掛け合わせたもの、すなわち\\(g_{i+1, 0} U_e\\)となります。したがって . \\[\\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast = \\frac{g_{i+1, 0} U_e}{g_{i, 0}} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.49}\\] のように表されます。これを(3.48)式に代入すると . \\[\\frac{N_{i+1}}{N_i} = \\frac{U_e U_{i+1}}{U_i} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.50}\\] を得ます。よってあとは\\(U_e\\)がわかれば良いことがわかります。 自由電子の分配関数\\(U_e\\)を以下のようにして求めていきましょう。まずは、運動量が\\((p, p+dp)\\)の範囲にある自由電子の単位堆積あたりの状態数(統計的重率)を求めます。電子数密度\\(n_e\\)より、電子1個あたりが占有する空間体積は\\(\\Delta x^3 = 1/n_e\\)です。運動量空間において半径\\(p\\), 厚さ\\(dp\\)の球殻の体積は\\(4\\pi p^2 dp\\)です。 . 不確定性原理から、1つの電子が占有する体積は\\(h^3\\)です。これらを総合して、知りたかった状態数は . \\[\\frac{4\\pi p^2 dp}{n_e h^3} \\times 2\\] となります。最後の2は電子のスピン自由度です。今は自由電子について考えているので、実現確率の重みを\\(e^{-\\frac{E}{k_B T}} = e^{-\\frac{p^2}{2m k_B T}}\\)のように連続状態に適用して . \\[U_e = \\int_0^\\infty \\frac{8\\pi p^2}{n_e h^3} e^{-\\frac{p^2}{2mk_B T}} dp = \\frac{8\\pi}{h^3 n_e} \\frac{1}{4} (2mk_B T)^{3/2} \\sqrt{\\pi} = \\frac{2}{n_e} \\left( \\frac{2\\pi m k_B T}{h^2}\\right)^{3/2} \\tag{3.51}\\] を得ます。これを(3.50)式に代入すると . \\[\\frac{N_{i+1} n_e}{N_i} = 2 \\left( \\frac{2\\pi m_e k_B T}{h^2}\\right)^{3/2} \\frac{U_{i+1}}{U_i} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.52}\\] が得られます。この式がSahaの電離式の1つの形です。 電子は原子またはイオンから放出されるため、電子数密度は質量密度\\(\\rho\\)に比例します。すなわち\\(n_e \\propto \\rho\\)です。(3.52)式を変形すると . \\[\\frac{N_{i+1}}{N_i} \\propto \\frac{e^{-\\frac{\\chi_I}{k_B T}}}{\\rho}\\] となります。このことから、ガス密度\\(\\rho\\)が大きいと\\(N_{i+1}/N_i\\)が小さくなることがわかります。これは電子の数が多くなることで、再結合する確率も高くなり、電離度が下がるためです。 . ",
-    "url": "/atmos/lte#343-saha%E3%81%AE%E9%9B%BB%E9%9B%A2%E5%BC%8F",
-    
-    "relUrl": "/atmos/lte#343-sahaの電離式"
-  },"999": {
-    "doc": "LTE",
-    "title": "LTE",
-    "content": ". | 3.4 Local Thermodynamic Equilibrium (LTE) . | 3.4.1 Maxwell分布 | 3.4.2 Boltzmannの励起法則 | 3.4.3 Sahaの電離式 | . | . ",
-    "url": "/atmos/lte",
-    
-    "relUrl": "/atmos/lte"
-  },"1000": {
     "doc": "局所熱力学平衡と状態式の一般論",
     "title": "局所熱力学平衡 (Local Thermodynamic Equilibrium; LTE)",
     "content": "恒星内部の温度や圧力などの熱力学量は、中心からの距離により異なります。 しかしその変化は非常に緩やかで、ガス粒子と光子の平均自由行程程度の長さでは、熱力学量はほとんど変化しません。 よって、恒星内部の各場所で熱力学平衡が成り立っているとする局所熱力学平衡(LTE)の近似がよく成り立っています(ただし、光球より外の密度の非常に低い領域ではLTEの近似が悪くなる場合があるので注意が必要です。) このことを、太陽内部の状態を例として確かめてみましょう。 熱力学量の例として、恒星内部での圧力変化の程度を考えます。 圧力が\\(1/e\\)になる距離は圧力のscale length (height)と呼ばれ、ここでは\\(H_P\\)と書くことにします。 この長さは、静水圧平衡の式より . \\[\\frac{dP}{dr} = - \\frac{GM_r}{r^2} \\rho \\ \\Longrightarrow \\ H_P \\equiv -\\frac{P}{\\frac{dP}{dr}} = \\frac{r^2}{GM_r} \\frac{P}{\\rho} = \\frac{P}{g\\rho} \\tag{3.1.1}\\] のように表現されます。 この距離は表面に近づくほど短くなります。 太陽光球では、\\(g \\sim 2.7 \\times 10^4 \\mathrm{cm/s^2}, P \\sim 5 \\times 10^5 \\mathrm{dyn/cm^2}, \\rho \\sim 3 \\times 10^{-7} \\mathrm{g/cm^3}\\)の値より、\\(H_P \\sim 10^7 \\mathrm{cm}\\)となります。 この距離に比べて、ガス粒子および光子の平均自由行程が非常に短ければ、LTEの近似がよく成り立っていると言えるでしょう。 最初に、ガス粒子の平均自由行程を見積りましょう。 そのために粒子間(電子と陽子)の衝突を考えます。 電子質量\\(m_e\\)は陽子質量に比べて1/2000程度と軽いため、陽子と電子の換算質量はほとんど\\(m_e\\)となります。 衝突が起こる(運動方向が変えられる)のは、大雑把に運動エネルギーと静電エネルギーが同程度のときと考えることができるので、その時の衝突パラメータを\\(b\\)とすると . \\[\\frac{1}{2} m_e v^2 \\simeq \\frac{3}{2} k_B T \\simeq \\frac{e^2}{b} \\ \\Longrightarrow \\ b \\simeq \\frac{2e^2}{3k_B T} \\tag{3.1.2}\\] のようになります。 ここで\\(k_B = 1.38 \\times 10^{-16} \\mathrm{erg/K}\\)はボルツマン定数、\\(e\\)は電子と陽子の電荷\\(4.80 \\times 10^{-10} \\mathrm{esu}\\)を表します。 すると、衝突断面積は . \\[\\sigma \\simeq \\pi b^2 \\simeq \\frac{4\\pi e^4}{9k_B^2 T^2} \\simeq 4 \\times 10^{-18} \\left( \\frac{T}{10^6 \\mathrm{K}}\\right)^{-2} \\ [\\mathrm{cm}^2] \\tag{3.1.3}\\] のように表されます。 ここから、平均自由行程\\(\\ell\\)は、陽子の数密度を\\(N_p = \\frac{\\rho}{m_p}\\)のように書くと . \\[\\begin{align} \\ell &amp;= \\frac{1}{N_p \\sigma} = \\frac{m_p}{\\sigma \\rho} \\simeq \\frac{1.7 \\times 10^{-24}}{4 \\times 10^{-18} \\rho} \\left( \\frac{T}{10^6 \\mathrm{K}}\\right)^{2} \\notag \\\\ &amp;\\simeq 4 \\times 10^{-7} \\left( \\frac{T}{10^6 \\mathrm{K}}\\right)^{2} \\left( \\frac{\\rho}{1 \\mathrm{g/cm^3}}\\right)^{-1} \\ [\\mathrm{cm}] \\tag{3.1.4} \\end{align}\\] となります。 温度と密度に太陽光球の値を入れると、粒子の平均自由行程は\\(5 \\times 10^{-5}\\)cm程度となります。 よって圧力のスケールハイトに比べて非常に短いことがわかります。 光子によってもエネルギーが運ばれるため、LTEが成り立つためには光子の平均自由行程も十分短い必要があります。 電離したガス粒子一個あたりの光子の散乱吸収断面積の下限は、電子のトムソン散乱断面積\\(\\sigma_T \\sim 6.65 \\times 10^{-25} \\mathrm{cm}^2\\)です。 これより、電子数密度を\\(N_e\\)と書くと、光子の平均自由行程は . \\[\\ell_\\mathrm{ph} &lt; \\frac{1}{N_e \\sigma_T} \\simeq \\frac{m_p}{\\sigma_T \\rho} \\simeq \\frac{1.7 \\times 10^{-24}}{6.7 \\times 10^{-25} \\rho} \\simeq 3 \\left( \\right)^{-1} \\ [\\mathrm{cm}] \\tag{3.1.5}\\] のように書けます。 ここでは電離した水素ガスを仮定し、\\(N_e = N_p\\)としました。 光球より内側では光子の平均自由行程が圧力のスケールハイトよりも短く、LTEの近似が成り立ちます。 しかし先ほど説明したように、光球より外側ではLTEが成り立っている保証がないことに注意が必要です。 . ",
     "url": "/stellar/lte#%E5%B1%80%E6%89%80%E7%86%B1%E5%8A%9B%E5%AD%A6%E5%B9%B3%E8%A1%A1-local-thermodynamic-equilibrium-lte",
     
     "relUrl": "/stellar/lte#局所熱力学平衡-local-thermodynamic-equilibrium-lte"
-  },"1001": {
+  },"996": {
     "doc": "局所熱力学平衡と状態式の一般論",
     "title": "状態式 (equation of state) の一般論",
     "content": "ガスを構成するある種類の粒子に対して、位置と運動量が作る位相空間における運動量\\(p\\)の粒子密度は . \\[f(p) = \\frac{1}{h^3} \\sum_j \\frac{g_j}{\\exp \\{-\\eta + (\\mathcal{E}_j + \\mathcal{E}_p) / (k_B T)\\} \\pm 1} \\tag{3.2.1}\\] と表されます。 ここで\\(\\mathcal{E}_j\\)は粒子の内部状態\\(j\\)のエネルギーを表し、\\(g_j\\)はその状態の統計的重率です。 さらに\\(\\mathcal{E}_p\\)は粒子の運動エネルギーを表し、\\(\\eta\\)は化学ポテンシャルを\\(k_B T\\)で割った量です。 分母の複合は、\\(+\\)符号はフェルミ粒子に対して、\\(-\\)符号はボーズ粒子に対して適用されます。 粒子の運動エネルギーは、相対論的な粒子も扱えるように . \\[\\mathcal{E}_p = \\sqrt{c^2p^2 + m^2 c^4} - mc^2 \\tag{3.2.2}\\] のように表します。 ここで\\(m\\)は粒子の静止質量、\\(c\\)は光速度を表します。 この式から、非相対論的な場合と相対論的極限における運動エネルギーが . \\[\\mathcal{E}_p \\rightarrow \\left\\{ \\begin{array}{lr} \\frac{p^2}{2m} &amp; (\\mathrm{if} \\ pc \\ll mc^2) \\\\ pc &amp; (\\mathrm{if} \\ pc \\gg mc^2) \\end{array} \\right.\\] のように書かれることがわかります。 \\(f(p)\\)の定義より、単位体積あたりの粒子数(数密度)\\(N\\)は . \\[N = \\int_0^\\infty f(p) 4\\pi p^2 dp \\ [\\mathrm{cm}^{-3}] \\tag{3.2.3}\\] で与えられます。 また圧力\\(P\\)は、ある方向(ここでは\\(z\\)方向としましょう)への運動量流束なので . \\[P = \\iiint d^2 \\mathbf{p} f(\\mathbf{p}) v_z p_z = \\int_0^\\infty dp f(p) p^2 vp \\int d\\Omega \\cos^2 \\theta = \\frac{4\\pi}{3} \\int_0^\\infty f(p) vp^3 dp \\tag{3.2.4}\\] のように書かれます。 . ここで速度\\(v\\)は、解析力学のハミルトンの正準方程式\\(\\dot{q} = \\frac{\\partial H}{\\partial p}, \\dot{p} = -\\frac{\\partial H}{\\partial q}\\)より . \\[v = \\frac{\\partial \\mathcal{E}}{\\partial p} = \\frac{c^2 p}{\\sqrt{c^2 p^2 + m^2 c^4}} = \\frac{cp}{\\sqrt{p^2 + m^2 c^2}} \\tag{3.2.5}\\] と求まります。 この式より、非相対論的な場合(\\(p \\ll mc\\))では\\(v \\simeq p/m\\)であり、相対論的な場合(\\(p \\gg mc\\))では\\(v \\simeq c\\)となることがわかります。 ガスの単位体積あたりの内部エネルギーは . \\[E = \\int_0^\\infty \\mathcal{E}_p f(p) 4\\pi p^2 dp \\tag{3.2.6}\\] で与えられます。 . ",
     "url": "/stellar/lte#%E7%8A%B6%E6%85%8B%E5%BC%8F-equation-of-state-%E3%81%AE%E4%B8%80%E8%88%AC%E8%AB%96",
     
     "relUrl": "/stellar/lte#状態式-equation-of-state-の一般論"
-  },"1002": {
+  },"997": {
     "doc": "局所熱力学平衡と状態式の一般論",
     "title": "局所熱力学平衡と状態式の一般論",
     "content": ". | 局所熱力学平衡 (Local Thermodynamic Equilibrium; LTE) | 状態式 (equation of state) の一般論 | . ",
     "url": "/stellar/lte",
     
     "relUrl": "/stellar/lte"
+  },"998": {
+    "doc": "LTE",
+    "title": "3.4 Local Thermodynamic Equilibrium (LTE)",
+    "content": "多くの場合、ガス粒子の平均自由行程は恒星大気内で温度・圧力などの物理量が変化する距離に比べて非常に小さいです。よってガスの状態はそれぞれの場所の温度・密度に対する熱平衡状態(LTE)になっている場合が多いです。LTEの場合、ガス粒子の性質が場所場所の温度・密度だけで決まるため、取り扱いが簡単になります。 . ",
+    "url": "/atmos/lte#34-local-thermodynamic-equilibrium-lte",
+    
+    "relUrl": "/atmos/lte#34-local-thermodynamic-equilibrium-lte"
+  },"999": {
+    "doc": "LTE",
+    "title": "3.4.1 Maxwell分布",
+    "content": "十分に希薄で熱平衡なガスの運動はMaxwell分布 . \\[f(v) dv = \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} e^{-\\frac{mv^2}{2k_B T}} 4\\pi v^2 dv \\tag{3.42}\\] で与えられます。このとき、速度の2乗の平均の平方根(Root-mean-square velocity)は\\(\\sqrt{\\langle v^2 \\rangle} = \\sqrt{\\frac{3k_B T}{m}}\\)です。 . ",
+    "url": "/atmos/lte#341-maxwell%E5%88%86%E5%B8%83",
+    
+    "relUrl": "/atmos/lte#341-maxwell分布"
+  },"1000": {
+    "doc": "LTE",
+    "title": "3.4.2 Boltzmannの励起法則",
+    "content": "熱平衡状態では、原子またはイオンの各エネルギー準位状態にある確率はBoltzmannの法則で与えられます。ある原子(またはイオン)\\(i\\)に対して、基底状態にある\\(n_{i, 0}\\)と、ある励起状態\\(k\\)にある数\\(n_{i, k}\\)との比は . \\[\\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast = \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.43}\\] のように与えられます。ここで\\(\\chi_{i, k}\\)は状態\\(k\\)の励起エネルギーを表し、\\(g_{i, 0}, g_{i, k}\\)はそれぞれ基底状態と励起状態\\(k\\)の統計的重率(Statistical weight)を表します。さらに\\(\\ast\\)は熱平衡状態の値であることを表します。 \\(N_i\\)を原子\\(i\\)の数密度とすると、熱平衡状態では . \\[\\begin{align} N_i &amp;= \\sum_{k=0}^\\infty n_{i, k} = n_{i, 0}^\\ast \\sum_{k=0}^\\infty \\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast \\underbrace{=}_{(3.43)} n_{i, 0}^\\ast \\sum_{k=0}^\\infty \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} = \\frac{n_{i, 0}^\\ast}{g_{i, 0}} \\left( g_{i, 0} + \\sum_{k=1}^\\infty g_{i, k} e^{-\\frac{\\chi_{i, k}}{k_B T}}\\right) \\notag \\\\ &amp;= \\frac{n_{i, 0}^\\ast}{g_{i, 0}} U_i (T) \\tag{3.44} \\end{align}\\] のように書けます。ここで\\(U_i(T)\\)は . \\[U_i (T) \\equiv \\sum_{k=0}^\\infty g_{i, k} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.45}\\] のように定義される分配関数(Partition function)です。ちなみに、この式では\\(\\chi_{i, 0}= 0\\)です。この式は分配関数が各エネルギー状態の統計的重率を、そのエネルギー準位の実現確率をWeightにして加えたものであることを示しています。したがって、分配関数はある与えられた温度に対して、原子の状態の平均的自由度を表していると言えます。 今後のために、以下のように式変形を行いましょう。 . \\[\\frac{n_{i, k}^\\ast}{N_i} = \\left( \\frac{n_{i, k}}{n_{i, 0}}\\right)^\\ast \\frac{n_{i, 0}^\\ast}{N_i} \\underbrace{=}_{(3.43), (3.44)} \\frac{g_{i, k}}{g_{i, 0}} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\frac{n_{i, 0}^\\ast g_{i, 0}}{n_{i, 0}^\\ast U_i (T)} = \\frac{g_{i, k}}{U_i (T)} e^{-\\frac{\\chi_{i, k}}{k_B T}} \\tag{3.46}\\] ",
+    "url": "/atmos/lte#342-boltzmann%E3%81%AE%E5%8A%B1%E8%B5%B7%E6%B3%95%E5%89%87",
+    
+    "relUrl": "/atmos/lte#342-boltzmannの励起法則"
+  },"1001": {
+    "doc": "LTE",
+    "title": "3.4.3 Sahaの電離式",
+    "content": "電離したものとしていないものとの数の比を得るために、Boltzmannの法則を使います。原子\\(i\\)が1回電離してイオン\\(i+1\\)ができたとして、その数を\\(N_{i+1}\\)とします。(3.44)と同様に . \\[N_{i+1} = \\frac{n_{i+1, 0}^\\ast}{g_{i+1, 0}} U_{i+1} (T) \\tag{3.47}\\] が成り立つので . \\[\\frac{N_{i+1}}{N_i} = \\frac{g_{i, 0}}{g_{i+1, 0}} \\frac{U_{i+1}}{U_i} \\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast \\tag{3.48}\\] と書くことができます。この式に現れる\\(\\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast\\)にBoltzmannの法則を適用します。これら2つの状態のエネルギー差は電離エネルギーで、それを\\(\\chi_I\\)と書きましょう。電離した状態の統計的重率は、イオン自体の統計的重率\\(g_{i+1, 0}\\)と自由電子の分配関数\\(U_e\\)を掛け合わせたもの、すなわち\\(g_{i+1, 0} U_e\\)となります。したがって . \\[\\left( \\frac{n_{i+1, 0}}{n_{i, 0}}\\right)^\\ast = \\frac{g_{i+1, 0} U_e}{g_{i, 0}} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.49}\\] のように表されます。これを(3.48)式に代入すると . \\[\\frac{N_{i+1}}{N_i} = \\frac{U_e U_{i+1}}{U_i} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.50}\\] を得ます。よってあとは\\(U_e\\)がわかれば良いことがわかります。 自由電子の分配関数\\(U_e\\)を以下のようにして求めていきましょう。まずは、運動量が\\((p, p+dp)\\)の範囲にある自由電子の単位堆積あたりの状態数(統計的重率)を求めます。電子数密度\\(n_e\\)より、電子1個あたりが占有する空間体積は\\(\\Delta x^3 = 1/n_e\\)です。運動量空間において半径\\(p\\), 厚さ\\(dp\\)の球殻の体積は\\(4\\pi p^2 dp\\)です。 . 不確定性原理から、1つの電子が占有する体積は\\(h^3\\)です。これらを総合して、知りたかった状態数は . \\[\\frac{4\\pi p^2 dp}{n_e h^3} \\times 2\\] となります。最後の2は電子のスピン自由度です。今は自由電子について考えているので、実現確率の重みを\\(e^{-\\frac{E}{k_B T}} = e^{-\\frac{p^2}{2m k_B T}}\\)のように連続状態に適用して . \\[U_e = \\int_0^\\infty \\frac{8\\pi p^2}{n_e h^3} e^{-\\frac{p^2}{2mk_B T}} dp = \\frac{8\\pi}{h^3 n_e} \\frac{1}{4} (2mk_B T)^{3/2} \\sqrt{\\pi} = \\frac{2}{n_e} \\left( \\frac{2\\pi m k_B T}{h^2}\\right)^{3/2} \\tag{3.51}\\] を得ます。これを(3.50)式に代入すると . \\[\\frac{N_{i+1} n_e}{N_i} = 2 \\left( \\frac{2\\pi m_e k_B T}{h^2}\\right)^{3/2} \\frac{U_{i+1}}{U_i} e^{-\\frac{\\chi_I}{k_B T}} \\tag{3.52}\\] が得られます。この式がSahaの電離式の1つの形です。 電子は原子またはイオンから放出されるため、電子数密度は質量密度\\(\\rho\\)に比例します。すなわち\\(n_e \\propto \\rho\\)です。(3.52)式を変形すると . \\[\\frac{N_{i+1}}{N_i} \\propto \\frac{e^{-\\frac{\\chi_I}{k_B T}}}{\\rho}\\] となります。このことから、ガス密度\\(\\rho\\)が大きいと\\(N_{i+1}/N_i\\)が小さくなることがわかります。これは電子の数が多くなることで、再結合する確率も高くなり、電離度が下がるためです。 . ",
+    "url": "/atmos/lte#343-saha%E3%81%AE%E9%9B%BB%E9%9B%A2%E5%BC%8F",
+    
+    "relUrl": "/atmos/lte#343-sahaの電離式"
+  },"1002": {
+    "doc": "LTE",
+    "title": "LTE",
+    "content": ". | 3.4 Local Thermodynamic Equilibrium (LTE) . | 3.4.1 Maxwell分布 | 3.4.2 Boltzmannの励起法則 | 3.4.3 Sahaの電離式 | . | . ",
+    "url": "/atmos/lte",
+    
+    "relUrl": "/atmos/lte"
   },"1003": {
     "doc": "Luminosity class",
     "title": "1.4 Luminosity class",
@@ -9542,7 +9542,7 @@
   },"1363": {
     "doc": "パルサーグリッチ",
     "title": "参考文献",
-    "content": "[] Zhou et al., 2022, “Pulsar Glitches: A Review” [] Shapiro &amp; Teukolsky, ”Black holes white dwarfs and neutron stars” . ",
+    "content": "[1] Zhou et al., 2022, “Pulsar Glitches: A Review” [2] Shapiro &amp; Teukolsky, ”Black holes white dwarfs and neutron stars” . ",
     "url": "/compact/pulser_glitch#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/compact/pulser_glitch#参考文献"
@@ -15182,90 +15182,153 @@
     
     "relUrl": "/nucl/wu"
   },"2169": {
+    "doc": "X線バースター",
+    "title": "X線バースター",
+    "content": "小質量X線連星では、中性子星の周りに降着円盤ができます。 降着ガスは重力エネルギーを開放しながら円盤に沿って流れ込みます。 解放された重力エネルギーは、熱に変換され、円盤の表面から黒体放射として放出されます。 円盤は中性子星の表面近くまで延び、中性子星に近づくにつれてその温度が高くなります。 円盤中を中性子星表面スレスレまで降着してきたガスは、最初持っていた重力エネルギーの半分を黒体放射として解放しています。 最後に表面に落下すると、残りの半分の重力エネルギーが解放され、星表面の降着ガスは一気に加熱されます。 そして黒体放射でX線を放出するようになります。 小質量X線連星のスペクトルは、中性子星表面と円盤表面殻の黒体放射の重ね合わせとして説明することができます。 しかし、中性子星の小質量X線連星に特有な現象に、X線バーストと呼ばれるものがあります。 X線バーストとは、1秒程度の間にX線光度が急激に上昇し、その後数十秒かけてもとのX線高度に戻るような現象です。 . Galloway et al. (2020)より。横軸は秒単位の時間、縦軸は異なる装置で検出された光子フラックスを表す。 . このX線バーストは、1969年に初観測され、その結果は Belian et al. (1972) として公開されました。 このようなX線バーストを起こすX線連星を、X線バースター (X-ray burster)と呼びます。 X線バースターとなる中性子星は、それほど強い磁場を持たないとされています。 強い磁場を持つ場合、降着流は磁力線に沿って磁極領域に流れ込むため、先ほどの説明とは異なる降着の形態を取るためです。 . それぞれ弱磁場の中性子星への降着と、強磁場の中性子星への降着の様子。 . X線バーストは、I型のII型の2種類に分類されます。 I型は、中性子星表面に降着した物質の不安定な核融合燃焼によるものとされています。 II型は、降着円盤から中性子星への散発的な質量降着が原因と考えられていますが、まだ2例しか発見されていません。 ここでは主に、I型のX線バースターについて議論していきましょう。 . ",
+    "url": "/compact/x_ray_bursters#x%E7%B7%9A%E3%83%90%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+    
+    "relUrl": "/compact/x_ray_bursters#x線バースター"
+  },"2170": {
+    "doc": "X線バースター",
+    "title": "I型のX線バースターの観測的特徴など",
+    "content": "I型X線バースターでは、X線はバースト成分と長く持続する成分として観測されます。 またX線バーストは繰り返し起こり、その発生間隔は数時間から数日程度まで及びます。 さらに一定期間X線バーストは観測されず、長く持続する成分のみが観測される場合もあり、その間はX線バースターは単にずっとX線を放射するX線源として観測されます。 バースト時に放出されるエネルギー量の時間平均と、持続成分のエネルギー量の時間平均の比を定義しましょう。 すなわち . \\[\\alpha \\equiv \\frac{\\int_0^T L_X (\\mathrm{burst}) dt / T}{\\int_0^T L_X (\\mathrm{persistene}) dt/T} \\approx \\frac{L_X (\\mathrm{burst}) \\Delta t_\\mathrm{burst}}{L_X (\\mathrm{persistent}) \\Delta t_\\mathrm{persistent}} \\tag{1}\\] です。 ここで\\(T\\)は観測時間、\\(\\Delta t_\\mathrm{burst}\\)と\\(\\Delta t_\\mathrm{persistent}\\)はそれぞれX線バーストと継続的なX線の時間です。 観測的には . \\[\\frac{L_X (\\mathrm{burst})}{L_X (\\mathrm{persistent})} \\sim 10, \\quad \\frac{\\Delta t_\\mathrm{burst}}{\\Delta t_\\mathrm{persistent}} \\sim 10^{-3} \\tag{2}\\] と判明しています。 よって\\(\\alpha \\sim 10^{-2}\\)と求まります。 ここで . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{T} \\simeq L_\\mathrm{nuc}, \\quad \\frac{\\int_0^T L_X (\\mathrm{persistent}) dt}{T} \\simeq L_\\mathrm{acc} \\tag{3}\\] としましょう。 ここで\\(L_\\mathrm{nuc}\\)は核融合反応による光度、\\(L_\\mathrm{acc}\\)は重力エネルギーの解放による光度です。 すると . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{\\int_0^T L_X (\\mathrm{persistent}) dt} \\simeq \\frac{L_\\mathrm{nuc}}{L_\\mathrm{acc}} \\simeq \\frac{0.007\\dot{M} c^2}{\\frac{GM\\dot{M}}{R}} = \\frac{0.007 c^2}{\\frac{GM}{R}} \\tag{4}\\] のようになります。 途中、核融合反応によるエネルギー放出を、水素からヘリウムが生成するときの質量欠損分としました。 中性子星の場合、典型的な値は\\(M \\sim M_\\odot, R\\sim 10^6 \\mathrm{cm}\\)なので . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{\\int_0^T L_X (\\mathrm{persistent}) dt} \\simeq \\frac{2 \\times 0.007R}{\\frac{2GM}{c^2}} \\simeq \\frac{0.014 \\times 10^6}{3 \\times 10^5} \\sim 0.04 \\tag{5}\\] と求まります。 途中、太陽質量のシュバルツシルト半径\\(r_g = \\frac{2GM}{c^2} \\sim 3 \\mathrm{km}\\)であることを用いました。 最終的に求まった値は、観測で求まっている\\(\\alpha \\sim 0.01\\)と同じ程度になっています。 . ",
+    "url": "/compact/x_ray_bursters#i%E5%9E%8B%E3%81%AEx%E7%B7%9A%E3%83%90%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%AE%E8%A6%B3%E6%B8%AC%E7%9A%84%E7%89%B9%E5%BE%B4%E3%81%AA%E3%81%A9",
+    
+    "relUrl": "/compact/x_ray_bursters#i型のx線バースターの観測的特徴など"
+  },"2171": {
+    "doc": "X線バースター",
+    "title": "核燃焼殻の熱的不安定性",
+    "content": "平衡状態 . 中性子星表面に降り注いだガスの薄い層が、核融合燃焼を起こした場合の安定性を議論しましょう。 降着した質量が形成した薄い層の厚さ\\(\\Delta r\\)は、中性子星半径に比べて十分薄いとしましょう。 すると、質量降着層は平行平板層として扱うことができます。 一般相対論による効果を無視すると、静水圧平衡を表す式\\(\\frac{dP}{dr} = - \\rho g\\)から . \\[P \\approx \\frac{\\Delta M}{4\\pi R^2 \\Delta r} g \\Delta r \\approx \\frac{\\Delta M}{4\\pi R^2} \\frac{GM}{R^2} = \\sigma g_s \\tag{6}\\] のようになります。 ここで中性子星表面での重力と柱密度を . \\[g_s = \\frac{GM}{R^2}, \\quad \\sigma = \\rho \\Delta r = \\frac{\\Delta M}{4\\pi R^2} \\tag{7}\\] のようにしました。 (7)式から、圧力\\(P\\)は\\(\\sigma\\)に線形に依存する程度で、ほぼ一定であることがわかります。 そして今の設定では、エネルギー保存の方程式は . \\[C_P \\frac{dT}{dt} \\approx \\epsilon - \\epsilon_\\mathrm{rad} \\tag{8}\\] のように簡単化することができます。 さらに . \\[T \\frac{ds}{dt} = T C_P \\left( \\frac{d \\ln T}{dt} - \\nabla_\\mathrm{ad} \\frac{d \\ln P}{dt}\\right) \\approx C_P \\frac{dT}{dt} \\tag{9}\\] のように近似しましょう。 これは断熱膨張による冷却効果を無視したことに対応します。 そして . \\[\\nabla \\cdot \\mathbf{F} = \\nabla \\cdot \\left( - \\frac{16 \\sigma_\\mathrm{SB} T^3}{3\\kappa \\rho} \\nabla T\\right) \\approx \\frac{4ac T^4}{3\\kappa \\rho \\Delta r^2} = \\rho \\epsilon_\\mathrm{rad} \\tag{10}\\] のようにしましょう。 途中、\\(4\\sigma_\\mathrm{SB} = ac\\)であり、\\(a\\)は放射定数です。 ここから . \\[\\epsilon_\\mathrm{rad} = \\frac{4ac T^4}{3\\kappa \\rho^2 \\Delta r^2} = \\frac{4ac T^4}{3\\kappa \\sigma^2} \\tag{11}\\] のようになります。 . 摂動を加えたときの安定性解析 . 熱的な安定性を調べるために、温度に次のような擾乱が加わったとしましょう。 . \\[T(t) = T_0 + \\delta T (t) \\tag{12}\\] ここで\\(T_0\\)は摂動がない状態での温度、そして\\(\\delta T\\)は温度の摂動を表します。 (8)式より . \\[C_P \\frac{d}{dt}(T_0 + \\delta T) = C_P \\frac{d \\delta T}{dt} \\approx \\epsilon (T_0 + \\delta T) - \\epsilon_\\mathrm{rad} (T_0 + \\delta T) \\tag{13}\\] \\(\\epsilon, \\epsilon_\\mathrm{rad}\\)も線形化しましょう。 . \\[\\epsilon (T_0 + \\delta T) \\approx \\epsilon (T_0) + \\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_{T_0} \\delta T \\tag{14}\\] \\[\\epsilon_\\mathrm{rad} (T_0 + \\delta T) \\approx \\epsilon_\\mathrm{rad} (T_0) + \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_{T_0} \\delta T \\tag{15}\\] 平衡状態では\\(C_P \\frac{dT_0}{dt} = \\epsilon(T_0) - \\epsilon_\\mathrm{rad} (T_0) =0\\)より . \\[C_P \\frac{d \\delta T}{dt} \\approx \\left. \\left( \\frac{\\partial \\epsilon}{\\partial T} - \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} \\delta T \\ \\Longrightarrow \\ C_P \\frac{d}{dt} \\left( \\frac{\\delta T}{T_0}\\right) = F \\frac{\\delta T}{T_0} \\tag{16}\\] ここで . \\[F = \\frac{1}{C_P T_0} \\left. \\left( \\frac{\\partial \\epsilon}{\\partial T} - \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} \\tag{17}\\] です。 これをもう少し具体的に整理していきましょう。 \\(\\epsilon\\)(核融合反応による項)を計算していきましょう。 圧力が平衡状態のままの一定に保たれている場合、密度も変化するため . \\[\\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_P = \\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_\\rho + \\left. \\frac{\\partial \\epsilon}{\\partial \\rho} \\right|_T \\left. \\frac{\\partial \\rho}{\\partial T} \\right|_\\rho \\tag{19}\\] のような連鎖律となります。 両辺を対数微分にすると . \\[\\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_P = \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_\\rho + \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln \\rho} \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P = \\epsilon_T + \\epsilon_\\rho \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\tag{20}\\] のようになります。 途中 . \\[\\epsilon_T \\equiv \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_\\rho, \\quad \\epsilon_\\rho \\equiv \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln \\rho} \\right|_T \\tag{21}\\] としました。 同様に、放射エネルギー損失(11)式の温度依存性から . \\[\\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_P = \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_\\rho + \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial \\rho} \\right|_T \\left. \\frac{\\partial \\rho}{\\partial T} \\right|_P \\tag{22}\\] となります。 両辺を対数微分にすると . \\[\\begin{align} \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T} \\right|_P &amp;= \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T} \\right|_\\rho + \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln \\rho} \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\notag \\\\ &amp;= \\left. \\frac{\\partial}{\\partial \\ln T} (\\ln T^4 - \\ln \\kappa - \\ln \\rho^2) \\right|_\\rho + \\left. \\frac{\\partial}{\\partial \\ln \\rho} (\\ln T^4 - \\ln \\kappa - \\ln \\rho^2) \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\notag \\\\ &amp;= 4 - \\left. \\frac{\\partial \\ln \\kappa }{\\partial \\ln T} \\right|_\\rho - \\left( \\left. \\frac{\\partial \\ln \\kappa}{\\partial \\ln \\rho} \\right|_T + 2\\right) \\left. \\frac{\\partial \\ln \\rho }{\\partial \\ln T} \\right|_P = 4 - \\kappa_T - (\\kappa_\\rho + 2) \\left. \\frac{\\partial \\ln \\rho }{\\partial \\ln T} \\right|_P \\tag{23} \\end{align}\\] となります。 先程と同様に、途中 . \\[\\kappa_T \\equiv \\left. \\frac{\\partial \\ln \\kappa }{\\partial \\ln T} \\right|_\\rho, \\quad \\kappa_\\rho \\equiv \\left. \\frac{\\partial \\ln \\kappa}{\\partial \\ln \\rho} \\right|_T \\tag{24}\\] のように置きました。 以上を用いて(17)式を整理しましょう。 . \\[\\begin{align} F &amp;= \\frac{1}{C_P T_0^2} \\left. \\left( \\epsilon \\frac{T}{\\epsilon} \\frac{\\partial \\epsilon}{\\partial T} - \\epsilon_\\mathrm{rad} \\frac{T}{\\epsilon_\\mathrm{rad}} \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} = \\frac{1}{C_P T_0^2} \\left. \\left( \\epsilon \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} - \\epsilon_\\mathrm{rad} \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T}\\right) \\right|_{T_0} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left. \\left( \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} - \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T}\\right) \\right|_{T_0} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left\\{ \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\left( \\epsilon_T + \\epsilon_\\rho \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right) - 4 + \\kappa_T + (\\kappa_\\rho + 2) \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right\\} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left\\{ \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\epsilon_T - 4 + \\kappa_T + \\left( \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\epsilon_\\rho + \\kappa_\\rho + 2 \\right) \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right\\} \\tag{25} \\end{align}\\] . 不安定となる条件は？ . (16)式から . \\[\\frac{\\delta T}{T_0} \\propto \\exp \\left( Ft/ C_P\\right) \\tag{26}\\] のようになります。 \\(F&gt;0\\)の場合、摂動温度が指数関数的に増大することがわかります。 そこで(25)式から、現実的な場合に\\(F&gt;0\\)となるかどうかを調べてみましょう。 中性子星表面に降着したガスが、理想気体であるとすると . \\[P = \\frac{\\rho k_B T}{\\mu m_p} \\ \\Longrightarrow \\ \\ln P = \\ln \\rho + \\ln T \\ \\Longrightarrow \\ d \\ln P = d\\ln \\rho + d\\ln T \\tag{27}\\] のようになります。 圧力が一定の場合 . \\[\\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P = -1 \\tag{28}\\] となることがわかります。 さらに現実的な場合においては . \\[\\epsilon_\\rho \\sim 1, \\quad \\kappa_\\rho \\sim 1, \\quad \\kappa_T \\sim 0, \\quad \\epsilon \\simeq \\epsilon_\\mathrm{rad} \\tag{29}\\] が良い近似として成り立ちます。 すると(25)式は . \\[F \\approx \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} (\\epsilon_T - 8 ) \\tag{30}\\] となります。 以上から\\(\\epsilon_T \\gg 1\\)であるなら、温度が指数的に増加し、不安定であるとわかります。 例えば、トリプルアルファ反応によるヘリウム生成過程で発生するエネルギーは . \\[\\epsilon_{3\\alpha} \\approx 5.1 \\times 10^{21} \\frac{\\rho_2^2 Y^3}{T_8^3} \\exp \\left( - \\frac{44.04}{T_8}\\right) \\ [\\mathrm{erg/g/s}] \\tag{31}\\] です。 ここで\\(\\rho_2 = \\rho / 10^2 \\mathrm{g}, T_8 = T/10^8 \\mathrm{K}\\)、そして\\(Y\\)はヘリウム組成比です。 ここから、ヘリウム燃焼温度である\\(T_8 \\sim 1\\)では . \\[\\epsilon_T \\approx -3 + \\frac{44.04}{T_8} \\sim 41 \\tag{32}\\] のようになり、ヘリウム燃焼は中性子星表面の薄い殻部分では強く不安定であることがわかります。 これにより質量が降り積もった中性子星表面で核燃焼が暴走し、X線バーストが発生します。 CNOサイクルによる水素燃焼の場合 . \\[\\epsilon_\\mathrm{CNO} \\approx 8.67 \\times 10^{27} X_\\mathrm{CNO} X \\rho T_6^{-2/3} \\exp \\left( - \\frac{152.28}{T_6^{1/3}}\\right) \\ [\\mathrm{erg/g/s}] \\tag{33}\\] です。 ここで\\(T_6 = T / 10^6 \\mathrm{K}\\)です。 \\(T_6 \\sim 10\\)の場合 . \\[\\epsilon_T \\approx - \\frac{2}{3} + \\frac{50.76}{T_6^{1/3}} \\sim 23 \\tag{34}\\] のように値が求まります。 これは、水素燃焼も同様に不安定であることがわかります。 しかし\\(T \\gtrsim 10^8 \\mathrm{K}\\)の高温でのCNO燃焼の場合、エネルギー発生率は\\(\\epsilon \\approx 5.8 \\times 10^{15} Z_\\mathrm{CNO} [\\mathrm{erg/g/s}]\\)のように温度にほぼ依存しない形となります。 以上から、\\(\\frac{\\partial \\epsilon}{\\partial T} \\sim 0\\)となり、水素燃焼が安定に起こることがわかります。 . 質量降着率とX線バーストの関係 . ここまで見てきたように、温度によってX線バーストを引き起こす核燃焼が異なることがわかります。 伴星から中性子星に降着する物質においてヘリウム組成比が大きくなると、表面で起こる薄い殻におけるヘリウム燃焼は不安定となり、これがX線バーストを引き起こします。 この不安定性は質量降着率にも依存します。 質量降着率とX線バーストにおける種類の関係を、以下の表にまとめました。 . |降着率|核燃焼のタイプ|:–|:–|\\(\\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 2.6 \\times 10^{-8}\\)|水素とヘリウムの混合した層内で、安定して水素とヘリウム核燃焼が起こる|\\(2.6 \\times 10^{-8} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 10^{-9}\\)|水素とヘリウムの混合した層内で、熱的に不安定なヘリウムフラッシュが起こる|\\(10^{-9} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 2 \\times 10^{-10}\\)|水素燃焼が安定に燃えたのち、生成物であるヘリウムが水素層の下に蓄積する。その後ヘリウム量がある臨界値に達すると、熱的に不安定なヘリウムのみのフラッシュが起こる|\\(2 \\times 10^{-10} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1})\\)|熱的に不安定な水素燃焼が、フラッシュを引き起こす| Bildsten (1997)より。 . ",
+    "url": "/compact/x_ray_bursters#%E6%A0%B8%E7%87%83%E7%84%BC%E6%AE%BB%E3%81%AE%E7%86%B1%E7%9A%84%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7",
+    
+    "relUrl": "/compact/x_ray_bursters#核燃焼殻の熱的不安定性"
+  },"2172": {
+    "doc": "X線バースター",
+    "title": "最近の観測: スーパーバースト",
+    "content": "小質量X線連星の中には、X線バーストよりもさらに明るい突発現象を起こすことがあります。 これをスーパーバーストと呼びます。 これは Cornelisse et al. (2000)で初めて報告されました。 通常のX線バーストの総エネルギーは\\(10^{39}\\)ergですが、スーパーバーストでは\\(10^{42}\\)ergにも達します。 また通常のX線バーストが十秒程度で元の明るさに戻るのに対し、スーパーバーストでは1時間以上(場合によっては数日)かけてゆっくりと元の明るさに戻ります。 このスーパーバーストの原因は、降着した外層の下部に蓄積した炭素などの重元素の核融合燃焼による、特大の爆発と考えられています。 炭素などの重元素の核燃焼が点火することで、その上部に蓄積している水素やヘリウムの核燃焼にも点火が起き、特大の爆発が起こるのです。 . Aoyama et al. (2025)より。 . ",
+    "url": "/compact/x_ray_bursters#%E6%9C%80%E8%BF%91%E3%81%AE%E8%A6%B3%E6%B8%AC-%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B9%E3%83%88",
+    
+    "relUrl": "/compact/x_ray_bursters#最近の観測-スーパーバースト"
+  },"2173": {
+    "doc": "X線バースター",
+    "title": "参考文献",
+    "content": "[1] Galloway et al., 2020, “The Multi-INstrument Burst ARchive (MINBAR)” [2] Belian et al., 1972, “A Probable Precursor to the X-Ray Nova Centaurus XR-4” [3] Bildsten, 1997, “Thermonuclear Burning on Rapidly Accreting Neutron Stars” [4] Zand, 2017, “Understanding superbursts” [5] Cornelisse et al., 2000, “The longest thermonuclear X-ray burst ever observed?. A BeppoSAX Wide Field Camera observation of 4U 1735-44” [6] Aoyama et al., 2025, “Thermonuclear Superburst of MAXI J1752-457 Observed with NinjaSat and MAXI” [7] Zand, “X-ray bursts and superbursts” [8] 小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象” . ",
+    "url": "/compact/x_ray_bursters#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    
+    "relUrl": "/compact/x_ray_bursters#参考文献"
+  },"2174": {
+    "doc": "X線バースター",
+    "title": "X線バースター",
+    "content": ". | X線バースター . | I型のX線バースターの観測的特徴など | 核燃焼殻の熱的不安定性 . | 平衡状態 | 摂動を加えたときの安定性解析 | 不安定となる条件は？ | 質量降着率とX線バーストの関係 | . | 最近の観測: スーパーバースト | 参考文献 | . | . ",
+    "url": "/compact/x_ray_bursters",
+    
+    "relUrl": "/compact/x_ray_bursters"
+  },"2175": {
+    "doc": "X線パルサー",
+    "title": "X線パルサー",
+    "content": " ",
+    "url": "/compact/x_ray_pulsars#x%E7%B7%9A%E3%83%91%E3%83%AB%E3%82%B5%E3%83%BC",
+    
+    "relUrl": "/compact/x_ray_pulsars#x線パルサー"
+  },"2176": {
+    "doc": "X線パルサー",
+    "title": "参考文献",
+    "content": "[] 小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象” . ",
+    "url": "/compact/x_ray_pulsars#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    
+    "relUrl": "/compact/x_ray_pulsars#参考文献"
+  },"2177": {
+    "doc": "X線パルサー",
+    "title": "X線パルサー",
+    "content": ". | X線パルサー . | 参考文献 | . | . ",
+    "url": "/compact/x_ray_pulsars",
+    
+    "relUrl": "/compact/x_ray_pulsars"
+  },"2178": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": "デバイ・ヒュッケルの理論で出現した以下のポテンシャルを、もとの方程式から求めてみましょう。 ここでは\\(\\mu = 1/\\lambda_D\\)とした、以下の方程式の解を求めます。 . \\[\\left( \\Delta - \\mu^2 \\right) \\phi = - 4\\pi q_0 \\delta^3(\\mathbf{r}) \\tag{1}\\] ",
     "url": "/plasma/yukawa_pot#%E6%B9%AF%E5%B7%9D%E5%9E%8B%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%81%AE%E5%B0%8E%E5%87%BA",
     
     "relUrl": "/plasma/yukawa_pot#湯川型ポテンシャルの導出"
-  },"2170": {
+  },"2179": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "フーリエ変換による方法",
     "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\begin{align} \\phi(\\mathbf{r}) &amp;= \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\notag \\\\ &amp;\\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk \\notag \\\\ &amp;= \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5} \\end{align}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (r) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] . ",
     "url": "/plasma/yukawa_pot#%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AB%E3%82%88%E3%82%8B%E6%96%B9%E6%B3%95",
     
     "relUrl": "/plasma/yukawa_pot#フーリエ変換による方法"
-  },"2171": {
+  },"2180": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "複素平面上での積分",
     "content": "(6)式の積分を計算するために . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} \\quad (z = x+ iy) \\tag{7}\\] を、下図左パネルの複素平面上の閉曲路で積分することを考えましょう。 . \\[\\left\\{ \\begin{array}{lll} C_1 &amp; : &amp; 実軸上 -R \\rightarrow R \\\\ C_2 &amp; : &amp; z = R e^{i\\theta} \\quad (\\theta : 0 \\rightarrow \\pi) \\end{array} \\right. \\tag{8}\\] ただし、\\(R &gt; \\mu\\)とします。 留数定理より . \\[\\oint_{C_1 + C_2} f(z) dz = 2\\pi i \\mathrm{Res} (f; i\\mu) \\tag{9}\\] です。 ここで\\(\\mathrm{Res} (f; i\\mu)\\)は、関数\\(f(z)\\)の\\(z = i\\mu\\)における留数(residue)を表すものです。 留数を求めるために、\\(f(z)\\)を変形しましょう。 . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} = \\frac{1}{2} \\left( \\frac{1}{z-i\\mu} + \\frac{1}{z+ i\\mu} \\right) e^{irz} \\tag{10}\\] \\(e^{irz}\\)を\\(z = i\\mu\\)の周りでテイラー展開すると . \\[e^{irz} = e^{-r\\mu} + ir e^{-r\\mu} (z-i\\mu) + ((z-i\\mu)の2次以上の項)\\] のようになるため、 . \\[f(z) = \\frac{1}{2} \\frac{e^{-r\\mu}}{z-i\\mu} + \\frac{1}{2} ir e^{-r\\mu} + ((z-i\\mu)の1次以上の項) + \\frac{1}{2} \\frac{e^{irz}}{z+i\\mu} \\tag{11}\\] を得ます。 右辺において第一項以外は\\(z=i\\mu\\)で正則なので . \\[\\mathrm{Res}(f; i\\mu) = \\frac{1}{2} e^{-r\\mu} \\tag{12}\\] となります。 (9), (12)式より . \\[\\int_{-R}^R f(x) dx + \\int_{C_2} f(z) dz = i\\pi e^{-r\\mu} \\ \\underbrace{\\Longrightarrow}_{R \\rightarrow \\infty} \\ \\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r\\mu} - \\lim_{R \\rightarrow \\infty} \\int_{C_2} f(z) dz \\tag{13}\\] (13)式の極限部分の値を求めましょう。 \\(C_2\\)上では\\(z = R e^{i\\theta}, dz = iR e^{i\\theta} d\\theta\\)より . \\[\\begin{align} \\lim_{R\\rightarrow \\infty} \\left| \\int_{C_2} f(z) dz \\right| &amp;= \\lim_{R\\rightarrow \\infty} \\left| \\int_0^\\pi iR e^{i\\theta} \\frac{R e^{i\\theta}}{R^2 e^{2i\\theta} + \\mu^2} e^{irR e^{i\\theta}} d\\theta \\right| \\notag \\\\ &amp;\\leq \\lim_{R\\rightarrow \\infty} \\int_0^\\pi \\left| \\frac{i R^2 e^{2i\\theta}}{R^2 e^{2i\\theta} + \\mu^2}\\right| \\left| e^{irR\\cos \\theta} e^{-rR\\sin \\theta}\\right| d\\theta \\notag \\\\ &amp;\\leq \\lim_{R \\rightarrow \\infty} \\int_0^\\pi \\frac{R^2}{R^2 - \\mu^2} e^{-rR \\sin \\theta} d\\theta \\tag{14} \\end{align}\\] のように大きさを評価することができます。 最後の指数部分において、\\(0 \\leq \\sin \\theta \\leq 1 \\ (0 \\leq \\theta \\leq \\pi)\\)より、この極限値は0となります。 よって . \\[\\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r \\mu} \\tag{15}\\] と求まります。 同様に(6)式の第二項を計算するために . \\[g(z) = \\frac{z}{z^2 + \\mu^2} e^{-irz} \\quad (z = x + iy) \\tag{16}\\] を、上図右パネルの複素平面上の閉曲路で積分を行います。 この場合は\\(z= -i\\mu\\)での留数を考えて計算を行うこと、そして経路が時計回りであることから符号に注意すると、次のようになります。 . \\[\\int_{-\\infty}^\\infty g(x) dx = -i\\pi e^{-r\\mu} \\tag{17}\\] (6), (15), (17)式より . \\[\\phi (r) = \\frac{q_0}{r} e^{-\\mu r} \\tag{18}\\] のようになります。 比較のために、普通のクーロンポテンシャル\\(\\phi(r) = q_0 / r\\)とともに図示したグラフを示します。 このグラフでは\\(q_0 = 1, \\mu = 1\\)として可視化しています。 . 青線はクーロンポテンシャル、橙線は湯川型ポテンシャルです。 (18)式からも明らかですが、湯川型ポテンシャルはクーロンポテンシャルよりも素早く減衰します。 \\(r=1/\\mu = 1.0\\)ではクーロンポテンシャルの\\(1/e\\)倍になります。 このことから\\(r=1/\\mu\\)程度が、ポテンシャルの影響がある範囲と見ることができます。 デバイ・ヒュッケルの理論から導かれた、弱結合プラズマ中での静電ポテンシャル\\(\\phi (r) = \\frac{q_0}{r} e^{-r/\\lambda_D}\\)では、\\(r = \\lambda_D\\)程度しかポテンシャルの影響がないことがわかります。 当然ながら、\\(\\mu = 1/\\lambda_D = 0\\)ではクーロンポテンシャルと等しくなります。 これは、元の数式である(1)式が . \\[\\Delta \\phi = - 4\\pi q_0 \\tag{19}\\] のように、真空中で点電荷を原点に置いた場合に一致することからもわかります。 . ",
     "url": "/plasma/yukawa_pot#%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2%E4%B8%8A%E3%81%A7%E3%81%AE%E7%A9%8D%E5%88%86",
     
     "relUrl": "/plasma/yukawa_pot#複素平面上での積分"
-  },"2172": {
+  },"2181": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "補遺: Juliaスクリプト",
     "content": "using Plots gr() len = 100 r = range(0.1, 2.0, length=len) coulomb = 1.0 ./ r yukawa = exp.(-r) ./ r plot(r, coulomb, linewidth=3, xlabel=\"r\", ylabel=\"Potential\", label=\"Coulomb\") plot!(r, yukawa, linewidth=3, label=\"Yukawa\") savefig(\"yukawa_pot_02.png\") . ",
     "url": "/plasma/yukawa_pot#%E8%A3%9C%E9%81%BA-julia%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88",
     
     "relUrl": "/plasma/yukawa_pot#補遺-juliaスクリプト"
-  },"2173": {
+  },"2182": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "参考文献",
     "content": "[1] Chen, “プラズマ物理入門” [2] 小野高幸, 三好由純, “太陽地球圏” [3] 田中基彦, 西川恭治, “高温プラズマの物理学” . ",
     "url": "/plasma/yukawa_pot#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/plasma/yukawa_pot#参考文献"
-  },"2174": {
+  },"2183": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | 補遺: Juliaスクリプト | 参考文献 | . | . ",
     "url": "/plasma/yukawa_pot",
     
     "relUrl": "/plasma/yukawa_pot"
-  },"2175": {
+  },"2184": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "/math/zeta#zeta%E9%96%A2%E6%95%B0",
     
     "relUrl": "/math/zeta#zeta関数"
-  },"2176": {
+  },"2185": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "/math/zeta#%E5%AE%9A%E7%BE%A9",
     
     "relUrl": "/math/zeta#定義"
-  },"2177": {
+  },"2186": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"2178": {
+  },"2187": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"2179": {
+  },"2188": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"2180": {
+  },"2189": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/math/zeta#参考文献"
-  },"2181": {
+  },"2190": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

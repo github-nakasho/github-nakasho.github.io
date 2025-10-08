@@ -418,7 +418,7 @@ $$
 このスーパーバーストの原因は、降着した外層の下部に蓄積した炭素などの重元素の核融合燃焼による、特大の爆発と考えられています。
 炭素などの重元素の核燃焼が点火することで、その上部に蓄積している水素やヘリウムの核燃焼にも点火が起き、特大の爆発が起こるのです。
 
-![](/assets/images/compact/x_ray_bursters_02.png)  
+![](/assets/images/compact/x_ray_bursters_03.png)  
 [Aoyama et al. (2025)](https://iopscience.iop.org/article/10.3847/2041-8213/addd00)より。  
 
 ## 参考文献

@@ -1,0 +1,279 @@
+I"�0
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#時空の摂動の一般論" id="markdown-toc-時空の摂動の一般論">時空の摂動の一般論</a>    <ol>
+      <li><a href="#ラプス関数-a-と-d" id="markdown-toc-ラプス関数-a-と-d">ラプス関数 \(A\) と \(D\)</a></li>
+      <li><a href="#シフトベクトル-b" id="markdown-toc-シフトベクトル-b">シフトベクトル \(B\)</a></li>
+      <li><a href="#e" id="markdown-toc-e">\(E\)</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="時空の摂動の一般論">時空の摂動の一般論</h1>
+
+<p>ここでは、メトリックテンソル\(g_{\mu \nu}\)の摂動の一般論について考えていきましょう。
+平均値からの微小なズレを摂動の一次として扱う場合、摂動量が満たす方程式は線形となり、重ね合わせの原理を用いることができます。
+したがって、フーリエモードで展開し、各モードの振る舞いを調べれば良いでしょう。
+簡単のため、摂動量は波数ベクトルが\(z\)軸方向を向いた平面波で展開します。
+メトリックの摂動は、固有距離を用いて一般に以下のように書けます。</p>
+
+\[ds^2 
+= - (1+2A) c^2 dt^2 - 2B_i cdt dx^i + \{(1+2D) \delta_{ij} + 2E_{ij}\} dx^i dx^j \tag{1}\]
+
+<p>対応するメトリックテンソルを行列で書くと</p>
+
+\[(g_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+-(1+2A) &amp; - B_1 &amp; -B_2 &amp; -B_3 \\
+-B_1 &amp; 1 + 2D + 2 E_{11}&amp; 2E_{12} &amp; 2E_{13} \\
+-B_2 &amp; 2 E_{21}&amp; 1+2D+2E_{22} &amp; 2E_{23} \\
+-B_3 &amp; 2 E_{31}&amp; 2E_{32} &amp; 1+2D+2E_{33} 
+\end{array} \right) \tag{2}\]
+
+<p>のようになります。
+ここで\(A\)をラプス関数(lapse function)、\(B^i = (B_1, B_2, B_3)\)をシフトベクトル(shift vector)と呼びます。
+\(E_{ij}\)はメトリックの摂動の空間成分のトレースレス成分です。
+\(g_{\mu \nu}\)の逆行列、\(g^{\mu \nu}\)を求めましょう。
+そのために、\(g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}\)のように、摂動部分を\(h_{\mu \nu}\)と書くことにすると</p>
+
+\[\begin{align}
+&amp;g^{\mu \nu} 
+= \eta^{\mu \nu} + h^{\mu \nu} 
+= g^{\mu \alpha} g^{\nu \beta} (\eta_{\alpha \beta} + h_{\alpha \beta}) 
+= (\eta^{\mu \alpha} + h^{\mu \alpha}) (\eta^{\nu \beta} + h^{\nu \beta}) (\eta_{\alpha \beta} + h_{\alpha \beta}) \notag \\
+\hspace{3em} &amp;\simeq \eta^{\mu \nu} + 2 h^{\mu \nu} + \eta^{\mu \alpha} \eta^{\nu \beta} h_{\alpha \beta} 
+= g^{\mu \nu} + h^{\mu \nu} + \eta^{\mu \alpha} \eta^{\nu \beta} h_{\alpha \beta} \notag \\
+&amp;\Longrightarrow \ 
+h^{\mu \nu} 
+= - \eta^{\mu \alpha} \eta^{\nu \beta} h_{\alpha \beta} \tag{3}
+\end{align}\]
+
+<p>となります。
+この式から、(2)式の逆行列は</p>
+
+\[(g^{\mu \nu}) 
+= \left( \begin{array}{cccc} 
+-(1-2A) &amp; -B_1&amp; -B_2 &amp; -B_3 \\
+-B_1 &amp; 1-2D-2E_{11} &amp; -2E_{21} &amp; -2E_{31} \\
+-B_2 &amp; -2E_{12} &amp; 1-2D-2E_{22} &amp; -2E_{32} \\
+-B_3 &amp; -2E_{13} &amp; -2E_{23} &amp; 1-2D-2E_{33}
+\end{array}\right) \tag{4}\]
+
+<p>のようになります。<br />
+波数ベクトル(今の場合は\(z\)軸)を軸とした座標回転に対する摂動量の変換性から、\(h_{\mu \nu}\)を既約分解することができます。
+無限小回転に対して不変な量を、スピンがゼロの摂動、あるいはスカラーモードと呼びます。
+座標を一回転したときに元に戻る回数が一回となる摂動を、スピンが1の摂動、あるいはベクトルモードと呼びます。
+そして座標を一回転したときに元に戻る回数が二回となる摂動を、スピンが2の摂動、あるいはテンソルモードと呼びます。<br />
+\(z\)軸周りに角度\(\theta\)だけ座標を回転する変換\(\Lambda\)、およびその逆変換\(\Lambda^\top\)は</p>
+
+\[\Lambda 
+= \left( \begin{array}{cccc}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta &amp; \sin \theta &amp; 0 \\
+0 &amp; -\sin \theta &amp; \cos \theta &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 
+\end{array} \right), \quad \Lambda^\top 
+= \left( \begin{array}{cccc}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \\
+0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 
+\end{array} \right) \tag{5}\]
+
+<p>と書かれます。
+この座標変換を\(h_{\mu \nu}\)に適用しましょう。
+ただし、いきなり全ての成分に適用するのは難しいため、\(A, B, C, D\)それぞれに分けて考えることにします。</p>
+
+<h2 id="ラプス関数-a-と-d">ラプス関数 \(A\) と \(D\)</h2>
+
+<p>まずは</p>
+
+\[(h_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+2A &amp; &amp; &amp; \\
+ &amp; &amp; &amp; \\
+ &amp; &amp; \mathbf{0} &amp; \\
+ &amp; &amp; &amp; 
+\end{array} \right) \tag{6}\]
+
+<p>についてです。
+これに対して\(\Lambda^\top (h_{\mu \nu}) \Lambda\)を計算すると</p>
+
+\[\Lambda^\top (h_{\mu \nu}) \Lambda 
+= \left( \begin{array}{cccc}
+2A &amp; &amp; &amp; \\
+ &amp; &amp; &amp; \\
+ &amp; &amp; \mathbf{0} &amp; \\
+ &amp; &amp; &amp; 
+\end{array} \right) 
+= (h_{\mu \nu}) \tag{7}\]
+
+<p>のようになり、回転しても変化ないことがわかります。
+よってこの\(A\)はスカラーモードです。<br />
+今度は</p>
+
+\[(h_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+0 &amp; &amp; &amp; \mathbf{0} \\
+ &amp; 2D &amp; &amp; \\
+ &amp; &amp; 2D &amp; \\
+ \mathbf{0} &amp; &amp; &amp; 2D
+\end{array} \right) \tag{8}\]
+
+<p>についてです。
+同様に計算を行うと</p>
+
+\[\Lambda^\top (h_{\mu \nu}) \Lambda 
+= (h_{\mu \nu}) \tag{9}\]
+
+<p>となり、\(D\)もスカラーモードであることがわかります。</p>
+
+<h2 id="シフトベクトル-b">シフトベクトル \(B\)</h2>
+
+<p>続いてシフトベクトルのうち、波数ベクトルに垂直な成分、すなわち</p>
+
+\[(h_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+0 &amp; B_1&amp; B_2&amp; \mathbf{0} \\
+B_1 &amp; &amp; &amp; \\
+B_2 &amp; &amp; \mathbf{0} &amp; \\
+0 &amp; &amp; &amp; 
+\end{array} \right) \tag{10}\]
+
+<p>について考えましょう。
+すると</p>
+
+\[\begin{align}
+\Lambda^\top (h_{\mu \nu}) \Lambda 
+&amp;= \Lambda^\top \left( \begin{array}{cccc} 
+0 &amp; B_1 \cos \theta - B_2 \sin \theta &amp; B_1 \sin \theta - B_2 \cos \theta &amp; 0 \\
+B_1 &amp; &amp; &amp; \\
+B_2 &amp; &amp; \mathbf{0}&amp; \\
+0 &amp; &amp; &amp; 
+\end{array}\right) \notag \\
+&amp;= \left( \begin{array}{cccc} 
+0 &amp; B_1 \cos \theta - B_2 \sin \theta &amp; B_1 \sin \theta - B_2 \cos \theta &amp; 0 \\
+B_1 \cos \theta - B_2 \sin \theta &amp; &amp; &amp; \\
+B_1 \sin \theta - B_2 \cos \theta &amp; &amp; \mathbf{0} &amp; \\
+0 &amp; &amp; &amp; 
+\end{array}\right) \notag \\
+&amp;= \left( \begin{array}{cccc} 
+0 &amp; B_1' &amp; B_2' &amp; 0 \\
+B_1' &amp; &amp; &amp; \\
+B_2' &amp; &amp; \mathbf{0}&amp; \\
+0 &amp; &amp; &amp; 
+\end{array}\right) \tag{11}
+\end{align}\]
+
+<p>のようになります。
+途中\(B_1' = B_1 \cos \theta - B_2 \sin \theta, B_2' = B_1 \sin \theta - B_2 \cos \theta\)と置きました。
+\(B_1', B_2'\)は\(\theta = 2\pi\)で元に戻ることから、これはベクトルモードであるとわかります。<br />
+そして、シフトベクトルのうち波数ベクトルに平行な成分のみ、すなわち</p>
+
+\[(h_{\mu \nu}) 
+= \left( \begin{array}{cccc}
+0 &amp; 0 &amp; 0&amp; B_3 \\
+0 &amp; &amp; &amp; \\
+0 &amp; &amp; \mathbf{0} &amp; \\
+B_3 &amp; &amp; &amp; 
+\end{array} \right) \tag{12}\]
+
+<p>に対しては</p>
+
+\[\Lambda^\top (h_{\mu \nu}) \Lambda 
+= (h_{\mu \nu}) \tag{13}\]
+
+<p>となることから、\(B_3\)はスカラーモードとなります。</p>
+
+<h2 id="e">\(E\)</h2>
+
+<p>一般の場合を分類するのは難しいため、ここでは以下のようにトレースレスであるとします。</p>
+
+\[E_i^i 
+= E_{11} + E_{22} + E_{33} 
+= 0 \tag{14}\]
+
+<p>このとき、当然ながら一般には\(E_{11} \neq E_{22}\)ですが、これらを以下のように変形しましょう。</p>
+
+\[E_{11} 
+= E + E_+, \quad 
+E_{22} 
+= E - E_+ \tag{15}\]
+
+<p>このようにすると、(14)式から</p>
+
+\[E_{33} 
+= -2E \tag{16}\]
+
+<p>のように求まります。
+よって\(E_{ij}\)を行列の形で書くと</p>
+
+\[\begin{align}
+(E_{ij}) 
+&amp;= \left( \begin{array}{ccc}
+E+E_+ &amp; E_{12} &amp; E_{13} \\
+E_{21} &amp; E-E_+ &amp; E_{23} \\
+E_{31} &amp; E_{32} &amp; -2E  
+\end{array}\right) \notag \\
+&amp;= \underbrace{\left( \begin{array}{ccc}
+E &amp; &amp; \mathbf{0} \\
+&amp; E &amp; \\
+\mathbf{0}&amp;  &amp; -2E  
+\end{array}\right)}_{スカラーモード} + 
+\underbrace{\left( \begin{array}{ccc}
+\mathbf{0} &amp; &amp; E_1 \\
+&amp; &amp; E_2\\
+E_1&amp; E_2 &amp; 0  
+\end{array}\right)}_{ベクトルモード} + 
+\underbrace{\left( \begin{array}{ccc}
+E_+ &amp; &amp; \mathbf{0} \\
+&amp; -E_+ &amp; \\
+\mathbf{0}&amp; &amp; 0 
+\end{array}\right)}_{テンソルモード} + 
+\underbrace{\left( \begin{array}{ccc}
+0 &amp; E_\times&amp; \\
+E_\times &amp; &amp; \\
+&amp; &amp; \mathbf{0}  
+\end{array}\right)}_{テンソルモード} \tag{17}
+\end{align}\]
+
+<p>のように分解されることがわかります。
+途中、メトリックの対称性から\(E_{12} = E_{21} = E_\times, E_{13} = E_{31}= E_1, E_{23} = E_{32} = E_2\)のように置きました。
+分解されたそれぞれに対して\(\Lambda^\top (E_{ij}) \Lambda\)を計算すると、それぞれスカラーモード、ベクトルモード、そして最後の2つがテンソルモードであることを確かめることができます。<br />
+第3成分(\(z\)成分)がないことからわかるように、2つのテンソルモードは横浪です。
+スカラー・ベクトル・テンソルモードは独立なモードであり、線形で扱える範囲においては、これらが互いに影響しあうことはありません。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>なぜトレースレスを考えるのか、なぜトレースレスに変換できるのかなどについては別のページで学ぶことにします。
+</code></pre></div></div>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/3MD1orv">Thorne &amp; Blandford, “Modern Classical Physics: Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics”</a><br />
+[2] <a href="https://amzn.to/3KOV7Yo">Hartle, “Gravity: An Introduction to Einstein’s General Relativity”</a></p>
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01LVZ72QL&amp;linkId=9b7f592d17f1e5e5bab70888d5ba05a1"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=nakasho010d-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=1316517543&amp;linkId=73f2d614dabc417ef58c27bf4247a6a2"></iframe>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

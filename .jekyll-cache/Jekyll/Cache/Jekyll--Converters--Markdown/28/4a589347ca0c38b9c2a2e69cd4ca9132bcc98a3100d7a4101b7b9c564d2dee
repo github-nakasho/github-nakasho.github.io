@@ -1,0 +1,128 @@
+I"o
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#quantum-annealing-for-you-グループ演習" id="markdown-toc-quantum-annealing-for-you-グループ演習">Quantum annealing for you, グループ演習</a></li>
+  <li><a href="#レシピ最適化" id="markdown-toc-レシピ最適化">レシピ最適化</a></li>
+  <li><a href="#数理モデルとqubo定式化" id="markdown-toc-数理モデルとqubo定式化">数理モデルとQUBO定式化</a>    <ol>
+      <li><a href="#数理モデル" id="markdown-toc-数理モデル">数理モデル</a>        <ol>
+          <li><a href="#用いるバイナリ変数" id="markdown-toc-用いるバイナリ変数">用いるバイナリ変数</a></li>
+          <li><a href="#制約1-用いる食材の数には限りがある" id="markdown-toc-制約1-用いる食材の数には限りがある">制約1: 用いる食材の数には限りがある</a></li>
+          <li><a href="#制約2-必ずある食材を用いる必要がある" id="markdown-toc-制約2-必ずある食材を用いる必要がある">制約2: 必ずある食材を用いる必要がある</a></li>
+          <li><a href="#目的関数-相性を最大化する" id="markdown-toc-目的関数-相性を最大化する">目的関数: 相性を最大化する</a></li>
+        </ol>
+      </li>
+      <li><a href="#qubo" id="markdown-toc-qubo">QUBO</a></li>
+      <li><a href="#大関法の適用" id="markdown-toc-大関法の適用">大関法の適用</a></li>
+    </ol>
+  </li>
+  <li><a href="#インスタンス" id="markdown-toc-インスタンス">インスタンス</a></li>
+  <li><a href="#スクリプト例" id="markdown-toc-スクリプト例">スクリプト例</a></li>
+  <li><a href="#実行例" id="markdown-toc-実行例">実行例</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="quantum-annealing-for-you-グループ演習">Quantum annealing for you, グループ演習</h1>
+
+<h1 id="レシピ最適化">レシピ最適化</h1>
+
+<p>(量子)アニーリングを用いて「食材の最適な組み合わせ」を求め、お料理の献立をお助けするスクリプトを開発しましょう。</p>
+
+<h1 id="数理モデルとqubo定式化">数理モデルとQUBO定式化</h1>
+
+<h2 id="数理モデル">数理モデル</h2>
+
+<h3 id="用いるバイナリ変数">用いるバイナリ変数</h3>
+
+<p>\(x_i\)を、\(i\)番目の材料を用いるとき1、そうでないとき0となるバイナリ変数とします。</p>
+
+<h3 id="制約1-用いる食材の数には限りがある">制約1: 用いる食材の数には限りがある</h3>
+
+<p>家の冷蔵庫にある食材の数には限りがあります。よって料理に使える食材の種類の数を\(N\)とすると</p>
+
+\[\sum_{i=0}^{I-1} x_i 
+ = N \tag{1}\]
+
+<p>ここで\(I\)は考える食材の種類の総数です。</p>
+
+<h3 id="制約2-必ずある食材を用いる必要がある">制約2: 必ずある食材を用いる必要がある</h3>
+
+<p>例えば「今日はお米と魚を使った料理が食べたい」などの願望を叶えるための制約を用意します。これを数式で表現すると</p>
+
+\[x_\mathrm{rice} = 1, \quad x_\mathrm{fish} = 1 \tag{2}\]
+
+<h3 id="目的関数-相性を最大化する">目的関数: 相性を最大化する</h3>
+
+<p>最大化したいのは食材同士の相性です。\(i\)番目の食材と\(j\)番目の食材の相性を\(A_{ij}\)とすると、目的関数はこの行列を用いて</p>
+
+\[\mathrm{obj} = - \sum_{i=0}^{I-1} \sum_{j=0}^{I-1} x_i A_{ij} x_j \tag{3}\]
+
+<h2 id="qubo">QUBO</h2>
+
+<p>(1)式をQUBOで表現しましょう。等式制約なので、右辺を左辺に移項して罰金項を作成します。</p>
+
+\[H_1 = \left( \sum_{i=0}^{I-1} x_i - N \right)^2 \tag{4}\]
+
+<p>(2)式は変数固定により表現できるため、数式としてあらわに表現する必要はありません。以上より、全ハミルトニアンは</p>
+
+\[H = \mathrm{obj} + \frac{\lambda_1}{2} H_1 \tag{5}\]
+
+<p>ここで\(\lambda_1\)は\(H_1\)の項の強さを表す未定乗数(ハイパーパラメータ)です。</p>
+
+<h2 id="大関法の適用">大関法の適用</h2>
+
+<p><a href="/mo/ohzeki.md">大関法</a>を適用することで、\((\cdots)^2\)を線形項に変換することができます。このようにして作られたハミルトニアンは</p>
+
+\[H_\mathrm{eff} 
+ = \mathrm{obj} - \nu \left( \sum_{i=0}^{I-1} x_i - N \right)\]
+
+<p>ここで\(\nu\)は変換された制約に対する未定乗数です。</p>
+
+<h1 id="インスタンス">インスタンス</h1>
+
+<p>インスタンス(実際に用いるインプットデータ)は以下の論文の Supplementary Dataset 2 を用いました。</p>
+
+<p><a href="https://www.nature.com/articles/srep00196">Ahn et al., 2011, “Flavor network and the principles of food pairing”</a></p>
+
+<h1 id="スクリプト例">スクリプト例</h1>
+
+<p>実際に作成したスクリプトを以下のリンク先にご用意しました。</p>
+
+<p><a href="https://github.com/github-nakasho/qa4u_qooking">GitHubリンク</a></p>
+
+<h1 id="実行例">実行例</h1>
+
+<p>‘EastAsian’のレシピデータを用いて相性行列(組合せ頻度行列)を作成しました。また用いる食材種類は5つ、必ず用いる食材にriceとfishを用いたところ、以下のような結果となりました。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">*****</span> Broken check <span class="k">*****</span>
+<span class="o">{}</span>
+<span class="k">*****</span> Result <span class="k">for </span>you <span class="k">*****</span>
+black_pepper
+scallion
+garlic
+rice
+fish
+</code></pre></div></div>
+
+<p>黒胡椒・新玉ねぎ・ニンニク・お米・お魚の5種類の食材が選出されました。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

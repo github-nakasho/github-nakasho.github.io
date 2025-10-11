@@ -1,0 +1,98 @@
+I"U
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#x線パルサー" id="markdown-toc-x線パルサー">X線パルサー</a>    <ol>
+      <li><a href="#アルヴェーン半径" id="markdown-toc-アルヴェーン半径">アルヴェーン半径</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="x線パルサー">X線パルサー</h1>
+
+<h2 id="アルヴェーン半径">アルヴェーン半径</h2>
+
+<p>降着流が球対称であると仮定しましょう。
+中心にいる中性子星の質量を\(M\)、半径を\(R\)としましょう。
+中性子星が双極子磁場を持っているとして</p>
+
+\[B 
+\approx \frac{\mu}{r^3} \tag{1}\]
+
+<p>のように書けるとします。
+ここで\(\mu = B_s R^3\)は磁気双極子モーメント、\(r\)は中心星からの距離です。
+すると、この双極子磁場による磁気圧は</p>
+
+\[P_\mathrm{mag} 
+= \frac{B^2}{8\pi} 
+= \frac{\mu^2}{8\pi r^6} \tag{2}\]
+
+<p>となります。
+中心にいる中性子星への降着が定常的であり、\(\dot{M} = 4\pi r^2 \rho v\)が一定であるとしましょう。
+磁気圧と降着ガスの動圧 (ram presure) \(P_\mathrm{ram} = \rho v^2\)が等しくなる半径を、\(r_M\)としましょう。
+そして降着ガスの自由落下速度を \(v_\mathrm{ff}= \sqrt{2GM/r}\)とします。
+すると</p>
+
+\[\begin{align}
+&amp;\frac{\mu^2}{8\pi r_M^6} 
+= \rho v^2 
+= \vert \rho v \vert v_\mathrm{ff} 
+= \frac{\dot{M}}{4\pi r_M^2} \sqrt{\frac{2MG}{r_M}} \notag \\
+&amp;\Longrightarrow \ 
+r_M^\mathrm{(sph)} 
+= \left( \frac{\mu^4}{8GM\dot{M}^2}\right)^{1/7} 
+\simeq 5.1 \times 10^8 \dot{M}_{16}^{-2/7} m_1^{-1/7} \mu_{30}^{4/7} \ [\mathrm{cm}] \tag{3} 
+\end{align}\]
+
+<p>のようになります。
+ここで\(\dot{M}_{16} \equiv \dot{M} / (10^{16} \mathrm{g/s}), m_1 = M/M_\odot, \mu_{30} = \mu / (10^{30} \mathrm{G \ cm^2})\)です。
+\(\mu = 10^{30} \mathrm{G \ cm^2}\)は、\(B_s = 10^{12} \mathrm{G}, R = 10^6 \mathrm{cm}\)に対応します。
+この\(r_M\)をアルヴェーン半径 (Alfvén radius)と呼びます。<br />
+ここで、降着ガスが重力エネルギーを解放することにより放出される光度を\(L_\mathrm{acc} = GM\dot{M} / R\)として、\(\dot{M}\)を消去すると</p>
+
+\[r_M^\mathrm{(sph)} 
+= \left( \frac{\mu^4 GM}{8 R^2 L_\mathrm{acc}^2} \right)^{1/7} 
+\simeq 2.9 \times 10^8 m_1^{1/7} R_6^{-2/7} L_{37}^{-2/7} \mu_{30}^{4/7} \tag{4}\]
+
+<p>のようにも整理できます。
+ここで、\(R_6 = R/10^6 \mathrm{cm}, L_{37} = L_\mathrm{acc} / 10^{37} \mathrm{erg/s}\)です。<br />
+円盤降着に対しては、アルヴェーン半径は</p>
+
+\[r_M^\mathrm{(disc)} 
+\approx 0.5 r_M^\mathrm{(sph)} \tag{5}\]
+
+<p>のように経験的に近似されます。
+\(M \sim M_\odot, R \sim 10^6 \mathrm{cm}\)のような典型的な中性子星のとき、\(r_M^\mathrm{(disc)} &lt; R\)となる臨界磁場強度\(B_{s:crit}\)としましょう。
+そして\(L_\mathrm{acc} \sim 10 L_\mathrm{Edd} \sim 1.2 \times 10^{39} \mathrm{erg/s}\)とすると</p>
+
+\[B_{s:crit} 
+\sim 1.7 \times 10^9 \ [\mathrm{G}] \tag{6}\]
+
+<p>のようになります。
+\(B_s &lt; B_{s:crit}\)の場合、双極子磁場が降着に与える影響は少ないと考えることができます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3KVIIEe">小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

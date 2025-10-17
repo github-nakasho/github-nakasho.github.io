@@ -436,23 +436,20 @@ $$
 
 ## 一般相対論的磁気流体シミュレーション
 
-同じくシミュレーション研究ですが、[Das et al. (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/add472)では一般相対論の効果も含めた磁気流体計算です。
-しかも、先ほどは降着柱の部分のみを計算していましたが、こちらの研究では降着円盤部分も含めた中性子星表面への降着の様子を3次元シミュレーションし、降着により中性子星表面にできるホットスポットの様子を調べたのです。
+同じくシミュレーション研究ですが、[Inoue et al. (2023)](https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea)では一般相対論の効果も含めた磁気流体計算を実施しました。
+しかも、先ほどは降着柱の部分のみを計算していましたが、こちらの研究では降着円盤部分も含めた中性子星表面への降着の様子を3次元シミュレーションし、降着率による降着柱と磁気圏の
 
 ![](/assets/images/compact/x_ray_pulsars_07.png)  
-[Das et al. (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/add472)より。(a), (b), (c)は、磁軸の傾きがそれぞれ30, 60, 90度のときのホットスポットの分布。  
+[Inoue et al. (2023)](https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea)より。左パネルから、降着率(初期トーラスのガス密度)が小さな順に計算結果を並べたもの。  
 
-![](/assets/images/compact/x_ray_pulsars_08.png)  
-[Das et al. (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/add472)より。ガス密度をボリュームレンダリングしたもの。実線は磁力線を表す。  
-
-ここからパルスプロファイルの計算や、ホットスポットの形態の磁軸の傾き依存性を議論しています。
+降着率が小さいと降着柱が形成されていますが、降着率が大きい場合には磁気圏が消失していることがわかります。
 
 ## 参考文献
 
 [1] [Becker & Wolff, 2007, "Thermal and Bulk Comptonization in Accretion-powered X-Ray Pulsars"](https://iopscience.iop.org/article/10.1086/509108)  
 [2] [Davidson, 1973, "Accretion at a Magnetic Pole of a Neutron Star"](https://www.nature.com/articles/physci246001a0)  
 [3] [Kawashima et al., 2016, "A radiation-hydrodynamics model of accretion columns for ultra-luminous X-ray pulsars"](https://academic.oup.com/pasj/article/68/5/83/2223381)  
-[4] [Das et al., 2025, "Pulse Profiles of Accreting Neutron Stars from GRMHD Simulations"](https://iopscience.iop.org/article/10.3847/1538-4357/add472)  
+[4] [Inoue et al., 2023, "Modeling of Thermal Emission from ULX Pulsar Swift J0243.6+6124 with General Relativistic Radiation MHD Simulations"](https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea)  
 [5] [Frank, King, Raine, "Accretion Power in Astrophysics"](https://amzn.to/47pT8EZ)  
 [6] [Longair, "High Energy Astrophysics"](https://amzn.to/4o2zJ2T)  
 [7] [小山勝ニ, 嶺重慎, "ブラックホールと高エネルギー現象"](https://amzn.to/3KVIIEe)  

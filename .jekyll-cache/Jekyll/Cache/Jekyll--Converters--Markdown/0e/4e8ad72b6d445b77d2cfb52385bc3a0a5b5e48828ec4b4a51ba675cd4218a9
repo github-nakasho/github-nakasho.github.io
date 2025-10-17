@@ -1,4 +1,4 @@
-I"0L
+I"�g
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -10,6 +10,11 @@
       <li><a href="#平衡状態での自転周期" id="markdown-toc-平衡状態での自転周期">平衡状態での自転周期</a></li>
       <li><a href="#質量降着による強磁場を持つ中性子星のスピンアップ" id="markdown-toc-質量降着による強磁場を持つ中性子星のスピンアップ">質量降着による強磁場を持つ中性子星のスピンアップ</a></li>
       <li><a href="#降着柱" id="markdown-toc-降着柱">降着柱</a></li>
+      <li><a href="#最近の研究" id="markdown-toc-最近の研究">最近の研究</a>        <ol>
+          <li><a href="#x線パルサーの新しい描像" id="markdown-toc-x線パルサーの新しい描像">X線パルサーの新しい描像</a></li>
+        </ol>
+      </li>
+      <li><a href="#一般相対論的磁気流体シミュレーション" id="markdown-toc-一般相対論的磁気流体シミュレーション">一般相対論的磁気流体シミュレーション</a></li>
       <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
   </li>
@@ -213,19 +218,37 @@ P_\mathrm{eq}
 
 <p>より</p>
 
-\[- \frac{\dot{P}}{P} 
-= P \dot{\nu} 
-\simeq 1.8 \times 10^{-12} m_1^{-3/7} R_6^{6/7} \mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\mathrm{s}^{-1}]
-\simeq 5.7 \times 10^{-5} m_1^{-3/7} R_6^{6/7} \mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\mathrm{yr}^{-1}] \tag{18}\]
+\[\begin{align}
+- \frac{\dot{P}}{P} 
+&amp;= P \dot{\nu} 
+\simeq 1.8 \times 10^{-12} m_1^{-3/7} R_6^{6/7} \mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\mathrm{s}^{-1}] \notag \\
+&amp;\simeq 5.7 \times 10^{-5} m_1^{-3/7} R_6^{6/7} \mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\mathrm{yr}^{-1}] \tag{18}
+\end{align}\]
 
 <p>となります。
 スピンアップ率 \(- \dot{P} / P\)が、\(P L^{6/7}\)に比例していることがわかります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="降着柱">降着柱</h2>
 
-<p>磁軸と回転軸が揃っていない強磁場を持つ中性子星について考えてみましょう。
-簡単のため、中性子星磁場は双極子磁場であるとします。
-\(\theta\)を磁軸からの角度とすると、双極子磁場の曲線の方程式は</p>
+<p>ここまで議論してきたように、強い磁場をもつ中性子星への降着はアルヴェーン半径で堰き止められ、磁力線に沿って磁極領域に流れていきます。</p>
+
+<p><img src="/assets/images/compact/x_ray_bursters_02.png" alt="" /><br />
+それぞれ弱磁場の中性子星への降着と、強磁場の中性子星への降着の様子。</p>
+
+<p>ここでは、磁軸と回転軸が揃っていない強磁場を持つ中性子星について考えてみましょう。
+簡単のため、中性子星磁場は双極子磁場であるとします。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_01.png" alt="" /></p>
+
+<p>\(\theta\)を磁軸からの角度とすると、双極子磁場の曲線の方程式は</p>
 
 \[r = C \sin^2 \theta \tag{19}\]
 
@@ -247,13 +270,18 @@ P_\mathrm{eq}
 
 \[f_\mathrm{disk} 
 = \frac{\pi R^2 \sin^2 \beta}{4\pi R^2} 
-= \frac{R \sin^2 \alpha}{4r_M} \left( \mathrm{or} \frac{R \sin^2 \alpha}{2r_M} \right) \tag{22}\]
+= \frac{R \sin^2 \alpha}{4r_M} \left( \mathrm{or} \ \frac{R \sin^2 \alpha}{2r_M} \right) \tag{22}\]
 
 <p>のようになります。
 (22)式の\((\cdots )\)は、2つの磁極を考慮した場合のものです。
 もし磁場がとても強い場合、降着物質は磁極領域の限られた面積部分に集まり、そこで重力エネルギーを解放することになります。<br />
 降着円盤から磁力線に沿ってガスが降着すると、磁極領域にガスが集まり、降着柱を形成します。
-このときのガスの落下速度を\(v \sim v_\mathrm{ff} = \sqrt{2GM/R} \sim c/2\)、そして\(L_\mathrm{acc} \sim L_\mathrm{Edd}\)としましょう。
+磁力線に沿って物質が降着すると、その途中でガスは超音速となり、衝撃波を形成すると考えられます。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_02.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.1086/509108">Becker &amp; Wolff (2007)</a>より。</p>
+
+<p>このときのガスの落下速度を\(v \sim v_\mathrm{ff} = \sqrt{2GM/R} \sim c/2\)、そして\(L_\mathrm{acc} \sim L_\mathrm{Edd}\)としましょう。
 すると、この降着ガスを構成するプラズマ中の陽子の平均自由行程は</p>
 
 \[\lambda_d 
@@ -263,7 +291,7 @@ R_\ast
 \sim 10^6 \ [\mathrm{cm}] \tag{23}\]
 
 <p>と求まります。
-ここでクーロン対数は\(\ln \Lambda \sim 20\)としました。
+ここでクーロン対数は\(\ln \Lambda \sim 20\)としました。<br />
 もしこの降着柱部分で衝撃波が発生した場合、平均自由行程がとても長いため、この設定では衝突による衝撃波を形成することができません。
 衝撃波の厚みは平均自由行程\(\lambda_d\)より十分小さいため、このときにできる衝撃波は無衝突衝撃波ということになります。
 最近でこそ無衝突衝撃波についてのPICシミュレーションなどが盛んに行われるようになりましたが、磁場がない場合ですら、無衝突衝撃波についてはまだよく理解されていません。
@@ -323,13 +351,71 @@ R_\ast
 \[\nabla^2 Q 
 = \frac{\sigma_T \rho \vert v \vert}{c m_p} \frac{\partial}{\partial z} (6 Q^{1/2} - 5Q) \tag{29}\]
 
-<p>この微分方程式を、\(z=0, \infty\)そして\(r=r_c\) (降着柱の半径) での境界条件のもとで積分をすれば、\(Q\)を求めることができます。</p>
+<p>この微分方程式を、\(z=0, \infty\)そして\(r=r_c\) (降着柱の半径) での境界条件のもとで積分をすれば、\(Q\)を求めることができます。<br />
+次の図は、横軸\(\kappa S r / c\)、縦軸\(\kappa S z/c\)のQの等高線を示したものです。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_03.png" alt="" /><br />
+<a href="https://www.nature.com/articles/physci246001a0">Davidson (1973)</a>より。a, b, cはそれぞれ\(Q=0.9, 0.5, 0.1\)の等高線を表す。</p>
+
+<p>典型的な値\(r_c = 10^5 \mathrm{cm}, \dot{M} = 10^{17} \mathrm{g/s}, v = c/2\)に対し、降着柱の底での温度\(T_b\)を求めてみましょう。
+すると\(\rho \vert v \vert = 3 \times 10^6 \mathrm{g/cm^2/s}\)であり、\(U_\mathrm{rad} = 1.4 \times 10^{17} \mathrm{erg/cm^3}\)となります。
+降着柱の底での光学的厚みが、放射場を熱化させるのに十分大きいとすると</p>
+
+\[T_b 
+= \left( \frac{c}{4\sigma_\mathrm{SB}} U_\mathrm{rad} \right)^{1/4} 
+\sim 6.6 \times 10^7 \ [\mathrm{K}] \tag{30}\]
+
+<p>と求まります。
+この温度は、観測されるX線放射を十分説明することができます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="最近の研究">最近の研究</h2>
+
+<h3 id="x線パルサーの新しい描像">X線パルサーの新しい描像</h3>
+
+<p>これまで考えられてきたX線パルサーの描像は、中性子星の磁極方向に光のビームが出るというものです。
+磁極を正面から覗き込めるときにのみ、中性子星からの光を観測することができます。
+これは宇宙灯台のモデルと呼ばれ、これまで長らく考えられてきました。<br />
+それに対し、<a href="https://academic.oup.com/pasj/article/68/5/83/2223381">Kawashima et al. (2016)</a>では降着柱の輻射流体シミュレーションを行い、これまでと異なる宇宙灯台モデルを提案しました。
+この研究で新しく提案されたのは、降着柱の側面が明るく輝くモデルです。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_04.png" alt="" /><br />
+左図は既存の宇宙灯台モデル、右図は新しいモデル。既存モデルは磁軸領域を見たときのみ眩しく見えるのに対し、新モデルは降着柱の側面が多く見えるときに眩しく見える。</p>
+
+<p>このモデルを考慮することで、これまではブラックホールと考えられてきた超高光度X線源 (Ultra-Luminous X-ray souces: ULXs)が、中性子星パルサーでも説明がつくことを示したのです。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_05.png" alt="" /><br />
+<a href="https://academic.oup.com/pasj/article/68/5/83/2223381">Kawashima et al. (2016)</a>より。超臨界降着により形成される降着柱の、ガス密度と放射エネルギー密度のカラーコントア。右端のパネルは放射光度の動径分布を表したもの。</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_06.png" alt="" /><br />
+<a href="https://academic.oup.com/pasj/article/68/5/83/2223381">Kawashima et al. (2016)</a>より。降着柱の側面からエネルギーが流出する概念図。</p>
+
+<h2 id="一般相対論的磁気流体シミュレーション">一般相対論的磁気流体シミュレーション</h2>
+
+<p>同じくシミュレーション研究ですが、<a href="https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea">Inoue et al. (2023)</a>では一般相対論の効果も含めた磁気流体計算を実施しました。
+しかも、先ほどは降着柱の部分のみを計算していましたが、こちらの研究では降着円盤部分も含めた中性子星表面への降着の様子を3次元シミュレーションし、降着率による降着柱と磁気圏の</p>
+
+<p><img src="/assets/images/compact/x_ray_pulsars_07.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea">Inoue et al. (2023)</a>より。左パネルから、降着率(初期トーラスのガス密度)が小さな順に計算結果を並べたもの。</p>
+
+<p>降着率が小さいと降着柱が形成されていますが、降着率が大きい場合には磁気圏が消失していることがわかります。</p>
 
 <h2 id="参考文献">参考文献</h2>
 
-<p>[1] <a href="https://amzn.to/4o2zJ2T">Longair, “High Energy Astrophysics”</a><br />
-[2] <a href="https://amzn.to/47pT8EZ">Frank, King, Raine, “Accretion Power in Astrophysics”</a><br />
-[3] <a href="https://amzn.to/3KVIIEe">小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象”</a></p>
+<p>[1] <a href="https://iopscience.iop.org/article/10.1086/509108">Becker &amp; Wolff, 2007, “Thermal and Bulk Comptonization in Accretion-powered X-Ray Pulsars”</a><br />
+[2] <a href="https://www.nature.com/articles/physci246001a0">Davidson, 1973, “Accretion at a Magnetic Pole of a Neutron Star”</a><br />
+[3] <a href="https://academic.oup.com/pasj/article/68/5/83/2223381">Kawashima et al., 2016, “A radiation-hydrodynamics model of accretion columns for ultra-luminous X-ray pulsars”</a><br />
+[4] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/acd6ea">Inoue et al., 2023, “Modeling of Thermal Emission from ULX Pulsar Swift J0243.6+6124 with General Relativistic Radiation MHD Simulations”</a><br />
+[5] <a href="https://amzn.to/47pT8EZ">Frank, King, Raine, “Accretion Power in Astrophysics”</a><br />
+[6] <a href="https://amzn.to/4o2zJ2T">Longair, “High Energy Astrophysics”</a><br />
+[7] <a href="https://amzn.to/3KVIIEe">小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

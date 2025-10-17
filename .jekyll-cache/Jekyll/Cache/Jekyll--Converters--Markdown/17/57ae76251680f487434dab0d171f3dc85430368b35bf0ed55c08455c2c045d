@@ -1,0 +1,157 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#x線パルサー" id="markdown-toc-x線パルサー">X線パルサー</a>    <ol>
+      <li><a href="#アルヴェーン半径" id="markdown-toc-アルヴェーン半径">アルヴェーン半径</a></li>
+      <li><a href="#fastness-parameter-と共回転半径" id="markdown-toc-fastness-parameter-と共回転半径">Fastness parameter と共回転半径</a></li>
+      <li><a href="#平衡状態での自転周期" id="markdown-toc-平衡状態での自転周期">平衡状態での自転周期</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="x線パルサー">X線パルサー</h1>
+
+<h2 id="アルヴェーン半径">アルヴェーン半径</h2>
+
+<p>降着流が球対称であると仮定しましょう。
+中心にいる中性子星の質量を\(M\)、半径を\(R\)としましょう。
+中性子星が双極子磁場を持っているとして</p>
+
+\[B 
+\approx \frac{\mu}{r^3} \tag{1}\]
+
+<p>のように書けるとします。
+ここで\(\mu = B_s R^3\)は磁気双極子モーメント、\(r\)は中心星からの距離です。
+すると、この双極子磁場による磁気圧は</p>
+
+\[P_\mathrm{mag} 
+= \frac{B^2}{8\pi} 
+= \frac{\mu^2}{8\pi r^6} \tag{2}\]
+
+<p>となります。
+中心にいる中性子星への降着が定常的であり、\(\dot{M} = 4\pi r^2 \rho v\)が一定であるとしましょう。
+磁気圧と降着ガスの動圧 (ram presure) \(P_\mathrm{ram} = \rho v^2\)が等しくなる半径を、\(r_M\)としましょう。
+そして降着ガスの自由落下速度を \(v_\mathrm{ff}= \sqrt{2GM/r}\)とします。
+すると</p>
+
+\[\begin{align}
+&amp;\frac{\mu^2}{8\pi r_M^6} 
+= \rho v^2 
+= \vert \rho v \vert v_\mathrm{ff} 
+= \frac{\dot{M}}{4\pi r_M^2} \sqrt{\frac{2MG}{r_M}} \notag \\
+&amp;\Longrightarrow \ 
+r_M^\mathrm{(sph)} 
+= \left( \frac{\mu^4}{8GM\dot{M}^2}\right)^{1/7} 
+\simeq 5.1 \times 10^8 \dot{M}_{16}^{-2/7} m_1^{-1/7} \mu_{30}^{4/7} \ [\mathrm{cm}] \tag{3} 
+\end{align}\]
+
+<p>のようになります。
+ここで\(\dot{M}_{16} \equiv \dot{M} / (10^{16} \mathrm{g/s}), m_1 = M/M_\odot, \mu_{30} = \mu / (10^{30} \mathrm{G \ cm^2})\)です。
+\(\mu = 10^{30} \mathrm{G \ cm^2}\)は、\(B_s = 10^{12} \mathrm{G}, R = 10^6 \mathrm{cm}\)に対応します。
+この\(r_M\)をアルヴェーン半径 (Alfvén radius)と呼びます。<br />
+ここで、降着ガスが重力エネルギーを解放することにより放出される光度を\(L_\mathrm{acc} = GM\dot{M} / R\)として、\(\dot{M}\)を消去すると</p>
+
+\[r_M^\mathrm{(sph)} 
+= \left( \frac{\mu^4 GM}{8 R^2 L_\mathrm{acc}^2} \right)^{1/7} 
+\simeq 2.9 \times 10^8 m_1^{1/7} R_6^{-2/7} L_{37}^{-2/7} \mu_{30}^{4/7} \tag{4}\]
+
+<p>のようにも整理できます。
+ここで、\(R_6 = R/10^6 \mathrm{cm}, L_{37} = L_\mathrm{acc} / 10^{37} \mathrm{erg/s}\)です。<br />
+円盤降着に対しては、アルヴェーン半径は</p>
+
+\[r_M^\mathrm{(disc)} 
+\approx 0.5 r_M^\mathrm{(sph)} \tag{5}\]
+
+<p>のように経験的に近似されます。
+\(M \sim M_\odot, R \sim 10^6 \mathrm{cm}\)のような典型的な中性子星のとき、\(r_M^\mathrm{(disc)} &lt; R\)となる臨界磁場強度を\(B_{s:\mathrm{crit}}\)としましょう。
+そして\(L_\mathrm{acc} \sim 10 L_\mathrm{Edd} \sim 1.2 \times 10^{39} \mathrm{erg/s}\)とすると</p>
+
+\[B_{s:\mathrm{crit}} 
+\sim 1.7 \times 10^9 \ [\mathrm{G}] \tag{6}\]
+
+<p>のようになります。
+\(B_s &lt; B_{s: \mathrm{crit}}\)の場合、双極子磁場が降着に与える影響は少ないと考えることができます。</p>
+
+<h2 id="fastness-parameter-と共回転半径">Fastness parameter と共回転半径</h2>
+
+<p>次に、中性子星の双極子磁場が、中性子星のスピン角速度\(\Omega_\ast\)と同じ角速度で共回転している場合を考えましょう。
+先ほどのアルヴェーン半径より内側\((r \lesssim r_M)\)を中性子星磁気圏とし、そこに存在する物質は磁場と強く相互作用しているために、磁力線に沿った方向にしか運動できないとします。
+さらに磁気圏より外側 \((r \gtrsim r_M)\)にいる降着物質は、ケプラー回転による円盤を形成しており、その速度は</p>
+
+\[v_\varphi 
+\approx r \Omega_K (r) 
+= \sqrt{\frac{GM}{r}} \tag{7}\]
+
+<p>であるとします。
+この設定で、\(r = r_M\)で降着物質に働く力について考えてみましょう。
+共回転する磁気圏から見ると、アルヴェーン半径にいる降着物質には、遠心力\(r_M \Omega_\ast^2\)が働きます。
+物質が中性子星に降着するには、重力が遠心力より大きくなければなりません。
+よって</p>
+
+\[r_M \Omega_\ast^2 
+&lt; r_M \Omega_K^2 (r_M) \ \Longrightarrow \ 
+\omega_\ast 
+\equiv \frac{\Omega_\ast}{\Omega_K (r_M)} 
+&lt; 1 \tag{8}\]
+
+<p>とわかります。
+この\(\omega_\ast\)をfastness parameterと呼びます。
+外側から降着する物質の角速度が、共回転する磁気圏と同じ角速度になる半径を、共回転半径 \(r_\Omega\)としましょう。
+すなわち</p>
+
+\[\Omega_K (r_\Omega) 
+= \Omega_\ast 
+= \frac{2\pi}{P_\ast} \ \Longrightarrow \ 
+r_\Omega
+= \left( \frac{GM P_\ast^2}{4\pi^2}\right)^{1/3} 
+\simeq 1.5 \times 10^8 P_\ast^{2/3} m_1^{1/3} \ [\mathrm{cm}] \tag{9}\]
+
+<p>ここで、\(P_\ast = \frac{2\pi}{\Omega_\ast}\)は中性子星の自転周期です。
+\(r = r_M\)でガスが遠心力により離れていかないためには</p>
+
+\[\Omega_K (r_\Omega) 
+= \Omega_\ast 
+&lt; \Omega_K (r_M) \ \Longrightarrow \ 
+r_\Omega 
+&gt; r_M \tag{10}\]
+
+<p>であることもわかります。</p>
+
+<h2 id="平衡状態での自転周期">平衡状態での自転周期</h2>
+
+<p>中性子星への質量降着が非常に長い時間に渡って行われると、降着物質が持つ角運動量により中性子星の自転が速くなることが考えられます。
+\(r = r_M\)での重力と遠心力が等しくなるとき、物質は降着を起こさなくなると考えることができます。
+(8)式の\(\omega_\ast = 1\)から</p>
+
+\[P_\mathrm{eq} 
+\equiv \frac{2\pi}{\Omega_K (r_M)}
+= \frac{2\pi}{\sqrt{GM}} r_M^{3/2} 
+\simeq \frac{2\pi}{\sqrt{G m_1 M_\odot}} (0.5 \times 2.9 \times 10^8 m_1^{1/7} R_6^{-2/7} L_{37}^{-2/7} \mu_{30}^{4/7})^{3/2} 
+\simeq 1.0 m_1^{-2/7} R_6^{-3/7} L_{37}^{-3/7} \mu_{30}^{6/7} \tag{11}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3KVIIEe">小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

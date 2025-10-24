@@ -1,0 +1,74 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#中性子星の振動" id="markdown-toc-中性子星の振動">中性子星の振動</a>    <ol>
+      <li><a href="#回転なし磁場なしの通常の恒星の通常の振動モード" id="markdown-toc-回転なし磁場なしの通常の恒星の通常の振動モード">回転なし・磁場なしの通常の恒星の通常の振動モード</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="中性子星の振動">中性子星の振動</h1>
+
+<p>実際の中性子星は固体クラストや強い磁場、超流動や高速自転などの特徴を持つため、中性子星の振動モードは複雑を極めます。
+加えて、中性子星は一般相対論的な効果が重要となる天体であるため、一般相対論の枠組みを用いた振動の扱いが必要となります。
+例えば、中性子星の振動により重力波が発生し、それが無限遠に飛び去ることで中性子星振動が減衰する効果などが現れます。
+そこでここでは、このような複雑な物理は考えず、中性子星の微小振幅振動を普通の恒星の振動モード解析と同様に見ていきましょう。<br />
+普通の恒星の普通のモードは、一般的に p-, f-, g- の3つのモードに分類されます。
+p-modeは流体の圧縮性(すなわち圧力)が復元力となって振動するモードで、その振動周波数は高周波となる傾向にあります。
+次に、g-modeは浮力(すなわち重力)が復元力となって振動するモードで、p-modeに比べて低周波となります。
+恒星が高速回転している場合、コリオリ力が復元力として働く回転モードと慣性モードが現れます。
+さらに固体クラストが存在する場合、音波がクラスト中を伝播する効果も現れます。
+そして強磁場がある場合、アルヴェーン波による振動も考慮する必要があります。</p>
+
+<h2 id="回転なし磁場なしの通常の恒星の通常の振動モード">回転なし・磁場なしの通常の恒星の通常の振動モード</h2>
+
+<p>ここでは簡単のため、振動は断熱とし、粘性は考えないとしましょう。
+さらに恒星は高速自転も磁場もないとして、重力もニュートン重力で考えることにします。
+すると、この系を記述する方程式は、以下で与えられます。</p>
+
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) 
+= 0 \tag{1}\]
+
+\[\rho \frac{d \mathbf{v}}{dt} 
+= - \nabla P - \rho \nabla \Phi \tag{2}\]
+
+\[\nabla^2 \Phi 
+= 4\pi G \rho \tag{3}\]
+
+\[\rho T \frac{ds}{dt} 
+= \rho \epsilon - \nabla \cdot \mathbf{F} \tag{4}\]
+
+\[\mathbf{F}_\mathrm{rad} 
+= -\lambda_\mathrm{rad} \nabla T \tag{5}\]
+
+<p>ここで\(\Phi\)は重力ポテンシャル、\(s\)は単位質量あたりのエントロピー、\(\epsilon\)はエネルギー生成率、\(\mathbf{F}_\mathrm{rad}\)は放射によるエネルギー流束です。
+そして\(\mathbf{F} = \mathbf{F}_\mathrm{rad} + \mathbf{F}_\mathrm{conv}\)であり、\(\mathbf{F}_\mathrm{conv}\)は対流によるエネルギー流束を表します。<br />
+断熱な振動を仮定し、さらに重力ポテンシャルの摂動は無視できるとしましょう。
+密度・速度・圧力の摂動量をそれぞれ\(\rho', \mathbf{v}', P'\)し、(1), (2), (4)式を線形化していきましょう。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

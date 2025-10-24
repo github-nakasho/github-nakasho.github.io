@@ -1,0 +1,259 @@
+I"�;
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#中性子星の冷却進化" id="markdown-toc-中性子星の冷却進化">中性子星の冷却進化</a>    <ol>
+      <li><a href="#ニュートリノ生成メカニズム" id="markdown-toc-ニュートリノ生成メカニズム">ニュートリノ生成メカニズム</a>        <ol>
+          <li><a href="#direct-urca-durca-反応" id="markdown-toc-direct-urca-durca-反応">(Direct) URCA (DURCA) 反応</a></li>
+          <li><a href="#modified-urca-murca-反応-chiu--salpeter-1964" id="markdown-toc-modified-urca-murca-反応-chiu--salpeter-1964">Modified URCA (MURCA) 反応 (Chiu &amp; Salpeter (1964))</a></li>
+          <li><a href="#原子核ペアの制動放射-flowers-et-al-1975-friman--maxwell-1979" id="markdown-toc-原子核ペアの制動放射-flowers-et-al-1975-friman--maxwell-1979">原子核ペアの制動放射 (Flowers et al. (1975), Friman &amp; Maxwell (1979))</a></li>
+          <li><a href="#ニュートリノペア制動放射" id="markdown-toc-ニュートリノペア制動放射">ニュートリノペア制動放射</a></li>
+          <li><a href="#pi中間子凝縮におけるpi中間子の反応" id="markdown-toc-pi中間子凝縮におけるpi中間子の反応">\(\pi\)中間子凝縮における\(\pi\)中間子の反応</a></li>
+          <li><a href="#クォークのbeta崩壊-iwamoto-1980" id="markdown-toc-クォークのbeta崩壊-iwamoto-1980">クォークの\(\beta\)崩壊 (Iwamoto (1980))</a></li>
+          <li><a href="#クーパー対の形成崩壊-flowers-et-al-1976" id="markdown-toc-クーパー対の形成崩壊-flowers-et-al-1976">クーパー対の形成・崩壊 (Flowers et al. (1976))</a></li>
+        </ol>
+      </li>
+      <li><a href="#単純な冷却計算" id="markdown-toc-単純な冷却計算">単純な冷却計算</a></li>
+      <li><a href="#超流動性" id="markdown-toc-超流動性">超流動性</a></li>
+      <li><a href="#恒星進化として冷却計算" id="markdown-toc-恒星進化として冷却計算">恒星進化として冷却計算</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="中性子星の冷却進化">中性子星の冷却進化</h1>
+
+<p>大質量星の超新星爆発により誕生した中性子星は、初期にはその内部温度が\(10^{12} \mathrm{K}\)を超える非常に高温の状態とされています。
+しかし、中性子星から新たにニュートリノが放出されることで、その温度は\(10^{10} \mathrm{K}\)まで急激に冷却されます。
+このニュートリノ冷却期は、約\(10^5\)年ほど続くとされています。
+この後は、中性子星表面からの光子放出が冷却機構として優勢になります。
+そのため、中性子星から飛来する放射を検出するすることは、中性子星の内部構造や表面の情報を得るために非常に重要であるとわかります。
+しかし、中性子星表面から直接放出される熱的放射を検出することは、中性子星を取り巻く磁気圏環境からくる放射などにより、非常に困難です。
+そのため、これまでに表面からの熱的放射を直接観測した例は、わずかしか存在しません。<br />
+中性子星の冷却計算は、概念的には極めて簡単に計算することができます。
+中性子星内部は電子が強く縮退しているため、熱伝導度がとても高く、ほぼ一様温度になっていると近似できるためです。
+強く内部が縮退している中性子星が、\(N\)個のフェルミ粒子から形成されているとしましょう。
+そして中性子星の内部温度は\(T\)で一定であるとすると、中性子星の熱容量が</p>
+
+\[C_V 
+= N c_V 
+= \left( \frac{dU}{dT} \right)_{N, V}
+= N \frac{\pi^2 (x^2 + 1)^{1/2}}{x^2} k_B \left( \frac{k_B T}{mc^2} \right) \tag{1}\]
+
+<p>と計算されます。
+ここで\(x \equiv p_F / mc\)であり、さらに\(m\)はフェルミ粒子の質量です。
+そして中性子星の全熱容量は\(U = T C_V\)のように書けるため、中性子星の冷却進化を支配する方程式が</p>
+
+\[\frac{dU}{dt} 
+= C_V \frac{dT}{dt} 
+= - (L_\nu + L_\gamma) \tag{2}\]
+
+<p>のようになります。
+ここで\(L_\nu = \int_0^M \epsilon_\nu dV\)は中性子星内部からのニュートリノ光度であり、\(\epsilon_\nu\)は単位体積あたりのニュートリノ生成率です。
+そして\(L_\gamma\)は、中性子星表面からの光子光度を表しています。
+中性子星が黒体であり、光学的厚みが\(\tau \sim 1\)の領域から黒体放射を出しているとすると、電磁波による光度は</p>
+
+\[L_\gamma 
+= 4\pi R^2 \sigma_\mathrm{SB} T_e^4 
+= 7 \times 10^{36} \left( \frac{R}{10^6 \mathrm{cm}}\right)^2 \left( \frac{T_e}{10^7 \mathrm{K}}\right)^4 \ [\mathrm{erg/s}] \tag{3}\]
+
+<p>と求まります。
+ここで、中性子星表面での有効温度を\(T_e\)としましたが、これは必ずしも内部温度\(T\)と一致しません。
+詳細なモデル計算から、\(T\)と\(T_e\)の関係が</p>
+
+\[\frac{T_e}{T} 
+\simeq 1 \times 10^{-2} \left( \frac{T_e}{10^9 \mathrm{K}}\right)^{-1/8} \left( \frac{M}{M_\odot}\right)^{1/4} \left( \frac{R}{10^6 \mathrm{cm}}\right)^{-1/2} \tag{4}\]
+
+<p>となることが知られています。
+ただし、この関係は外層の組成に依存して変化します。</p>
+
+<h2 id="ニュートリノ生成メカニズム">ニュートリノ生成メカニズム</h2>
+
+<p>中性子星の冷却進化を理解するためには、ニュートリノ放射によるエネルギー損失率\(\epsilon_\nu\)を知る必要があります。
+生まれたばかりの中性子星内部から生成されるニュートリノは、内部物質と相互作用することなく外部に抜け出し、エネルギーを持ち出します。
+ここでは数あるニュートリノ放射メカニズムの中から、いくつかをピックアップして説明します。</p>
+
+<h3 id="direct-urca-durca-反応">(Direct) URCA (DURCA) 反応</h3>
+
+<p>これは以下のようなものです。</p>
+
+\[n \longrightarrow p + e^- + \bar{\nu}_e, \quad
+p + e^- \longrightarrow n + \nu_e \tag{5}\]
+
+<p>この反応は、冷たい中性子星のような強く縮退している物質内では効率が悪くなります。
+体積\(\mathcal{V}\)中の反ニュートリノによる全光度は、以下のようにして計算することができます。</p>
+
+\[L_{\bar{\nu}}^D 
+= \frac{(2\pi)^4}{\hbar \mathcal{V}} \int d^3 n_n d^3 n_p d^3 n_e d^3 n_\bar{\nu} \delta (E_f - E_i) \delta^3 (\mathbf{k}_f - \mathbf{k}_i) S \vert H_{fi}^2 \vert E_\bar{\nu} \Theta \tag{6}\]
+
+<p>ここで\(\mathbf{p}_j = \hbar \mathbf{k}_j\)であり</p>
+
+\[d^3 n_j 
+= \mathcal{V} \frac{d^3 p_j}{h^3} \tag{7}\]
+
+\[S 
+= f_n (1-f_p) (1-f_e) \tag{8}\]
+
+\[f_j 
+= \frac{1}{\exp [(E_j - \mu_j)/k_B T] + 1} \tag{9}\]
+
+<p>です。
+さらに\(\vert H_{fi} \vert\)は反応振幅の2乗で、終状態のスピンと初期状態のスピンの平均で総和をとる必要があります。
+\(p_F (n), p_F (p), p_F (e)\)の3つのフェルミ運動量が三角条件\(p_F (n) \leq p_F (p) + p_F (e)\)を満たす場合、\(\Theta = 1\)ですが、そうでない場合は\(\Theta = 0\)となります。
+この場合の放射率は、以下のように計算されています (例えば、Prakash et al. (1992)などをご覧ください。)</p>
+
+\[\epsilon_\bar{\nu}^\mathrm{DURCA} 
+= \frac{L^D_\bar{\nu}}{\mathcal{V}} 
+\approx 4 \times 10^{27} \left( \frac{n_e}{n_0}\right)^{1/3} \frac{m_n^\ast m_p^\ast}{m_n^2} T_9^6 \Theta \ [\mathrm{erg/s/cm^3}] \tag{10}\]
+
+<p>ここで\(T_9 = T / 10^9 \mathrm{K}, n_0 = 0.16 \mathrm{fm}^{-3}\)であり、\(m_j^\ast\)は有効粒子質量です。
+\(\epsilon_\bar{\nu}\)の温度依存性は全て、位相空間のファクターとして現れています。</p>
+
+<h3 id="modified-urca-murca-反応-chiu--salpeter-1964">Modified URCA (MURCA) 反応 (Chiu &amp; Salpeter (1964))</h3>
+
+<p>DURCAでは、中性子・陽子・電子の運動量が三角条件を満たし場合のみを計算していました。
+そのため、中性子星の中でも高密度かつ強く縮退している場合にのみ適応できる計算です。
+そこで、以下のような修正されたURCA過程 (MURCA)を考えてみましょう。</p>
+
+\[n + n \longrightarrow n + p + e^- + \bar{\nu}_e, \quad 
+n + p + e^- \longrightarrow n + n + \nu_e \tag{11}\]
+
+\[n + n \longrightarrow n + p + \mu^- + \bar{\nu}_\mu, \quad 
+n + p + \mu^- \longrightarrow n + n + \nu_\mu \tag{12}\]
+
+<p>この場合の反ニュートリノによる全光度は</p>
+
+\[L_\bar{\nu}^M 
+= \frac{(2\pi)^4}{\hbar \mathcal{V}} \int d^3 n_1 d^3 n_2 d^3 n_{1'} d^3 n_p d^3 n_e d^3 n_\bar{\nu} \delta (E_f - E_i) \delta^3 (\mathbf{k}_f - \mathbf{k}_i) S \vert H_{fi}^2 \vert E_\bar{\nu} \tag{13}\]
+
+<p>のようになります。
+添字の\(1, 2, 1'\)は、初期の2つの中性子と、終状態の1つの中性子を表します。
+そして</p>
+
+\[S = f_1 f_2 (1-f_{1'}) (1-f_p) (1-f_e) \tag{14}\]
+
+<p>です。
+そしてこの場合のニュートリノ放射率は</p>
+
+\[\epsilon_\bar{\nu}^\mathrm{MURCA} 
+\equiv \frac{L_\bar{\nu}^M}{\mathcal{V}} 
+\simeq 7.4 \times 10^{20} \left( \frac{\rho}{\rho_\mathrm{nuc}}\right)^{2/3} T_9^8 (1+F) \ [\mathrm{erg/s/cm^3}] \tag{15}\]
+
+<p>のように求まります。
+ここで\(\rho_\mathrm{nuc} = 2.8 \times 10^{14} \mathrm{g/cm^3}, T_9 = T/ 10^9 \mathrm{K}\)です。
+さらに\(\mu_e &gt; m_\mu c^2 \ (\rho &gt; 2.9 \rho_\mathrm{nuc})\)の場合\(F= \frac{p_\mu^2 dp_\mu}{p_e^2 dp_e}\)、そうでない場合は\(F=0\)となります。
+中性子星が質量\(M\)の一様密度の星の場合、Friman &amp; Maxwell (1979)から</p>
+
+\[L_\bar{\nu}^\mathrm{MURCA} 
+\simeq 5.3 \times 10^{39} \frac{M}{M_\odot} \left( \frac{\rho_\mathrm{nuc}}{\rho}\right)^{1/3} T_9^8 \ [\mathrm{erg/s}] \tag{16}\]
+
+<p>のように計算がされています。</p>
+
+<h3 id="原子核ペアの制動放射-flowers-et-al-1975-friman--maxwell-1979">原子核ペアの制動放射 (Flowers et al. (1975), Friman &amp; Maxwell (1979))</h3>
+
+<p>中性子と中性子/陽子が散乱を起こし、光子の代わりにニュートリノを放出するものです。</p>
+
+\[n + n \longrightarrow n + n + \nu + \bar{\nu} \tag{17}\]
+
+\[n + p \longrightarrow n + p + \nu + \bar{\nu} \tag{18}\]
+
+<p>この過程はMURCA過程と比較して、非効率であることが知られています。</p>
+
+<h3 id="ニュートリノペア制動放射">ニュートリノペア制動放射</h3>
+
+<p>電子と原子核が散乱を起こし、ニュートリノを放出します。</p>
+
+\[e^- + (Z, A) \longrightarrow e^- + (Z, A) + \nu + \bar{\nu} \tag{19}\]
+
+<p>Maxwell (1979)によると、この反応による光度は</p>
+
+\[L_\nu^\mathrm{brem} 
+\simeq 5 \times 10^{39} \frac{M_\mathrm{crust}}{M_\odot} T_9^6 \ [\mathrm{erg/s}] \tag{20}\]
+
+<p>のよう求まっています。
+ここで\(M_\mathrm{crust}\)は、中性子星の固体クラストの質量です。</p>
+
+<h3 id="pi中間子凝縮におけるpi中間子の反応">\(\pi\)中間子凝縮における\(\pi\)中間子の反応</h3>
+
+<p>これは\(\pi\)中間子において、核子準粒子の\(\beta\)崩壊および逆\(\beta\)崩壊により、ニュートリノが発生するというものです。</p>
+
+\[\pi^- + n \longrightarrow n + e^- + \bar{\nu}_e, \quad 
+n + e^- \longrightarrow n + \pi^- + \nu_e \tag{21}\]
+
+\[\pi^- + n \longrightarrow n + \mu^- + \bar{\nu}_\mu, \quad 
+n + \mu^- \longrightarrow n + \pi^- + \nu_\mu \tag{22}\]
+
+<p>これによる光度は</p>
+
+\[L_\nu^\pi 
+\simeq 1.5 \times 10^{46} \theta^2 \frac{M}{M_\odot} \frac{\rho_\mathrm{nuc}}{\rho} T_9^6 \ [\mathrm{erg/s}] \tag{23}\]
+
+<p>のように求まっています。
+ここで\(\theta \sim 0.3\)は、\(\pi\)中間子のdegree (度数？)の角度測定です。
+\(\pi\)中間子凝縮が起こると、この冷却機構はMURCA過程よりも効率よく起こることが知られています。</p>
+
+<h3 id="クォークのbeta崩壊-iwamoto-1980">クォークの\(\beta\)崩壊 (Iwamoto (1980))</h3>
+
+\[d \longrightarrow u + e^- + \bar{\nu}_e, \quad u + e^- \longrightarrow d + \nu_e \tag{24}\]
+
+<p>のような反応によるニュートリノ放出です。
+このときのエネルギー放出率は</p>
+
+\[\epsilon_\nu^\mathrm{quark} 
+\simeq 1.9 \times 10^{25} \frac{n}{n_\mathrm{nuc}} T_9^6 \ [\mathrm{erg/s/cm^3}] \tag{25}\]
+
+<p>と求まっています。
+ここで\(n_\mathrm{nuc} = \rho_\mathrm{nuc} / m_B = 0.17 \mathrm{fm^-3}\)です。
+一様密度の星と仮定すると、光度は</p>
+
+\[L_\nu^\mathrm{quark} 
+\simeq 1.3 \times 10^{44} \frac{M}{M_\odot} T_9^6 \ [\mathrm{erg/s}] \tag{26}\]
+
+<h3 id="クーパー対の形成崩壊-flowers-et-al-1976">クーパー対の形成・崩壊 (Flowers et al. (1976))</h3>
+
+<p>超流動体や超伝導体では、単一粒子(クーパー対の崩壊した励起状態)との熱平衡状態にあります。
+つまりクーパー対の形成や崩壊が起こっており、それに伴ってニュートリノ対を放出しています。</p>
+
+\[X + X \longrightarrow [XX] + \nu + \bar{\nu} \tag{27}\]
+
+<p>\([XX]\)は粒子\(X\)(中性子、陽子、ハイペロン、クォークなど)のクーパー対を表します。
+中性子\({}^3 P_2\)のペアによる放射率は</p>
+
+\[\epsilon_\nu^{3 P_2 (n)} 
+= 8.6 \times 10^{21} \left( \frac{n_n}{n_0}\right)^{1/3} \left( \frac{m_n^\ast}{m_n}\right) R_{3 P_2} (T / T_c) T_9^7 \ [\mathrm{erg/s/cm^3}] \tag{28}\]
+
+<p>のように求められています。
+ここで\(T_c\)は超流動への転移温度、\(m_n^\ast\)は中性子の有効質量、そして\(n_0\)は飽和数密度です。<br />
+詳細はYakovlev et al. (1990, 2001)などをご覧ください。</p>
+
+<h2 id="単純な冷却計算">単純な冷却計算</h2>
+
+<h2 id="超流動性">超流動性</h2>
+
+<h2 id="恒星進化として冷却計算">恒星進化として冷却計算</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a><br />
+[] <a href="https://amzn.to/3KVIIEe">小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -41,7 +41,8 @@ $$
 \end{aligned}
 $$
 
-これを両辺複素数平面上$$\| \omega \| =1$$の円周上で経路積分する。すると留数定理より
+これを両辺複素数平面上$$\| \omega \| =1$$の円周上で経路積分しましょう。
+すると留数定理より
 
 $$
 \oint_{|\omega|=1} \frac{f(\omega)}{\omega^{n+1}} d\omega 
@@ -212,7 +213,7 @@ $$
 この式はベッセルの微分方程式と呼ばれています。ベッセル関数がこの微分方程式を満たすことを示しましょう。
 
 $$
-(5) \underbrace{\Longrightarrow}_{両辺z微分} 
+(6) \underbrace{\Longrightarrow}_{両辺z微分} 
 2 \frac{d^2}{dz^2} J_n 
 = \frac{d}{dz} J_{n-1} - \frac{d}{dz} J_{n+1} 
 = \frac{1}{2} (J_{n-2} + J_n) - \frac{1}{2} (J_n - J_{n+2}) 
@@ -221,7 +222,7 @@ $$
 
 $$
 \begin{aligned}
-(6)式左辺 \ \Longrightarrow \ 
+(7)式左辺 \ \Longrightarrow \ 
 &\frac{d^2}{dz^2} J_n+ \frac{1}{z} \frac{d}{dz} J_n + (1- \frac{n^2}{z^2}) J_n 
 = \frac{1}{4} J_{n-2} -\frac{1}{2} J_n + \frac{1}{4} J_{n+2} + \frac{1}{2z} (J_{n-1} - J_{n+1}) + J_n - \frac{n}{2z} \frac{2n}{z} J_n \\
 &= \frac{1}{4} J_{n-2} +\frac{1}{2} J_n + \frac{1}{4} J_{n+2} + \frac{1}{2z} (J_{n-1}- J_{n+1})- \frac{n}{2z} (J_{n-1}+ J_{n+1}) \\

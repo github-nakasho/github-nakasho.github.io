@@ -1,0 +1,98 @@
+I"$
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的運動による微分断面積の変換" id="markdown-toc-相対論的運動による微分断面積の変換">相対論的運動による微分断面積の変換</a>    <ol>
+      <li><a href="#立体角の変換" id="markdown-toc-立体角の変換">立体角の変換</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的運動による微分断面積の変換">相対論的運動による微分断面積の変換</h1>
+
+<h2 id="立体角の変換">立体角の変換</h2>
+
+<p>まずは、微分散乱断面積を定義するときに現れる微小立体角\(d\Omega = \sin \theta d\theta d\varphi\)が、ローレンツ変換に対してどのように変換されるかを調べてみましょう。
+この微分立体角の定義で使われている角度\((\theta, \varphi)\)は、散乱前後の粒子の運動方向とします。
+すなわち、ここでは運動速度の変換則を考えることになります。
+実験室系を\(O\)、実験室系の\(x\)軸に沿って速度\(v\)で運動している系を\(\bar{O}\)としましょう。
+実験室系での粒子の速度の3次元成分をそれぞれ\(\mathbf{u} = (u^1, u^2, u^3)\)とすると、これを速度\(v\)で\(x\)軸方向で動く座標系に移った場合の速度は</p>
+
+\[\bar{u}^1 
+= \frac{u^1 - v}{1-vu^1}, \quad \bar{u}^2 
+= \frac{1}{\gamma} \frac{u^2}{1-vu^1}, \quad \bar{u}^3 
+= \frac{1}{\gamma} \frac{u^3}{1-vu^1} \tag{1}\]
+
+<p>のようになります。
+これを逆に解いて</p>
+
+\[u^1 
+= \frac{\bar{u}^1 + v}{1+v \bar{u}^1}, \quad u^2 
+= \frac{1}{\gamma} \frac{\bar{u}^2}{1+v \bar{u}^1}, \quad u^3 
+= \frac{1}{\gamma} \frac{\bar{u}^3}{1+v \bar{u}^1} \tag{2}\]
+
+<p>と書くこともできます。
+今、\((u^1, u^2, u^3) = (u \cos \theta, u \sin \theta \cos \varphi, u \sin \theta \sin \varphi), (\bar{u}^1, \bar{u}^2, \bar{u}^3 ) = (\bar{u} \cos \bar{\theta}, \bar{u} \sin \bar{\theta} \cos \varphi, \bar{u} \sin \bar{\theta} \sin \varphi)\)のように、\(\varphi = \bar{\varphi}\)であるとすると、独立なものは</p>
+
+\[\bar{u} \cos \bar{\theta} 
+= \frac{u \cos \theta - \beta}{1-\beta u \cos \theta}, \quad \bar{u} \sin \bar{\theta} 
+= \frac{1}{\gamma} \frac{u\sin \theta}{1-\beta u \cos \theta} \tag{3}\]
+
+<p>もしくは</p>
+
+\[u \cos \theta 
+= \frac{\bar{u}\cos \bar{\theta} + \beta}{1+\beta \bar{u} \cos \bar{\theta}}, \quad  u \sin \theta 
+= \frac{1}{\gamma} \frac{\bar{u} \sin \bar{\theta}}{1+\beta \bar{u} \cos \bar{\theta}} \tag{4}\]
+
+<p>となります。
+これらより</p>
+
+\[\tan \bar{\theta} 
+= \frac{1}{\gamma} \frac{u\sin \theta}{u \cos \theta - \beta}, \quad
+\tan \theta 
+= \frac{1}{\gamma} \frac{\bar{u} \sin \bar{\theta}}{\bar{u} \cos \bar{\theta} + \beta} \tag{5}\]
+
+<p>を得ます。
+\(1+\tan^2 \theta = \frac{1}{\cos^2 \theta}\)より</p>
+
+\[1 + \left( \frac1\gamma \frac{\bar{u} \sin \bar{\theta}}{\bar{u} \cos \bar{\theta} + \beta }\right)^2 
+= \frac{1}{\cos^2 \theta} \ \Longrightarrow \ 
+\cos \theta 
+= \frac{\gamma \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}} \right)}{\sqrt{\sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2}} \tag{6}\]
+
+<p>この両辺の微小量をとると</p>
+
+\[\begin{aligned}
+- \sin \theta d\theta 
+&amp;= \gamma \frac{-\sin \bar{\theta} \sqrt{\sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2} - \left(\cos \bar{\theta} + \frac{\beta}{\bar{u}}\right) \frac{1}{2} \left\{ \sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2 \right\}^{-1/2} \left\{ 2\sin \bar{\theta} \cos \bar{\theta} - 2\gamma^2 \left(\cos \bar{\theta} + \frac{\beta}{\bar{u}}\right) \sin \bar{\theta} \right\}}{\sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2} d\bar{\theta} \\
+&amp;= \gamma \sin \bar{\theta} \frac{- \left\{ \sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right) \right\} - \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right) \left\{\cos \bar{\theta} - \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)\right\}}{\left\{ \sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2\right\}^{3/2}} d\bar{\theta} \\
+&amp;= \gamma \sin \bar{\theta} \frac{-\sin^2 \bar{\theta} - \cos^2 \bar{\theta} - \frac{\beta}{\bar{u}} \cos \bar{\theta}}{\left\{ \sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2\right\}^{3/2}} d\bar{\theta}
+= - \frac{\gamma \left( 1 + \frac{\beta}{\bar{u}} \cos \bar{\theta}\right)}{\left\{ \sin^2 \bar{\theta} + \gamma^2 \left( \cos \bar{\theta} + \frac{\beta}{\bar{u}}\right)^2\right\}^{3/2}} \sin \bar{\theta} d\bar{\theta} 
+\end{aligned}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3I7wtn4">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

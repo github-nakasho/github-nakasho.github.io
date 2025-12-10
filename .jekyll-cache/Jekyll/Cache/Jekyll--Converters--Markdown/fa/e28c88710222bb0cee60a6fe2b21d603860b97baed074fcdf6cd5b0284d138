@@ -1,0 +1,59 @@
+I"P
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的運動による微分断面積の変換" id="markdown-toc-相対論的運動による微分断面積の変換">相対論的運動による微分断面積の変換</a>    <ol>
+      <li><a href="#立体角の変換" id="markdown-toc-立体角の変換">立体角の変換</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的運動による微分断面積の変換">相対論的運動による微分断面積の変換</h1>
+
+<h2 id="立体角の変換">立体角の変換</h2>
+
+<p>まずは、微分散乱断面積を定義するときに現れる微小立体角\(d\Omega = \sin \theta d\theta d\varphi\)が、ローレンツ変換に対してどのように変換されるかを調べてみましょう。
+この微分立体角の定義で使われている角度\((\theta, \varphi)\)は、散乱前後の粒子の運動方向とします。
+すなわち、ここでは運動速度の変換則を考えることになります。
+実験室系を\(O\)、実験室系の\(x\)軸に沿って速度\(v\)で運動している系を\(\bar{O}\)としましょう。
+今、実験室系での粒子の速度の3次元成分をそれぞれ\(\mathbf{u} = (u^1, u^2, u^3)\)とすると、これを速度\(v\)で\(x\)軸方向で動く座標系に移った場合の速度は</p>
+
+\[\bar{u}^1 
+= \frac{u^1 - v}{1-vu^1}, \quad \bar{u}^2 
+= \frac{1}{\gamma} \frac{u^2}{1-vu^1}, \quad \bar{u}^3 
+= \frac{1}{\gamma} \frac{u^3}{1-vu^1} \tag{1}\]
+
+<p>のようになります。
+これを逆に解いて</p>
+
+\[u^1 
+= \frac{\bar{u}^1 + v}{1+v \bar{u}^1}, \quad u^2 
+= \frac{1}{\gamma} \frac{\bar{u}^2}{1+v \bar{u}^1}, \quad u^3 
+= \frac{1}{\gamma} \frac{\bar{u}^3}{1+v \bar{u}^1} \tag{2}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3I7wtn4">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

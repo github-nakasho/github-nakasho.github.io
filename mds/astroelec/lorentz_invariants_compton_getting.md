@@ -138,7 +138,7 @@ $$
 $$
 f(t, \mathbf{x}, \mathbf{p}) 
 = \frac{dN}{d^3 \mathbf{x} d^3 \mathbf{p}} 
-= \frac{c^3}{h^3 \nu^2} frac{dN}{d^3 \mathbf{x} d\nu d\Omega} 
+= \frac{c^3}{h^3 \nu^2} \frac{dN}{d^3 \mathbf{x} d\nu d\Omega} 
 = \frac{c^3 n_\nu (\mathbf{x}, \Omega)}{h^3 \nu^2} \tag{13}
 $$
 
@@ -155,11 +155,162 @@ $$
 
 のように与えられるため、$$\frac{U_\nu (\mathbf{x}, \Omega)}{\nu^3}, \frac{I_\nu (\mathbf{x}, \Omega)}{\nu^3}$$もローレンツ不変量となります。
 
-# コンプトン・ゲッティング効果 (Computon-Getting effect)
+{% include adsense.html %}
+
+# コンプトン・ゲッティング効果 (Compton-Getting effect)
+
+ここまで見てきたように、分布関数はローレンツ不変です。
+しかし、実用上はエネルギースペクトルのように、エネルギーまたは運動量の大きさの分布やその角度分布に関心があることが多くあります。
+ある基準系で見たときには分布関数が等方的だったとしても、これに対して運動している基準系では非等方になります。
+次に示すように、この非等方性は粒子のエネルギー分布関数の形に依存します。
+これをコンプトン・ゲッティング効果と呼びます。
+これを用いて、逆に元の基準系に対する観測者の運動を求めることが可能になります。
+これらは実際に、宇宙背景放射の非等方性や、高エネルギー宇宙線の非等方性の問題に応用されています。  
+運動量の大きさが$$p \sim p+dp$$の間にあり、$$\mathbf{n} \equiv \mathbf{p} / p$$の向きに進む単位体積・単位立体角あたりの粒子数を$$N(p, \mathbf{n}) dp$$のように書きましょう。
+すると、これは位相空間分布関数と次のような関係があります。
+
+$$
+N(p, \mathbf{n}) 
+= p^2 f(\mathbf{p}) 
+= p^2 f_\ast (\mathbf{p}_\ast) \tag{15}
+$$
+
+これをさらに進行方向について積分した量は、エネルギー分布関数または数スペクトルと呼ばれます。
+またこの数スペクトルにエネルギーをかけた量は、エネルギースペクトルと呼ばれます。
+$$N(p, \mathbf{n}) \mathbf{v} dp$$は、運動量の大きさが$$p \sim p+dp$$の間にあり、$$\mathbf{n}$$の向きをもち、これに垂直な単位面積を単位時間に通過する単位立体角あたりの粒子数となります。
+輻射の場合、これにエネルギー$$E$$をかけたものは強度と呼ばれます。
+位相空間分布関数はローレンツ不変量なので、(14)式から$$N(p, \mathbf{n}) / p^2$$がローレンツ不変です。
+そのため、$$N(p, \mathbf{n})$$そのものはローレンツ変換に対して$$p^2$$のように振る舞うことがわかります。
+$$N(p, \mathbf{n})$$を運動量の向きと大きさについて積分すれば、4元数流束ベクトルの第0成分に一致します。
+しかし、運動量の向きのみについて積分した数スペクトルや、運動量の大きさだけで積分した量は、明白な変換性は持たず、座標系に依存して定義される量となります。
+したがって、数スペクトルやエネルギースペクトルという概念は、粒子分布が等方的(あるいはそれに近い)ような基準系でのみ意味を持ちます。
+粒子分布が著しく非等方な場合には、位相空間分布関数に戻って考察しなければなりません。  
+今、ある基準系で粒子分布が等方的であるとし、観測者はその系に対して速度$$\mathbf{V}$$で運動しているとしましょう。
+このとき、観測者の観測する$$N(p, \mathbf{n})$$は、方向によって異なってきます。
+粒子分布が等方的であるような系での物理量に添字$$\ast$$を使うことにしましょう。
+すなわち
+
+$$
+N_\ast (p_\ast) 
+= p_\ast^2 f_\ast (p_\ast) \tag{16}
+$$
+
+のように書かれます。
+等方的であることから、$$N_\ast, f_\ast$$は運動量の大きさ$$p_\ast$$のみの関数としています。
+また$$p_\ast$$は$$\mathbf{p}$$をローレンツ変換した量の大きさです。
+$$\mathbf{V}$$を$$x$$軸方向に設定し、$$\mathbf{p}$$と$$\mathbf{V}$$とのなす角度を$$\theta$$としましょう。
+すなわち$$p_x = p \cos \theta, p_y = p \sin \theta, p_z = 0$$とします。
+この系は観測者から見て$$-\mathbf{V}$$で動いて見えるため
+
+$$
+\left( \begin{array}{c} 
+\frac{E_\ast}{c} \\
+p_{x \ast} \\
+p_{y \ast} \\
+p_{z \ast} 
+\end{array} \right) 
+= \left( \begin{array}{cccc}
+\Gamma & \Gamma \beta & 0 & 0 \\
+\Gamma \beta & \Gamma & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{array}\right) \left( \begin{array}{c} 
+\frac{E}{c} \\
+p_{x} \\
+p_{y} \\
+p_{z} 
+\end{array} \right) 
+= \left(\begin{array}{c}
+\Gamma \frac{E}{c} + \Gamma \beta p_x \\
+\Gamma \beta \frac{E}{c} + \Gamma p_x \\
+p_y \\
+p_z 
+\end{array}\right) \tag{17}
+$$
+
+のようになります。
+ここで$$\beta = V/ c$$です。
+ここから
+
+$$
+p_\ast^2 
+= p^2 \sin^2 \theta + \Gamma^2 \left( \frac{VE}{c^2} + p \cos \theta \right)^2 \tag{18}
+$$
+
+とわかります。
+このように、ある$$p$$に対して向きごとに対応する$$p_\ast$$の値、そして$$f_\ast (p_\ast)$$の値が異なることになります。
+
+## プランク分布光子の場合
+
+考えている粒子集団が、宇宙背景放射のようにプランク分布をした光子である場合には、$$f_\ast$$は$$\frac{p_\ast}{k_B T_\ast}$$のみで特徴づけることができます。
+また光子では$$E = cp$$より
+
+$$
+p_\ast^2 
+= p^2 \left\{ \sin^2 \theta + \Gamma^2 \left( \frac{V}{c} + \cos \theta \right)^2 \right\} \tag{19}
+$$
+
+となります。
+さらに$$E \simeq k_B T$$とすれば、これはあたかも温度が
+
+$$
+T 
+= T_\ast \left\{ \sin^2 \theta + \Gamma^2 \left( \frac{V}{c} + \cos \theta \right)^2 \right\}^{-1/2} \tag{20}
+$$
+
+のような、方向依存性を持つように見えることがわかります。
+同じ光子であっても、X線や可視光・赤外線の背景放射はプランク分布ではないため、スペクトルの形も変化することになります。  
+観測者の速度が非相対論的($$\Gamma \sim 1$$)であるときに、数スペクトルがどう表されるかを見てみましょう。
+そのために、(18)式を$$V/ c$$の1次まで展開します。
+すると
+
+$$
+\begin{align}
+&p_\ast^2 
+\approx p^2 \sin^2 \theta + p^2 \cos^2 \theta \left( 1 + \frac{E}{c p \cos \theta} \frac{V}{c} \right)^2 
+\approx p^2 \sin^2 \theta + p^2 \cos^2 \theta \left( 1 + \frac{2 E}{c p \cos \theta} \frac{V}{c} \right) \notag \\
+& \quad = p^2 + \frac{2E p \cos \theta}{c} \frac{V}{c} \notag \\
+&\Longrightarrow \ 
+p_\ast 
+\approx \sqrt{p^2 + \frac{2E p \cos \theta}{c} \frac{V}{c}} 
+= p \sqrt{1 + \frac{2E \cos \theta}{cp} \frac{V}{c}} 
+\approx p + \frac{V}{c^2} E \cos \theta \tag{21}
+\end{align}
+$$
+
+$$
+f(p_\ast) 
+= f \left( p + \frac{V}{c^2} E \cos \theta \right) 
+\approx f_\ast(p) + \left. \frac{\partial f_\ast}{\partial p_\ast} \right\vert_p \frac{V}{c^2} E \cos \theta \tag{22}
+$$
+
+のように近似できます。
+したがって
+
+$$
+(15) \ \Longrightarrow \ 
+N (p, \mathbf{n}) 
+\approx p^2 \left( f_\ast (p) + \left. \frac{\partial f_\ast}{\partial p_\ast} \right\vert_p \frac{V}{c^2} E \cos \theta \right) \tag{23}
+$$
+
+を得ます。
+この式から、非等方度合いが$$\frac{1}{f_\ast (p)} \left. \frac{\partial f_\ast}{\partial p_\ast} \right\vert \frac{V}{c^2} E \cos \theta$$のように、双極子型となることがわかります。  
+以降では簡単のため$$p_\ast^2 f_\ast (p_\ast) \propto p_\ast^\alpha$$のように、べき乗型の数スペクトルを仮定しましょう。
+また粒子の運動は長相対論的であるとして、$$E = cp$$とします。
+すると非等方度は$$(\alpha - 2) \frac{V}{c} \cos \theta$$のようになります。
+宇宙背景放射の場合、低振動数側はレイリー・ジーンズスペクトル($$\alpha = 1$$)なので、非等方度は$$-\frac{V}{c} \cos \theta$$となります。
+運動方向と同じ向きに進む輻射の強度は下がり、逆向きの強度は上がることになります。
+つまり、運動方向からくる輻射の強度は上がり(温度が高くなり)、逆方向からの強度は下がる(温度が低くなる)ことがわかります。
+
+![](/assets/images/astroelec/lorentz_invariants_compton_getting_01.gif)  
+[COBEによるCMB観測データ]((https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html))より。上パネルは全て含めた観測データ、中パネルは双極子成分を除いたもの、下パネルは天の川銀河成分を取り除いたもの。  
+
+X線背景放射の場合は$$\alpha \sim -1.4$$、そして高エネルギー宇宙線は$$\alpha \sim -2.7$$なので、非等方度はより大きくなるとわかります。
 
 ## 参考文献
 
-[] [Rybicki & Lightman, "Radiative Processes in Astrophysics"](https://amzn.to/453u5pE)  
-[] [高原文郎, "特殊相対論"](https://amzn.to/3I7wtn4)  
+[1] [NASA, LAMBDA - Data Products](https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html)  
+[2] [Rybicki & Lightman, "Radiative Processes in Astrophysics"](https://amzn.to/453u5pE)  
+[3] [高原文郎, "特殊相対論"](https://amzn.to/3I7wtn4)  
 
 {% include adsense.html %} 

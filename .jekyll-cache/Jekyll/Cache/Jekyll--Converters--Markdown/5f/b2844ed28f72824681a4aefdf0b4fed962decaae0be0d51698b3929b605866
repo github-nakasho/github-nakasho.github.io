@@ -1,4 +1,4 @@
-I"?;
+I"R=
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -267,14 +267,17 @@ N (p, \mathbf{n})
 運動方向と同じ向きに進む輻射の強度は下がり、逆向きの強度は上がることになります。
 つまり、運動方向からくる輻射の強度は上がり(温度が高くなり)、逆方向からの強度は下がる(温度が低くなる)ことがわかります。</p>
 
-<p><img src="" alt="" /></p>
+<p><img src="/assets/images/astroelec/lorentz_invariants_compton_getting_01.gif" alt="" /><br />
+<a href="(https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html)">COBEによるCMB観測データ</a>より。上パネルは全て含めた観測データ、中パネルは双極子成分を除いたもの、下パネルは天の川銀河成分を取り除いたもの。
+赤い部分ほど温度が高く、水色部分ほど温度が低い。</p>
 
 <p>X線背景放射の場合は\(\alpha \sim -1.4\)、そして高エネルギー宇宙線は\(\alpha \sim -2.7\)なので、非等方度はより大きくなるとわかります。</p>
 
 <h2 id="参考文献">参考文献</h2>
 
-<p>[1] <a href="https://amzn.to/453u5pE">Rybicki &amp; Lightman, “Radiative Processes in Astrophysics”</a><br />
-[2] <a href="https://amzn.to/3I7wtn4">高原文郎, “特殊相対論”</a></p>
+<p>[1] <a href="https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html">NASA, LAMBDA - Data Products</a><br />
+[2] <a href="https://amzn.to/453u5pE">Rybicki &amp; Lightman, “Radiative Processes in Astrophysics”</a><br />
+[3] <a href="https://amzn.to/3I7wtn4">高原文郎, “特殊相対論”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

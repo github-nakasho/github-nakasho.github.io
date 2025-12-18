@@ -303,7 +303,8 @@ $$
 つまり、運動方向からくる輻射の強度は上がり(温度が高くなり)、逆方向からの強度は下がる(温度が低くなる)ことがわかります。
 
 ![](/assets/images/astroelec/lorentz_invariants_compton_getting_01.gif)  
-[COBEによるCMB観測データ]((https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html))より。上パネルは全て含めた観測データ、中パネルは双極子成分を除いたもの、下パネルは天の川銀河成分を取り除いたもの。  
+[COBEによるCMB観測データ]((https://lambda.gsfc.nasa.gov/product/cobe/dmr_image.html))より。上パネルは全て含めた観測データ、中パネルは双極子成分を除いたもの、下パネルは天の川銀河成分を取り除いたもの。
+赤い部分ほど温度が高く、水色部分ほど温度が低い。  
 
 X線背景放射の場合は$$\alpha \sim -1.4$$、そして高エネルギー宇宙線は$$\alpha \sim -2.7$$なので、非等方度はより大きくなるとわかります。
 

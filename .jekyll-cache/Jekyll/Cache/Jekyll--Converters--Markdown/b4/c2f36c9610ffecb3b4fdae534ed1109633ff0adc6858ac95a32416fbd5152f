@@ -1,0 +1,136 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#双曲線関数" id="markdown-toc-双曲線関数">双曲線関数</a>    <ol>
+      <li><a href="#双曲線関数の公式" id="markdown-toc-双曲線関数の公式">双曲線関数の公式</a></li>
+      <li><a href="#三角関数との類似性" id="markdown-toc-三角関数との類似性">三角関数との類似性</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="双曲線関数">双曲線関数</h1>
+
+<p>双曲線関数は、次のように定義されます。</p>
+
+\[\sinh x 
+= \frac{e^x - e^{-x}}{2}, \quad
+\cosh x 
+= \frac{e^x + e^{-x}}{2}, \quad
+\tanh x 
+= \frac{\sinh x}{\cosh x} 
+= \frac{e^x - e^{-x}}{e^x + e^{-x}} \tag{1}\]
+
+<h2 id="双曲線関数の公式">双曲線関数の公式</h2>
+
+<p>次の式を証明しましょう。</p>
+
+\[\cosh x 
+= \left( \frac{1}{2} \sinh 2x \right)^{1/2} e^{-\frac{1}{2} \ln (\tanh x)}, 
+\sinh x 
+= \left( \frac{1}{2} \sinh 2x \right)^{1/2} e^{-\frac{1}{2} \ln (\tanh x)} \tag{2}\]
+
+<p>まずは\(\cosh x\)に関する式の右辺を計算していきます。</p>
+
+\[e^{-\frac{1}{2} \ln (\tanh x)} 
+= e^{\ln (\tanh x)^{-1/2}} 
+= (\tanh x)^{-1/2} 
+= \frac{1}{\sqrt{\tanh x}} 
+= \sqrt{\frac{e^x + e^{-x}}{e^x - e^{-x}}} \notag\]
+
+<p>これに\(\left( \frac{1}{2} \sinh 2x\right)^{1/2}\)をかけましょう。</p>
+
+\[\begin{align}
+\left( \frac{1}{2} \sinh 2x \right)^{1/2} e^{-\frac{1}{2} \ln (\tanh x)} 
+&amp;= \sqrt{\frac{e^{2x} - e^{-2x}}{4}} \sqrt{\frac{e^x + e^{-x}}{e^x - e^{-x}}} 
+= \sqrt{\frac{(e^x + e^{-x}) (e^x - e^{-x})}{4}} \sqrt{\frac{e^x + e^{-x}}{e^x - e^{-x}}} \notag \\
+&amp;= \sqrt{\frac{(e^x + e^{-x})^2}{4}} 
+= \frac{e^x + e^{-x}}{2} 
+= \cosh x \notag
+\end{align}\]
+
+<p>以上から、(2)式の\(\cosh x\)に関する公式が示されました。
+同様に、\(\sinh x\)の公式を導出しましょう。</p>
+
+\[e^{\frac{1}{2} \ln (\tanh x)} 
+= e^{\ln (\tanh x)^{1/2}} 
+= \sqrt{\tanh x} 
+= \sqrt{\frac{e^x - e^{-x}}{e^x + e^{-x}}} \notag\]
+
+<p>より</p>
+
+\[\begin{align}
+\left( \frac{1}{2} \sinh 2x \right)^{1/2} e^{\frac{1}{2} \ln (\tanh x)} 
+&amp;= \sqrt{\frac{e^{2x} - e^{-2x}}{4}} \sqrt{\frac{e^x - e^{-x}}{e^x + e^{-x}}} 
+= \sqrt{\frac{(e^x + e^{-x}) (e^x - e^{-x})}{4}} \sqrt{\frac{e^x - e^{-x}}{e^x + e^{-x}}} \notag \\
+&amp;= \sqrt{\frac{(e^x - e^{-x})^2}{4}} 
+= \frac{e^x - e^{-x}}{2} 
+= \sinh x \notag
+\end{align}\]
+
+<p>を得ます。
+こうして(2)式の\(\sinh x\)に関する式も示すことができました。</p>
+
+<h2 id="三角関数との類似性">三角関数との類似性</h2>
+
+<p>三角関数と似たような公式を導出しましょう。</p>
+
+\[\cosh^2 - \sinh^2 
+= \frac{e^{2x} + 2 + e^{-2x}}{4} - \frac{e^{2x} - 2 + e^{-2x}}{4} 
+= 1 \tag{3}\]
+
+\[\cosh x + \sinh x 
+= e^x \tag{5}\]
+
+\[\cosh x - \sinh x 
+= e^{-x} \tag{6}\]
+
+<p>倍角の公式と似たような公式も導出することができます。</p>
+
+\[\sinh (2x) 
+= \frac{e^{2x} - e^{-2x}}{2} 
+= 2 \frac{(e^x - e^{-x})}{2} \frac{(e^x + e^{-x})}{2} 
+= 2 \sinh z \cosh z \tag{7}\]
+
+\[\cosh (2x) 
+= \frac{e^{2x} + e^{-2x}}{2} 
+= \frac{(e^x + e^{-x})^2 - 2}{2} 
+= 2 \cosh^2 - 1 
+\underbrace{=}_{(3)} 2 \sinh^2 + 1 \tag{8}\]
+
+<p>角度の合成のような公式も導出しましょう。
+\(x, y\)を実数とすると</p>
+
+\[\cosh (x+iy) 
+= \frac{e^{x+iy} + e^{-x-iy}}{2} 
+= \frac{e^x e^{iy} + e^{-x} e^{-iy}}{2} 
+= \frac{e^x (\cos y + i \sin y) + e^{-x} (\cos y - i \sin y)}{2} 
+= \frac{e^x + e^{-x}}{2} \cos y + i \frac{e^x - e^{-x}}{2} \sin y 
+= \cosh x \cos y + i \sinh x \sin y \tag{9}\]
+
+\[\sinh (x+iy) 
+= \frac{e^{x+iy} - e^{-x-iy}}{2} 
+= \frac{e^x (\cos y + i \sin y) - e^{-x} (\cos y - i \sin y)}{2} 
+= \sinh x \cos y + i \cosh x \sin y \tag{10}\]
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

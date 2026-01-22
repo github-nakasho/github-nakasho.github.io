@@ -1,0 +1,129 @@
+I"Z"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#4元数流束ベクトルとエネルギー運動量テンソル" id="markdown-toc-4元数流束ベクトルとエネルギー運動量テンソル">4元数流束ベクトルとエネルギー運動量テンソル</a>    <ol>
+      <li><a href="#4元数流束ベクトル" id="markdown-toc-4元数流束ベクトル">4元数流束ベクトル</a></li>
+      <li><a href="#エネルギー運動量テンソル" id="markdown-toc-エネルギー運動量テンソル">エネルギー運動量テンソル</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="4元数流束ベクトルとエネルギー運動量テンソル">4元数流束ベクトルとエネルギー運動量テンソル</h1>
+
+<h2 id="4元数流束ベクトル">4元数流束ベクトル</h2>
+
+<p>流体は、多数の粒子の集団を連続体として記述したものです。
+微小な体積要素を考え、この体積要素内に存在する流体(流体素片あるいは流体要素などと呼びます)の速度を\(\mathbf{v} = c \boldsymbol{\beta}\)としましょう。
+ある時刻に、この流体要素と同じ速度で運動する慣性系を、流体の瞬間的静止系あるいは(瞬間的な)固有系と呼びます。
+流体の固有系での粒子の数密度を\(n\)とすると、もとの慣性系で測定した数密度は、体積要素のローレンツ収縮により\(n \gamma\)となります。
+したがって、\(x\)軸に垂直な平面を単位面積単位時間あたりに通過する粒子数は\(n\gamma v_x\)となります。
+\(y, z\)軸方向も同様に書くことができます。
+\(u^\mu = (\gamma c, \gamma \mathbf{v})\)が4元速度を構成することを思い出すと、数密度と数流束密度とが、次のような4元数流束ベクトルを構成できることがわかります。</p>
+
+\[n^\mu 
+\equiv n u^\mu 
+= (nc\gamma, n\gamma \mathbf{v}) \tag{1}\]
+
+<p>このベクトル自身との内積を計算すると</p>
+
+\[n^\mu n_\mu 
+= -n^2c^2 \gamma^2 + n^2 \gamma^2 v^2 
+= - n^2 \gamma^2 c^2 \left\{ 1 - \left(\frac{v}{c}\right)^2 \right\} 
+= - n^2 c^2 \tag{2}\]
+
+<p>のように4元スカラーとなることから、\(n^\mu\)はローレンツ不変量であることがわかります。<br />
+電磁気学の電荷密度\(\rho_c\)と電流密度\(\mathbf{j}\)も、4元電流ベクトル\(j^\mu = (c \rho_c, \mathbf{j})\)を構成するのでした。
+この場合、流体の固有系でも電流密度はゼロではないし、4元電流ベクトルの大きさ\(j^\mu j_\mu\)は、正の場合も負の場合もあります。
+これは物質がイオンと電子とからなり、それぞれが別の速度で運動できるためです。
+一般に、流体が多種類の成分から構成されるときには、それぞれの成分の速度が異なるため、流体の固有系は体積要素内の全構成粒子の運動量の和がゼロとなるような座標系として定義されます。
+したがって、流体の固有系でみたときにも、それぞれの成分は有限の速度で運動していることになります。</p>
+
+<h2 id="エネルギー運動量テンソル">エネルギー運動量テンソル</h2>
+
+<p>最初に、微小体積内の粒子が全て同一の速度で運動している場合を考えましょう。
+これは粒子の熱運動が無視できる場合であり、相対論ではこのような流体をダストと呼びます。
+また簡単のため、流体は質量\(m\)の同一粒子からなると考えましょう。
+流体の固有系での質量密度は\(\rho = nm\)、エネルギー密度は\(\varepsilon = \rho c^2 = mnc^2\)となります。
+もとの慣性系では粒子数密度が\(n\gamma\)となり、個々の粒子のエネルギーは\(mc^2 \gamma\)になります。
+よってエネルギー密度は、これらを掛け合わせた</p>
+
+\[W 
+= nmc^2 \gamma^2 
+= \varepsilon \gamma^2 \tag{3}\]
+
+<p>となります。<br />
+\(W\)が\(n^\mu\)と\(p^\mu = m u^\mu\)の第ゼロ成分どうしの積となっていることに注目し、\(p^\mu, n^\mu\)の直積テンソル</p>
+
+\[T^{\mu \nu} 
+= p^\mu n^\nu 
+= \frac{\varepsilon}{c^2} u^\mu u^\nu \tag{4}\]
+
+<p>を考えてみましょう。
+\(T^{00}\)は、もちろんエネルギー密度に一致します。
+\(T^{0i}\)は、\(i\)軸に垂直な平面を単位時間単位面積あたりに通過するエネルギー(エネルギー流束密度)を\(c\)で割った量になります。
+\(T^{i0}\)は、\(i\)軸方向の運動量密度に\(c\)をかけた量を表しています。
+最後に\(T^{ij}\)は、\(j\)軸に垂直な平面を単位時間単位面積あたりに通過する運動量の\(i\)成分を表しています。
+すなわち、\(T^{ij}\)は3次元的な意味でのストレステンソルあるいは運動量流束密度テンソルに一致しています。
+この\(T^{\mu \nu}\)を、エネルギー運動量テンソルと呼びます。<br />
+次に、流体要素を構成する粒子の熱運動が無視できない一般の場合に、エネルギー運動量テンソルがどのように表されるのかを考えてみましょう。
+熱運動の効果は、流体が圧力\(P\)を持つこと、そしてエネルギー密度\(\varepsilon\)に熱運動のエネルギーが寄与することに現れます。
+流体の固有系では、エネルギー流束密度や運動量密度がゼロとなります。
+熱伝導や粘性などの散逸が無視できる完全流体に対しては、ストレステンソルが\(T^{ij} = P \delta^{ij}\)と書けます。
+よって、固有系でのエネルギー運動量テンソルが</p>
+
+\[(T^{\mu \nu}) 
+= \left( \begin{array}{cccc}
+\varepsilon &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; P &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; P &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; P 
+\end{array}\right) \tag{5}\]
+
+<p>のように書けます。<br />
+一般の慣性系での\(T^{\mu \nu}\)は、これをローレンツ変換することにより求めることができます。
+あるいは、流体の運動を特徴づける量は4元速度\(u^\mu\)であり、\(T^{\mu \nu}\)は\(\varepsilon, P, u^\mu\)で表されます。
+固有系では\((u^\mu) = (c, 0, 0, 0)\)であり、このときに(5)指揮を与えるような2階のテンソルは</p>
+
+\[T^{\mu \nu} 
+= \frac{\varepsilon + P}{c^2} u^\mu u^\nu + P \eta^{\mu \nu}, \quad 
+(T^{\mu \nu}) 
+= \left( \begin{array}{cc} 
+(\varepsilon + P) \gamma^2 - P &amp; (\varepsilon + P) \gamma^2 \boldsymbol{\beta} \\
+(\varepsilon + P) \gamma^2 \boldsymbol{\beta} &amp; (\varepsilon + P) \gamma^2 \boldsymbol{\beta} \otimes \boldsymbol{\beta} + P \mathbf{I}
+\end{array}\right)\tag{6}\]
+
+<p>の形に決まります。
+エネルギー運動量テンソルが対称な形であることがわかります。
+これは無限小の体積要素に働くトルクがゼロであること、そしてエネルギー流束密度と運動量密度の同等性から導かれる、一般的な性質です。
+この対称性は完全流体に限らず、散逸を含む場合や、より一般的な物理系に対しても成立します。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[2] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[3] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a><br />
+[4] <a href="https://mathlog.info/articles/dtGQSWXXQbmPFOMv3Mfj">Mathlog, “【相対論】相対論的流体”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

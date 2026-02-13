@@ -1,0 +1,181 @@
+I"f"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的衝撃波" id="markdown-toc-相対論的衝撃波">相対論的衝撃波</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的衝撃波">相対論的衝撃波</h1>
+
+<p>相対論的衝撃波は、宇宙物理学への応用上欠かすことのできない重要な物理現象です。
+衝撃波では物理量が不連続に変化しますが、衝撃波の静止系で不連続面での物理量の変化を調べてみましょう。</p>
+
+<h2 id="導出">導出</h2>
+
+<p>上流側の物理量には添字1、下流側の物理量には添字2をつけて表すことにします。
+衝撃波面を\(x=0\)にとり、流体は\(x\)軸方向に定常的に運動しているものとします。
+すると運動量保存則から、下流でも運動方向は\(x\)軸方向となります。
+エネルギーと運動量の保存則から</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1 
+= \frac{A_2}{c^2} \gamma_2^2 v_2 \tag{1}\]
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1^2 + P_1 
+= \frac{A_2}{c^2} \gamma_2^2 v_2^2 + P_2 \tag{2}\]
+
+<p>とわかります。
+ここで\(A_i = \varepsilon_i + P_i\)としました。
+上流の物理量から、下流の物理量を求めることを考えましょう。
+未知の量が\(\varepsilon_2, P_2, v_2\)の3つであるのに対し、式の数は2つであるため、これだけでは下流の物理量を求めることができません。
+そこで状態方程式を与えることで、\(\varepsilon, P\)との間の関係を定めて解くことにしましょう。</p>
+
+<p>(1)式の両辺に\(v_2\)をかけると</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1 v_2 
+= \frac{A_2}{c^2} \gamma_2^2 v_2^2 \tag{3}\]
+
+<p>を得ます。
+(3)式を(2)式に用いれば</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1^2 - \frac{A_1}{c^2} \gamma_1^2 v_1 v_2 
+= \frac{A_1}{c^2} \gamma_1^2 v_1 (v_1 - v_2)
+= P_2 - P_1 \tag{4}\]
+
+<p>のようになります。
+さらに</p>
+
+\[\gamma_i^2 
+= \frac{1}{1-\tfrac{v_i^2}{c^2}} 
+= \frac{c^2}{c^2 - v_i^2} \ \Longrightarrow \ 
+\gamma_i^2 v_i^2 
+= c^2 (\gamma_i^2 - 1) \tag{5}\]
+
+<p>を(2)式に用いると</p>
+
+\[\begin{align}
+&amp;A_1 (\gamma_1^2 - 1) + P_1 
+= A_2 (\gamma_2^2 - 1) + P_2 
+\underbrace{=}_{(3)} A_1 \gamma_1^2 \frac{v_1}{v_2} - A_2 + P_2 \notag \\
+&amp;\Longrightarrow \ 
+A_1 \gamma_1^2 \left( 1 - \frac{v_1}{v_2} \right) 
+= A_1 - A_2 - P_1 + P_2 
+= \varepsilon_1 - \varepsilon_2 \tag{6}
+\end{align}\]
+
+<p>となります。
+(4)式と(6)式の比をとりましょう。
+すると</p>
+
+\[\frac{\tfrac{A_1}{c^2} \gamma_1^2 v_1 (v_1 - v_2)}{A_1 \gamma_1^2 \left( 1 - \tfrac{v_1}{v_2} \right)} 
+= - \frac{v_1 v_2}{c^2}
+= \frac{P_2 - P_1}{\varepsilon_1 - \varepsilon_2} \ \Longrightarrow \ 
+v_2 
+= \frac{P_1 - P_2}{(\varepsilon_1 - \varepsilon_2) v_1} c^2 \tag{7}\]
+
+<p>のように、\(v_1\)を用いて\(v_2\)を表現することができます。
+ここから</p>
+
+\[v_1 - v_2 
+= v_1 - \frac{P_1 - P_2}{(\varepsilon_1 - \varepsilon_2) v_1} c^2 
+= \frac{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1} \tag{8}\]
+
+<p>を(4)式に代入しましょう。</p>
+
+\[\begin{aligned}
+&amp;\frac{A_1}{c^2} \gamma_1^2 v_1 \frac{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1} 
+= P_2 - P_1 \ \Longrightarrow \ 
+A_1 \gamma_1^2 
+= \frac{(P_2 - P_1)(\varepsilon_1 - \varepsilon_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1-P_2) c^2} \notag \\
+&amp;\Longrightarrow \ 
+A_1 
+= \frac{(P_2 - P_1)(\varepsilon_1 - \varepsilon_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1-P_2) c^2} \left( 1 - \frac{v_1^2}{c^2}\right) 
+= \frac{(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2)}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \notag \\
+&amp; \qquad \qquad = \frac{(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2)}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2} 
+\end{aligned}\]
+
+<p>\(A_1 = \varepsilon_1 + P_1\)であることを思い出すと</p>
+
+\[\begin{aligned}
+&amp;(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2) 
+= (\varepsilon_1 + P_1) \{ (\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2 \} \notag \\
+&amp;\Longrightarrow \ 
+(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) c^2 + (\varepsilon_1 + P_1) (P_1 - P_2) c^2 
+= (\varepsilon_1 + P_1) (\varepsilon_1 - \varepsilon_2) v_1^2 + (P_2 - P_1) (\varepsilon_1 - \varepsilon_2) v_1^2 \notag \\
+&amp;\Longrightarrow \ 
+- (P_2 - P_1) (\varepsilon_2 + P_1) c^2 
+= (\varepsilon_1 - \varepsilon_2) (\varepsilon_1 + P_2) v_1^2
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[\frac{v_1^2}{c^2} 
+= \frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)} \ \Longrightarrow \ 
+\frac{v_1}{c} 
+= \sqrt{\frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \tag{9}\]
+
+<p>これを(7)の途中式に代入すると</p>
+
+\[\frac{v_2}{c} 
+= \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1} \frac{c}{v_1} 
+= \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1} \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}{(P_2 - P_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{(P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} \tag{10}\]
+
+<p>を得ます。
+対応するローレンツ因子も計算してみましょう。</p>
+
+\[\begin{aligned}
+\sqrt{1-\frac{v_1^2}{c^2}} 
+&amp;= \sqrt{1 - \frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2) - (P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 \varepsilon_2  - \varepsilon_1^2 - \varepsilon_1P_2 - P_2 P_1 + P_1 \varepsilon_2 + P_1^2 }{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 \varepsilon_2  - \varepsilon_1^2 - \varepsilon_1P_2 - P_2 P_1 + P_1 \varepsilon_2 + P_1^2 + \varepsilon_1 P_1 - \varepsilon_1 P_1}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 (\varepsilon_2  - \varepsilon_1 - P_2 + P_1 ) + P_1 (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}}
+= \sqrt{\frac{(\varepsilon_1 + P_1) (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}}
+\end{aligned}\]
+
+<p>より</p>
+
+\[\gamma_1 
+= \frac{1}{\sqrt{1-\frac{v_1^2}{c^2}}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}{(\varepsilon_1 + P_1) (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}} \tag{11}\]
+
+<p>です。
+同様に</p>
+
+\[\sqrt{1-\frac{v_2^2}{c^2}} 
+= \sqrt{1 - \frac{(P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1) - (P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{\varepsilon_2^2 + \varepsilon_2 P_1 - \varepsilon_1 \varepsilon_2 - P_2 \varepsilon_1 - P_2^2 + P_1 P_2}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

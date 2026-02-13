@@ -47,7 +47,7 @@ $$
 = \frac{1}{c} \frac{\partial}{\partial t} \{(\varepsilon + P) \gamma^2 \beta^i \} + \nabla \cdot \{(\varepsilon + P) \gamma^2 \beta^i \boldsymbol{\beta} + P \mathbf{I} \}
 = 0 \notag \\
 &\Longrightarrow \ 
-\frac{\partial}{\partial t} \{(\varepsilon + P) \gamma^2 \mathbf{v}\} + \nabla \cdot \{(\varepsilon + P) \gamma^2 \mathbf{v} \otimes \mathbf{v} + P \mathbf{I}\} 
+\frac{\partial}{\partial t} \{(\varepsilon + P) \gamma^2 \mathbf{v}\} + \nabla \cdot \{(\varepsilon + P) \gamma^2 \mathbf{v} \otimes \mathbf{v} + c^2 P \mathbf{I}\} 
 = 0 \tag{2}
 \end{align}
 $$
@@ -265,19 +265,56 @@ $$
 = - \frac{1}{2} e^{\mu \nu \alpha \beta} \omega_{\alpha \beta} \tag{19}
 $$
 
-のように定義すると、これは
+のように定義しましょう。
+すると
+
+$$
+\begin{aligned}
+\partial_\nu e^{\mu \nu \alpha \beta} \partial_\alpha (hu_\beta) 
+&= e^{\mu \nu \alpha \beta} \partial_\nu \partial_\alpha (h u_\beta) 
+\underbrace{=}_{\nuと\alphaを入れ替え} e^{\mu \alpha \nu \beta} \partial_\alpha \partial_\nu (h u_\beta)
+\underbrace{=}_{e^{\mu \alpha \nu \beta} = - e^{\mu \nu \alpha \beta}} - e^{\mu \nu \alpha \beta} \partial_\alpha \partial_\nu (h u_\beta) \notag \\
+&= - \partial_\nu e^{\mu \nu \alpha \beta} \partial_\alpha (h u_\beta)
+\end{aligned}
+$$
+
+より
+
+$$
+\partial_\nu e^{\mu \nu \alpha \beta} \partial_\alpha (hu_\beta) 
+= 0 \notag
+$$
+
+が恒等的に成り立つため
 
 $$
 \frac{\partial \omega^{\ast \mu \nu}}{\partial x^\nu} 
 = 0 \tag{20}
 $$
 
-を恒等的に満たします。
-この式の$$\mu = 0$$のみを取り出すと
+もまた恒等的に成り立ちます。
+この式の$$\mu = 0$$のみを取り出してみましょう。
+
+$$
+\frac{\partial \omega^{\ast 00}}{\partial x^0} + \frac{\partial \omega^{\ast 01}}{\partial x^1} + \frac{\partial \omega^{\ast 02}}{\partial x^2} + \frac{\partial \omega^{\ast 03}}{\partial x^3} 
+= 0 \tag{21}
+$$
+
+$$
+\begin{align}
+\frac{\partial \omega^{\ast 01}}{\partial x^1} 
+&= - \frac{1}{2} e^{01\alpha \beta} \frac{\partial \omega_{\alpha \beta}}{\partial x^1} 
+= - \frac{1}{2} \left( e^{0123} \frac{\partial \omega_{23}}{\partial x} + e^{0132} \frac{\partial \omega_{32}}{\partial x}\right) \notag \\
+&= - \frac{1}{2} \left\{ \frac{\partial \omega_x}{\partial x} + (-1) \frac{\partial}{\partial x} (-\omega_x)\right\} 
+= - \frac{\partial \omega_x}{\partial x} \tag{22}
+\end{align}
+$$
+
+などより
 
 $$
 \nabla \cdot \boldsymbol{\omega} 
-= 0 \tag{21}
+= 0 \tag{23}
 $$
 
 となります。
@@ -285,11 +322,11 @@ $$
 
 $$
 \frac{\partial \boldsymbol{\omega}}{\partial t} 
-= \nabla \times (\mathbf{v} \times \boldsymbol{\omega}) \tag{22}
+= \nabla \times (\mathbf{v} \times \boldsymbol{\omega}) \tag{24}
 $$
 
 となります。
-これは非相対論的な場合の渦度の運動方程式と、同一の形をしており、ケルビンの渦定理(循環定理とも呼ばれます)を相対論に拡張したものとなっています。
+これは非相対論的な場合の渦度の運動方程式と同一の形をしており、ケルビンの渦定理(循環定理とも呼ばれます)を相対論に拡張したものとなっています。
 
 ## 参考文献
 

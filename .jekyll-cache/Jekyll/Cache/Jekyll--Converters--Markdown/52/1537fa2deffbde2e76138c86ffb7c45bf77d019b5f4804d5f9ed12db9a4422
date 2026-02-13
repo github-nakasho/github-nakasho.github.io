@@ -1,0 +1,66 @@
+I"q
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的流体の音波" id="markdown-toc-相対論的流体の音波">相対論的流体の音波</a>    <ol>
+      <li><a href="#導出" id="markdown-toc-導出">導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的流体の音波">相対論的流体の音波</h1>
+
+<h2 id="導出">導出</h2>
+
+<p>相対論的な温度の一様静止媒質中を伝搬する線形波動について考えましょう。
+非摂動状態のエネルギー密度を\(\varepsilon_0\)、圧力を\(P_0\)の一様静止媒質を考え、これに平面波の線形摂動\(\exp (-i\omega t + i \mathbf{k} \cdot \mathbf{x})\)を加えます。
+すると、4元速度の摂動は</p>
+
+\[\delta u^\mu 
+= (c\gamma, \gamma \mathbf{v}) 
+\approx (c, \mathbf{v}) \tag{1}\]
+
+<p>のようになり、第0成分\(\gamma\)の摂動は、高次のために無視できます (すなわち\(\gamma \sim 1\)として良い。)
+次に\(T^{\mu\ nu}\)の摂動は</p>
+
+\[(T^{\mu \nu}) 
+= \left( \begin{array}{cc}
+\varepsilon &amp; (\varepsilon + P) \boldsymbol{\beta} \\
+(\varepsilon + P) \boldsymbol{\beta} &amp; P \mathbf{I}
+\end{array} \right) \ \Longrightarrow \ 
+\delta T^{\mu \nu} 
+= \left( \begin{array}{cc}
+\varepsilon_1 &amp; (\varepsilon_0 + P_0) \boldsymbol{\beta} \\
+(\varepsilon_0 + P_0) \boldsymbol{\beta} &amp; P_1 \mathbf{I}
+\end{array} \right) \tag{2}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a><br />
+[] <a href="https://mathlog.info/articles/dtGQSWXXQbmPFOMv3Mfj">Mathlog, “【相対論】相対論的流体”</a><br />
+[] <a href="https://takun-physics.net/6495/">宇宙に入ったカマキリ, “流体力学, ケルビンの循環定理 【渦ができる要因を理解する】”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

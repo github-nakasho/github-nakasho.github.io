@@ -1,0 +1,374 @@
+I"�Q
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的衝撃波" id="markdown-toc-相対論的衝撃波">相対論的衝撃波</a>    <ol>
+      <li><a href="#相対論的なランキンユゴニオの関係式の導出" id="markdown-toc-相対論的なランキンユゴニオの関係式の導出">相対論的なランキン・ユゴニオの関係式の導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的衝撃波">相対論的衝撃波</h1>
+
+<p>相対論的衝撃波は、宇宙物理学への応用上欠かすことのできない重要な物理現象です。
+衝撃波では物理量が不連続に変化しますが、衝撃波の静止系で不連続面での物理量の変化を調べてみましょう。</p>
+
+<h2 id="相対論的なランキンユゴニオの関係式の導出">相対論的なランキン・ユゴニオの関係式の導出</h2>
+
+<p>上流側の物理量には添字1、下流側の物理量には添字2をつけて表すことにします。
+衝撃波面を\(x=0\)にとり、流体は\(x\)軸方向に定常的に運動しているものとします。
+すると運動量保存則から、下流でも運動方向は\(x\)軸方向となります。
+エネルギーと運動量の保存則から</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1 
+= \frac{A_2}{c^2} \gamma_2^2 v_2 \tag{1}\]
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1^2 + P_1 
+= \frac{A_2}{c^2} \gamma_2^2 v_2^2 + P_2 \tag{2}\]
+
+<p>とわかります。
+ここで\(A_i = \varepsilon_i + P_i\)としました。
+上流の物理量から、下流の物理量を求めることを考えましょう。
+未知の量が\(\varepsilon_2, P_2, v_2\)の3つであるのに対し、式の数は2つであるため、これだけでは下流の物理量を求めることができません。
+そこで状態方程式を与えることで、\(\varepsilon, P\)との間の関係を定めて解くことにしましょう。</p>
+
+<p>(1)式の両辺に\(v_2\)をかけると</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1 v_2 
+= \frac{A_2}{c^2} \gamma_2^2 v_2^2 \tag{3}\]
+
+<p>を得ます。
+(3)式を(2)式に用いれば</p>
+
+\[\frac{A_1}{c^2} \gamma_1^2 v_1^2 - \frac{A_1}{c^2} \gamma_1^2 v_1 v_2 
+= \frac{A_1}{c^2} \gamma_1^2 v_1 (v_1 - v_2)
+= P_2 - P_1 \tag{4}\]
+
+<p>のようになります。
+さらに</p>
+
+\[\gamma_i^2 
+= \frac{1}{1-\tfrac{v_i^2}{c^2}} 
+= \frac{c^2}{c^2 - v_i^2} \ \Longrightarrow \ 
+\gamma_i^2 v_i^2 
+= c^2 (\gamma_i^2 - 1) \tag{5}\]
+
+<p>を(2)式に用いると</p>
+
+\[\begin{align}
+&amp;A_1 (\gamma_1^2 - 1) + P_1 
+= A_2 (\gamma_2^2 - 1) + P_2 
+\underbrace{=}_{(3)} A_1 \gamma_1^2 \frac{v_1}{v_2} - A_2 + P_2 \notag \\
+&amp;\Longrightarrow \ 
+A_1 \gamma_1^2 \left( 1 - \frac{v_1}{v_2} \right) 
+= A_1 - A_2 - P_1 + P_2 
+= \varepsilon_1 - \varepsilon_2 \tag{6}
+\end{align}\]
+
+<p>となります。
+(4)式と(6)式の比をとりましょう。
+すると</p>
+
+\[\frac{\tfrac{A_1}{c^2} \gamma_1^2 v_1 (v_1 - v_2)}{A_1 \gamma_1^2 \left( 1 - \tfrac{v_1}{v_2} \right)} 
+= - \frac{v_1 v_2}{c^2}
+= \frac{P_2 - P_1}{\varepsilon_1 - \varepsilon_2} \ \Longrightarrow \ 
+v_2 
+= \frac{P_1 - P_2}{(\varepsilon_1 - \varepsilon_2) v_1} c^2 \tag{7}\]
+
+<p>のように、\(v_1\)を用いて\(v_2\)を表現することができます。
+ここから</p>
+
+\[v_1 - v_2 
+= v_1 - \frac{P_1 - P_2}{(\varepsilon_1 - \varepsilon_2) v_1} c^2 
+= \frac{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1} \tag{8}\]
+
+<p>を(4)式に代入しましょう。</p>
+
+\[\begin{aligned}
+&amp;\frac{A_1}{c^2} \gamma_1^2 v_1 \frac{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1} 
+= P_2 - P_1 \ \Longrightarrow \ 
+A_1 \gamma_1^2 
+= \frac{(P_2 - P_1)(\varepsilon_1 - \varepsilon_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1-P_2) c^2} \notag \\
+&amp;\Longrightarrow \ 
+A_1 
+= \frac{(P_2 - P_1)(\varepsilon_1 - \varepsilon_2) c^2}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1-P_2) c^2} \left( 1 - \frac{v_1^2}{c^2}\right) 
+= \frac{(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2)}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \notag \\
+&amp; \qquad \qquad = \frac{(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2)}{(\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2} 
+\end{aligned}\]
+
+<p>\(A_1 = \varepsilon_1 + P_1\)であることを思い出すと</p>
+
+\[\begin{aligned}
+&amp;(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) (c^2 - v_1^2) 
+= (\varepsilon_1 + P_1) \{ (\varepsilon_1 - \varepsilon_2) v_1^2 - (P_1 - P_2) c^2 \} \notag \\
+&amp;\Longrightarrow \ 
+(P_2 - P_1) (\varepsilon_1 - \varepsilon_2) c^2 + (\varepsilon_1 + P_1) (P_1 - P_2) c^2 
+= (\varepsilon_1 + P_1) (\varepsilon_1 - \varepsilon_2) v_1^2 + (P_2 - P_1) (\varepsilon_1 - \varepsilon_2) v_1^2 \notag \\
+&amp;\Longrightarrow \ 
+- (P_2 - P_1) (\varepsilon_2 + P_1) c^2 
+= (\varepsilon_1 - \varepsilon_2) (\varepsilon_1 + P_2) v_1^2
+\end{aligned}\]
+
+<p>以上より</p>
+
+\[\frac{v_1^2}{c^2} 
+= \frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)} \ \Longrightarrow \ 
+\frac{v_1}{c} 
+= \sqrt{\frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \tag{9}\]
+
+<p>これを(7)の途中式に代入すると</p>
+
+\[\frac{v_2}{c} 
+= \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1} \frac{c}{v_1} 
+= \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1} \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}{(P_2 - P_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{(P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} \tag{10}\]
+
+<p>を得ます。
+これらから、上流と下流の速度の比と積がそれぞれ</p>
+
+\[\frac{v_1}{v_2} 
+= \frac{\varepsilon_2 + P_1}{\varepsilon_1 + P_2} \tag{11}\]
+
+\[\frac{v_1 v_2}{c^2} 
+= \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1} \tag{12}\]
+
+<p>対応するローレンツ因子も計算してみましょう。</p>
+
+\[\begin{aligned}
+\sqrt{1-\frac{v_1^2}{c^2}} 
+&amp;= \sqrt{1 - \frac{(P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2) - (P_2 - P_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 \varepsilon_2  - \varepsilon_1^2 - \varepsilon_1P_2 - P_2 P_1 + P_1 \varepsilon_2 + P_1^2 }{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 \varepsilon_2  - \varepsilon_1^2 - \varepsilon_1P_2 - P_2 P_1 + P_1 \varepsilon_2 + P_1^2 + \varepsilon_1 P_1 - \varepsilon_1 P_1}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}} \\
+&amp;= \sqrt{\frac{\varepsilon_1 (\varepsilon_2  - \varepsilon_1 - P_2 + P_1 ) + P_1 (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}}
+= \sqrt{\frac{(\varepsilon_1 + P_1) (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}}
+\end{aligned}\]
+
+<p>より</p>
+
+\[\gamma_1 
+= \frac{1}{\sqrt{1-\frac{v_1^2}{c^2}}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_1 + P_2)}{(\varepsilon_1 + P_1) (\varepsilon_2 - \varepsilon_1 - P_2 + P_1)}} \tag{13}\]
+
+<p>です。
+同様に</p>
+
+\[\begin{aligned}
+\sqrt{1-\frac{v_2^2}{c^2}} 
+&amp;= \sqrt{1 - \frac{(P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1) - (P_2 - P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} \notag \\
+&amp;= \sqrt{\frac{\varepsilon_2^2 + \varepsilon_2 P_1 - \varepsilon_1 \varepsilon_2 - P_2 \varepsilon_1 - P_2^2 + P_1 P_2}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} \notag \\
+&amp;= \sqrt{\frac{\varepsilon_2^2 + \varepsilon_2 P_1 - \varepsilon_1 \varepsilon_2 - P_2 \varepsilon_1 - P_2^2 + P_1 P_2 + \varepsilon_2 P_2 - \varepsilon_2 P_2}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} \notag \\
+&amp;= \sqrt{\frac{\varepsilon_2 ( \varepsilon_2 - \varepsilon_1 - P_2 + P_1) + P_2 ( \varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{(\varepsilon_2 + P_2) ( \varepsilon_2 - \varepsilon_1 - P_2 + P_1)}{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}} 
+\end{aligned}\]
+
+<p>より</p>
+
+\[\gamma_2 
+= \frac{1}{\sqrt{1-\frac{v_2^2}{c^2}}} 
+= \sqrt{\frac{(\varepsilon_2 - \varepsilon_1) (\varepsilon_2 + P_1)}{(\varepsilon_2 + P_2) ( \varepsilon_2 - \varepsilon_1 - P_2 + P_1)}} \tag{14}\]
+
+<p>と求まります。
+上流と下流の流体の相対速度\(v_\mathrm{rel}\)も計算してみましょう。</p>
+
+\[\begin{align}
+\frac{v_\mathrm{rel}}{c} 
+&amp;= \frac{v_1 - v_2}{c \left( 1 - \frac{v_1 v_2}{c^2}\right)} 
+\underbrace{=}_{(12)} \left( \frac{v_1}{c} - \frac{v_2}{c} \right) \frac{1}{1 - \frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1}} \notag \\
+&amp;= \sqrt{\frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1}} \left( \sqrt{\frac{\varepsilon_2 + P_1}{\varepsilon_1 + P_2}} - \sqrt{\frac{\varepsilon_1 + P_2}{\varepsilon_2 + P_1}}\right) \frac{\varepsilon_2 - \varepsilon_1}{\varepsilon_2 - \varepsilon_1 - P_2 + P_1} \notag \\
+&amp;= \sqrt{\frac{P_2 - P_1}{\varepsilon_2 - \varepsilon_1}} \frac{\varepsilon_2 + P_1 - \varepsilon_1 - P_2}{\sqrt{(\varepsilon_1 + P_2) (\varepsilon_2 + P_1)}} \frac{\varepsilon_2 - \varepsilon_1}{\varepsilon_2 - \varepsilon_1 - P_2 + P_1} \notag \\
+&amp;= \sqrt{\frac{(P_2 - P_1) (\varepsilon_2 - \varepsilon_1)}{(\varepsilon_1 + P_2) (\varepsilon_2 + P_1)}} \tag{15}
+\end{align}\]
+
+<p>また対応するローレンツ因子は</p>
+
+\[\gamma_\mathrm{rel} 
+= \gamma_1 \gamma_2 \left( 1- \frac{v_1 v_2}{c^2}\right) 
+\underbrace{=}_{(12), (13), (14)} \sqrt{\frac{(\varepsilon_1 + P_2) (\varepsilon_2 + P_1)}{(\varepsilon_1 + P_1) (\varepsilon_2 + P_2)}} \tag{16}\]
+
+<p>のようになります。
+これらから、速度の比は有限となり、衝撃波の強さを表す量として\(\varepsilon_2 / \varepsilon_1\)または\(\gamma_\mathrm{rel}\)を取るのが適当であることがわかります。　　
+弱い衝撃波の極限では、\(P_2 \simeq P_1, \varepsilon_2 \simeq \varepsilon_1\)より</p>
+
+\[(9) \ \Longrightarrow \ 
+\frac{v_1}{c} 
+\approx \sqrt{\frac{\Delta P}{\Delta \varepsilon}} 
+\approx \sqrt{\frac{dP}{d\varepsilon}} 
+= \frac{c_s}{c} \tag{17}\]
+
+<p>となります。
+途中、\(P_2 - P_1 = \Delta P, \varepsilon_2 - \varepsilon_1 = \Delta \varepsilon\)としました。
+\(v_2\)においても同様に\(c_s\)となることから、弱い衝撃波極限では\(v_1 = v_2 = c_s\)になることがわかります。
+すなわち、衝撃波は上流の速度が音速を超えた場合にのみ生じると言えます。<br />
+超相対論的極限では、状態方程式が\(P = \varepsilon / 3\)となるため</p>
+
+\[\frac{v_1}{c} 
+= \sqrt{\frac{\left( \frac{\varepsilon_2}{3} - \frac{\varepsilon_1}{3}\right) \left( \varepsilon_2 + \frac{\varepsilon_1}{3}\right)}{\left( \varepsilon_2 - \varepsilon_1\right) (\varepsilon_1 + \frac{\varepsilon_2}{3})}} 
+= \sqrt{\frac{3 \varepsilon_2 + \varepsilon_1}{3(3\varepsilon_1 + \varepsilon_2)}} \tag{18}\]
+
+\[\frac{v_2}{c} 
+= \sqrt{\frac{\left( \frac{\varepsilon_2}{3} - \frac{\varepsilon_1}{3}\right) \left( \varepsilon_1 + \frac{\varepsilon_2}{3}\right)}{\left( \varepsilon_2 - \varepsilon_1\right) (\varepsilon_2 + \frac{\varepsilon_1}{3})}} 
+= \sqrt{\frac{3\varepsilon_1 + \varepsilon_2}{3(3\varepsilon_2 + \varepsilon_1)}} \tag{19}\]
+
+\[\frac{v_1}{v_2} 
+= \frac{3 \varepsilon_2 + \varepsilon_1}{3 \varepsilon_1 + \varepsilon_2} \tag{20}\]
+
+\[\frac{v_\mathrm{rel}}{c} 
+= \sqrt{\frac{\left( \frac{\varepsilon_2}{3} - \frac{\varepsilon_1}{3}\right) (\varepsilon_2 - \varepsilon_1)}{\left( \varepsilon_1 + \frac{\varepsilon_2}{3}\right) \left( \varepsilon_2 + \frac{\varepsilon_1}{3}\right)}} 
+= \frac{\sqrt{3} (\varepsilon_2 - \varepsilon_1)}{\sqrt{(3\varepsilon_1 + \varepsilon_2) (3\varepsilon_2 + \varepsilon_1)}} \tag{21}\]
+
+\[\gamma_\mathrm{rel} 
+= \sqrt{\frac{\left( \varepsilon_1 + \frac{\varepsilon_2}{3}\right) \left( \varepsilon_2 + \frac{\varepsilon_1}{3} \right)}{\left( \varepsilon_1 + \frac{\varepsilon_1}{3}\right) \left( \varepsilon_2 + \frac{\varepsilon_2}{3}\right)}} 
+= \sqrt{\frac{\left(3 \varepsilon_1 + \varepsilon_2\right) \left( 3\varepsilon_2 + \varepsilon_1 \right)}{16 \varepsilon_1 \varepsilon_2}} 
+= \frac{1}{4} \sqrt{\left( 3 + \frac{\varepsilon_2}{\varepsilon_1}\right) \left( 3 + \frac{\varepsilon_1}{\varepsilon_2}\right)} \tag{22}\]
+
+<p>のような関係式を得ます。
+さらに強い衝撃波の極限\(\tfrac{\varepsilon_2}{\varepsilon_1} \rightarrow \infty\)では、\(v_1 \rightarrow c, v_2 \rightarrow \tfrac{c}{3}, v_\mathrm{rel} \rightarrow c, \gamma_\mathrm{rel} \rightarrow \sqrt{\frac{3\varepsilon_2}{16\varepsilon_1}}\)となります。
+逆に弱い衝撃波の極限\(\tfrac{\varepsilon_2}{\varepsilon_1} \rightarrow 1\)では、\(v_1 \rightarrow \tfrac{c}{\sqrt{3}}, v_2 \rightarrow \tfrac{c}{\sqrt{3}}\)のように、上流の下流も音速で運動していることがわかります。<br />
+一般の状態方程式には粒子数が入るため、保存する粒子数についての連続の式を考慮する必要があります。
+粒子が生成・崩壊しないとすると</p>
+
+\[n_1 \gamma_1 v_1 
+= n_2 \gamma_2 v_2 \tag{23}\]
+
+<p>です。
+(13), (14)式より</p>
+
+\[\frac{\gamma_2}{\gamma_1} 
+= \sqrt{\frac{(\varepsilon_2 + P_1) (\varepsilon_1 + P_1)}{(\varepsilon_2 + P_2) (\varepsilon_1 + P_2)}} \tag{24}\]
+
+<p>であることと、(11)式を用いれば</p>
+
+\[\frac{n_1}{n_2} 
+= \frac{\gamma_2 v_2}{\gamma_1 v_1} 
+= \sqrt{\frac{(\varepsilon_1 + P_1) (\varepsilon_1 + P_2)}{(\varepsilon_2 + P_2)(\varepsilon_2 + P_1)}} \ \Longrightarrow \ 
+\frac{(\varepsilon_1 + P_1) (\varepsilon_1 + P_2)}{n_1^2} 
+= \frac{(\varepsilon_2 + P_2) (\varepsilon_2 + P_1)}{n_2^2} \tag{25}\]
+
+<p>を得ます。
+特にこの式を、相対論的なランキン・ユゴニオの関係式と呼びます。
+上流の物理量(添字1が付いたもの)が与えられたとき、(9)式から\(\varepsilon_2, P_2\)の関係式が与えられます。
+これに(25)式および状態方程式を合わせれば、\(\varepsilon_2, P_2, n_2\)を求めることができます。
+そうして得られたものを(10)式に代入すれば、下流の速度\(v_2\)が求められることになります。<br />
+一般的な場合は複雑で、数値的な取り扱いが必要となります。
+そのため、\(P_1 = 0, \varepsilon_1 = n_1 mc^2\)という、強い衝撃波の極限のみを考えてみましょう。
+この場合のランキン・ユゴニオの関係式は</p>
+
+\[\frac{\varepsilon_1(\varepsilon_1 + P_2)}{n_1^2} 
+= \frac{\varepsilon_2 (\varepsilon_2 + P_2)}{n_2^2} \tag{26}\]
+
+<p>のようになります。
+また上流と下流の相対的なローレンツ因子は、(16)式より</p>
+
+\[\gamma_\mathrm{rel} 
+= \sqrt{\frac{\varepsilon_2 (\varepsilon_1 + P_2)}{\varepsilon_1 (\varepsilon_2 + P_2)}} \ \Longrightarrow \ 
+\frac{\varepsilon_1 + P_2}{\varepsilon_2 + P_2} 
+= \gamma_\mathrm{rel}^2 \frac{\varepsilon_1}{\varepsilon_2} \tag{27}\]
+
+<p>となることから</p>
+
+\[\frac{\varepsilon_1}{n_1^2} 
+= \frac{\varepsilon_2}{n_2^2} \frac{1}{\gamma_\mathrm{rel}^2} \frac{\varepsilon_2}{\varepsilon_1} \ \Longrightarrow \ 
+\frac{\varepsilon_2}{n_2} 
+= \gamma_\mathrm{rel} \frac{\varepsilon_1}{n_1} 
+= \gamma_\mathrm{rel} m c^2 \tag{28}\]
+
+<p>を得ます。
+これは、下流での1粒子辺の内部エネルギーが\(\gamma_\mathrm{rel}\)となることがわかります。
+さらに<a href="/rmhd/thermo_dynamics_rel#熱平衡">状態方程式</a>として</p>
+
+\[P 
+= (\Gamma -1) (\varepsilon - n mc^2) \tag{29}\]
+
+<p>を用いることにすると</p>
+
+\[\frac{P_2}{n_2} 
+= (\Gamma - 1) \left( \frac{\varepsilon_2}{n_2} - mc^2\right) 
+\underbrace{=}_{(28)} (\Gamma -1) (\gamma_\mathrm{rel} - 1) mc^2 \tag{30}\]
+
+<p>(28), (30)式を(26)式に代入していきましょう。</p>
+
+\[\frac{\varepsilon_1}{n_1} \left( \frac{\varepsilon_1}{n_1} + \frac{P_2}{n_1}\right) 
+= \frac{\varepsilon_2}{n_2} \left( \frac{\varepsilon_2}{n_2} + \frac{P_2}{n_2} \right)\]
+
+\[(左辺) 
+= mc^2 \left( mc^2 + \frac{n_2}{n_1} \frac{P_2}{n_2}\right) 
+= mc^2 \left\{ mc^2 + \frac{n_2}{n_1} (\Gamma - 1) (\gamma_\mathrm{rel}-1) mc^2 \right\}\]
+
+\[(右辺)
+= \gamma_\mathrm{rel} mc^2 \{\gamma_\mathrm{rel} mc^2 + (\Gamma - 1) (\gamma_\mathrm{rel} -1) mc^2\}\]
+
+<p>より</p>
+
+\[\begin{align}
+\frac{n_2}{n_1} 
+&amp;= \frac{\gamma_\mathrm{rel} \{ \gamma_\mathrm{rel} + (\Gamma - 1) (\gamma_\mathrm{rel} - 1) \} - 1}{(\Gamma -1)(\gamma_\mathrm{rel} - 1)} 
+= \frac{\gamma_\mathrm{rel}^2 + \gamma_\mathrm{rel} (\Gamma -1) (\gamma_\mathrm{rel} -1) -1}{(\Gamma -1) (\gamma_\mathrm{rel}-1)} \notag \\
+&amp;= \frac{(\gamma_\mathrm{rel} -1) \{(\gamma_\mathrm{rel}+1) + \gamma_\mathrm{rel} (\Gamma -1)\}}{(\Gamma -1) (\gamma_\mathrm{rel}-1)} 
+= \frac{\gamma_\mathrm{rel} \Gamma +1}{\Gamma -1} \tag{31}
+\end{align}\]
+
+<p>と求めることができます。
+この比は\(\gamma_\mathrm{rel} \gg 1\)のとき、\(\gamma_\mathrm{rel}\)に比例して大きくなることがわかります。
+しかし、速度の比は</p>
+
+\[\begin{align}
+\frac{v_1}{v_2} 
+&amp;\underbrace{=}_{(11)} \frac{\varepsilon_2 + P_1}{\varepsilon_1 + P_2} 
+= \frac{\frac{\varepsilon_2}{n_1}}{\frac{\varepsilon_1}{n_1} + \frac{P_2}{n_1}} 
+= \frac{\frac{n_2}{n_1} \frac{\varepsilon_2}{n_2}}{mc^2 + \frac{n_2}{n_1}\frac{P_2}{n_2}} 
+= \frac{\frac{\gamma_\mathrm{rel} \Gamma + 1}{\Gamma -1} \gamma_\mathrm{rel} mc^2}{mc^2 + \frac{\gamma_\mathrm{rel} \Gamma +1}{\Gamma-1} (\Gamma-1) (\gamma_\mathrm{rel} -1) mc^2} \notag \\
+&amp;= \frac{\gamma_\mathrm{rel} \Gamma + 1}{(\Gamma - 1) (\gamma_\mathrm{rel} \Gamma - \Gamma + 1)} \tag{32}
+\end{align}\]
+
+<p>であり、また</p>
+
+\[\begin{align}
+\frac{\gamma_1}{\gamma_2} 
+&amp;\underbrace{=}_{(24)} \sqrt{\frac{(\varepsilon_2 + P_2) (\varepsilon_1 + P_2)}{(\varepsilon_1 + P_1) (\varepsilon_2 + P_1)}} 
+= \sqrt{\frac{\left( \frac{\varepsilon_2}{n_1} + \frac{P_2}{n_1} \right) \left( \frac{\varepsilon_1}{n_1} + \frac{P_2}{n_1} \right)}{ \frac{\varepsilon_1}{n_1} \frac{\varepsilon_2}{n_1}}} 
+= \sqrt{\frac{\frac{n_2}{n_1} \left( \frac{\varepsilon_2}{n_2} + \frac{P_2}{n_2}\right) \left( mc^2 + \frac{n_2}{n_1} \frac{P_2}{n_2}\right)}{ mc^2 \frac{n_2}{n_1} \frac{\varepsilon_2}{n_2}}} \notag \\
+&amp;= \sqrt{\frac{\{\gamma_\mathrm{rel} mc^2 + (\Gamma -1)(\gamma_\mathrm{rel} -1) mc^2\} \{ mc^2 + (\gamma_\mathrm{rel} \Gamma + 1)(\gamma_\mathrm{rel} -1) mc^2\} }{\gamma_\mathrm{rel} m^2 c^4}} \notag \\
+&amp;= \sqrt{\frac{ \gamma_\mathrm{rel} (\gamma_\mathrm{rel} \Gamma - \Gamma +1)^2}{\gamma_\mathrm{rel}}} 
+= \gamma_\mathrm{rel} \Gamma - \Gamma + 1 \tag{33}
+\end{align}\]
+
+<p>のように整理されます。
+ここからわかるように、衝撃波静止系で見た数密度の比\(\frac{n_2 \gamma_2}{n_1 \gamma_1} = \frac{v_1}{v_2}\)はそれほど大きくならないことがわかります。
+また\(\gamma_1\)と\(\gamma_\mathrm{rel}\)の関係式は</p>
+
+\[\gamma_1^2 
+= \frac{(\gamma_\mathrm{rel} + 1) \{\Gamma (\gamma_\mathrm{rel} -1) + 1\}^2}{\Gamma (2-\Gamma) (\gamma_\mathrm{rel}-1) + 2} \tag{34}\]
+
+<p>となります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

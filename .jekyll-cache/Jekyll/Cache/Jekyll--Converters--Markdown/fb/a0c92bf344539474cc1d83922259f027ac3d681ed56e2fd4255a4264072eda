@@ -1,0 +1,113 @@
+I"l
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ラバール管-laval-nozzle" id="markdown-toc-ラバール管-laval-nozzle">ラバール管 (Laval nozzle)</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ラバール管-laval-nozzle">ラバール管 (Laval nozzle)</h1>
+
+<p>断面が変化する管の中を流れる定常な圧縮性流体は、圧縮性流体の特徴が亜音速流\((v&lt;C_s)\)と超音速流\((v&gt;C_s)\)でどのように異なるかを示す、面白い例です。
+さらにその流れの特徴は、球対称な点源重力場中の定常流にも、ほとんど同じように現れます。<br />
+次の図に示すように、管の断面積\(A\)が十分ゆっくりと滑らかに現象し、最小値\(A_0\)を過ぎると徐々に増大する管 (ラバール管)の中を流れる流体の運動を考えましょう。
+ただし、ここで考える流れは断熱的であるとします。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>定常流を考えているため、連続の式は</p>
+
+\[\nabla \cdot (\rho \mathbf{v}) 
+= 0 \ \Longrightarrow \ \rho v A 
+= (一定) \tag{1}\]
+
+<p>となります。
+管に沿って座標\(x\)をとることにすると、運動方程式は</p>
+
+\[v \frac{dv}{dx} 
+= - \frac{1}{\rho} \frac{dP}{dx} 
+\underbrace{=}_{P = K\rho^\gamma} - \frac{1}{\rho} K \gamma \rho^{\gamma -1} \frac{d\rho}{dx} 
+= - \frac{\gamma P}{\rho^2} \frac{d\rho}{dx}
+\underbrace{=}_{C_s^2 = \frac{\gamma P}{\rho}} - \frac{C_s^2}{\rho} \frac{d\rho}{dx} \tag{2}\]
+
+<p>のように与えられます。
+(1)式の両辺の対数を取り、その微小量が満たす式から、微分方程式を得てみましょう。</p>
+
+\[\begin{align}
+\ln (\rho v A) 
+= \ln \rho + \ln v + \ln A 
+= (一定) &amp; \Longrightarrow \ 
+\frac{d\rho}{\rho} + \frac{dv}{v} + \frac{dA}{A} 
+= 0 \notag \\
+&amp; \Longrightarrow \ 
+\frac{1}{\rho} \frac{d\rho}{dx} 
+= - \frac{1}{v} \frac{dv}{dx} - \frac{1}{A} \frac{dA}{dx} \tag{3}
+\end{align}\]
+
+<p>この式を(3)式に代入すると</p>
+
+\[v \frac{dv}{dx} 
+= \frac{C_s^2}{v} \frac{dv}{dx} + \frac{C_s^2}{A} \frac{dA}{dx} \ \Longrightarrow \ 
+(M^2 - 1) \frac{1}{v} \frac{dv}{dx} 
+= \frac{1}{A} \frac{dA}{dx} \tag{4}\]
+
+<p>のようになります。
+ここで\(M = \frac{v}{C_s}\)は、マッハ数を表します。<br />
+(4)式から、流体の運動が亜音速(\(M&lt;1\))では、\(\frac{dA}{dx}&lt;0\)(だんだん管が細くなる)なら加速し、\(\frac{dA}{dx}&gt;0\)(だんだん管が太くなる)なら減速することがわかります。
+これは、たとえばホースで花壇に水やりをする場合などでみられるように、ホースの先を指で押さえて水の出口を細く絞ることで、水が勢いよく噴出する様子を表しています。
+一方、超音速(\(M&gt;1\))の場合は、\(\frac{dA}{dx}&lt;0\)なら減速、\(\frac{dA}{dx}&gt;0\)なら加速することがわかります。
+以上の説明から、\(\frac{dA}{dx}&lt;0\)で\(M&lt;1\)であり、\(\frac{dA}{dx} = 0\)(管の面積が最小となる位置)で\(M=1\)に達し、その後\(\frac{dA}{dx}&gt;0\)の領域で\(M&gt;1\)となるような流れでは、流れの至るところで\(\frac{dv}{dx}\)が正となり、加速されつづける流れであることがわかります。
+これを遷音速解と呼びます。<br />
+(4)式をさらに整理しましょう。
+そのために、以下のような計算を行います。</p>
+
+\[\frac{dM}{dx} 
+= \frac{1}{C_s}\frac{dv}{dx} - \frac{v}{C_s^2} \frac{dC_s}{dx}  \tag{5}\]
+
+\[\begin{align}
+\frac{dC_s}{dx} 
+&amp;= \frac{d}{dx} \left( \frac{\gamma P}{\rho}\right)^{1/2} 
+= \frac{1}{2} \left( \frac{\gamma P}{\rho}\right)^{-1/2} \left( \frac{\gamma}{\rho} \frac{dP}{dx} - \frac{\gamma P}{\rho^2} \frac{d\rho}{dx} \right) \notag \\
+&amp;\underbrace{=}_{(2)} \frac{1}{2C_s} \left( - \gamma v \frac{dv}{dx} + v \frac{dv}{dx}\right) 
+= - \frac{\gamma - 1}{2C_s} v \frac{dv}{dx} \tag{6}
+\end{align}\]
+
+<p>(5), (6)式より</p>
+
+\[\frac{dM}{dx} 
+= \frac{1}{C_s} \frac{dv}{dx} + \frac{v}{C_s^2} \frac{\gamma -1}{2C_s} v \frac{dv}{dx} 
+= \frac{M}{v} \frac{dv}{dx} \left( 1 + \frac{\gamma-1}{2} M^2\right) \tag{7}\]
+
+<p>(4)式より</p>
+
+\[\frac{dM}{dx} 
+= \frac{M}{M^2 - 1} \frac{1}{A} \frac{dA}{dx} \left( 1 + \frac{\gamma-1}{2} M^2\right) \tag{8}\]
+
+<p>を得ます。</p>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>[] <a href="">“宇宙流体力学”</a><br />
+[] <a href="">“宇宙流体力学の基礎”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

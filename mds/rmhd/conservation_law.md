@@ -47,7 +47,7 @@ $$
 $$y, z$$軸 ($$i=2, 3$$の軸)に対しても同様に計算すると、これがこの立方体中の粒子数の増加率$$\tfrac{dV}{c} \tfrac{\partial n^0}{\partial t}$$に等しいことから、粒子数の連続方程式が
 
 $$
-\tfrac{dV}{c} \frac{\partial n^0}{\partial t} 
+\frac{dV}{c} \frac{\partial n^0}{\partial t} 
 = - dV \left( \frac{\partial n^1}{\partial x^1} + \frac{\partial n^2}{\partial x^2} + \frac{\partial n^3}{\partial x^3}\right) \ \Longrightarrow \ 
 \frac{\partial n^\mu}{\partial x^\mu} 
 \equiv \partial_\mu n^\mu 

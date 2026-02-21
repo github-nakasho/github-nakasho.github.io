@@ -1,0 +1,57 @@
+I"+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的ジェットの流体的な加速機構" id="markdown-toc-相対論的ジェットの流体的な加速機構">相対論的ジェットの流体的な加速機構</a>    <ol>
+      <li><a href="#特殊相対論的なベルヌーイの定理" id="markdown-toc-特殊相対論的なベルヌーイの定理">特殊相対論的なベルヌーイの定理</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的ジェットの流体的な加速機構">相対論的ジェットの流体的な加速機構</h1>
+
+<p>宇宙で見られるジェット現象は、今なおその加速機構が未解明です。
+ジェットの加速機構として様々なアイデアが考案されていますが、ここではそのうちの一つである、純粋に流体的な効果による加速機構について見ていきましょう。</p>
+
+<h2 id="特殊相対論的なベルヌーイの定理">特殊相対論的なベルヌーイの定理</h2>
+
+<p>まず、相対論的な定常流において成り立つ、ベルヌーイの定理について示しておきましょう。
+流体を構成する粒子の生成・消滅が無視できるとすると、<a href="/rmhd/conservation_law#粒子数保存">粒子数保存の式</a>より</p>
+
+\[\nabla \cdot (n\gamma \mathbf{v}) 
+= 0 \ \Longrightarrow \ 
+n \gamma v_i dS_i 
+= (一定) \tag{1}\]
+
+<p>ここで\(dS_i\)は、流線で囲まれた管(流管)の断面積を表します。
+同様に、エネルギー</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[2] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[3] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[4] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

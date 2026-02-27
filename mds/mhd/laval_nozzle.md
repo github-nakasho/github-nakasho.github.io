@@ -252,11 +252,45 @@ $$
 衝撃波の下流側の解は、衝撃波のランキン・ユゴニオ条件を満たすものが選ばれます。
 どのような流れを実現したいかで、ラバール管出口の背圧や、ラバール管の断面積を詳細に設定する必要があるでしょう。
 
-# 参考文献
+{% include adsense.html %}
 
-[1] [北島歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
-[2] [田中秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
-[3] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
-[4] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+## 余談: ラバール管を用いた擬似ブラックホール実験
+
+宇宙物理の研究対象となる現象を実験室で再現することは、現在の人間にとっては容易ではありません。
+ブラックホールのような強い時空の歪みはその最たるものです。
+粒子加速器で粒子を超相対論的な速度まで加速し、それらを衝突させることで、極小ブラックホールができるかもしれないと考えられていますが、それもすぐに消滅してなくなってしまうと考えられています。
+そこで考えられているのが、その他の物理系を用い、ブラックホールの類似物 (analogue black hole)を作るという手法です。
+その中の一つに、これまで議論してきたラバール管を用いたものが考案されています。
+
+![](/assets/images/mhd/laval_nozzle_03.png)  
+ラバール管を用いたアナログブラックホールの作成について。
+図は[奥住聡, 富永真太郎, 阪上雅昭, "遷音速流でつくる「音のブラックホール」"](https://www.nagare.or.jp/download/noauth.html?d=28-5tokushu4.pdf&dir=95)を改変したもの。  
+
+
+ブラックホールでは事象の地平面と呼ばれる場所が存在し、それより内側は光速で伝搬する波 (電磁波や重力波など)すら脱出することができません。
+ラバール管により遷音速流を作ると、流れの上流では音波が普通に伝搬できます。
+しかし、超音速流となっている下流側で発生した音波は、臨界点を超えて上流側に到達することは不可能となります。
+このような理由から、臨界点を音波に対するブラックホール　(sonic black hole)の事象の地平面とみなすことができることがわかります。  
+普通のガスを用いることでも、先程のようにブラックホールの事象の地平面を再現する類似物を作ることができます。
+しかし、この流体にボーズ・アインシュタイン凝縮体 (Bose-Einstein Condensate: BEC)を用いることで、さらにホーキング放射 (Hawking radiation)の類似物を得ることが可能です。
+ホーキング放射は、スカラー場や電磁場の量子化を考慮することで、その存在を示すことができます。
+それに対し、BEC中では音波は量子化され、フォノンとして存在します。
+この量子化された音波を用いると、遷音速流中でフォノンのホーキング放射が起こります。
+最近では、イスラエルのグループがBECを用いたアナログブラックホールを作成し、そこでの定常的かつ自発的な音のホーキング放射の観測が報告されています。  
+流体以外にも、超伝導回路を用いたアナログブラックホールなどの実験例が論文として出版されています。
+そちらもぜひ調べてみると、面白いかもしれません。
+
+## 参考文献
+
+[1] [Sakagami & Ohashi, 2002, "Hawking Radiation in the Laboratory"](https://academic.oup.com/ptp/article/107/6/1267/1830004)  
+[2] [Lahav et al., 2010, "Realization of a Sonic Black Hole Analog in a Bose-Einstein Condensate"](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.240401)  
+[3] [Kolobov et al., 2021, "Observation of stationary spontaneous Hawking radiation and the time evolution of an analogue black hole"](https://www.nature.com/articles/s41567-020-01076-0)  
+[4] [Shi et al., 2023, "Quantum simulation of Hawking radiation and curved spacetime with a superconducting on-chip black hole"](https://www.nature.com/articles/s41467-023-39064-6)  
+[5] [北島歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
+[6] [田中秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
+[7] [Physics Lab. 2018 ブログ, "ブラックホールの作り方"](https://physlab2018.hatenablog.com/entry/2018/04/14/235037)  
+[8] [奥住聡, 富永真太郎, 阪上雅昭, "遷音速流でつくる「音のブラックホール」"](https://www.nagare.or.jp/download/noauth.html?d=28-5tokushu4.pdf&dir=95)  
+[9] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
+[10] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
 
 {% include adsense.html %} 

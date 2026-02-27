@@ -290,7 +290,8 @@ $$
 [6] [田中秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
 [7] [Physics Lab. 2018 ブログ, "ブラックホールの作り方"](https://physlab2018.hatenablog.com/entry/2018/04/14/235037)  
 [8] [奥住聡, 富永真太郎, 阪上雅昭, "遷音速流でつくる「音のブラックホール」"](https://www.nagare.or.jp/download/noauth.html?d=28-5tokushu4.pdf&dir=95)  
-[9] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
-[10] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+[9] [奥住聡, 阪上雅昭, "4. 宇宙における高速流と衝撃波研究の最前線 4.4 ホーキング輻射の謎と遷音速流による模擬実験"](https://www.jspf.or.jp/Journal/PDF_JSPF/jspf2007_04/jspf2007_04-387.pdf)  
+[10] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
+[11] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
 
 {% include adsense.html %} 

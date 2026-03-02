@@ -272,10 +272,10 @@ $$
 しかし、超音速流となっている下流側で発生した音波は、臨界点を超えて上流側に到達することは不可能となります。
 このような理由から、臨界点を音波に対するブラックホール　(sonic black hole)の事象の地平面とみなすことができることがわかります。  
 普通のガスを用いることでも、先程のようにブラックホールの事象の地平面を再現する類似物を作ることができます。
-しかし、この流体にボーズ・アインシュタイン凝縮体 (Bose-Einstein Condensate: BEC)を用いることで、さらにホーキング放射 (Hawking radiation)の類似物を得ることが可能です。
+しかし、この流体にボーズ・アインシュタイン凝縮体 (Bose-Einstein Condensate: BEC)を用いることで、さらに[ホーキング放射 (Hawking radiation)](/gr/hawking_radiation)の類似物を得ることが可能です。
 ホーキング放射は、スカラー場や電磁場の量子化を考慮することで、その存在を示すことができます。
 それに対し、BEC中では音波は量子化され、フォノンとして存在します。
-この量子化された音波を用いると、遷音速流中でフォノンのホーキング放射が起こります。
+この量子化された音波を用いると、遷音速流中でフォノンの[ホーキング放射](/gr/hawking_radiation)が起こります。
 最近では、イスラエルのグループがBECを用いたアナログブラックホールを作成し、そこでの定常的かつ自発的な音のホーキング放射の観測が報告されています。  
 流体以外にも、超伝導回路を用いたアナログブラックホールなどの実験例が論文として出版されています。
 そちらもぜひ調べてみると、面白いかもしれません。
@@ -286,12 +286,13 @@ $$
 [2] [Lahav et al., 2010, "Realization of a Sonic Black Hole Analog in a Bose-Einstein Condensate"](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.240401)  
 [3] [Kolobov et al., 2021, "Observation of stationary spontaneous Hawking radiation and the time evolution of an analogue black hole"](https://www.nature.com/articles/s41567-020-01076-0)  
 [4] [Shi et al., 2023, "Quantum simulation of Hawking radiation and curved spacetime with a superconducting on-chip black hole"](https://www.nature.com/articles/s41467-023-39064-6)  
-[5] [北島歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
-[6] [田中秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
-[7] [Physics Lab. 2018 ブログ, "ブラックホールの作り方"](https://physlab2018.hatenablog.com/entry/2018/04/14/235037)  
-[8] [奥住聡, 富永真太郎, 阪上雅昭, "遷音速流でつくる「音のブラックホール」"](https://www.nagare.or.jp/download/noauth.html?d=28-5tokushu4.pdf&dir=95)  
-[9] [奥住聡, 阪上雅昭, "4. 宇宙における高速流と衝撃波研究の最前線 4.4 ホーキング輻射の謎と遷音速流による模擬実験"](https://www.jspf.or.jp/Journal/PDF_JSPF/jspf2007_04/jspf2007_04-387.pdf)  
-[10] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
-[11] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+[5] [Delhom & GIacomelli, 2025, "Analogue gravity with Bose-Einstein condensates"](https://arxiv.org/abs/2512.14209)  
+[6] [北島歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
+[7] [田中秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
+[8] [Physics Lab. 2018 ブログ, "ブラックホールの作り方"](https://physlab2018.hatenablog.com/entry/2018/04/14/235037)  
+[9] [奥住聡, 富永真太郎, 阪上雅昭, "遷音速流でつくる「音のブラックホール」"](https://www.nagare.or.jp/download/noauth.html?d=28-5tokushu4.pdf&dir=95)  
+[10] [奥住聡, 阪上雅昭, "4. 宇宙における高速流と衝撃波研究の最前線 4.4 ホーキング輻射の謎と遷音速流による模擬実験"](https://www.jspf.or.jp/Journal/PDF_JSPF/jspf2007_04/jspf2007_04-387.pdf)  
+[11] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4tDrayG)  
+[12] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
 
 {% include adsense.html %} 

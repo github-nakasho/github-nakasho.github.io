@@ -1,0 +1,107 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#特殊相対論的なラバール管" id="markdown-toc-特殊相対論的なラバール管">特殊相対論的なラバール管</a>    <ol>
+      <li><a href="#特殊相対論的なベルヌーイの定理" id="markdown-toc-特殊相対論的なベルヌーイの定理">特殊相対論的なベルヌーイの定理</a></li>
+      <li><a href="#特殊相対論的なラバール管-1" id="markdown-toc-特殊相対論的なラバール管-1">特殊相対論的なラバール管</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="特殊相対論的なラバール管">特殊相対論的なラバール管</h1>
+
+<p>ここでは、ラバール管中の流体が相対論的速度で運動している場合について議論していきます。</p>
+
+<h2 id="特殊相対論的なベルヌーイの定理">特殊相対論的なベルヌーイの定理</h2>
+
+<p>まず、相対論的な定常流において成り立つ、ベルヌーイの定理について示しておきましょう。
+流体を構成する粒子の生成・消滅が無視できるとすると、<a href="/rmhd/conservation_law#粒子数保存">粒子数保存の式</a>より</p>
+
+\[\nabla \cdot (n\gamma \mathbf{v}) 
+= 0 \ \Longrightarrow \ 
+n \gamma v_i dS_i 
+= (一定) \tag{1}\]
+
+<p>ここで\(dS_i\)は、流線で囲まれた管(流管)の断面積を表します。
+同様に、エネルギー保存の式から</p>
+
+\[\nabla \cdot \{(\varepsilon + P) \gamma^2 \mathbf{v} \} 
+= 0 \ \Longrightarrow \
+(\varepsilon + P) \gamma^2 v_i dS_i 
+= (一定) \tag{2}\]
+
+<p>を得ます。
+これらを辺々割り算すれば</p>
+
+\[\frac{(\varepsilon + P) \gamma}{n} 
+= \gamma h 
+= (一定) \qquad \left( h = \frac{\varepsilon + P}{n}\right)\tag{3}\]
+
+<p>のようになります。
+これが特殊相対論的なベルヌーイの定理です。
+\(h\)は、1粒子あたりのエンタルピーです。</p>
+
+<h2 id="特殊相対論的なラバール管-1">特殊相対論的なラバール管</h2>
+
+<p>次に、<a href="/mhd/laval_nozzle">ラバール管</a>中を相対論的な速度で定常的に運動する場合の流体の振る舞いについて見ていきましょう。
+<a href="/mhd/laval_nozzle">非相対論的な場合</a>と同様、断面積\(A(x)\)で表される管中を、流体は定常的に流れるものとします。
+また、流体の運動は1次元であるとします。
+粒子数保存の式より</p>
+
+\[\frac{d}{dx} (n\gamma v) 
+= 0 \ \Longrightarrow \ 
+n \gamma v A 
+= (一定) \tag{4}\]
+
+<p>です。
+両辺の対数をとり、その微小量を計算しましょう。</p>
+
+\[\begin{align}
+&amp;\ln (n \gamma v A) 
+= \ln n + \ln \gamma + \ln v + \ln A 
+= (一定) \ \Longrightarrow \ 
+\frac{dn}{n} + \frac{d\gamma}{\gamma}  + \frac{dv}{v} + \frac{dA}{A} 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+\frac{1}{n} \frac{dn}{dx} 
+= - \frac{1}{\gamma} \frac{d\gamma}{dx} - \frac{1}{v} \frac{dv}{dx} - \frac{1}{A} \frac{dA}{dx} \tag{5}
+\end{align}\]
+
+<p>運動量保存則の式より</p>
+
+\[\frac{d}{dx} \{(\varepsilon + P) \gamma^2 v^2 + c^2 P\} 
+= \frac{d}{dx} (nh \gamma^2 v^2 + c^2 P) 
+= \frac{d}{dx} (\gamma h \cdot n \gamma v \cdot v + c^2 P)
+\underbrace{=}_{(3), (4)} n h \gamma^2 v \frac{dv}{dx} + c^2 \frac{dP}{dx} 
+= 0 \tag{6}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[2] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[3] <a href="https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf">田中 秀和, “宇宙流体力学”</a><br />
+[4] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

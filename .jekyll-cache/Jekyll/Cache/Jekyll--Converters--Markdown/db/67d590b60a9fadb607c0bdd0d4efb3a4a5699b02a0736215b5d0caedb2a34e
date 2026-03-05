@@ -1,0 +1,105 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビームモデル" id="markdown-toc-ビームモデル">ビームモデル</a>    <ol>
+      <li><a href="#非相対論的速度の場合" id="markdown-toc-非相対論的速度の場合">非相対論的速度の場合</a></li>
+      <li><a href="#相対論的速度の場合" id="markdown-toc-相対論的速度の場合">相対論的速度の場合</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビームモデル">ビームモデル</h1>
+
+<p>現在では、中心天体(原始星・コンパクト星・ブラックホールなど)から、双方向に高速度で噴き出す宇宙ジェットが多数観測されています。
+この細く絞られたジェットの発生機構として考えられたモデルの1つに、ビームモデルがあります。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>このビームモデルのオリジナルは<a href="https://academic.oup.com/mnras/article/169/3/395/2893569">Blandford &amp; Rees (1974)</a>で発表されたもので、その問題設定はCygnus-Aのような電波銀河中の活動銀河中心核(AGN)から噴出するジェットをモデル化ためのものです。
+銀河の回転運動から、上図のように、銀河中心は扁平な(少しつぶれ、楕円体のような)密度分布を持つガス雲に覆われていると考えられるでしょう。
+その中心から等方的にガスが放出されているとすると、最も抵抗力の弱い短軸方向(回転軸方向)から、それらのガスは噴出するはずです。
+このような問題設定の下、定常的に噴き出すガスの流れが1次元的であるとして、解析を行っていきましょう。
+ただし、非相対論的な場合と相対論的な場合とに分けて、方程式を考えていくことにします。</p>
+
+<h2 id="非相対論的速度の場合">非相対論的速度の場合</h2>
+
+<p>定常流の仮定から、連続の式より</p>
+
+\[\nabla \cdot (\rho \mathbf{v}) 
+= \frac{d}{dz} (\rho v) 
+= 0 \ \Longrightarrow \ 
+\rho v A 
+= \dot{M} \ (一定) \tag{1}\]
+
+<p>です。
+ここで、ラバール管のときと同様、\(A(z)\)をガスが噴き出す流管の断面積としました。
+(1)式の\(\dot{M}\)は、質量損失率(単位時間あたりに\(A\)を通過して放出される質量)の意味を持ちます。
+また定常流について成り立つベルヌーイの定理から</p>
+
+\[\frac{1}{2} v^2 + \frac{\Gamma}{\Gamma-1} \frac{P}{\rho} 
+= \frac{\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \tag{2}\]
+
+<p>を得ます。
+ここで\(z\sim 0\)での密度と圧力をそれぞれ\(\rho_0, P_0\)とし、さらに\(z\sim 0\)での速度をゼロとしました。
+(2)式での\(\Gamma\)は、ガスの比熱比です。
+(2)式を\(v\)について解いていきましょう。</p>
+
+\[\frac{1}{2} v^2 
+= \frac{\Gamma}{\Gamma - 1} \left( \frac{P_0}{\rho_0} - \frac{P}{\rho} \right) 
+= \frac{\Gamma}{\Gamma - 1} \frac{P_0}{\rho_0} \left( 1 - \frac{P}{P_0} \frac{\rho_0}{\rho} \right) \tag{3}\]
+
+<p>断熱過程を考えると、\(P = K\rho^\Gamma, P_0 = K \rho_0^\Gamma\)より</p>
+
+\[\frac{P}{P_0} 
+= \frac{\rho^\Gamma}{\rho_0^\Gamma} \ \Longrightarrow \ 
+\frac{\rho}{\rho_0} 
+= \left( \frac{P_0}{P}\right)^{-\frac{1}{\Gamma}} \tag{4}\]
+
+<p>を代入すると</p>
+
+\[v^2 
+= \frac{2\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \left( 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right) \ \Longrightarrow \ 
+v 
+= \left[ \frac{2\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \left\{ 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right\} \right]^{1/2} \tag{5}\]
+
+<p>のように求まります。
+ここから</p>
+
+\[\rho v 
+= \frac{\rho}{\rho_0} \rho_0 v 
+= \left( \frac{P}{P_0} \right)^{1/\Gamma} \left[ \frac{2\Gamma}{\Gamma-1} \rho_0 P_0 \left\{ 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right\} \right]^{1/2} \tag{6}\]
+
+<p>を得ます。</p>
+
+<h2 id="相対論的速度の場合">相対論的速度の場合</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://academic.oup.com/mnras/article/169/3/395/2893569">Blandford &amp; Rees, 1974, “A “twin-exhaust” model for double radio sources”</a><br />
+[] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[] <a href="https://amzn.to/4aNC7W1">福江純, 和田桂一, 梅村雅之, “宇宙流体力学の基礎”</a><br />
+[] <a href="https://amzn.to/49sJUrA">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

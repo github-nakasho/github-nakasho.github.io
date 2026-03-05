@@ -1,0 +1,245 @@
+I"@.
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビームモデル" id="markdown-toc-ビームモデル">ビームモデル</a>    <ol>
+      <li><a href="#非相対論的速度の場合" id="markdown-toc-非相対論的速度の場合">非相対論的速度の場合</a></li>
+      <li><a href="#相対論的速度の場合" id="markdown-toc-相対論的速度の場合">相対論的速度の場合</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビームモデル">ビームモデル</h1>
+
+<p>現在では、中心天体(原始星・コンパクト星・ブラックホールなど)から、双方向に高速度で噴き出す宇宙ジェットが多数観測されています。
+この細く絞られたジェットの発生機構として考えられたモデルの1つに、ビームモデルがあります。</p>
+
+<p><img src="/assets/images/rmhd/beam_model_01.png" alt="" /><br />
+中心部から等方的に放出されたガスが、短軸方向に突き抜けていく様子。</p>
+
+<p>このビームモデルのオリジナルは<a href="https://academic.oup.com/mnras/article/169/3/395/2893569">Blandford &amp; Rees (1974)</a>で発表されたもので、その問題設定はCygnus-Aのような電波銀河中の活動銀河中心核(AGN)から噴出するジェットをモデル化ためのものです。
+銀河の回転運動から、上図のように、銀河中心は扁平な(楕円体のような)密度分布を持つガス雲に覆われていると考えられるでしょう。
+その中心から等方的にガスが放出されているとすると、最も抵抗力の弱い短軸方向(銀河の回転軸方向)から、それらのガスは噴出するはずです。
+このような問題設定の下、定常的に噴き出すガスの流れが1次元的であるとして、解析を行っていきましょう。
+ただし、非相対論的な場合と相対論的な場合とに分けて、方程式を考えていくことにします。</p>
+
+<h2 id="非相対論的速度の場合">非相対論的速度の場合</h2>
+
+<p>定常流の仮定から、連続の式より</p>
+
+\[\nabla \cdot (\rho \mathbf{v}) 
+= \frac{d}{dz} (\rho v) 
+= 0 \ \Longrightarrow \ 
+\rho v A 
+= \dot{M} \ (一定) \tag{1}\]
+
+<p>です。
+ここで、ラバール管のときと同様、\(A(z)\)をガスが噴き出す流管の断面積としました。
+(1)式の\(\dot{M}\)は、質量損失率(単位時間あたりに\(A\)を通過して放出される質量)の意味を持ちます。
+また定常流について成り立つベルヌーイの定理から</p>
+
+\[\frac{1}{2} v^2 + \frac{\Gamma}{\Gamma-1} \frac{P}{\rho} 
+= \frac{\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \tag{2}\]
+
+<p>を得ます。
+ここで\(z\sim 0\)での密度と圧力をそれぞれ\(\rho_0, P_0\)とし、さらに\(z\sim 0\)での速度をゼロとしました。
+(2)式での\(\Gamma\)は、ガスの比熱比です。
+(2)式を\(v\)について解いていきましょう。</p>
+
+\[\frac{1}{2} v^2 
+= \frac{\Gamma}{\Gamma - 1} \left( \frac{P_0}{\rho_0} - \frac{P}{\rho} \right) 
+= \frac{\Gamma}{\Gamma - 1} \frac{P_0}{\rho_0} \left( 1 - \frac{P}{P_0} \frac{\rho_0}{\rho} \right) \tag{3}\]
+
+<p>断熱過程を考えると、\(P = K\rho^\Gamma, P_0 = K \rho_0^\Gamma\)より</p>
+
+\[\frac{P}{P_0} 
+= \frac{\rho^\Gamma}{\rho_0^\Gamma} \ \Longrightarrow \ 
+\frac{\rho}{\rho_0} 
+= \left( \frac{P_0}{P}\right)^{-\frac{1}{\Gamma}} \tag{4}\]
+
+<p>を代入すると</p>
+
+\[v^2 
+= \frac{2\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \left( 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right) \ \Longrightarrow \ 
+v 
+= \left[ \frac{2\Gamma}{\Gamma-1} \frac{P_0}{\rho_0} \left\{ 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right\} \right]^{1/2} \tag{5}\]
+
+<p>のように求まります。
+ここから</p>
+
+\[\rho v 
+= \frac{\rho}{\rho_0} \rho_0 v 
+= \left( \frac{P}{P_0} \right)^{1/\Gamma} \left[ \frac{2\Gamma}{\Gamma-1} \rho_0 P_0 \left\{ 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right\} \right]^{1/2} \tag{6}\]
+
+<p>を得ます。
+これと(1)式から</p>
+
+\[A 
+= \frac{\dot{M}}{\rho v} 
+= \dot{M} \left( \frac{P}{P_0} \right)^{-1/\Gamma} \left[ \frac{2\Gamma}{\Gamma-1} \rho_0 P_0 \left\{ 1 - \left( \frac{P}{P_0}\right)^{\frac{\Gamma - 1}{\Gamma}} \right\} \right]^{-1/2} \tag{7}\]
+
+<p>のように、断面積も求めることができました。<br />
+断面積\(A\)が最小(\(\rho v\)が最大)となる\(P/P_0\)を求めてみましょう。
+圧力\(P\)については何も言及してきませんでしたが、定常的な流れが起こっていることを考えると、これはビームを取り囲むガス雲の圧力\(P_\mathrm{ext} (z)\)と釣り合っている(圧力平衡)と考えるのが妥当でしょう。
+周辺のガス雲の圧力が指数関数的に減少するような、単純なモデル</p>
+
+\[P_\mathrm{ext} 
+= P_0 e^{-z/z_0} \tag{8}\]
+
+<p>の場合に、(5), (7)式を描画すると、次のようになります。</p>
+
+<p><img src="/assets/images/rmhd/beam_model_02.png" alt="" /><br />
+\(v, A\)を\(z/z_0\)の関数として描画したもの。
+青線は\(v\)、オレンジ線は\(A\)を表す。
+縦軸は適当。</p>
+
+<p>\(A\)が最小(\(\rho v\)が最大)となるような\(P/P_0\)を求めてみましょう。
+(6)式において\(x \equiv P/P_0\)として</p>
+
+\[\rho v 
+= \left( \frac{2\Gamma}{\Gamma -1} \rho_0 P_0 \right)^{1/2} x^{1/\Gamma} \left\{ 1- x^\frac{\Gamma-1}{\Gamma}\right\}^{1/2} 
+= \left( \frac{2\Gamma}{\Gamma -1} \rho_0 P_0 \right)^{1/2} \left\{ x^{2/\Gamma}- x^\frac{\Gamma+1}{\Gamma}\right\}^{1/2}\]
+
+<p>のように整理されます。
+\(f(x) \equiv x^\frac{2}{\Gamma} - x^\frac{\Gamma+1}{\Gamma}\)とおいて、この関数を\(x\)で微分しましょう。</p>
+
+\[f'(x) 
+= \frac{2}{\Gamma} x^{\frac{2}{\Gamma}-1} - \frac{\Gamma+1}{\Gamma} x^{\frac{\Gamma+1}{\Gamma}-1} 
+= \frac{2}{\Gamma} x^{\frac{2-\Gamma}{\Gamma}} - \frac{\Gamma+1}{\Gamma} x^{\frac{1}{\Gamma}}\]
+
+<p>これがゼロとなる\(x\)は</p>
+
+\[\frac{2}{\Gamma} x^{\frac{2-\Gamma}{\Gamma}} 
+= \frac{\Gamma+1}{\Gamma} x^{\frac{1}{\Gamma}} \ \Longrightarrow \ 
+x_\mathrm{nozzle} 
+= \left( \frac{2}{\Gamma+1}\right)^\frac{\Gamma}{\gamma-1} \tag{9}\]
+
+<p>と求まります。
+実際に\(\Gamma=\frac{5}{3}\)を入れると、\(x = \frac{P}{P_0} \sim 0.49\)となります。
+よって、\(z=0\)での圧力の半分程度になる高さで、\(A\)が最小となることがわかります。<br />
+さらに\(z \rightarrow \infty\)では、\(P \rightarrow 0\)となるため、(2)式より</p>
+
+\[\frac{1}{2} v_\infty^2 
+= \frac{\Gamma}{\Gamma-1}\frac{P_0}{\rho_0} \ \Longrightarrow \ 
+v_\infty 
+= \sqrt{\frac{2\Gamma}{\Gamma-1}\frac{P_0}{\rho_0}} \tag{10}\]
+
+<p>のように、一定の速度に収束することもわかります。</p>
+
+<h2 id="相対論的速度の場合">相対論的速度の場合</h2>
+
+<p>続いて、<a href="https://academic.oup.com/mnras/article/169/3/395/2893569">Blandford &amp; Rees (1974)のオリジナル論文</a>で言及された、流体の速度が相対論的な場合について考察しましょう。
+<a href="/rmhd/laval_nozzle#特殊相対論的なベルヌーイの定理">特殊相対論的なベルヌーイの定理</a>より</p>
+
+\[\gamma h 
+= \gamma \frac{\varepsilon + P}{n} 
+= (一定) \tag{11}\]
+
+<p>です。
+簡単のため、超相対論的な場合のみを考えることにすると</p>
+
+\[\varepsilon 
+= \rho c^2 + \frac{P}{\Gamma - 1} 
+\underbrace{\approx}_{P \gg \rho c^2} \frac{P}{\Gamma -1} 
+\underbrace{=}_{\Gamma = \frac{4}{3}} 3P \tag{12}\]
+
+<p>また、断熱の場合には</p>
+
+\[P 
+= D n^{4/3} \ \Longrightarrow \ 
+n 
+= F P^{3/4} \qquad (D, F: 定数) \tag{13}\]
+
+<p>のように状態方程式が書けるため</p>
+
+\[\gamma \frac{\varepsilon + P}{n}
+= \gamma \frac{4P}{F P^{3/4}} 
+= (一定) \ \Longrightarrow \ 
+\gamma P^{1/4} 
+= (一定) \tag{14}\]
+
+<p>となります。
+\(z=0\)で流体はほぼ静止していたとし(\(\gamma = 1\))、またそこでの圧力を\(P_0\)とすると</p>
+
+\[\gamma P^{1/4} 
+= P_0^{1/4} \ \Longrightarrow \ 
+\frac{P}{P_0} 
+= \frac{1}{\gamma^4} \tag{15}\]
+
+<p>となります。
+非相対論的な場合には、(10)式から有限の速度までしか加速できませんでした。
+しかし特殊相対論を考慮した場合、(15)式から\(z \rightarrow \infty\)で\(P \rightarrow 0\)とすれば、\(\gamma \rightarrow \infty\)まで加速することができるとわかります。
+実際にこれを\(v\)について解くと</p>
+
+\[1 - \left( \frac{v}{c} \right)^2 
+= \left( \frac{P}{P_0}\right)^{1/2} \ \Longrightarrow \ 
+\frac{v}{c} 
+= \sqrt{1-\left( \frac{P}{P_0}\right)^{1/2}} \tag{16}\]
+
+<p>のようになり、\(P \rightarrow 0\)では\(v \rightarrow c\)となることがわかります。
+非相対論的な場合と同様に、断面積\(A\)についても求めてみましょう。
+エネルギー保存則より</p>
+
+\[\nabla \cdot \{ (\varepsilon + P) \gamma^2 \mathbf{v} \} 
+= 0 \ \Longrightarrow \ 
+(\varepsilon + P) \gamma^2 v A 
+= L \quad (一定) \tag{17}\]
+
+<p>ここに超相対論的な場合の(12)式を用いれば</p>
+
+\[4 c P \gamma^2 \frac{v}{c} A 
+= L
+\ \underbrace{\Longrightarrow}_{(15), (16)} \ A 
+= \frac{L}{4cP} \left( \frac{P}{P_0} \right)^{1/2} \left\{ 1-\left( \frac{P}{P_0}\right)^{1/2} \right\}^{-1/2}
+= \frac{L}{4cP_0} \left( \frac{P}{P_0} \right)^{-1/2} \left\{ 1-\left( \frac{P}{P_0}\right)^{1/2} \right\}^{-1/2} \tag{18}\]
+
+<p>を得ます。
+\(x \equiv P/P_0\)とすると\(A \propto (x-x^{3/2})^{-1/2}\)のように書けるので、\(f(x) = x-x^{3/2}\)を微分しましょう。
+すると</p>
+
+\[f'(x) 
+= 1 - \frac{3}{2} x^{1/2} 
+= 0 \ \Longrightarrow \ 
+x^{1/2} 
+= \frac{2}{3} \ \Longrightarrow \ 
+x 
+= \frac{4}{9} \tag{19}\]
+
+<p>のように、\(A\)が最小となるのは\(\frac{P}{P_0} = \frac{4}{9}\)のときとわかります。
+またこの場所での速度は、(16)式から</p>
+
+\[\frac{v}{c} 
+= \sqrt{1-\frac{2}{3}} 
+= \frac{1}{\sqrt{3}} \tag{20}\]
+
+<p>のようになります。
+これは超相対論的な場合の音速\(c/\sqrt{3}\)に一致し、これは<a href="/mhd/laval_nozzle">ラバール管の臨界点で音速に一致する遷音速流</a>に類似した流れであることがわかります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://academic.oup.com/mnras/article/169/3/395/2893569">Blandford &amp; Rees, 1974, “A “twin-exhaust” model for double radio sources”</a><br />
+[2] <a href="https://nagoya.repo.nii.ac.jp/records/2012452">北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析”</a><br />
+[3] <a href="https://amzn.to/4aNC7W1">福江純, 和田桂一, 梅村雅之, “宇宙流体力学の基礎”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

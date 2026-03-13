@@ -1,0 +1,412 @@
+---
+layout: default
+title: 相対論的な膨張
+parent: 相対論的磁気流体力学
+math: mathjax3
+permalink: /rmhd/relativistic_expansion
+nav_order: 9
+---
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+{% include adsense.html %} 
+
+# 相対論的な膨張
+
+ガンマ線バーストのような相対論的な速度の流れを作るにはどうしたら良いでしょうか。
+その有力な機構の一つが熱膨張です。
+何らかの機構で有限の体積に閉じ込められている高圧のガスを考えましょう。
+閉じ込めからこれを解き放つと、ガスは膨張を始め、初期に持っていた内部エネルギーを運動エネルギーに転換します。
+非相対論的な場合には、超新星爆発や太陽風などの例が挙げられます。
+相対論的な場合の代表例は、ガンマ線バーストのモデルとして有名なファイアボールモデルがあります。
+特に、ファイアボールの膨張が周囲の物質の影響を受けない場合を自由膨張、周囲の物質と衝突して減速いていく場合を爆風と呼びます。
+
+## 自由膨張
+
+まずは自由膨張について考えてみましょう。
+さらに復習として、非相対論的な場合から見ていくことにします。
+
+### 非相対論的な場合
+
+膨張を始めるとき、流体は領域の端から膨張を始めていきます。
+よって膨張している領域と静止している領域の境界は、徐々に内側に移動していきます。
+これを希薄波と呼びます。
+希薄波はほぼ音速で伝播していきます。
+希薄波が中心まで到達した後は、圧力がほぼ一定の球状の領域が膨張していくことになります。
+この過程は断熱であり、膨張の端を除けば、密度もほぼ一定とみなして良いでしょう。
+簡単のため、膨張の端の効果は無視し、圧力を一定であるとしましょう。
+非相対論的な自由膨張の連続方程式および運動方程式は、それぞれ
+
+$$
+\frac{\partial \rho_\mathrm{nr}}{\partial t} + \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 \rho_\mathrm{nr} v) 
+= 0 \tag{1}
+$$
+
+$$
+\frac{\partial v}{\partial t} + v \frac{\partial v}{\partial r} 
+= 0 \tag{2}
+$$
+
+のようになります。
+これの解を、$$v = r/t$$を仮定して求めてみましょう。
+
+$$
+\frac{\partial v}{\partial t} 
+= - \frac{r}{t^2}, \qquad v \frac{\partial v}{\partial r} 
+= \frac{r}{t^2} \tag{3}
+$$
+
+(3)の計算より、これが(2)式を満たすことがわかりました。
+これを(1)式に代入すると
+
+$$
+\frac{\partial \rho_\mathrm{nr}}{\partial t} + \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \rho_\mathrm{nr} \frac{r}{t} \right) 
+= \frac{\partial \rho_\mathrm{nr}}{\partial t} + \frac{1}{r^2 t} \frac{\partial}{\partial r} (r^3 \rho_\mathrm{nr}) 
+= \frac{\partial \rho_\mathrm{nr}}{\partial t} + \frac{1}{r^2 t} \frac{\partial}{\partial r} (r^3 \rho_\mathrm{nr}) 
+= 0 \tag{4}
+$$
+
+ここで、密度が場所に依存せず一定である(時間にしか依存しない)とすると、$$\rho_\mathrm{nr} = \rho_\mathrm{nr} (t)$$より
+
+$$
+\begin{align}
+&\frac{d \rho_\mathrm{nr}}{d t} + \frac{1}{r^2 t} \frac{\partial}{\partial r} (r^3 \rho_\mathrm{nr}) 
+= \frac{d \rho_\mathrm{nr}}{d t} + \frac{\rho_\mathrm{nr}}{r^2 t} \frac{\partial r^3}{\partial r} 
+= \frac{d \rho_\mathrm{nr}}{d t} + \frac{3 \rho_\mathrm{nr}}{t} 
+= 0 \ \Longrightarrow \frac{d\rho_\mathrm{nr}}{\rho_\mathrm{nr}} 
+= - 3\frac{dt}{t} \notag \\
+&\Longrightarrow \ \ln \rho_\mathrm{nr} 
+= -3 \ln t + (定数) \ \Longrightarrow \ \rho_\mathrm{nr} 
+= \rho_0 \left( \frac{t_0}{t}\right)^3 \tag{5}
+\end{align}
+$$
+
+以上が、(1), (2)式の解であることがわかります。
+オイラー的に見ると、速度は時間とともに減少しているように見えます。
+しかし、(2)式から分かるように、ラグランジュ的に見るとそれぞれの流体要素は一定の速さで運動しています。
+また、外側の流体ほど距離に比例した速い速度で運動しています。
+それぞれの流体要素から見ても、膨張の様子は距離に比例した速度で3次元的に互いに遠ざかっており、これはハッブル的な膨張宇宙の振る舞いと同じであることがわかります。
+
+### 相対論的な場合
+
+続いて、球対称な相対論的自由膨張を見ていきましょう。
+初期に小さな領域に閉じ込められていた相対論的な内部エネルギーのガス (これをファイアボールと呼びます)が、閉じ込めを解かれたとしましょう。
+球対称の膨張に対する基礎方程式は
+
+$$
+\frac{\partial}{\partial t} (n \gamma) + \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 n \gamma v) 
+= 0 \tag{6}
+$$
+
+$$
+\frac{\partial}{\partial t} \left\{ \left( \varepsilon + \frac{v^2}{c^2} P \right) \gamma^2 \right\} + \frac{1}{r^2} \frac{\partial}{\partial r} \{r^2 \gamma^2 (\varepsilon + P) v\} 
+= 0 \tag{7}
+$$
+
+$$
+\frac{\partial}{\partial t} \{(\varepsilon + P) \gamma^2 v\} + \frac{1}{r^2} \frac{\partial}{\partial r} \{r^2 \gamma^2 (\varepsilon + P) v^2\} + c^2 \frac{\partial P}{\partial r} 
+= 0 \tag{8}
+$$
+
+の3つです。
+非相対論的な場合と異なり、速度はほとんど$$c$$となるため、観測者からみた膨張の様子はかなり異なります。
+しかし流体の静止系で見ると、速度に光速という上限がある以外には、同様の一様膨張をすると考えて良いでしょう。
+観測者の系で見るときには、ローレンツ収縮の効果を考える必要があります。
+そして観測者の系で見ると、膨張する物質の先端はほぼ光速$$c$$で進むため、ファイアボールの半径は$$R \approx ct$$となります。
+膨張運動のローレンツ因子を$$\gamma$$とすると、球面方向の長さと運動方向の長さの比は、ローレンツ収縮の効果により$$\gamma$$程度になるでしょう。
+よって膨張物質は厚さ$$\Delta R \approx R/ \gamma$$程度のシェル状の領域に集中することになります。
+シェル内部ではほとんど物質は一様に分布している$$\left( \frac{\partial}{\partial r} = 0 \right)$$とし、さらに超相対論的であるとして$$P = \varepsilon / 3$$としましょう。
+すると、(6)式より
+
+$$
+\frac{\partial}{\partial t} (n\gamma r^2)
+= 0 \ \Longrightarrow \ n\gamma R^2 
+= (一定) \tag{9}
+$$
+
+そして(7)式から
+
+$$
+\frac{\partial}{\partial t} \left\{ r^2 \left( \varepsilon + \frac{1}{3} \varepsilon \right) \gamma^2\right\} 
+= 0 \ \Longrightarrow \ \varepsilon \gamma^2 R^2 
+= (一定) \tag{10}
+$$
+
+が成り立つとわかります。
+(9), (10)式より
+
+$$
+n\gamma 
+\propto R^{-2} 
+\underbrace{\propto}_{R \approx ct} t^{-2} \tag{11}
+$$
+
+$$
+\varepsilon \gamma^2 
+\propto R^{-2} 
+\underbrace{\propto}_{R \approx ct} t^{-2} \tag{12}
+$$
+
+のように振る舞うことがわかります。
+さらに断熱的であると仮定すると、$$\varepsilon \propto n^{4/3}$$です。
+これを(12)式に用いると
+
+$$
+n^{4/3} \gamma^2 \propto t^{-2} \underbrace{\propto}_{(11)} n \gamma \ \Longrightarrow \ 
+n^{1/3} \gamma \propto t^0 \tag{13}
+$$
+
+これをさらに(11)式に用いれば
+
+$$
+n^{2/3} \propto t^{-2} \ \Longrightarrow \ n \propto t^{-3} \tag{14}
+$$
+
+を得ます。
+これを(13)式に再び用いることで
+
+$$
+\gamma \propto t \tag{15}
+$$
+
+となり、さらに$$\varepsilon \propto n^{4/3}$$の仮定から
+
+$$
+\varepsilon \propto t^{-4} \tag{16}
+$$
+
+もわかります。
+ここで注目していただきたいのは、ローレンツ因子$$\gamma$$が時間に比例して増加していくことです。
+これが相対論的な自由膨張の最大の特徴であり、このような状況が作れれば、時間経過とともに超相対論的な速度の流れを作ることが可能であるとわかります。
+より定量的な理解をしたい場合には、次のように[相対論的なオイラー方程式](/rmhd/euler_eq_kelvins_circulation#相対論的なオイラー方程式)を用いると良いでしょう。
+シェル内部は一様であるため、圧力勾配を無視すると
+
+$$
+(\varepsilon + P) \frac{du^\lambda}{d\tau} + u^\lambda \frac{dP}{d\tau} 
+= 0 \tag{17}
+$$
+
+となります。
+相対論的な極限を考え、$$v \approx c, P = \frac{\varepsilon}{3}$$としましょう。
+すると時間成分$$\lambda = 0$$の式は
+
+$$
+\frac{4\varepsilon}{3} \frac{d\gamma}{d\tau} + \frac{\gamma}{3} \frac{d\varepsilon}{d\tau} 
+= \frac{1}{3\gamma^3}\frac{d}{d\tau} (\varepsilon \gamma^4) 
+= 0 \ \Longrightarrow \ \varepsilon \gamma^4 
+= (一定) \tag{18}
+$$
+
+とわかります。
+この式は、加速膨張の源が、内部エネルギーの時間変化によることを直接的に示したものです。  
+全く同じことを、エネルギーと粒子数の保存からも導きましょう。
+ファイアボールの全エネルギーの保存は
+
+$$
+\varepsilon 4\pi R^2 \Delta R \gamma^2 
+\underbrace{=}_{\Delta R \approx R / \gamma} 4\pi R^3 \varepsilon \gamma 
+= (一定) \tag{19} 
+$$
+
+$$
+n 4\pi R^2 \Delta R \gamma 
+= 4\pi R^3 n 
+= (一定) \tag{20}
+$$
+
+のように書けるため
+
+$$
+n \propto R^2 \underbrace{\propto}_{R \approx ct} t^{-3} \tag{21}
+$$
+
+$$
+\varepsilon \underbrace{\propto}_{断熱} n^{4/3} \propto t^{-4} \tag{22}
+$$
+
+$$
+\gamma \propto t \tag{23}
+$$
+
+のように、シェルのローレンツ因子に関して、先ほどと同じ結果を得ることができました。
+したがってシェルの厚さは、観測者の系でミレが一定に保たれていると近似できます。
+この加速膨張は内部エネルギーを消費し尽くすまで続くため、$$\varepsilon \approx nmc^2$$程度になったところで終端ローレンツ因子に達します。
+そこからは、一定のローレンツ因子で膨張を続けます。
+終端ローレンツ因子は初期に持っていた1粒子あたりの内部エネルギー程度であると評価できます。
+このように相対論的な自由膨張では、初期に持っていた内部エネルギーが運動エネルギーに転化され、相対論的な流れを生み出すことができます。
+
+{% include adsense.html %} 
+
+## 相対論的爆風
+
+続いて、ファイアボールが周囲と相互作用し、減速する様子を考えてみましょう。
+大きな速度で膨張するシェルが、周囲の物質を掃き集めながら進む状況を考えます。
+集められた物質の量$$\Delta M$$がシェルの物質量$$M_\mathrm{FB}$$に比べ無視できなくなると、いわゆる爆風の段階となります。
+非相対論的な場合、これは[超新星残骸のセドフ期](/mhd/sedov)に相当します。
+相対論的な場合には、掃き集めた周囲の物質はシェルのローレンツ因子$$\gamma$$程度まで加速されるうえに、相対論的な温度にまで加熱されます。
+掃き集められた物質量$$\Delta M$$がシェルの物質量$$M_\mathrm{FB}$$と
+
+$$
+\gamma \Delta M 
+= M_\mathrm{FB} \tag{24}
+$$
+
+のようになったとき、シェルの減速が始まると考えることができます。
+ここで$$\gamma$$はローレンツ収縮による効果であり、非相対論的な場合には掃き集められた質量がシェルと同程度になったときに減速すると考えることに対応します。
+シェルは周囲の物質中に先進衝撃波を伝播させ、シェルの内部には逆行衝撃波が伝搬し、シェルが減速されます。
+衝撃波が通過したシェルと周囲の物質は接触不連続面で接し、同じ圧力・速度で運動します。
+逆行衝撃波がシェルを突き抜けた後には、物質やエネルギーのほとんどは、掃き集められた物質が担うことになります。
+これが爆風です。  
+相対論的な速度の爆風は、[ブランドフォード・マッキー解 (Blandford-McKee solution)](https://pubs.aip.org/aip/pfl/article-abstract/19/8/1130/839278/Fluid-dynamics-of-relativistic-blast-waves?redirectedFrom=fulltext)と呼ばれる自己相似解でよく記述できることが知られています。
+ここでは簡単のため、その内部構造については詳細を省き、強い衝撃波極限かつ比熱比$$\Gamma = \frac{4}{3}$$の場合に対して先進衝撃波の伝播の様子を考えてみましょう。
+強い衝撃波における上流と下流のローレンツ因子の関係は、[相対論的衝撃波の(34)式](/rmhd/shock)より
+
+$$
+\gamma_1^2 
+= \frac{(\gamma_\mathrm{rel} +1) \{\Gamma (\gamma_\mathrm{rel} -1)+1\}^2}{\Gamma (2-\Gamma) (\gamma_\mathrm{rel} -1) + 2} 
+\underbrace{\approx}_{\gamma_\mathrm{rel} \gg 1} \frac{\gamma_\mathrm{rel} \Gamma^2 \gamma_\mathrm{rel}^2}{\Gamma (2-\Gamma) \gamma_\mathrm{rel}} 
+= \frac{\Gamma}{2-\Gamma} \gamma_\mathrm{rel}^2 
+\underbrace{=}_{\Gamma = 4/3} 2 \gamma_\mathrm{rel}^2 \tag{25} 
+$$
+
+先進衝撃波の進む速度に対応するローレンツ因子を$$\gamma_\mathrm{FS}$$とし、さらに先進衝撃波静止系で見たときの下流(すなわち掃き集められた物質などが存在するシェル)の相対的な速度に対応するローレンツ因子$$\gamma$$としましょう。
+すると(25)式より
+
+$$
+\gamma_\mathrm{FS} 
+= \sqrt{2} \gamma \tag{26}
+$$
+
+となることがわかります。
+周囲の物質の数密度を$$n_e$$とすると、爆風流体の数密度$$n$$とエネルギー密度$$\varepsilon$$は、[相対論的衝撃波の(28), (31)式](/rmhd/shock)より
+
+$$
+\frac{n}{n_e} 
+= \frac{\gamma \Gamma + 1}{\Gamma -1} 
+\underbrace{\approx}_{\gamma \gg 1} \frac{\Gamma}{\Gamma -1} \gamma 
+\underbrace{=}_{\Gamma = 4/3} 4\gamma \ \Longrightarrow \ 
+n 
+= 4n_e \gamma \tag{27} 
+$$
+
+$$
+\frac{\varepsilon}{n} 
+= \gamma mc^2 \ \Longrightarrow \ 
+\varepsilon 
+= n \gamma mc^2 
+\approx 4 mc^2 n_e \gamma \tag{28}
+$$
+
+のようになります。
+先進衝撃波の半径を$$R$$とすると、掃き集められた全粒子数は
+
+$$
+N 
+= \frac{4\pi}{3} n_e R^3 \tag{29}
+$$
+
+です。
+次に爆風の全エネルギーを導出しましょう。
+(28)式から、1粒子あたりのエンタルピーが
+
+$$
+h 
+= \frac{\varepsilon + P}{n} 
+\underbrace{=}_{P = \varepsilon / 3} \frac{4}{3} \frac{\varepsilon}{n} 
+= \frac{4}{3} mc^2 \gamma \tag{30}
+$$
+
+と求まります。
+これにローレンツ収縮の効果を合わせることで、観測者から見たときの1粒子あたりのエネルギーが$$\frac{4}{3} mc^2 \gamma^2$$と求まります。
+
+```
+圧力Pが外部に仕事することも考慮して、エンタルピーを用いています。
+```
+
+以上から、爆風内の全エネルギーが
+
+$$
+E 
+= \frac{4}{3} N mc^2 \gamma^2 
+= \frac{16\pi}{9} n_e mc^2 R^3 \gamma^2 
+\approx (一定) \tag{31}
+$$
+
+となります。
+ここで、爆風内のエネルギーは初期にシェルが持っていたもので、周囲から掃き集められる物質の静止質量エネルギーよりもとても大きいということから、一定と近似しています。
+したがって
+
+$$
+\gamma \propto R^{-3/2} \propto t^{-3/2} \tag{32}
+$$
+
+のように振る舞うことがわかります。
+爆風領域は、ローレンツ収縮によりシェル状となり、その厚みは$$R/\gamma$$程度と近似されます。
+つまり、爆風の厚みは時間とともに$$t^{5/2}$$に比例して分厚くなっていきます。
+
+{% include adsense.html %} 
+
+## 相対論的流体における希薄波
+
+自由膨張の際、物質は領域の端から膨張を始めます。
+そのため、膨張している領域と静止している領域の境界は移動していきます。
+これを希薄波 (rarefaction wave)と呼びます。
+非相対論的流体での希薄波では現れない相対論特有の現象として、希薄波面に対して流体が斜めに運動している場合が挙げられます。
+非相対論的な場合には、破面に平行方向の速度はガリレイ変換で消せるため、特に新しい現象は起こりません。
+しかし相対論の場合には、同時刻の相対性の効果が現れます。
+これにより、時間依存性のある現象の場合に、破面に平行方向の速度成分を座標変換で消すことができないことに注意が必要です。  
+希薄波による現象を見るために、次のような状況を考えてみましょう。
+初期時刻において、$$z$$方向に相対論的な速度$$v_{z0}$$で運動する、内部エネルギーの大きな流体領域が$$x<0$$に拡がっているとしましょう。
+そして$$x>0$$の領域には、静止した圧力の小さな物質が拡がっているとします(下図左パネル参照。)
+
+![](/assets/images/rmhd/relativistic_expansion_01.png)  
+相対論的な希薄波による効果を説明する図。左パネルは初期状態、右パネルは衝撃波と希薄波が伝播した後の様子を表す。
+希薄波を受けた物質は、波面に平行方向に加速される。  
+
+$$x<0$$の領域の物質は、$$x>0$$の物質を押し、周囲の物質中に衝撃波を形成します。
+そして$$x>0$$の物質の圧力が十分小さい場合には、$$x<0$$の物質中には希薄波が伝播していきます。
+このとき、$$x<0$$にあった物質は$$x=0$$の境界部分から膨張を始めます。
+その過程で、自由膨張のときと同様に、内部エネルギーを運動エネルギーに転化します。
+波面に平行方向の速度がない場合、波面に垂直な$$x$$方向に流体は運動するだけです。
+しかし、波面に平行方向の速度成分がある場合には、希薄波によりその速度成分が大きくなるという現象が発生します。
+自由膨張で内部エネルギーが運動エネルギーへ転化する現象が、ここでは方向性を持って起こるのです。
+相対論では、エネルギーと質量が等価なものとして扱われます。
+自由膨張により内部エネルギーが減少すると、これは質量の減少(慣性の減少)と捉えることができます。
+すると運動量保存から、速度が増加せざるを得ません。
+このようにして、希薄波を通過した部分は、4元速度の成分が大きくなります。  
+これはやはり[相対論的なオイラー方程式](/rmhd/euler_eq_kelvins_circulation#相対論的なオイラー方程式)から理解することができます。
+$$P = \frac{\varepsilon}{3}$$の超相対論的な場合を考え、さらにほぼ一様を仮定することで圧力勾配の項を無視しましょう。
+先程と同様の座標設定で、$$z$$方向に流体が運動しているとすると
+
+$$
+\frac{4}{3} \varepsilon \frac{d}{d\tau} (\gamma v_z) + \frac{\gamma v_z}{3} \frac{d\varepsilon}{d\tau} 
+= 0 \ \Longrightarrow \ 
+\frac{d \ln (\gamma v_z)}{d\tau} 
+= - \frac{1}{4} \frac{d\ln \varepsilon}{d\tau} 
+= \frac{d \ln \varepsilon^{-1/4}}{d\tau} \tag{33}
+$$
+
+のようになるため、$$\varepsilon$$が減少するとき、$$\gamma v_z$$は$$\varepsilon^{-1/4}$$のように増加するとわかります。
+この依存性は自由膨張の場合と同じです。
+しかしもともと方向性を持った流れのローレンツ因子を、希薄波により増大させることができるという点で、相対論的ジェットなどへの応用上の興味深い効果となっています。
+
+## 参考文献
+
+[1] [Blandford & McKee, 1976, "Fluid dynamics of relativistic blast waves"](https://pubs.aip.org/aip/pfl/article-abstract/19/8/1130/839278/Fluid-dynamics-of-relativistic-blast-waves?redirectedFrom=fulltext)  
+[2] [Rezzolla & Zanotti, "Relativistic Hydrodynamics"](https://amzn.to/4t57unb)  
+[3] [田中 秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
+[4] [高原文郎, "特殊相対論"](https://amzn.to/4s9Z0KJ)  
+[5] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+[6] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4bm3VRs)  
+[7] [河合誠之, 浅野勝晃, "ガンマ線バースト"](https://amzn.to/4sMZt5t)  
+
+{% include adsense.html %} 

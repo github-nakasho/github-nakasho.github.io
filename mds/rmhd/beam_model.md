@@ -239,11 +239,13 @@ $$
 ここに超相対論的な場合の(12)式を用いれば
 
 $$
-4 c P \gamma^2 \frac{v}{c} A 
-= L
-\ \underbrace{\Longrightarrow}_{(15), (16)} \ A 
+\begin{align}
+&4 c P \gamma^2 \frac{v}{c} A 
+= L \notag \\
+&\underbrace{\Longrightarrow}_{(15), (16)} \ A 
 = \frac{L}{4cP} \left( \frac{P}{P_0} \right)^{1/2} \left\{ 1-\left( \frac{P}{P_0}\right)^{1/2} \right\}^{-1/2}
 = \frac{L}{4cP_0} \left( \frac{P}{P_0} \right)^{-1/2} \left\{ 1-\left( \frac{P}{P_0}\right)^{1/2} \right\}^{-1/2} \tag{18}
+\end{align}
 $$
 
 を得ます。
@@ -272,10 +274,13 @@ $$
 のようになります。
 これは超相対論的な場合の音速$$c/\sqrt{3}$$に一致し、これは[ラバール管の臨界点で音速に一致する遷音速流](/mhd/laval_nozzle)に類似した流れであることがわかります。
 
+## Aloy-Rezzollaモデル (Aloy & Rezzolla (2006)): 工事中...
+
 ## 参考文献
 
 [1] [Blandford & Rees, 1974, "A "twin-exhaust" model for double radio sources"](https://academic.oup.com/mnras/article/169/3/395/2893569)  
-[2] [北島 歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
-[3] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+[2] [Rezzolla & Zanotti, "Relativistic Hydrodynamics"](https://amzn.to/4t57unb)  
+[3] [北島 歓大, 2025, "相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析"](https://nagoya.repo.nii.ac.jp/records/2012452)  
+[4] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
 
 {% include adsense.html %} 

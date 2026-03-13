@@ -154,7 +154,7 @@ $$
 
 $$
 c_s^2 
-= \frac{\Gamma P}{\rho_\mathrm{cr}} \tag{12}
+= \frac{\Gamma P}{\rho_\mathrm{nr}} \tag{12}
 $$
 
 のように、非相対論的な流体の音波のよく見る式を得ることができます。

@@ -23,3 +23,4 @@ A = Mdot ./ rhov .+ 1.0
 plot(zs, v, linewidth=3, xlabel=L"z/z_0", label=L"v", foreground_color_text=false, legend=:topright)
 plot!(zs, A, linewidth=3, label=L"A")
 savefig("beam_nr.png")
+

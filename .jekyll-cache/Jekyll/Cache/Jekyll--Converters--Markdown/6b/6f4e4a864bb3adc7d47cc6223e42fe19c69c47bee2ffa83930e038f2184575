@@ -1,0 +1,155 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的な磁気流体の基礎方程式" id="markdown-toc-相対論的な磁気流体の基礎方程式">相対論的な磁気流体の基礎方程式</a>    <ol>
+      <li><a href="#基礎方程式の導出" id="markdown-toc-基礎方程式の導出">基礎方程式の導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的な磁気流体の基礎方程式">相対論的な磁気流体の基礎方程式</h1>
+
+<h2 id="基礎方程式の導出">基礎方程式の導出</h2>
+
+<p>物質と電磁場を合わせた全系のエネルギー運動量の保存則は</p>
+
+\[\frac{\partial}{\partial x^\nu} (T_M^{\mu \nu} + T_F^{\mu \nu}) 
+= 0 \tag{1}\]
+
+<p>のように書かれます。
+ここで、物質は完全流体であるとして</p>
+
+\[T_M^{\mu \nu} 
+= \frac{\varepsilon + P}{c^2} u^\mu u^\nu + P \eta^{\mu \nu} \tag{2}\]
+
+<p>とします。
+また流体を構成する粒子についての生成・消滅は考慮せず、粒子数が保存するとして、連続の式</p>
+
+\[\frac{\partial}{\partial x^\mu} (nu^\mu) 
+= 0 \tag{3}\]
+
+<p>が成立します。
+電磁場のエネルギー運動量テンソルは</p>
+
+\[T_F^{\mu \nu} 
+= \frac{1}{4\pi} \left( F^{\mu \lambda} F^\nu{}_\lambda - \frac{1}{4} \eta^{\mu \nu} F^{\lambda \rho} F_{\lambda \rho}\right) \tag{4}\]
+
+<p>です。
+ここから</p>
+
+\[\partial_\nu T^{\mu \nu} 
+= \frac{1}{4\pi} \partial_\nu \left( F^{\mu \lambda} F^\nu{}_\lambda - \frac{1}{4} \eta^{\mu \nu} F^{\lambda \rho} F_{\lambda \rho} \right)
+= \frac{1}{4\pi} (F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} + F^{\mu \lambda} \partial_\nu F^\nu{}_\lambda) - \frac{1}{16 \pi} \partial^\mu (F^{\lambda \rho} F_{\lambda \rho}) \tag{5}\]
+
+<p>です。
+ここで<a href="/astroelec/emtensor">\(F^{\mu \lambda}\)は電磁場テンソル</a>です。
+<a href="/astroelec/emtensor#マクスウェル方程式の電磁場テンソル表現">マクスウェル方程式の4元表現</a>を用いて、これをさらに整理しましょう。</p>
+
+\[\partial_\nu F^\nu{}_\lambda 
+= - \partial_\nu F_\lambda{}^\nu 
+= - \frac{4\pi}{c} j_\lambda \tag{6}\]
+
+<p>を用いれば</p>
+
+\[\begin{align}
+\partial_\nu T^{\mu \nu} 
+&amp;= \frac{1}{4\pi} \left( F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - F^{\mu \lambda} \frac{4\pi}{c} j_\lambda \right) - \frac{1}{16 \pi} \partial^\mu (F^{\lambda \rho} F_{\lambda \rho}) \notag \\
+&amp;= - \frac{1}{c} F^{\mu \nu} j_\nu + \frac{1}{4\pi} \left( F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - \frac{1}{2} F^{\nu \lambda} \partial^\mu F_{\nu \lambda} \right) \tag{7}
+\end{align}\]
+
+<p>となります。
+<a href="/astroelec/emtensor#マクスウェル方程式の電磁場テンソル表現">マクスウェル方程式の4元表現のもう一つの式</a>から</p>
+
+\[\begin{align}
+\partial_\mu F_{\nu \lambda} + \partial_\nu F_{\lambda \mu} + \partial_\lambda F_{\mu \nu} 
+= 0 &amp;\Longrightarrow \ 
+\partial^\mu F_{\nu \lambda} + \partial_\nu F_\lambda{}^\mu + \partial_\lambda F^\mu{}_\nu  
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+\partial^\mu F_{\nu \lambda} 
+= - \partial_\nu F_\lambda{}^\mu - \partial_\lambda F^\mu{}_\nu 
+= \partial_\nu F^\mu{}_\lambda - \partial_\lambda F^\mu{}_\nu \tag{8}
+\end{align}\]
+
+<p>を用いて、(7)式の第二項の\((\cdots)\)部分を整理してみましょう。</p>
+
+\[(\cdots) 
+= F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - \frac{1}{2} F^{\nu \lambda} (\partial_\nu F^\mu{}_\lambda - \partial_\lambda F^\mu{}_\nu) 
+= F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - \frac{1}{2} F^{\nu \lambda} \partial_\nu F^\mu{}_\lambda + \frac{1}{2} F^{\nu \lambda} \partial_\lambda F^\mu{}_\nu
+= F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - \frac{1}{2} F^{\nu \lambda} \partial_\nu F^\mu{}_\lambda - \frac{1}{2} F^{\lambda \nu} \partial_\lambda F^\mu{}_\nu 
+= F^\nu{}_\lambda \partial_\nu F^{\mu \lambda} - \frac{1}{2} F^{\nu \lambda} \partial_\nu F^\mu{}_\lambda\]
+
+<!-- であり、これは
+
+$$
+\frac{\partial T^{\mu \nu}}{\partial x^\nu} 
+= - \frac{1}{c} F^{\mu \nu} j_\nu 
+$$
+
+を満たします。
+以上から、流体の運動方程式は
+
+$$
+\frac{\partial T_M^{\mu \nu}}{\partial x^\nu} 
+= \frac{1}{c} F^{\mu \nu} j_\nu 
+$$
+
+のようになります。  
+これらを解こうとすると、4元電流ベクトル$$j_\nu$$をどのように与えるかが問題となります。
+電荷密度や電流密度は、本来は物質が担っているものです。
+個々の荷電粒子の運動や分布関数を用いた記述の場合には、4元電流ベクトルの表式は自明に与えることができます。
+流体的な記述の場合、物質がイオンと電子からなり、それぞれを流体とみなしてその数密度と速度を力学変数とすれば、これら変数の代わりに物質全体の密度・速度・電荷密度・電流密度を力学変数と取ることができます。
+それに対し、電磁流体力学では、電荷密度や電流密度を流体の運動を記述する力学変数とはみなさず、マクスウェル方程式
+
+$$
+\frac{4\pi}{c} j^\mu 
+= \frac{\partial F^{\mu \nu}}{\partial x^\nu} 
+$$
+
+に従って電磁場から決まる量であるとみなします。
+これは電流に対し、オームの法則がいつでも適用可能であると仮定することに対応します。
+ここでは、流体がそれらの電荷密度と電流密度を与えることができるだけの、十分な数密度を持っているという前提があることに注意しましょう。
+特に、電気伝導率が無限大で電気抵抗が無視できる理想磁気流体に対しては、この仮定は流体の固有系で電場が消えるという理想磁気流体力学条件
+
+$$
+\mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} 
+= \mathbf{0} 
+$$
+
+に帰着します。
+多くの場合には、理想磁気流体の仮定はよく成立しているため、以降では理想磁気流体に限り考えていくことにしましょう。
+(8)式の回転をとり、マクスウェル方程式(7)と組合せると
+
+$$
+\frac{\partial \mathbf{B}}{\partial t} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) 
+$$ -->
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[] <a href="https://amzn.to/4s9Z0KJ">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,67 @@
+I"D
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#相対論的な磁気流体の基礎方程式" id="markdown-toc-相対論的な磁気流体の基礎方程式">相対論的な磁気流体の基礎方程式</a>    <ol>
+      <li><a href="#基礎方程式の導出" id="markdown-toc-基礎方程式の導出">基礎方程式の導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="相対論的な磁気流体の基礎方程式">相対論的な磁気流体の基礎方程式</h1>
+
+<h2 id="基礎方程式の導出">基礎方程式の導出</h2>
+
+<p>物質と電磁場を合わせた全系のエネルギー運動量の保存則は</p>
+
+\[\frac{\partial}{\partial x^\nu} (T_M^{\mu \nu} + T_F^{\mu \nu}) 
+= 0 \tag{1}\]
+
+<p>のように書かれます。
+ここで、物質は完全流体であるとして</p>
+
+\[T_M^{\mu \nu} 
+= \frac{\varepsilon + P}{c^2} u^\mu u^\nu + P \eta^{\mu \nu} \tag{2}\]
+
+<p>とします。
+また流体を構成する粒子についての生成・消滅は考慮せず、粒子数が保存するとして、連続の式</p>
+
+\[\frac{\partial}{\partial x^\mu} (nu^\mu) 
+= 0 \tag{3}\]
+
+<p>が成立します。
+電磁場のエネルギー運動量テンソルは</p>
+
+\[T_F^{\mu \nu} 
+= \frac{1}{4\pi} \left( F^{\mu \lambda} F^\nu_{\; \lambda} - \frac{1}{4} \eta^{\mu \nu} F^{\lambda \rho} F_{\lambda \rho}\right) \tag{4}\]
+
+<p>です。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4t57unb">Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics”</a><br />
+[] <a href="https://amzn.to/4s9Z0KJ">高原文郎, “特殊相対論”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

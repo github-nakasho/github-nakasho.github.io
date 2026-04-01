@@ -370,7 +370,7 @@ $$
 
 ![](/assets/images/rmhd/relativistic_expansion_01.png)  
 相対論的な希薄波による効果を説明する図。左パネルは初期状態、右パネルは衝撃波と希薄波が伝播した後の様子を表す。
-希薄波を受けた物質は、波面に平行方向に加速される。  
+希薄波が通過した領域の流体は、波面に平行方向に加速される。  
 
 $$x<0$$の領域の物質は、$$x>0$$の物質を押し、周囲の物質中に衝撃波を形成します。
 そして$$x>0$$の物質の圧力が十分小さい場合には、$$x<0$$の物質中には希薄波が伝播していきます。
@@ -399,14 +399,29 @@ $$
 この依存性は自由膨張の場合と同じです。
 しかしもともと方向性を持った流れのローレンツ因子を、希薄波により増大させることができるという点で、相対論的ジェットなどへの応用上の興味深い効果となっています。
 
+## Aloy-Rezzollaモデル (Aloy & Rezzolla (2006))
+
+先程の希薄波の議論を用い、純粋に流体力学的な効果から$$\gamma \sim 10^2 - 10^3$$までジェットを加速するモデルを提案したのが、[Aloy & Rezzolla (2006)](https://iopscience.iop.org/article/10.1086/503608)です。
+
+![](/assets/images/rmhd/relativistic_expansion_02.png)  
+[Aloy & Rezzolla (2006)](https://iopscience.iop.org/article/10.1086/503608)より、ショートガンマ線バースト(short GRB)での流れの構造を示したもの。
+中心に恒星質量ブラックホールが存在し、その周りに降着トーラスが存在する。
+降着に伴ってジェットが発生すると、衝撃波(緑色)・接触不連続面(赤色)・希薄波(黄色)が生じる。  
+
+先程の希薄波による加速の議論から、接触不連続面(赤色)と希薄波(黄色)の間に存在する流体の、接触不連続面の接線方向の速度が増幅されます。
+希薄波伝播に伴うこの加速は、相対論的なリーマン問題(衝撃波管問題)を用いて容易に説明することができます。
+また、この希薄波による加速機構を磁気流体に拡張した研究もなされています ([Mizuno et al. (2009)](https://iopscience.iop.org/article/10.1088/0004-637X/690/1/L47))。
+
 ## 参考文献
 
 [1] [Blandford & McKee, 1976, "Fluid dynamics of relativistic blast waves"](https://pubs.aip.org/aip/pfl/article-abstract/19/8/1130/839278/Fluid-dynamics-of-relativistic-blast-waves?redirectedFrom=fulltext)  
-[2] [Rezzolla & Zanotti, "Relativistic Hydrodynamics"](https://amzn.to/4t57unb)  
-[3] [田中 秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
-[4] [高原文郎, "特殊相対論"](https://amzn.to/4s9Z0KJ)  
-[5] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
-[6] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4bm3VRs)  
-[7] [河合誠之, 浅野勝晃, "ガンマ線バースト"](https://amzn.to/4sMZt5t)  
+[2] [Aloy & Rezzolla, 2006, "A Powerful Hydrodynamic Booster for Relativistic Jets"](https://iopscience.iop.org/article/10.1086/503608)  
+[3] [Mizuno et al., 2009, Magnetohydrodynamic Effects in Propagating Relativistic Jets: Reverse Shock and Magnetic Acceleration](https://iopscience.iop.org/article/10.1088/0004-637X/690/1/L47)  
+[4] [Rezzolla & Zanotti, "Relativistic Hydrodynamics"](https://amzn.to/4t57unb)  
+[5] [田中 秀和, "宇宙流体力学"](https://jupiter.astr.tohoku.ac.jp/~hidekazu/lecture/astrophys_fluid_dyn.pdf)  
+[6] [高原文郎, "特殊相対論"](https://amzn.to/4s9Z0KJ)  
+[7] [福江純, 和田桂一, 梅村雅之, "宇宙流体力学の基礎"](https://amzn.to/4aNC7W1)  
+[8] [坂下志郎, 池内了, "宇宙流体力学"](https://amzn.to/4bm3VRs)  
+[9] [河合誠之, 浅野勝晃, "ガンマ線バースト"](https://amzn.to/4sMZt5t)  
 
 {% include adsense.html %} 

@@ -63,10 +63,12 @@ $$
 これの時間微分を考えると
 
 $$
+\begin{aligned}
 \frac{\partial U_\mathrm{field}}{\partial t}
-= \frac{1}{4\pi} ( \mathbf{E} \cdot \frac{\partial \mathbf{E}}{\partial t} + \mathbf{B} \cdot \frac{\partial \mathbf{B}}{\partial t}) 
-= \frac{1}{4\pi} \left( \mathbf{E} \cdot (c \nabla \times \mathbf{B}) + \mathbf{B} \cdot (-c \nabla \times \mathbf{E})\right) 
-= \frac{c}{4\pi} \left( \mathbf{E} \cdot (\nabla \times \mathbf{B}) - \mathbf{B} \cdot (\nabla \times \mathbf{E})\right)
+&= \frac{1}{4\pi} ( \mathbf{E} \cdot \frac{\partial \mathbf{E}}{\partial t} + \mathbf{B} \cdot \frac{\partial \mathbf{B}}{\partial t}) 
+= \frac{1}{4\pi} \left( \mathbf{E} \cdot (c \nabla \times \mathbf{B}) + \mathbf{B} \cdot (-c \nabla \times \mathbf{E})\right) \notag \\
+&= \frac{c}{4\pi} \left( \mathbf{E} \cdot (\nabla \times \mathbf{B}) - \mathbf{B} \cdot (\nabla \times \mathbf{E})\right)
+\end{aligned}
 $$
 
 一方で、以下のようなエネルギー密度流束
@@ -105,10 +107,12 @@ $$
 この式の時間微分を考えると
 
 $$
+\begin{aligned}
 \frac{\partial \mathbf{g}}{\partial t} 
-= \frac{1}{4\pi c} (\frac{\partial \mathbf{E}}{\partial t} \times \mathbf{B} + \mathbf{E} \times \frac{\partial \mathbf{B}}{\partial t} )
-= \frac{1}{4\pi c} ((c \nabla \times \mathbf{B}) \times \mathbf{B} + \mathbf{E} \times (-c \nabla \times \mathbf{E})) 
-= \frac{1}{4\pi} ((\nabla \times \mathbf{B}) \times \mathbf{B} - \mathbf{E} \times (\nabla \times \mathbf{E}))
+&= \frac{1}{4\pi c} (\frac{\partial \mathbf{E}}{\partial t} \times \mathbf{B} + \mathbf{E} \times \frac{\partial \mathbf{B}}{\partial t} )
+= \frac{1}{4\pi c} ((c \nabla \times \mathbf{B}) \times \mathbf{B} + \mathbf{E} \times (-c \nabla \times \mathbf{E})) \notag \\
+&= \frac{1}{4\pi} ((\nabla \times \mathbf{B}) \times \mathbf{B} - \mathbf{E} \times (\nabla \times \mathbf{E}))
+\end{aligned}
 $$
 
 となります。ここでこの式の$$i$$成分のみを書き出してみましょう。
@@ -160,6 +164,8 @@ $$
 
 とわかります。この式から、$$\mathbf{M}_j$$を電磁場の運動量の$$j$$成分の流束と解釈することができます。
 
+{% include adsense.html %}
+
 ## 保存則を表す式
 
 電荷保存則を表す式として、以下のようなものが書かれていることがあります。
@@ -180,5 +186,39 @@ $$
 
 $$S$$は体積$$V$$を囲う閉曲面、$$d\mathbf{S}$$はその閉曲面の面積要素ベクトル(大きさ$$dS$$、向きは面に垂直で外向き)をそれぞれ表します。この式は体積$$V$$内の全電荷の時間変化(左辺)が閉曲面を通過する電流密度ベクトルの総和(右辺)に等しいという事を意味しています。  
 この式は電磁気のみならず、流体力学でも出てきます。$$\rho$$を質量密度、$$\mathbf{j}=\rho \mathbf{v}$$を質量フラックスとすればこの式は流体力学における質量保存則を表す式となります。ちなみに、両辺を体積積分したときに保存則が導かれるような形の式を保存形式と呼びます。
+
+## 電磁場のエネルギー運度量テンソル
+
+相対論的に電磁場を考える場合、4元的な表現をするのが便利です。
+ここまでで、電磁場のエネルギー・運動量・エネルギー流束・運動量流束を求めてきました。
+エネルギーの流れは運動量に等価なので、ポインティングベクトルを$$c^2$$で割った量は、電磁場の運動量密度を表すことになります。
+これは(6), (8)式からもわかります。
+これらを4元的に表すには、2階の対称テンソルであるエネルギー運動量テンソル$$T^{\mu \nu}$$を用いることになります。
+$$T^{00}$$はエネルギー密度、$$T^{0i}$$はエネルギー流束密度を$$c$$で割った量、$$T^{i0}$$は運動量密度に$$c$$をかけた量、$$T^{ij}$$は運動量流束密度($$x^j$$軸を法線とする面を単位時間単位面積に通過する運動量の$$i$$成分)を表します。
+運度量流速密度は、3次元的にはマクスウェルの応力テンソルとしても知られます。
+これから、電磁場のエネルギー運動量テンソル$$T^{\mu \nu}_F$$は
+
+$$
+(T_F^{\mu \nu}) 
+= \left( \begin{array}{cc}
+U_\mathrm{field} & \mathbf{S}/c \\
+c\mathbf{g} & (M_{ij}) 
+\end{array}\right) 
+= \left( \begin{array}{cc}
+\frac{1}{8\pi} (E^2 + B^2) & \frac{1}{4\pi} (\mathbf{E} \times \mathbf{B}) \\
+\frac{1}{4\pi} (\mathbf{E} \times \mathbf{B}) & - \frac{1}{4\pi} (\mathbf{E} \mathbf{E} + \mathbf{B} \mathbf{B}) + \frac{1}{8\pi} (E^2 + B^2) \mathbf{I} 
+\end{array}\right) 
+\tag{12}
+$$
+
+のように書かれます。
+[電磁場テンソル](/astroelec/emtensor)を用いることで
+
+$$
+T^{\mu \nu}_F 
+= \frac{1}{4\pi} \left( F^{\mu \lambda} F^\nu{}_\lambda - \frac{1}{4} \eta^{\mu \nu} F^{\lambda \rho} F_{\lambda \rho} \right) \tag{13}
+$$
+
+のように書き直すこともできます。
 
 {% include adsense.html %} 

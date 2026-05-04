@@ -137,10 +137,10 @@ $$
 
 # 参考文献
 
-[1] 観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”  
-[2] 福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”  
-[3] S. Chandrasekhar, "Hydrodynamic and Hydromagnetic Stability"  
-[4] E. Priest, "Solar MagnetohydroDynamics"  
+[1] [観山 正見, 野本 憲一, 二間瀬 敏史, ”天体物理学の基礎 II”](https://amzn.to/3QsyTAt)  
+[2] [福江純, 和田圭一, 梅村雅之, ”宇宙流体力学の基礎”](https://amzn.to/3OIdAKQ)  
+[3] [S. Chandrasekhar, "Hydrodynamic and Hydromagnetic Stability"](https://amzn.to/4chMLWZ)  
+[4] [E. Priest, "Solar MagnetohydroDynamics"](https://amzn.to/4clnzNO)  
 [5] [Suzuki & Inutsuka, 2014, "MHD Simulations of Global Accretion Disks with Vertical Magnetic Fields"](https://iopscience.iop.org/article/10.1088/0004-637X/784/2/121)  
 
 {% include adsense.html %} 

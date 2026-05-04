@@ -283,7 +283,7 @@ $$
 
 # 参考文献
 
-谷口義明, 岡村定矩, 祖父江義明, "銀河 I"  
-[鶴剛, 宇宙物理学入門講義資料, 第3章: ビリアル定理と自己重力系](http://www-cr.scphys.kyoto-u.ac.jp/member/tsuru/data/lecture/AstrophysIntro2017_pdf/Section3_v2.pdf)  
+[1] [谷口義明, 岡村定矩, 祖父江義明, "銀河 I"](https://amzn.to/4dRDNkr)  
+[2] [鶴剛, 宇宙物理学入門講義資料, 第3章: ビリアル定理と自己重力系](http://www-cr.scphys.kyoto-u.ac.jp/member/tsuru/data/lecture/AstrophysIntro2017_pdf/Section3_v2.pdf)  
 
 {% include adsense.html %} 

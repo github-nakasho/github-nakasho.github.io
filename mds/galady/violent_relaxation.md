@@ -163,14 +163,14 @@ $$
 
 # 参考文献
 
-* [Lynden-Bell, 1967, "Statistical Mechanics of Violent Relaxation in Stellar Systems"](https://academic.oup.com/mnras/article/136/1/101/2602554)
-* [Frank van den Bosch, Lecture Note](http://www.astro.yale.edu/vdbosch/lecture10.pdf)
-* [激しい緩和, 天文学辞典](https://astro-dic.jp/violent-relaxation-2/)
-* 祖父江義明, 有本信雄, 家正則, "銀河II -銀河系 シリーズ現代の天文学"
-* [郷田直輝, "重力多体系での自己組織化"](http://www.jspf.or.jp/Journal/PDF_JSPF/jspf2011_07/jspf2011_07-441.pdf)
-* [Ascenso et al., 2009, "No evidence of mass segregation in massive young clusters"](https://www.aanda.org/articles/aa/full_html/2009/07/aa09886-08/aa09886-08.html)
-* [Evans & Oh, 2022, "Mass segregation in the Hyades cluster"](https://academic.oup.com/mnras/article-abstract/512/3/3846/6549577?redirectedFrom=fulltext&login=false)
-* [Kumamoto et al., 2020, "Merger rate density of binary black holes formed in open clusters"](https://academic.oup.com/mnras/article-abstract/495/4/4268/5847695?redirectedFrom=fulltext&login=false)
-* [Chatterjee et al., 2017, "Binary Black Holes in Dense Star Clusters: Exploring the Theoretical Uncertainties"](https://iopscience.iop.org/article/10.3847/1538-4357/834/1/68)
+[1] [Lynden-Bell, 1967, "Statistical Mechanics of Violent Relaxation in Stellar Systems"](https://academic.oup.com/mnras/article/136/1/101/2602554)  
+[2] [Frank van den Bosch, Lecture Note](http://www.astro.yale.edu/vdbosch/lecture10.pdf)  
+[3] [激しい緩和, 天文学辞典](https://astro-dic.jp/violent-relaxation-2/)  
+[4] [祖父江義明, 有本信雄, 家正則, "銀河II -銀河系 シリーズ現代の天文学"](https://amzn.to/4cwldvW)  
+[5] [郷田直輝, "重力多体系での自己組織化"](http://www.jspf.or.jp/Journal/PDF_JSPF/jspf2011_07/jspf2011_07-441.pdf)  
+[6] [Ascenso et al., 2009, "No evidence of mass segregation in massive young clusters"](https://www.aanda.org/articles/aa/full_html/2009/07/aa09886-08/aa09886-08.html)  
+[7] [Evans & Oh, 2022, "Mass segregation in the Hyades cluster"](https://academic.oup.com/mnras/article-abstract/512/3/3846/6549577?redirectedFrom=fulltext&login=false)  
+[8] [Kumamoto et al., 2020, "Merger rate density of binary black holes formed in open clusters"](https://academic.oup.com/mnras/article-abstract/495/4/4268/5847695?redirectedFrom=fulltext&login=false)  
+[9] [Chatterjee et al., 2017, "Binary Black Holes in Dense Star Clusters: Exploring the Theoretical Uncertainties"](https://iopscience.iop.org/article/10.3847/1538-4357/834/1/68)  
 
 {% include adsense.html %} 

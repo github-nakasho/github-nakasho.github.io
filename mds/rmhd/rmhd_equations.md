@@ -145,7 +145,7 @@ $$
 
 $$
 \frac{1}{c} \frac{\partial}{\partial t} \left\{ \frac{\varepsilon + P}{c} \gamma^2 \mathbf{v} + \frac{1}{4\pi} \mathbf{E} \times \mathbf{B}\right\} + \nabla \cdot \left[ \frac{\varepsilon + P}{c^2} \gamma^2 \mathbf{v}\mathbf{v} - \frac{1}{4\pi} (\mathbf{E} \mathbf{E} + \mathbf{B} \mathbf{B}) + \left\{ P +\frac{1}{8\pi} (E^2 + B^2) \right\} \mathbf{I} \right]
-= 0 \tag{13}
+= \mathbf{0} \tag{13}
 $$
 
 のようになります。
@@ -255,7 +255,7 @@ $$
 
 ## 参考文献
 
-[] [Rezzolla & Zanotti, "Relativistic Hydrodynamics"](https://amzn.to/4t57unb)  
-[] [高原文郎, "特殊相対論"](https://amzn.to/4s9Z0KJ)  
+[1] [高原文郎, "特殊相対論"](https://amzn.to/4s9Z0KJ)  
+[2] [小嶌康史, 小出眞路, 高橋労太, "ブラックホール宇宙物理の基礎"](https://amzn.to/4sjGgI0)  
 
 {% include adsense.html %} 

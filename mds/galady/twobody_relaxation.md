@@ -255,7 +255,7 @@ $$
 
 # 参考文献
 
-* 牧野淳一郎, ["重力多体系の数値計算"](https://jun-makino.sakura.ne.jp/papers/bussei-nbody/bussei-nbody.html)
-* 小久保英一郎, ["重力多体系の物理の基礎"](https://www.cfca.nao.ac.jp/files/kokubo-2016.pdf)
+[1] 牧野淳一郎, ["重力多体系の数値計算"](https://jun-makino.sakura.ne.jp/papers/bussei-nbody/bussei-nbody.html)  
+[2] 小久保英一郎, ["重力多体系の物理の基礎"](https://www.cfca.nao.ac.jp/files/kokubo-2016.pdf)  
 
 {% include adsense.html %} 

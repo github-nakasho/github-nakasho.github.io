@@ -18,7 +18,7 @@ nav_order: 13
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}
 
 # 球ベッセル、球ノイマン関数の公式導出
 
@@ -55,13 +55,13 @@ $$
 
 $$
 h_n^{(1)} 
-= (-1)^n z^n  \left( \frac{1}{z} \frac{d}{dz} \right)^n (\frac{\sin z}{z} - i\frac{\cos z}{z}) 
+= (-1)^n z^n  \left( \frac{1}{z} \frac{d}{dz} \right)^n \left( \frac{\sin z}{z} - i\frac{\cos z}{z} \right)
 = (-1)^{n+1} i z^n \left( \frac{1}{z} \frac{d}{dz} \right)^n \frac{e^{iz}}{z}
 $$
 
 $$
 h_n^{(2)} 
-= (-1)^n z^n  \left( \frac{1}{z} \frac{d}{dz} \right)^n (\frac{\sin z}{z} + i\frac{\cos z}{z}) 
+= (-1)^n z^n  \left( \frac{1}{z} \frac{d}{dz} \right)^n \left( \frac{\sin z}{z} + i\frac{\cos z}{z} \right) 
 = (-1)^{n} i z^n  \left( \frac{1}{z} \frac{d}{dz} \right)^n \frac{e^{-iz}}{z}
 $$
 
@@ -88,7 +88,7 @@ $$
 
 ## 球ハンケル関数が満たす漸化式
 
-簡単のため、微分演算子$$\hat{a} \equiv d/dz^2$$を定義ます。
+簡単のため、微分演算子$$\hat{a} \equiv d/dz^2$$を定義します。
 
 $$
 [z^2, \hat{a}] f(z^2) 
@@ -296,11 +296,11 @@ $$
 球ハンケル関数の定義より、球ベッセル関数・球ノイマン関数は球ハンケル関数の重ね合わせで表現されます。よってこれまで示した漸化式と微分方程式は球ベッセル関数・球ノイマン関数も満たします。よって
 
 $$
-\frac{d^2 j_n}{dz^2} + \frac{2}{z} \frac{d j_n}{dz} + (1-\frac{n(n+1)}{z^2}) j_n = 0 \tag{10}
+\frac{d^2 j_n}{dz^2} + \frac{2}{z} \frac{d j_n}{dz} + \left\{ 1-\frac{n(n+1)}{z^2} \right\} j_n = 0 \tag{10}
 $$
 
 $$
-\frac{d^2 y_n}{dz^2} + \frac{2}{z} \frac{d y_n}{dz} + (1-\frac{n(n+1)}{z^2}) y_n = 0 \tag{11}
+\frac{d^2 y_n}{dz^2} + \frac{2}{z} \frac{d y_n}{dz} + \left\{ 1-\frac{n(n+1)}{z^2} \right\} y_n = 0 \tag{11}
 $$
 
 をそれぞれ満たします。
@@ -309,12 +309,12 @@ $$
 
 $$
 z y_n \times (10) 
-= z y_n \frac{d^2 j_n}{dz^2} + 2 y_n \frac{d j_n}{dz} + z( 1- \frac{n(n+1)}{z^2}) y_n j_n = 0
+= z y_n \frac{d^2 j_n}{dz^2} + 2 y_n \frac{d j_n}{dz} + z \left\{ 1- \frac{n(n+1)}{z^2} \right\} y_n j_n = 0
 $$
 
 $$
 z j_n \times (11) 
-= z j_n \frac{d^2 y_n}{dz^2} + 2 j_n \frac{d y_n}{dz} + z( 1- \frac{n(n+1)}{z^2}) j_n y_n = 0
+= z j_n \frac{d^2 y_n}{dz^2} + 2 j_n \frac{d y_n}{dz} + z \left\{ 1- \frac{n(n+1)}{z^2} \right\} j_n y_n = 0
 $$
 
 これら2式の辺々を引き算すると
@@ -396,4 +396,4 @@ $$
 [1] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
 [2] [Wolfram MathWorld](http://mathworld.wolfram.com/)
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4785306297&linkId=08784cb9e894db3b10073c9a26267099"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137036&linkId=01c544b316312cd2cdb1d0c2cc3f2b14"></iframe><iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000055097&linkId=0811be52a39f024a8d134c252aa08975"></iframe>
+{% include adsense.html %}

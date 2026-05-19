@@ -120,4 +120,4 @@ $$
 
 [1] [寺沢寛一, "自然科学者のための数学概論"](https://amzn.to/3UCy5qJ)  
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4000054805&linkId=3aafb100f03359a1c4c6594fa5a4fa61"></iframe>
+{% include adsense.html %}

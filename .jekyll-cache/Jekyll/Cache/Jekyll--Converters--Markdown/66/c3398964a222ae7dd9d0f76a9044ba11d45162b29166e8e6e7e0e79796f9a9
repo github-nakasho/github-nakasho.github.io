@@ -1,0 +1,244 @@
+I"&
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#定常電流回路の例題" id="markdown-toc-定常電流回路の例題">定常電流回路の例題</a>    <ol>
+      <li><a href="#検流計用分流器" id="markdown-toc-検流計用分流器">検流計用分流器</a>        <ol>
+          <li><a href="#問題設定" id="markdown-toc-問題設定">問題設定</a></li>
+          <li><a href="#解答例" id="markdown-toc-解答例">解答例</a></li>
+        </ol>
+      </li>
+      <li><a href="#適当な回路の計算" id="markdown-toc-適当な回路の計算">適当な回路の計算</a>        <ol>
+          <li><a href="#問題設定-1" id="markdown-toc-問題設定-1">問題設定</a></li>
+          <li><a href="#解答例-1" id="markdown-toc-解答例-1">解答例</a></li>
+        </ol>
+      </li>
+      <li><a href="#抵抗のdelta接続とy接続との変換" id="markdown-toc-抵抗のdelta接続とy接続との変換">抵抗の\(\Delta\)接続とY接続との変換</a>        <ol>
+          <li><a href="#問題設定-2" id="markdown-toc-問題設定-2">問題設定</a></li>
+          <li><a href="#解答例-2" id="markdown-toc-解答例-2">解答例</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="定常電流回路の例題">定常電流回路の例題</h1>
+
+<p>ここでは、定常電流が流れている様々な回路についてまとめています。
+具体的な演習を行うことで、その扱い方を見ていきましょう。</p>
+
+<h2 id="検流計用分流器">検流計用分流器</h2>
+
+<h3 id="問題設定">問題設定</h3>
+
+<p>検流計の感度を色々と変えて使うため、検流計に次図のように抵抗を組合せ、測定しようとする電流の一部分だけが検流計を通るようにします。
+これを分流器 (galvanometer shunt) と呼びます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>このとき、検流計に全体の \(k \ (&lt;1)\) 倍の電流が流れるようにするには、\(R_1, R_2\) がどのようであれば良いでしょうか。
+すなわち \(I_g = k I_0\) となるような条件を求めてみましょう。
+ここで、検流計の内部抵抗は \(R_g\) とします。</p>
+
+<h3 id="解答例">解答例</h3>
+
+<p>抵抗 \(R_1, R_2\) を次のように分けた回路図を考えましょう。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>接続点A, Bでの電位を \(V_A, V_B\) とすると、AB間の電位差は</p>
+
+\[V 
+= V_A - V_B \tag{1}\]
+
+<p>となります。
+よって<a href="/circuits/steady_current#オームの法則">オームの法則</a>と<a href="/circuits/steady_current#定常電流電気回路とキルヒホッフの法則">キルヒホッフの電流則</a>より</p>
+
+\[I_0 
+= \frac{V}{R_1} + \frac{V}{R_2 + R_g} 
+= \frac{R_1 + R_2 + R_g}{R_1 (R_2 + R_g)} V \tag{2}\]
+
+\[I_g 
+= \frac{V}{R_2 + R_g} \tag{3}\]
+
+<p>この2式と \(I_g = k I_0\) とから</p>
+
+\[k 
+= \frac{R_1}{R_1 + R_2 + R_g} \tag{4}\]
+
+<p>と求まります。
+以上から、\(k\) は検流計を含む閉回路の全抵抗 \(R_1 + R_2 + R_g\) と \(R_1\) との比から決定されることがわかります。
+ここで \(R_1 + R_2\) を一定にしておけば、内部抵抗 \(R_g\) はどのような値であっても、\(k\) は \(R_1\) に比例します。
+すなわち、感度は \(R_1\) に比例します。
+上図に示したように分流器を作っておき、タップを変えることにより、\(R_1+R_2\) を一定に保ちながら、\(R_1\) が例えば \(1:3:10:30: \cdots\) と変わるようにしておけば、どの検流計をつけても感度を \(R_1\) と同じ比で変えることができます。
+この図の抵抗の回路を、万能分流器 (universal shunt) と呼びます。
+正感度の絶対値は \(R_g / (R_1 + R_2)\) によって変わります。
+通常用いられるアンメーター (ammeter)、ミリアンメーター (milli-ammeter) もやはり分流器を用い、電流の一部だけをコイルに流すようにしてあることが多くあります。</p>
+
+<h2 id="適当な回路の計算">適当な回路の計算</h2>
+
+<h3 id="問題設定-1">問題設定</h3>
+
+<p>次図のような回路を考えましょう。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>ここに電圧 \(V\) を加えたとき、抵抗 \(R\) の両端の電圧が \(V' = V / n\) かつ、全体の抵抗が \(R\) となるような、\(R_1, R_2\) を求めてみましょう。</p>
+
+<h3 id="解答例-1">解答例</h3>
+
+<p>まずは、この回路の合成抵抗を計算しましょう。
+\(R_2\) と \(R\) が直列、そしてそれと並列に \(R\) が接続されているます。
+この合成抵抗が \(R\) に一致するので</p>
+
+\[R 
+= \frac{1}{\frac{1}{R_1} + \frac{1}{R_2 + R}} 
+= \frac{1}{\frac{R_1 + R_2 + R}{R_1 (R_2 + R)}} 
+= \frac{R_1 (R_2 + R)}{R_1 + R_2 + R} \tag{5}\]
+
+<p>です。
+続いて、流れる全電流を \(I\)、\(R_2\) に流れる電流を \(I'\) とすると</p>
+
+\[\begin{align}
+&amp;V 
+= (I-I') R_1, \quad V 
+= I' (R_2 + R) \ \Longrightarrow \ 
+\frac{I'}{I-I'} 
+= \frac{1}{\frac{I}{I'}-1} 
+= \frac{R_1}{R_2 + R} \notag \\
+&amp;\Longrightarrow \ 
+\frac{I}{I'} 
+= \frac{R_2 + R}{R_1} + 1 
+= \frac{R_1 + R_2 + R}{R_1} \tag{6}
+\end{align}\]
+
+<p>のような関係にあるとわかります。
+ここで<a href="/circuits/steady_current#オームの法則">オームの法則</a>より \(V' = I'R, V = IR\) から</p>
+
+\[\frac{V'}{V} 
+= \frac{I'}{I} 
+= \frac{R_1}{R_1 + R_2 + R} 
+= \frac{1}{n} \ \Longrightarrow \ 
+(n-1) R_1 
+= R_2 + R \tag{7}\]
+
+<p>これを(5)式に代入すれば</p>
+
+\[R 
+= \frac{(n-1) R_1^2}{R_1 + (n-1) R_1} 
+= \frac{n-1}{n} R_1 \ \Longrightarrow \ 
+R_1 
+= \frac{n}{n-1} R \tag{8}\]
+
+<p>となります。
+これを再び(7)式に代入することで</p>
+
+\[R_2 
+= (n-1) R \tag{9}\]
+
+<p>のように、\(R_1, R_2\) を得ることができました。</p>
+
+<h2 id="抵抗のdelta接続とy接続との変換">抵抗の\(\Delta\)接続とY接続との変換</h2>
+
+<h3 id="問題設定-2">問題設定</h3>
+
+<p>次の図の(a), (b)はそれぞれ、\(\Delta\) 接続、Y接続と呼ばれています。
+この2つにおいて、A, B, C間の抵抗が等しいとしたとき、この2つの接続の変換則を導出しましょう。</p>
+
+<h3 id="解答例-2">解答例</h3>
+
+<p>まずAB間においては、<a href="/circuits/connection#抵抗の直列結合並列結合">抵抗の並列結合</a>より</p>
+
+\[R_a + R_b 
+= \frac{1}{\frac{1}{R_3} + \frac{1}{R_1 + R_2}} 
+= \frac{1}{\frac{R_1 + R_2 + R_3}{R_3 (R_1 + R_2)}} 
+= \frac{R_3 (R_1 + R_2)}{R_1 + R_2 + R_3} \tag{5}\]
+
+<p>BC間も同様に</p>
+
+\[R_b + R_c 
+= \frac{R_1 (R_2 + R_3)}{R_1 + R_2 + R_3} \tag{6}\]
+
+<p>最後にCA間は</p>
+
+\[R_c + R_a 
+= \frac{R_2 (R_3 + R_1)}{R_1 + R_2 + R_3} \tag{7}\]
+
+<p>のようになります。
+これら3つの式を足し合わせると</p>
+
+\[\begin{align}
+&amp;2(R_a + R_b + R_c) 
+= \frac{R_3 (R_1 + R_2) + R_1 (R_2 + R_3) + R_2 (R_3 + R_1)}{R_1 + R_2 + R_3} 
+= \frac{2 R_1 R_2 + 2 R_2 R_3 + 2 R_3 R_1}{R_1 + R_2 + R_3} \notag \\
+&amp;\Longrightarrow \ 
+R_a + R_b + R_c 
+= \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1 + R_2 + R_3} \tag{8}
+\end{align}\]
+
+<p>を得ます。
+(8)式から、例えば(6)式を引くことで</p>
+
+\[R_a 
+= \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1 + R_2 + R_3} - \frac{R_1 (R_2 + R_3)}{R_1 + R_2 + R_3} 
+= \frac{R_2 R_3}{R_1 + R_2 + R_3} 
+= \frac{\Delta}{R_1} \quad \left( \Delta \equiv \frac{R_1 R_2 R_3}{R_1 + R_2 + R_3}\right) \tag{9}\]
+
+<p>を得ます。
+同様に</p>
+
+\[R_b 
+= \frac{\Delta}{R_2}, \quad R_c 
+= \frac{\Delta}{R_3} \tag{10}\]
+
+<p>のように計算ができます。
+これにより、\(\Delta\)接続からY接続への変換を得ることができました。<br />
+これの逆変換も求めてみましょう。
+(9), (10)式より</p>
+
+\[R_a R_b + R_b R_c + R_c R_a 
+= \frac{\Delta^2}{R_1 R_2} + \frac{\Delta^2}{R_2 R_3} + \frac{\Delta^2}{R_3 R_1} 
+= \Delta^2 \frac{R_3 + R_1 + R_2}{R_1 R_2 R_3} 
+= \Delta \tag{11}\]
+
+<p>のように計算されます。
+この式と(9)式を用いれば</p>
+
+\[R_1 
+= \frac{\Delta}{R_a} 
+= \frac{Y}{R_a} \quad \left( Y = \Delta = R_a R_b + R_b R_c + R_c R_a \right) \tag{12}\]
+
+<p>のように、\(R_1\)を\(R_a, R_b, R_c\)のみで表現することができました。
+同様に</p>
+
+\[R_2 
+= \frac{Y}{R_b}, \quad R_3 
+= \frac{Y}{R_c} \tag{13}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/43fQKxC">高橋秀俊, “電磁気学”</a><br />
+[] <a href="https://amzn.to/495eZCl">松澤昭, “新しい電気回路＜上＞”</a><br />
+[] <a href="https://amzn.to/3RvAkyD">後藤憲一, 山崎修一郎, “詳解電磁気学演習”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,270 @@
+I"3
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#四端子回路網" id="markdown-toc-四端子回路網">四端子回路網</a>    <ol>
+      <li><a href="#二端子回路網" id="markdown-toc-二端子回路網">二端子回路網</a></li>
+      <li><a href="#四端子回路網-1" id="markdown-toc-四端子回路網-1">四端子回路網</a></li>
+      <li><a href="#相反定理" id="markdown-toc-相反定理">相反定理</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="四端子回路網">四端子回路網</h1>
+
+<h2 id="二端子回路網">二端子回路網</h2>
+
+<p>まずは二端子回路網についてまとめます。
+次の図のように、様々な回路網 (network) に起電力を与えた場合の電流について考えましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_01.png" alt="" /></p>
+
+<p>この図において、二端子 A, B に起電力 \(V\) の電池を両極に接続したときに流れる電流を \(I\) とすると</p>
+
+\[I 
+= G V \tag{1}\]
+
+<p>の関係が成立します。
+ここで \(G\) は、この回路の抵抗 \(R\) の逆数に相当する<a href="/circuits/connection#抵抗の直列結合並列結合">コンダクタンス</a>です。
+この図のように、一対の端子が外に出ている回路を二端子回路網 (two terminal network) と呼びます。</p>
+
+<h2 id="四端子回路網-1">四端子回路網</h2>
+
+<p>そして次の図に示すように、1つの回路網に2組 (合計4個の端子) が出ている回路を考えましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_02.png" alt="" /></p>
+
+<p>このような回路網を四端子回路網 (four terminal network) と呼びます。
+その左側端子間の電位差を \(V_1\)、右側端子間の電位差を \(V_2\) とするとき、左右の端子に流れる電流をそれぞれ \(I_1, I_2\) としましょう。
+この場合、(1)式を一般化した形として</p>
+
+\[\left\{ \begin{array}{l}
+I_1 
+= G_{11} V_1 + G_{12} V_2 \\
+I_2 
+= G_{21} V_1 + G_{22} V_2 
+\end{array} \right. \ \Longrightarrow \ 
+\left( \begin{array}{c}
+I_1 \\ 
+I_2 
+\end{array} \right) 
+= \left( \begin{array}{cc}
+G_{11} &amp; G_{12} \\ 
+G_{21} &amp; G_{22} 
+\end{array} \right) \left( \begin{array}{c}
+V_1 \\ 
+V_2 
+\end{array} \right) \tag{2}\]
+
+<p>という式が得られます。
+電流と電圧をそれぞれ二次元ベクトル \(\mathbf{I}, \mathbf{V}\) とし、この行列を \(\mathbf{G}\) とすることで</p>
+
+\[\mathbf{I} 
+= \mathbf{G} \mathbf{V} \tag{3}\]
+
+<p>と書けます。<br />
+ここで、先ほどの四端子回路について、左側 (入力側) に電池をつなぎ、右側 (出力側) に電流計を入れた場合を考えましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_03.png" alt="" /></p>
+
+<p>一般に電流計の内部抵抗は小さいため出力側を短絡したとみなして、出力側端子間の電位差 \(V_2\) をゼロに等しいとしましょう。
+すると(2)式より</p>
+
+\[I_2 
+= G_{21} V_1 \tag{4}\]
+
+<p>が成り立ちます。<br />
+次に、電流計の代わりに電圧計を入れたとしましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_04.png" alt="" /></p>
+
+<p>電圧計の内部抵抗は大きいため、出力側にはほとんど電流は流れません。
+すなわち \(I_2 = 0\) と考えられるため、(2)式より</p>
+
+\[0 
+= G_{21} V_1 + G_{22} V_2 \ \Longrightarrow \ 
+V_2 
+= - \frac{G_{21}}{G_{22}} V_1 \tag{5}\]
+
+<p>のような関係を得ることができます。
+一般には(2)式の形は、一番最初に示した四端子回路図の様に、出力側に任意の負荷 \(R\) を入れた場合に成立する式です。<br />
+(5)式は、入力側に起電力 \(V_1\) を与えた場合に、出力側に電流が流れないようにするために、(2)式で \(I_2 = 0\) として得られる起電力 \(V_2\) を出力側に加えたことに相当します。
+よって出力側が開いている状態は、次の図のように、そのとき自然に現れる電圧にちょうど等しい電圧を外から加えたときの状態と等しいと言えます。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_05.png" alt="" /></p>
+
+<p>(2)式の代わりに、\(V\) と \(I\) を交換した</p>
+
+\[\left\{ \begin{array}{l}
+V_1 
+= R_{11} I_1 + R_{12} I_2 \\
+V_2 
+= R_{21} I_1 + R_{22} I_2 
+\end{array} \right. \ \Longrightarrow \ 
+\mathbf{V} 
+= \mathbf{R} \mathbf{I} \tag{6}\]
+
+<p>も得ることができます。
+ここで</p>
+
+\[\mathbf{R} 
+= \mathbf{G}^{-1}
+= \frac{1}{\Delta} \left( \begin{array}{cc}
+G_{22} &amp; - G_{12} \\
+-G_{21} &amp; G_{11} 
+\end{array} \right) \quad (\Delta = G_{11} G_{22} - G_{12} G_{21}) \tag{7}\]
+
+<p>の関係にあります。
+この \(\mathbf{R}\) を抵抗行列 (resistance matrix) と呼びます。<br />
+この他にも、四端子回路に用いられる表現として、1次側の電圧と、2次側の電圧を電流により表した</p>
+
+\[\left\{ \begin{array}{l}
+V_1 
+= AV_2 - B I_2 \\
+I_1 
+= CV_2 - D I_2 
+\end{array} \right. \tag{8}\]
+
+<p>の形の式も用いられます。
+ここで出てきた係数 \(A, B, C, D\) と \(\mathbf{G}, \mathbf{R}\) との関係は、(2)式を \(V_1, I_1\) について解くことで求めることができます。</p>
+
+<h2 id="相反定理">相反定理</h2>
+
+<p>電気回路では、静電ポテンシャルと同様に、次のような相反定理 (reciprocity theorem, または可逆定理とも呼ぶ) が成り立ちます。
+任意の回路網を箱の中に入れたと考え、その中から2つの枝を引き出します。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_06.png" alt="" /></p>
+
+<p>そしてA分枝に \(I\) だけ起電力を与えた場合、B分枝に \(I\) だけ起電力を与えたときにA分枝に流れる電流に等しくなります。
+ここでさらに<a href="/circuits/connection#回路における重ね合わせの原理">重ね合わせの原理</a>を用いれば、起電力として任意の値を与えたときにも、この定理が成り立つことがわかります。
+数式的には、この図を四端子の図と見た場合に、(2)式において</p>
+
+\[G_{12} 
+= G_{21} \tag{9}\]
+
+<p>が成り立つことを意味します。<br />
+また回路網の勝手な4点に端子をつけて、次の図のようにそれだけを箱の外に引き出してきたとしましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_07.png" alt="" /></p>
+
+<p>相反定理は「点aから入ってbに出る電流 \(I\) によって残りの端子c, d間に生じる電位差は、逆にcから入ってdから出る電流 \(I\) が端子a, b間に生じさせる電位差に等しい」とも表現することができます。<br />
+これは、四端子について言えば</p>
+
+\[R_{12} 
+= R_{21} \tag{10}\]
+
+<p>が成り立つことを意味します。
+\((R_{ij})\) と \((G_{ij})\) は(7)式の関係で結ばれているため、(9)式と(10)式は同じことを言い換えたものになります。
+\(R_{12} = R_{21}\) が成り立てば、必ず \(G_{12} = G_{21}\) も成り立つことが証明されます。<br />
+さらに別の表現として「aから入ってbから出る電流 \(I\) が他の分枝Bに \(k\) だけの電流を生じさせるならば、分枝Bに \(I\) だけの起電力を加えたときにa, b間に \(-k\) だけの電位差を生じさせることに等しい」という形にも言えます (次図参照。)</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_08.png" alt="" /></p>
+
+<p>これら3つの定理を証明するために、次の図について考えましょう。</p>
+
+<p><img src="/assets/images/circuits/four_terminal_network_09.png" alt="" /></p>
+
+<p>ここで(1), (2)の添え字が肩についた量は、同じ四端子の2つの状態を表したものです。
+すると、これら3つの定理はいずれも</p>
+
+\[E_1^{(1)} I_1^{(2)} + E_2^{(1)} I_2^{(2)} 
+= E_1^{(2)} I_1^{(1)} + E_2^{(2)} I_2^{(1)} \tag{11}\]
+
+<p>の形に書けます。
+この式の証明には、回路網の全てのつなぎ目に外から電流が入ってくる状況を考えます。
+それらの電流を \(I_1, I_2, \dots, I_n\) としますが、1つ目のつなぎ目だけは接地し、そこの電流は考えないこととします (その部分に流れる電流は他の部分の電流の和の符号を反転したものに等しい。)
+それらのつなぎ目の接地点から見た電位を \(V_1, V_2, \dots, V_n\) とすると</p>
+
+\[I_i^{(1)} 
+= \sum_k \frac{V_i^{(1)} - V_k^{(1)}}{R_{ik}} \tag{12}\]
+
+\[I_i^{(2)} 
+= \sum_k \frac{V_i^{(2)} - V_k^{(2)}}{R_{ik}} \tag{13}\]
+
+<p>が成り立ちます。
+ここで \(R_{ik}\) は、点 \(i, k\) とを直接結んだ抵抗で、\(i, k\) が直接結ばれていない場合には \(1/R_{ik}=0\) にとります。
+そうすると当然</p>
+
+\[R_{ik} 
+= R_{ki} \tag{14}\]
+
+<p>が成り立ちます。
+そこでこれに対して \(\sum V_i^{(2)} I_i^{(1)}\) を計算しましょう。</p>
+
+\[\sum_i V_i^{(2)} I_i^{(1)} 
+= \sum_i \sum_k V_i^{(2)} \frac{V_i^{(1)} - V_k^{(1)}}{R_{ik}} 
+= \sum_{i, k} \frac{V_i^{(1)} V_i^{(2)} - V_i^{(2)} V_k^{(1)}}{R_{ik}} \tag{15}\]
+
+<p>第二項において</p>
+
+\[\sum_{i, k} \frac{V_i^{(2)} V_k^{(1)}}{R_{ik}} 
+\underbrace{=}_{i, kの入れ替え} \sum_{k, i} \frac{V_k^{(2)} V_i^{(1)}}{R_{ki}} 
+\underbrace{=}_{(14)} \sum_{k, i} \frac{V_k^{(2)} V_i^{(1)}}{R_{ik}} \tag{16}\]
+
+<p>が成り立つので</p>
+
+\[\sum_i V_i^{(2)} I_i^{(1)} 
+= \sum_{i, k} \frac{V_i^{(1)} V_i^{(2)} - V_k^{(2)} V_i^{(1)}}{R_{ik}} 
+= \sum_i V_i^{(1)} \sum_k \frac{V_i^{(2)} - V_k^{(2)}}{R_{ik}} 
+\underbrace{=}_{(13)} \sum_i V_i^{(1)} I_i^{(2)} \tag{17}\]
+
+<p>を得ます。
+このようにして、全てのつなぎ目に外から電流が入るときに(17)式が成り立つことが証明されました。<br />
+この式において、\(I_i^{(1)}, I_i^{(2)}\) などの中にゼロとなることがあっても、もちろんこの式は成立するはずです。
+それでは、先ほどの四端子の場合について戻りましょう。
+\(i = 1, 2, 3, 4\) 以外の \(I_i^{(1)}, I_i^{(2)}\) は全てゼロであると考えます。
+また</p>
+
+\[I_3^{(1)} 
+= - I_1^{(1)}, \quad 
+I_4^{(1)} 
+= - I_2^{(1)}, \quad 
+I_3^{(2)} 
+= - I_1^{(2)}, \quad 
+I_4^{(2)} 
+= - I_2^{(2)} \tag{18}\]
+
+<p>のように、端子1から入った電流は端子3から出ていき、端子2から入った電流は端子4から出ていくとします。
+この場合、(17)式は</p>
+
+\[(V_1^{(2)} - V_3^{(2)}) I_1^{(1)} + (V_2^{(2)} - V_4^{(2)}) I_2^{(1)} 
+= (V_1^{(1)} - V_3^{(1)}) I_1^{(2)} + (V_2^{(1)} - V_4^{(1)}) I_2^{(2)} \tag{19}\]
+
+<p>のようになります。
+ここで \(V_1 - V_3 = E_1, V_2 - V_4 = E_2\) のようにおけば</p>
+
+\[E_1^{(2)} I_1^{(1)} + E_2^{(2)} I_2^{(1)} 
+= E_1^{(1)} I_1^{(2)} + E_2^{(1)} I_2^{(2)} \tag{20}\]
+
+<p>となり、(11)式が証明されました。<br />
+ここで例えば \(I_1^{(1)}=I_2^{(2)}=I, I_1^{(2)} = I_2^{(1)} = 0\) とおけば、\(E_1^{(2)} = E_2^{(1)}\) となり、これは相反定理の第二表現 (10)式に一致します。<br />
+そして \(E_1^{(1)}=E_2^{(2)}=E, E_1^{(2)} = E_2^{(1)} = 0\) とおけば、\(E_1^{(2)} = E_2^{(1)}\) となり、これは相反定理の第一表現 (9)式になります。
+さらにまた \(I_1^{(1)}=E_2^{(2)} = I, E_2^{(1)} = I_1^{(2)} = 0\) とすれば、(20)式右辺はゼロとなり、\(E_1^{(2)} + I_2^{(1)} = 0\) を得ます。これは相反定理の第三表現にほかなりません。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/43fQKxC">高橋秀俊, “電磁気学”</a><br />
+[2] <a href="https://amzn.to/3RvAkyD">後藤憲一, 山崎修一郎, “詳解電磁気学演習”</a><br />
+[3] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -20,9 +20,7 @@ nav_order: 4
 
 {% include adsense.html %} 
 
-# 四端子回路網
-
-
+# 四端子回路網と相反定理
 
 ## 二端子回路網
 

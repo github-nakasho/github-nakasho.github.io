@@ -509,7 +509,7 @@ $$
 
 ## 参考文献
 
-[1] 観山, 野本, 二間瀬, "天体物理学の基礎II"  
+[1] [観山, 野本, 二間瀬, "天体物理学の基礎II"](https://amzn.to/49vtPCl)  
 [2] [Fabian et al., 2003, "A deep Chandra observation of the Perseus cluster: shocks and ripples"](https://doi.org/10.1046/j.1365-8711.2003.06902.x)  
 [3] [海老沢, 2014年度新潟大学理学部物理学科"プラズマ物理学特論"講義ノート](https://www.isas.jaxa.jp/home/ebisawalab/ebisawa/TEACHING/2014Niigata.pdf)  
 [4] [鶴, "宇宙物理入門"講義資料, 第8章: 熱制動輻射と銀河・銀河団の高温プラズマ](http://www-cr.scphys.kyoto-u.ac.jp/member/tsuru/data/lecture/AstrophysIntro2017_pdf/Section8_v1.pdf)  

@@ -23,3 +23,15 @@ last_edit_time_format: "%b %e %Y at %I:%M %p"
 color_scheme: for_astrophysics
 gems:
   - jekyll-amazon
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: important
+    color: blue
+  new:
+    color: green
+  note:
+    color: purple
+  warning:
+    color: red

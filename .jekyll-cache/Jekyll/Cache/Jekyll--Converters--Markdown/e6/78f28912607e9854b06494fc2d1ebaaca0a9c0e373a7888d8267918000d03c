@@ -1,0 +1,379 @@
+I"Ac
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#熱起電力とその諸現象" id="markdown-toc-熱起電力とその諸現象">熱起電力とその諸現象</a>    <ol>
+      <li><a href="#ゼーベック効果" id="markdown-toc-ゼーベック効果">ゼーベック効果</a></li>
+      <li><a href="#ペルチェ効果" id="markdown-toc-ペルチェ効果">ペルチェ効果</a></li>
+      <li><a href="#トムソン効果" id="markdown-toc-トムソン効果">トムソン効果</a></li>
+      <li><a href="#補遺-トムソンの第一関係式-15-の熱力学的導出" id="markdown-toc-補遺-トムソンの第一関係式-15-の熱力学的導出">補遺: トムソンの第一関係式 (15) の熱力学的導出</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="熱起電力とその諸現象">熱起電力とその諸現象</h1>
+
+<h2 id="ゼーベック効果">ゼーベック効果</h2>
+
+<p>2種類の金属線の両端を繋いで閉回路とし、その2つの接点を異なる温度に保ちます。
+するとこの閉回路に電流が流れることが知られています。
+これは熱エネルギーを直接的に電気エネルギーに変換する方法として知られ、これをゼーベック効果 (Seebeck effect) と呼びます。
+またこのゼーベック効果を起こす装置のことを熱電対と呼びます。
+ゼーベック効果が発見されたのは1821年のことですが、時代は進み、熱電対の改良も多数行われてきました。
+近年では半導体で作製された熱電対により、かなり高効率で熱を電気エネルギーに変換できるようになりました。
+これは、例えば小型ラジオの電源などに応用されています。
+廃熱を発電に用いることが可能であるなどの利点から、環境にやさしい発電技術としても注目を集めています。<br />
+金属内部に温度勾配が存在すると、高温度側から低温度側へ熱 (すなわちエネルギー) が流れます。
+しかし、これと同時に高温度側から低温度側へ電子の実質の流れが生じ、電流が生まれます。
+これを熱電流と呼びます。
+このときにもし回路が開いていたり、電流が流れにくかったりすると、電荷がたまって逆方向へ電位差が生じます。
+この電位差が、先ほど説明した熱起電力です。<br />
+しかし、一種類の金属だけのときには、この熱起電力は持続的な電流を生じさせることができません。
+この場合には、一般に次のトムソンの定理が成立します。</p>
+
+<p class="highlight">トムソンの定理<br />
+一種の金属においては、場所によって温度が変わっていても電流は生じない。</p>
+
+<p>これを詳しく見てみましょう。
+金属内の電位を \(V\)、温度を \(T\) とします。
+両者の勾配の比が温度だけの関数 \(e(T)\) に等しいときに釣り合います。
+すなわち電流が流れないための条件は</p>
+
+\[\nabla V 
+= e(T) \nabla T \tag{1}\]
+
+<p>と書くことができます。
+ここで、次のように定義される関数 \(\psi (T)\) を定義しましょう。</p>
+
+\[\psi 
+= \int e(T) dT \quad \mathrm{or} \quad
+e(T) 
+= \frac{d\psi}{dT} \tag{2}\]
+
+<p>すると</p>
+
+\[e(T) \nabla T 
+= \frac{d\psi}{dT} \nabla T 
+= \nabla \psi \tag{3}\]
+
+<p>のように変形できます。
+(1)式より</p>
+
+\[\nabla V 
+= \nabla \psi \tag{4}\]
+
+<p>のようになります。
+この関係は</p>
+
+\[V 
+= \psi + (定数) \tag{5}\]
+
+<p>とすれば満足されます。
+すなわち、このような電位分布が生じれば、完全に熱起電力と実際の電位の勾配が釣り合い、電流が流れないことがわかります。<br />
+ここまでの議論から単一の金属について扱っている限り、たとえその内部に熱起電力が発生したとしても、これを実際に観測するすることは (金属内の \(V\) を直接測定するのは困難なことから) 不可能です。<br />
+しかし、2つ以上の異なる金属があり、熱起電力 (先ほどの関数 \(\psi\)) が物質により異なるながらば、これを観測することができるようになります。<br />
+上述のように、単一の金属の熱起電力は測定できません。
+そのため適当な金属を標準とし、その金属は熱起電力を持たない (すなわち \(e(T)=0\)とする) と約束することができます。
+実際の実験では、後述の<a href="/circuits/thermo_electromotive_force#トムソン効果">トムソン効果</a>が小さい鉛 (Pb) をこの標準金属として用います。<br />
+そこで、この鉛をプローブとして、他の金属中の熱起電力を測定することを考えてみましょう。
+今、一本の金属棒の両端 A, B の温度が \(T_\mathrm{A}, T_\mathrm{B}\) であるとします。
+その両端に次図のように鉛の導線の端をあて、電圧計の目盛りを読みます。</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_01.png" alt="" /></p>
+
+<p>この場合、電圧計のふれとして読まれるのは、(電圧計の抵抗が高く、電流が流れたための誤差はなかったと仮定しても) A, B 両点間の絶対的な電位差ではありません。
+仮に鉛のプローブを接触させることによる温度の変化が無視できるとしましょう。
+両方の接触点はそれぞれ \(T_\mathrm{A}, T_\mathrm{B}\) の温度にあるため、鉛側に温度勾配が発生し、その熱起電力が測定に重なることになります。
+そこで、やはり測定されるのは、鉛との起電力の差となります。
+あらかじめ鉛を基準にしており、これは鉛の熱起電力はゼロであると決めたことに対応します。
+このようにすることで、正しい熱起電力が測定できることになります。
+熱起電力の測定には、どのような材料をプローブとして用いるかにより変化することに注意が必要です。<br />
+さて、このようにして2つの金属で作った回路の一部分を切断したものの各点の電位を測定していきます (次図参照。)</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_02.png" alt="" /></p>
+
+<p>ただし、切断された部分の両側の温度は等しいとします。
+回路の導線に沿ってとった座標を \(x\) とすると、電流が流れないときには</p>
+
+\[\frac{dV}{dx} 
+= e(T) \frac{dT}{dx} 
+= \frac{d\psi}{dx} \tag{6}\]
+
+<p>が成り立ちます。
+しかし \(e(T)\) は金属の種類により違うため、金属 A, B での値をそれぞれ \(e_\mathrm{A} (T), e_\mathrm{B} (T)\) のように書くことにします。
+すると金属 A, B での \(\psi\) が</p>
+
+\[\psi_\mathrm{A} (T) 
+= \int_{T_0} e_\mathrm{A} (T) dT, \quad 
+\psi_\mathrm{B} (T) 
+= \int_{T_0} e_\mathrm{B} (T) dT \tag{7}\]
+
+<p>のように定義されます。
+すると点 QQ’ 間の電位差は</p>
+
+\[\begin{align}
+V(\mathrm{Q}) - V(\mathrm{Q}') 
+&amp;= \int_P^Q \frac{dV}{dx} dx + \int_{P'}^P \frac{dV}{dx} dx + \int_{Q'}^{P'} \frac{dV}{dx} dx \notag \\
+&amp;= \int_P^Q \frac{d\psi_\mathrm{A}}{dx} dx + \int_{P'}^P \frac{d\psi_\mathrm{B}}{dx} dx + \int_{Q'}^{P'} \frac{d\psi_\mathrm{A}}{dx} dx \notag \\
+&amp;= \psi_\mathrm{A} (T_\mathrm{Q}) - \psi_\mathrm{A} (T_\mathrm{P}) + \psi_\mathrm{B} (T_\mathrm{P}) - \psi_\mathrm{B} (T_\mathrm{Q'}) + \psi_\mathrm{A} (T_\mathrm{P'}) - \psi_\mathrm{A} (T_\mathrm{Q'}) \notag \\
+&amp;\underbrace{=}_{T_\mathrm{Q} = T_\mathrm{Q'}} \{\psi_\mathrm{A} (T_\mathrm{P'}) - \psi_\mathrm{A} (T_\mathrm{P})\} - \{\psi_\mathrm{B} (T_\mathrm{P'}) - \psi_\mathrm{B} (T_\mathrm{P})\} \tag{8}
+\end{align}\]
+
+<p>のように計算されます。<br />
+ここで Q と Q’ を繋げば、1つの閉じた回路ができます。
+するとこの回路には \(E = V(\mathrm{Q}) - V(\mathrm{Q}')\) に相当する起電力が働き、\(I = E/R\) の電流が持続的に流れることになります。
+これを熱電流と呼びます。
+このような回路を熱電対 (thermo-junction or thermocouple) と呼びます。
+熱電対の起電力は</p>
+
+\[E 
+= \{\psi_\mathrm{A} (T_\mathrm{P'}) - \psi_\mathrm{A} (T_\mathrm{P})\} - \{\psi_\mathrm{B} (T_\mathrm{P'}) - \psi_\mathrm{B} (T_\mathrm{P})\} 
+= \int_{T_\mathrm{P}}^{T_\mathrm{P'}} \{e_\mathrm{A} (T) - e_\mathrm{B} (T)\} dT \tag{9}\]
+
+<p>で与えられます。<br />
+導体の熱起電力を特徴付ける \(e(T)\) を、この物質の熱電能 (thermoelectric power) と呼びます。
+この量は通常、温度の1次式で表されることが知られています。</p>
+
+\[e(T) 
+= \alpha + \beta T \tag{10}\]
+
+<p>\(\alpha, \beta\) を、熱起電力係数と呼びます。
+下図は、種々の金属についての熱電能を温度の関数としてプロットしたものです。</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_03.png" alt="" /><br />
+図は<a href="https://amzn.to/43fQKxC">高橋秀俊, “電磁気学”</a>より。描画されている温度領域において、Pbがほぼゼロの値を維持していることが分かる。</p>
+
+<p>したがってこれを積分して得られる熱起電力は、接点の温度の2次式で表されます。</p>
+
+\[V_\mathrm{AB} 
+= \alpha (T - T_0) + \frac{\beta}{2} (T^2 - T_0^2) \tag{11}\]
+
+<p>ここまでの議論から分かるように、熱起電力は金属内部に関する現象で、接合点そのものに関する現象ではありません。
+したがって接合点の状態 (例えばその部分だけにある不純物など) は何も影響しません。
+にもかかわらず、起電力に対して依存性を持つのは、接合点の温度であることがわかります。<br />
+熱電対は、温度の測定に広く用いられています。
+この目的に適する材料として、銅-コンスタンタン・鉄-コンスタンタン・クロメル-アルメル・白金-白金ロジウムなどの組合せが用いられています。
+また、薄い箔で作られた熱電対を煤などで黒くしたものは、輻射 (主に熱線) を検出するのに用いられます。
+これには熱電能の大きな物質が望ましいとされます。<br />
+後者のような目的には、特に半導体の熱電対が適しています。
+最近、その方向の研究が進み、\(\mathrm{Bi}_2 \mathrm{Te}_3\) などの半導体を用い、非常に高い熱起電力を有するものが作製されるようになってきました。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="ペルチェ効果">ペルチェ効果</h2>
+
+<p><a href="/circuits/thermo_electromotive_force#ゼーベック効果">熱起電力</a>は、導体中に温度勾配が存在する場合に、エネルギーの流れ (熱伝導) が起こると同時に電荷の流れが誘起される現象です。
+これの逆効果として、電流が流れると同時にエネルギー流 (熱流) が起こる現象が考えられ、実際に観測されています。
+この現象について考えていきましょう。<br />
+今、電流 \(I\) が導線に流れ、同時に導線の断面を通って</p>
+
+\[\frac{dQ}{dt} 
+= \Pi I \tag{12}\]
+
+<p>だけの熱エネルギーが流れるものとします。
+ただし、ここには温度勾配は存在しないとします。
+この \(\Pi\) は導体に固有の量であり、温度 \(T\) の関数でもあります。<br />
+そこで次図のように、熱電対を考えたときと同じように、二種の導体からなる回路を考えましょう。</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_04.png" alt="" /></p>
+
+<p>これに外部から起電力を加え、電流 \(I\) を流したとすると、導体AとBにはそれぞれ</p>
+
+\[\frac{dQ}{dt} 
+= \Pi_\mathrm{A} I, \quad \frac{dQ}{dt} 
+= \Pi_\mathrm{B} I \tag{13}\]
+
+<p>のようなエネルギー流が発生します。
+ここで、2つの金属の接合点では</p>
+
+\[\frac{dQ_\mathrm{AB}}{dt} 
+= (\Pi_\mathrm{A}-\Pi_\mathrm{B}) I \tag{14}\]
+
+<p>だけ、熱エネルギーの流れが不連続に変化することになります。
+そして余分になった分は、接合点から発生した熱として外部に放出されて観測されることになります。
+同様に、もう一方の接合点では \(-(\Pi_\mathrm{A} - \Pi_\mathrm{B}) I\)だけの熱が発生します。
+\((\Pi_\mathrm{A}-\Pi_\mathrm{B}) I\) が正 (発熱)の場合、もう一方の接合点では負となり、これは吸熱されることに対応します。
+したがって、電流をこのような熱電対に外から流すと、接合点では熱が発生し、もう一方では熱が吸収されることになります。<br />
+このように、熱が発生・吸収する現象を、ペルチェ効果 (Peltier effect) と呼びます。
+またこれにより出入りする熱をペルチェ熱、\(\Pi\) をペルチェ係数などと呼びます。<br />
+このペルチェ効果と<a href="/circuits/thermo_electromotive_force#ゼーベック効果">熱起電力 (ゼーベック効果)</a>は、明らかにお互いに逆の効果であり、密接に関係しています。
+すなわち、2種類の物質A, B間のペルチェ係数 \(\Pi_\mathrm{AB}\) と熱電能 \(e_\mathrm{AB}\) との間には、次のような関係にあることが、実験から判明しています。</p>
+
+\[\frac{\Pi_\mathrm{AB}}{T} 
+= e_\mathrm{AB} \tag{15}\]
+
+<p>これをトムソンの第一関係式と呼びます。<br />
+この関係式は、熱伝導または電気抵抗が無視できれば、熱力学的に証明することが可能です。
+つまり、この2つの現象は熱から電気へ、そしてその逆の、可逆的なエネルギー変換と考えることができます。
+したがって、熱力学第二法則が適用できるのです。
+しかし実際は熱伝導率 \(\kappa\)、電気抵抗率 \(\rho\) が共に大きな値となります。
+つまり、次の無次元量</p>
+
+\[k 
+= \sqrt{\frac{T}{\rho \kappa}} e \tag{16}\]
+
+<p>が、1に比べて普通はかなり小さな量となり、このときは熱力学第二法則を適用することはできなくなります。
+それにもかかわらず、実際には(15)式は正確に成り立つことが知られています。
+この式を理論的に証明することに成功したのはオンサーガーであり、(15)式はオンサーガーの相反関係 (Onsager reciprocal relations) と呼ばれるものの一例となっています。<br />
+熱電対の2つの接点に温度差を与え、熱起電力により電流が流れたとしましょう。
+するとその電流のペルチェ効果により、いつも温度の高い接点側では熱が吸収され、温度の低い接点では熱が発生します。
+すなわちペルチェ効果は、両接点間の熱の運搬を助け、見かけ上は熱伝導度が増加したようになります。
+実は(16)式の \(k\) の2乗は、このようにしてペルチェ効果で運ばれる熱が、全体の熱移動の中で占める割合を表しています。<br />
+ペルチェ効果を冷却目的で使用することは、昔から考えられてきましたが、普通の材料ではジュール熱の方が大きいために実用になりませんでした。
+最近になり、優れた半導体熱電対材料が開発され、両接点間に数十度の温度差を作ることが可能になりました。
+一般にこの冷却のためには、電気抵抗は小さく、また熱伝導により冷たさが失われることが少ないことが必要になります。
+これはすなわち、(16)式の \(k\) の値が大きいことを要求します。
+この量は、熱力学的に1より決して大きくなり得ない量ですが、これを大きくするような組合せが開発されてきました。</p>
+
+<h2 id="トムソン効果">トムソン効果</h2>
+
+<p><a href="/circuits/thermo_electromotive_force#ペルチェ効果">ペルチェ効果</a>と関連した現象に、トムソン効果があります。
+これは1つの物質中で、温度勾配がある場所に電流を流すと、熱の発生・吸収が起こるというものです。
+この現象はケルビン卿 (トムソンが男爵の爵位を得たことにより授けられた名前) が理論的に推定したのちに、実験により証明したものです。
+この測定は、ジュール熱の派生があるため、一般には困難を極めます。
+しかし電流の向きを逆にすると、熱の発生・吸収が逆転するため、ジュール熱と区別することができます。<br />
+具体的に、この現象を見ていきましょう。
+導線の高音側から低温側へ電流が流れる場合、電流の流れる向きに \(x\) 座標を取ることにします。
+導線上の2点 \(x\) と \(x + dx\) との間の部分に外から入るエネルギーは、電気的なエネルギーの流入と、ペルチェ効果による熱流によるものより</p>
+
+\[dQ 
+= - \frac{dV}{dx} dx I + \frac{d}{dx} (\Pi I) dx \tag{17}\]
+
+<p>と書けます。
+さらに、ゼーベック効果を考慮すると</p>
+
+\[- \frac{dV}{dx} 
+= \frac{\rho}{S} I - e \frac{dT}{dx} \tag{18}\]
+
+<p>となります。
+ここで \(\rho\) は導線の抵抗率、\(S\) は導線の断面積です。
+また \(I\) は \(x\) に依存しない定数と考えて良いため</p>
+
+\[\frac{d}{dx} (\Pi I) 
+= \frac{d\Pi}{dx} I 
+= \frac{dT}{dx} \frac{d\Pi}{dT} I \tag{19}\]
+
+<p>(18), (19)式を(17)式に代入することで</p>
+
+\[dQ 
+= \frac{\rho}{S} I^2 dx - e \frac{dT}{dx} I dx + \frac{dT}{dx} \frac{d\Pi}{dT} I dx 
+= \left\{ \frac{\rho}{S} I^2 + \left( \frac{d\Pi}{dT} - e\right) \frac{dT}{dx} I \right\} dx \tag{20}\]
+
+<p>のようになります。
+最右辺の第一項はジュール熱、第二項は\(I \frac{dT}{dx}\) に比例し、これがトムソン効果です。</p>
+
+\[\Theta 
+= \frac{d\Pi}{dT} -e \tag{21}\]
+
+<p>とおき、これをトムソン係数、さらに(21)式をトムソンの第二関係式と呼びます。<br />
+ペルチェ係数 \(\Pi\)、熱電能 \(e\)はいずれも、二種の金属のついを用いて初めて測定できるものです。
+したがって、何か特別な金属を標準に取り、それに対して相対的に決定するほかありませんでした。
+しかし、トムソン係数 \(\Theta\) は単一の金属について測定することが可能な量です。
+これがわかれば、トムソンの二つの関係式 (15), (21) より</p>
+
+\[\Theta 
+= \frac{d}{dT} (T e) - e 
+= T \frac{de}{dT} \ \Longrightarrow \ 
+e 
+= \int_0^T \frac{\Theta}{T} dT \tag{22}\]
+
+<p>のように、熱電能 \(e\) を絶対的に求めることができます。
+しかし実際には、\(\Theta\) 正確に決定することは困難なため、\(e\) をこのようにして絶対的に決定するのことも困難となります。
+鉛は \(\Theta\) が小さいことが知られているため、これを熱起電力を測定するための基準金属に取ることが妥当な測定手法です。</p>
+
+<h2 id="補遺-トムソンの第一関係式-15-の熱力学的導出">補遺: トムソンの第一関係式 (15) の熱力学的導出</h2>
+
+<p class="note">この部分は、<a href="https://amzn.to/4ua5VUh">“大学演習 熱学・統計力学”</a>を写経したものです。</p>
+
+<p><a href="/circuits/thermo_electromotive_force#ペルチェ効果">ペルチェ効果</a>のときには、電流が流れている場合を考えました。
+ここでは起電力 \(E\) の電池を回路に入れることで、電流がゼロになるようにしておきましょう。<br />
+この場合、電池が入っていないとすれば、B-&gt;P-&gt;A-&gt;P’-&gt;Bの向きに電流が流れるはずです。
+これは次図のように、回路を開いたときにQの電位がQ’の電位よりも高いことを意味します。</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_05.png" alt="" /></p>
+
+<p>この電位差はQ-&gt;A-&gt;P-&gt;B-&gt;P’-&gt;Q’と系内をたどるときに生じているものと考えられ、\(E\) がちょうどこれを表しています。
+そこで次の図のようにQQ’の間に十分高い値を持つ抵抗をつなぎ、回路の電流を十分小さくしたとしましょう。</p>
+
+<p><img src="/assets/images/circuits/thermo_electromotive_force_06.png" alt="" /></p>
+
+<p>すなわち電気量の移動が十分ゆっくり行われるようにします。
+するとP, P’で発生する熱の発生・吸収は準静的に行われると考えられ、またジュール熱の発生も無視してよいでしょう。
+今、\(+1\) の電気量が準静的に回路をB-&gt;P-&gt;A-&gt;P’-&gt;Bの向きに一回りする過程を考えましょう。
+\(T_\mathrm{P}, T_\mathrm{P'}\) は一定に保っているため、系はもとの状態に戻り、その内部エネルギーには変化がありません。
+よって熱力学第一法則により、この過程で九州した熱量と仕事の和はゼロとなります。
+電流 \(I = 1\) が流れたときに吸収した熱量は、Pでは \(\Pi_\mathrm{AB}(T_\mathrm{P})\)、 P’では \(-\Pi_\mathrm{AB} (T_\mathrm{P'})\) です。
+そして系がする仕事は、電荷 \(+1\) が電位差 \(E\) をさかのぼることになるため、外部から \(+E\) の仕事を吸収します。
+よって</p>
+
+\[\Pi_\mathrm{AB} (T_\mathrm{P}) - \Pi_\mathrm{AB} (T_\mathrm{P'}) + E 
+= 0 \tag{A1}\]
+
+<p>ここで、クラウジウスの不等式を考えましょう。
+これは注目する系が外部と相互作用しながら1つのサイクルを行う途中で、\(T_i^{(e)} \ (i=1, 2, \dots, n)\) の温度の熱源から吸収した熱量を \(Q_i\) としたとき</p>
+
+\[\sum_{i=1}^n \frac{Q_i}{T_i^{(e)}} 
+\leq 0 \tag{A2}\]
+
+<p>が成り立つというものです。
+特に今考えている系は可逆であることから、等式が成り立ち</p>
+
+\[\frac{\Pi_\mathrm{AB} (T_\mathrm{P})}{T_\mathrm{P}} - \frac{\Pi_\mathrm{AB} (T_\mathrm{P'})}{T_\mathrm{P'}} 
+= 0 \tag{A3}\]
+
+<p>となります。
+(A1), (A3)式を \(T_\mathrm{P}\) で微分することで</p>
+
+\[\frac{d \Pi_\mathrm{AB} (T_\mathrm{P})}{dT_\mathrm{P}} + \frac{dE}{dT_\mathrm{P}} 
+= 0 \tag{A4}\]
+
+\[\frac{d(\Pi_\mathrm{AB} (T_\mathrm{P})/ T_\mathrm{P})}{dT_\mathrm{P}} 
+= \frac{1}{T_\mathrm{P}}\frac{d\Pi_\mathrm{AB}}{d T_\mathrm{P}} - \frac{\Pi_\mathrm{AB}}{T_\mathrm{P}^2} 
+= 0 \ \Longrightarrow \ 
+\frac{d\Pi_\mathrm{AB}}{dT_\mathrm{P}} 
+= \frac{\Pi_\mathrm{AB}}{T_\mathrm{P}} \tag{A5}\]
+
+<p>以上より</p>
+
+\[\frac{dE}{dT_\mathrm{P}} 
+\approx \frac{\Pi_\mathrm{AB}}{T_\mathrm{P}} \tag{A6}\]
+
+<p>が成り立ちます。
+途中、符号は無視しました。
+(A6)式の左辺は熱電能に他ならないことから、(15)式を示すことができました。<br />
+ここまでの説明は、A, B両金属内の温度勾配による<a href="/circuits/thermo_electromotive_force#トムソン効果">トムソン効果</a>を無視したものですが、これを考慮しても結果は変わりません。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/43fQKxC">高橋秀俊, “電磁気学”</a><br />
+[2] <a href="https://amzn.to/3RvAkyD">後藤憲一, 山崎修一郎, “詳解電磁気学演習”</a><br />
+[3] <a href="https://amzn.to/4ua5VUh">久保亮五, “大学演習 熱学・統計力学”</a><br />
+[4] <a href="https://www.library.osaka-u.ac.jp/doc/TA_20161207_wasteheat.pdf">孫一寧, “使い捨ての”熱”に再び”命”を与えよう ~熱電変換技術の基礎~”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,248 @@
+I"!:
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#交流回路の基礎理論" id="markdown-toc-交流回路の基礎理論">交流回路の基礎理論</a>    <ol>
+      <li><a href="#交流回路" id="markdown-toc-交流回路">交流回路</a></li>
+      <li><a href="#交流の実効値と電力" id="markdown-toc-交流の実効値と電力">交流の実効値と電力</a>        <ol>
+          <li><a href="#実効値" id="markdown-toc-実効値">実効値</a></li>
+          <li><a href="#電力" id="markdown-toc-電力">電力</a></li>
+        </ol>
+      </li>
+      <li><a href="#交流ベクトルと複素数表示" id="markdown-toc-交流ベクトルと複素数表示">交流ベクトルと複素数表示</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="交流回路の基礎理論">交流回路の基礎理論</h1>
+
+<p>実際に交流回路を扱う前に、まずはその基礎的な考え方や便利な数学ツールなどについて触れておきましょう。</p>
+
+<h2 id="交流回路">交流回路</h2>
+
+<p>定常電流が流れている回路について、これまで議論してきました。
+しかし電流が時間的に速やかに変化する場合についても、同様の取り扱いができます。
+時間変動する電流の中でも、変化が周期的である場合が特に応用上重要とされています。
+そのような電流を交流 (Alternating Current: A.C.) と呼びます。
+実際に、最も重要なのは変化が正弦波的 (sinusoidal) な場合、つまり正弦波交流であり、特にことわらない限りは交流といえば正弦波交流のことを表すことにします。<br />
+電流が流れるときに作られる磁場と、その変化により生じる電磁誘導は、実際の多くの応用では電流の変化がそこまで高速ではありません。
+そこで単に真っ直ぐに張った一本の導線の作る磁場やそれによる電磁誘導は、対して問題にはなりませんでした。
+しかし導線を円筒形に巻いたソレノイドやその他コイル (特にこれに強磁性体の磁心(コア)が入ったもの) では、電磁誘導の効果が劇的に大きくなるため、無視できなくなります。
+よって、そのような電磁誘導が問題となるような部分をコイルと呼ぶことにし、これも1つの回路素子として見なすことにします。
+コイルの導線は必ず抵抗を持っています。
+そこでコイルでの電圧降下は、電磁誘導によるものと、<a href="/circuits/steady_current#オームの法則">オームの法則</a>によるものの寄与が存在します。
+ここではこれらを分離し、あたかもコイルは完全な導体からできているものと考えます。
+そしてそれと直列に、抵抗が挿入されているように考え、これらを別々の回路素子として扱うことにします。
+なお、コイル以外の導線部分での電磁誘導や抵抗は一切考えないことにします。<br />
+また交流回路の回路素子としてはもう一つ、コンデンサーが考えられます。
+直流回路では、コンデンサーを通って定常的な電流は流れることができないため、考慮されてきませんでした。
+しかし、絶えず電流の向きが変化する交流では、コンデンサーを通しても流れることができます。</p>
+
+<h2 id="交流の実効値と電力">交流の実効値と電力</h2>
+
+<h3 id="実効値">実効値</h3>
+
+<p>時間の原点は任意に選べるため、交流電圧 (または電流) が最大になったときを \(t=0\) とすれば、電圧および電流の瞬時値 (instantaneous value) は</p>
+
+\[\left\{ \begin{array}{l}
+v = V_0 \cos \omega t \\
+i = I_0 \cos (\omega t - \theta) 
+\end{array} \right. \quad \mathrm{or} \quad 
+\left\{ \begin{array}{l}
+v = V_0 \cos (\omega t + \theta) \\
+i = I_0 \cos \omega t 
+\end{array} \right. \tag{1}\]
+
+<p>のように表されます。
+\(\omega\) を角周波数、\(V_0, I_0\) をそれぞれ電圧と電流の最大値と呼びます。
+\(\theta\) は位相差であり、この場合には、電圧の位相が電流の位相より \(\theta\) だけ進んでいます。
+もしくは、電流の位相が電圧の位相より \(\theta\) だけ遅れているということもできます。<br />
+電圧や電流の瞬時値の1周期 \(T = 2\pi / \omega\) にわたる2乗平均のルートを、それらの実効値 (effective value) と呼びます。
+電圧の実効値を \(V\) とすると</p>
+
+\[V 
+= \sqrt{\overline{v^2}} 
+= \sqrt{\frac{1}{T} \int_0^T V_0^2 \cos^2 \omega t dt} 
+= \frac{V}{\sqrt{2}} 
+\sim 0.707 V_0 \tag{2}\]
+
+<p>となります。
+通常、何ボルトの交流などというときには、実効値で表します。
+電流の実効値も同様に</p>
+
+\[I 
+= \frac{I_0}{\sqrt{2}} 
+\sim 0.707 I_0 \tag{3}\]
+
+<p>のように計算できます。</p>
+
+<h3 id="電力">電力</h3>
+
+<p>交流の電力 (power) \(P\) は、電圧と電流の瞬時値の積を時間平均したもので定義されます。</p>
+
+\[\begin{align}
+P 
+&amp;= \frac{1}{T} \int_0^T vi dt 
+= \frac{1}{T} \int_0^T V_0 I_0 \cos \omega t \cos (\omega t - \theta) dt \notag \\
+&amp;= \frac{V_0 I_0}{T} \int_0^T \cos \omega t (\cos \omega t \cos \theta + \sin \omega t \sin \theta) dt \notag \\
+&amp;\underbrace{=}_{\cos \omega t \sin \omega tは奇関数} \frac{V_0 I_0}{T} \cos \theta \int_0^T \cos^2 \omega t dt 
+= \frac{V_0 I_0}{2} \cos \theta 
+\underbrace{=}_{(2), (3)} VI \cos \theta \tag{4}
+\end{align}\]
+
+<p>\(\cos \theta\) を力率 (power factor) と呼び、\(\theta = \pm 90^\circ\) では、\(VI \neq 0\) であっても \(P=0\) となります。
+特にこのような電流を、無効電流 (wattless current) と呼びます。
+電圧と電流の位相差がない (\(\theta = 0\)) のときには、力率は100%となります。<br />
+直流電流による発熱は、オーム抵抗 \(R\) では1秒間に</p>
+
+\[P 
+= RI^2 \tag{5}\]
+
+<p>のようになり、加えられた電力は全て熱になります。
+<a href="/circuits/steady_current#オームの法則">オームの法則</a>に従わない非線形素子の場合には、直流抵抗が \(R_0\)、微分抵抗が \(r\) で表されるときの電力は \(P = r I^2\) ではなく</p>
+
+\[P 
+= VI 
+= R_0 I^2 \tag{6}\]
+
+<p>となります。
+外部に対して何も仕事をしない場合、これが1秒間の発熱量と等しくなります。
+直流 \(I_0\) に小さな交流 \(i = \sqrt{2} I \cos \omega t\) が重なって流れるとき、加えられた電力を交流周期 \(T = 2\pi / \omega\) で平均すると</p>
+
+\[\begin{align}
+P 
+&amp;= \overline{V (I_0 + \sqrt{2} I \cos \omega t)} 
+= \frac{1}{T} \int_0^T (R_0 I_0 + \sqrt{2} r I \cos \omega t) (I_0 + \sqrt{2} I \cos \omega t) dt \notag \\
+&amp;= R_0 I_0^2 + \sqrt{2} I_0 I \frac{R_0 + r}{T} \underbrace{\int_0^T \cos \omega t dt}_{=0} + \frac{2rI^2}{T} \int_0^T \cos^2 \omega t dt 
+= R_0 I_0^2 + rI^2 \tag{7}
+\end{align}\]
+
+<p>のようになります。
+すなわち非線形抵抗の場合には、直流 \(I_0\) が抵抗 \(R_0\) を通り、実効値 \(I\) の交流 \(\sqrt{2} I \cos \omega t\) が微分抵抗 \(r\) を通ったとして、両者の電力の和を考えたものが全電力に等しいことがわかります。</p>
+
+<h2 id="交流ベクトルと複素数表示">交流ベクトルと複素数表示</h2>
+
+<p>交流が直流のように簡単に考えることができない理由の1つは、いつも位相差があるからです。
+例えば、1Vの交流電圧に同じ周波数のもう1つの1Vの交流電圧とを直列につないでも、合成電圧は必ずしも2Vにはなりません。
+位相差を \(\varphi\) とすると</p>
+
+\[\begin{aligned}
+v 
+&amp;= \sqrt{2} \cos \omega t + \sqrt{2} \cos (\omega t + \varphi) 
+= \sqrt{2} (1 + \cos \varphi) \cos \omega t  - \sqrt{2} \sin \varphi \sin \omega t \notag \\
+&amp;= 2\sqrt{2} \cos \frac{\varphi}{2} \cos \left( \omega t + \frac{\varphi}{2}\right)
+\end{aligned}\]
+
+<p>のようになるので、合成電圧は \(2 \cos \frac{\varphi}{2}\) ボルトになります。
+合成電圧の位相は \(\varphi / 2\) となります。
+このような計算に瞬時値を用い、直接計算を行うのは面倒かつわかりにくくもあります。
+そこで交流をベクトルや複素数で表示すると、大きさだけでなく位相の関係もわかるため、大変便利です。<br />
+さらに交流を複素数で表示する利点は、回路に流れる交流電流や端子電圧を求めるとき、微分方程式を解く必要がなくなる点です。
+複素電圧と複素電流を結びつける複素インピーダンス (後述) の概念を導入することで、回路を流れる電流とその端子電圧を求めることができます。<br />
+交流電圧および電流は、(1)式のように表される実数の物理量ですが、これを次のように複素数で表します。</p>
+
+\[e^{i\varphi} 
+= \cos \varphi + i \sin \varphi \tag{8}\]
+
+<p>複素数 \(\mathcal{V}\) を</p>
+
+\[\mathcal{V} 
+= V_0 e^{i(\omega t + \theta)} \tag{9}\]
+
+<p>とすれば、その実部は(1)式の交流電圧 \(v = V_0 \cos (\omega t + \theta)\) に等しくなります。
+すなわち、複素交流電圧を \(\mathcal{V}\) とするならば、実際の交流電圧は</p>
+
+\[v 
+= \mathrm{Re} (\mathcal{V}) 
+= \mathrm{Re} (V_0 e^{i(\omega t + \theta)}) \tag{10}\]
+
+<p>と表されます。
+電流についても同様に、(1)式の交流電流を表す複素交流電流は</p>
+
+\[\mathcal{I} 
+= I_0 e^{i \omega t} \tag{11}\]
+
+<p>です。<br />
+さらに</p>
+
+\[\mathcal{V}_0  
+= V_0 e^{i\theta} \tag{12}\]
+
+<p>で定義される複素振幅を考えれば、(9)式の複素交流電圧は</p>
+
+\[\mathcal{V} 
+= \mathcal{V}_0 e^{i\omega t} \tag{13}\]
+
+<p>と表されます。
+このようにすれば、交流電圧の位相を時間的な量としてではなく、複素振幅の偏角として扱うことができます。
+このようにして、実際の交流電圧を複素振幅 \(\mathcal{V}_0\) または複素交流電圧 \(\mathcal{V}\) で表現する方法を、交流の複素数表示といいます。<br />
+さらに複素平面のベクトルでこれを表すと、振幅の大小と位相差を図示することができます。
+複素交流電圧 (9)式を実部と虚部に分けて書くと</p>
+
+\[\mathcal{V} 
+= V_0 \cos (\omega t + \theta) + i V_0 \sin (\omega t + \theta) \tag{14}\]
+
+<p>となります。
+したがって、実部を \(x\) 軸にとり、虚部を \(y\) 軸に取った複素平面では、次図のようなベクトルで表されます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>このベクトル成分は \(x = V_0 \cos (\omega t + \theta), y = V_0 \sin (\omega t + \theta)\) となります。
+すなわち \(xy\) 座標系では、複素交流電圧 \(\mathcal{V}\) は、長さが \(V_0\) で角速度 \(\omega\) で回転するベクトルとして表現され、\(t=0\) での偏角が \(\theta\) となります。<br />
+今、\(xy\) 座標系に対して角速度 \(\omega\) で回転する \(XY\) 座標系を考えてみましょう。
+回転座標系から見た \(\mathcal{V}\) は、向きが固定されたベクトルとなっています。
+固定して見えるベクトル成分は \(X = V_0 \cos \theta, Y = V_0 \sin \theta\) であり、これは複素振幅 \(\mathcal{V}_0 = V_0 e^{i\theta}\) のベクトル表示となっています。
+よって、回転する \(XY\) 座標系では、複素交流電圧は大きさが \(V_0\) で偏角 \(\theta\) を持つベクトルにより表現できます。
+通常、これを交流ベクトルと呼び、\(XY\) 座標を固定して書きます。<br />
+このようにして交流電圧や電流の振幅と位相を複素平面 \((X, Y)\) 上の交流ベクトルで表すと、交流電圧や電流の合成を計算するのに便利です。
+これまでの説明では最大値 \(V_0, I_0\) を用いましたが、実効値を用いても、その大きさが最大値の \(1/\sqrt{2}\) 倍になるだけで、同様です。
+電圧の実効値を \(V\) とすると、その交流複素振幅は \(\mathcal{V}_0 = \sqrt{2} V e^{i\theta}\) となります。<br />
+次に、簡単な例として2つの交流電圧の和を求めてみましょう。
+それぞれの電圧の最大値が \(V_1, V_2\) で、位相を \(\theta_1, \theta_2\) とします。
+このときの複素振幅はそれぞれ</p>
+
+\[\mathcal{V}_1 
+= V_1 e^{i\theta_1}, \quad 
+\mathcal{V}_2 
+= V_2 e^{i\theta_2} \tag{15}\]
+
+<p>です。
+このとき、合成電圧は \(\mathcal{V}_1, \mathcal{V}_2\) の交流ベクトルの和で与えられ、合成複素振幅は \(\mathcal{V}_1 + \mathcal{V}_2\) となります。
+実際に \(v = \mathrm{Re} \{(\mathcal{V}_1 + \mathcal{V}_2) e^{i\omega t}\}\) に (15)式を代入すると</p>
+
+\[v 
+= \mathcal{Re} \{ (V_1 e^{i\theta_1} + V_2 e^{i\theta_2}) e^{i\omega t}\} 
+= V_1 \cos (\omega t+ \theta_1) + V_2 \cos (\omega t+ \theta_2) \tag{16}\]
+
+<p>のようになっています。
+ベクトル図では次図のように、合成電圧 \(\mathcal{V}_1 + \mathcal{V}_2\) の複素振幅は、\(\mathcal{V}_1\) と \(\mathcal{V}_2\) のベクトルを平行四辺形の法則で加えたものになっています。</p>
+
+<p><img src="" alt="" /></p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/43fQKxC">高橋秀俊, “電磁気学”</a><br />
+[2] <a href="https://amzn.to/3RvAkyD">後藤憲一, 山崎修一郎, “詳解電磁気学演習”</a><br />
+[3] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

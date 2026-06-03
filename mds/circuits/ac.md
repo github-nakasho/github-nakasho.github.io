@@ -4,7 +4,7 @@ title: 交流回路の基礎理論
 parent: 電気回路
 math: mathjax3
 permalink: /circuits/ac
-nav_order: 6
+nav_order: 7
 ---
 
 {: .no_toc }
@@ -22,6 +22,8 @@ nav_order: 6
 
 # 交流回路の基礎理論
 
+実際に交流回路を扱う前に、まずはその基礎的な考え方や便利な数学ツールなどについて触れておきましょう。
+
 ## 交流回路
 
 定常電流が流れている回路について、これまで議論してきました。
@@ -38,14 +40,504 @@ nav_order: 6
 ここではこれらを分離し、あたかもコイルは完全な導体からできているものと考えます。
 そしてそれと直列に、抵抗が挿入されているように考え、これらを別々の回路素子として扱うことにします。
 なお、コイル以外の導線部分での電磁誘導や抵抗は一切考えないことにします。  
-また交流回路の回路素子としてはもう一つ、コンデンサが考えられます。
-直流回路では、コンデンサを通って定常的な電流は流れることができないため、考慮されてきませんでした。
-しかし、絶えず電流の向きが変化する交流では、コンデンサを通しても流れることができます。  
+また交流回路の回路素子としてはもう一つ、コンデンサーが考えられます。
+直流回路では、コンデンサーを通って定常的な電流は流れることができないため、考慮されてきませんでした。
+しかし、絶えず電流の向きが変化する交流では、コンデンサーを通しても流れることができます。  
+
+## 交流の実効値と電力
+
+### 実効値
+
+時間の原点は任意に選べるため、交流電圧 (または電流) が最大になったときを $$t=0$$ とすれば、電圧および電流の瞬時値 (instantaneous value) は
+
+$$
+\left\{ \begin{array}{l}
+v = V_0 \cos \omega t \\
+i = I_0 \cos (\omega t - \theta) 
+\end{array} \right. \quad \mathrm{or} \quad 
+\left\{ \begin{array}{l}
+v = V_0 \cos (\omega t + \theta) \\
+i = I_0 \cos \omega t 
+\end{array} \right. \tag{1}
+$$
+
+のように表されます。
+$$\omega$$ を角周波数、$$V_0, I_0$$ をそれぞれ電圧と電流の最大値と呼びます。
+$$\theta$$ は位相差であり、この場合には、電圧の位相が電流の位相より $$\theta$$ だけ進んでいます。
+もしくは、電流の位相が電圧の位相より $$\theta$$ だけ遅れているということもできます。  
+電圧や電流の瞬時値の1周期 $$T = 2\pi / \omega$$ にわたる2乗平均のルートを、それらの実効値 (effective value) と呼びます。
+電圧の実効値を $$V$$ とすると
+
+$$
+V 
+= \sqrt{\overline{v^2}} 
+= \sqrt{\frac{1}{T} \int_0^T V_0^2 \cos^2 \omega t dt} 
+= \frac{V}{\sqrt{2}} 
+\sim 0.707 V_0 \tag{2}
+$$
+
+となります。
+通常、何ボルトの交流などというときには、実効値で表します。
+電流の実効値も同様に
+
+$$
+I 
+= \frac{I_0}{\sqrt{2}} 
+\sim 0.707 I_0 \tag{3}
+$$
+
+のように計算できます。
+
+### 電力
+
+交流の電力 (power) $$P$$ は、電圧と電流の瞬時値の積を時間平均したもので定義されます。
+
+$$
+\begin{align}
+P 
+&= \frac{1}{T} \int_0^T vi dt 
+= \frac{1}{T} \int_0^T V_0 I_0 \cos \omega t \cos (\omega t - \theta) dt \notag \\
+&= \frac{V_0 I_0}{T} \int_0^T \cos \omega t (\cos \omega t \cos \theta + \sin \omega t \sin \theta) dt \notag \\
+&\underbrace{=}_{\cos \omega t \sin \omega tは奇関数} \frac{V_0 I_0}{T} \cos \theta \int_0^T \cos^2 \omega t dt 
+= \frac{V_0 I_0}{2} \cos \theta 
+\underbrace{=}_{(2), (3)} VI \cos \theta \tag{4}
+\end{align}
+$$
+
+$$\cos \theta$$ を力率 (power factor) と呼び、$$\theta = \pm 90^\circ$$ では、$$VI \neq 0$$ であっても $$P=0$$ となります。
+特にこのような電流を、無効電流 (wattless current) と呼びます。
+電圧と電流の位相差がない ($$\theta = 0$$) のときには、力率は100%となります。  
+直流電流による発熱は、オーム抵抗 $$R$$ では1秒間に
+
+$$
+P 
+= RI^2 \tag{5}
+$$
+
+のようになり、加えられた電力は全て熱になります。
+[オームの法則](/circuits/steady_current#オームの法則)に従わない非線形素子の場合には、直流抵抗が $$R_0$$、微分抵抗が $$r$$ で表されるときの電力は $$P = r I^2$$ ではなく
+
+$$
+P 
+= VI 
+= R_0 I^2 \tag{6}
+$$
+
+となります。
+外部に対して何も仕事をしない場合、これが1秒間の発熱量と等しくなります。
+直流 $$I_0$$ に小さな交流 $$i = \sqrt{2} I \cos \omega t$$ が重なって流れるとき、加えられた電力を交流周期 $$T = 2\pi / \omega$$ で平均すると
+
+$$
+\begin{align}
+P 
+&= \overline{V (I_0 + \sqrt{2} I \cos \omega t)} 
+= \frac{1}{T} \int_0^T (R_0 I_0 + \sqrt{2} r I \cos \omega t) (I_0 + \sqrt{2} I \cos \omega t) dt \notag \\
+&= R_0 I_0^2 + \sqrt{2} I_0 I \frac{R_0 + r}{T} \underbrace{\int_0^T \cos \omega t dt}_{=0} + \frac{2rI^2}{T} \int_0^T \cos^2 \omega t dt 
+= R_0 I_0^2 + rI^2 \tag{7}
+\end{align}
+$$
+
+のようになります。
+すなわち非線形抵抗の場合には、直流 $$I_0$$ が抵抗 $$R_0$$ を通り、実効値 $$I$$ の交流 $$\sqrt{2} I \cos \omega t$$ が微分抵抗 $$r$$ を通ったとして、両者の電力の和を考えたものが全電力に等しいことがわかります。
+
+## 交流ベクトルと複素数表示
+
+交流が直流のように簡単に考えることができない理由の1つは、いつも位相差があるからです。
+例えば、1Vの交流電圧に同じ周波数のもう1つの1Vの交流電圧とを直列につないでも、合成電圧は必ずしも2Vにはなりません。
+位相差を $$\varphi$$ とすると
+
+$$
+\begin{aligned}
+v 
+&= \sqrt{2} \cos \omega t + \sqrt{2} \cos (\omega t + \varphi) 
+= \sqrt{2} (1 + \cos \varphi) \cos \omega t  - \sqrt{2} \sin \varphi \sin \omega t \notag \\
+&= 2\sqrt{2} \cos \frac{\varphi}{2} \cos \left( \omega t + \frac{\varphi}{2}\right)
+\end{aligned}
+$$
+
+のようになるので、合成電圧は $$2 \cos \frac{\varphi}{2}$$ ボルトになります。
+合成電圧の位相は $$\varphi / 2$$ となります。
+このような計算に瞬時値を用い、直接計算を行うのは面倒かつわかりにくくもあります。
+そこで交流をベクトルや複素数で表示すると、大きさだけでなく位相の関係もわかるため、大変便利です。  
+さらに交流を複素数で表示する利点は、回路に流れる交流電流や端子電圧を求めるとき、微分方程式を解く必要がなくなる点です。
+複素電圧と複素電流を結びつける複素インピーダンス (後述) の概念を導入することで、回路を流れる電流とその端子電圧を求めることができます。  
+交流電圧および電流は、(1)式のように表される実数の物理量ですが、これを次のように複素数で表します。
+
+$$
+e^{i\varphi} 
+= \cos \varphi + i \sin \varphi \tag{8}
+$$
+
+複素数 $$\mathcal{V}$$ を
+
+$$
+\mathcal{V} 
+= V_0 e^{i(\omega t + \theta)} \tag{9}
+$$
+
+とすれば、その実部は(1)式の交流電圧 $$v = V_0 \cos (\omega t + \theta)$$ に等しくなります。
+すなわち、複素交流電圧を $$\mathcal{V}$$ とするならば、実際の交流電圧は
+
+$$
+v 
+= \mathrm{Re} (\mathcal{V}) 
+= \mathrm{Re} (V_0 e^{i(\omega t + \theta)}) \tag{10}
+$$
+
+と表されます。
+電流についても同様に、(1)式の交流電流を表す複素交流電流は
+
+$$
+\mathcal{I} 
+= I_0 e^{i \omega t} \tag{11}
+$$
+
+です。  
+さらに
+
+$$
+\mathcal{V}_0  
+= V_0 e^{i\theta} \tag{12}
+$$
+
+で定義される複素振幅を考えれば、(9)式の複素交流電圧は
+
+$$
+\mathcal{V} 
+= \mathcal{V}_0 e^{i\omega t} \tag{13}
+$$
+
+と表されます。
+このようにすれば、交流電圧の位相を時間的な量としてではなく、複素振幅の偏角として扱うことができます。
+このようにして、実際の交流電圧を複素振幅 $$\mathcal{V}_0$$ または複素交流電圧 $$\mathcal{V}$$ で表現する方法を、交流の複素数表示といいます。  
+さらに複素平面のベクトルでこれを表すと、振幅の大小と位相差を図示することができます。
+複素交流電圧 (9)式を実部と虚部に分けて書くと
+
+$$
+\mathcal{V} 
+= V_0 \cos (\omega t + \theta) + i V_0 \sin (\omega t + \theta) \tag{14}
+$$
+
+となります。
+したがって、実部を $$x$$ 軸にとり、虚部を $$y$$ 軸に取った複素平面では、次図のようなベクトルで表されます。
+
+![](/assets/images/circuits/ac_01.png)  
+
+このベクトル成分は $$x = V_0 \cos (\omega t + \theta), y = V_0 \sin (\omega t + \theta)$$ となります。
+すなわち $$xy$$ 座標系では、複素交流電圧 $$\mathcal{V}$$ は、長さが $$V_0$$ で角速度 $$\omega$$ で回転するベクトルとして表現され、$$t=0$$ での偏角が $$\theta$$ となります。  
+今、$$xy$$ 座標系に対して角速度 $$\omega$$ で回転する $$XY$$ 座標系を考えてみましょう。
+回転座標系から見た $$\mathcal{V}$$ は、向きが固定されたベクトルとなっています。
+固定して見えるベクトル成分は $$X = V_0 \cos \theta, Y = V_0 \sin \theta$$ であり、これは複素振幅 $$\mathcal{V}_0 = V_0 e^{i\theta}$$ のベクトル表示となっています。
+よって、回転する $$XY$$ 座標系では、複素交流電圧は大きさが $$V_0$$ で偏角 $$\theta$$ を持つベクトルにより表現できます。
+通常、これを交流ベクトルと呼び、$$XY$$ 座標を固定して書きます。  
+このようにして交流電圧や電流の振幅と位相を複素平面 $$(X, Y)$$ 上の交流ベクトルで表すと、交流電圧や電流の合成を計算するのに便利です。
+これまでの説明では最大値 $$V_0, I_0$$ を用いましたが、実効値を用いても、その大きさが最大値の $$1/\sqrt{2}$$ 倍になるだけで、同様です。
+電圧の実効値を $$V$$ とすると、その交流複素振幅は $$\mathcal{V}_0 = \sqrt{2} V e^{i\theta}$$ となります。  
+次に、簡単な例として2つの交流電圧の和を求めてみましょう。
+それぞれの電圧の最大値が $$V_1, V_2$$ で、位相を $$\theta_1, \theta_2$$ とします。
+このときの複素振幅はそれぞれ
+
+$$
+\mathcal{V}_1 
+= V_1 e^{i\theta_1}, \quad 
+\mathcal{V}_2 
+= V_2 e^{i\theta_2} \tag{15}
+$$
+
+です。
+このとき、合成電圧は $$\mathcal{V}_1, \mathcal{V}_2$$ の交流ベクトルの和で与えられ、合成複素振幅は $$\mathcal{V}_1 + \mathcal{V}_2$$ となります。
+実際に $$v = \mathrm{Re} \{(\mathcal{V}_1 + \mathcal{V}_2) e^{i\omega t}\}$$ に (15)式を代入すると
+
+$$
+v 
+= \mathrm{Re} \{ (V_1 e^{i\theta_1} + V_2 e^{i\theta_2}) e^{i\omega t}\} 
+= V_1 \cos (\omega t+ \theta_1) + V_2 \cos (\omega t+ \theta_2) \tag{16}
+$$
+
+のようになっています。
+ベクトル図では次図のように、合成電圧 $$\mathcal{V}_1 + \mathcal{V}_2$$ の複素振幅は、$$\mathcal{V}_1$$ と $$\mathcal{V}_2$$ のベクトルを平行四辺形の法則で加えたものになっています。
+
+![](/assets/images/circuits/ac_02.png)  
+
+## 直列LCR回路とインピーダンス
+
+次図のように、コイル $$L$$、コンデンサー $$C$$、抵抗 $$R$$ を直列につないだ回路に、さらに交流電源 $$V = V_0 \cos \omega t$$ をつないだ場合の振る舞いを調べてみましょう。
+
+![](/assets/images/circuits/ac_03.png)  
+
+解くべき方程式は、コイル・コンデンサー・抵抗それぞれでの電圧降下 $$-L \frac{dI}{dt}, \frac{Q}{C}, RI$$ より
+
+$$
+V - L\frac{dI}{dt} - \frac{Q}{C} - RI 
+= 0 \ \Longrightarrow \ 
+L\frac{dI}{dt} + RI + \frac{Q}{C} 
+= V_0 \cos \omega t \tag{17}
+$$
+
+となります。
+コンデンサーに蓄えられた電荷と電流は $$Q = \int I dt$$ の関係にあるので
+
+$$
+L\frac{dI}{dt} + RI + \frac{1}{C} \int I dt
+= V_0 \cos \omega t \tag{18}
+$$
+
+先ほどの議論から、交流は複素数を用いた方が扱いやすいのでした。
+そこで(18)式の右辺を次のように変形しましょう。
+
+$$
+L\frac{dI}{dt} + RI + \frac{1}{C} \int I dt
+= \frac{V_0}{2} (e^{i\omega t} + e^{-i\omega t}) \tag{19}
+$$
+
+この方程式の右辺が $$e^{i\omega t}, e^{-i\omega t}$$ の和になっていることから、次の方程式について考えることにしましょう。
+
+$$
+L \frac{d\mathcal{I}}{dt} + R \mathcal{I} + \frac{1}{C} \int \mathcal{I} dt 
+= V_0 e^{i\omega t} \tag{20}
+$$
+
+途中、この方程式の解を $$\mathcal{I}$$ としました。
+両辺の複素共役を取ると、 $$\mathcal{I}^\ast$$ は自動的に次の方程式の解となります。
+
+$$
+L \frac{d\mathcal{I}^\ast}{dt} + R \mathcal{I}^\ast + \frac{1}{C} \int \mathcal{I}^\ast dt 
+= V_0 e^{-i\omega t} \tag{21}
+$$
+
+(20), (21)式の加えることで、元々の方程式(18)の解 $$I(t)$$ が
+
+$$
+I(t) 
+= \frac{\mathcal{I}(t) + \mathcal{I}^\ast (t)}{2} 
+= \mathrm{Re}(\mathcal{I}(t)) \tag{22}
+$$
+
+のように得られます。
+この関係は、コイル・コンデンサー・抵抗が複雑に接続された交流回路でも、解くべき方程式が線形である限り常に成り立ちます。
+よって(20)式を解き、最後に $$I(t) = \mathrm{Re} (\mathcal{I} (t))$$ とすれば、解が求まることになります。  
+(20)式の両辺を時間微分すると
+
+$$
+L \frac{d^2 \mathcal{I}}{dt^2} + R \frac{d\mathcal{I}}{dt} + \frac{\mathcal{I}}{C} 
+= i\omega V_0 e^{i\omega t} \tag{23}
+$$
+
+となります。
+これはいわゆる強制振動 (forced oscillation) の方程式になっていることがわかります。
+この微分方程式の一般解を求めるには、右辺をゼロにした斉次方程式の一般解に、特解を加えれば良いでしょう。
+まずは斉次方程式の解を求めます。
+(23)式の右辺をゼロにした方程式の解を、$$f(t) = e^{\gamma t}$$ の形で求めてみましょう。
+
+$$
+\begin{align}
+&L \gamma^2 e^{\gamma t} + R \gamma e^{\gamma t} + \frac{e^{\gamma t}}{C} 
+= 0 \ \Longrightarrow \ L \gamma^2 + R \gamma + \frac{1}{C} 
+= 0 \notag \\
+&\Longrightarrow \ \gamma 
+= \frac{-R \pm \sqrt{R^2 - 4L/C}}{2L} 
+= - \frac{R}{2L} \pm i \omega_0 \quad \left( \omega_0^2 \equiv \frac{1}{LC} - \frac{R^2}{4L^2}\right) \tag{24}
+\end{align}
+$$
+
+以上より、一般解が
+
+$$
+g(t) 
+= e^{-\frac{R}{2L}t} (A \cos \omega_0 t + B \sin \omega_0 t) \tag{25}
+$$
+
+のように求まりました。
+しかし、十分な時間が経過した場合、$$t \rightarrow \infty$$ では (25)式はゼロに減衰することから、以降ではこれを考慮しないものとします。
+すなわち、系は定常状態に落ち着いたものとします。
+続いて、強制振動と同じ周波数をもった特解を次の形で求めてみましょう。
+
+$$
+\mathcal{I}(t) 
+= I_0 e^{i(\omega t + \theta_0)} \tag{26}
+$$
+
+ここで $$I_0$$ は正の実数とします。
+これを(23)式に代入すると
+
+$$
+\begin{align}
+&- \omega^2 L I_0 e^{i(\omega t + \theta_0)} + i\omega R I_0 e^{i(\omega t + \theta_0)} + \frac{I_0}{C} e^{i(\omega t + \theta_0)} 
+= i\omega V_0 e^{i\omega t} \notag \\
+&\Longrightarrow \ 
+\left(i \omega L + R + \frac{1}{i \omega C} \right) I_0 e^{i\theta_0} 
+= V_0 \tag{27}
+\end{align}
+$$
+
+を得ます。
+ここで、複素インピーダンス (complex impedance) を
+
+$$
+\mathcal{Z} 
+\equiv i\omega L + R + \frac{1}{i\omega C} 
+= R + i \left( \omega L - \frac{1}{\omega C} \right) \tag{28}
+$$
+
+のように定義すると、(27)式は
+
+$$
+\mathcal{Z} I_0 e^{i\theta_0} 
+= V_0 \tag{29}
+$$
+
+となります。
+複素インピーダンスを実部と虚部に分けて $$\mathcal{Z} = R + i X$$ のように書いたとき、$$R$$ はそのまま抵抗ですが、$$X$$ をリアクタンス (reactance) と呼びます。
+複素インピーダンスの単位は、(28)式などからわかるように、抵抗と同じオームであることがわかります。
+また複素インピーダンスの絶対値を $$Z \equiv \vert \mathcal{Z} \vert$$ と定義し、$$Z$$ をインピーダンスと呼びます。
+(29)式において、$$I_0, V_0$$ は実数なので
+
+$$
+\mathcal{Z} 
+= Z e^{-i\theta_0} \tag{30}
+$$
+
+でなければなりません。
+よって
+
+$$
+Z 
+= \sqrt{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2} \tag{31}
+$$
+
+$$
+\tan \theta_0 
+= - \frac{\omega L - \frac{1}{\omega C}}{R} \tag{32}
+$$
+
+と求まります。
+$$\tan \theta_0$$ は抵抗とリアクタンスの比で表現され、電圧と電流の位相差が、リアクタンスの符号により決定されます。
+リアクタンスが正の場合、コイルと同様に電圧の位相が進んでいるので、これを誘導的 (inductive) であると呼びます。
+またリアクタンスが負の場合は、コンデンサーと同様に電圧の位相が遅れているため、容量的 (capacitive) であると呼びます。  
+(29), (30)式より $$I_0 = V_0 / Z$$ であることから、これをさらに(26)式に代入し、実部を取ることで
+
+$$
+I(t) 
+= \frac{V_0}{Z} \cos (\omega t + \theta_0) \tag{33}
+$$
+
+のように解が求まりました。
+(29)式の両辺に $$e^{i\omega t}$$ をかけ、複素交流電圧 $$\mathcal{V} (t) = V_0 e^{i\omega t}$$ を導入すれば
+
+$$
+\mathcal{Z} \underbrace{I_0 e^{i(\omega t + \theta_0)}}_{(26)} 
+= V_0 e^{i\omega t} \ \Longrightarrow \ 
+\mathcal{Z} \mathcal{I} (t) 
+= \mathcal{V} (t) \tag{34}
+$$
+
+を得ます。
+これは、[直流の場合のオームの法則 $$RI = V$$](/circuits/steady_current#オームの法則)の交流バージョンと見ることができます。  
+結局、正弦的な電圧をかけた交流回路では、(17)式の積分・微分はそれぞれ $$i\omega$$ で割ることとかけることで記述することができるようになりました。
+さらに複素インピーダンスを用いることで、微分方程式を明示的に解く必要がなくなりました。
+ここで重要なのは、インピーダンスを含む交流回路に対し、オームの法則(34)式と[キルヒホッフの法則](/circuits/steady_current#定常電流電気回路とキルヒホッフの法則)が成り立つことです。
+つまり、合成抵抗に関する規則が複素インピーダンスに関しても成り立ち、計算が著しく容易になります。  
+
+### アドミタンス
+
+インピーダンスの逆数をアドミッタンス (admittance) と呼びます。
+
+$$
+\mathcal{Y} 
+= \frac{1}{\mathcal{Z}} 
+= \frac{1}{R + iX} 
+= \frac{R - iX}{(R+iX)(R-iX)}
+= \frac{R}{R^2 + X^2} + i \left( - \frac{X}{R^2 + X^2}\right) 
+= G + iB \tag{35}
+$$
+
+$$G$$ をコンダクタンス (conductance)、$$B$$ をサセプタンス (susceptance) と呼びます。
+このアドミタンスを用いると、(34)式は
+
+$$
+\mathcal{I}(t) 
+= \mathcal{Y} \mathcal{V}(t) \tag{36}
+$$
+
+のようになります。
+
+{: .note }
+$$\mathcal{Y} = G - i B$$ と約束する場合もあるようです。
+
+### 直列結合・並列結合
+
+いくつかのインピーダンスをつないだ合成回路のインピーダンスは、直流回路の合成抵抗の計算と同じ規則で、複素数計算することで求めることができます。
+複素インピーダンス $$\mathcal{Z}_1, \mathcal{Z}_2$$ を直列につないだときの合成インピーダンスは
+
+$$
+\mathcal{Z} 
+= \mathcal{Z}_1 + \mathcal{Z}_2 \tag{37}
+$$
+
+のようになります。
+またこれらを並列につないだ合成インピーダンスは
+
+$$
+\frac{1}{\mathcal{Z}} 
+= \frac{1}{\mathcal{Z}_1} + \frac{1}{\mathcal{Z}_2} \tag{38}
+$$
+
+のようになります。
+並列の場合、アドミタンスで表せば
+
+$$
+\mathcal{Y} 
+= \mathcal{Y}_1 + \mathcal{Y}_2 \tag{39}
+$$
+
+となります。
+また[キルヒホッフの法則](/circuits/steady_current#定常電流電気回路とキルヒホッフの法則)や[テブナンの定理](/circuits/connection#テブナンの定理)も、電圧や電流を複素振幅で表し、抵抗の代わりにインピーダンスを用いばそのまま成り立ちます。
+
+## 複素電圧などを用いた場合の電力
+
+交流の電圧と電流を複素数表示した場合でも、交流の電力 $$P$$ は実数でなければなりません。
+そのため、$$P$$ は $$\mathcal{VI}$$ ではなくなります。
+(4)式に相当する計算を、複素数表示を用いて行いましょう。
+
+$$
+\begin{align}
+P 
+&= \overline{vi} 
+= \overline{\mathrm{Re}(\mathcal{V}_0 e^{i\omega t}) \mathrm{Re}(\mathcal{I}_0 e^{i\omega t})}
+= \frac{1}{4} \overline{(\mathcal{V}_0 e^{i\omega t} + \mathcal{V}_0^\ast e^{-i\omega t}) (\mathcal{I}_0 e^{i\omega t} + \mathcal{I}_0^\ast e^{-i\omega t})} \notag \\
+&= \frac{1}{4} \overline{\mathcal{V}_0 \mathcal{I}_0 e^{2i\omega t} + \mathcal{V}_0 \mathcal{I}_0^\ast + \mathcal{V}_0^\ast \mathcal{I}_0 + \mathcal{V}_0^\ast \mathcal{I}_0^\ast e^{-2i\omega t}} 
+= \frac{1}{4} (\mathcal{V}_0 \mathcal{I}_0^\ast + \mathcal{V}_0^\ast \mathcal{I}_0) 
+= \frac{1}{2} \mathrm{Re}(\mathcal{V}_0 \mathcal{I}_0^\ast) \tag{40}
+\end{align}
+$$
+
+このときの回路のインピーダンスを $$\mathcal{Z} = R + iX$$ とすれば、$$\mathcal{V} = \mathcal{Z} \mathcal{I}$$ より
+
+$$
+P 
+= \frac{1}{2} \mathcal{I}_0 \mathcal{I}_0^\ast \mathrm{Re}(\mathcal{Z}) 
+= \frac{1}{2} R I_0^2 \tag{41}
+$$
+
+となります。
+リアクタンスの大小は、電力と無関係であることがわかります。  
+最後に、複素インピーダンスに関する情報をまとめておきましょう。
+
+|回路素子|複素インピーダンス|
+|:--|:--|
+|抵抗器|$$R$$|
+|コンデンサー|$$\frac{1}{i\omega C}$$|
+|コイル|$$i\omega L$$|
+|直列合成|$$\mathcal{Z} = \mathcal{Z}_1 + \mathcal{Z}_2$$|
+|並列合成|$$1/\mathcal{Z} = 1/\mathcal{Z}_1 + 1/\mathcal{Z}_2$$|
+
+この表を用いれば、直列LCR回路の複素インピーダンスが即座に(28)式のようになることが確かめられます。
 
 ## 参考文献
 
 [1] [高橋秀俊, "電磁気学"](https://amzn.to/43fQKxC)  
 [2] [後藤憲一, 山崎修一郎, "詳解電磁気学演習"](https://amzn.to/3RvAkyD)  
 [3] [霜田光一, 桜井 捷海, "エレクトロニクスの基礎"](https://amzn.to/4wAOuib)  
+[4] [中村哲, 須藤彰三, "電磁気学"](https://amzn.to/4eQ96MY)  
 
 {% include adsense.html %}

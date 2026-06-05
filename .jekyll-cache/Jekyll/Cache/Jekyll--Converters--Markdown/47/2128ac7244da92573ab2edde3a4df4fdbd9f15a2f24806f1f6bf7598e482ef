@@ -1,0 +1,205 @@
+I"E0
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#電気回路のパラメータ励振" id="markdown-toc-電気回路のパラメータ励振">電気回路のパラメータ励振</a>    <ol>
+      <li><a href="#ブランコから学ぶパラメータ励振" id="markdown-toc-ブランコから学ぶパラメータ励振">ブランコから学ぶパラメータ励振</a></li>
+      <li><a href="#lc回路" id="markdown-toc-lc回路">LC回路</a>        <ol>
+          <li><a href="#単振動" id="markdown-toc-単振動">単振動</a></li>
+          <li><a href="#パラメータ励振" id="markdown-toc-パラメータ励振">パラメータ励振</a></li>
+          <li><a href="#応用-パラメトロン" id="markdown-toc-応用-パラメトロン">応用: パラメトロン</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="電気回路のパラメータ励振">電気回路のパラメータ励振</h1>
+
+<p>本格的な交流回路応用に入る前に、興味ある話題として電気回路でのパラメータ励振について触れておきましょう。
+まずはパラメータ励振の最たる例である、ブランコについて学びます。</p>
+
+<h2 id="ブランコから学ぶパラメータ励振">ブランコから学ぶパラメータ励振</h2>
+
+<p>ブランコを立ちこぎするとき、ブランコの周期の半分の周期で腰を上下させます。
+このようにして支点から重心までの距離を周期的に変化させると、ブランコの振幅を徐々に大きくすることができます。</p>
+
+<p><img src="/assets/images/circuits/parametric_excitation_01.png" alt="" /><br />
+ブランコの模式図。(a)で膝を少し曲げた状態(重心が低い位置)から始まり、(b)で膝を伸ばして立ち上がることで重心を高い位置に上げる。高い位置で重心を維持したままブランコは揺れ(c)、(d)に到達したところで膝を少し曲げて重心を再び下に下げる。
+(e)-&gt;(f)-&gt;(g)-&gt;(h)と同様に膝の屈伸運動を行い、再び(a)に戻る。
+(a)から始まり再び(a)に戻るまでの振り子の1周期の間に、重心の上下は2回行われる。すなわち、重心の上下運動の周期は振り子の振動周期の半分となっている。</p>
+
+<p>これは単振り子の糸を周期的に伸び縮みさせると、単振り子の振幅を大きくすることができるのと同じ現象です。
+これらの場合、重心の上下、あるいは糸の長さの変化を、振動と上手く位相を合わさなければなりません。<br />
+単振り子の糸の長さを変えず、支点を上下させる場合も、同様に振動を励起することができます。
+この場合、重力がみかけ上変化していると考えることができます。
+振り子の糸の長さを \(\ell\)、重力加速度を \(g\) とし、振り子の振動数 \(\omega_0 = \sqrt{g/\ell}\) の2倍で支点を上下させることを考えましょう。</p>
+
+<p><img src="/assets/images/circuits/parametric_excitation_02.png" alt="" /></p>
+
+<p>さらに質点の質量を \(m\)、支点が上下する振幅を \(\alpha_0\) とします。
+2次元極座標で考えると、この振り子の \(\theta\) 方向の運動方程式は</p>
+
+\[m \ell \ddot{\theta} 
+= - mg \sin \theta + m \frac{d^2}{dt^2} (\sin 2\omega_0 t) \sin \theta 
+\ \Longrightarrow \ 
+\ddot{\theta} + (\omega_0^2 - \alpha \sin 2 \omega_0 t) \theta 
+= 0 \tag{1}\]
+
+<p>のようになります。
+途中、\(\vert \theta \vert \ll 1\) として、\(\sin \theta \approx \theta\) と近似しました。
+さらに \(\alpha = \frac{(2\omega_0)^2}{\ell}\) とし、これが小さなパラメータと考えます。
+(1)式を以下のように書き換えましょう。</p>
+
+\[\ddot{\theta} + \omega_0^2 \theta 
+= \alpha \sin 2\omega_0 t \cdot \theta \tag{2}\]
+
+<p>すると、右辺は振り子にはたらく外力と見ることができます。
+振動が近似的に \(\theta = \theta_0 \sin \omega_0 t\) で表される位相を持っている (すなわち外力がない場合の普通の単振動をしている) とすると、
+時間 \(dt\) の間に加えられる仕事 (角度 \(\theta\) を変位と見たときの仕事) は</p>
+
+\[\begin{align}
+dW 
+&amp;= \alpha \sin 2\omega_0 t \cdot \theta \cdot \frac{d\theta}{dt} dt 
+= \alpha \sin 2 \omega_0 t \cdot \theta_0 \sin \omega_0 \cdot \theta_0 \omega_0 \cos \omega_0 t dt \notag \\
+&amp;= \frac{\alpha \omega_0}{2} \theta_0^2 \sin^2 2\omega_0 t dt 
+\geq 0 \tag{3}
+\end{align}\]
+
+<p>となります。
+これは常に正の値となり、振り子は絶えずエネルギーを増加させていき、その振幅は徐々に大きくなります。<br />
+この場合、振動を決めるのは質量・バネの強さ・糸の長さ・支点の位置 (上下) などのいくつかのパラメータです。
+これらのパラメータのあるものを時間的に変化させることで振動を起こす方法を、パラメータ励振と呼びます。<br />
+単振り子でパラメータ励振を起こす場合、振り子の支点を上下させる方法のほかに、次図のように単振り子の糸を周期的に引き上げる方法や、鉄で作られたおもりを周期的に磁石で下に引っ張る方法などで実現できます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p class="note">(1)式はマシューの微分方程式 (Mathieu’s differential equation) と同じ形をしており、その解はマシュー関数 (Mathieu function) と呼ばれています。
+マシュー関数については解の性質もよく調べられています。
+気になる方は調べてみると良いでしょう。</p>
+
+<h2 id="lc回路">LC回路</h2>
+
+<p>ブランコで単振動やパラメータ励振についての基礎を学んだところで、電気回路での応用を見ていきましょう。
+コイル \(L\) とコンデンサー \(C\) とをつないだ回路は、電気振動を起こします。</p>
+
+<h3 id="単振動">単振動</h3>
+
+<p>コンデンサーに電荷 \(q\) だけ蓄電し、その状態のコンデンサーをコイルにつなぎます。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>コイルに流れる電流を \(i\) とすると、<a href="/circuits/steady_current#定常電流電気回路とキルヒホッフの法則">キルヒホッフの電圧則</a>より</p>
+
+\[-L \frac{di}{dt} - \frac{q}{C} 
+= 0 \ \underbrace{\Longrightarrow}_{i = \frac{dq}{dt}} \ 
+L \frac{d^2 q}{dt^2} + \frac{q}{C} 
+= 0 \tag{4}\]
+
+<p>この方程式は単振動の方程式の形をしており、LC回路内のコンデンサーに蓄えられた電荷 \(q\) が角振動数 \(\omega_0 = \sqrt{\frac{1}{LC}}\) で与えられることがわかります。
+ここから、この回路の電気回路の単振動の方程式と、質点がバネなどで単振動する場合の運動方程式との間に、次の対応が成り立つことがわかります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">電気回路</th>
+      <th style="text-align: left">質点の力学</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">蓄電量 \(q\)</td>
+      <td style="text-align: left">変位 \(x\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">自己インダクタンス \(L\)</td>
+      <td style="text-align: left">質点質量 \(m\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">電気容量の逆数 \(1/C\)</td>
+      <td style="text-align: left">バネ定数 \(k\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">電気抵抗 \(R\)</td>
+      <td style="text-align: left">抵抗係数 \(\alpha\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここまで電気抵抗 \(R\) については触れていませんでしたが、これは質点の力学においては摩擦などによる抵抗係数 \(\alpha\) に対応し、減衰振動を引き起こします。</p>
+
+<h3 id="パラメータ励振">パラメータ励振</h3>
+
+<p>ここから、LC回路でのパラメータ励振を見ていきましょう。
+例として、コンデンサーに適当な周期的変化を与える場合を見てみます。
+コンデンサーの電気容量を \(C\) とし、\(1/C\) を角振動数 \(2\omega\) で変化させるとします。
+このときの \(1/C\) の平均値を \(1/C_0\) のように書くことにすると、コンデンサーに蓄えられている電荷 \(q\) の時間発展を記述する方程式は</p>
+
+\[L \frac{d^2 q}{dt^2} + \left( \frac{1}{C_0} - \epsilon \sin 2\omega t \right) q 
+= 0 \tag{5}\]
+
+<p>のようになります。
+ここで \(\vert \epsilon \vert \ll 1/C_0\) の小さな定数です。
+(5)式は、ブランコのパラメータ励振の式(1)と同じ形であり、徐々に \(q\) の振動の振幅が大きくなっていくことがわかります。
+コンデンサーの電気容量を周期的に変化させる方法として、コンデンサーの極板間の距離を振動させる方法があります。
+コンデンサーの極板の面積を \(S\)、極板間の距離を \(\ell = \ell_0 - \ell_1 \sin 2\omega t \ (\ell_1 \ll \ell_0)\) とすると、コンデンサーの電気容量は次のように書かれます。</p>
+
+\[C
+= \varepsilon_0 \frac{S}{\ell} \tag{6}\]
+
+<p>そして極板の間にはたらく力は</p>
+
+\[F 
+= - \frac{q^2}{2\varepsilon_0 S} 
+= - \frac{q^2}{2 C \ell} 
+\approx - \frac{q^2}{2 C_0 \ell}
+\tag{7}\]
+
+<p>のようになります。
+途中、\(C, \ell\) の変化は微小であり、2次の微小量は無視して \(C \ell \approx C_0 \ell\) のように近似を行いました。
+ここでさらに \(q \approx q_0 \cos \omega_0 t\)のように、コンデンサーに蓄えられる電荷は \(\omega_0 = \sqrt{\frac{1}{LC}}\) の角振動数で振動していると近似しましょう。
+すると、この力が1周期の間にする仕事は</p>
+
+\[\begin{align}
+W
+&amp;= \int F d\ell 
+= \int F d (\ell_0 - \ell_1 \sin 2\omega t) 
+= - \int F \cdot 2 \omega \ell_1 \cos 2\omega t dt \notag \\
+&amp;\approx \frac{q_0^2 \ell_1 \omega}{C_0 \ell} \int_0^T \cos^2 \omega_0 t \cos 2\omega t dt 
+\underbrace{\approx}_{\ell \approx \ell_0} \frac{q_0^2 \ell_1 \omega}{C_0 \ell_0} \int_0^T \frac{1+\cos 2\omega_0 t}{2} \cos 2\omega t dt \notag \\
+&amp;= \frac{q_0^2 \ell_1 \omega}{2 C_0 \ell_0} \int_0^T \cos 2 \omega_0 t \cos 2\omega t dt \tag{8}
+\end{align}\]
+
+<p>と求まります。
+途中、\(\ell_1\) が先頭に出てきていることから、分母の \(\ell\) は \(\ell_0\) にすることで微小量の2次を無視する操作を行いました。
+この式から、\(\omega = \omega_0\) ならば、常に \(W &gt; 0\) となることがわかります。
+すなわち、静電気的な力に対してコンデンサーの極板を動かす仕事が、電気的なエネルギーに変換されて発振します。</p>
+
+<h3 id="応用-パラメトロン">応用: パラメトロン</h3>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4auTGum">戸田盛和, “振動論”</a><br />
+[] <a href="https://www.osaka-kyoiku.ac.jp/~masako/exp/melde/buranko.html">田中優子, 福本珠巳, “身近な振動と共鳴の数々 ブランコ”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

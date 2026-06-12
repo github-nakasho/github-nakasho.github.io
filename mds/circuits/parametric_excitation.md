@@ -196,7 +196,11 @@ $$L$$ を角周波数 $$2\omega$$ で励振すると、回路には角周波数 
 パラメータ励振により発振されたブランコのゆれ方。(a)のブランコが右にゆれるときには、(b)のブランコは左にゆれる。すなわち $$\pi$$ だけ位相がズレている。  
 
 ここから、一方を 0 相、他方を $$\pi$$ 相と呼び、発振がどちらの位相にあるかで1ビットを記憶することができます。
-この原理をもとに作られたパラメトロンをいくつか連結することで、データの0-1のバイナリ表現が可能となり、さらに励振の間に論理処理を挟むことで、複雑な計算も可能になるという仕組みです。
+この原理をもとに作られたパラメトロンをいくつか連結することで、データの0-1のバイナリ表現が可能となり、さらに励振の間に論理処理を挟むことで、複雑な計算も可能になるという仕組みです。  
+2025年、パラメトロンは [IEEE のマイルストーン](https://ieeemilestones.ethw.org/Milestone-Proposal:Parametron,_1954)に認定されました。
+IEEE (Institute of Electrical and Electronics Engineers) はアメリカの電気・電子工学学会です。
+そして IEEE マイルストーンは、少なくとも25年以上前に達成された電気・電子分野のイノベーションのうち、世界的または地域的に大きな影響を与え、社会や産業の発展に多大な貢献をした功績を讃えて与えられます。
+[パラメトロンのマイルストーン申請書](https://ieeemilestones.ethw.org/Milestone-Proposal:Parametron,_1954)では、パラメトロンの歴史だけでなく、最近のカルチャーに与えた影響として[ Dr.STONE ](https://amzn.to/3QqzIKA)でパラメトロンが登場していることも引用しています。
 
 {% include adsense.html %} 
 
@@ -396,5 +400,7 @@ $$
 [5] [Lin et al., 2014, "Josephson parametric phase-locked oscillator and its application to dispersive readout of superconducting qubits"](https://www.nature.com/articles/ncomms5480)  
 [6] [和田英一, "日本独自の技術「パラメトロン」"](https://www.iijlab.net/~ew/pc1/ohm.pdf)  
 [7] [和田英一, "パラメトロン計算機 PC-1 -回路設計と方式設計-"](https://www.iijlab.net/~ew/pc1/summer96.pdf)  
+[8] [IEEE Milestone Wiki, Milestone-Proposal: Parametron, 1954](https://ieeemilestones.ethw.org/Milestone-Proposal:Parametron,_1954)  
+[9] [稲垣理一郎, "Dr.STONE", 24巻](https://amzn.to/3QqzIKA)  
 
 {% include adsense.html %}

@@ -1,0 +1,115 @@
+I"B
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#直列共振と並列共振" id="markdown-toc-直列共振と並列共振">直列共振と並列共振</a>    <ol>
+      <li><a href="#直列共振" id="markdown-toc-直列共振">直列共振</a>        <ol>
+          <li><a href="#共振の半値幅とq値" id="markdown-toc-共振の半値幅とq値">共振の半値幅とQ値</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="直列共振と並列共振">直列共振と並列共振</h1>
+
+<h2 id="直列共振">直列共振</h2>
+
+<p>\(L, C, R\) を直列につないだ回路に交流電圧をかけた場合、この回路の複素インピーダンスは次のようになるのでした (<a href="/circuits/ac#直列lcr回路とインピーダンス">リンク先参照。</a>)</p>
+
+\[\mathcal{Z} 
+= R + i \left( \omega L - \frac{1}{\omega C}\right) \ \Longrightarrow \ 
+Z 
+= \sqrt{R^2 + \left( \omega L - \frac{1}{\omega C}\right)^2} \tag{1}\]
+
+<p>すると \(\omega = \sqrt{\frac{1}{LC}}\) のとき、インピーダンスは最小値 \(Z = R\) となります。
+すなわち、電流 \(\mathcal{I} = \mathcal{V} / \mathcal{Z}\) の大きさは最大となります。
+この条件を満たした状態を直列共振 (series resonance) と呼び、先ほどの \(\omega = \sqrt{\frac{1}{LC}}\) を共振角周波数と呼びます。
+一般にもっと複雑な回路でも、ある周波数で \(Z = \vert \mathcal{Z} \vert\) が特に小さくなることがあります。
+このような時に、一般にその周波数を直列共振周波数と呼ぶことがあります。<br />
+この直列共振は、\(\omega\) を一定にしておき、\(L\) または \(C\) を変化させても起こります。
+その時も、やはり共振は \(\omega^2 = \frac{1}{LC}\) という条件を満足する場合に起こります。
+このときの \(L, C\) の値に対して \(Z\) が最小となり、電流は最大となります。<br />
+共振の様子を詳しくみてみましょう。</p>
+
+\[\vert \mathcal{I} \vert^2 
+= \frac{\vert \mathcal{V} \vert^2}{R^2 + \left( \omega L - \frac{1}{\omega C}\right)^2} \tag{2}\]
+
+<p>となります。
+\(\omega_0^2 = \frac{1}{LC}\) の関係を用いて、\(C\) を消去しましょう。
+すると</p>
+
+\[\vert \mathcal{I} \vert^2 
+= \frac{\vert \mathcal{V} \vert^2}{R^2 + \omega_0^2 L^2 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right)^2} \tag{3}\]
+
+<p>のようになります。
+(3)式の概形は次のようになります。</p>
+
+<p><img src="/assets/images/circuits/series_parallel_resonance_01.png" alt="" /><br />
+\(\vert \mathcal{I} \vert^2\) の角周波数依存性を表したもの。\(\omega_0\) は共振角周波数、ABは \(2\Delta \omega\) を表す。
+\(\Delta \omega\) は後述の半値幅。</p>
+
+<p>\(\vert \mathcal{I} \vert^2\) が最大値を取るのは、分母の第二項が消えて \(R^2\) のみ残る場合で、その値は</p>
+
+\[\vert \mathcal{I} \vert^2_\mathrm{max} 
+= \frac{\vert \mathcal{V} \vert^2}{R^2} \tag{4}\]
+
+<p>とわかります。</p>
+
+<h3 id="共振の半値幅とq値">共振の半値幅とQ値</h3>
+
+<p>次に、\(\vert I \vert^2\) の値が最大値の半分になるときの \(\omega\) を考えてみましょう。
+それは、(3)式において分母の第一項と第二項が等しくなった場合であるから</p>
+
+\[R^2 
+= \omega_0^2 L^2 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)^2 \ \Longrightarrow \ 
+\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} 
+= \pm \frac{R}{\omega_0 L} \tag{5}\]
+
+<p>を満足するような \(\omega\) の値であることがわかります。
+もちろんこの式を \(\omega\) について解けばよいのですが、ここでは \(\omega\) が \(\omega_0\) に近い領域で考えましょう。
+すなわち</p>
+
+\[\frac{\omega}{\omega_0} 
+\approx 1 + \delta \tag{6}\]
+
+<p>のようにおいて、\(\vert \delta \vert \ll 1\) として計算を行うと</p>
+
+\[\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} 
+\approx 1 + \delta - \frac{1}{1+\delta} 
+\approx 1 + \delta - (1-\delta) 
+= 2\delta \tag{7}\]
+
+<p>となります。
+以上から</p>
+
+\[\delta 
+= \pm \frac{R}{2\omega_0 L} \tag{8}\]
+
+<p>のように書くことができます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4eQ96MY">中村哲, 須藤彰三, “電磁気学”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

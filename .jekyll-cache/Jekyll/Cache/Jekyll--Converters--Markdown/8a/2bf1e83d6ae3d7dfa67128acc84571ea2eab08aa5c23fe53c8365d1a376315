@@ -1,0 +1,359 @@
+I"YA
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#交流における相反定理と四端子回路" id="markdown-toc-交流における相反定理と四端子回路">交流における相反定理と四端子回路</a>    <ol>
+      <li><a href="#交流における相反定理" id="markdown-toc-交流における相反定理">交流における相反定理</a></li>
+      <li><a href="#四端子回路網の接続" id="markdown-toc-四端子回路網の接続">四端子回路網の接続</a>        <ol>
+          <li><a href="#接続とその合成行列" id="markdown-toc-接続とその合成行列">接続とその合成行列</a></li>
+          <li><a href="#四端子回路の例" id="markdown-toc-四端子回路の例">四端子回路の例</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="交流における相反定理と四端子回路">交流における相反定理と四端子回路</h1>
+
+<p>回路の素子のインピーダンスとその合成則を知っていれば、複雑な交流回路も計算することができます。
+しかし四端子回路または四端子回路網 (four-terminal network) の性質を知っておくと、便利な場面が多くあります。
+先の例で示したように、<a href="/circuits/ac#補遺a-変圧器とその原理についての話題">変圧器も四端子回路の一種</a>であり、またトランジスターや変成器も四端子回路です。
+ここでは、最初に<a href="/circuits/four_terminal_network_reciprocity_theorem">直流での相反定理</a>の交流バージョンを見ていきましょう。
+そして四端子回路の記述法や、様々な四端子回路の例について勉強しましょう。</p>
+
+<h2 id="交流における相反定理">交流における相反定理</h2>
+
+<p>電気回路の相反定理 (reciprocity theorem) は、<a href="/circuits/four_terminal_network_reciprocity_theorem#相反定理">直流回路に対して証明しました。</a>
+しかしこれは、\(L, C\) を含む交流回路についても、全く同様に成立します。
+次図のように、2対の端子が出ている回路において、各端子対に流れる電流を \(\mathcal{I}_1, \mathcal{I}_2\)、そしてそれぞれの端子対間の電位差を \(\mathcal{V}_1, \mathcal{V}_2\) としましょう。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>また、この同じ回路に対し、別の場合の電流 \(\mathcal{I}_1', \mathcal{I}_2'\) が流れ、電位差 \(\mathcal{V}_1', \mathcal{V}_2'\) が現れたとしましょう。
+このとき</p>
+
+\[\mathcal{V}_1 \mathcal{I}_1' + \mathcal{V}_2 \mathcal{I}_2' 
+= \mathcal{V}_1' \mathcal{I}_1 + \mathcal{V}_2' \mathcal{I}_2 \tag{1}\]
+
+<p>が成り立ちます。
+これが相反定理であり、これは直流の場合と全く同じ形です。
+ただし、\(\mathcal{V}, \mathcal{I}\) がこの場合には複素数であるという違いがあります。
+その証明方法は、<a href="/circuits/four_terminal_network_reciprocity_theorem">直流の場合の相反定理</a>の証明と全く同じです。<br />
+ここで、電流と電圧の間の関係は全て線形であるから、\(\mathcal{I}_1, \mathcal{I}_2\) についても、これらは電圧 \(\mathcal{V}_1, \mathcal{V}_2\) によって、次のような線形の形で与えられるはずです。</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{I}_1 
+= \mathcal{Y}_{11} \mathcal{V}_1 + \mathcal{Y}_{12} \mathcal{V}_2 \\
+\mathcal{I}_2 
+= \mathcal{Y}_{21} \mathcal{V}_1 + \mathcal{Y}_{22} \mathcal{V}_2
+\end{array} \right. \tag{2}\]
+
+<p>この係数 \(\mathcal{Y}_{11}, \mathcal{Y}_{12}, \mathcal{Y}_{21}, \mathcal{Y}_{22}\) の意味は、直流のときに定義した \(G_{11}, G_{12}, G_{21}, G_{22}\) と全く同様です。
+すなわち、\(\mathcal{Y}_{11}\) は端子対2を短絡したときの端子対1の間で測ったアドミタンスです。
+そして \(\mathcal{Y}_{12}\) は、端子対2に電圧を加え、端子対1を短絡したときに端子対1に流れる電流を表す係数を表します。
+これを伝達アドミタンス (transfer admittance) と呼びます。
+直流と異なるところは、やはり \(\mathcal{Y}_{11}, \mathcal{Y}_{12}, \mathcal{Y}_{21}, \mathcal{Y}_{22}\) などが、一般に複素数であることです。
+(2)式を</p>
+
+\[\boldsymbol{\mathcal{I}} 
+= \boldsymbol{\mathcal{Y}} \boldsymbol{\mathcal{V}}, \quad 
+\boldsymbol{\mathcal{Y}} = \left( \begin{array}{cc}
+\mathcal{Y}_{11} &amp; \mathcal{Y}_{12} \\
+\mathcal{Y}_{21} &amp; \mathcal{Y}_{22}
+\end{array} \right) \tag{3}\]
+
+<p>のように行列とベクトルで表現したとき、\(\boldsymbol{\mathcal{Y}}\) をアドミッタンス行列 (admittance matrix) と呼びます。
+(2)式において \(\mathcal{I} \rightarrow \mathcal{I}', \mathcal{V} \rightarrow \mathcal{V}'\) のように変えたものを、(1)式に代入すると</p>
+
+\[\mathcal{V}_1 (\mathcal{Y}_{11} \mathcal{V}_1' + \mathcal{Y}_{12} \mathcal{V}_2') + \mathcal{V}_2 (\mathcal{Y}_{21} \mathcal{V}_1' + \mathcal{Y}_{22} \mathcal{V}_2') 
+= \mathcal{V}_1' (\mathcal{Y}_{11} \mathcal{V}_1 + \mathcal{Y}_{12} \mathcal{V}_2) + \mathcal{V}_2' (\mathcal{Y}_{21} \mathcal{V}_1 + \mathcal{Y}_{22} \mathcal{V}_2) \tag{4}\]
+
+<p>となります。
+これが任意の \(\mathcal{V}_1, \mathcal{V}_2, \mathcal{V}_1', \mathcal{V}_2'\) に対して成立するためには、\(\mathcal{V}_1 \mathcal{V}_1', \mathcal{V}_1 \mathcal{V}_2', \mathcal{V}_2 \mathcal{V}_1', \mathcal{V}_2 \mathcal{V}_2'\) のそれぞれの係数が左右で等しくならなければなりません。
+特に \(\mathcal{V}_1 \mathcal{V}_2'\) の係数を等しいとおくと</p>
+
+\[\mathcal{Y}_{12} 
+= \mathcal{Y}_{21} \tag{5}\]
+
+<p>が得られます。
+すなわち、アドミタンス行列は対称行列です。
+これも相反定理と呼びます。<br />
+(2)式は、逆に</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{V}_1 
+= \mathcal{Z}_{11} \mathcal{I}_1 + \mathcal{Z}_{12} \mathcal{I}_2 \\
+\mathcal{V}_2 
+= \mathcal{Z}_{21} \mathcal{I}_1 + \mathcal{Z}_{22} \mathcal{I}_2 
+\end{array} \right. \tag{6}\]
+
+<p>のように書くこともできます。
+ここでも、相反定理は</p>
+
+\[\mathcal{Z}_{12} 
+= \mathcal{Z}_{21} \tag{7}\]
+
+<p>という関係をもたらします。
+(6)式を</p>
+
+\[\boldsymbol{\mathcal{V}} 
+= \boldsymbol{\mathcal{Z}} \boldsymbol{\mathcal{I}}, \quad 
+\boldsymbol{\mathcal{Z}} 
+= \left( \begin{array}{cc}
+\mathcal{Z}_{11} &amp; \mathcal{Z}_{12} \\
+\mathcal{Z}_{21} &amp; \mathcal{Z}_{22} 
+\end{array} \right) \tag{8}\]
+
+<p>のように書き、\(\boldsymbol{\mathcal{Z}}\) をインピーダンス行列 (impedance matrix) と呼びます。
+\(\boldsymbol{\mathcal{Y}}\) と同様、こちらも対称行列となります。
+(3)式より</p>
+
+\[\boldsymbol{\mathcal{V}} 
+= \boldsymbol{\mathcal{Y}}^{-1} \boldsymbol{\mathcal{I}}\]
+
+<p>と(8)式を見比べれば</p>
+
+\[\boldsymbol{\mathcal{Z}} 
+= \boldsymbol{\mathcal{Y}}^{-1} \tag{9}\]
+
+<p>のように、\(\boldsymbol{\mathcal{Z}}, \boldsymbol{\mathcal{Y}}\) は互いに逆行列の関係にあることがわかります。<br />
+また</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{V}_1 
+= \mathcal{A} \mathcal{V}_2 + \mathcal{B} \mathcal{I}_2 \\
+\mathcal{I}_1 
+= \mathcal{C} \mathcal{V}_2 + \mathcal{D} \mathcal{I}_2 \\
+\end{array} \right. \ \Longrightarrow \ 
+\left( \begin{array}{c} 
+\mathcal{V}_1 \\
+\mathcal{I}_1
+\end{array}\right) 
+= \left( \begin{array}{cc}
+\mathcal{A} &amp; \mathcal{B} \\
+\mathcal{C} &amp; \mathcal{D}
+\end{array} \right) \left( \begin{array}{c} 
+\mathcal{V}_2 \\
+\mathcal{I}_2
+\end{array}\right) \tag{10}\]
+
+<p>のように書いた場合、\(\mathcal{A}, \mathcal{B}, \mathcal{C}, \mathcal{D}\) を四端子定数 (four-terminal constant) と呼びます。
+またこの行列を、ABCD行列と呼びます。
+\(L, C, R, M\) から成る受動的な回路網では、先ほどの相反定理が成り立つため</p>
+
+\[\mathcal{A} \mathcal{D} - \mathcal{B} \mathcal{C} 
+= 1 \tag{11}\]
+
+<p>の関係が成り立ちます。
+また相反定理が成り立つとき、先ほどのインピーダンス行列・アドミタンス行列との間に</p>
+
+\[\mathcal{Z}_{11} 
+= \frac{\mathcal{A}}{\mathcal{C}}, \quad
+\mathcal{Z}_{22} 
+= \frac{\mathcal{D}}{\mathcal{C}}, \quad
+\mathcal{Z}_{12} 
+= \mathcal{Z}_{21} 
+= \frac{1}{\mathcal{C}} \tag{12}\]
+
+\[\mathcal{Y}_{11} 
+= \frac{\mathcal{D}}{\mathcal{B}}, \quad
+\mathcal{Y}_{22} 
+= \frac{\mathcal{A}}{\mathcal{B}}, \quad
+\mathcal{Y}_{12} 
+= \mathcal{Y}_{21} 
+= - \frac{1}{\mathcal{B}} \tag{13}\]
+
+<p>の関係が成り立ちます。<br />
+四端子回路では、入出力の電圧電流の中の2つを独立変数とすれば、他の2つの変数が決定されます。
+したがって、一般に2行2列の行列で回路を表現することができます。
+そこで、ABCD行列・インピーダンス行列・アドミタンス行列のほかに、入力の電流および出力の電圧を独立変数として、入力電圧および出力電流を表現する方法もあります。
+この表示の方法は、入出力の量が混在して使用されているため、ハイブリッドパラメータ (hybrid parameter, hパラメータ) 表示と言います。
+今の表現を数式で表すと</p>
+
+\[\left( \begin{array}{c}
+\mathcal{V}_1 \\
+\mathcal{I}_2
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\mathcal{h}_{11} &amp; \mathcal{h}_{12} \\
+\mathcal{h}_{21} &amp; \mathcal{h}_{22}
+\end{array} \right) \quad \mathrm{or} \quad \left( \begin{array}{c}
+\mathcal{V}_1 \\
+\mathcal{I}_2
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\mathcal{h}_\mathrm{i} &amp; \mathcal{h}_\mathrm{r} \\
+\mathcal{h}_\mathrm{f} &amp; \mathcal{h}_\mathrm{o}
+\end{array} \right) \tag{14}\]
+
+<p>のようになります。
+それぞれの添字 \(\mathrm{i}\) はinput、\(\mathrm{r}\) はreverse、\(\mathrm{f}\) はforward、\(\mathrm{o}\) はoutputを意味します。
+hパラメータの \(\mathcal{h}_\mathrm{i} = \mathcal{h}_{11}\) は出力をショートしたときの入力インピーダンス、\(\mathcal{h}_\mathrm{r}=\mathcal{h}_{12}\) は入力電流が流れない (\(\mathcal{I}_1 = 0\)) 場合の逆方向電圧増幅率 (reverse voltage gain), \(\mathcal{h}_\mathrm{f} = \mathcal{h}_{21}\) は出力をショート (\(\mathcal{V}_2 = 0\)) したときの順方向電流増幅率、\(\mathcal{h}_\mathrm{o}=\mathcal{h}_{22}\) は入力電流 (\(\mathcal{I}_1 =0\)) のときの出力アドミタンスです。
+hパラメータを四端子定数で表すと</p>
+
+\[\mathcal{h}_\mathrm{i} 
+= \frac{\mathcal{B}}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{r} 
+= \mathcal{A} - \frac{\mathcal{B C}}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{f} 
+= - \frac{1}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{o} 
+= \frac{\mathcal{C}}{\mathcal{D}} \tag{15}\]
+
+<p>のようになります。<br />
+ハイブリッドパラメータは、トランジスターの小信号特性を表示するのによく用いられます。
+相反定理 (11)式が成り立つとき、\(\mathcal{h}_\mathrm{r} = - \mathcal{h}_\mathrm{f}\) となりますが、トランジスターなどの能動的回路ではこれは成り立ちません。</p>
+
+<h2 id="四端子回路網の接続">四端子回路網の接続</h2>
+
+<h3 id="接続とその合成行列">接続とその合成行列</h3>
+
+<p>四端子回路を次図のように接続することを、カスケード接続 (cascade connection) と呼びます。</p>
+
+<p><img src="" alt="" /><br />
+カスケード接続。</p>
+
+<p>この場合は、1つの四端子回路の出力が次の四端子回路の入力になっているため、(10)式の表現が便利です。
+合成回路の四端子定数は、次のように計算されます。</p>
+
+\[\left( \begin{array}{cc}
+\mathcal{A} &amp; \mathcal{B} \\
+\mathcal{C} &amp; \mathcal{D}  
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\mathcal{A}_1 &amp; \mathcal{B}_1 \\
+\mathcal{C}_1 &amp; \mathcal{D}_1  
+\end{array} \right)
+\left( \begin{array}{cc}
+\mathcal{A}_2 &amp; \mathcal{B}_2 \\
+\mathcal{C}_2 &amp; \mathcal{D}_2  
+\end{array} \right) \tag{16}\]
+
+<p>すなわち \(\mathcal{A} = \mathcal{A}_1 \mathcal{A}_2 + \mathcal{B}_1 \mathcal{C}_2\) などです。<br />
+2つの四端子回路の直列接続は、次の図のように表されます。</p>
+
+<p><img src="" alt="" /><br />
+直列接続。</p>
+
+<p>この場合の接続するインピーダンス行列をそれぞれ \((\mathcal{Z}_{ij}'), (\mathcal{Z}_{ij}'')\) とすると、合成四端子回路のインピーダンス行列は</p>
+
+\[(\mathcal{Z}_{ij}) 
+= (\mathcal{Z}_{ij}' + \mathcal{Z}_{ij}'') \tag{17}\]
+
+<p>すなわち \(\mathcal{Z}_{11} = \mathcal{Z}_{11}' + \mathcal{Z}_{11}''\) などです。<br />
+最後に、四端子回路の並列接続は、次図のようになります。</p>
+
+<p><img src="" alt="" /><br />
+並列接続。</p>
+
+<p>この場合はアドミタンス行列を用いるのが便利で、合成四端子回路のアドミタンス行列は</p>
+
+\[(\mathcal{Y}_{ij}) 
+= (\mathcal{Y}_{ij}' + \mathcal{Y}_{ij}'') \tag{18}\]
+
+<p>となります。
+これらのうちのカスケード接続は、フィルター・遅延回路などにしばしば用いられ、超高周波の分布定数回路の理論にも使われます。</p>
+
+<h3 id="四端子回路の例">四端子回路の例</h3>
+
+<p>四端子回路は (\(L, C, R\) など) その回路素子のつなぎ方により、その形からT型・\(\pi\) 型・格子型などがあります。
+最も簡単な四端子回路は、次図に示すように二端子回路を1つだけ含むものです。</p>
+
+<p><img src="" alt="" /><br />
+最も簡単な四端子回路。</p>
+
+<p>(a)と(b)の四端子定数はそれぞれ</p>
+
+\[\left( \begin{array}{cc}
+1 &amp; \mathcal{Z} \\
+0 &amp; 1
+\end{array} \right) , \quad 
+\left( \begin{array}{cc}
+1 &amp; 0 \\
+\mathcal{Y} &amp; 1
+\end{array} \right) = \left( \begin{array}{cc}
+1 &amp; 0 \\
+\frac{1}{\mathcal{Z}} &amp; 1
+\end{array} \right) \tag{19}\]
+
+<p>のように表されます。
+多くの四端子回路は、これらのいろいろな接続として考えることができます。
+以下に、四端子回路の具体例を見ていきましょう。</p>
+
+<ul>
+  <li>T型</li>
+</ul>
+
+<p><img src="" alt="" /></p>
+
+\[\begin{align}
+\left( \begin{array}{cc}
+1 &amp; \mathcal{Z}_1 \\
+0 &amp; 1
+\end{array} \right) \left( \begin{array}{cc}
+1 &amp;  \\
+1/\mathcal{Z}_2 &amp; 1
+\end{array} \right) \left( \begin{array}{cc}
+1 &amp; \mathcal{Z}_3 \\
+0 &amp; 1
+\end{array} \right) 
+&amp;= \left( \begin{array}{cc}
+1 + \frac{\mathcal{Z}_1}{\mathcal{Z}_2} &amp; \mathcal{Z}_1 \\
+\frac{1}{\mathcal{Z}_2} &amp; 1
+\end{array} \right) \left( \begin{array}{cc}
+1 &amp; \mathcal{Z}_3 \\
+0 &amp; 1
+\end{array} \right) \notag \\
+&amp;= \left( \begin{array}{cc}
+1 + \frac{\mathcal{Z}_1}{\mathcal{Z}_2} &amp; \frac{\mathcal{Z}_1 \mathcal{Z}_2 + \mathcal{Z}_2 \mathcal{Z}_3 + \mathcal{Z}_3 \mathcal{Z}_1}{\mathcal{Z}_2} \\
+\frac{1}{\mathcal{Z}_2} &amp; 1 + \frac{\mathcal{Z}_3}{\mathcal{Z}_2}
+\end{array} \right) \tag{20}
+\end{align}\]
+
+<ul>
+  <li>\(\pi\) 型</li>
+</ul>
+
+<p><img src="" alt="" /></p>
+
+\[\left( \begin{array}{cc}
+1 &amp; 0 \\
+1/\mathcal{Z}_2 &amp; 1 
+\end{array} \right) \left( \begin{array}{cc}
+1 &amp; \mathcal{Z}_1 \\
+0 &amp; 1 
+\end{array} \right) \left( \begin{array}{cc}
+1 &amp; 0 \\
+1/\mathcal{Z}_3 &amp; 1 
+\end{array} \right) 
+= \left( \begin{array}{cc}
+1 &amp; \mathcal{Z}_1 \\
+\frac{1}{\mathcal{Z}_2} &amp; \frac{\mathcal{Z}_1}{\mathcal{Z}_2} + 1 
+\end{array} \right)  \left( \begin{array}{cc}
+1 &amp; 0 \\
+1/\mathcal{Z}_3 &amp; 1 
+\end{array} \right)\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

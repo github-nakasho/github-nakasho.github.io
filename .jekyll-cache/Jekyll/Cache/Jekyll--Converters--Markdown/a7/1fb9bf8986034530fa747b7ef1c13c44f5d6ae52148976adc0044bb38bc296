@@ -1,0 +1,227 @@
+I"/
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#交流における相反定理と4端子回路" id="markdown-toc-交流における相反定理と4端子回路">交流における相反定理と4端子回路</a>    <ol>
+      <li><a href="#交流における相反定理" id="markdown-toc-交流における相反定理">交流における相反定理</a></li>
+      <li><a href="#四端子回路網の接続" id="markdown-toc-四端子回路網の接続">四端子回路網の接続</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="交流における相反定理と4端子回路">交流における相反定理と4端子回路</h1>
+
+<p>回路の素子のインピーダンスとその合成則を知っていれば、複雑な交流回路も計算することができます。
+しかし4端子かいろまたは4端子回路網 (four-terminal network) の性質を知っておくと、便利な場面が多くあります。
+先の例で示したように、<a href="/circuits/ac#補遺a-変圧器とその原理についての話題">変圧器も4端子回路の一種</a>であり、またトランジスターや変成器も4端子回路です。
+ここでは、最初に<a href="/circuits/four_terminal_network_reciprocity_theorem">直流での相反定理</a>の交流バージョンを見ていきましょう。
+そして4端子回路の記述法や、様々な4端子回路の例について勉強しましょう。</p>
+
+<h2 id="交流における相反定理">交流における相反定理</h2>
+
+<p>電気回路の相反定理 (reciprocity theorem) は、<a href="/circuits/four_terminal_network_reciprocity_theorem#相反定理">直流回路に対して証明しました。</a>
+しかしこれは、\(L, C\) を含む交流回路についても、全く同様に成立します。
+次図のように、2対の端子が出ている回路において、各端子対に流れる電流を \(\mathcal{I}_1, \mathcal{I}_2\)、そしてそれぞれの端子対間の電位差を \(\mathcal{V}_1, \mathcal{V}_2\) としましょう。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>また、この同じ回路に対し、別の場合の電流 \(\mathcal{I}_1', \mathcal{I}_2'\) が流れ、電位差 \(\mathcal{V}_1', \mathcal{V}_2'\) が現れたとしましょう。
+このとき</p>
+
+\[\mathcal{V}_1 \mathcal{I}_1' + \mathcal{V}_2 \mathcal{I}_2' 
+= \mathcal{V}_1' \mathcal{I}_1 + \mathcal{V}_2' \mathcal{I}_2 \tag{1}\]
+
+<p>が成り立ちます。
+これが相反定理であり、これは直流の場合と全く同じ形です。
+ただし、\(\mathcal{V}, \mathcal{I}\) がこの場合には複素数であるという違いがあります。
+その証明方法は、<a href="/circuits/four_terminal_network_reciprocity_theorem">直流の場合の相反定理</a>の証明と全く同じです。<br />
+ここで、電流と電圧の間の関係は全て線形であるから、\(\mathcal{I}_1, \mathcal{I}_2\) についても、これらは電圧 \(\mathcal{V}_1, \mathcal{V}_2\) によって、次のような線形の形で与えられるはずです。</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{I}_1 
+= \mathcal{Y}_{11} \mathcal{V}_1 + \mathcal{Y}_{12} \mathcal{V}_2 \\
+\mathcal{I}_2 
+= \mathcal{Y}_{21} \mathcal{V}_1 + \mathcal{Y}_{22} \mathcal{V}_2
+\end{array} \right. \tag{2}\]
+
+<p>この係数 \(\mathcal{Y}_{11}, \mathcal{Y}_{12}, \mathcal{Y}_{21}, \mathcal{Y}_{22}\) の意味は、直流のときに定義した \(G_{11}, G_{12}, G_{21}, G_{22}\) と全く同様です。
+すなわち、\(\mathcal{Y}_{11}\) は端子対2を短絡したときの端子対1の間で測ったアドミタンスです。
+そして \(\mathcal{Y}_{12}\) は、端子対2に電圧を加え、端子対1を短絡したときに端子対1に流れる電流を表す係数を表します。
+これを伝達アドミタンス (transfer admittance) と呼びます。
+直流と異なるところは、やはり \(\mathcal{Y}_{11}, \mathcal{Y}_{12}, \mathcal{Y}_{21}, \mathcal{Y}_{22}\) などが、一般に複素数であることです。
+(2)式を</p>
+
+\[\boldsymbol{\mathcal{I}} 
+= \boldsymbol{\mathcal{Y}} \boldsymbol{\mathcal{V}}, \quad 
+\boldsymbol{\mathcal{Y}} = \left( \begin{array}{cc}
+\mathcal{Y}_{11} &amp; \mathcal{Y}_{12} \\
+\mathcal{Y}_{21} &amp; \mathcal{Y}_{22}
+\end{array} \right) \tag{3}\]
+
+<p>のように行列とベクトルで表現したとき、\(\boldsymbol{\mathcal{Y}}\) をアドミッタンス行列 (admittance matrix) と呼びます。
+(2)式において \(\mathcal{I} \rightarrow \mathcal{I}', \mathcal{V} \rightarrow \mathcal{V}'\) のように変えたものを、(1)式に代入すると</p>
+
+\[\mathcal{V}_1 (\mathcal{Y}_{11} \mathcal{V}_1' + \mathcal{Y}_{12} \mathcal{V}_2') + \mathcal{V}_2 (\mathcal{Y}_{21} \mathcal{V}_1' + \mathcal{Y}_{22} \mathcal{V}_2') 
+= \mathcal{V}_1' (\mathcal{Y}_{11} \mathcal{V}_1 + \mathcal{Y}_{12} \mathcal{V}_2) + \mathcal{V}_2' (\mathcal{Y}_{21} \mathcal{V}_1 + \mathcal{Y}_{22} \mathcal{V}_2) \tag{4}\]
+
+<p>となります。
+これが任意の \(\mathcal{V}_1, \mathcal{V}_2, \mathcal{V}_1', \mathcal{V}_2'\) に対して成立するためには、\(\mathcal{V}_1 \mathcal{V}_1', \mathcal{V}_1 \mathcal{V}_2', \mathcal{V}_2 \mathcal{V}_1', \mathcal{V}_2 \mathcal{V}_2'\) のそれぞれの係数が左右で等しくならなければなりません。
+特に \(\mathcal{V}_1 \mathcal{V}_2'\) の係数を等しいとおくと</p>
+
+\[\mathcal{Y}_{12} 
+= \mathcal{Y}_{21} \tag{5}\]
+
+<p>が得られます。
+すなわち、アドミタンス行列は対称行列です。
+これも相反定理と呼びます。<br />
+(2)式は、逆に</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{V}_1 
+= \mathcal{Z}_{11} \mathcal{I}_1 + \mathcal{Z}_{12} \mathcal{I}_2 \\
+\mathcal{V}_2 
+= \mathcal{Z}_{21} \mathcal{I}_1 + \mathcal{Z}_{22} \mathcal{I}_2 
+\end{array} \right. \tag{6}\]
+
+<p>のように書くこともできます。
+ここでも、相反定理は</p>
+
+\[\mathcal{Z}_{12} 
+= \mathcal{Z}_{21} \tag{7}\]
+
+<p>という関係をもたらします。
+(6)式を</p>
+
+\[\boldsymbol{\mathcal{V}} 
+= \boldsymbol{\mathcal{Z}} \boldsymbol{\mathcal{I}}, \quad 
+\boldsymbol{\mathcal{Z}} 
+= \left( \begin{array}{cc}
+\mathcal{Z}_{11} &amp; \mathcal{Z}_{12} \\
+\mathcal{Z}_{21} &amp; \mathcal{Z}_{22} 
+\end{array} \right) \tag{8}\]
+
+<p>のように書き、\(\boldsymbol{\mathcal{Z}}\) をインピーダンス行列 (impedance matrix) と呼びます。
+\(\boldsymbol{\mathcal{Y}}\) と同様、こちらも対称行列となります。
+(3)式より</p>
+
+\[\boldsymbol{\mathcal{V}} 
+= \boldsymbol{\mathcal{Y}}^{-1} \boldsymbol{\mathcal{I}}\]
+
+<p>と(8)式を見比べれば</p>
+
+\[\boldsymbol{\mathcal{Z}} 
+= \boldsymbol{\mathcal{Y}}^{-1} \tag{9}\]
+
+<p>のように、\(\boldsymbol{\mathcal{Z}}, \boldsymbol{\mathcal{Y}}\) は互いに逆行列の関係にあることがわかります。<br />
+また</p>
+
+\[\left\{ \begin{array}{l}
+\mathcal{V}_1 
+= \mathcal{A} \mathcal{V}_2 + \mathcal{B} \mathcal{I}_2 \\
+\mathcal{I}_1 
+= \mathcal{C} \mathcal{V}_2 + \mathcal{D} \mathcal{I}_2 \\
+\end{array} \right. \ \Longrightarrow \ 
+\left( \begin{array}{c} 
+\mathcal{V}_1 \\
+\mathcal{I}_1
+\end{array}\right) 
+= \left( \begin{array}{cc}
+\mathcal{A} &amp; \mathcal{B} \\
+\mathcal{C} &amp; \mathcal{D}
+\end{array} \right) \left( \begin{array}{c} 
+\mathcal{V}_2 \\
+\mathcal{I}_2
+\end{array}\right) \tag{10}\]
+
+<p>のように書いた場合、\(\mathcal{A}, \mathcal{B}, \mathcal{C}, \mathcal{D}\) を4端子定数 (four-terminal constant) と呼びます。
+またこの行列を、ABCD行列と呼びます。
+\(L, C, R, M\) から成る受動的な回路網では、先ほどの相反定理が成り立つため</p>
+
+\[\mathcal{A} \mathcal{D} - \mathcal{B} \mathcal{C} 
+= 1 \tag{11}\]
+
+<p>の関係が成り立ちます。
+また相反定理が成り立つとき、先ほどのインピーダンス行列・アドミタンス行列との間に</p>
+
+\[\mathcal{Z}_{11} 
+= \frac{\mathcal{A}}{\mathcal{C}}, \quad
+\mathcal{Z}_{22} 
+= \frac{\mathcal{D}}{\mathcal{C}}, \quad
+\mathcal{Z}_{12} 
+= \mathcal{Z}_{21} 
+= \frac{1}{\mathcal{C}} \tag{12}\]
+
+\[\mathcal{Y}_{11} 
+= \frac{\mathcal{D}}{\mathcal{B}}, \quad
+\mathcal{Y}_{22} 
+= \frac{\mathcal{A}}{\mathcal{B}}, \quad
+\mathcal{Y}_{12} 
+= \mathcal{Y}_{21} 
+= - \frac{1}{\mathcal{B}} \tag{13}\]
+
+<p>の関係が成り立ちます。<br />
+4端子回路では、入出力の電圧電流の中の2つを独立変数とすれば、他の2つの変数が決定されます。
+したがって、一般に2行2列の行列で回路を表現することができます。
+そこで、ABCD行列・インピーダンス行列・アドミタンス行列のほかに、入力の電流および出力の電圧を独立変数として、入力電圧および出力電流を表現する方法もあります。
+この表示の方法は、入出力の量が混在して使用されているため、ハイブリッドパラメータ (hybrid parameter, hパラメータ) 表示と言います。
+今の表現を数式で表すと</p>
+
+\[\left( \begin{array}{c}
+\mathcal{V}_1 \\
+\mathcal{I}_2
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\mathcal{h}_{11} &amp; \mathcal{h}_{12} \\
+\mathcal{h}_{21} &amp; \mathcal{h}_{22}
+\end{array} \right) \quad \mathrm{or} \quad \left( \begin{array}{c}
+\mathcal{V}_1 \\
+\mathcal{I}_2
+\end{array} \right) 
+= \left( \begin{array}{cc}
+\mathcal{h}_\mathrm{i} &amp; \mathcal{h}_\mathrm{r} \\
+\mathcal{h}_\mathrm{f} &amp; \mathcal{h}_\mathrm{o}
+\end{array} \right) \tag{14}\]
+
+<p>のようになります。
+それぞれの添字 \(\mathrm{i}\) はinput、\(\mathrm{r}\) はreverse、\(\mathrm{f}\) はforward、\(\mathrm{o}\) はoutputを意味します。
+hパラメータの \(\mathcal{h}_\mathrm{i} = \mathcal{h}_{11}\) は出力をショートしたときの入力インピーダンス、\(\mathcal{h}_\mathrm{r}=\mathcal{h}_{12}\) は入力電流が流れない (\(\mathcal{I}_1 = 0\)) 場合の逆方向電圧増幅率 (reverse voltage gain), \(\mathcal{h}_\mathrm{f} = \mathcal{h}_{21}\) は出力をショート (\(\mathcal{V}_2 = 0\)) したときの順方向電流増幅率、\(\mathcal{h}_\mathrm{o}=\mathcal{h}_{22}\) は入力電流 (\(\mathcal{I}_1 =0\)) のときの出力アドミタンスです。
+hパラメータを4端子定数で表すと</p>
+
+\[\mathcal{h}_\mathrm{i} 
+= \frac{\mathcal{B}}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{r} 
+= \mathcal{A} - \frac{\mathcal{B C}}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{f} 
+= - \frac{1}{\mathcal{D}}, \quad 
+\mathcal{h}_\mathrm{o} 
+= \frac{\mathcal{C}}{\mathcal{D}} \tag{15}\]
+
+<p>のようになります。<br />
+ハイブリッドパラメータは、トランジスターの小信号特性を表示するのによく用いられます。
+相反定理 (11)式が成り立つとき、\(\mathcal{h}_\mathrm{r} = - \mathcal{h}_\mathrm{f}\) となりますが、トランジスターなどの能動的回路ではこれは成り立ちません。</p>
+
+<h2 id="四端子回路網の接続">四端子回路網の接続</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

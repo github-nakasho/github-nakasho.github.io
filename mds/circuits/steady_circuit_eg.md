@@ -802,7 +802,7 @@ $$
 $$
 R_1 R_4 
 = R_2 R_3 \ \Longrightarrow \ 
-R_1 : R3 
+R_1 : R_3 
 = R_2 : R_4 \tag{64}
 $$
 

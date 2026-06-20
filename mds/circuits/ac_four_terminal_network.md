@@ -243,6 +243,8 @@ $$
 ハイブリッドパラメータは、トランジスターの小信号特性を表示するのによく用いられます。
 相反定理 (11)式が成り立つとき、$$\mathcal{h}_\mathrm{r} = - \mathcal{h}_\mathrm{f}$$ となりますが、トランジスターなどの能動的回路ではこれは成り立ちません。
 
+{% include adsense.html %} 
+
 ## 四端子回路網の接続
 
 ### 接続とその合成行列
@@ -458,6 +460,8 @@ $$
 
 {: .note }
 また $$\pi$$ 型において $$\mathcal{Z}_2 = \infty$$ とすることでも、逆L型を導出することができます。
+
+{% include adsense.html %} 
 
 * 格子型
 
@@ -720,5 +724,6 @@ $$
 [1] [高橋秀俊, "電磁気学"](https://amzn.to/43fQKxC)  
 [2] [霜田光一, 桜井 捷海, "エレクトロニクスの基礎"](https://amzn.to/4wAOuib)  
 [3] [後藤憲一, 山崎修一郎, "詳解電磁気学演習"](https://amzn.to/3RvAkyD)  
+[4] [出口博之, "電波伝送回路の基礎理論と設計"](https://www1.doshisha.ac.jp/~hdeguchi/RTC-3.pdf)  
 
 {% include adsense.html %}

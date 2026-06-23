@@ -1,0 +1,63 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ラプラス変換" id="markdown-toc-ラプラス変換">ラプラス変換</a>    <ol>
+      <li><a href="#ラプラス変換の定義とその基礎的な特徴" id="markdown-toc-ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ラプラス変換">ラプラス変換</h1>
+
+<p>階段関数やデルタ関数で表される入力に対する線形システムの応答は、<a href="/math/fourier_transform">フーリエ変換</a>およびその応用である周波数応答関数を用いて調べることができるのでした。
+周波数応答関数は、準定常的な正弦波入力に対する応答を取り扱うのに便利です。
+しかし、入力の急激な変化に対して生じる過渡現象の応答を調べるには、ここで述べるラプラス変換や、その応用である伝達関数を用いる方が便利です。</p>
+
+<h2 id="ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</h2>
+
+<p><a href="/math/fourier_transform">フーリエ変換</a>は、次のように定義されているのでした。</p>
+
+\[\hat{E} (\omega) 
+= \frac{1}{2\pi} \int_{-\infty}^\infty E(t) e^{i\omega t} dt \tag{1}\]
+
+<p>もし時刻 \(t=0\) に衝撃的に運動が始まり、\(t&gt;0\) では \(E(t) = 1\) となるような関数 \(E(t)\) を考えましょう。
+実はこの関数は \(L^1\) に属さず、厳密な意味で<a href="/math/fourier_transform">フーリエ変換</a>を施すことができません。
+これらの不便な点を改め、様々な意味で使いやすくしたのが、ラプラス (Laplace) 変換です。<br />
+関数 \(f(t)\) を \(0 \leq t \leq \infty\) で定義された関数とし、さらに複素変数 \(s = \sigma + i \omega\) を用いて</p>
+
+\[F(s) 
+= \int_0^\infty f(t) e^{-st} dt \tag{2}\]
+
+<p>が存在するとき、これを \(f(t)\) の ラプラス変換と言います。
+演算子記号では</p>
+
+\[F(s) 
+\equiv \mathcal{L} [f(t)] \tag{3}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a><br />
+[] <a href="https://amzn.to/4w0blCD">寺沢寛一, “自然科学者のための数学概論 応用編”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

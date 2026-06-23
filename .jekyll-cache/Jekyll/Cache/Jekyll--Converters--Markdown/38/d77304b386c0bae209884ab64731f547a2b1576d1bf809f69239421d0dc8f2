@@ -1,0 +1,146 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ラプラス変換" id="markdown-toc-ラプラス変換">ラプラス変換</a>    <ol>
+      <li><a href="#ラプラス変換の定義とその基礎的な特徴" id="markdown-toc-ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</a></li>
+      <li><a href="#ラプラス正変換負変換" id="markdown-toc-ラプラス正変換負変換">ラプラス正変換・負変換</a></li>
+      <li><a href="#ラプラス変換の例" id="markdown-toc-ラプラス変換の例">ラプラス変換の例</a>        <ol>
+          <li><a href="#ヘヴィサイドの階段関数" id="markdown-toc-ヘヴィサイドの階段関数">ヘヴィサイドの階段関数</a></li>
+          <li><a href="#導関数" id="markdown-toc-導関数">導関数</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ラプラス変換">ラプラス変換</h1>
+
+<p>階段関数やデルタ関数で表される入力に対する線形システムの応答は、<a href="/math/fourier_transform">フーリエ変換</a>およびその応用である周波数応答関数を用いて調べることができるのでした。
+周波数応答関数は、準定常的な正弦波入力に対する応答を取り扱うのに便利です。
+しかし、入力の急激な変化に対して生じる過渡現象の応答を調べるには、ここで述べるラプラス変換や、その応用である伝達関数を用いる方が便利です。</p>
+
+<h2 id="ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</h2>
+
+<p><a href="/math/fourier_transform">フーリエ変換</a>は、次のように定義されているのでした。</p>
+
+\[\hat{E} (\omega) 
+= \frac{1}{2\pi} \int_{-\infty}^\infty E(t) e^{i\omega t} dt \tag{1}\]
+
+<p>もし時刻 \(t=0\) に衝撃的に運動が始まり、\(t&gt;0\) では \(E(t) = 1\) となるような関数 \(E(t)\) を考えましょう。
+実はこの関数は \(L^1\) に属さず、厳密な意味で<a href="/math/fourier_transform">フーリエ変換</a>を施すことができません。
+これらの不便な点を改め、様々な意味で使いやすくしたのが、ラプラス (Laplace) 変換です。<br />
+関数 \(f(t)\) を \(0 \leq t \leq \infty\) で定義された関数とし、さらに複素変数 \(s = \sigma + i \omega\) を用いて</p>
+
+\[F(s) 
+= \int_0^\infty f(t) e^{-st} dt \tag{2}\]
+
+<p>が存在するとき、これを \(f(t)\) の ラプラス変換と言います。
+演算子記号では</p>
+
+\[F(s) 
+\equiv \mathcal{L} [f(t)] \tag{3}\]
+
+<p>のように表現します。<br />
+\(s\) が純虚数 (\(\sigma = 0\)) かつ \(t &lt; 0\) で \(f(t) = 0\) とすると、\(F(s)\) は<a href="/math/fourier_transform">フーリエ変換</a>に一致します。
+\(f(t)\) は \(L^1\) に属する必要はなく、例えばディラックのデルタ関数を含んでいても問題はありません。
+これは、\(e^{-\sigma t}\) の収束因子がかけられていることからもわかります。</p>
+
+<p class="note">フーリエ変換・逆変換で現れる因子 \(e^{i\omega t}, e^{-i\omega t}\) の指数の符号は、フーリエ変換後に逆変換して元に戻ればどちらでもよいという話をしました。
+もちろん、ラプラス変換でも \(s \rightarrow -s\) のように定義すれば \(e^{st}\) とすることができますが、慣習的に \(e^{-st}\) を用います。</p>
+
+<h2 id="ラプラス正変換負変換">ラプラス正変換・負変換</h2>
+
+<p>\(t = 0\) を含まない変換を、特にラプラス正変換と呼び、次のように定義します。</p>
+
+\[\mathcal{L}_+ [f(t)] 
+= \int_{+0}^\infty f(t) e^{-st} dt \tag{4}\]
+
+<p>また、ゼロを含んだ変換をラプラス負変換と呼び、次のように表します。</p>
+
+\[\mathcal{L}_- [f(t)] 
+= \int_{-0}^\infty f(t) e^{-st} dt \tag{5}\]
+
+<p>関数 \(f(t)\) が有限な関数であれば、\(\mathcal{L}_+ [f(t)] = \mathcal{L}_- [f(t)]\) となります。
+しかし一般には、\(\mathcal{L}_+ [f(t)] \neq \mathcal{L}_- [f(t)]\) となることに注意が必要です。
+例えば、デルタ関数 \(\delta (t)\) のラプラス正変換は \(\mathcal{L}_+ [\delta (t)] = 0\) ですが、ラプラス負変換の場合には</p>
+
+\[\mathcal{L}_- [\delta (t)] 
+= \int_{-0}^\infty \delta(t) e^{-st} dt 
+= e^0 
+= 1 \tag{6}\]
+
+<p>となり、確かに正変換と負変換とで異なる値をとっています。</p>
+
+<h2 id="ラプラス変換の例">ラプラス変換の例</h2>
+
+<h3 id="ヘヴィサイドの階段関数">ヘヴィサイドの階段関数</h3>
+
+<p>ヘヴィサイドの階段関数は</p>
+
+\[\Theta (t) 
+= \left\{ \begin{array}{ll}
+0 &amp; (t&lt;0) \\
+1 &amp; (t&gt;0)
+\end{array} \right. \tag{7}\]
+
+<p>のように定義されるのでした。
+これをラプラス変換してみましょう。
+ラプラス変換では、積分範囲は \(t&gt;0\) に限られているため</p>
+
+\[\mathcal{L}[\Theta(t)] 
+= \int_0^\infty e^{-st} dt 
+= -\frac{1}{s} [0 - 1] 
+= \frac{1}{s} \tag{8}\]
+
+<p>のように、簡単になります。
+<a href="/math/fourier_transform">フーリエ変換</a>では \(\delta(\omega) - \frac{1}{2\pi i \omega}\) のような少し厄介な形でしたが、ラプラス変換ではスッキリとした形で書くことができています。</p>
+
+<h3 id="導関数">導関数</h3>
+
+<p>関数 \(f(t)\) の導関数 \(\frac{df}{dt}\) のラプラス変換を計算しましょう。</p>
+
+\[\begin{align}
+\mathcal{L} \left[ \frac{df}{dt} \right] 
+&amp;= \int_0^\infty \frac{df}{dt} e^{-st} dt 
+\underbrace{=}_{部分積分} \left[ f(t) e^{-st} \right]_0^\infty - \int_0^\infty f(t) (-s) e^{-st} dt 
+= -f(0) + s \mathcal{L} [f(t)] \notag \\
+&amp;= s F(s) - f(0) \tag{9}
+\end{align}\]
+
+<p>のようになります。
+ここで、\(F(s)\) は \(f(t)\) のラプラス変換です。
+同様に、2階微分したもののラプラス変換は</p>
+
+\[\mathcal{L} \left[ \frac{d^2 f}{dt^2}\right] 
+= \int_0^\infty \frac{d^2 f}{dt^2} e^{-st} dt 
+= \left[ \frac{df}{dt} e^{-st} \right]_0^\infty + s \int_0^\infty \frac{df}{dt} e^{-st} dt 
+= - \left. \frac{df}{dt} \right\vert_0 + s \mathcal{L} \left[ \frac{df}{dt} \right] 
+= s^2 F(s) - s f(0) - f^{(1)}(0) \tag{10}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a><br />
+[] <a href="https://amzn.to/4w0blCD">寺沢寛一, “自然科学者のための数学概論 応用編”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

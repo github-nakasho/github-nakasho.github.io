@@ -1,0 +1,423 @@
+I"vO
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ラプラス変換" id="markdown-toc-ラプラス変換">ラプラス変換</a>    <ol>
+      <li><a href="#ラプラス変換の定義とその基礎的な特徴" id="markdown-toc-ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</a></li>
+      <li><a href="#ラプラス正変換負変換" id="markdown-toc-ラプラス正変換負変換">ラプラス正変換・負変換</a></li>
+      <li><a href="#ラプラス変換の例" id="markdown-toc-ラプラス変換の例">ラプラス変換の例</a>        <ol>
+          <li><a href="#ヘヴィサイドの階段関数" id="markdown-toc-ヘヴィサイドの階段関数">ヘヴィサイドの階段関数</a></li>
+          <li><a href="#導関数" id="markdown-toc-導関数">導関数</a></li>
+          <li><a href="#関数の積分" id="markdown-toc-関数の積分">関数の積分</a></li>
+          <li><a href="#指数関数" id="markdown-toc-指数関数">指数関数</a></li>
+          <li><a href="#べき乗" id="markdown-toc-べき乗">べき乗</a></li>
+          <li><a href="#eat-ft" id="markdown-toc-eat-ft">\(e^{at} f(t)\)</a></li>
+          <li><a href="#三角関数" id="markdown-toc-三角関数">三角関数</a></li>
+          <li><a href="#双曲線関数" id="markdown-toc-双曲線関数">双曲線関数</a></li>
+        </ol>
+      </li>
+      <li><a href="#畳み込み定理" id="markdown-toc-畳み込み定理">畳み込み定理</a></li>
+      <li><a href="#ラプラス逆変換" id="markdown-toc-ラプラス逆変換">ラプラス逆変換</a></li>
+      <li><a href="#応用-ラプラス変換を用いた微分方程式解法" id="markdown-toc-応用-ラプラス変換を用いた微分方程式解法">応用: ラプラス変換を用いた微分方程式解法</a></li>
+      <li><a href="#応用" id="markdown-toc-応用">応用:</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ラプラス変換">ラプラス変換</h1>
+
+<p>階段関数やデルタ関数で表される入力に対する線形システムの応答は、<a href="/math/fourier_transform">フーリエ変換</a>およびその応用である周波数応答関数を用いて調べることができるのでした。
+周波数応答関数は、準定常的な正弦波入力に対する応答を取り扱うのに便利です。
+しかし、入力の急激な変化に対して生じる過渡現象の応答を調べるには、ここで述べるラプラス変換や、その応用である伝達関数を用いる方が便利です。</p>
+
+<h2 id="ラプラス変換の定義とその基礎的な特徴">ラプラス変換の定義とその基礎的な特徴</h2>
+
+<p><a href="/math/fourier_transform">フーリエ変換</a>は、次のように定義されているのでした。</p>
+
+\[\hat{E} (\omega) 
+= \frac{1}{2\pi} \int_{-\infty}^\infty E(t) e^{i\omega t} dt \tag{1}\]
+
+<p>もし時刻 \(t=0\) に衝撃的に運動が始まり、\(t&gt;0\) では \(E(t) = 1\) となるような関数 \(E(t)\) を考えましょう。
+実はこの関数は \(L^1\) に属さず、厳密な意味で<a href="/math/fourier_transform">フーリエ変換</a>を施すことができません。
+これらの不便な点を改め、様々な意味で使いやすくしたのが、ラプラス (Laplace) 変換です。<br />
+関数 \(f(t)\) を \(0 \leq t \leq \infty\) で定義された関数とし、さらに複素変数 \(s = \sigma + i \omega\) を用いて</p>
+
+\[F(s) 
+= \int_0^\infty f(t) e^{-st} dt \tag{2}\]
+
+<p>が存在するとき、これを \(f(t)\) の ラプラス変換と言います。
+演算子記号では</p>
+
+\[F(s) 
+\equiv \mathcal{L} [f(t)] \tag{3}\]
+
+<p>のように表現します。<br />
+\(s\) が純虚数 (\(\sigma = 0\)) かつ \(t &lt; 0\) で \(f(t) = 0\) とすると、\(F(s)\) は<a href="/math/fourier_transform">フーリエ変換</a>に一致します。
+\(f(t)\) は \(L^1\) に属する必要はなく、例えばディラックのデルタ関数を含んでいても問題はありません。
+これは、\(e^{-\sigma t}\) の収束因子がかけられていることからもわかります。</p>
+
+<p class="note">フーリエ変換・逆変換で現れる因子 \(e^{i\omega t}, e^{-i\omega t}\) の指数の符号は、フーリエ変換後に逆変換して元に戻ればどちらでもよいという話をしました。
+もちろん、ラプラス変換でも \(s \rightarrow -s\) のように定義すれば \(e^{st}\) とすることができますが、慣習的に \(e^{-st}\) を用います。</p>
+
+<h2 id="ラプラス正変換負変換">ラプラス正変換・負変換</h2>
+
+<p>\(t = 0\) を含まない変換を、特にラプラス正変換と呼び、次のように定義します。</p>
+
+\[\mathcal{L}_+ [f(t)] 
+= \int_{+0}^\infty f(t) e^{-st} dt \tag{4}\]
+
+<p>また、ゼロを含んだ変換をラプラス負変換と呼び、次のように表します。</p>
+
+\[\mathcal{L}_- [f(t)] 
+= \int_{-0}^\infty f(t) e^{-st} dt \tag{5}\]
+
+<p>関数 \(f(t)\) が有限な関数であれば、\(\mathcal{L}_+ [f(t)] = \mathcal{L}_- [f(t)]\) となります。
+しかし一般には、\(\mathcal{L}_+ [f(t)] \neq \mathcal{L}_- [f(t)]\) となることに注意が必要です。
+例えば、デルタ関数 \(\delta (t)\) のラプラス正変換は \(\mathcal{L}_+ [\delta (t)] = 0\) ですが、ラプラス負変換の場合には</p>
+
+\[\mathcal{L}_- [\delta (t)] 
+= \int_{-0}^\infty \delta(t) e^{-st} dt 
+= e^0 
+= 1 \tag{6}\]
+
+<p>となり、確かに正変換と負変換とで異なる値をとっています。</p>
+
+<h2 id="ラプラス変換の例">ラプラス変換の例</h2>
+
+<h3 id="ヘヴィサイドの階段関数">ヘヴィサイドの階段関数</h3>
+
+<p>ヘヴィサイドの階段関数は</p>
+
+\[\Theta (t) 
+= \left\{ \begin{array}{ll}
+0 &amp; (t&lt;0) \\
+1 &amp; (t&gt;0)
+\end{array} \right. \tag{7}\]
+
+<p>のように定義されるのでした。
+これをラプラス変換してみましょう。
+ラプラス変換では、積分範囲は \(t&gt;0\) に限られているため</p>
+
+\[\mathcal{L}[\Theta(t)] 
+= \int_0^\infty e^{-st} dt 
+= -\frac{1}{s} [0 - 1] 
+= \frac{1}{s} \tag{8}\]
+
+<p>のように、簡単になります。
+<a href="/math/fourier_transform">フーリエ変換</a>では \(\delta(\omega) - \frac{1}{2\pi i \omega}\) のような少し厄介な形でしたが、ラプラス変換ではスッキリとした形で書くことができています。</p>
+
+<h3 id="導関数">導関数</h3>
+
+<p>関数 \(f(t)\) の導関数 \(\frac{df}{dt}\) のラプラス変換を計算しましょう。</p>
+
+\[\begin{align}
+\mathcal{L} \left[ \frac{df}{dt} \right] 
+&amp;= \int_0^\infty \frac{df}{dt} e^{-st} dt 
+\underbrace{=}_{部分積分} \left[ f(t) e^{-st} \right]_0^\infty - \int_0^\infty f(t) (-s) e^{-st} dt 
+= -f(0) + s \mathcal{L} [f(t)] \notag \\
+&amp;= s F(s) - f(0) \tag{9}
+\end{align}\]
+
+<p>のようになります。
+ここで、\(F(s)\) は \(f(t)\) のラプラス変換です。
+同様に、2階微分したもののラプラス変換は</p>
+
+\[\begin{align}
+\mathcal{L} \left[ \frac{d^2 f}{dt^2}\right] 
+&amp;= \int_0^\infty \frac{d^2 f}{dt^2} e^{-st} dt 
+= \left[ \frac{df}{dt} e^{-st} \right]_0^\infty + s \int_0^\infty \frac{df}{dt} e^{-st} dt 
+= - \left. \frac{df}{dt} \right\vert_{t=0} + s \mathcal{L} \left[ \frac{df}{dt} \right] \notag \\
+&amp; \underbrace{=}_{(9)} s^2 F(s) - s f(0) - f^{(1)}(0) \tag{10}
+\end{align}\]
+
+<p>のようになります。
+ここで \(f^{(1)}\) は、関数 \(f\) の一階微分です。
+最後に、3階微分したもののラプラス変換は</p>
+
+\[\begin{align}
+\mathcal{L} \left[ \frac{d^3 f}{dt^3}\right] 
+&amp;= \int_0^\infty \frac{d^3 f}{dt^3} e^{-st} dt 
+= \left[ \frac{d^2f}{dt^2} e^{-st} \right]_0^\infty + s \int_0^\infty \frac{d^2f}{dt^2} e^{-st} dt 
+= - f^{(2)}(0) + s \mathcal{L} \left[ \frac{d^2f}{dt^2}\right] \notag \\
+&amp;\underbrace{=}_{(10)} s^3 F(s) - s^2 f(0) - s f^{(1)} (0) - f^{(2)} (0) \tag{11}
+\end{align}\]
+
+<p>のように計算できます。
+以上から、一般に \(f(t)\) の \(n\) 階微分 \(f^{(n)} (t)\) のラプラス変換は</p>
+
+\[\mathcal{L} [f^{(n)} (t)] 
+= s^n F(s) - \sum_{i=0}^{n-1} s^{n-i-1} f^{(i)} (0) \tag{12}\]
+
+<p>のように書くことができます。</p>
+
+<p class="note">すでに示したように、微分をラプラス変換すると、\(f(0)\) などの初期値が残ります。
+後の応用部分で示すように、これにより<a href="/math/laplace_transform#応用-ラプラス変換を用いた微分方程式解法">微分方程式</a>や過渡現象の初期条件を自動的に扱うことができます。</p>
+
+<h3 id="関数の積分">関数の積分</h3>
+
+<p>先ほどの微分の場合と同様に便宜上、\(f(t)\) を積分したものを \(f^{(-1)} (t)\) のように表すことにしましょう。
+これは</p>
+
+\[f^{(-1)} (t) 
+= \int_0^t f(\tau) d\tau \tag{13}\]
+
+<p>のように表現できることから、このラプラス変換は</p>
+
+\[\mathcal{L} [f^{(-1)} (t)] 
+= \int_0^\infty \left( \int_0^t f(\tau) d \tau \right) e^{-st} dt 
+= \left[ -\frac{e^{-st}}{s} \int_0^t f(\tau) d\tau \right]_0^\infty + \frac{1}{s} \int_0^\infty f(t) e^{-st} dt \tag{14}\]
+
+<p>のように整理されます。
+関数 \(f(\tau)\) の積分において、\(\lim_{t \rightarrow 0} \int_0^t f(\tau) d\tau = 0\) を満たすような関数 \(f\) について考えているとすると</p>
+
+\[\mathcal{L} [f^{(-1)} (t)] 
+= \frac{1}{s} \int_0^\infty f(t) e^{-st} dt 
+= \frac{1}{s} F(s) \tag{15}\]
+
+<p>のようになります。
+先ほどのようにこの操作を繰り返すことで、\(n\) 回積分した関数 \(f^{(-n)} (t)\) のラプラス変換が</p>
+
+\[\mathcal{L} [f^{(-n)} (t)] 
+= \frac{1}{s^n} F(s) \tag{16}\]
+
+<p>と求まります。</p>
+
+<h3 id="指数関数">指数関数</h3>
+
+<p>\(e^{at}\) のラプラス変換は</p>
+
+\[\mathcal{L}[e^{at}] 
+= \int_0^\infty e^{at} e^{-st} dt 
+= \frac{1}{a-s} [e^{(a-s)t}]_0^\infty 
+= \frac{1}{s-a} \tag{17}\]
+
+<p>のようになります。
+ただし、\(a&lt;s\) とします。</p>
+
+<h3 id="べき乗">べき乗</h3>
+
+<p>\(t^\nu\) のラプラス変換を計算しましょう。</p>
+
+\[\mathcal{L} [t^\nu] 
+= \int_0^\infty t^\nu e^{-st} dt 
+\underbrace{=}_{st = \tau} \int_0^\infty \left( \frac{\tau}{s}\right)^\nu e^{-\tau} \frac{d\tau}{s} 
+= \frac{1}{s^{\nu+1}} \underbrace{\int_0^\infty \tau^\nu e^{-\tau} d\tau}_{=\Gamma(\nu+1)} 
+= \frac{\Gamma (\nu+1)}{s^{\nu+1}} \tag{18}\]
+
+<p>途中、<a href="/math/gamma">ガンマ関数</a>の公式を用いました。
+\(\nu=n\) (正の整数) のとき、\(\Gamma(n+1) = n!\) となります。</p>
+
+<h3 id="eat-ft">\(e^{at} f(t)\)</h3>
+
+<p>この関数のラプラス変換を計算しましょう。</p>
+
+\[\mathcal{L} [e^{at} f(t)] 
+= \int_0^\infty e^{at} f(t) e^{-st} dt 
+= \int_0^\infty f(t) e^{-(s-a)t} dt 
+= F(s-a) \tag{19}\]
+
+<p>ここで、\(F(s)\) は \(f(t)\) のラプラス変換です。
+すなわち、\(e^{at}\) はラプラス変換結果を \(-a\) だけシフトさせる効果があるとわかります。</p>
+
+<h3 id="三角関数">三角関数</h3>
+
+<p>\(f(t) = \cos \omega t\) のラプラス変換を計算しましょう。</p>
+
+\[\begin{align}
+\mathcal{L} [\cos \omega t] 
+&amp;= \int_0^\infty \cos \omega t e^{-st} dt 
+= \int_0^\infty \frac{e^{i\omega t} + e^{-i\omega t}}{2} e^{-st} dt \notag \\
+&amp;= \frac{1}{2} \left( \int_0^\infty e^{(i\omega-s)t} dt + \int_0^\infty e^{-(i\omega +s)t} dt\right) \notag \\
+&amp;= \frac{1}{2} \left( \frac{1}{i\omega - s} \left[ e^{(i\omega -s)t} \right]_0^\infty - \frac{1}{i\omega + s} \left[ e^{-(i\omega +s)t} \right]_0^\infty \right) \notag \\
+&amp;= \frac{1}{2} \left( \frac{-1}{i\omega - s} + \frac{1}{i\omega + s} \right) 
+= \frac{1}{2} \frac{-2s}{(i\omega + s) (i\omega -s)}
+= \frac{s}{s^2 + \omega^2} \tag{20}
+\end{align}\]
+
+<p>同様に \(\sin \omega t\) のラプラス変換も</p>
+
+\[\begin{align}
+\mathcal{L} [\sin \omega t] 
+&amp;= \int_0^\infty \sin \omega t e^{-st} dt 
+= \int_0^\infty \frac{e^{i\omega t} - e^{-i\omega t}}{2i} e^{-st} dt \notag \\
+&amp;= \frac{1}{2i} \left( \int_0^\infty e^{(i\omega-s)t} dt - \int_0^\infty e^{-(i\omega +s)t} dt\right) \notag \\
+&amp;= \frac{1}{2i} \left( \frac{1}{i\omega - s} \left[ e^{(i\omega -s)t} \right]_0^\infty + \frac{1}{i\omega + s} \left[ e^{-(i\omega +s)t} \right]_0^\infty \right) \notag \\
+&amp;= \frac{1}{2i} \left( \frac{-1}{i\omega - s} - \frac{1}{i\omega + s} \right) 
+= \frac{1}{2i} \frac{-2i\omega}{(i\omega + s) (i\omega -s)}
+= \frac{\omega}{s^2 + \omega^2} \tag{21}
+\end{align}\]
+
+<p>のように求まります。</p>
+
+<h3 id="双曲線関数">双曲線関数</h3>
+
+\[\begin{align}
+\mathcal{L} [\cosh at] 
+&amp;= \int_0^\infty \cosh at e^{-st} dt 
+= \int_0^\infty \frac{e^{at} + e^{-at}}{2} e^{-st} dt \notag \\
+&amp;= \frac{1}{2} \left( \int_0^\infty e^{(-s+a) t} dt + \int_0^\infty e^{(-s -a) t} dt \right) 
+= \frac{1}{2} \left( \frac{1}{s-a} + \frac{1}{s+a} \right) 
+= \frac{s}{s^2 - a^2} \tag{22}
+\end{align}\]
+
+\[\begin{align}
+\mathcal{L} [\sinh at] 
+&amp;= \int_0^\infty \sinh at e^{-st} dt 
+= \int_0^\infty \frac{e^{at} - e^{-at}}{2} e^{-st} dt \notag \\
+&amp;= \frac{1}{2} \left( \int_0^\infty e^{(-s+a) t} dt - \int_0^\infty e^{(-s -a) t} dt \right) 
+= \frac{1}{2} \left( \frac{1}{s-a} - \frac{1}{s+a} \right) 
+= \frac{a}{s^2 - a^2} \tag{23}
+\end{align}\]
+
+<h2 id="畳み込み定理">畳み込み定理</h2>
+
+<p><a href="/math/fourier_transform">フーリエ変換</a>のときと同様に、ラプラス変換でも<a href="/math/fourier_transform#畳み込み定理">畳み込み定理</a>が成り立ちます。
+これを示してみましょう。
+畳み込み操作を、次のように定義します。</p>
+
+\[f \ast g(t) 
+= \int_0^t f(t') g(t-t') dt' \tag{24}\]
+
+<p><a href="/math/fourier_transform#畳み込み定理">フーリエ変換</a>のときとは異なり、積分範囲が \([0, t]\) となっています。
+時刻 \(t\) での応答 (記憶の蓄積) が、それ以前の入力 \(f(\tau) \ (\tau \leq t)\) の蓄積で決定される、という物理的要請によるものです。
+また \(t&lt;0\) では \(f(t) = g(t) = 0\) とすることで、\(t=0\) から物理現象が始まったとしています。<br />
+この畳み込みのラプラス変換を計算しましょう。</p>
+
+\[\mathcal{L} [f \ast g] 
+= \int_0^\infty \left( \int_0^t f(t') g(t-t') dt' \right) e^{-st} dt 
+= \int_0^\infty \int_0^t f(t') g(t-t') e^{-st} dt' dt \tag{25}\]
+
+<p>この2重積分は、\(tt'\)平面での面積積分と見ることができます。
+その積分領域は \(0 \leq t' \leq t &lt; \infty\) であるため、下図のような \(tt'\) 平面上での三角形部分となります。</p>
+
+<p><img src="/assets/images/math/laplace_transform_01.png" alt="" /></p>
+
+<p>よって \(t'\) を先に固定し、\(t\) については \(t' \leq t &lt; \infty\) の範囲で積分するようにしましょう。
+このようにして積分順序を入れ替えると、次のようになります。</p>
+
+\[\begin{align}
+\mathcal{L} [f \ast g] 
+&amp;= \int_0^\infty \left( \int_{t'}^\infty f(t') g(t-t') e^{-st} dt \right) dt' 
+\underbrace{=}_{u=t-t'}  \int_0^\infty \left( \int_{0}^\infty f(t') g(u) e^{-s(u+t')} du \right) dt' \notag \\
+&amp;= \int_0^\infty f(t') e^{-st'} dt' \int_{0}^\infty g(u) e^{-su} du 
+= F(s) G(s) \tag{26}
+\end{align}\]
+
+<p>のようになります。
+ここで \(G(s) = \mathcal{L} [g(t)]\) のようにしました。</p>
+
+<h2 id="ラプラス逆変換">ラプラス逆変換</h2>
+
+<p>ある関数 \(f(t)\) のラプラス変換 \(F(s)\) を、元の関数 \(f(t)\) に戻す操作を、ラプラス逆変換と呼びます。
+この逆変換は、複素平面上で実軸上の点 \(C\) を通り、虚数軸に平行な直線に沿っての積分</p>
+
+\[f(t) 
+= \frac{1}{2\pi i} \int_{C-i\infty}^{C+i\infty} F(s) e^{st} ds \tag{27}\]
+
+<p>のように与えられます。
+演算子記号では \(\mathcal{L}^{-1}\) を用い</p>
+
+\[f(t) 
+= \mathcal{L}^{-1} [F(s)] \tag{28}\]
+
+<p>のように書きます。
+こうして、\(f(t)\) と \(F(s)\) は1対1の対応をしています。
+ラプラス逆変換を与える積分 (27) を、ブロムイッチ・ワグナー (Bromwich-Wagner) の積分といいます。<br />
+ラプラス逆変換を計算する場合、複素平面での積分計算が必要となります。
+毎回これを実行するのは骨が折れるため、実際にラプラス変換・ラプラス逆変換の計算を行うときには、ラプラス変換の早見表を用いるのが便利です。
+次の部分では、実際にラプラス変換・逆変換を用いた解法や応用について見てみましょう。</p>
+
+<h2 id="応用-ラプラス変換を用いた微分方程式解法">応用: ラプラス変換を用いた微分方程式解法</h2>
+
+<p>ここまでの知識を用いて、次の \(y(t)\) の微分方程式を解いてみましょう。
+ただし、初期条件として \(y(0) = y'(0) = 1\) が与えられているとします。</p>
+
+\[y'' + 4y' + 3y 
+= 0 \tag{29}\]
+
+<p>未知の関数 \(y(t)\) をラプラス変換したものを \(Y(s)\) とすると</p>
+
+\[\mathcal{L}[y'(t)] 
+\underbrace{=}_{(9)} s Y(s) - y(0) 
+= sY(s) - 1 \tag{30}\]
+
+\[\mathcal{L}[y''(t)] 
+\underbrace{=}_{(10)} s^2 Y(s) - s y(0) - y'(0) 
+= s^2 Y(s) - s - 1 \tag{31}\]
+
+<p>よって、(29)式をラプラス変換したものは</p>
+
+\[s^2 Y(s) - s - 1 + 4 (sY(s) - 1) + 3Y(s) 
+= (s^2 + 4s + 3) Y(s) - s - 5 
+= 0 \tag{32}\]
+
+<p>のようになります。
+このようにラプラス変換をして得られるもう一つの方程式を、補助方程式と呼びます。
+これを \(Y(s)\) について解きましょう。</p>
+
+\[Y(s) 
+= \frac{s + 5}{s^2 + 4s + 3} 
+= \frac{s + 5}{(s + 1)(s + 3)} \tag{33}\]
+
+<p>このままではラプラス逆変換をすることができません。
+そこで</p>
+
+\[\frac{s + 5}{(s + 1)(s + 3)} 
+= \frac{A}{s+1} + \frac{B}{s+3} \tag{34}\]
+
+<p>のように部分分数分解を行うことで、ラプラス逆変換できる形に直しましょう。
+すると</p>
+
+\[A(s+3) + B (s+1) 
+= (A+B) s + (3A + B) 
+= s + 5 \ \Longrightarrow \ 
+A = 2, \ B = -1 \tag{35}\]
+
+<p>のようになります。
+よって最終的に</p>
+
+\[Y(s) 
+= \frac{2}{s+1} - \frac{1}{s+3} \tag{36}\]
+
+<p>のように求まります。
+これをラプラス逆変換しましょう。
+(17)式より</p>
+
+\[y(t) 
+= 2e^{-t} - e^{-3t} \tag{37}\]
+
+<p>のように、\(y(t)\) を求めることができました。
+これは \(y(0) = y'(0) = 1\) の初期条件、そして微分方程式(29)を満たす解であることがわかります。</p>
+
+<p class="note">部分分数分解をしてラプラス変換できる形にするテクニックは、様々な応用問題で頻出します。
+覚えておきましょう。</p>
+
+<h2 id="応用">応用:</h2>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a><br />
+[2] <a href="https://amzn.to/4w0blCD">寺沢寛一, “自然科学者のための数学概論 応用編”</a><br />
+[3] <a href="https://amzn.to/4uNGbgJ">“数学公式II 級数・フーリエ解析”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

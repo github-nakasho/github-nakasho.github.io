@@ -75,4 +75,8 @@ $$
 
 逆に言えばこれくらいの角振動数の広がりが仕込まれていることによって、観測時間が有限であるような波形が再現される、ということになります。$$\Delta t \simeq \frac{2\pi}{\Delta \omega}$$を可干渉時間(coherent time)と呼びます。
 
+{: .note}
+フーリエ変換についての詳細は、[こちらのページ](/math/fourier_transform)にまとめました。
+ぜひご覧ください。
+
 {% include adsense.html %} 

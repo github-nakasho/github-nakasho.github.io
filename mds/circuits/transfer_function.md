@@ -441,7 +441,7 @@ $$
 
 のようになります。
 
-## 補遺: $$\tan^{-1}$$ の描画についてとボーデ図作成のJuliaスクリプト
+## 補遺A: $$\tan^{-1}$$ の描画についてとボーデ図作成のJuliaスクリプト
 
 (30)式の描画では、$$\tan^{-1}$$ (プログラミング言語の`atan`関数) の計算が必要になります。
 `atan`の値域は $$(-\pi/2, \pi/2)$$ です。
@@ -485,9 +485,163 @@ savefig(plt, "bode_diagram_LRC.png")
 {: .note}
 もっと良いJuliaの書き方があったら、ぜひご教示ください m(-_-)m
 
+{% include adsense.html %}
+
+## 補遺B: クラマース・クローニッヒ関係
+
+線形応答における周波数応答関数の実部と虚部が、ある関係にあることを示したものです。
+ここでは、その関係式を示してみましょう。  
+線形システムの応答は、[インパルス応答 $$g(t)$$ ](/circuits/linear_system#インパルス応答)を用いて、次のように書けるのでした。
+
+$$
+y(t) 
+= \int_{-\infty}^\infty g(t-\tau) x(\tau) d\tau \tag{B.1}
+$$
+
+そして物理的に実現可能な系では、因果律 (出力は入力より前には現れない) より $$g(t) = 0 \ (t < 0)$$ が成り立ちます。
+するとこのときの周波数応答関数は
+
+$$
+G(\omega) 
+= \int_{-\infty}^\infty g(t) e^{-i\omega t} dt 
+= \int_0^\infty g(t) e^{-i\omega t} dt \tag{B.2}
+$$
+
+のように、積分範囲が $$[0, \infty)$$ となります。
+これは[ラプラス変換](/math/laplace_transform)の形です。
+ここで $$\omega = \omega_\mathrm{r} + i \omega_\mathrm{i}$$ のように、$$\omega$$ を複素数に拡張しましょう。
+すると
+
+$$
+G(\omega) 
+= \int_0^\infty g(t) e^{-i\omega_\mathrm{r} t} e^{\omega_\mathrm{i} t} dt \tag{B.3}
+$$
+
+のようになります。
+$$g(t)$$ が有界ならば、$$\omega_\mathrm{i}<0$$ で $$e^{\omega_\mathrm{i} t}$$ は減衰因子として働き、この積分は必ず収束します。
+これを踏まえて、複素数 $$\omega'$$ の平面上での次のような経路積分を考えましょう。
+
+![](/assets/images/circuits/transfer_function_06.png)  
+
+$$
+\left\{ \begin{array}{l}
+C_1 : 実軸上 \ -r \rightarrow \omega - \epsilon \\
+C_2 : \epsilon e^{i\theta} + \omega \ (\theta : -\pi \rightarrow 0) \\
+C_3 : 実軸上 \ \omega + \epsilon \rightarrow r \\
+C_4 : r e^{i\theta} \ (\theta : 0 \rightarrow \pi) 
+\end{array} \right. \tag{B.4}
+$$
+
+そして、被積分関数として $$f(\omega') = \frac{G(\omega')}{\omega' - \omega}$$ を考えます。
+(B.3)式の先ほどの議論から、$$G(\omega')$$ は複素数平面の下半平面領域で正則であり、この積分経路の内側には特異点はありません。
+よってコーシーの積分定理から
+
+$$
+\oint_C \frac{G(\omega')}{\omega' - \omega} d\omega' 
+= 0 \tag{B.5}
+$$
+
+となります。
+次に $$C_2$$ での積分を考えると
+
+$$
+\begin{align}
+&\int_{C_2} \frac{G(\omega')}{\omega' - \omega} d\omega' 
+= \int_{-\pi}^0 \frac{G(\epsilon e^{i\theta} + \omega)}{\epsilon e^{i\theta}} i\epsilon e^{i\theta} d\theta 
+= i \int_{-\pi}^0 G(\epsilon e^{i\theta} + \omega)  d\theta \notag \\
+&\xrightarrow[]{\epsilon \rightarrow 0} i G(\omega) \int_{-\pi}^0 d\theta 
+= i\pi G(\omega) \tag{B.6}
+\end{align}
+$$
+
+のようになります。
+実軸上の積分 $$C_1 + C_3$$ は、$$r \rightarrow \infty$$ の極限において
+
+$$
+\lim_{\epsilon \rightarrow 0} \left( \int_{-\infty}^{\omega -\epsilon} + \int_{\omega + \epsilon}^\infty \right) \frac{G(\omega')}{\omega' - \omega} d\omega' 
+= \mathrm{P} \int_{-\infty}^\infty \frac{G(\omega')}{\omega' - \omega} d\omega' \tag{B.7}
+$$
+
+のように、コーシーの積分の主値で書かれます。
+$$C_4$$ の積分は $$r \rightarrow \infty$$ ではゼロとなることから、(B.5)式は
+
+$$
+\mathrm{P} \int_{-\infty}^\infty \frac{G(\omega')}{\omega' - \omega} d\omega' + i\pi G(\omega) 
+= 0 \ \Longrightarrow \ G(\omega) 
+= \frac{i}{\pi} \mathrm{P} \int_{-\infty}^\infty \frac{G(\omega')}{\omega' - \omega} d\omega' \tag{B.8}
+$$
+
+となります。
+$$G(\omega) = G_\mathrm{r} (\omega) + i G_\mathrm{i} (\omega)$$ のように、実部と虚部に分解すると
+
+$$
+G_\mathrm{r} (\omega) + i G_\mathrm{i} (\omega) 
+= \frac{1}{\pi} \mathrm{P} \int_{-\infty}^\infty \frac{i G_\mathrm{r} (\omega') - G_\mathrm{i} (\omega')}{\omega' - \omega} d\omega' \tag{B.9}
+$$
+
+のようになることから
+
+$$
+G_\mathrm{r} (\omega) 
+= - \frac{1}{\pi} \mathrm{P} \int_{-\infty}^\infty \frac{G_\mathrm{i} (\omega')}{\omega' - \omega} d\omega' \tag{B.10}
+$$
+
+$$
+G_\mathrm{i} (\omega) 
+= \frac{1}{\pi} \mathrm{P} \int_{-\infty}^\infty \frac{G_\mathrm{r} (\omega')}{\omega' - \omega} d\omega' \tag{B.11}
+$$
+
+となります。
+この2つの式を、クラマース・クローニッヒ関係 (Kramers-Kronig relation) あるいは分散公式と呼びます。
+実際の実験で測定できるのは、角周波数が正の場合のみです。
+よって、[フーリエ係数の実条件](/math/fourier_transform#フーリエ係数の実条件)から $$G(-\omega) = G^\ast (\omega)$$ が成り立ちます。
+ここから、$$G_\mathrm{r}$$ は偶関数、そして $$G_\mathrm{i}$$ は奇関数です。
+この事実を用いると
+
+$$
+G_\mathrm{r} (\omega) 
+= - \frac{1}{\pi} \mathrm{P} \int_{-\infty}^\infty \frac{G_\mathrm{i} (\omega')}{\omega' - \omega} d\omega' 
+= - \frac{1}{\pi} \mathrm{P} \left( \int_{-\infty}^0 + \int_{0}^\infty \right) \frac{G_\mathrm{i} (\omega')}{\omega' - \omega} d\omega' \tag{B.12}
+$$
+
+第一項において $$\omega' \rightarrow - \omega'$$ のように置換を行うと
+
+$$
+\begin{align}
+(第一項)
+&= - \frac{1}{\pi} \mathrm{P} \int_{\infty}^0 \frac{G_\mathrm{i} (-\omega')}{-\omega' - \omega} (-1) d\omega' 
+= - \frac{1}{\pi} \mathrm{P} \int_{\infty}^0 \frac{- G_\mathrm{i} (\omega')}{-\omega' - \omega} (-1) d\omega' \notag \\
+&= - \frac{1}{\pi} \mathrm{P} \int_0^\infty \frac{G_\mathrm{i} (\omega')}{\omega' + \omega} d\omega' \tag{B.13}
+\end{align}
+$$
+
+のように整理されるので、最終的に
+
+$$
+G_\mathrm{r} (\omega) 
+= - \frac{1}{\pi} \mathrm{P} \int_0^\infty \frac{G_\mathrm{i} (\omega')}{\omega' + \omega} d\omega' - \frac{1}{\pi} \mathrm{P} \int_{0}^\infty \frac{G_\mathrm{i} (\omega')}{\omega' - \omega} d\omega' 
+= - \frac{2}{\pi} \mathrm{P} \int_0^\infty \frac{\omega' G_\mathrm{i} (\omega')}{\omega'^2 - \omega^2} d\omega' \tag{B.14}
+$$
+
+を得ます。
+$$G_\mathrm{i}$$ についても同様に
+
+$$
+G_\mathrm{i} (\omega) 
+= \frac{2\omega}{\pi} \mathrm{P} \int_0^\infty \frac{G_\mathrm{r} (\omega') }{\omega'^2 - \omega^2} d\omega' \tag{B.15}
+$$
+
+観測から $$G_\mathrm{r}, G_\mathrm{i}$$ のどちらか一方を知ることができれば、もう一方を計算することができるということを意味します。
+元々は電磁波の分散現象の研究から導出された関係式で、複素誘電率・複素屈折率に関する文脈で考えられたものです。
+$$G_\mathrm{r}$$ は分散 (エネルギーを蓄え位相を変化させる応答)、$$G_\mathrm{i}$$ は散逸 (エネルギーを吸収する応答) を表します。
+このクラマース・クローニッヒ関係は、「ある周波数で吸収 (散逸) があるならば、どこかの周波数で必ず分散が出現する」ことを意味します。
+全ての周波数で吸収はないが分散は存在するというような媒質 (系) は、因果律に反するため存在できないということです。
+光学分野で知られている異常分散 (吸収線の近くで屈折率が急激に変化する) は、クラマース・クローニッヒ関係から導かれます。
+
 ## 参考文献
 
 [1] [霜田光一, 桜井 捷海, "エレクトロニクスの基礎"](https://amzn.to/4wAOuib)  
 [2] [松澤昭, "新しい電気回路 上"](https://amzn.to/44ozUxv)  
+[3] [平川浩正, "電気力学"](https://amzn.to/4viY5Z1)  
 
 {% include adsense.html %}

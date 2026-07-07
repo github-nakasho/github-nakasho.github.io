@@ -1,4 +1,4 @@
-I"a
+I"x
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -12,7 +12,10 @@
       <li><a href="#極を1つ持つ増幅器" id="markdown-toc-極を1つ持つ増幅器">極を1つ持つ増幅器</a></li>
       <li><a href="#極を2つ持つ増幅器" id="markdown-toc-極を2つ持つ増幅器">極を2つ持つ増幅器</a></li>
       <li><a href="#極を3つ持つ増幅器" id="markdown-toc-極を3つ持つ増幅器">極を3つ持つ増幅器</a></li>
-      <li><a href="#ナイキストの安定条件" id="markdown-toc-ナイキストの安定条件">ナイキストの安定条件</a></li>
+      <li><a href="#ナイキストの安定条件" id="markdown-toc-ナイキストの安定条件">ナイキストの安定条件</a>        <ol>
+          <li><a href="#利得-ゲイン-余裕と位相余裕" id="markdown-toc-利得-ゲイン-余裕と位相余裕">利得 (ゲイン) 余裕と位相余裕</a></li>
+        </ol>
+      </li>
       <li><a href="#ラウスフルヴィッツの安定条件" id="markdown-toc-ラウスフルヴィッツの安定条件">ラウス・フルヴィッツの安定条件</a></li>
       <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
     </ol>
@@ -136,6 +139,14 @@
 増幅器の伝達関数を \(A_0 (s)\) にしたいとき、\(F(s) = -\frac{1}{A_0(s)}\) の特性を持つ受動フィルターを作り、これと高利得の増幅器を組み合わせることでフィードバック増幅器を作ればよいことがわかります。
 増幅器の周波数特性を設計するのは困難ですが、受動回路網のフィルターははるかに正確に設計・製作できることが知られています。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="極を1つ持つ増幅器">極を1つ持つ増幅器</h2>
 
 <p>演算増幅器 (operational amplifier: オペアンプ) など一般に増幅器の周波数特性は、低い周波数では一定で、ある周波数 \(\omega_0\) 付近から増幅度が周波数とともに減少するのもが多いです。
@@ -256,6 +267,14 @@ A_\mathrm{f} (s)
 2つの極の実部が正にならなくても、負の値が小さくなったときには虚部が大きな値を持ちます。
 このため、増幅器にデルタ関数的なパルスや階段関数波形の入力が加えられたときには、出力は減衰の小さな減衰振動 (ringing: リンギング) を伴うようになるため、過渡的な特性の悪い増幅器となります。</p>
 
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="ナイキストの安定条件">ナイキストの安定条件</h2>
 
 <p>3つの極を持つ増幅器にかけるフィードバックが大きくなると不安定になることを、伝達関数の極の \(s\) 平面上の位置から説明しました。
@@ -317,6 +336,40 @@ A_\mathrm{f} (s)
 <p>\(\vert 1 + \hat{\beta} \hat{A} \vert &lt; 1\) は確かに正のフィードバック領域ですが、これは「その周波数成分が増幅される」ことを意味するだけで、系全体が不安定であることとは別問題です。
 ナイキストの安定条件の判定が強力なのは、特定の角周波数だけでなく、全角周波数領域にわたる軌跡のトポロジーからその系の安定性を判定できることにあります。</p>
 
+<h3 id="利得-ゲイン-余裕と位相余裕">利得 (ゲイン) 余裕と位相余裕</h3>
+
+<p>ナイキストの安定条件では、そのフィードバック系が安定か不安定かのみの判断しかできません。
+しかし実用的には、その系がどれだけ安定かを定量化することが重要となります。
+フィードバック増幅器の閉ループ伝達関数 \(\hat{A}_\mathrm{f} (\omega)\) の式(20) において、\(\hat{\beta} (\omega) \hat{A} (\omega)\) が -1 から遠いほど、その系は安定していると言えるでしょう。
+具体的には、利得 \(P = \vert \hat{\beta} (\omega) \hat{A} (\omega) \vert\) が1より小さいほど安定していると言えます。
+そこで、「\(P\) を何倍したら \(-1\) に到達しうるか」を利得余裕と呼び、次のように定義します。</p>
+
+\[g_m 
+= 20 \log \frac{1}{P} 
+= - 20 \log P 
+= -20 \log \vert \hat{\beta} (\omega) \hat{A} (\omega) \vert \quad [\mathrm{dB}] \tag{22}\]
+
+<p>この概念を図示すると、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/feedback_08.png" alt="" /></p>
+
+<p>利得 \(P\) が1になったからといって、複素数平面上で (-1, 0) を通るとは限りません。
+(-1, 0) からできるだけ離れた方が安定であり、そのときの偏角を \(\varphi_m\) を位相余裕と呼びます。</p>
+
+<p><img src="/assets/images/circuits/feedback_09.png" alt="" /></p>
+
+<p>これは、\(P = 1\) となる角周波数 \(\omega_c\) を求め、そこから \(\theta(\omega_c) = \mathrm{arg} (\hat{\beta} (\omega_c) \hat{A} (\omega_c))\) を計算します。
+(-1, 0) の偏角は \(\pi\) であるため、\(\pi + \theta(\omega_c)\) により位相余裕を算出できます。
+一般的に位相余裕は 60 度以上、利得余裕は 10 dB以上が、応答の安定性の目安となります。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
 <h2 id="ラウスフルヴィッツの安定条件">ラウス・フルヴィッツの安定条件</h2>
 
 <p>フィードバック系は、閉ループ伝達関数 \(A_\mathrm{f} (s)\) の極の実部が全て負であれば安定なのでした。
@@ -361,10 +414,83 @@ A_\mathrm{f} (s)
   </tfoot>
 </table>
 
+<p>3行目以降は、直前の2行から</p>
+
+\[b_1 
+= \frac{a_1 a_2 - a_0 a_3}{a_1}, \quad 
+b_2 
+= \frac{a_1 a_4 - a_0 a_5}{a_1}, \quad 
+c_1 
+= \frac{b_1 a_3 - a_1 b_2}{b_1}, \quad 
+\cdots \tag{22}\]
+
+<p>のように、たすきがけから計算していきます。
+このようにして作成されたラウス表から、次のようにして解の符号を判定することができます。</p>
+
+<ul>
+  <li>第一列 \(a_0, a_1, b_1, c_1, \dots\) が全て同じ符号ならば、解の実部は全て負となる</li>
+  <li>第一列の符号の変化の回数は、実部が正となる解の個数を表す</li>
+</ul>
+
+<p>例として、先ほどの<a href="/circuits/feedback#極を3つ持つ増幅器">極を3つ持つ増幅器</a>について見てみましょう。
+\(A_\mathrm{f} (s)\) の分母から、知りたい極の位置は次の方程式を満たします。</p>
+
+\[s^3 + a_1 s^2 + a_2 s + \omega_0^3 
+= 0 \tag{23}\]
+
+\[a_1 
+= \omega_1 + \omega_2 + \omega_3, \quad 
+a_2 
+= \omega_2 \omega_3 + \omega_3 \omega_1 + \omega_1 \omega_2, \quad 
+\omega_0^3 
+= \omega_1 \omega_2 \omega_3 (1 + \beta A_0) \tag{24}\]
+
+<p>ここからラウス表を作成すると、次のようになります。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>次数</td>
+      <td>係数</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>\(s^3\)</td>
+      <td>\(1 \quad a_2\)</td>
+    </tr>
+    <tr>
+      <td>\(s^2\)</td>
+      <td>\(a_1 \quad \omega_0^3\)</td>
+    </tr>
+    <tr>
+      <td>\(s^1\)</td>
+      <td>\(\frac{a_1 a_2 - \omega_0^3}{a_1} \quad 0\)</td>
+    </tr>
+    <tr>
+      <td>\(s^0\)</td>
+      <td>\(\omega_0^3\)</td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>第一列に注目しましょう。
+\(a_1 &gt; 0, \omega_0 &gt; 0\) より、安定条件は三行目から</p>
+
+\[a_1 a_2 
+&gt; \omega_0^3 \ \Longrightarrow \ 
+\beta A_0 
+&lt; \frac{(\omega_1 + \omega_2 + \omega_3) (\omega_2 \omega_3 + \omega_3 \omega_1 + \omega_1 \omega_2)}{\omega_1 \omega_2 \omega_3} - 1 \tag{25}\]
+
+<p>となります。
+実際に \(\omega_1 = 1.0, \omega_2 = 4.5, \omega_3 = 5.0\) を代入すると \(\beta A_0 \gtrsim 13.9\) となります。
+先ほどの軌跡のプロットからも分かるように、\(\beta A_0 \sim 14\) 程度から、2つの解の実部が正の領域に到達していることがわかります。</p>
+
 <h2 id="参考文献">参考文献</h2>
 
 <p>[1] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a><br />
-[2] <a href="https://amzn.to/4eI1r2T">松澤昭, “はじめてのアナログ電子回路 基本回路編”</a></p>
+[2] <a href="https://amzn.to/4eI1r2T">松澤昭, “はじめてのアナログ電子回路 基本回路編”</a><br />
+[3] <a href="https://www.ecei.tohoku.ac.jp/hariyama/lecture/control/control-07.pdf">張山昌論, “ナイキストの安定判別法”</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

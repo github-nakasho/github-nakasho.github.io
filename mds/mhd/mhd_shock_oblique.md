@@ -718,8 +718,8 @@ $$
 
 # 参考文献
 
-[1] Priest, "Solar Magnetohydrodynamics"  
+[1] [Priest, "Solar Magnetohydrodynamics"](https://amzn.to/3T4EK0b)  
 [2] [草野完也, "宇宙における高速流と衝撃波研究の最前線, 太陽フレアにおける高速流とスローショック"](http://www.jspf.or.jp/Journal/PDF_JSPF/jspf2007_04/jspf2007_04-372.pdf)  
-[3] [Inoue & Inutsuka, 2007, "Evolutionary Conditions in Dissipative MHD Systems Revisited"](https://academic.oup.com/ptp/article/118/1/47/1879296)
+[3] [Inoue & Inutsuka, 2007, "Evolutionary Conditions in Dissipative MHD Systems Revisited"](https://academic.oup.com/ptp/article/118/1/47/1879296)  
 
-{% include adsense.html %} 
+{% include adsense.html %}

@@ -166,9 +166,8 @@ $$
 
 # 参考文献
 
-[1] 柴田一成, 福江純, 松元亮治, 嶺重慎, "活動する宇宙 -天体活動現象の物理-"  
+[1] [柴田一成, 福江純, 松元亮治, 嶺重慎, "活動する宇宙 -天体活動現象の物理-"](https://amzn.to/4pf8C6i)  
 [2] [Kulkarni & Romanova, 2008, "Accretion to magnetized stars through the Rayleigh-Taylor instability: global 3D simulations"](https://doi.org/10.1111/j.1365-2966.2008.13094.x)  
 [3] [Hiraki et al., 2012, "Io torus plasma transport under interchange instability and flow shears"](https://doi.org/10.1016/j.pss.2011.11.014)  
 
-{% include adsense.html %} 
-
+{% include adsense.html %}

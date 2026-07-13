@@ -9,8 +9,8 @@ permalink: /
 
 # 宇宙物理メモ
 
-このwebsiteはgithub-nakashoが運営するwebsiteです。
-主に物理、宇宙物理、数学、プログラミングの勉強メモを掲載しています。
+このウェブサイトはgithub-nakashoが運営するwebsiteです。
+宇宙物理メモというサイト名ですが、宇宙物理以外のトピックスについても勉強し、適宜まとめています。
 
 ## CV(?)
 
@@ -41,24 +41,21 @@ permalink: /
 * C, Python, Julia
 * OpenMP, MPI並列化
 * Git (GitHub, Bitbucket)
-* Website制作
+* ウェブサイト作成
 * Illustrator, Photoshopを用いた簡単なイラスト作成
 
 ### For fun
 
 * 子育て (2022年末より)
 * 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること
-* 海外旅行
-* 自転車
-* 寺社仏閣巡り  
-* アニメ・ゲーム
+* 筋トレ (とりあえずベンチプレス100kgを目指して頑張っています)
+* 寺社仏閣巡り
+* アニメ鑑賞
 
 ### Daily routine
 
 * [astro-ph](https://arxiv.org/list/astro-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/astroph/issues)
 * [quant-ph](https://arxiv.org/list/quant-ph/new)のチェック -> [自分のGitHubリポジトリにIssuesとして登録](https://github.com/github-nakasho/quantph/issues)
-* [Just Dance](https://justdancenow.com/)でエキササイズ
-* 腕立て伏せ、腹筋、背筋などの基礎的な筋力トレーニング
 
 ## ほしいものリストなど
 

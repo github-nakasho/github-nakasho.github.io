@@ -5,6 +5,7 @@ parent: 電気回路
 math: mathjax3
 permalink: /circuits/filters
 nav_order: 15
+back_to_top: true
 ---
 
 {: .no_toc }
@@ -82,8 +83,8 @@ $$
 
 $$
 \tan \varphi 
-= \frac{R}{-\omega L} 
-= - \frac{\omega_0}{\omega} \tag{5}
+= \frac{-\omega L}{R}
+= - \frac{\omega}{\omega_0} \tag{5}
 $$
 
 のようになります。
@@ -153,6 +154,17 @@ $$
 ![](/assets/images/circuits/filters_04.png)  
 
 $$\omega \gg \omega_0$$ のとき、$$\vert G(i\omega) \vert \sim 1$$ のようになることから、ハイパスフィルターであることが確認できました。
+
+<span id="high-low"></span> 
+
+{: .note}
+(3)式と(8)式を見比べると、$$G(s)$$ の極の位置 (分母がゼロとなる場所) はどちらも同じです。
+では何がローパス・ハイパスの違いを生むのでしょうか。
+それは $$G(s) = 0$$ となる位置 (すなわちゼロ点) の違いです。
+(8)式から、ハイパスフィルターでは $$s = 0$$ がゼロ点であるとわかります。
+$$s = i\omega = 0$$ のとき、これは直流成分に一致します ($$\omega \rightarrow 0$$ では $$\lambda \rightarrow \infty$$ となり、同じ電流・電圧がずっと続くと考えればわかりやすいでしょう)。
+ハイパスフィルターは $$s = 0$$ で $$G(s) = 0$$ となり、直流成分 (低周波極限) を透過しないことからもわかるように、低周波を通さない性質が伺えます。
+$$G(s)$$ の極だけでなくゼロ点の位置を詳細に設計することで、そのフィルターの性質が左右されるのです。
 
 ## バンドパスフィルター
 
@@ -329,19 +341,398 @@ $$\omega \rightarrow \omega_0$$ では $$G(i\omega) \rightarrow 0$$ となり、
 
 ![](/assets/images/circuits/filters_09.png)  
 
+点2での電位は、$$R - R$$ の直列接続部分に電流 $$I_a$$ が流れているとすると
+
+$$
+V_\mathrm{in} - R I_a
+= V_2, \quad V_\mathrm{in} - R I_a - R I_a 
+= 0 \ \Longrightarrow \ V_2 
+= R I_a 
+= \frac{1}{2} V_\mathrm{in} \tag{26} 
+$$
+
+点2'での電位は、$$R' - C$$ の直列接続部分に着目して
+
+$$
+\begin{align}
+&V_\mathrm{in} - R' I_b 
+= V_{2'}, \quad V_\mathrm{in} - R' I_b - \frac{I_b}{s C} 
+= 0 \notag \\
+&\Longrightarrow \ V_{2'} 
+= \frac{I_b}{sC} 
+= \frac{\frac{1}{sC}}{R' + \frac{1}{i\omega C}} V_\mathrm{in} 
+= \frac{1}{1 + i\omega R'C} V_\mathrm{in} \tag{27}
+\end{align}
+$$
+
+のようになります。
+以上から、2-2'間の電位 $$V_\mathrm{out}$$は
+
+$$
+V_\mathrm{out} 
+= V_2 - V_{2'} 
+= \frac{1}{2} V_\mathrm{in} - \frac{1}{1 + i\omega R'C} V_\mathrm{in} 
+= \frac{1}{2} \frac{i\omega R' C - 1}{1 + si\omega R' C} V_\mathrm{in} \tag{28}
+$$
+
+よって周波数応答関数は
+
+$$
+\begin{align}
+G(i\omega) 
+&= \frac{V_\mathrm{out}}{V_\mathrm{in}} 
+= \frac{1}{2} \frac{i\omega R' C - 1}{1 + i\omega R' C} 
+= - \frac{1}{2} \frac{(i\omega R' C - 1)^2}{1 + \omega^2 R'^2 C^2} \notag \\
+&= - \frac{1}{2} \frac{-\omega^2 R'^2 C^2 - 2 i \omega R' C + 1}{1 + \omega^2 R'^2 C^2} \tag{29}
+\end{align}
+$$
+
+のようになります。
+この絶対値は
+
+$$
+\vert G(i\omega) \vert 
+= \frac{1}{2(1 + \omega^2 R'^2 C^2)} \sqrt{(1-\omega^2 R'^2 C^2)^2 + 4 \omega^2 R'^2 C^2} 
+= \frac{1}{2} \tag{30}
+$$
+
+のように、周波数に依存せず一定となります (1/2になっていますが、このフィルター通過後に増幅器を通すことで、振幅は1に戻すことができます。)
+また位相は
+
+$$
+\begin{align}
+\varphi 
+&= \mathrm{arg} (G(i\omega)) 
+= \mathrm{arg} (i\omega R'C - 1) - \mathrm{arg}(2) - \mathrm{arg}(1 + i\omega R'C) \notag \\
+&= \mathrm{arg} (i\omega R'C - 1) - \mathrm{arg}(1 + i\omega R'C) 
+= (\pi - \mathrm{arctan} (\omega R'C)) - \mathrm{arctan} (\omega R'C) \notag \\
+&= \pi - 2 \mathrm{arctan} (\omega R' C) \tag{31}
+\end{align}
+$$
+
 出力電流が流れないとき、$$R'$$ と $$C$$ を流れる電流は等しいため、$$R'$$ と $$C$$ の両端の電圧は $$\pi / 2$$ の位相差を持つことになります。
 そこで、端子 1'-2' 間の交流電圧ベクトルと 2'-1 間の交流電圧ベクトルは直交します。
 これらを図示すると、次のようになります。
 
 ![](/assets/images/circuits/filters_10.png)  
 
-$$R'$$ をゼロから次第に大きくしていくと、このベクトル図で端子 2' の電圧を示す点は 1-1' を直径とする演習に沿って、矢印の向きに移動します。
-したがって出力の振幅は一定のまま、位相が入力に対してゼロから $$\pi$$ 近くまで変化させることができます。
-$$R' = \frac{1}{\omega C}$$ のとき、位相差は $$\pi / 2$$ となります。
+$$R'$$ をゼロから次第に大きくしていくと、このベクトル図で端子 2' の電圧を示す点は 1-1' を直径とする円周に沿って、矢印の向きに移動します。
+したがって出力の振幅は一定のまま、位相が入力に対して $$\pi$$ から $$0$$ 近くまで変化させることができます。
+$$R' = \frac{1}{\omega C}$$ のとき、位相差は $$\pi / 2$$ となります。  
+この回路の形は、ブリッジ回路と同じです。
+よって電流が流れないときの条件は、[ホイートストンブリッジ回路における平衡条件](/circuits/steady_circuit_eg#ホイートストンブリッジ回路)からも求めることができます。
+平衡条件より
 
-## その他フィルター
+$$
+\frac{R}{\omega C} 
+= R R' \ \Longrightarrow \ \ R' 
+= \frac{1}{\omega C} \tag{32}
+$$
 
-工事中...バターワース・チェビシェフ・ベッセルフィルターなどを追記予定。
+## その他のフィルター
+
+ここまでの議論では、特にフィルターの設計については触れてきませんでした。
+しかし[ハイパスフィルターとローパスフィルターの違い](#high-low)の部分で触れたように、極とゼロ点の位置から、その性質・性能を詳細に設計することができます。
+ここでは代表的な3つのフィルターについて、それらの設計思想とともに見ていきましょう。
+
+### バターワースフィルター
+
+1930年にバターワース (Butterworth) により考案されたフィルターです。
+これは特定の周波数を透過するというものではなく、透過帯域が限りなく平坦になるように設計されたものを指します。
+その分、透過しない帯域の[ボーデ図](/circuits/linear_system#ボーデ図)の傾きが緩やかになっている特徴も持ちます。  
+$$n$$ 次のバターワースフィルターは、次のような周波数応答を持つ[ローパスフィルター](/circuits/filters#ローパスフィルター)です。
+
+$$
+\vert G(\omega) \vert^2
+= \frac{1}{1 + (\omega / \omega_0)^{2n}} \tag{33}
+$$
+
+$$\vert G(\omega) \vert^2$$ を $$\omega = 0$$ の周りでテイラー展開しましょう。
+すると
+
+$$
+\vert G (\omega) \vert^2 
+= 1 - \left( \frac{\omega}{\omega_0}\right)^{2n} + (\omega^{4n} 以上の項) \tag{34}
+$$
+
+のようになり、$$\omega^2$$ から $$\omega^{2n-2}$$ までの項が消えています。
+よって $$\omega = 0$$ のときの $$\vert G(0) \vert^2 = 1$$ を、大きな $$\omega$$ でも実現できるようになっていることから、ボーデ図の平坦性がわかります。  
+このフィルターの極の位置を調べてみましょう。
+$$\vert G(\omega) \vert^2 = G(s=i\omega) G(-s = -i\omega)$$ の関係から
+
+$$
+G(s) G(-s) 
+= \frac{1}{1 + \left(\frac{s}{i\omega_0}\right)^{2n}} \tag{35}
+$$
+
+とわかります。
+<span id="equation-36"></span>分母がゼロとなる極の位置は
+
+$$
+\left( \frac{s}{i\omega_0} \right)^{2n} 
+= -1 
+= e^{-i\pi + 2ki\pi} \ \Longrightarrow \ s_k
+= \omega_0 i e^{i\pi \frac{2k-1}{2n}} 
+= \omega_0 e^{i\pi \left( \frac{1}{2} + \frac{2k-1}{2n} \right)} \tag{36} 
+$$
+
+のように求めることができます。
+ここで $$k = 0, 1, 2, \dots, 2n -1$$ です。
+すなわち、バターワースフィルターの極の位置は、複素数平面上の半径 $$\omega_0$$ の円周上に $$\pi/n$$ の角度間隔で並びます。
+[安定性の議論から、実部が正の極は指数的に振幅が増大](/circuits/transfer_function#線形システムの安定性)してしまいます。
+よって $$2n$$ 個の極のうち、実部が負 (複素数平面上の左半面に位置する) の $$n$$ 個を $$G(s)$$ の極として用いることで、安定なフィルターとなります。
+
+{: .note}
+複素数平面上の右半面に位置する極は、$$G(-s)$$ の部分から出てきます。
+
+例として $$n=2, 3, 4$$ の場合の極の位置を、次図に示します。
+
+![](/assets/images/circuits/filters_11.png)  
+
+また(36)式の極を用いることで、伝達関数は
+
+$$
+G(s) 
+= \frac{1}{\prod_{k=1}^{n} (s-s_k)} \tag{37}
+$$
+
+のように書くことができます。
+分母の部分を、バターワース多項式とも呼びます。
+(37)式から $$\vert G(s) \vert$$ を[デシベル](/circuits/linear_system#補遺b-デシベルについて)で描くと、次のようになります。
+
+![](/assets/images/circuits/filters_12.png)  
+
+$$n$$ が大きくなるにつれ、$$\omega \lesssim 1$$ のプラトーの部分が広くなっていることがわかります。
+また $$\omega \gtrsim 1$$ での傾きも、$$n$$ の増加とともに急峻になり、より理想的なローパスフィルターに近づいていることがわかります。  
+
+### チェビシェフフィルター
+
+先ほどのバターワースフィルターは、透過帯域の傾きが穏やかという欠点がありました。
+透過帯域の傾きを急峻にすることで、理想的なフィルターを設計しようとしたのがチェビシェフフィルターです。
+ただし急峻さを突き詰めたことで、透過帯域の部分でリップル (ripple, 微小な振動成分のこと) が発生する欠点を持ちます。  
+$$n$$ 次の (第一種) チェビシェフフィルタの振幅特性は
+
+$$
+\vert G(\omega) \vert^2 
+= \frac{1}{1 + \epsilon^2 T_n^2 (\omega / \omega_0)} \tag{38}
+$$
+
+のように与えられます。
+ここで [$$T_n$$ はチェビシェフ多項式](/math/chebyshev)、$$\epsilon$$ はリップルの大きさを決めるパラメータです。
+[チェビシェフ多項式](/math/chebyshev)は、区間 $$[-1, 1]$$ で $$\vert T_n (x) \vert \leq 1$$ かつ $$\pm 1$$ の間を $$n/2$$ 回往復します。
+ここから、透過帯域 $$\omega < \omega_0$$ では $$T_n^2$$ が 0 と 1 の間を往復することで
+
+$$
+\frac{1}{1 + \epsilon^2} \leq \vert G \vert^2 \leq 1 \tag{39}
+$$
+
+の間を振動するリップルが発生します。  
+本来、[チェビシェフ多項式 $$T_n (x)$$](/math/chebyshev) は $$-1 \leq x \leq 1$$ の間で定義されるものですが、(38)式では $$\omega > \omega_0$$ の領域も記述することができます。
+$$T_n (\omega / \omega_0) = \mathcal{O} (\omega^n/ \omega_0^n)$$ のような依存性を持つため、$$\omega > \omega_0$$ では $$\vert G(\omega) \vert^2$$ は急速にゼロに近づいていきます。
+これにより、先ほど議論した急峻さを実現します。  
+リップルの大きさ $$\epsilon$$ は、慣習的に[デシベル](/circuits/linear_system#補遺b-デシベルについて)で表します。
+実際のリップルの振幅を $$A \ [\mathrm{dB}]$$ とすると 
+
+$$
+\epsilon 
+= \sqrt{10^{A/10} - 1} \tag{40}
+$$
+
+のように書かれます。  
+次に、チェビシェフフィルターの極を求めてみましょう。
+(38)式の分母がゼロとなる位置は
+
+$$
+1 + \epsilon^2 T_n^2 (s/i) 
+= 0 \ \Longrightarrow \ 
+T_n (s/i) 
+= \pm \frac{i}{\epsilon} \tag{41}
+$$
+
+から求めることができます。
+$$T_n$$ の振動の様子から、(41)式の解は $$2n$$ 個あることがわかります。
+そこでこれらの解を $$s_k \ (k=1, 2, \dots, 2n)$$ のように書くことにしましょう。
+すると
+
+$$
+\begin{align}
+&\cos \left\{ n \cos^{-1} \left( \frac{s_k}{i} \right) \right\} 
+= \pm \frac{i}{\epsilon} \notag \\
+&\Longrightarrow \ 
+\cos^{-1} \frac{s_k}{i} 
+= \frac{1}{n} \left\{\cos^{-1} \left(\pm \frac{i}{\epsilon} \right) + 2\pi k \right\} \quad (k = 0, 1, \dots, 2n-1) \tag{42}
+\end{align}
+$$
+
+を解けば良いことがわかります。
+$$\cos^{-1} \left( \pm \frac{i}{\epsilon}\right)$$ の部分を計算するために、$$\cos \alpha = i / \epsilon$$ を満たす複素数 $$\alpha$$ を計算しましょう。
+
+$$
+\cos \alpha 
+= \frac{e^{i\alpha} + e^{-i \alpha}}{2} 
+= \frac{i}{\epsilon} \tag{43}
+$$
+
+右辺は純虚数なので、$$\alpha = \frac{\pi}{2} + i\beta$$ のように分解すると
+
+$$
+\begin{align}
+&\cos \left( \frac{\pi}{2} + i\beta \right) 
+= \cos \frac{\pi}{2} \cos (i\beta) - \sin \frac{\pi}{2} \sin(i\beta) 
+= - \sin (i\beta) 
+= - i \sinh \beta 
+= \frac{i}{\epsilon} \notag \\
+&\Longrightarrow \ 
+\sinh\beta 
+= - \frac{1}{\epsilon} \tag{44}
+\end{align}
+$$
+
+以上より
+
+$$
+\cos^{-1} \left( \frac{i}{\epsilon} \right) 
+= \alpha 
+= \frac{\pi}{2} - i \sinh^{-1} \left( \frac{1}{\epsilon} \right) \tag{45}
+$$
+
+のようになります。
+途中 $$\sinh^{-1} (x) = - \sinh^{-1} (-x)$$ であることを用いました。
+さらに
+
+$$
+\cos^{-1} \left( - \frac{i}{\epsilon} \right) 
+= \pi - \cos^{-1} \left( \frac{i}{\epsilon} \right) 
+= \frac{\pi}{2} + i \sinh^{-1} \left( \frac{1}{\epsilon} \right) \tag{46}
+$$
+
+もわかります。
+(45), (46)式を(42)式に代入し、さらに $$\mu_0 = \sinh^{-1} \left( \frac{1}{\epsilon}\right)$$ とおけば
+
+$$
+\cos^{-1} \left( \frac{s_k}{i} \right) 
+= \frac{1}{n} \left( \frac{\pi}{2} \pm i \mu_0 + 2\pi k \right) \ \Longrightarrow \ 
+\frac{s_k}{i} 
+= \cos \left\{ \frac{4k + 1}{2n} \pi \pm i \mu \right\} \quad (\mu = \mu_0 / n) \tag{47} 
+$$
+
+のようになります。
+
+$$
+\begin{align}
+s_k
+&= i\cos \left( \frac{4k+1}{2n} \pi \right) \cos (i\mu) \mp i \sin \left( \frac{4k+1}{2n} \pi \right) \sin (i\mu) \notag \\
+&= i\cos \left( \frac{4k+1}{2n} \pi \right) \cosh \mu \pm \sin \left( \frac{4k+1}{2n} \pi \right) \sinh \mu \tag{48}
+\end{align}
+$$
+
+とし、さらに $$\theta_k = \frac{2k-1}{2n} \pi \ (k=1, 2, \dots, 2n)$$ のようにすることで
+
+$$
+s_k 
+= - \sinh \mu \sin \theta_k + i \cosh \mu \cos \theta_k \tag{49}
+$$
+
+のように、極の位置を求めることができました。
+$$\sigma_k = - \sinh \mu \sin \theta_k, \Omega_k = \cosh \mu \cos \theta_k$$ のようにおくと
+
+$$
+\left( \frac{\sigma_k}{\sinh \mu} \right)^2 + \left( \frac{\Omega_k}{\cosh \mu}\right)^2 
+= \sin^2 \theta_k + \cos^2 \theta_k 
+= 1 \tag{50}
+$$
+
+のような関係にあることがわかります。
+これは、虚軸方向を長軸とし半長軸の長さが $$\cosh \mu$$、実軸方向を短軸として半短軸の長さが $$\sinh \mu$$ の楕円を表しています。
+[バターワースの極の位置 (36)式](#equation-36)と比較すると、バターワースの極が存在する真円を実軸方向に $$\tanh \mu$$ 倍だけ押し潰した形になっています。
+
+![](/assets/images/circuits/filters_13.png)  
+
+
+$$\epsilon \rightarrow 0$$ のとき $$\mu \rightarrow \infty, \tanh \mu \rightarrow 1$$ となることから、バターワースフィルターはチェビシェフフィルターのリップルがない極限である、と見ることができます。
+$$\vert G(\omega) \vert$$ を[デシベル](/circuits/linear_system#補遺b-デシベルについて)で描いたグラフは、次のようになります。
+
+![](/assets/images/circuits/filters_14.png)  
+
+バターワースの図と比べ、急峻な減衰を示すことがわかります。
+チェビシェフ多項式の次数 $$n$$ を増やすことで、より急峻な減衰を得ることができますが、透過帯域部分でのリップルが激しくなっていることがわかります。
+チェビシェフフィルターは透過帯域外でのその急峻さから、隣接チャンネルの分離が最優先となる無線通信 (送受信機のチャンネル選択フィルタ) などに用いられます。
+
+## 補遺A: チェビシェフ多項式の定義域の拡張
+
+チェビシェフ多項式の定義は
+
+$$
+T_n(x) 
+= \cos (n \cos^{-1} x) \quad (\vert x \vert \leq 1) \tag{A.1}
+$$
+
+でした。
+しかし[チェビシェフフィルター](/circuits/filters#チェビシェフフィルター)では、$$T_n(\omega / \omega_0)$$ のように、$$\omega / \omega_0 > 1$$ の場合にも値を計算する必要があります。
+そこで解析接続を用い、$$\vert x \vert > 1$$ の場合にも定義を拡張しましょう。  
+$$\vert x \vert > 1$$ に対し、$$\cos^{-1} x$$ を複素数として扱うことにします。
+また $$x>1$$ として、$$x = \cosh t \ (t>0)$$ のように媒介変数を用いて表すことにすると
+
+$$
+\cos (it) 
+= \cosh t \ \Longrightarrow \ 
+\cos^{-1} (\cosh t) 
+= it \tag{A.2}
+$$
+
+より
+
+$$
+T_n (\cosh t) 
+= \cos (n \cos^{-1} (\cosh t)) 
+= \cos (n \cos^{-1} (cos (it))) 
+= \cos (int) 
+= \cosh (nt) \tag{A.3}
+$$
+
+を得ます。
+$$t = \cosh^{-1} x$$ が成り立つので
+
+$$
+T_n(x) 
+= \cosh(n \cosh^{-1} x) \quad (x > 1) \tag{A.4}
+$$
+
+のようになります。
+同様に $$x < -1$$ の場合には、$$x = -\cosh t \ (t>0)$$ のように置きます。
+
+$$
+\cos (\pi + it) 
+= - \cos (it) 
+= - \cosh t \tag{A.5}
+$$
+
+$$
+\begin{align}
+T_n (-\cosh t) 
+&= \cos (n \cos^{-1} (-\cosh t)) 
+= \cos (n \cos^{-1} (\cos (\pi + it))) \notag \\
+&= \cos (n (\pi + it)) 
+= \cos (n\pi) \cos(int) - \sin(n\pi) \sin (int) \notag \\
+&= \cos (n\pi) \cosh(nt) 
+= (-1)^n \cosh (n \cosh^{-1}(-x)) \tag{A.6}
+\end{align}
+$$
+
+のようになります。
+まとめると、定義域ごとのチェビシェフ多項式は次のようになります。
+
+$$
+T_n(x) 
+= \left\{ \begin{array}{ll}
+(-1)^n \cosh (n \cosh^{-1} x) & (x < -1) \\
+\cos(n \cos^{-1} x) & (\vert x \vert \leq 1) \\
+\cosh (n \cosh x) & (x > 1)
+\end{array} \right. \tag{A.7}
+$$
+
+のようになります。
+これらは[チェビシェフ多項式が満たす漸化式 $$T_{n+1} (x) + T_{n-1} (x) = 2x T_n(x)$$](/math/chebyshev) を満たすことも、示すことができます。
 
 ## 参考文献
 

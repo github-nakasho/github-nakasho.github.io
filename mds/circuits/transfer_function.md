@@ -490,7 +490,7 @@ savefig(plt, "bode_diagram_LRC.png")
 ## 補遺B: クラマース・クローニッヒ関係
 
 線形応答における周波数応答関数の実部と虚部が、ある関係にあることを示したものです。
-ここでは、その関係式を示してみましょう。  
+伝達関数や線形応答に慣れ親しんできたところで、ここではその関係式を示してみましょう。  
 線形システムの応答は、[インパルス応答 $$g(t)$$ ](/circuits/linear_system#インパルス応答)を用いて、次のように書けるのでした。
 
 $$
@@ -555,14 +555,14 @@ $$
 $$
 
 のようになります。
-実軸上の積分 $$C_1 + C_3$$ は、$$r \rightarrow \infty$$ の極限において
+実軸上の積分 $$C_1 + C_3$$ は、$$r \rightarrow \infty, \epsilon \rightarrow 0$$ の極限において
 
 $$
 \lim_{\epsilon \rightarrow 0} \left( \int_{-\infty}^{\omega -\epsilon} + \int_{\omega + \epsilon}^\infty \right) \frac{G(\omega')}{\omega' - \omega} d\omega' 
 = \mathrm{P} \int_{-\infty}^\infty \frac{G(\omega')}{\omega' - \omega} d\omega' \tag{B.7}
 $$
 
-のように、コーシーの積分の主値で書かれます。
+のように、コーシーの積分の主値で書くことができます。
 $$C_4$$ の積分は $$r \rightarrow \infty$$ ではゼロとなることから、(B.5)式は
 
 $$

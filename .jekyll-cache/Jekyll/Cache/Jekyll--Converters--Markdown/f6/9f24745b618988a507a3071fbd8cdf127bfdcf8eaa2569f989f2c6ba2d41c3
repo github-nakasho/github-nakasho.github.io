@@ -1,0 +1,645 @@
+I"=
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#フィルター" id="markdown-toc-フィルター">フィルター</a>    <ol>
+      <li><a href="#ローパスフィルター" id="markdown-toc-ローパスフィルター">ローパスフィルター</a></li>
+      <li><a href="#ハイパスフィルター" id="markdown-toc-ハイパスフィルター">ハイパスフィルター</a></li>
+      <li><a href="#バンドパスフィルター" id="markdown-toc-バンドパスフィルター">バンドパスフィルター</a></li>
+      <li><a href="#バンドリジェクションフィルター" id="markdown-toc-バンドリジェクションフィルター">バンドリジェクションフィルター</a></li>
+      <li><a href="#移相器" id="markdown-toc-移相器">移相器</a></li>
+      <li><a href="#その他のフィルター" id="markdown-toc-その他のフィルター">その他のフィルター</a>        <ol>
+          <li><a href="#バターワースフィルター" id="markdown-toc-バターワースフィルター">バターワースフィルター</a></li>
+          <li><a href="#チェビシェフフィルター" id="markdown-toc-チェビシェフフィルター">チェビシェフフィルター</a></li>
+          <li><a href="#ベッセルフィルター" id="markdown-toc-ベッセルフィルター">ベッセルフィルター</a></li>
+        </ol>
+      </li>
+      <li><a href="#補遺a-チェビシェフ多項式の定義域の拡張" id="markdown-toc-補遺a-チェビシェフ多項式の定義域の拡張">補遺A: チェビシェフ多項式の定義域の拡張</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="フィルター">フィルター</h1>
+
+<p>ある角周波数・一定の振幅を持つような入力に対し、ある周波数範囲はよく通して、他の周波数範囲を通さないようにするものをフィルター (filter) と呼びます。
+ここでは種々のフィルターについて見てみましょう。</p>
+
+<h2 id="ローパスフィルター">ローパスフィルター</h2>
+
+<p>次の図の回路は、ある角周波数以下の交流をよく通し、それ以上の角周波数の交流は通りにくくなります。
+これを低域フィルターあるいはローパスフィルター (low-pass filter: LPF) と呼びます。</p>
+
+<p><img src="/assets/images/circuits/filters_01.png" alt="" /></p>
+
+<p>(a)の<a href="/circuits/transfer_function">伝達関数</a>を計算しましょう。
+\(x(t) = V_\mathrm{in}, y(t) = V_\mathrm{out}\) とし、さらにこれらをラプラス変換したものをそれぞれ \(X(s), Y(s)\) とすると</p>
+
+\[x - L \frac{dI}{dt} - y 
+= 0 \tag{1}\]
+
+<p>ここで \(I\) は、コイルに流れる電流です。
+そして<a href="/circuits/steady_current#オームの法則">オームの法則</a>より \(V_\mathrm{out} = RI\) から</p>
+
+\[x - \frac{L}{R} \frac{dy}{dt} - y 
+= 0 \tag{2}\]
+
+<p>となります。
+両辺を<a href="/math/laplace_transform">ラプラス変換</a>することで</p>
+
+\[X 
+= \frac{L}{R} (sY - y(0)) + Y 
+= Y \left( 1 + \frac{L}{R} s \right) \ \Longrightarrow G(s) 
+= \frac{Y}{X} 
+= \frac{1}{1 + \frac{L}{R}s} 
+= \frac{R}{R + Ls} \tag{3}\]
+
+<p>を得ます。
+途中、\(y(0) = 0\) としました。
+\(s = i\omega\) とすることで、<a href="/circuits/transfer_function#周波数応答">周波数応答関数</a>を得ることができます。</p>
+
+\[\begin{align}
+&amp;G(i\omega) 
+= \frac{R}{R + i\omega L} 
+= \frac{R (R-i\omega L)}{R^2 + \omega^2 L^2} \notag \\
+&amp;\Longrightarrow \ \vert G (i\omega) \vert 
+= \frac{R}{R^2 + \omega^2 L^2} \sqrt{R^2 + \omega^2 L^2} 
+= \frac{R}{\sqrt{R^2 + \omega^2 L^2}} 
+= \frac{1}{\sqrt{1 + \omega^2 \left( \frac{L}{R}\right)^2}} 
+= \frac{1}{\sqrt{1 + \left( \frac{\omega}{\omega_0}\right)^2}} \tag{4}
+\end{align}\]
+
+<p>途中、\(\omega_0 = R/ L\) としました。
+入出力の位相差を \(\varphi\) とすると</p>
+
+\[\tan \varphi 
+= \frac{-\omega L}{R}
+= - \frac{\omega}{\omega_0} \tag{5}\]
+
+<p>のようになります。
+これらから<a href="/circuits/linear_system#ボーデ図">ボーデ図</a>を描くと、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_02.png" alt="" /></p>
+
+<p>この伝達関数から、\(\omega \ll \omega_0\) では \(\vert G(i\omega) \vert \sim 1\) のようなローパスフィルターとなります。
+同様に、先ほどの図(b)もローパスフィルターとなります。
+詳しくは<a href="/circuits/transfer_function#具体例-cr回路とrc回路">こちらのRC回路</a>もぜひご覧ください。
+このようにLR回路とRC回路は同等の特性フィルターですが、実際の電子回路ではLR回路の代わりにRC回路を用います。
+それはコイルを用いる回路には欠点があるためです。
+コイルの巻線は抵抗を伴い、また回路間に不要な相互誘導を生じます。
+そして体積が大きいために、集積回路に入れることは実用的でないからです。</p>
+
+<h2 id="ハイパスフィルター">ハイパスフィルター</h2>
+
+<p>先ほどの回路の2素子を入れ替えたものは、高域フィルターまたはハイパスフィルター (high-pass filter: HPF) となります。</p>
+
+<p><img src="/assets/images/circuits/filters_03.png" alt="" /></p>
+
+<p>先ほどのように微分方程式を立て、それを<a href="/math/laplace_transform">ラプラス変換</a>してみましょう。</p>
+
+\[x - RI - y 
+= 0 \tag{6}\]
+
+<p>今回は \(V_\mathrm{out} = L \frac{dI}{dt}\) より、両辺を時間微分することで</p>
+
+\[\begin{align}
+&amp;\frac{dx}{dt} - R \frac{dI}{dt} - \frac{dy}{dt} 
+= \frac{dx}{dt} - \frac{R}{L} y - \frac{dy}{dt} 
+= 0 \notag \\
+&amp;\underbrace{\Longrightarrow}_{ラプラス変換} 
+s X - x(0) - \frac{R}{L} Y - (s Y - y(0)) 
+\underbrace{=}_{x(0), y(0) = 0} s X - \left( \frac{R}{L} + s \right) Y 
+= 0 \tag{7}
+\end{align}\]
+
+<p>となります。
+よって、伝達関数は</p>
+
+\[G(s) 
+= \frac{Y}{X} 
+= \frac{s\frac{L}{R}}{1 + \frac{L}{R} s} \tag{8}\]
+
+<p>となります。
+\(s = i\omega, \omega_0 = R/L\) のようにすることで</p>
+
+\[G(i\omega) 
+= \frac{i \frac{\omega}{\omega_0}}{1 + i \frac{\omega}{\omega_0}}
+= \frac{i \frac{\omega}{\omega_0} \left(1- i\frac{\omega}{\omega_0} \right)}{1 + \left( \frac{\omega}{\omega_0} \right)^2} \ \Longrightarrow \ 
+\vert G(i\omega) \vert 
+= \frac{\frac{\omega}{\omega_0}}{\sqrt{1 + \left( \frac{\omega}{\omega_0} \right)^2}} 
+= \frac{1}{\sqrt{1 + \left( \frac{\omega_0}{\omega}\right)^2}} \tag{9}\]
+
+<p>のように整理されます。
+この<a href="/circuits/linear_system#ボーデ図">ボーデ図</a>は、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_04.png" alt="" /></p>
+
+<p>\(\omega \gg \omega_0\) のとき、\(\vert G(i\omega) \vert \sim 1\) のようになることから、ハイパスフィルターであることが確認できました。</p>
+
+<p><span id="high-low"></span></p>
+
+<p class="note">(3)式と(8)式を見比べると、\(G(s)\) の極の位置 (分母がゼロとなる場所) はどちらも同じです。
+では何がローパス・ハイパスの違いを生むのでしょうか。
+それは \(G(s) = 0\) となる位置 (すなわちゼロ点) の違いです。
+(8)式から、ハイパスフィルターでは \(s = 0\) がゼロ点であるとわかります。
+\(s = i\omega = 0\) のとき、これは直流成分に一致します (\(\omega \rightarrow 0\) では \(\lambda \rightarrow \infty\) となり、同じ電流・電圧がずっと続くと考えればわかりやすいでしょう)。
+ハイパスフィルターは \(s = 0\) で \(G(s) = 0\) となり、直流成分 (低周波極限) を透過しないことからもわかるように、低周波を通さない性質が伺えます。
+\(G(s)\) の極だけでなくゼロ点の位置を詳細に設計することで、そのフィルターの性質が左右されるのです。</p>
+
+<h2 id="バンドパスフィルター">バンドパスフィルター</h2>
+
+<p>電子回路のハイパスフィルターでは、RL回路を用いずにCR回路を用います。
+その理由は、<a href="/circuits/filters#ローパスフィルター">ローパスフィルター</a>の部分で述べたことのほかに、インダクタンス \(L\) を与えるコイルやその配線には小さな電気容量が必ずつきまとうためです。
+このような容量を浮遊容量または迷容量 (stray capacitance) と呼びます。
+それを考慮すると、ハイパスフィルターの回路図 (a) は、次の図のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_05.png" alt="" /></p>
+
+<p><a href="/circuits/steady_current#定常電流電気回路とキルヒホッフの法則">キルヒホッフの電圧則</a>より</p>
+
+\[V_\mathrm{in} - RI - V_\mathrm{out} 
+= 0 \tag{10}\]
+
+<p>並列接続より</p>
+
+\[V_\mathrm{out} 
+= L \frac{dI_1}{dt} 
+= \frac{1}{C} \int I_2 dt \ \Longrightarrow \ 
+\frac{dV_\mathrm{out}}{dt} 
+= L \frac{d^2 I_1}{dt^2} 
+= \frac{I_2}{C} \tag{11}\]
+
+<p>であり、電流は</p>
+
+\[I 
+= I_1 + I_2 \tag{12}\]
+
+<p>を満たします。
+以上より</p>
+
+\[\begin{align}
+&amp;V_\mathrm{in} - R (I_1 + I_2) - V_\mathrm{out} 
+= V_\mathrm{in} - R I_1 - CR \frac{dV_\mathrm{out}}{dt} - V_\mathrm{out} 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+\frac{dV_\mathrm{in}}{dt} - R \frac{dI_1}{dt} - CR \frac{d^2 V_\mathrm{out}}{dt^2} - \frac{dV_\mathrm{out}}{dt} 
+= \frac{dV_\mathrm{in}}{dt} - \frac{R}{L} V_\mathrm{out} - CR \frac{d^2 V_\mathrm{out}}{dt^2} - \frac{dV_\mathrm{out}}{dt} 
+= 0 \tag{13}
+\end{align}\]
+
+<p>という微分方程式を得ます。
+\(V_\mathrm{in} = x(t), V_\mathrm{out} = y(t)\) とおき、さらにこれらを<a href="/math/laplace_transform">ラプラス変換</a>したものをそれぞれ \(X(s), Y(s)\) とすれば</p>
+
+\[(s X - x(0)) - \frac{R}{L} Y - CR (s^2 Y - s y(0) - y'(0)) - (sY - y(0)) 
+= 0 \tag{14}\]
+
+<p>となります。
+初期条件として \(x(0), y(0), y'(0) = 0\) とすると</p>
+
+\[s X - \frac{R}{L} Y - s^2 CR Y - sY 
+= 0 \ \Longrightarrow \ 
+Y 
+= \frac{s}{s^2 CR + s + \frac{R}{L}} X \tag{15}\]
+
+<p>よって</p>
+
+\[G(i\omega) 
+= \frac{Y(i\omega)}{X(i\omega)} 
+= \frac{i\omega}{-CR \omega^2 + i\omega + \frac{R}{L}} 
+= \frac{1}{1 + i \frac{CR}{\omega} \left(\omega^2 - \omega_0^2 \right)} \tag{16}\]
+
+<p>のようになります。
+途中、\(\omega_0^2  = \frac{1}{LC}\) のように置きました。
+\(\omega = \omega_0\) で \(\vert G(i\omega) \vert = 1\) となり、それより周波数が高くても低くても、周波数応答の大きさが1より小さくなります。
+具体的には、この回路図の<a href="/circuits/linear_system#ボーデ図">ボーデ図</a>は次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_06.png" alt="" /></p>
+
+<p>これを帯域通過フィルターまたはバンドパスフィルター (band-pass filter) と呼びます。
+透過率が \(1/\sqrt{2}\) になる角周波数で通過帯域の<a href="/circuits/series_parallel_resonance#共振の半値幅とq値">半値幅 \(\Delta \omega\)</a> を定義すると、\(\Delta \omega \ll \omega_0\) の近似では</p>
+
+\[\Delta \omega 
+\approx \frac{1}{2RC} \tag{17}\]
+
+<p>となります。</p>
+
+<h2 id="バンドリジェクションフィルター">バンドリジェクションフィルター</h2>
+
+<p>先ほどのバンドパスフィルターのLC並列部分とRを入れ替えた次の回路図は、角周波数 \(\omega_0\) の付近だけを透過させないようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_07.png" alt="" /></p>
+
+<p>このようなフィルター回路を帯域除去フィルターあるいはバンドリジェクションフィルター (band-rejection filter) と呼びます。
+LC並列部分の電圧降下を \(V_{LC}\) とすると</p>
+
+\[V_\mathrm{in} - L \frac{dI_1}{dt} - V_\mathrm{out}
+= 0 \tag{18}\]
+
+\[V_\mathrm{in} - \frac{1}{C} \int I_2 dt - V_\mathrm{out}
+= 0 \ \Longrightarrow \ 
+\frac{d^2 V_\mathrm{in}}{dt^2} - \frac{1}{C} \frac{dI_2}{dt} - \frac{d^2 V_\mathrm{out}}{dt^2} 
+= 0 \tag{19}\]
+
+\[I 
+= I_1 + I_2 \tag{20}\]
+
+\[V_\mathrm{out} 
+= RI\tag{21}\]
+
+<p>(18), (19)式より</p>
+
+\[\begin{align}
+&amp;\frac{V_\mathrm{in}}{L} - \frac{dI_1}{dt} - \frac{V_\mathrm{out}}{L} + C \frac{d^2 V_\mathrm{in}}{dt^2} - \frac{dI_2}{dt} - C \frac{d^2 V_\mathrm{out}}{dt^2} \notag \\
+&amp;= \frac{V_\mathrm{in}}{L}  - \frac{V_\mathrm{out}}{L} + C \frac{d^2 V_\mathrm{in}}{dt^2} - C \frac{d^2 V_\mathrm{out}}{dt^2} - \frac{d}{dt} \underbrace{(I_1 + I_2)}_{(20), (21)} \notag \\
+&amp;= \frac{V_\mathrm{in}}{L}  - \frac{V_\mathrm{out}}{L} + C \frac{d^2 V_\mathrm{in}}{dt^2} - C \frac{d^2 V_\mathrm{out}}{dt^2} - \frac{1}{R} \frac{dV_\mathrm{out}}{dt} 
+= 0 \tag{22}
+\end{align}\]
+
+<p>この式を<a href="/math/laplace_transform">ラプラス変換</a>すると</p>
+
+\[\frac{X}{L} - \frac{Y}{L} + C (s^2 X - s x(0) - x'(0)) - C (s^2 Y - s y(0) - y'(0)) - \frac{1}{R} (sY - y(0)) 
+= 0 \tag{23}\]
+
+<p>より、\(x(0) = x'(0) = y(0) = y'(0) = 0\) とすれば</p>
+
+\[G(s) 
+= \frac{Y(s)}{X(s)} 
+= \frac{1 + LC s^2}{LCs^2 + \frac{L}{R} s + 1} \tag{24}\]
+
+<p>のようになります。
+\(\omega_0^2 = \frac{1}{LC}, \Delta \omega = \frac{1}{RC}\) とおくと</p>
+
+\[G(i\omega) 
+= \frac{1 - \frac{\omega^2}{\omega_0^2}}{- \frac{1}{\omega_0^2} (\omega^2 - i \omega \Delta \omega) + 1} 
+= \frac{1}{1 - i \frac{\omega \Delta \omega}{\omega^2 - \omega_0^2}} \tag{25}\]
+
+<p>この<a href="/circuits/linear_system#ボーデ図">ボーデ図</a>は、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_08.png" alt="" /></p>
+
+<p>\(\omega \rightarrow \omega_0\) では \(G(i\omega) \rightarrow 0\) となり、\(\omega_0\) よりも高周波・低周波では透過率が大きくなります。
+透過率が \(1/\sqrt{2}\) 以下となる帯域幅は、およそ \(2 \Delta \omega\) となります。</p>
+
+<h2 id="移相器">移相器</h2>
+
+<p>普通のフィルターは周波数によって振幅を変化させます。
+しかし振幅は変化させず、位相だけを変化させるフィルターも存在します。
+これを移相器 (phase shifter) と呼びます。
+例として、次の回路図のようなものがあります。</p>
+
+<p><img src="/assets/images/circuits/filters_09.png" alt="" /></p>
+
+<p>点2での電位は、\(R - R\) の直列接続部分に電流 \(I_a\) が流れているとすると</p>
+
+\[V_\mathrm{in} - R I_a
+= V_2, \quad V_\mathrm{in} - R I_a - R I_a 
+= 0 \ \Longrightarrow \ V_2 
+= R I_a 
+= \frac{1}{2} V_\mathrm{in} \tag{26}\]
+
+<p>点2’での電位は、\(R' - C\) の直列接続部分に着目して</p>
+
+\[\begin{align}
+&amp;V_\mathrm{in} - R' I_b 
+= V_{2'}, \quad V_\mathrm{in} - R' I_b - \frac{I_b}{i\omega C} 
+= 0 \notag \\
+&amp;\Longrightarrow \ V_{2'} 
+= \frac{I_b}{i\omega C} 
+= \frac{\frac{1}{i\omega C}}{R' + \frac{1}{i\omega C}} V_\mathrm{in} 
+= \frac{1}{1 + i\omega R'C} V_\mathrm{in} \tag{27}
+\end{align}\]
+
+<p>のようになります。
+以上から、2-2’間の電位 \(V_\mathrm{out}\)は</p>
+
+\[V_\mathrm{out} 
+= V_2 - V_{2'} 
+= \frac{1}{2} V_\mathrm{in} - \frac{1}{1 + i\omega R'C} V_\mathrm{in} 
+= \frac{1}{2} \frac{i\omega R' C - 1}{1 + i\omega R' C} V_\mathrm{in} \tag{28}\]
+
+<p>よって周波数応答関数は</p>
+
+\[\begin{align}
+G(i\omega) 
+&amp;= \frac{V_\mathrm{out}}{V_\mathrm{in}} 
+= \frac{1}{2} \frac{i\omega R' C - 1}{1 + i\omega R' C} 
+= - \frac{1}{2} \frac{(i\omega R' C - 1)^2}{1 + \omega^2 R'^2 C^2} \notag \\
+&amp;= - \frac{1}{2} \frac{-\omega^2 R'^2 C^2 - 2 i \omega R' C + 1}{1 + \omega^2 R'^2 C^2} \tag{29}
+\end{align}\]
+
+<p>のようになります。
+この絶対値は</p>
+
+\[\vert G(i\omega) \vert 
+= \frac{1}{2(1 + \omega^2 R'^2 C^2)} \sqrt{(1-\omega^2 R'^2 C^2)^2 + 4 \omega^2 R'^2 C^2} 
+= \frac{1}{2} \tag{30}\]
+
+<p>のように、周波数に依存せず一定となります (1/2になっていますが、このフィルター通過後に増幅器を通すことで、振幅は1に戻すことができます。)
+また位相は</p>
+
+\[\begin{align}
+\varphi 
+&amp;= \mathrm{arg} (G(i\omega)) 
+= \mathrm{arg} (i\omega R'C - 1) - \mathrm{arg}(2) - \mathrm{arg}(1 + i\omega R'C) \notag \\
+&amp;= \mathrm{arg} (i\omega R'C - 1) - \mathrm{arg}(1 + i\omega R'C) 
+= (\pi - \mathrm{arctan} (\omega R'C)) - \mathrm{arctan} (\omega R'C) \notag \\
+&amp;= \pi - 2 \mathrm{arctan} (\omega R' C) \tag{31}
+\end{align}\]
+
+<p>出力電流が流れないとき、\(R'\) と \(C\) を流れる電流は等しいため、\(R'\) と \(C\) の両端の電圧は \(\pi / 2\) の位相差を持つことになります。
+そこで、端子 1’-2’ 間の交流電圧ベクトルと 2’-1 間の交流電圧ベクトルは直交します。
+これらを図示すると、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_10.png" alt="" /></p>
+
+<p>\(R'\) をゼロから次第に大きくしていくと、このベクトル図で端子 2’ の電圧を示す点は 1-1’ を直径とする円周に沿って、矢印の向きに移動します。
+したがって出力の振幅は一定のまま、位相が入力に対して \(\pi\) から \(0\) 近くまで変化させることができます。
+\(R' = \frac{1}{\omega C}\) のとき、位相差は \(\pi / 2\) となります。<br />
+この回路の形は、ブリッジ回路と同じです。
+よって電流が流れないときの条件は、<a href="/circuits/steady_circuit_eg#ホイートストンブリッジ回路">ホイートストンブリッジ回路における平衡条件</a>からも求めることができます。
+平衡条件より</p>
+
+\[\frac{R}{\omega C} 
+= R R' \ \Longrightarrow \ \ R' 
+= \frac{1}{\omega C} \tag{32}\]
+
+<h2 id="その他のフィルター">その他のフィルター</h2>
+
+<p>ここまでの議論では、特にフィルターの設計については触れてきませんでした。
+しかし<a href="#high-low">ハイパスフィルターとローパスフィルターの違い</a>の部分で触れたように、極とゼロ点の位置から、その性質・性能を詳細に設計することができます。
+ここでは代表的な3つのフィルターについて、それらの設計思想とともに見ていきましょう。</p>
+
+<h3 id="バターワースフィルター">バターワースフィルター</h3>
+
+<p>1930年にバターワース (Butterworth) により考案されたフィルターです。
+これは特定の周波数を透過するというものではなく、透過帯域が限りなく平坦になるように設計されたものを指します。
+その分、透過しない帯域の<a href="/circuits/linear_system#ボーデ図">ボーデ図</a>の傾きが緩やかになっている特徴も持ちます。<br />
+\(n\) 次のバターワースフィルターは、次のような周波数応答を持つ<a href="/circuits/filters#ローパスフィルター">ローパスフィルター</a>です。</p>
+
+\[\vert G(\omega) \vert^2
+= \frac{1}{1 + (\omega / \omega_0)^{2n}} \tag{33}\]
+
+<p>\(\vert G(\omega) \vert^2\) を \(\omega = 0\) の周りでテイラー展開しましょう。
+すると</p>
+
+\[\vert G (\omega) \vert^2 
+= 1 - \left( \frac{\omega}{\omega_0}\right)^{2n} + (\omega^{4n} 以上の項) \tag{34}\]
+
+<p>のようになり、\(\omega^2\) から \(\omega^{2n-2}\) までの項が消えています。
+よって \(\omega = 0\) のときの \(\vert G(0) \vert^2 = 1\) を、大きな \(\omega\) でも実現できるようになっていることから、ボーデ図の平坦性がわかります。<br />
+このフィルターの極の位置を調べてみましょう。
+\(\vert G(\omega) \vert^2 = G(s=i\omega) G(-s = -i\omega)\) の関係から</p>
+
+\[G(s) G(-s) 
+= \frac{1}{1 + \left(\frac{s}{i\omega_0}\right)^{2n}} \tag{35}\]
+
+<p>とわかります。
+<span id="equation-36"></span>分母がゼロとなる極の位置は</p>
+
+\[\left( \frac{s}{i\omega_0} \right)^{2n} 
+= -1 
+= e^{-i\pi + 2ki\pi} \ \Longrightarrow \ s_k
+= \omega_0 i e^{i\pi \frac{2k-1}{2n}} 
+= \omega_0 e^{i\pi \left( \frac{1}{2} + \frac{2k-1}{2n} \right)} \tag{36}\]
+
+<p>のように求めることができます。
+ここで \(k = 0, 1, 2, \dots, 2n -1\) です。
+すなわち、バターワースフィルターの極の位置は、複素数平面上の半径 \(\omega_0\) の円周上に \(\pi/n\) の角度間隔で並びます。
+<a href="/circuits/transfer_function#線形システムの安定性">安定性の議論から、実部が正の極は指数的に振幅が増大</a>してしまいます。
+よって \(2n\) 個の極のうち、実部が負 (複素数平面上の左半面に位置する) の \(n\) 個を \(G(s)\) の極として用いることで、安定なフィルターとなります。</p>
+
+<p class="note">複素数平面上の右半面に位置する極は、\(G(-s)\) の部分から出てきます。</p>
+
+<p>例として \(n=2, 3, 4\) の場合の極の位置を、次図に示します。</p>
+
+<p><img src="/assets/images/circuits/filters_11.png" alt="" /></p>
+
+<p>また(36)式の極を用いることで、伝達関数は</p>
+
+\[G(s) 
+= \frac{\omega_0^n}{\prod_{k=1}^{n} (s-s_k)} \tag{37}\]
+
+<p>のように書くことができます。
+分母の部分を、バターワース多項式とも呼びます。
+(37)式から \(\vert G(s) \vert\) を<a href="/circuits/linear_system#補遺b-デシベルについて">デシベル</a>で描くと、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_12.png" alt="" /></p>
+
+<p>\(n\) が大きくなるにつれ、\(\omega \lesssim 1\) のプラトーの部分が広くなっていることがわかります。
+また \(\omega \gtrsim 1\) での傾きも、\(n\) の増加とともに急峻になり、より理想的なローパスフィルターに近づいていることがわかります。</p>
+
+<h3 id="チェビシェフフィルター">チェビシェフフィルター</h3>
+
+<p>先ほどのバターワースフィルターは、透過帯域の傾きが穏やかという欠点がありました。
+透過帯域の傾きを急峻にすることで、理想的なフィルターを設計しようとしたのがチェビシェフフィルターです。
+ただし急峻さを突き詰めたことで、透過帯域の部分でリップル (ripple, 微小な振動成分のこと) が発生する欠点を持ちます。<br />
+\(n\) 次の (第一種) チェビシェフフィルタの振幅特性は</p>
+
+\[\vert G(\omega) \vert^2 
+= \frac{1}{1 + \epsilon^2 T_n^2 (\omega / \omega_0)} \tag{38}\]
+
+<p>のように与えられます。
+ここで <a href="/math/chebyshev">\(T_n\) はチェビシェフ多項式</a>、\(\epsilon\) はリップルの大きさを決めるパラメータです。
+<a href="/math/chebyshev">チェビシェフ多項式</a>は、区間 \([-1, 1]\) で \(\vert T_n (x) \vert \leq 1\) かつ \(\pm 1\) の間を \(n/2\) 回往復します。
+ここから、透過帯域 \(\omega &lt; \omega_0\) では \(T_n^2\) が 0 と 1 の間を往復することで</p>
+
+\[\frac{1}{1 + \epsilon^2} \leq \vert G \vert^2 \leq 1 \tag{39}\]
+
+<p>の間を振動するリップルが発生します。<br />
+本来、<a href="/math/chebyshev">チェビシェフ多項式 \(T_n (x)\)</a> は \(-1 \leq x \leq 1\) の間で定義されるものですが、(38)式では \(\omega &gt; \omega_0\) の領域も記述することができます。
+\(T_n (\omega / \omega_0) = \mathcal{O} (\omega^n/ \omega_0^n)\) のような依存性を持つため、\(\omega &gt; \omega_0\) では \(\vert G(\omega) \vert^2\) は急速にゼロに近づいていきます。
+これにより、先ほど議論した急峻さを実現します。<br />
+リップルの大きさ \(\epsilon\) は、慣習的に<a href="/circuits/linear_system#補遺b-デシベルについて">デシベル</a>で表します。
+実際のリップルの振幅を \(A \ [\mathrm{dB}]\) とすると</p>
+
+\[\epsilon 
+= \sqrt{10^{A/10} - 1} \tag{40}\]
+
+<p>のように書かれます。<br />
+次に、チェビシェフフィルターの極を求めてみましょう。
+(38)式の分母がゼロとなる位置は</p>
+
+\[1 + \epsilon^2 T_n^2 (s/i) 
+= 0 \ \Longrightarrow \ 
+T_n (s/i) 
+= \pm \frac{i}{\epsilon} \tag{41}\]
+
+<p>から求めることができます。
+\(T_n\) の振動の様子から、(41)式の解は \(2n\) 個あることがわかります。
+そこでこれらの解を \(s_k \ (k=1, 2, \dots, 2n)\) のように書くことにしましょう。
+すると</p>
+
+\[\begin{align}
+&amp;\cos \left\{ n \cos^{-1} \left( \frac{s_k}{i} \right) \right\} 
+= \pm \frac{i}{\epsilon} \notag \\
+&amp;\Longrightarrow \ 
+\cos^{-1} \frac{s_k}{i} 
+= \frac{1}{n} \left\{\cos^{-1} \left(\pm \frac{i}{\epsilon} \right) + 2\pi k \right\} \quad (k = 0, 1, \dots, 2n-1) \tag{42}
+\end{align}\]
+
+<p>を解けば良いことがわかります。
+\(\cos^{-1} \left( \pm \frac{i}{\epsilon}\right)\) の部分を計算するために、\(\cos \alpha = i / \epsilon\) を満たす複素数 \(\alpha\) を計算しましょう。</p>
+
+\[\cos \alpha 
+= \frac{e^{i\alpha} + e^{-i \alpha}}{2} 
+= \frac{i}{\epsilon} \tag{43}\]
+
+<p>右辺は純虚数なので、\(\alpha = \frac{\pi}{2} + i\beta\) のように分解すると</p>
+
+\[\begin{align}
+&amp;\cos \left( \frac{\pi}{2} + i\beta \right) 
+= \cos \frac{\pi}{2} \cos (i\beta) - \sin \frac{\pi}{2} \sin(i\beta) 
+= - \sin (i\beta) 
+= - i \sinh \beta 
+= \frac{i}{\epsilon} \notag \\
+&amp;\Longrightarrow \ 
+\sinh\beta 
+= - \frac{1}{\epsilon} \tag{44}
+\end{align}\]
+
+<p>以上より</p>
+
+\[\cos^{-1} \left( \frac{i}{\epsilon} \right) 
+= \alpha 
+= \frac{\pi}{2} - i \sinh^{-1} \left( \frac{1}{\epsilon} \right) \tag{45}\]
+
+<p>のようになります。
+途中 \(\sinh^{-1} (x) = - \sinh^{-1} (-x)\) であることを用いました。
+さらに</p>
+
+\[\cos^{-1} \left( - \frac{i}{\epsilon} \right) 
+= \pi - \cos^{-1} \left( \frac{i}{\epsilon} \right) 
+= \frac{\pi}{2} + i \sinh^{-1} \left( \frac{1}{\epsilon} \right) \tag{46}\]
+
+<p>もわかります。
+(45), (46)式を(42)式に代入し、さらに \(\mu_0 = \sinh^{-1} \left( \frac{1}{\epsilon}\right)\) とおけば</p>
+
+\[\cos^{-1} \left( \frac{s_k}{i} \right) 
+= \frac{1}{n} \left( \frac{\pi}{2} \pm i \mu_0 + 2\pi k \right) \ \Longrightarrow \ 
+\frac{s_k}{i} 
+= \cos \left\{ \frac{4k + 1}{2n} \pi \pm i \mu \right\} \quad (\mu = \mu_0 / n) \tag{47}\]
+
+<p>のようになります。</p>
+
+\[\begin{align}
+s_k
+&amp;= i\cos \left( \frac{4k+1}{2n} \pi \right) \cos (i\mu) \mp i \sin \left( \frac{4k+1}{2n} \pi \right) \sin (i\mu) \notag \\
+&amp;= i\cos \left( \frac{4k+1}{2n} \pi \right) \cosh \mu \pm \sin \left( \frac{4k+1}{2n} \pi \right) \sinh \mu \tag{48}
+\end{align}\]
+
+<p>とし、さらに \(\theta_k = \frac{2k-1}{2n} \pi \ (k=1, 2, \dots, 2n)\) のようにすることで</p>
+
+\[s_k 
+= - \sinh \mu \sin \theta_k + i \cosh \mu \cos \theta_k \tag{49}\]
+
+<p>のように、極の位置を求めることができました。
+\(\sigma_k = - \sinh \mu \sin \theta_k, \Omega_k = \cosh \mu \cos \theta_k\) のようにおくと</p>
+
+\[\left( \frac{\sigma_k}{\sinh \mu} \right)^2 + \left( \frac{\Omega_k}{\cosh \mu}\right)^2 
+= \sin^2 \theta_k + \cos^2 \theta_k 
+= 1 \tag{50}\]
+
+<p>のような関係にあることがわかります。
+これは、虚軸方向を長軸とし半長軸の長さが \(\cosh \mu\)、実軸方向を短軸として半短軸の長さが \(\sinh \mu\) の楕円を表しています。
+<a href="#equation-36">バターワースの極の位置 (36)式</a>と比較すると、バターワースの極が存在する真円を実軸方向に \(\tanh \mu\) 倍だけ押し潰した形になっています。</p>
+
+<p><img src="/assets/images/circuits/filters_13.png" alt="" /></p>
+
+<p>\(\epsilon \rightarrow 0\) のとき \(\mu \rightarrow \infty, \tanh \mu \rightarrow 1\) となることから、バターワースフィルターはチェビシェフフィルターのリップルがない極限である、と見ることができます。
+\(\vert G(\omega) \vert\) を<a href="/circuits/linear_system#補遺b-デシベルについて">デシベル</a>で描いたグラフは、次のようになります。</p>
+
+<p><img src="/assets/images/circuits/filters_14.png" alt="" /></p>
+
+<p>バターワースの図と比べ、急峻な減衰を示すことがわかります。
+チェビシェフ多項式の次数 \(n\) を増やすことで、より急峻な減衰を得ることができますが、透過帯域部分でのリップルが激しくなっていることがわかります。
+チェビシェフフィルターは透過帯域外でのその急峻さから、隣接チャンネルの分離が最優先となる無線通信 (送受信機のチャンネル選択フィルタ) などに用いられます。</p>
+
+<h3 id="ベッセルフィルター">ベッセルフィルター</h3>
+
+<h2 id="補遺a-チェビシェフ多項式の定義域の拡張">補遺A: チェビシェフ多項式の定義域の拡張</h2>
+
+<p>チェビシェフ多項式の定義は</p>
+
+\[T_n(x) 
+= \cos (n \cos^{-1} x) \quad (\vert x \vert \leq 1) \tag{A.1}\]
+
+<p>でした。
+しかし<a href="/circuits/filters#チェビシェフフィルター">チェビシェフフィルター</a>では、\(T_n(\omega / \omega_0)\) のように、\(\omega / \omega_0 &gt; 1\) の場合にも値を計算する必要があります。
+そこで解析接続を用い、\(\vert x \vert &gt; 1\) の場合にも定義を拡張しましょう。<br />
+\(\vert x \vert &gt; 1\) に対し、\(\cos^{-1} x\) を複素数として扱うことにします。
+また \(x&gt;1\) として、\(x = \cosh t \ (t&gt;0)\) のように媒介変数を用いて表すことにすると</p>
+
+\[\cos (it) 
+= \cosh t \ \Longrightarrow \ 
+\cos^{-1} (\cosh t) 
+= it \tag{A.2}\]
+
+<p>より</p>
+
+\[T_n (\cosh t) 
+= \cos (n \cos^{-1} (\cosh t)) 
+= \cos (n \cos^{-1} (cos (it))) 
+= \cos (int) 
+= \cosh (nt) \tag{A.3}\]
+
+<p>を得ます。
+\(t = \cosh^{-1} x\) が成り立つので</p>
+
+\[T_n(x) 
+= \cosh(n \cosh^{-1} x) \quad (x &gt; 1) \tag{A.4}\]
+
+<p>のようになります。
+同様に \(x &lt; -1\) の場合には、\(x = -\cosh t \ (t&gt;0)\) のように置きます。</p>
+
+\[\cos (\pi + it) 
+= - \cos (it) 
+= - \cosh t \tag{A.5}\]
+
+\[\begin{align}
+T_n (-\cosh t) 
+&amp;= \cos (n \cos^{-1} (-\cosh t)) 
+= \cos (n \cos^{-1} (\cos (\pi + it))) \notag \\
+&amp;= \cos (n (\pi + it)) 
+= \cos (n\pi) \cos(int) - \sin(n\pi) \sin (int) \notag \\
+&amp;= \cos (n\pi) \cosh(nt) 
+= (-1)^n \cosh (n \cosh^{-1}(-x)) \tag{A.6}
+\end{align}\]
+
+<p>のようになります。
+まとめると、定義域ごとのチェビシェフ多項式は次のようになります。</p>
+
+\[T_n(x) 
+= \left\{ \begin{array}{ll}
+(-1)^n \cosh (n \cosh^{-1} (-x)) &amp; (x &lt; -1) \\
+\cos(n \cos^{-1} x) &amp; (\vert x \vert \leq 1) \\
+\cosh (n \cosh^{-1} x) &amp; (x &gt; 1)
+\end{array} \right. \tag{A.7}\]
+
+<p>のようになります。
+これらは<a href="/math/chebyshev">チェビシェフ多項式が満たす漸化式 \(T_{n+1} (x) + T_{n-1} (x) = 2x T_n(x)\)</a> を満たすことも、示すことができます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/4wAOuib">霜田光一, 桜井 捷海, “エレクトロニクスの基礎”</a><br />
+[2] <a href="https://amzn.to/4eI1r2T">松澤昭, “はじめてのアナログ電子回路 基本回路編”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

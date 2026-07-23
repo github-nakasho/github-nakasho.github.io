@@ -22,7 +22,7 @@ nav_order: 12
 
 # 修正ベッセル関数
 
-修正ベッセル関数(modified Bessel function)、またの名をマクドナルド関数(Macdonald function)は
+第二種の修正ベッセル関数(modified Bessel function)、またの名をマクドナルド関数(Macdonald function)は
 
 $$
 K_\nu (z) 
@@ -82,7 +82,8 @@ $$
 さらに(1)式と$$\cosh$$の偶関数性$$\cosh \nu t = \cosh (-\nu t)$$より
 
 $$
-K_\nu = - K_\nu \tag{4}
+K_\nu 
+= K_{- \nu} \tag{4}
 $$
 
 ## 修正ベッセルの微分方程式

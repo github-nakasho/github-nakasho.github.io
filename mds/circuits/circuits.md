@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 電気回路
-nav_order: 8
+nav_order: 10
 has_children: true
 permalink: /circuits
 ---

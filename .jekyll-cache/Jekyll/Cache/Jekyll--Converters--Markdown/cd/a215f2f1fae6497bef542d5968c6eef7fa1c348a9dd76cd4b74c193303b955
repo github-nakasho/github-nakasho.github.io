@@ -1,0 +1,51 @@
+I" 
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#流体計算のための空間再構成手法" id="markdown-toc-流体計算のための空間再構成手法">流体計算のための空間再構成手法</a>    <ol>
+      <li><a href="#minmod" id="markdown-toc-minmod">Minmod</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="流体計算のための空間再構成手法">流体計算のための空間再構成手法</h1>
+
+<p><a href="/simulation/hlld">HLLD 法</a>などに代表されるリーマンソルバーでは、セル中心 \(i, i+1, i+2\) などの値だけでなく、そのセルの間にある境界面 \(i+1/2, i+3/2\) などを通過する流束の計算が必要となります。
+そこでセル中心の値からセル境界の値を補間する、空間再構成手法が必要となります。
+しかし、この補間によって数値振動が発生してしまっては、元も子もありません。
+ここでは宇宙 (磁気) 流体計算で主に用いられている、補間手法について見ていきましょう。</p>
+
+<h2 id="minmod">Minmod</h2>
+
+<p>最も基本的な再構成手法の一つです。
+単調性が保証されている基礎的な手法ですが、最も散逸的な計算結果となるデメリットも持ちます。
+単調性を保存するため、次のような状況を考えましょう。</p>
+
+<p><img src="/assets/images/simulation/reconstruction_01.png" alt="" /></p>
+
+<p>ここでは \(V\) という値を補間することにします。
+この \(V\) は、セル中心 \(i, i+1, i+2, \dots\) で定義されている量です。
+単調性を維持するために、</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

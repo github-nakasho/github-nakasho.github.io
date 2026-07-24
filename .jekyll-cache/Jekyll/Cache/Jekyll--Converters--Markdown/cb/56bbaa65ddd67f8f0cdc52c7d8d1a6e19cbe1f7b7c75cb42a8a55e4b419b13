@@ -1,0 +1,102 @@
+I"e!
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#流体計算のための空間再構成手法" id="markdown-toc-流体計算のための空間再構成手法">流体計算のための空間再構成手法</a>    <ol>
+      <li><a href="#minmod" id="markdown-toc-minmod">Minmod</a></li>
+      <li><a href="#superbee" id="markdown-toc-superbee">Superbee</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="流体計算のための空間再構成手法">流体計算のための空間再構成手法</h1>
+
+<p><a href="/simulation/hlld">HLLD 法</a>などに代表される近似リーマン解法では、セル中心 \(i, i+1, i+2\) などの値だけでなく、そのセルの間にある境界面 \(i+1/2, i+3/2\) などを通過する流束の計算が必要となります。
+そこでセル中心の値からセル境界の値を補間する、空間再構成手法が必要となります。
+しかし、この補間によって数値振動が発生してしまっては、元も子もありません。
+ここでは宇宙 (磁気) 流体計算で主に用いられている、補間手法について見ていきましょう。<br />
+以降では \(V\) という値を補間することにします。
+この \(V\) は、セル中心 \(i, i+1, i+2, \dots\) で定義されている量です。
+近似リーマン解法では、セル境界 \(i+1/2\) の左側 (セル \(i\) の側) と \(i+1/2\) の右側 (セル \(i+1\) の側) を計算する必要があります。
+この左側と右側の値を用いることで、それぞれの側での流束 \(\mathbf{F}_\mathrm{L}, \mathbf{F}_\mathrm{R}\) と、中間状態からくる流束 \(\mathbf{F}^\ast\) などを求めることが可能になります。</p>
+
+<p><img src="/assets/images/simulation/reconstruction_01.png" alt="" /></p>
+
+<p>以降では簡単のため、セルの間隔 \(x_{i+1} - x_i = \Delta x\) は一定とします。</p>
+
+<h2 id="minmod">Minmod</h2>
+
+<p>最も基本的な再構成手法の一つです。
+単調性が保証されている基礎的な手法ですが、最も散逸的な計算結果となるデメリットも持ちます。
+この手法は極めてシンプルです。
+まず \(i + 1/2\) の左側の値 \(V_{L, i+1/2}\) を、直線 (1次関数) を用いて推測することを考えます。
+素朴に考えると、\(i-1\) と \(i\) の値から外挿する方法と、\(i\) と \(i+1\) の値から内挿する方法、の2つが考えられます。</p>
+
+<p><img src="/assets/images/simulation/reconstruction_02.png" alt="" /><br />
+(左): \(i-1\) と \(i\) の値から外挿する方法、(右): \(i\) と \(i+1\) の値から内挿する方法。</p>
+
+<p>この2つの直線の傾きを比べたときに、傾きが穏やかを選びます。
+すなわち</p>
+
+\[V_{\mathrm{L}, i+1/2} 
+= V_i + 0.5 \mathrm{min} (a, b) \Delta x \qquad \left( a = \frac{V_{i+1} - V_i}{\Delta x}, b = \frac{V_i - V_{i-1}}{\Delta x} \right) \tag{1}\]
+
+<p>のようにして求めます。
+同様に、\(V_{\mathrm{R}, i-1/2}\) (\(V_{\mathrm{L}, i+1/2}\) とはセル中心を挟んで反対側の値) も</p>
+
+\[V_{\mathrm{R}, i+1/2} 
+= V_i - 0.5 \mathrm{min} (a, b) \Delta x \tag{2}\]
+
+<p>として計算します。
+ただし、傾きが負の場合もあるため、正確には傾きの絶対値 \(\vert a \vert, \vert b \vert\) の大きさを比較しなければなりません。
+そして注意が必要なのは、次のように左右で傾きの符号が変化するときです。</p>
+
+<p><img src="/assets/images/simulation/reconstruction_03.png" alt="" /></p>
+
+<p>この場合には解の単調性を維持するために、どちらの直線も採用せず、\(V_{\mathrm{L}, i+1/2} = V_i, V_{\mathrm{R}, i-1/2} = V_i\) のように \(i\) 番目のセルの値をそのまま用います。<br />
+以上の議論から、minmodリミッターを用いる場合には、次のようなコーディング例が考えられます。</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span> <span class="n">grad</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span> <span class="n">grad</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+    <span class="k">else</span> <span class="n">grad</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">Vl</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="o">*</span> <span class="n">grad</span>
+<span class="n">Vr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="o">*</span> <span class="n">grad</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">a * b &lt;= 0.0</code> により、<code class="language-plaintext highlighter-rouge">a</code> と <code class="language-plaintext highlighter-rouge">b</code> が同符号であるかを判定しています。</p>
+
+<h2 id="superbee">Superbee</h2>
+
+<p>Superbee リミッターは、次のような図で考えることができます。</p>
+
+<p><img src="/assets/images/simulation/reconstruction_04.png" alt="" /></p>
+
+<p>まず直線 \(a, b\) の傾きを比較します。
+傾きが小さな方 (この図の場合は \(a\)) の直線を、\(x_i\) から \(x_{i+1}\) まで伸ばします (すなわち \(x_{i+1/2}\) まで伸ばす場合の2倍であり、傾きを2倍すると考えても良いでしょう)。
+このようにして得られた青点の値と、傾きが大きな直線 \(b\) の内挿によるマゼンダ点の値とを比較し、値が小さな方を \(V_{\mathrm{L}, i+1/2}\) として選びます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

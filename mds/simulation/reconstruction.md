@@ -932,7 +932,7 @@ w_\ell
 = \frac{d_\ell}{(\beta_\ell + \epsilon)^2} \tag{47}
 $$
 
-さらに $$d_0 = 1/10, d_1 = 3/5, d_2 = 3/10$$ で、この係数 $$d_\ell$$ は 5 次精度近似の場合に与えられる最適な重みから計算されます。
+さらに $$d_0 = 1/10, d_1 = 6/10, d_2 = 3/10$$ で、この係数 $$d_\ell$$ は 5 次精度近似の場合に与えられる最適な重みから計算されます。
 そして $$\epsilon$$ は、$$\beta_\ell$$ が小さな場合にゼロ除算を防ぐための小さな値で、[Jiang & Shu (1996)](https://www.sciencedirect.com/science/article/abs/pii/S0021999196901308) では $$\epsilon = 10^{-6}$$ が用いられています。
 最後に $$\beta_\ell$$ は
 
@@ -966,56 +966,56 @@ $$
 
 ```c
 // set small epsilon 
-eps = 1.0e-6
+eps = 1.0e-6;
 // set d0, d1, d2 for left side
-d0l = 0.1
-d1l = 0.6
-d2l = 0.3
+d0l = 0.1;
+d1l = 0.6;
+d2l = 0.3;
 // set d0, d1, d2 for right side
-d0r = 0.3
-d1r = 0.6
-d2r = 0.1
+d0r = 0.3;
+d1r = 0.6;
+d2r = 0.1;
 // set coefficients for beta
-c1 = 13.0 / 12.0
-c2 = 0.25
+c1 = 13.0 / 12.0;
+c2 = 0.25;
 // compute beta 
-beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2
-beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2
-beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2
+beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2;
+beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2;
+beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2;
 // compute inverse of (beta + epsilon) ^ 2
-r0 = 1.0 / (beta0 + eps) ** 2
-r1 = 1.0 / (betar + eps) ** 2
-r2 = 1.0 / (beta2 + eps) ** 2
+r0 = 1.0 / (beta0 + eps) ** 2;
+r1 = 1.0 / (betar + eps) ** 2;
+r2 = 1.0 / (beta2 + eps) ** 2;
 // compute alpha0, alpha1, alpha2 for left side
-alpha0l = d0l * r0
-alpha1l = d1l * r1
-alpha2l = d2l * r2
-oneosumalphal = 1.0 / (alpha0l + alpha1l + alpha2l)
+alpha0l = d0l * r0;
+alpha1l = d1l * r1;
+alpha2l = d2l * r2;
+oneosumalphal = 1.0 / (alpha0l + alpha1l + alpha2l);
 // compute weights for left side
-w0l = alpha0l * oneosumalphal
-w1l = alpha1l * oneosumalphal
-w2l = alpha2l * oneosumalphal
+w0l = alpha0l * oneosumalphal;
+w1l = alpha1l * oneosumalphal;
+w2l = alpha2l * oneosumalphal;
 // compute S0, S1, S2 for left side
-S0l = (2.0 * V[i-2] - 7.0 * V[i-1] + 11.0 * V[i]) / 6.0
-S1l = (- V[i-1] + 5.0 * V[i] + 2.0 * V[i+1]) / 6.0
-S2l = (2.0 * V[i] + 5.0 * V[i+1] - V[i+2]) / 6.0
+S0l = (2.0 * V[i-2] - 7.0 * V[i-1] + 11.0 * V[i]) / 6.0;
+S1l = (- V[i-1] + 5.0 * V[i] + 2.0 * V[i+1]) / 6.0;
+S2l = (2.0 * V[i] + 5.0 * V[i+1] - V[i+2]) / 6.0;
 // compute Vl
-Vl[i] = w0l * S0l + w1l * S1l + w2l * S2l
+Vl[i] = w0l * S0l + w1l * S1l + w2l * S2l;
 // compute alpha0, alpha1, alpha2 for right side
-alpha0r = d0r * r0
-alpha1r = d1r * r1
-alpha2r = d2r * r2
-oneosumalphar = 1.0 / (alpha0r + alpha1r + alpha2r)
+alpha0r = d0r * r0;
+alpha1r = d1r * r1;
+alpha2r = d2r * r2;
+oneosumalphar = 1.0 / (alpha0r + alpha1r + alpha2r);
 // compute weights for right side
-w0r = alpha0r * oneosumalphar
-w1r = alpha1r * oneosumalphar
-w2r = alpha2r * oneosumalphar
+w0r = alpha0r * oneosumalphar;
+w1r = alpha1r * oneosumalphar;
+w2r = alpha2r * oneosumalphar;
 // compute S0, S1, S2 for right side
-S0r = (- V[i-2] + 5.0 * V[i-1] + 2.0 * V[i]) / 6.0
-S1r = (2.0 * V[i-1] + 5.0 * V[i] - V[i+1]) / 6.0
-S2r = (11.0 * V[i] - 7.0 * V[i+1] + 2.0 * V[i+2]) / 6.0
+S0r = (- V[i-2] + 5.0 * V[i-1] + 2.0 * V[i]) / 6.0;
+S1r = (2.0 * V[i-1] + 5.0 * V[i] - V[i+1]) / 6.0;
+S2r = (11.0 * V[i] - 7.0 * V[i+1] + 2.0 * V[i+2]) / 6.0;
 // compute Vr
-Vr[i-1] = w0r * S0r + w1r * S1r + w2r * S2r
+Vr[i-1] = w0r * S0r + w1r * S1r + w2r * S2r;
 ```
 
 ENO が 5 点で 3 次だったのに比べると、5 点から 5 次精度を成功させた WENO はデータの使用効率が向上していることがわかります。
@@ -1057,58 +1057,58 @@ $$p \rightarrow \infty$$ では完全な線形 5 次手法に一致し、衝撃�
 
 ```c
 // set small epsilon 
-eps = 1.0e-40
+eps = 1.0e-40;
 // set d0, d1, d2 for left side
-d0l = 0.1
-d1l = 0.6
-d2l = 0.3
+d0l = 0.1;
+d1l = 0.6;
+d2l = 0.3;
 // set d0, d1, d2 for right side
-d0r = 0.3
-d1r = 0.6
-d2r = 0.1
+d0r = 0.3;
+d1r = 0.6;
+d2r = 0.1;
 // set coefficients for beta
-c1 = 13.0 / 12.0
-c2 = 0.25
+c1 = 13.0 / 12.0;
+c2 = 0.25;
 // compute beta 
-beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2
-beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2
-beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2
+beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2;
+beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2;
+beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2;
 // compute tau = |beta0 - beta2|
-tau = fabs(beta0 - beta2)
+tau = fabs(beta0 - beta2);
 // compute common parts
-r0 = 1.0 + tau / (beta0 - eps)
-r1 = 1.0 + tau / (beta1 - eps)
-r2 = 1.0 + tau / (beta2 - eps)
+r0 = 1.0 + tau / (beta0 - eps);
+r1 = 1.0 + tau / (beta1 - eps);
+r2 = 1.0 + tau / (beta2 - eps);
 // compute alpha0, alpha1, alpha2 for left side
-alpha0l = d0l * r0
-alpha1l = d1l * r1
-alpha2l = d2l * r2
-oneosumalphal = 1.0 / (alpha0l + alpha1l + alpha2l)
+alpha0l = d0l * r0;
+alpha1l = d1l * r1;
+alpha2l = d2l * r2;
+oneosumalphal = 1.0 / (alpha0l + alpha1l + alpha2l);
 // compute weights for left side
-w0l = alpha0l * oneosumalphal
-w1l = alpha1l * oneosumalphal
-w2l = alpha2l * oneosumalphal
+w0l = alpha0l * oneosumalphal;
+w1l = alpha1l * oneosumalphal;
+w2l = alpha2l * oneosumalphal;
 // compute S0, S1, S2 for left side
-S0l = (2.0 * V[i-2] - 7.0 * V[i-1] + 11.0 * V[i]) / 6.0
-S1l = (- V[i-1] + 5.0 * V[i] + 2.0 * V[i+1]) / 6.0
-S2l = (2.0 * V[i] + 5.0 * V[i+1] - V[i+2]) / 6.0
+S0l = (2.0 * V[i-2] - 7.0 * V[i-1] + 11.0 * V[i]) / 6.0;
+S1l = (- V[i-1] + 5.0 * V[i] + 2.0 * V[i+1]) / 6.0;
+S2l = (2.0 * V[i] + 5.0 * V[i+1] - V[i+2]) / 6.0;
 // compute Vl
-Vl[i] = w0l * S0l + w1l * S1l + w2l * S2l
+Vl[i] = w0l * S0l + w1l * S1l + w2l * S2l;
 // compute alpha0, alpha1, alpha2 for right side
-alpha0r = d0r * r0
-alpha1r = d1r * r1
-alpha2r = d2r * r2
-oneosumalphar = 1.0 / (alpha0r + alpha1r + alpha2r)
+alpha0r = d0r * r0;
+alpha1r = d1r * r1;
+alpha2r = d2r * r2;
+oneosumalphar = 1.0 / (alpha0r + alpha1r + alpha2r);
 // compute weights for right side
-w0r = alpha0r * oneosumalphar
-w1r = alpha1r * oneosumalphar
-w2r = alpha2r * oneosumalphar
+w0r = alpha0r * oneosumalphar;
+w1r = alpha1r * oneosumalphar;
+w2r = alpha2r * oneosumalphar;
 // compute S0, S1, S2 for right side
-S0r = (- V[i-2] + 5.0 * V[i-1] + 2.0 * V[i]) / 6.0
-S1r = (2.0 * V[i-1] + 5.0 * V[i] - V[i+1]) / 6.0
-S2r = (11.0 * V[i] - 7.0 * V[i+1] + 2.0 * V[i+2]) / 6.0
+S0r = (- V[i-2] + 5.0 * V[i-1] + 2.0 * V[i]) / 6.0;
+S1r = (2.0 * V[i-1] + 5.0 * V[i] - V[i+1]) / 6.0;
+S2r = (11.0 * V[i] - 7.0 * V[i+1] + 2.0 * V[i+2]) / 6.0;
 // compute Vr
-Vr[i-1] = w0r * S0r + w1r * S1r + w2r * S2r
+Vr[i-1] = w0r * S0r + w1r * S1r + w2r * S2r;
 ```
 
 先ほど説明したように、WENO-Z では臨界点での精度が良くなっています。
@@ -1124,11 +1124,166 @@ WENO-Z でも $$\beta_\ell \rightarrow 0$$ の極限で $$\alpha_\ell \rightarro
 ただし、$$\epsilon$$ が無次元でない問題は [WENO](/simulation/reconstruction#weighted-eno-weno) から引き続き残っているため、$$\epsilon$$ の無次元化は WENO-Z でも必要です。
 高解像で細かな構造を捉えることを可能にする分、[WENO](/simulation/reconstruction#weighted-eno-weno) よりもロバスト性に欠けることも報告されています。
 
-### Monotonicity Preserving (工事中)
+### Monotonicity Preserving
 
 この手法は [Suresh & Huynh (1997)](https://www.sciencedirect.com/science/article/abs/pii/S0021999197957454?via%3Dihub) で提案されたものです。
 5 次精度手法であるため、これを MP5 と呼びます。
+MP 手法は、局所的な極値と不連続な箇所を区別するために、5 点以上のステンシルを用います。
 
+![](/assets/images/simulation/reconstruction_13.png)  
+MP5 の概念図。$$(i-1, i, i+1)$$ の 3 点 (黒点) のみだと、不連続と極値を区別できない。しかし、$$i-2, i+2$$ の 2 点 (白点) も用いることで、この 2 つの区別が可能となる。
+
+そして MP5 では最初に正確な多項式での内挿を考え、次にその結果を制限することで、不連続点近傍での単調性と滑らかな領域での精度を保ちます。
+それでは MP5 の具体的な方法を見ていきましょう。
+$$V_{\mathrm{L}, i+1/2}$$ を計算することを考えます。
+最初に、制限のない 5 次精度再構成を計算します。
+
+$$
+V_{\mathrm{L}} 
+= \frac{2 V_{i-2} - 13 V_{i-1} + 47 V_i + 27 V_{i+1} - 3 V_{i+2}}{60} \tag{52}
+$$
+
+この係数は、実は [WENO](/simulation/reconstruction#weighted-eno-weno) での最適な重み $$1/10, 6/10, 3/10$$ を $$S_0, S_1, S_2$$ に適用した場合に一致します。
+すなわち MP5 と [WENO](/simulation/reconstruction#weighted-eno-weno) は同じ多項式から出発している手法と言えます。
+そしてこの 2 つの手法は、不連続部分への対処法に違いがあります。  
+次に、単調性を制限するための量を計算しましょう。
+これは次のように与えられます。
+
+$$
+V_\mathrm{MP} 
+= V_i + \mathrm{minmod} (\Delta_{i+1/2}, \alpha \Delta_{i-1/2}) \tag{53}
+$$
+
+ここで $$\alpha \geq 2$$ であり、通常は $$\alpha = 4$$ が用いられます。
+もし $$V_\mathrm{L}$$ が $$V_i$$ と $$V_\mathrm{MP}$$ の間にある場合、これをそのまま $$V_{\mathrm{L}, i+1/2}$$ として採用します。
+すなわち
+
+$$
+(V_\mathrm{L} - V_i) (V_\mathrm{L} - V_\mathrm{MP}) \leq \epsilon \ \Longrightarrow \ 
+V_{\mathrm{L}, i+1/2} 
+= V_\mathrm{L} \tag{54}
+$$
+
+です。
+しかしもし $$V_\mathrm{L}$$ が $$V_i$$ と $$V_\mathrm{MP}$$ の間にない場合には、次の段階に進みます。  
+2階の微分に対応する量を $$D_i = V_{i+1} - 2 V_{i} + V_{i-1}$$ として
+
+$$
+D_{\mathrm{M4}, i+1/2} 
+= \mathrm{minmod4} (4 D_i - D_{i+1}, 4 D_{i+1} - D_i, D_i, D_{i+1}) \tag{55}
+$$
+
+$$
+D_{\mathrm{M4}, i-1/2} 
+= \mathrm{minmod4} (4 D_i - D_{i-1}, 4 D_{i-1} - D_i, D_i, D_{i-1}) \tag{56}
+$$
+
+のようにして、曲率について計算します。
+ここで 4 つの引数を持つ minmod 関数は、次のように与えられます。
+
+$$
+\begin{align}
+\mathrm{minmod4} (w, a, b, c) 
+&= \frac{1}{8} (\mathrm{sgn}(w) + \mathrm{sgn}(a)) \vert (\mathrm{sgn}(w) + \mathrm{sgn}(b)) (\mathrm{sgn}(w) + \mathrm{sgn}(c)) \vert \notag \\
+& \qquad \qquad \times \mathrm{min} (\vert w \vert, \vert a \vert, \vert b \vert, \vert c \vert) \tag{57}
+\end{align}
+$$
+
+この関数は、4 つの引数 $$w, a, b, c$$ が全て同符号のときのみゼロでない値を返します。
+どれか一つでも異なる符号を持つと、$$(\mathrm{sgn} \cdots )$$ の部分からゼロとなります。
+例えば全てが正の実数の場合には、$$w, a, b, c$$ の中の最小値が返されます。  
+ここまでの量を用い、4 つの基準値を計算しましょう。
+まずは上限を表す値です。
+
+$$
+V_\mathrm{UL} 
+= V_i + \alpha (V_i - V_{i-1}) \tag{58}
+$$
+
+次に、平均値を算出しておきます。
+
+$$
+V_\mathrm{AV} 
+= \frac{V_i + V_{i+1}}{2} \tag{59}
+$$
+
+そして中央値を求めます。
+
+$$
+V_\mathrm{MD} 
+= V_\mathrm{AV} - \frac{1}{2} D_{\mathrm{M4}, i+1/2} \tag{60}
+$$
+
+最後に、大きな曲率の場合の値を基準として用います。
+
+$$
+V_\mathrm{LC} 
+= V_i + 0.5 (V_i - V_{i-1}) + \frac{4}{3} D_{\mathrm{M4}, i-1/2} \tag{61}
+$$
+
+これらを用い、$$V_{\mathrm{L}, i+1/2}$$ が許容される最小値・最大値を計算します。
+
+$$
+V_\mathrm{min} 
+= \max (\min (V_i, V_{i+1}, V_\mathrm{MD}), \min (V_i V_\mathrm{UL}, V_\mathrm{LC})) \tag{62}
+$$
+
+$$
+V_\mathrm{max} 
+= \min (\max (V_i, V_{i+1}, V_\mathrm{MD}), \max (V_i V_\mathrm{UL}, V_\mathrm{LC})) \tag{63}
+$$
+
+この 2 つの値と (52) 式から、中央値を計算します。
+
+$$
+V_{\mathrm{L}, i+1/2} 
+= \mathrm{median} (V_\mathrm{L}, V_\mathrm{min}, V_\mathrm{max})
+= V_\mathrm{L} + \mathrm{minmod} (V_\mathrm{min} - V_\mathrm{L}, V_\mathrm{max} - V_\mathrm{L}) \tag{64}
+$$
+
+右側の値 $$V_{\mathrm{R}, i-1/2}$$ は、鏡映しにすることで得られます。
+すなわち、これまでの数式において添字を $$(i-2, i-1, i, i+1, i+2) \rightarrow (i+2, i+1, i, i-1, i-2)$$ のようにすることで計算できます。  
+実装例は次のようになります。
+
+```c
+// set constants for MP5
+alpha = 4.0;
+eps = 1.0e-10;
+
+// define MP5 function
+double mp5(double m2, double m1, double c, double p1, double p2)
+{
+    // compute VL, left sided value from interpolation
+    fl = (2.0 * m2 - 13.0 * m1 + 47.0 * c + 27.0 * p1 - 3.0 * p2) / 60.0;
+    // compute V[i] - V[i-1]
+    dm = c - m1;
+    // compute V[i+1] - V[i]
+    dp = p1 - c;
+    // compute VMP = V[i] + minmod(V[i+1]-V[i], alpha*(V[i]-V[i-1]))
+    fMP = c + minmod2(dp, alpha * dm);
+    // if V[i] ≤ Vl ≤ VMP, return VL
+    if ((fl - c) * (fl - fMP) <= eps) return fl;
+    // if not, proceed to next step
+    else{
+
+      dcm = c - 2.0 * m1 + m2;
+      dc = p1 - 2.0 * c + m1;
+      dcp = p2 - 2.0 * p1 + c;
+      dM4p = minmod4(4.0 * dc - dcp, 4.0 * dcp - dc, dc, dcp);
+      dM4m = minmod4(4.0 * dc - dcm, 4.0 * dcm - dc, dc, dcm);
+      fUL = c + alpha * dm;
+      fAV = 0.5 * (c + p1);
+      fMD = fAV - 0.5 * dM4p;
+      fLC = c + 0.5 * dm + 4.0 / 3.0 * dM4m;
+      fLB = fmax(fmin(fmin(c, p1), fMD), fmin(fmin(c, fUL), fLC));
+      fUB = fmin(fmax(fmax(c, p1), fMD), fmax(fmax(c, fUL), fLC));
+      return fl + minmod2(fLB - fl, fUB - fl);
+    }
+}
+
+Vl[i] = mp5(V[i-2], V[i-1], V[i], V[i+1], V[i+2]);
+Vr[i-1] = mp5(V[i+2], V[i+1], V[i], V[i-1], V[i-2]);
+```
 
 ## 参考文献
 

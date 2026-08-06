@@ -161,8 +161,8 @@ $$
 
 # 参考文献
 
-[1] 内山龍雄, "一般相対性理論"  
-[2] ランダウ, リフシッツ, "場の古典論"  
-[3] Schutz, "A First Course in General Relativity"  
+[1] [内山龍雄, "一般相対性理論"](https://link.amazon/B0eF9Xu8E)  
+[2] [ランダウ, リフシッツ, "場の古典論"](https://link.amazon/B06w82G32)  
+[3] [Schutz, "A First Course in General Relativity"](https://link.amazon/B073jBM10)  
 
 {% include adsense.html %}

@@ -20,7 +20,7 @@ nav_order: 8
 
 {% include adsense.html %} 
 
-# 流体計算のための空間再構成手法 (工事中)
+# 流体計算のための空間再構成手法
 
 [HLLD 法](/simulation/hlld)などに代表される近似リーマン解法では、セル中心 $$i, i+1, i+2$$ などの値だけでなく、そのセルの間にある境界面 $$i+1/2, i+3/2$$ などを通過する流束の計算が必要となります。
 そこでセル中心の値からセル境界の値を補間する、空間再構成手法が必要となります。
@@ -910,7 +910,7 @@ $$k = 3$$ の場合、$$2 k - 1 = 5$$ 個のセルにアクセスしながら、
 最後に、空間 5 次精度を達成する手法についてみていきましょう。
 
 ```
-詳細な導出は省略しています。時間があればそのうち加筆したいです。
+詳細な導出は省略しています。時間があればそのうち加筆・修正したいです。
 ```
 
 ### Weighted ENO (WENO)
@@ -940,7 +940,7 @@ $$
 \begin{align}
 \beta_0 
 &= \frac{13}{12} (V_{i-2} - 2 V_{i-1} + V_i)^2 + \frac{1}{4} (V_{i-2} - 4 V_{i-1} + 3 V_i)^2 \notag \\
-&= \frac{13}{12} (\Delta_{i+1/2} - \Delta_{i-1/2})^2 + \frac{1}{4} (3 \Delta_{i-1/2} - \Delta_{i-3/2})^2 \tag{48}
+&= \frac{13}{12} (\Delta_{i-1/2} - \Delta_{i-3/2})^2 + \frac{1}{4} (3 \Delta_{i-1/2} - \Delta_{i-3/2})^2 \tag{48}
 \end{align}
 $$
 
@@ -962,6 +962,13 @@ $$
 
 で与えられます。  
 この $$\beta_\ell$$ は $$\Delta$$ の差で書かれていることからわかるように、補間を行う変数の滑らかさを表す指標となっています。
+例えば次の図のように、$$(V_{i-2}, V_{i-1}, V_{i}, V_{i+1}, V_{i+2})= (1, 1, 1, 0, 0)$$ のような不連続がある場合を考えましょう。
+このとき $$\beta_0$$ のみ不連続を跨いでおらず、$$\beta_0 =0$$ となります。
+そして (47) 式から、$$w_0$$ が一番大きな値となります。
+
+![](/assets/images/simulation/reconstruction_13.png)  
+WENO による $$V_{\mathrm{L}, i+1/2}$$ の計算例。この場合、不連続をまたがない $$\{i-2, i-1, i\}$$ を用いる重み $$w_0$$ が一番大きくなる。  
+
 実装例は次のようになります。
 
 ```c
@@ -979,13 +986,22 @@ d2r = 0.1;
 c1 = 13.0 / 12.0;
 c2 = 0.25;
 // compute beta 
-beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2;
-beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2;
-beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2;
+tmp1 = V[i-2] - 2.0 * V[i-1] + V[i]
+tmp2 = V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]
+beta0 = c1 * tmp1 * tmp1 + c2 * tmp2 * tmp2;
+tmp3 = V[i-1] - 2.0 * V[i] + V[i+1]
+tmp4 = V[i-1] - V[i+1]
+beta1 = c1 * tmp3 * tmp3 + c2 * tmp4 * tmp4;
+tmp5 = V[i] - 2.0 * V[i+1] + V[i+2]
+tmp6 = 3.0 * V[i] - 4.0 * V[i+1] + V[i+2]
+beta2 = c1 * tmp4 * tmp4 + c2 * tmp6 * tmp6;
 // compute inverse of (beta + epsilon) ^ 2
-r0 = 1.0 / (beta0 + eps) ** 2;
-r1 = 1.0 / (betar + eps) ** 2;
-r2 = 1.0 / (beta2 + eps) ** 2;
+tmp7 = 1.0 / (beta0 + eps)
+r0 = tmp7 * tmp7;
+tmp8 = 1.0 / (beta1 + eps)
+r1 = tmp8 * tmp8;
+tmp9 = 1.0 / (beta2 + eps)
+r2 = tmp9 * tmp9;
 // compute alpha0, alpha1, alpha2 for left side
 alpha0l = d0l * r0;
 alpha1l = d1l * r1;
@@ -1023,7 +1039,7 @@ ENO が 5 点で 3 次だったのに比べると、5 点から 5 次精度を�
 `if` 文のような分岐もなく、実装も単純なのも利点です。
 WENO は他の 3 次・5 次スキームより散逸的とされていますが、その分、多くのケースでロバストに計算を進めることができます。
 もちろん、短所もあります。
-それは臨界点 (1 階微分がゼロとなる点、極値も含まれる) で精度が 3 次に落ちることです。
+それは臨界点 (1 階微分がゼロとなる点、極値も含まれる) で精度が 3 次に落ちることです ([Henrick et al. (2005)](https://www.sciencedirect.com/science/article/abs/pii/S0021999105000409)。) 
 先ほどは長所として挙げたロバスト性ですが、逆に言えば散逸が大きいと言い換えることもできます。
 さらに (47) 式で出てきた $$\epsilon$$ は $$\beta_\ell$$ と同じ次元です。
 $$\beta_\ell$$ は $$V^2$$ の次元を持つため、補間を行う物理量によって変数のスケールが変化します。
@@ -1048,9 +1064,9 @@ $$
 $$
 
 ここで $$p$$ は非線形性を調整するパラメータです。
-$$p = 1$$ ならば WENO-Z は4 次精度になりますが、滑らかな部分での散逸が小さく、結果として高解像度を与えます。
-$$p = 2$$ ならば 5 次精度になりますが、滑らかな部分での散逸が大きくなり、結果として低い解像度の結果を得ます。
-$$p \rightarrow \infty$$ では完全な線形 5 次手法に一致し、衝撃波などの非線形現象を捉える能力がなくなります。
+$$p = 1$$ ならば WENO-Z は臨界点で 4 次精度となりますが、滑らかな部分での散逸が小さく、結果として高解像度を与えます。
+$$p = 2$$ ならば 5 次精度になりますが、不連続近傍での重みの偏りが大きくなります。
+$$p \rightarrow \infty$$ では重みが 0, 1 の極端な二値となり、[ENO](/simulation/reconstruction#essentially-non-oscillatory-eno) のような選択則になります。
 よって実用では、$$p = 1$$ が用いられ、これを WENO-Z として紹介している論文も多くあります。
 (51) 式以外の部分は変えません。
 よって、実装例もほぼ変わらず、次のようになります。
@@ -1070,15 +1086,21 @@ d2r = 0.1;
 c1 = 13.0 / 12.0;
 c2 = 0.25;
 // compute beta 
-beta0 = c1 * (V[i-2] - 2.0 * V[i-1] + V[i]) ** 2 + c2 * (V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]) ** 2;
-beta1 = c1 * (V[i-1] - 2.0 * V[i] + V[i+1]) ** 2 + c2 * (V[i-1] - V[i+1]) ** 2;
-beta2 = c1 * (V[i] - 2.0 * V[i+1] + V[i+2]) ** 2 + c2 * (3.0 * V[i] - 4.0 * V[i+1] + V[i+2]) ** 2;
+tmp1= V[i-2] - 2.0 * V[i-1] + V[i];
+tmp2 = V[i-2] - 4.0 * V[i-1] + 3.0 * V[i]
+beta0 = c1 * tmp1 * tmp1 + c2 * tmp2 * tmp2;
+tmp3 = V[i-1] - 2.0 * V[i] + V[i+1]
+tmp4 = V[i-1] - V[i+1]
+beta1 = c1 * tmp3 * tmp3 + c2 * tmp4 * tmp4;
+tmp5 = V[i] - 2.0 * V[i+1] + V[i+2]
+tmp6 = 3.0 * V[i] - 4.0 * V[i+1] + V[i+2]
+beta2 = c1 * tmp5 * tmp5 + c2 * tmp6 * tmp6;
 // compute tau = |beta0 - beta2|
 tau = fabs(beta0 - beta2);
 // compute common parts
-r0 = 1.0 + tau / (beta0 - eps);
-r1 = 1.0 + tau / (beta1 - eps);
-r2 = 1.0 + tau / (beta2 - eps);
+r0 = 1.0 + tau / (beta0 + eps);
+r1 = 1.0 + tau / (beta1 + eps);
+r2 = 1.0 + tau / (beta2 + eps);
 // compute alpha0, alpha1, alpha2 for left side
 alpha0l = d0l * r0;
 alpha1l = d1l * r1;
@@ -1124,13 +1146,15 @@ WENO-Z でも $$\beta_\ell \rightarrow 0$$ の極限で $$\alpha_\ell \rightarro
 ただし、$$\epsilon$$ が無次元でない問題は [WENO](/simulation/reconstruction#weighted-eno-weno) から引き続き残っているため、$$\epsilon$$ の無次元化は WENO-Z でも必要です。
 高解像で細かな構造を捉えることを可能にする分、[WENO](/simulation/reconstruction#weighted-eno-weno) よりもロバスト性に欠けることも報告されています。
 
+{% include adsense.html %} 
+
 ### Monotonicity Preserving
 
 この手法は [Suresh & Huynh (1997)](https://www.sciencedirect.com/science/article/abs/pii/S0021999197957454?via%3Dihub) で提案されたものです。
 5 次精度手法であるため、これを MP5 と呼びます。
 MP 手法は、局所的な極値と不連続な箇所を区別するために、5 点以上のステンシルを用います。
 
-![](/assets/images/simulation/reconstruction_13.png)  
+![](/assets/images/simulation/reconstruction_14.png)  
 MP5 の概念図。$$(i-1, i, i+1)$$ の 3 点 (黒点) のみだと、不連続と極値を区別できない。しかし、$$i-2, i+2$$ の 2 点 (白点) も用いることで、この 2 つの区別が可能となる。
 
 そして MP5 では最初に正確な多項式での内挿を考え、次にその結果を制限することで、不連続点近傍での単調性と滑らかな領域での精度を保ちます。
@@ -1225,15 +1249,15 @@ $$
 
 $$
 V_\mathrm{min} 
-= \max (\min (V_i, V_{i+1}, V_\mathrm{MD}), \min (V_i V_\mathrm{UL}, V_\mathrm{LC})) \tag{62}
+= \max (\min (V_i, V_{i+1}, V_\mathrm{MD}), \min (V_i, V_\mathrm{UL}, V_\mathrm{LC})) \tag{62}
 $$
 
 $$
 V_\mathrm{max} 
-= \min (\max (V_i, V_{i+1}, V_\mathrm{MD}), \max (V_i V_\mathrm{UL}, V_\mathrm{LC})) \tag{63}
+= \min (\max (V_i, V_{i+1}, V_\mathrm{MD}), \max (V_i, V_\mathrm{UL}, V_\mathrm{LC})) \tag{63}
 $$
 
-この 2 つの値と (52) 式から、中央値を計算します。
+この 2 つの値と (52) 式から、中央値を採用します。
 
 $$
 V_{\mathrm{L}, i+1/2} 
@@ -1243,16 +1267,20 @@ $$
 
 右側の値 $$V_{\mathrm{R}, i-1/2}$$ は、鏡映しにすることで得られます。
 すなわち、これまでの数式において添字を $$(i-2, i-1, i, i+1, i+2) \rightarrow (i+2, i+1, i, i-1, i-2)$$ のようにすることで計算できます。  
-実装例は次のようになります。
+MP5 における計算の流れを、フローチャートにまとましょう。
+
+![](/assets/images/simulation/reconstruction_15.png)  
+
+そして MP5 の実装例は、次のようになります。
 
 ```c
-// set constants for MP5
-alpha = 4.0;
-eps = 1.0e-10;
-
 // define MP5 function
 double mp5(double m2, double m1, double c, double p1, double p2)
 {
+    // set constants for MP5
+    alpha = 4.0;
+    eps = 1.0e-10;
+
     // compute VL, left sided value from interpolation
     fl = (2.0 * m2 - 13.0 * m1 + 47.0 * c + 27.0 * p1 - 3.0 * p2) / 60.0;
     // compute V[i] - V[i-1]
@@ -1261,29 +1289,48 @@ double mp5(double m2, double m1, double c, double p1, double p2)
     dp = p1 - c;
     // compute VMP = V[i] + minmod(V[i+1]-V[i], alpha*(V[i]-V[i-1]))
     fMP = c + minmod2(dp, alpha * dm);
-    // if V[i] ≤ Vl ≤ VMP, return VL
+    // if V[i] ≤ Vl ≤ VMP or VMP ≤ Vl ≤ V[i], return VL
     if ((fl - c) * (fl - fMP) <= eps) return fl;
     // if not, proceed to next step
     else{
-
-      dcm = c - 2.0 * m1 + m2;
-      dc = p1 - 2.0 * c + m1;
-      dcp = p2 - 2.0 * p1 + c;
-      dM4p = minmod4(4.0 * dc - dcp, 4.0 * dcp - dc, dc, dcp);
-      dM4m = minmod4(4.0 * dc - dcm, 4.0 * dcm - dc, dc, dcm);
-      fUL = c + alpha * dm;
-      fAV = 0.5 * (c + p1);
-      fMD = fAV - 0.5 * dM4p;
-      fLC = c + 0.5 * dm + 4.0 / 3.0 * dM4m;
-      fLB = fmax(fmin(fmin(c, p1), fMD), fmin(fmin(c, fUL), fLC));
-      fUB = fmin(fmax(fmax(c, p1), fMD), fmax(fmax(c, fUL), fLC));
-      return fl + minmod2(fLB - fl, fUB - fl);
+        // compute curvature
+        dcm = c - 2.0 * m1 + m2;
+        dc = p1 - 2.0 * c + m1;
+        dcp = p2 - 2.0 * p1 + c;
+        dM4p = minmod4(4.0 * dc - dcp, 4.0 * dcp - dc, dc, dcp);
+        dM4m = minmod4(4.0 * dc - dcm, 4.0 * dcm - dc, dc, dcm);
+        // compute upper limit
+        fUL = c + alpha * dm;
+        // compute average
+        fAV = 0.5 * (c + p1);
+        // compute median
+        fMD = fAV - 0.5 * dM4p;
+        // compute large curvature
+        fLC = c + 0.5 * dm + 4.0 / 3.0 * dM4m;
+        // compute a new interval
+        fLB = fmax(fmin(fmin(c, p1), fMD), fmin(fmin(c, fUL), fLC));
+        fUB = fmin(fmax(fmax(c, p1), fMD), fmax(fmax(c, fUL), fLC));
+        // compute median
+        return fl + minmod2(fLB - fl, fUB - fl);
     }
 }
 
 Vl[i] = mp5(V[i-2], V[i-1], V[i], V[i+1], V[i+2]);
 Vr[i-1] = mp5(V[i+2], V[i+1], V[i], V[i-1], V[i-2]);
 ```
+
+5 次精度という高精度な手法ですが、滑らかな極値で精度が落ちない利点があります。
+TVD 手法などでは滑らかな極値で精度低下がありましたが、曲率による区間の伸縮により、これを解決しています。
+そして、[WENO](/simulation/reconstruction#weighted-eno-weno) よりも散逸が小さいことをも長所としてあげられます。
+これは、[WENO](/simulation/reconstruction#weighted-eno-weno) が滑らかな領域でも非線形重みを計算しており、常に多少の散逸が入るためです。
+MP5 は滑らかな領域で線形 5 次スキームとなるため、散逸が最小限に抑えられています。
+実装も minmod の組合せだけで済んでおり、簡単に実装することができます。
+もちろん、短所も存在します。
+MP5 は他の手法より細かい構造を分解できますが、この MP 性は小さな振動を防げないため、(0.4や0.2などの) 小さな CFL 数であっても、多くのケースで計算が破綻する可能性を持ちます。
+[Suresh & Huynh (1997)](https://www.sciencedirect.com/science/article/abs/pii/S0021999197957454?via%3Dihub) によると、CFL 数は $$1/(1+\alpha)$$ より小さいことが求められます。
+よって推奨されている $$\alpha = 4$$ の場合には、$$\mathrm{CFL} = 0.2$$ 未満であると良いとされます。
+しかし実用的には、$$\mathrm{CFL} = 0.4$$ 程度でも、振動のない結果を得ることができるようです。
+実装面では、minmod のような分岐を利用したものが多いため、GPU 実装には不向きと言えます。
 
 ## 参考文献
 
@@ -1301,8 +1348,9 @@ Vr[i-1] = mp5(V[i+2], V[i+1], V[i], V[i-1], V[i-2]);
 [12] [Borges et al., 2008, "An improved weighted essentially non-oscillatory scheme for hyperbolic convervataion laws"](https://www.sciencedirect.com/science/article/abs/pii/S0021999107005232)  
 [13] [Henrick et al., 2005, "Mapped weighted essentially non-oscillatory schemes: Achieving optimal order near critical points"](https://www.sciencedirect.com/science/article/abs/pii/S0021999105000409)  
 [14] [Suresh & Huynh, 1997, "Accurate Monotonicity-Preserving Schemes With Runge-Kutta Time Stepping"](https://www.sciencedirect.com/science/article/abs/pii/S0021999197957454?via%3Dihub)  
-[15] [藤井孝藏, "流体力学の数値計算法"](https://link.amazon/B0evXla4k)  
-[16] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
-[17] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
+[15] [Chamarthi & Frankel, 2021, "High-order central-upwind shock capturing scheme using a Boundary Variation Diminishing (BVD) algorithm"](https://www.sciencedirect.com/science/article/abs/pii/S002199912030841X?via%3Dihub)  
+[16] [藤井孝藏, "流体力学の数値計算法"](https://link.amazon/B0evXla4k)  
+[17] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
+[18] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
 
 {% include adsense.html %} 

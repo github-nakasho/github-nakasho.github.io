@@ -1189,6 +1189,7 @@ V_{\mathrm{L}, i+1/2}
 $$
 
 です。
+途中の $$\eps$$ は十分小さな値で、[Suresh & Huynh (1997)](https://www.sciencedirect.com/science/article/abs/pii/S0021999197957454?via%3Dihub) では $$10^{-10}$$ 、その他の論文では $$10^{-20}$$ などが用いられています。
 しかしもし $$V_\mathrm{L}$$ が $$V_i$$ と $$V_\mathrm{MP}$$ の間にない場合には、次の段階に進みます。  
 2階の微分に対応する量を $$D_i = V_{i+1} - 2 V_{i} + V_{i-1}$$ として
 

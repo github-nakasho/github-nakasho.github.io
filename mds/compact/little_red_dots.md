@@ -31,7 +31,7 @@ LRDs の観測と理論についてまだまだ議論されている段階であ
 
 後に LRDs と判明する天体を含むサンプルを、別の解釈で報告した論文は多く出版されています。
 例えば、[Labbé et al. (2023)](https://www.nature.com/articles/s41586-023-05786-2) は、$$7.4 \leq z \leq 9.1$$ (宇宙誕生後 500-700 Myr) で $$10^{10} M_\odot$$ 以上の恒星質量の大質量銀河の候補を 6 個発見しました。
-しかしこの研究は測光データのみを用いたもので、同時期に発表された [Onoue et al. (2023)](https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3) や [Kocevski et al. (2023)](https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0) による分光データを用いた研究では、 $$z \sim 5$$ の AGN であると報告されています。
+しかしこの研究は測光データのみを用いたもので、同時期に発表された [Kocevski et al. (2023)](https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0) による分光データを用いた研究では、 そのうちの一つが $$z \sim 5$$ の AGN であると報告されています。
 これらを一つの種族として同定し、LRDs と命名した論文は [Matthee et al. (2024)](https://iopscience.iop.org/article/10.3847/1538-4357/ad2345) です。
 
 ![](/assets/images/compact/little_red_dots_01.png)  
@@ -71,7 +71,7 @@ $$M_\mathrm{UV} = -21 \sim -18$$ の範囲で、その個数密度がおよそ $
 この V 字の折り返しは、[バルマー極限 (Balmer limit: バルマー系列の短波長側の極限で束縛-自由遷移と束縛-束縛遷移が切り替わる周波数のこと)](/atmos/spectrum#恒星のスペクトル型) で起こることが知られています。
 また LRDs には X 線による放射が付随していません。
 [Sacchi & Bogdán (2025)](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8) では チャンドラ・ディープフィールドに存在する 55 個の LRDs について調査しましたが、その全てで X 線が検出されていないと結論づけました。
-これは SMBH における超臨界降着で発生する X 線光度を、説明することができません。
+これは SMBH における超臨界降着で発生する X 線光度と矛盾します。
 さらに、[Kokubo & Harikane (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/ae119e) では、LRDs には変光が有意に認められないとしています。
 [Furtak et al. (2025)](https://www.aanda.org/articles/aa/full_html/2025/06/aa54110-25/aa54110-25.html) では 2.4 年程度の $$\mathrm{H\alpha}, \mathrm{H\beta}$$ の変動を検出しましたが、このような例はほんの少数であり、LRDs には変光がないというのが現在の認識です。
 
@@ -97,7 +97,7 @@ AGN の中心にいる SMBH 周囲には、降着円盤および高温のコロ�
 降着円盤からの輻射駆動アウトフローによりガスが極方向に運ばれ、効率的に起こる[逆コンプトン散乱](/astroelec/inv_compton)により中程度の光学的厚みの温かい (warm, hot ではない) コロナが形成されるとしたのです。
 これにより、従来考えられたものよりもソフトな X 線が発生するとしたのです。
 また、超エディントン降着円盤中で光子捕捉 (photon trapping) が起こるため、紫外線や可視光帯域での変光が抑制されることも示唆しました。
-X 線の弱さと変光の乏しさの 2 つを説明する魅力的なモデルですが、[Sacchi & Bogán (2025)](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8) で報告された厳しい X 線スペクトルの上限により、棄却されています。
+X 線の弱さと変光の乏しさの 2 つを説明する魅力的なモデルですが、[Sacchi & Bogdán (2025)](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8) で報告された厳しい X 線スペクトルの上限により、棄却されています。
 
 ### 通常の恒星系では説明できない
 
@@ -105,6 +105,7 @@ X 線の弱さと変光の乏しさの 2 つを説明する魅力的なモデル
 しかし、これではコンパクトさを説明することができません。
 LRDs は極端にコンパクトであるため、多数の恒星を小さな領域に閉じ込める必要があります。
 このような高密度の恒星系を $$z \gtrsim 4$$ でどのように作るか、という問題が生じます。
+また恒星だけでは、LRDs のような強い[バルマーブレイク](/atmos/spectrum#恒星のスペクトル型)を作ることができないことも知られています ([詳細は後述を参照](#balmer-break-strength))。
 
 ### コンパクトな星形成領域では説明できない
 
@@ -127,8 +128,8 @@ LRDs は極端にコンパクトであるため、多数の恒星を小さな領
 ![](/assets/images/compact/little_red_dots_05.png){: width="50%"}  
 BH* の概念図。中心部に降着を起こしている BH があり、その周囲を高密度のガスの大気に囲まれている。
 
-BH* では、これまで AGN で考えられてきたドップラー運動による輝線の広がりではなく、輝線はガスの[電子散乱 (トムソン散乱)](/atmos/absorption_line_coeff) により広がりを持ちます。
-また Compton-thick (高密度のガスにより X 線が強く吸収・散乱される状態にあること) なコクーンにより、X 線が弱いことも説明できます。  
+BH* では、これまで AGN で考えられてきたドップラー運動による輝線の広がりではなく、輝線はガス中の[自由電子による散乱 (トムソン散乱)](/astroelec/thomson) から広がりを持ちます。
+また Compton-thick (高密度のガスにより X 線が強く吸収・散乱される状態にあること) なコクーンと、BH 質量の小ささ (後述の [Rusakov et al. (2026)](https://www.nature.com/articles/s41586-025-09900-4) を参照) から、X 線が弱いことも説明することができます。  
 最近、この理論を裏付ける重要な論文が 2 つ、ネイチャーから出版されました。
 [Rusakov et al. (2026)](https://www.nature.com/articles/s41586-025-09900-4) では JWST の観測データから $$\mathrm{H\alpha}$$ の線幅が広いデータを抽出し、それらを詳細に解析しました。
 その中には当然 LRDs も含まれています。
@@ -137,11 +138,11 @@ BH* では、これまで AGN で考えられてきたドップラー運動に�
 ![](/assets/images/compact/little_red_dots_06.png)  
 [Rusakov et al. (2026)](https://www.nature.com/articles/s41586-025-09900-4) より。$$\mathrm{H\alpha}$$ 輝線部分を指数関数型とガウシアンでフィットしたもの。両モデルでは P-Cygni プロファイル成分も考慮されている。  
 
-高密度の電離ガス中で起こる[電子散乱](/atmos/absorption_line_coeff)は、同じ指数関数型のプロファイルを作ることが知られています。
+高密度の電離ガス中で起こる[電子散乱](/astroelec/thomson)は、同じ指数関数型のプロファイルを作ることが知られています。
 一方、ドップラー運動による広がりは、ガウシアンや中心部が広いプロファイルが生まれます。
-よって LRDs を含むこの論文で扱われたサンプルでは、高密度電離ガスでの[電子散乱](/atmos/absorption_line_coeff)が有意に起こっていると結論づけたのです。
-実際には、[電子散乱](/atmos/absorption_line_coeff)により広がった成分と、狭い幅のコア成分とを重ね合わせることで、これが再現できると示しました。
-[電子散乱](/atmos/absorption_line_coeff)の効果を除外して残った輝線のコア部分は、全輝線プロファイルに対する単純なガウシアンフィットより幅がおよそ 10 倍狭くなります。
+よって LRDs を含むこの論文で扱われたサンプルでは、高密度電離ガスでの[電子散乱](/astroelec/thomson)が有意に起こっていると結論づけたのです。
+実際には、[電子散乱](/astroelec/thomson)により広がった成分と、狭い幅のコア成分とを重ね合わせることで、これが再現できると示しました。
+[電子散乱](/astroelec/thomson)の効果を除外して残った輝線のコア部分は、全輝線プロファイルに対する単純なガウシアンフィットより幅がおよそ 10 倍狭くなります。
 これにより、推定される BH 質量が 1/100 倍小さくなります。
 高赤方偏移での BH 質量の成長やその BH 質量の個数密度の問題を、やわらげる可能性を示したのです。  
 [Naidu et al. (2026)](https://www.nature.com/articles/s41586-026-10846-4) では、$$z \sim 7.8$$ にある天体 MoM-BH\*-1 に注目しました。
@@ -153,13 +154,16 @@ BH* では、これまで AGN で考えられてきたドップラー運動に�
 
 高密度ガス中において、$$\mathrm{H\beta}$$ 線は共鳴散乱を起こし、このような二重ピークが起こるとしたのです。
 この二重ピークを考慮せず、単一ピークの線幅として見てしまうことで、SMBH 質量を過大評価する可能性を示唆しました。  
+
+<span id="balmer-break-strength"></span>
+
 またこの論文では、MoM-BH*-1 の[バルマーブレイク強度](/atmos/continuous_spectrum#451-balmer-jump)は 7.7 程度であると報告しています。
 
 ![](/assets/images/compact/little_red_dots_07_1.png)  
-[Naidu et al. (2026)](https://www.nature.com/articles/s41586-026-10846-4) より。右図は MOM-BH*-1・その他の LRDs・典型的な銀河の[バルマーブレイク強度](/atmos/continuous_spectrum#451-balmer-jump)を比較したもの。
+[Naidu et al. (2026)](https://www.nature.com/articles/s41586-026-10846-4) より。右図は MoM-BH*-1・その他の LRDs・典型的な銀河の[バルマーブレイク強度](/atmos/continuous_spectrum#451-balmer-jump)を比較したもの。
 点線は、ダストなし恒星集団での最大強度を表示している。  
 
-典型的な 初期質量関数 (IMF) を仮定したダストなしの恒星系では最大でも 3、[バルマーブレイク](/atmos/spectrum#恒星のスペクトル型)が最も強い A 型星のみの極限的な場合でも 5 であり、これらの値を大きく上回ります。
+典型的な 初期質量関数 (IMF) を仮定したダストなしの恒星系では最大でも 3、[バルマーブレイク](/atmos/spectrum#恒星のスペクトル型)が最も強い A 型星のみの極限的な場合でも 5 より小さな値であり、これらの値を大きく上回ります。
 このような理由から、LRDs は通常の恒星では説明できないことも示したのです。
 
 {: .note}
@@ -203,7 +207,7 @@ $$M_\mathrm{BH} \ll M_\ast$$ のとき、$$L_\mathrm{Edd} (M_\ast) \gg L_\mathrm
 すると全ての進化経路で[林トラック](/stellar/evolution_protostar_premainsequence#前主系列段階-pre-main-sequence-stage)を辿ることが示されたのです。
 
 ![](/assets/images/compact/little_red_dots_09.png)  
-[Santarelli et al. (2026)](https://iopscience.iop.org/article/10.3847/2041-8213/ae3　713) より。左図は、中心の BH 質量を $$10^4 M_\odot, 10^5 M_\odot, 10^6 M_\odot$$ とした場合の、HR 図上での進化経路。右図は中心 BH の時間変化。図中の星マークは、中心 BH の質量が準恒星全体の質量の 10% 程度に達したときを表す。
+[Santarelli et al. (2026)](https://iopscience.iop.org/article/10.3847/2041-8213/ae3713) より。左図は、中心の BH 質量を $$10^4 M_\odot, 10^5 M_\odot, 10^6 M_\odot$$ とした場合の、HR 図上での進化経路。右図は中心 BH の時間変化。図中の星マークは、中心 BH の質量が準恒星全体の質量の 10% 程度に達したときを表す。
 
 初期段階では準恒星全体が収縮し、HR 図上を左方向に水平に移動します。
 これはケルビン・ヘルムホルツ時間スケールで起こり、0.1 Myr 程度で後期段階に移行します。
@@ -220,7 +224,7 @@ BH* の場合、観測で得られるスペクトルは、AGN 連続光が高密
 すなわち、AGN 周囲に存在する高密度のガスは熱平衡状態になっておらず、透過してきた光は、光源である中心 BH やその近傍の降着円盤の温度を反映しています。
 しかし準恒星は恒星物理の範疇であり、[放射は完全に熱化されている](/atmos/lte#34-local-thermodynamic-equilibrium-lte)と考えられます。
 外部に放出される放射は黒体放射 (あるいは黒体を修正したもの) で、BH 質量などの中心の情報を、直接測定することはできません。
-[エディントン近似](/atmos/eddington_app)の仮定や、準恒星の安定性から間接的に推定するしかありません。
+[エディントン降着限界](/stellar/radiative_energy_transfer#エディントン光度-eddington-luminosity)の仮定や、準恒星の安定性から間接的に推定するしかありません。
 代わりに、長年培われてきた恒星大気の理論から、そのスペクトルを得ることができます。
 中心 BH の質量の違いやより適切な恒星大気モデルを考慮することで、より柔軟に観測を説明することが可能です。
 また、このモデルは LRDs の起源だけでなく、同時に初期 SMBH がどのように作られたかという問題も一挙に解決するものとして、注目を集めています。
@@ -268,9 +272,9 @@ BH がそれぞれ持つ降着円盤 (ミニディスク) と、BH 連星のさ�
 ![](/assets/images/compact/little_red_dots_11.png)  
 [Inayoshi et al. (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae548d) より。  
 
-### [脈動](/stellar/mira_post_agb#ミラ型脈動と質量放出)する超大質量星 ([Nandal & Loeb (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3), [Nandal et al. (2026)](https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3))
+### 脈動する超大質量星 ([Nandal & Loeb (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3), [Nandal et al. (2026)](https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3))
 
-$$10^5 M_\odot$$ 程度の質量をもつ pop-III SMS が[脈動](/stellar/mira_post_agb#ミラ型脈動と質量放出)を起こすことで、それに伴って質量放出を行います。
+$$10^5 M_\odot$$ 程度の質量をもつ pop-III SMS が脈動を起こすことで、それに伴って質量放出を行います。
 これによりコンパクトなガス殻を形成することができます。
 準恒星は中心部に BH が存在しますが、この SMS は BH をまだ持ちません。
 
@@ -315,16 +319,14 @@ $$10^5 M_\odot$$ 程度の質量をもつ pop-III SMS が[脈動](/stellar/mira_
 [21] [Naidu et al., 2026, "A gas-enshrouded and gas-reddened black hole at cosmic dawn"](https://www.nature.com/articles/s41586-026-10846-4)  
 [22] [Nandal et al., 2026, "Pulsational Mass Loss from Supermassive Stars Creates the Compact Shells of Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3)  
 [23] [Nandal & Loeb, 2026, "Supermassive Stars Match the Spectral Signatures of JWST’s Little Red Dots"](https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3)  
-[24] [Onoue et al., 2023, "A Candidate for the Least-massive Black Hole in the First 1.1 Billion Years of the Universe"](https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3)  
-[25] [Rusakov et al., 2026, "Little red dots as young supermassive black holes in dense ionized cocoons"](https://www.nature.com/articles/s41586-025-09900-4)  
-[26] [Sacchi & Bogdán, 2025, "Chandra Rules Out Super-Eddington Accretion Models for Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8)  
-[27] [Santarelli et al., 2026, "Evolutionary Tracks and Spectral Properties of Quasi-stars and Their Correlation with Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae3713)  
-[28] [Setton et al., 2025, "Little Red Dots at an Inflection Point: Ubiquitous V-shaped Turnover Consistently Occurs at the Balmer Limit"](https://iopscience.iop.org/article/10.3847/1538-4357/ae1500)  
-[29] [Takasao & Inayoshi, 2026, "A Magnetized Black Hole Envelope Model for Little Red Dots"](https://arxiv.org/abs/2605.21589)  
-[30] [Torralba et al., 2026, "A Black Hole Star at Cosmic Noon: Extreme Balmer Break, Photospheric Continuum, and Broad Absorption by Thick Winds in a Little Red Dot at z = 1.7"](https://iopscience.iop.org/article/10.3847/2041-8213/ae7bfd)  
-[31] [Vaida & Farber, 2026, "Little red dots: the assembly of early supermassive black holes in the JWST Era"](https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2026.1779045/full)  
-[32] [Wang et al., 2025, "RUBIES: JWST/NIRSpec Confirmation of an Infrared-luminous, Broad-line Little Red Dot with an Ionized Outflow"](https://iopscience.iop.org/article/10.3847/1538-4357/adc1ca)  
-[33] [播金優一, "JWST を使った最遠方銀河探査"](https://www.asj.or.jp/jp/activities/geppou/item/118-3_144r.pdf)  
-[34] [sorae, "初期宇宙の「小さな赤い点」の正体は？　分厚いガスに包まれた巨大なブラックホールか"](https://sorae.info/astronomy/20260616-lrd-glimpse-17775.html)  
+[24] [Rusakov et al., 2026, "Little red dots as young supermassive black holes in dense ionized cocoons"](https://www.nature.com/articles/s41586-025-09900-4)  
+[25] [Sacchi & Bogdán, 2025, "Chandra Rules Out Super-Eddington Accretion Models for Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8)  
+[26] [Santarelli et al., 2026, "Evolutionary Tracks and Spectral Properties of Quasi-stars and Their Correlation with Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae3713)  
+[27] [Setton et al., 2025, "Little Red Dots at an Inflection Point: Ubiquitous V-shaped Turnover Consistently Occurs at the Balmer Limit"](https://iopscience.iop.org/article/10.3847/1538-4357/ae1500)  
+[28] [Takasao & Inayoshi, 2026, "A Magnetized Black Hole Envelope Model for Little Red Dots"](https://arxiv.org/abs/2605.21589)  
+[29] [Torralba et al., 2026, "A Black Hole Star at Cosmic Noon: Extreme Balmer Break, Photospheric Continuum, and Broad Absorption by Thick Winds in a Little Red Dot at z = 1.7"](https://iopscience.iop.org/article/10.3847/2041-8213/ae7bfd)  
+[30] [Vaida & Farber, 2026, "Little red dots: the assembly of early supermassive black holes in the JWST Era"](https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2026.1779045/full)  
+[31] [Wang et al., 2025, "RUBIES: JWST/NIRSpec Confirmation of an Infrared-luminous, Broad-line Little Red Dot with an Ionized Outflow"](https://iopscience.iop.org/article/10.3847/1538-4357/adc1ca)  
+[32] [播金優一, "JWST を使った最遠方銀河探査"](https://www.asj.or.jp/jp/activities/geppou/item/118-3_144r.pdf)  
 
 {% include adsense.html %}

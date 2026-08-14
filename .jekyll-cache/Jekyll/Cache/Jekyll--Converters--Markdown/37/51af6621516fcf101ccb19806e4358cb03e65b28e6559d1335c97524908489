@@ -1,4 +1,4 @@
-I"�
+I"8�
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -52,7 +52,7 @@
 
 <p>後に LRDs と判明する天体を含むサンプルを、別の解釈で報告した論文は多く出版されています。
 例えば、<a href="https://www.nature.com/articles/s41586-023-05786-2">Labbé et al. (2023)</a> は、\(7.4 \leq z \leq 9.1\) (宇宙誕生後 500-700 Myr) で \(10^{10} M_\odot\) 以上の恒星質量の大質量銀河の候補を 6 個発見しました。
-しかしこの研究は測光データのみを用いたもので、同時期に発表された <a href="https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3">Onoue et al. (2023)</a> や <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0">Kocevski et al. (2023)</a> による分光データを用いた研究では、 \(z \sim 5\) の AGN であると報告されています。
+しかしこの研究は測光データのみを用いたもので、同時期に発表された <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0">Kocevski et al. (2023)</a> による分光データを用いた研究では、 そのうちの一つが \(z \sim 5\) の AGN であると報告されています。
 これらを一つの種族として同定し、LRDs と命名した論文は <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad2345">Matthee et al. (2024)</a> です。</p>
 
 <p><img src="/assets/images/compact/little_red_dots_01.png" alt="" /><br />
@@ -92,7 +92,7 @@ LRDs の発見に関する論文は多数発表されており、そのいずれ
 <p>この V 字の折り返しは、<a href="/atmos/spectrum#恒星のスペクトル型">バルマー極限 (Balmer limit: バルマー系列の短波長側の極限で束縛-自由遷移と束縛-束縛遷移が切り替わる周波数のこと)</a> で起こることが知られています。
 また LRDs には X 線による放射が付随していません。
 <a href="https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8">Sacchi &amp; Bogdán (2025)</a> では チャンドラ・ディープフィールドに存在する 55 個の LRDs について調査しましたが、その全てで X 線が検出されていないと結論づけました。
-これは SMBH における超臨界降着で発生する X 線光度を、説明することができません。
+これは SMBH における超臨界降着で発生する X 線光度と矛盾します。
 さらに、<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae119e">Kokubo &amp; Harikane (2025)</a> では、LRDs には変光が有意に認められないとしています。
 <a href="https://www.aanda.org/articles/aa/full_html/2025/06/aa54110-25/aa54110-25.html">Furtak et al. (2025)</a> では 2.4 年程度の \(\mathrm{H\alpha}, \mathrm{H\beta}\) の変動を検出しましたが、このような例はほんの少数であり、LRDs には変光がないというのが現在の認識です。</p>
 
@@ -124,14 +124,15 @@ AGN の中心にいる SMBH 周囲には、降着円盤および高温のコロ�
 降着円盤からの輻射駆動アウトフローによりガスが極方向に運ばれ、効率的に起こる<a href="/astroelec/inv_compton">逆コンプトン散乱</a>により中程度の光学的厚みの温かい (warm, hot ではない) コロナが形成されるとしたのです。
 これにより、従来考えられたものよりもソフトな X 線が発生するとしたのです。
 また、超エディントン降着円盤中で光子捕捉 (photon trapping) が起こるため、紫外線や可視光帯域での変光が抑制されることも示唆しました。
-X 線の弱さと変光の乏しさの 2 つを説明する魅力的なモデルですが、<a href="https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8">Sacchi &amp; Bogán (2025)</a> で報告された厳しい X 線スペクトルの上限により、棄却されています。</p>
+X 線の弱さと変光の乏しさの 2 つを説明する魅力的なモデルですが、<a href="https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8">Sacchi &amp; Bogdán (2025)</a> で報告された厳しい X 線スペクトルの上限により、棄却されています。</p>
 
 <h3 id="通常の恒星系では説明できない">通常の恒星系では説明できない</h3>
 
 <p><a href="/atmos/spectrum#恒星のスペクトル型">バルマーブレイク (バルマー極限で起こるスペクトルの段差、バルマージャンプとも呼ばれる)</a> 自体は珍しいことではなく、これは恒星のスペクトルでも観測されています。
 しかし、これではコンパクトさを説明することができません。
 LRDs は極端にコンパクトであるため、多数の恒星を小さな領域に閉じ込める必要があります。
-このような高密度の恒星系を \(z \gtrsim 4\) でどのように作るか、という問題が生じます。</p>
+このような高密度の恒星系を \(z \gtrsim 4\) でどのように作るか、という問題が生じます。
+また恒星だけでは、LRDs のような強い<a href="/atmos/spectrum#恒星のスペクトル型">バルマーブレイク</a>を作ることができないことも知られています (<a href="">詳細は後述を参照</a>)。</p>
 
 <h3 id="コンパクトな星形成領域では説明できない">コンパクトな星形成領域では説明できない</h3>
 
@@ -155,7 +156,7 @@ LRDs は極端にコンパクトであるため、多数の恒星を小さな領
 BH* の概念図。中心部に降着を起こしている BH があり、その周囲を高密度のガスの大気に囲まれている。</p>
 
 <p>BH* では、これまで AGN で考えられてきたドップラー運動による輝線の広がりではなく、輝線はガスの<a href="/atmos/absorption_line_coeff">電子散乱 (トムソン散乱)</a> により広がりを持ちます。
-また Compton-thick (高密度のガスにより X 線が強く吸収・散乱される状態にあること) なコクーンにより、X 線が弱いことも説明できます。<br />
+また Compton-thick (高密度のガスにより X 線が強く吸収・散乱される状態にあること) なコクーンと、BH 質量の小ささ (後述の <a href="https://www.nature.com/articles/s41586-025-09900-4">Rusakov et al. (2026)</a> を参照) から、X 線が弱いことも説明することができます。<br />
 最近、この理論を裏付ける重要な論文が 2 つ、ネイチャーから出版されました。
 <a href="https://www.nature.com/articles/s41586-025-09900-4">Rusakov et al. (2026)</a> では JWST の観測データから \(\mathrm{H\alpha}\) の線幅が広いデータを抽出し、それらを詳細に解析しました。
 その中には当然 LRDs も含まれています。
@@ -171,8 +172,8 @@ BH* の概念図。中心部に降着を起こしている BH があり、その
 <a href="/atmos/absorption_line_coeff">電子散乱</a>の効果を除外して残った輝線のコア部分は、全輝線プロファイルに対する単純なガウシアンフィットより幅がおよそ 10 倍狭くなります。
 これにより、推定される BH 質量が 1/100 倍小さくなります。
 高赤方偏移での BH 質量の成長やその BH 質量の個数密度の問題を、やわらげる可能性を示したのです。<br />
-<a href="https://www.nature.com/articles/s41586-026-10846-4">Naidu et al. (2026)</a> では、\(z \sim 7.8\) にある天体 MoM-BH<em>-1 に注目しました。
-これを BH</em> でモデル化したところ、BH* と近傍の伴銀河を重ね合わせることで、LRD を説明できるとしました。
+<a href="https://www.nature.com/articles/s41586-026-10846-4">Naidu et al. (2026)</a> では、\(z \sim 7.8\) にある天体 MoM-BH*-1 に注目しました。
+これを BH* でモデル化したところ、BH* と近傍の伴銀河を重ね合わせることで、LRD を説明できるとしました。
 加えて、\(\mathrm{H\beta}\) 輝線において、二重ピークを発見しました。</p>
 
 <p><img src="/assets/images/compact/little_red_dots_07.png" alt="" /><br />
@@ -183,10 +184,10 @@ BH* の概念図。中心部に降着を起こしている BH があり、その
 またこの論文では、MoM-BH*-1 の<a href="/atmos/continuous_spectrum#451-balmer-jump">バルマーブレイク強度</a>は 7.7 程度であると報告しています。</p>
 
 <p><img src="/assets/images/compact/little_red_dots_07_1.png" alt="" /><br />
-<a href="https://www.nature.com/articles/s41586-026-10846-4">Naidu et al. (2026)</a> より。右図は MOM-BH*-1・その他の LRDs・典型的な銀河の<a href="/atmos/continuous_spectrum#451-balmer-jump">バルマーブレイク強度</a>を比較したもの。
+<a href="https://www.nature.com/articles/s41586-026-10846-4">Naidu et al. (2026)</a> より。右図は MoM-BH*-1・その他の LRDs・典型的な銀河の<a href="/atmos/continuous_spectrum#451-balmer-jump">バルマーブレイク強度</a>を比較したもの。
 点線は、ダストなし恒星集団での最大強度を表示している。</p>
 
-<p>典型的な 初期質量関数 (IMF) を仮定したダストなしの恒星系では最大でも 3、<a href="/atmos/spectrum#恒星のスペクトル型">バルマーブレイク</a>が最も強い A 型星のみの極限的な場合でも 5 であり、これらの値を大きく上回ります。
+<p>典型的な 初期質量関数 (IMF) を仮定したダストなしの恒星系では最大でも 3、<a href="/atmos/spectrum#恒星のスペクトル型">バルマーブレイク</a>が最も強い A 型星のみの極限的な場合でも 5 より小さな値であり、これらの値を大きく上回ります。
 このような理由から、LRDs は通常の恒星では説明できないことも示したのです。</p>
 
 <p class="note">A 型星の有効温度は 8000 - 10000 K とされており、<a href="/atmos/spectrum#恒星のスペクトル型">バルマー系列</a>を生み出す \(n=2\) のエネルギー準位の電子が多く存在する環境です。
@@ -233,7 +234,7 @@ BH* と違うのは、その内部構造です。
 すると全ての進化経路で<a href="/stellar/evolution_protostar_premainsequence#前主系列段階-pre-main-sequence-stage">林トラック</a>を辿ることが示されたのです。</p>
 
 <p><img src="/assets/images/compact/little_red_dots_09.png" alt="" /><br />
-<a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae3　713">Santarelli et al. (2026)</a> より。左図は、中心の BH 質量を \(10^4 M_\odot, 10^5 M_\odot, 10^6 M_\odot\) とした場合の、HR 図上での進化経路。右図は中心 BH の時間変化。図中の星マークは、中心 BH の質量が準恒星全体の質量の 10% 程度に達したときを表す。</p>
+<a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae3713">Santarelli et al. (2026)</a> より。左図は、中心の BH 質量を \(10^4 M_\odot, 10^5 M_\odot, 10^6 M_\odot\) とした場合の、HR 図上での進化経路。右図は中心 BH の時間変化。図中の星マークは、中心 BH の質量が準恒星全体の質量の 10% 程度に達したときを表す。</p>
 
 <p>初期段階では準恒星全体が収縮し、HR 図上を左方向に水平に移動します。
 これはケルビン・ヘルムホルツ時間スケールで起こり、0.1 Myr 程度で後期段階に移行します。
@@ -249,7 +250,7 @@ BH* と違うのは、その内部構造です。
 すなわち、AGN 周囲に存在する高密度のガスは熱平衡状態になっておらず、透過してきた光は、光源である中心 BH やその近傍の降着円盤の温度を反映しています。
 しかし準恒星は恒星物理の範疇であり、<a href="/atmos/lte#34-local-thermodynamic-equilibrium-lte">放射は完全に熱化されている</a>と考えられます。
 外部に放出される放射は黒体放射 (あるいは黒体を修正したもの) で、BH 質量などの中心の情報を、直接測定することはできません。
-<a href="/atmos/eddington_app">エディントン近似</a>の仮定や、準恒星の安定性から間接的に推定するしかありません。
+<a href="/stellar/radiative_energy_transfer#エディントン光度-eddington-luminosity">エディントン降着限界</a>の仮定や、準恒星の安定性から間接的に推定するしかありません。
 代わりに、長年培われてきた恒星大気の理論から、そのスペクトルを得ることができます。
 中心 BH の質量の違いやより適切な恒星大気モデルを考慮することで、より柔軟に観測を説明することが可能です。
 また、このモデルは LRDs の起源だけでなく、同時に初期 SMBH がどのように作られたかという問題も一挙に解決するものとして、注目を集めています。
@@ -303,9 +304,9 @@ BH* と違うのは、その内部構造です。
 <p><img src="/assets/images/compact/little_red_dots_11.png" alt="" /><br />
 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae548d">Inayoshi et al. (2026)</a> より。</p>
 
-<h3 id="脈動する超大質量星-nandal--loeb-2026-nandal-et-al-2026"><a href="/stellar/mira_post_agb#ミラ型脈動と質量放出">脈動</a>する超大質量星 (<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3">Nandal &amp; Loeb (2026)</a>, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3">Nandal et al. (2026)</a>)</h3>
+<h3 id="脈動する超大質量星-nandal--loeb-2026-nandal-et-al-2026">脈動する超大質量星 (<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3">Nandal &amp; Loeb (2026)</a>, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3">Nandal et al. (2026)</a>)</h3>
 
-<p>\(10^5 M_\odot\) 程度の質量をもつ pop-III SMS が<a href="/stellar/mira_post_agb#ミラ型脈動と質量放出">脈動</a>を起こすことで、それに伴って質量放出を行います。
+<p>\(10^5 M_\odot\) 程度の質量をもつ pop-III SMS が脈動を起こすことで、それに伴って質量放出を行います。
 これによりコンパクトなガス殻を形成することができます。
 準恒星は中心部に BH が存在しますが、この SMS は BH をまだ持ちません。</p>
 
@@ -350,7 +351,6 @@ BH* と違うのは、その内部構造です。
 [21] <a href="https://www.nature.com/articles/s41586-026-10846-4">Naidu et al., 2026, “A gas-enshrouded and gas-reddened black hole at cosmic dawn”</a><br />
 [22] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3">Nandal et al., 2026, “Pulsational Mass Loss from Supermassive Stars Creates the Compact Shells of Little Red Dots”</a><br />
 [23] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3">Nandal &amp; Loeb, 2026, “Supermassive Stars Match the Spectral Signatures of JWST’s Little Red Dots”</a><br />
-[24] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3">Onoue et al., 2023, “A Candidate for the Least-massive Black Hole in the First 1.1 Billion Years of the Universe”</a><br />
 [25] <a href="https://www.nature.com/articles/s41586-025-09900-4">Rusakov et al., 2026, “Little red dots as young supermassive black holes in dense ionized cocoons”</a><br />
 [26] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8">Sacchi &amp; Bogdán, 2025, “Chandra Rules Out Super-Eddington Accretion Models for Little Red Dots”</a><br />
 [27] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae3713">Santarelli et al., 2026, “Evolutionary Tracks and Spectral Properties of Quasi-stars and Their Correlation with Little Red Dots”</a><br />

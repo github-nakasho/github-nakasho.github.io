@@ -144,7 +144,7 @@ BH* では、これまで AGN で考えられてきたドップラー運動に�
 [電子散乱](/atmos/absorption_line_coeff)の効果を除外して残った輝線のコア部分は、全輝線プロファイルに対する単純なガウシアンフィットより幅がおよそ 10 倍狭くなります。
 これにより、推定される BH 質量が 1/100 倍小さくなります。
 高赤方偏移での BH 質量の成長やその BH 質量の個数密度の問題を、やわらげる可能性を示したのです。  
-[Naidu et al. (2026)](https://www.nature.com/articles/s41586-026-10846-4) では、$$z \sim 7.8$$ にある天体 MoM-BH*-1 に注目しました。
+[Naidu et al. (2026)](https://www.nature.com/articles/s41586-026-10846-4) では、$$z \sim 7.8$$ にある天体 MoM-BH\*-1 に注目しました。
 これを BH* でモデル化したところ、BH* と近傍の伴銀河を重ね合わせることで、LRD を説明できるとしました。
 加えて、$$\mathrm{H\beta}$$ 輝線において、二重ピークを発見しました。
 
@@ -225,6 +225,8 @@ BH* の場合、観測で得られるスペクトルは、AGN 連続光が高密
 中心 BH の質量の違いやより適切な恒星大気モデルを考慮することで、より柔軟に観測を説明することが可能です。
 また、このモデルは LRDs の起源だけでなく、同時に初期 SMBH がどのように作られたかという問題も一挙に解決するものとして、注目を集めています。
 準恒星は、超大質量星 (SuperMassive Star: SMS) の中心が重力崩壊することで形成されると考えられており、[Begelman et al. (2006)](https://academic.oup.com/mnras/article/370/1/289/1026607), [Begelman et al. (2008)](https://academic.oup.com/mnras/article/387/4/1649/1091917)などで以前から研究されてきました。
+さらに、準恒星はその有効温度によって不安定になる領域が存在し、脈動を起こすことも示唆されています ([Cantiello et al. (2026)](https://iopscience.iop.org/article/10.3847/2041-8213/ae4729))。
+これにより 10 - 30 年周期の動径方向振動が起こるとされ、LRDs には稀に変光を示すものもあるとする観測結果に合致します。
 このような理由から、準恒星モデルも LRD の有力候補として挙げられています。  
 しかし、準恒星モデルにも問題が残ります。
 実は LRDs にはヘリウム輝線の存在も観測されており、準恒星だけではこれを説明できません。
@@ -293,35 +295,36 @@ $$10^5 M_\odot$$ 程度の質量をもつ pop-III SMS が[脈動](/stellar/mira_
 [1] [Begelman et al., 2006, "Formation of supermassive black holes by direct collapse in pre-galactic haloes"](https://academic.oup.com/mnras/article/370/1/289/1026607?login=false)  
 [2] [Begelman et al., 2008, "Quasi-stars: accreting black holes inside massive envelopes"](https://academic.oup.com/mnras/article/387/4/1649/1091917?login=false)  
 [3] [Begelman & Dexter, 2025, "Little Red Dots as Late-stage Quasi-stars"](https://iopscience.iop.org/article/10.3847/1538-4357/ae274a)  
-[4] [Chang et al., 2026, "Impact of resonance, Raman, and Thomson scattering on hydrogen line formation in Little Red Dots"](https://academic.oup.com/mnras/article/545/4/staf2131/8362050?login=false)  
-[5] [Chisholm et al., 2026, "Little Red Dots as Globular Clusters in Formation"](https://iopscience.iop.org/article/10.3847/2041-8213/ae6dae)  
-[6] [Furtak et al., 2023, "JWST UNCOVER: Extremely Red and Compact Object at zphot ≃ 7.6 Triply Imaged by A2744"](https://iopscience.iop.org/article/10.3847/1538-4357/acdc9d)  
-[7] [Furtak et al., 2025, "Investigating photometric and spectroscopic variability in the multiply imaged little red dot A2744-QSO1"](https://www.aanda.org/articles/aa/full_html/2025/06/aa54110-25/aa54110-25.html)  
-[8] [Inayoshi et al., 2024, "Weakness of X-rays and Variability in High-redshift AGNs with Super-Eddington Accretion"](https://arxiv.org/abs/2412.03653v1)  
-[9] [Inayoshi & Ho, 2025, "A Critical Evaluation of the Physical Nature of the Little Red Dots"](https://arxiv.org/abs/2512.03130)  
-[10] [Inayoshi & Maiolino, 2025, "Extremely Dense Gas around Little Red Dots and High-redshift Active Galactic Nuclei: A Nonstellar Origin of the Balmer Break and Absorption Features"](https://iopscience.iop.org/article/10.3847/2041-8213/adaebd)  
-[11] [Inayoshi et al., 2026, "The Emergence of Little Red Dots from Binary Massive Black Holes"](https://iopscience.iop.org/article/10.3847/1538-4357/ae548d)  
-[12] [Jiang et al., 2025, "Formation of the Little Red Dots from the Core Collapse of Self-interacting Dark Matter Halos"](https://iopscience.iop.org/article/10.3847/2041-8213/ae247a)  
-[13] [Kido et al., 2025, "Black hole envelopes in Little Red Dots"](https://academic.oup.com/mnras/article/544/4/3407/8314134?login=false)  
-[14] [Kocevski et al., 2023, "Hidden Little Monsters: Spectroscopic Identification of Low-mass, Broad-line AGNs at z > 5 with CEERS"](https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0)  
-[15] [Kokubo & Harikane, 2025, "Challenging the Active Galactic Nucleus Scenario for JWST/NIRSpec Little Red Dot and Non–Little Red Dot Broad Hα Emitters in Light of Nondetection of NIRCam Photometric Variability and X-Ray"](https://iopscience.iop.org/article/10.3847/1538-4357/ae119e)  
-[16] [Labbé et al., 2023, "A population of red candidate massive galaxies ~600 Myr after the Big Bang"](https://www.nature.com/articles/s41586-023-05786-2)  
-[17] [Li et al., 2025, "Little Red Dots: Rapidly Growing Black Holes Reddened by Extended Dusty Flows"](https://iopscience.iop.org/article/10.3847/1538-4357/ada5fb)  
-[18] [Liu et al., 2025, "The Balmer Break and Optical Continuum of Little Red Dots from Super-Eddington Accretion"](https://iopscience.iop.org/article/10.3847/1538-4357/ae0c19)  
-[19] [Matthee et al., 2024, "Little Red Dots: An Abundant Population of Faint Active Galactic Nuclei at z ∼ 5 Revealed by the EIGER and FRESCO JWST Surveys"](https://iopscience.iop.org/article/10.3847/1538-4357/ad2345)  
-[20] [Naidu et al., 2026, "A gas-enshrouded and gas-reddened black hole at cosmic dawn"](https://www.nature.com/articles/s41586-026-10846-4)  
-[21] [Nandal et al., 2026, "Pulsational Mass Loss from Supermassive Stars Creates the Compact Shells of Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3)  
-[22] [Nandal & Loeb, 2026, "Supermassive Stars Match the Spectral Signatures of JWST’s Little Red Dots"](https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3)  
-[23] [Onoue et al., 2023, "A Candidate for the Least-massive Black Hole in the First 1.1 Billion Years of the Universe"](https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3)  
-[24] [Rusakov et al., 2026, "Little red dots as young supermassive black holes in dense ionized cocoons"](https://www.nature.com/articles/s41586-025-09900-4)  
-[25] [Sacchi & Bogdán, 2025, "Chandra Rules Out Super-Eddington Accretion Models for Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8)  
-[26] [Santarelli et al., 2026, "Evolutionary Tracks and Spectral Properties of Quasi-stars and Their Correlation with Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae3713)  
-[27] [Setton et al., 2025, "Little Red Dots at an Inflection Point: Ubiquitous V-shaped Turnover Consistently Occurs at the Balmer Limit"](https://iopscience.iop.org/article/10.3847/1538-4357/ae1500)  
-[28] [Takasao & Inayoshi, 2026, "A Magnetized Black Hole Envelope Model for Little Red Dots"](https://arxiv.org/abs/2605.21589)  
-[29] [Torralba et al., 2026, "A Black Hole Star at Cosmic Noon: Extreme Balmer Break, Photospheric Continuum, and Broad Absorption by Thick Winds in a Little Red Dot at z = 1.7"](https://iopscience.iop.org/article/10.3847/2041-8213/ae7bfd)  
-[30] [Vaida & Farber, 2026, "Little red dots: the assembly of early supermassive black holes in the JWST Era"](https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2026.1779045/full)  
-[31] [Wang et al., 2025, "RUBIES: JWST/NIRSpec Confirmation of an Infrared-luminous, Broad-line Little Red Dot with an Ionized Outflow"](https://iopscience.iop.org/article/10.3847/1538-4357/adc1ca)  
-[32] [播金優一, "JWST を使った最遠方銀河探査"](https://www.asj.or.jp/jp/activities/geppou/item/118-3_144r.pdf)  
-[33] [sorae, "初期宇宙の「小さな赤い点」の正体は？　分厚いガスに包まれた巨大なブラックホールか"](https://sorae.info/astronomy/20260616-lrd-glimpse-17775.html)  
+[4] [Cantiello et al., 2026, "Pulsational Instability of Quasi-stars: Interpreting the Variability of Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae4729)  
+[5] [Chang et al., 2026, "Impact of resonance, Raman, and Thomson scattering on hydrogen line formation in Little Red Dots"](https://academic.oup.com/mnras/article/545/4/staf2131/8362050?login=false)  
+[6] [Chisholm et al., 2026, "Little Red Dots as Globular Clusters in Formation"](https://iopscience.iop.org/article/10.3847/2041-8213/ae6dae)  
+[7] [Furtak et al., 2023, "JWST UNCOVER: Extremely Red and Compact Object at zphot ≃ 7.6 Triply Imaged by A2744"](https://iopscience.iop.org/article/10.3847/1538-4357/acdc9d)  
+[8] [Furtak et al., 2025, "Investigating photometric and spectroscopic variability in the multiply imaged little red dot A2744-QSO1"](https://www.aanda.org/articles/aa/full_html/2025/06/aa54110-25/aa54110-25.html)  
+[9] [Inayoshi et al., 2024, "Weakness of X-rays and Variability in High-redshift AGNs with Super-Eddington Accretion"](https://arxiv.org/abs/2412.03653v1)  
+[10] [Inayoshi & Ho, 2025, "A Critical Evaluation of the Physical Nature of the Little Red Dots"](https://arxiv.org/abs/2512.03130)  
+[11] [Inayoshi & Maiolino, 2025, "Extremely Dense Gas around Little Red Dots and High-redshift Active Galactic Nuclei: A Nonstellar Origin of the Balmer Break and Absorption Features"](https://iopscience.iop.org/article/10.3847/2041-8213/adaebd)  
+[12] [Inayoshi et al., 2026, "The Emergence of Little Red Dots from Binary Massive Black Holes"](https://iopscience.iop.org/article/10.3847/1538-4357/ae548d)  
+[13] [Jiang et al., 2025, "Formation of the Little Red Dots from the Core Collapse of Self-interacting Dark Matter Halos"](https://iopscience.iop.org/article/10.3847/2041-8213/ae247a)  
+[14] [Kido et al., 2025, "Black hole envelopes in Little Red Dots"](https://academic.oup.com/mnras/article/544/4/3407/8314134?login=false)  
+[15] [Kocevski et al., 2023, "Hidden Little Monsters: Spectroscopic Identification of Low-mass, Broad-line AGNs at z > 5 with CEERS"](https://iopscience.iop.org/article/10.3847/2041-8213/ace5a0)  
+[16] [Kokubo & Harikane, 2025, "Challenging the Active Galactic Nucleus Scenario for JWST/NIRSpec Little Red Dot and Non–Little Red Dot Broad Hα Emitters in Light of Nondetection of NIRCam Photometric Variability and X-Ray"](https://iopscience.iop.org/article/10.3847/1538-4357/ae119e)  
+[17] [Labbé et al., 2023, "A population of red candidate massive galaxies ~600 Myr after the Big Bang"](https://www.nature.com/articles/s41586-023-05786-2)  
+[18] [Li et al., 2025, "Little Red Dots: Rapidly Growing Black Holes Reddened by Extended Dusty Flows"](https://iopscience.iop.org/article/10.3847/1538-4357/ada5fb)  
+[19] [Liu et al., 2025, "The Balmer Break and Optical Continuum of Little Red Dots from Super-Eddington Accretion"](https://iopscience.iop.org/article/10.3847/1538-4357/ae0c19)  
+[20] [Matthee et al., 2024, "Little Red Dots: An Abundant Population of Faint Active Galactic Nuclei at z ∼ 5 Revealed by the EIGER and FRESCO JWST Surveys"](https://iopscience.iop.org/article/10.3847/1538-4357/ad2345)  
+[21] [Naidu et al., 2026, "A gas-enshrouded and gas-reddened black hole at cosmic dawn"](https://www.nature.com/articles/s41586-026-10846-4)  
+[22] [Nandal et al., 2026, "Pulsational Mass Loss from Supermassive Stars Creates the Compact Shells of Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae82f3)  
+[23] [Nandal & Loeb, 2026, "Supermassive Stars Match the Spectral Signatures of JWST’s Little Red Dots"](https://iopscience.iop.org/article/10.3847/1538-4357/ae32f3)  
+[24] [Onoue et al., 2023, "A Candidate for the Least-massive Black Hole in the First 1.1 Billion Years of the Universe"](https://iopscience.iop.org/article/10.3847/2041-8213/aca9d3)  
+[25] [Rusakov et al., 2026, "Little red dots as young supermassive black holes in dense ionized cocoons"](https://www.nature.com/articles/s41586-025-09900-4)  
+[26] [Sacchi & Bogdán, 2025, "Chandra Rules Out Super-Eddington Accretion Models for Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/adf5c8)  
+[27] [Santarelli et al., 2026, "Evolutionary Tracks and Spectral Properties of Quasi-stars and Their Correlation with Little Red Dots"](https://iopscience.iop.org/article/10.3847/2041-8213/ae3713)  
+[28] [Setton et al., 2025, "Little Red Dots at an Inflection Point: Ubiquitous V-shaped Turnover Consistently Occurs at the Balmer Limit"](https://iopscience.iop.org/article/10.3847/1538-4357/ae1500)  
+[29] [Takasao & Inayoshi, 2026, "A Magnetized Black Hole Envelope Model for Little Red Dots"](https://arxiv.org/abs/2605.21589)  
+[30] [Torralba et al., 2026, "A Black Hole Star at Cosmic Noon: Extreme Balmer Break, Photospheric Continuum, and Broad Absorption by Thick Winds in a Little Red Dot at z = 1.7"](https://iopscience.iop.org/article/10.3847/2041-8213/ae7bfd)  
+[31] [Vaida & Farber, 2026, "Little red dots: the assembly of early supermassive black holes in the JWST Era"](https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2026.1779045/full)  
+[32] [Wang et al., 2025, "RUBIES: JWST/NIRSpec Confirmation of an Infrared-luminous, Broad-line Little Red Dot with an Ionized Outflow"](https://iopscience.iop.org/article/10.3847/1538-4357/adc1ca)  
+[33] [播金優一, "JWST を使った最遠方銀河探査"](https://www.asj.or.jp/jp/activities/geppou/item/118-3_144r.pdf)  
+[34] [sorae, "初期宇宙の「小さな赤い点」の正体は？　分厚いガスに包まれた巨大なブラックホールか"](https://sorae.info/astronomy/20260616-lrd-glimpse-17775.html)  
 
 {% include adsense.html %}

@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 恒星進化についての概説 -主系列星とその進化-
-parent: 恒星物理学
+title: 主系列星とその進化
+parent: 恒星進化についての概説
+grand_parent: 恒星物理学
 math: mathjax3
 permalink: /stellar/evolution_mainsequence
-nav_order: 7
+nav_order: 3
 ---
 
 {: .no_toc }
@@ -18,7 +19,7 @@ nav_order: 7
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=1cea0e65f198098664e273dc87bb11aa"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4769916434&linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254131178&linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137796&linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+{% include adsense.html %}
 
 # 主系列星とその進化
 
@@ -33,7 +34,8 @@ nav_order: 7
 連星系を恒星する主系列星に対しては質量が求められるため、質量と半径、および質量と光度の関係を求めることができます。
 下図はそのようにして得られる質量-光度関係を表したものです。
 
-![](assets/images/stellar/evolution_mainsequence_01.png)
+![](/assets/images/stellar/evolution_mainsequence_01.png)  
+[Stellar Interiors](https://link.amazon/B0f2rPUpo) より。  
 
 主系列星の光度は質量により大きく変化しますが、半径はあまり変わりません。
 それら関係は
@@ -52,7 +54,7 @@ $$
 この性質は、星団の年齢決定に利用されます。
 次の図はプレアデス星団・ヒアデス星団・NGC188星団のHR図を並べたものです。
 
-![](assets/images/stellar/evolution_mainsequence_02.png)
+![](/assets/images/stellar/evolution_mainsequence_02.png)
 
 最も明るい主系列星の明るさがこの順に暗くなっており、右側の星団ほど昔に生まれた星団であることがわかります。  
 比較的小質量の主系列星は、単に矮星(dwarfs)と呼ばれることもあります。
@@ -67,7 +69,7 @@ pp-chain反応によるエネルギー発生率の温度依存性は4乗程度�
 この違いは、中心付近の構造に現れてきます。
 大・中質量星の中心領域は対流が起き、その対流領域で元素組成が均一になるように混合が起こります。
 
-![](assets/images/stellar/evolution_mainsequence_03.png)
+![](/assets/images/stellar/evolution_mainsequence_03.png)
 
 小質量星では中心部が輻射平衡でガスの運動がないのに対し、外層では対流が起きています。
 これは、ガスの不透明度が温度が下がるにつれて大きくなり、輻射によるエネルギー輸送効率が下がるためです。
@@ -85,7 +87,12 @@ pp-chain反応によるエネルギー発生率の温度依存性は4乗程度�
 特にB型で速く、高速時点の効果により赤道付近からガスが飛び散り、星周ガスとなります。
 そのため、スペクトルに輝線が見られるBe星も存在します。
 また高速自転星の内部では、ゆっくりとした還流(meridional circulation)が発生することが理論的に予測されており、ある程度は星の内部が混合されていることが予想されていますが、この現象を定量的に扱う理論は未だ固まっていません。
-また、進化に伴う恒星内部の角運動量分布の変化の取り扱いも難しい課題となっています。  
+また、進化に伴う恒星内部の角運動量分布の変化の取り扱いも難しい課題となっています。
+下図は、種々のスペクトル型を持つ恒星の自転速度の、典型的な値を示したものです。
+
+![](/assets/images/stellar/evolution_mainsequence_04.png)  
+[Stellar Rotation](https://link.amazon/B0iHhGUiy) より。横軸はスペクトル型、縦軸は自転速度 (具体的には $$\langle v_e \sin i \rangle$$) をとったもの。  
+
 有効温度が1万度程度のA型星には、300G-35kGの非常に強い磁場を持つ($$10^4$$G=1 Tesla; 地磁気は$$\lesssim 1$$G)、金属吸収線が卓越したA型特異星(Ap星)が存在します。
 これはA型星の約10%と言われています。
 この強磁場は、化石(fossil)磁場だと考えられています。
@@ -97,8 +104,9 @@ pp-chain反応によるエネルギー発生率の温度依存性は4乗程度�
 
 ## 参考文献
 
-[1] [Kurtz, 2022, "Asteroseismology across the HR diagram"](https://arxiv.org/abs/2201.11629)  
-[2] [天文学辞典, 光度階級](https://astro-dic.jp/luminosity-class/)  
-[3] [野本憲一, 佐藤勝彦, 定金晃三, "シリーズ現代の天文学 恒星"](https://amzn.to/3tithNI)  
+[1] [Hansen, Kawaler & Trimble, "Stellar Interiors: Physical Principles, Structure, and Evolution"](https://link.amazon/B0f2rPUpo)  
+[2] [Tassoul, "Stellar Rotation"](https://link.amazon/B0iHhGUiy)  
+[3] [天文学辞典, 光度階級](https://astro-dic.jp/luminosity-class/)  
+[4] [野本憲一, 佐藤勝彦, 定金晃三, "シリーズ現代の天文学 恒星"](https://amzn.to/3tithNI)  
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=1cea0e65f198098664e273dc87bb11aa"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4769916434&linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254131178&linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137796&linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+{% include adsense.html %}

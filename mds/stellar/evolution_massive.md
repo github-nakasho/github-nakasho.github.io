@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 恒星進化についての概説 -質量が非常に大きな恒星の進化-
-parent: 恒星物理学
+title: 大質量星の進化
+parent: 恒星進化についての概説
+grand_parent: 恒星物理学
 math: mathjax3
 permalink: /stellar/evolution_massive
-nav_order: 9
+nav_order: 5
 ---
 
 {: .no_toc }

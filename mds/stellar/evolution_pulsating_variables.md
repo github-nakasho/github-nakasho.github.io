@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 恒星進化についての概説 -脈動変光星-
-parent: 恒星物理学
+title: 脈動変光星
+parent: 恒星進化についての概説
+grand_parent: 恒星物理学
 math: mathjax3
 permalink: /stellar/evolution_pulsating_variables
-nav_order: 10
+nav_order: 6
 ---
 
 {: .no_toc }

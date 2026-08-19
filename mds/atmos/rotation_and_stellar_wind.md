@@ -18,7 +18,7 @@ nav_order: 31
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07MJ9D486&linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4065213541&linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe> 
+{% include adsense.html %}
 
 # 自転の効果と恒星風の影響
 
@@ -136,6 +136,8 @@ $$G(\Delta \lambda / \Delta \lambda_L)$$の形を下図に示します。
 
 ![](/assets/images/atmos/rotation_and_stellar_wind_03.png)
 
+{% include adsense.html %}
+
 高速自転星のスペクトル線は自転によって広がりますが、このときの吸収線内の各波長は星表面の投影面の$$y$$座標に対応します。
 すなわち、太陽以外の恒星は点光源としてしか観測されませんが、高速自転星の場合には表面をある程度分解して見ることができると言えるでしょう。
 大きな黒点や星の振動により表面に温度や速度のむらができている場合、吸収線の輪郭に凸凹が形成され、それが時間とともに移動していく現象が観測されます。
@@ -174,4 +176,4 @@ $$G(\Delta \lambda / \Delta \lambda_L)$$の形を下図に示します。
 [2] [Sánchez et al., 2022, "Hard-state Optical Wind during the Discovery Outburst of the Black Hole X-Ray Dipper MAXI J1803-298"](https://iopscience.iop.org/article/10.3847/2041-8213/ac502f)  
 [3] [野本憲一, 定金晃三, 佐藤勝彦, "シリーズ現代の天文学, 恒星"](https://amzn.to/459XnR9)  
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07MJ9D486&linkId=cf08395b92edbc3008af3fe58ea781ee"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=f2cef8280e4add7a9a9bea6f337796f9"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4065213541&linkId=ba0451bf97056aabf5b90e257853b7d9"></iframe> 
+{% include adsense.html %}

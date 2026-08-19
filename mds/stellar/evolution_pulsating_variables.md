@@ -19,10 +19,71 @@ nav_order: 6
 {:toc}
 </details>
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=1cea0e65f198098664e273dc87bb11aa"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4769916434&linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254131178&linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137796&linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+{% include adsense.html %}
 
 # 脈動変光星
 
-工事中...
+恒星は、その進化の途中で何回か外層が不安定となり、脈動を起こす段階を経験します。
+外層の振動 (脈動) により表面温度が変化し、星の光度が周期的に変化します。
+これらを脈動変光星 (pulsating variable stars) と呼びます。
+また外層の脈動に伴うドップラー効果により、スペクトル線の波長 (ときにはスペクトル線の輪郭) が周期的に変化する現象が観測されています。  
+脈動変光星にはさまざまなタイプが存在し、周期も 1 年以上のものから、数分足らずのものまであります。
+また、ただ一つの周期で脈動しているものと、同時に複数の周期の脈動が励起されているものとがあります。
+後者の場合、脈動振幅にうなり現象が観測されます。
+恒星の脈動の観測により、恒星の内部構造に対する有益な情報が得られます。
+恒星の脈動は多くの場合に振幅が大きくないため、脈動が恒星の構造と進化に影響することはほとんどありません。
+しかし、例外も存在します。
+その一つは AGB 星が最終段階に起こす脈動で、ミラ型脈動と言われます。
+これは非常に大きな振幅を持つため、この型の脈動は AGB 星からの大きな質量放出を引き起こし、それが AGB 星の寿命を決定します。
+セファイド型脈動変光星は周期光度関係を持ち、これは銀河の距離測定に用いられます。  
+このような脈動変光星は、その変光周期・進化段階によりグループ分けされており、HR 図上のそれぞれかたまった領域に存在します。
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4535607273&linkId=1cea0e65f198098664e273dc87bb11aa"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4769916434&linkId=bcd899a3fcbddde6902d952cfbcb362d"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254131178&linkId=df352ef9ddcb1ed7bd7daf1d11bb2ff7"></iframe> <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=nakasho010d-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4254137796&linkId=fbe4a9946970c35d3676fad8f7c7d872"></iframe>
+![](/assets/images/stellar/evolution_pulsating_variables_01.png)  
+["Stellar Interiors"](https://link.amazon/B0f2rPUpo) より。  
+
+脈動周期は大雑把に、半径が大きな星ほど長い傾向にあります。
+短いものは白色矮星の 100 秒程度、長いものではミラ型星の数年になるものまで様々あり、非常に広い範囲を持ちます。
+次の表は、脈動変光星グループの代表的な例についてそれらの特性を表したものです。
+
+|型|$$T_\mathrm{eff}$$ [K]|周期|振幅 [mag]|
+|:--|:--|:--|:--|
+|ミラ, 半規則型| $$\sim 3000$$| $$10^2 - 10^3$$d| $$-10$$|
+|セファイド| $$\sim 6000$$| $$1-100$$d| $$0.3 - 2$$|
+|RR ライリ| $$\sim 7000$$| $$0.1-1$$d| $$0.3 - 1.5$$|
+|ベータ・セファイド| $$\sim 2.5 \times 10^4$$| $$4-6$$hr| $$0.01 - 0.3$$|
+|SPB| $$\sim 1.5 \times 10^4$$| $$\sim 1-2$$d| $$0.01 - 0.02$$|
+|$$\delta$$ Sct| $$\sim 7500$$| $$1-6$$hr| $$0.01 - 0.8$$|
+|$$\gamma$$ Dor| $$\sim 7000$$| $$1-2$$d| $$- 0.1$$|
+|roAp| $$\sim 8000$$| $$4-15$$min| $$- 0.02$$|
+|sdBV (short)| $$30000-35000$$| $$100-200$$s| $$- 0.01$$|
+|sdBV (long)| $$25000-30000$$| $$\sim 1$$hr| $$- 0.01$$|
+|DAV, DBV| $$10000, 20000$$| $$100 - 1000$$s| $$0.02 - 0.3$$|
+|PG1159| $$10^5$$| $$400-1700$$s| $$\sim 0.1$$|
+|太陽| $$5800$$| $$\sim 5$$min| |
+
+ミラ、半規則型は赤色超巨星の脈動によるもので、周期が非常に長いものです。
+セファイド型と RR ライリ 型変光星は、ヘリウム燃焼段階にある脈動星です。
+これは距離の決定に利用されることが多いです。
+$$\beta$$ Cephei stars, Slowly Pulsating B (SPB) stars, $$\delta$$ Sct, $$\gamma$$ Dor, rapdly oscillating Ap (roAp: 高速振動する A 型特異星) は、種磁場星の脈動変光星です。
+Subdwarf B variables (sdBV) はヘリウム燃焼段階にある恒星ですが、質量放出により外層が非常に薄くなっているため、半径が小さく高温の表面温度を持つ星です。
+sdBV 星は 1990 年代後半になって発見された脈動変光星のグループです。
+DAV, DBV, DOV は白色矮星の脈動変光星グループです。
+太陽の 5 分振動は、外層の対流運動によって励起された振動であり、非常にたくさんの固有振動の重ね合わせとなっています。
+太陽振動の正確な振動数の観測は、太陽内部の構造を推測することを可能にし、これを日震学 (Helioseismology) と呼びます。
+また最近では、他の恒星でも太陽型の振動が観測されつつあります。  
+星の脈動には、大きく分けて球対称的な動径脈動 (radial pulsations) と、非球対称的な非動径脈動 (non-radial pulsations または non-radial oscillations) とがあります。
+大まかに、主にセファイド型星・ミラ型星などの巨星・超巨星では動径脈動が起こり、主系列星・白色矮星などでは非動径脈動も現れてきます。
+白色矮星での動径脈動は、現在まで確認されていません。  
+動径脈動の周期は、自由落下時間スケールで起こります。
+よってこれは星の平均密度のルート $$\sqrt{R^3 / M}$$ に比例します。
+この関係を周期-平均密度関係と呼びます。
+この関係により、主系列脈動星よりも巨星の脈動の周期が長いことが理解できます。
+しかし、この関係に従わないようなものも存在します。
+例えば、白色矮星の自由落下時間は数秒ですが、白色矮星の脈動周期は 100 - 1000 秒程度です。
+これは白色矮星の脈動が、長周期の g-モード非動径振動であるためです。
+
+## 参考文献
+
+[1] [Hansen, Kawaler & Trimble, "Stellar Interiors: Physical Principles, Structure, and Evolution"](https://link.amazon/B0f2rPUpo)  
+
+{% include adsense.html %}

@@ -1,0 +1,121 @@
+I"g!
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#自由電子散乱による輝線プロファイルの変化" id="markdown-toc-自由電子散乱による輝線プロファイルの変化">自由電子散乱による輝線プロファイルの変化</a>    <ol>
+      <li><a href="#トムソン散乱による周波数シフト" id="markdown-toc-トムソン散乱による周波数シフト">トムソン散乱による周波数シフト</a></li>
+      <li><a href="#有限回の散乱による効果" id="markdown-toc-有限回の散乱による効果">有限回の散乱による効果</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="自由電子散乱による輝線プロファイルの変化">自由電子散乱による輝線プロファイルの変化</h1>
+
+<p><a href="/compact/little_red_dots">LRDs (Little Red Dots)</a> では、\(\mathrm{H} \alpha\) 輝線のプロファイルが指数関数型になることが知られています。
+これは自由電子による、多数回の<a href="/astroelec/thomson">トムソン散乱</a>を経たことによるものです。
+ここでは、なぜ輝線の多数回の散乱が指数関数プロファイルになるのかを説明してみましょう。
+ここでは <a href="/compact/little_red_dots">LRDs</a> の起源として考えられているブラックホール星 (BH*) や 準恒星と同様の状況を考えるとします。
+すなわち、中心に BH があるようなガス球を考え、その中心から輝線光子が出ているとします。
+輝線光子は複数回の散乱を経験したのち、擬似光球面に到達します。
+その外側では散乱を受けることなく、無限遠方にいる観測者に届きます。</p>
+
+<p><img src="/assets/images/astroelec/line_emission_scattering_01.png" alt="" /></p>
+
+<h2 id="トムソン散乱による周波数シフト"><a href="/astroelec/thomson">トムソン散乱</a>による周波数シフト</h2>
+
+<p>静止している電子による<a href="/astroelec/thomson">トムソン散乱</a>の場合、入射電磁波の周波数は変化することなく、散乱されます (弾性散乱)。
+しかし、電子が熱運動などにより運動している場合、ドップラー効果により周波数が変化します。
+実験室系 (観測者静止系) での入射光子の周波数を \(\nu\)、そして入射光子の進行方向の単位ベクトルを \(\mathbf{n}_\mathrm{in}\) としましょう。
+そして、実験室系での電子の速度を \(\mathbf{v}\) とすると、電子静止系でみたときの周波数は</p>
+
+\[\nu' 
+= \nu \left( 1 - \frac{\mathbf{n}_\mathrm{in} \cdot \mathbf{v}}{c}\right) \tag{1}\]
+
+<p>のようになります。
+ここで、電子静止系での物理量にはプライム ( \('\) ) をつけています。
+電子静止系では弾性散乱と考えられるため、散乱後の周波数は \(\nu_\mathrm{out}' = \nu'\) です。
+これを再び実験室系に戻すことで、トムソン散乱後の周波数 \(\nu_\mathrm{out}\) が</p>
+
+\[\begin{align}
+\nu_\mathrm{out} 
+&amp;= \nu_\mathrm{out}' \left( 1 + \frac{\mathbf{n}_\mathrm{out} \cdot \mathbf{v} }{c}\right) 
+= \nu \left( 1 - \frac{\mathbf{n}_\mathrm{in} \cdot \mathbf{v}}{c}\right) \left( 1 + \frac{\mathbf{n}_\mathrm{out} \cdot \mathbf{v} }{c}\right) \notag \\
+&amp;= \nu \left( 1 + \frac{\mathbf{n}_\mathrm{out} - \mathbf{n}_\mathrm{in}}{c} \cdot \mathbf{v} + \mathcal{O} (v^2 / c^2) \right) \tag{2}
+\end{align}\]
+
+<p>のように求まります。
+\(\mathcal{O} (v^2 /c^2)\) の項を無視すると、1 回の散乱による周波数のシフト \(\Delta \nu = \nu_\mathrm{out} - \nu\) は</p>
+
+\[\frac{\Delta \nu}{\nu} 
+= \frac{\mathbf{n}_\mathrm{out} - \mathbf{n}_\mathrm{in}}{c} \cdot \mathbf{v} \tag{3}\]
+
+<p>となります。
+\((\mathbf{n}_\mathrm{out} - \mathbf{n}_\mathrm{in}) \cdot \mathbf{v}\) の平均や分散を計算することで、この系の中で起こる散乱一回での周波数シフトを求めることができます。
+以下ではその詳細な計算には触れず、この周波数シフト \(\Delta \nu\) を用いて、光球から脱出した光子のスペクトルについて議論していきましょう。</p>
+
+<h2 id="有限回の散乱による効果">有限回の散乱による効果</h2>
+
+<p>実際には、光子は電子と正面衝突する場合や、電子に追突する場合などが考えられるため、周波数は増加 (青方偏移) と減少 (赤方偏移) をランダムに繰り返します。
+すなわち、横軸 \(\nu\) の一次元空間で考えたとき、これは一回のステップで \(\Delta \nu = \pm \vert \Delta \nu \vert\) だけ周波数が変化するようなランダムウォークと考えることができます。</p>
+
+<p><img src="/assets/images/astroelec/line_emission_scattering_02.png" alt="" /></p>
+
+<p>全ての光子が同じステップ数だけランダムウォークを行った場合、最終的に得られる分布はガウシアンとなります。
+しかし今の場合、少ない散乱回数で光球面に到達するような光子も考えられます。
+つまり、散乱回数は全ての光子で同じわけではなく、少ない散乱回数の光子もあれば、多くの散乱を経験する光子もあるということです。</p>
+
+<p><img src="/assets/images/astroelec/line_emission_scattering_03.png" alt="" /></p>
+
+<p>そこで、1 回の散乱ごとに光子は確率 \(P\) で 系から脱出するとしましょう。
+するとある光子が 1 回散乱されても系から脱出しないで生き残る確率は \(1-P\)であり、2 回の場合には \((1-P)^2\) です。
+このように考えると、\(N\) 回の散乱後に光子が系にとどまっている確率は \((1-P)^N\) です。
+この値を \(x\) とすると</p>
+
+\[x 
+= (1-P)^N \ \Longrightarrow \ 
+\ln x 
+= \ln (1-P)^N 
+= N \ln (1-P) \ \Longrightarrow \ x 
+= e^{N \ln (1-P)} 
+= e^{-N / N_0} \quad \left( N_0 \equiv - \frac{1}{\ln (1-P)} \right) \tag{4}\]
+
+<p>のように計算することができます。
+\(N\) 回の散乱で辿り着ける最大のスペクトルは \(\nu = N \Delta \nu\) です。
+よって輝線の周波数 \(\nu_0\) から \(\nu\) に到達するには、最低でも \(N \approx \nu / \Delta \nu\) の散乱回数後も、系内にとどまっている必要があります。
+以上から、この系での光子数の分布が</p>
+
+\[n (\nu - \nu_0) 
+\propto e^{-\frac{\nu}{N_0 \Delta \nu}} \tag{5}\]
+
+<p>のように、指数関数型になることがわかります。
+大雑把に定性的な議論を行いましたが、定量的に考えても、同じように指数関数型を得ることができます。
+例えば電子の熱運動をまじめに取り扱う場合、(3)式の \((\mathbf{n}_\mathrm{out} - \mathbf{n}_\mathrm{in}) \cdot \mathbf{v}\) の部分を、マクスウェル・ボルツマン分布から平均・分散を計算することで、系の平均的な振る舞いを調べることができます。
+この場合の周波数シフトの大きさの分散は、およそ電子の熱運動 \(v_\mathrm{th} = \sqrt{2k_B T / m_e}\) 程度になり、以降は同じ議論を用いることができます。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://amzn.to/453u5pE">Rybicki &amp; Lightman, “Radiative Processes in Astrophysics”</a><br />
+[2] <a href="https://link.amazon/B05G6Rh1s">Longair, “High Energy Astrophysics”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -1,0 +1,296 @@
+I"<[
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#constrained-transport-ct-法" id="markdown-toc-constrained-transport-ct-法">Constrained Transport (CT) 法</a>    <ol>
+      <li><a href="#evans--hawley-1988-の提案" id="markdown-toc-evans--hawley-1988-の提案">Evans &amp; Hawley (1988) の提案</a>        <ol>
+          <li><a href="#基本アイデア" id="markdown-toc-基本アイデア">基本アイデア</a></li>
+          <li><a href="#磁場の発散" id="markdown-toc-磁場の発散">磁場の発散</a></li>
+          <li><a href="#emf-の計算" id="markdown-toc-emf-の計算">EMF の計算</a></li>
+        </ol>
+      </li>
+      <li><a href="#各提案手法の比較" id="markdown-toc-各提案手法の比較">各提案手法の比較</a>        <ol>
+          <li><a href="#balsara--spicer-1999-の方法-算術平均" id="markdown-toc-balsara--spicer-1999-の方法-算術平均">Balsara &amp; Spicer (1999) の方法: 算術平均</a></li>
+          <li><a href="#gardiner--stone-2005-の手法-ct-contact" id="markdown-toc-gardiner--stone-2005-の手法-ct-contact">Gardiner &amp; Stone (2005) の手法: CT-Contact</a></li>
+          <li><a href="#londrillo--del-zanna-2004-の手法-uct-hll" id="markdown-toc-londrillo--del-zanna-2004-の手法-uct-hll">Londrillo &amp; Del Zanna (2004) の手法: UCT-HLL</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="constrained-transport-ct-法">Constrained Transport (CT) 法</h1>
+
+<p>多次元磁気流体計算をそのまま実行すると、\(\nabla \cdot \mathbf{B} = 0\) が破れ、人工的な力が発生します。
+ここでは、それを補正する手法の一つである Constrained Transport (CT) 法についてまとめました。</p>
+
+<h2 id="evans--hawley-1988-の提案"><a href="https://ui.adsabs.harvard.edu/abs/1988ApJ...332..659E/abstract">Evans &amp; Hawley (1988)</a> の提案</h2>
+
+<h3 id="基本アイデア">基本アイデア</h3>
+
+<p>CT 法を考案した原論文として知られる論文で、その引用数は 1500 回以上に上ります (2026 年 8月現在)。
+まずは、この <a href="https://ui.adsabs.harvard.edu/abs/1988ApJ...332..659E/abstract">Evans &amp; Hawley (1988)</a> を読み解いていきましょう。<br />
+磁気流体力学の<a href="/mhd/induction">磁場の時間発展の方程式 (誘導方程式)</a>は、次のように書かれるのでした。</p>
+
+\[\frac{\partial \mathbf{B}}{\partial t} 
+= - \nabla \times \mathbf{E} 
+= \nabla \times (\mathbf{v} \times \mathbf{B}) \tag{1}\]
+
+<p>この時間・空間微分の部分を、素朴に離散化してみましょう。
+まずは時間微分を離散化すると</p>
+
+\[\mathbf{B}^{n+1} 
+= \mathbf{B}^n - \Delta t [ \nabla \times \mathbf{E} ]^n \tag{2}\]
+
+<p>のようになります。
+ここで上付き添字の \(n\) は、時間ステップが \(n\) であることを表すものです。
+そして、(2)式の空間微分の部分も離散化したものを考えます。
+すると離散化により生まれる \(n\) ステップ目の誤差が \(n + 1\) にも加算されることがわかります。
+結果として磁場 \(\mathbf{B}\) には、時間ステップとともに誤差が積算していき、初期に保たれていた \(\nabla \cdot \mathbf{B} = 0\) が破られるという問題が出てきます。
+そこで、<a href="https://ui.adsabs.harvard.edu/abs/1988ApJ...332..659E/abstract">Evans &amp; Hawley (1988)</a> は、<a href="/mhd/induction">誘導方程式</a>を積分形で考えることにしました。
+(1)式の両辺を、面 \(S\) で積分すると</p>
+
+\[\frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{S} 
+= \iint_S \nabla \times \mathbf{E} \cdot d\mathbf{S} 
+\underbrace{=}_{ストークスの定理} \oint_{\partial S} \mathbf{E} \cdot d\mathbf{s} \tag{3}\]
+
+<p>のようになります。
+最左辺は面 \(S\) を貫く磁束の時間変化を表します。
+すなわち(3)式は、磁束の時間変化が、その面のふち(エッジ)で起電力 (EelectroMotive Force: EMF) を線積分することで与えられることを意味します。
+<a href="https://ui.adsabs.harvard.edu/abs/1988ApJ...332..659E/abstract">Evans &amp; Hawley (1988)</a> では、この事実を自然に数値計算に取り込むために、次のような変数配置を行うことを提案しました。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">物理量</th>
+      <th style="text-align: left">配置箇所</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\rho, \mathbf{v}, E\)</td>
+      <td style="text-align: left">セル中心</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(b_x, b_y, b_z\)</td>
+      <td style="text-align: left">面中心 (ただしそれぞれに垂直な面)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{E}_x, \mathcal{E}_y, \mathcal{E}_z\)</td>
+      <td style="text-align: left">辺中心</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/assets/images/simulation/ct_01.png" alt="" /><br />
+各物理量の定義位置を表した図。密度・速度・全エネルギーはセル中心 (青点)、磁場の各成分は面の中心、電場の各成分は辺の中心で定義されている。</p>
+
+<p>ここで、面中心で定義される磁場を \(\mathbf{b} = (b_x, b_y ,b_z)\)、そして辺中心で定義される EMF を \(\boldsymbol{\mathcal{E}}=(\mathcal{E}_x, \mathcal{E}_y, \mathcal{E}_z)\) のように書き、これまでセル中心で定義されていたものとは違うことを強調しています。
+これらの定義と (2) 式より、例えば \((i-1/2, j, k)\) の場所にある \(x\) 軸に垂直な面での磁場 \(b_x\) は</p>
+
+\[b_{x, i-1/2, j, k}^{n+1} 
+= b_{x, i-1/2, j, k}^n - \Delta t \left( \frac{\mathcal{E}_{z, i-1/2, j+1/2, k}^n - \mathcal{E}_{z, i-1/2, j-1/2, k}^n}{\Delta y} - \frac{\mathcal{E}_{y, i-1/2, j, k+1/2}^n - \mathcal{E}_{y, i-1/2, j, k-1/2}^n}{\Delta z}\right) \tag{4}\]
+
+<p>のように時間更新することができます。
+同様に</p>
+
+\[b_{x, i+1/2, j, k}^{n+1} 
+= b_{x, i+1/2, j, k}^n - \Delta t \left( \frac{\mathcal{E}_{z, i+1/2, j+1/2, k}^n - \mathcal{E}_{z, i+1/2, j-1/2, k}^n}{\Delta y} - \frac{\mathcal{E}_{y, i+1/2, j, k+1/2}^n - \mathcal{E}_{y, i+1/2, j, k-1/2}^n}{\Delta z}\right) \tag{5}\]
+
+\[b_{y, i, j-1/2, k}^{n+1} 
+= b_{y, i, j-1/2, k}^n - \Delta t \left( \frac{\mathcal{E}_{x, i, j-1/2, k+1/2}^n - \mathcal{E}_{x, i, j-1/2, k-1/2}^n}{\Delta z} - \frac{\mathcal{E}_{z, i+1/2, j-1/2, k}^n - \mathcal{E}_{z, i-1/2, j-1/2, k}^n}{\Delta x}\right) \tag{6}\]
+
+\[b_{y, i, j+1/2, k}^{n+1} 
+= b_{y, i, j+1/2, k}^n - \Delta t \left( \frac{\mathcal{E}_{x, i, j+1/2, k+1/2}^n - \mathcal{E}_{x, i, j+1/2, k-1/2}^n}{\Delta z} - \frac{\mathcal{E}_{z, i+1/2, j+1/2, k}^n - \mathcal{E}_{z, i+1/2, j-1/2, k}^n}{\Delta x}\right) \tag{7}\]
+
+\[b_{z, i, j, k-1/2}^{n+1} 
+= b_{x, i, j, k-1/2}^n - \Delta t \left( \frac{\mathcal{E}_{y, i+1/2, j, k-1/2}^n - \mathcal{E}_{y, i-1/2, j, k-1/2}^n}{\Delta x} - \frac{\mathcal{E}_{x, i, j+1/2, k-1/2}^n - \mathcal{E}_{x, i, j-1/2, k-1/2}^n}{\Delta y}\right) \tag{8}\]
+
+\[b_{z, i, j, k+1/2}^{n+1} 
+= b_{x, i, j, k+1/2}^n - \Delta t \left( \frac{\mathcal{E}_{y, i+1/2, j, k+1/2}^n - \mathcal{E}_{y, i-1/2, j, k+1/2}^n}{\Delta x} - \frac{\mathcal{E}_{x, i, j+1/2, k+1/2}^n - \mathcal{E}_{x, i, j-1/2, k+1/2}^n}{\Delta y}\right) \tag{9}\]
+
+<p>を得ます。</p>
+
+<h3 id="磁場の発散">磁場の発散</h3>
+
+<p>この手法を用いたときの、\(\nabla \cdot \mathbf{B}\) の時間発展を見てみましょう。</p>
+
+\[\begin{align}
+(\nabla \cdot \mathbf{B})_{i, j, k}^{n+1} 
+&amp;= \frac{b_{x, i+1/2, j, k}^{n+1} - b_{x, i-1/2, j, k}^{n+1}}{\Delta x} + \frac{b_{y, i, j+1/2, k}^{n+1} - b_{x, i, j-1/2, k}^{n+1}}{\Delta y} + \frac{b_{z, i, j, k+1/2}^{n+1} - b_{x, i, j, k-1/2}^{n+1}}{\Delta z} \notag \\
+&amp;\underbrace{=}_{(4), (5), (6), (7), (8), (9)} \cdots \notag \\
+&amp;= \frac{b_{x, i+1/2, j, k}^n - b_{x, i-1/2, j, k}^n}{\Delta x} + \frac{b_{y, i, j+1/2, k}^n - b_{x, i, j-1/2, k}^n}{\Delta y} + \frac{b_{z, i, j, k+1/2}^n - b_{x, i, j, k-1/2}^n}{\Delta z} \notag \\
+&amp;= (\nabla \cdot \mathbf{B})_{i, j, k}^n \tag{10}
+\end{align}\]
+
+<p>途中の計算は長くなるため省略しましたが、例えば (5) 式から出てくる \(- \frac{\Delta t}{\Delta x \Delta y} \mathcal{E}_{z, i+1/2, j + 1/2, k}^n\) は、(7) 式から出てくる \(\frac{\Delta t}{\Delta y \Delta x} \mathcal{E}_{z, i+1/2, j+1/2, k}^n\) と打ち消し合います。
+このようにして EMF の項が全て打ち消しあうことで、最終的に (10) 式を得ます。
+すなわち、初期状態に \(\nabla \cdot \mathbf{B} = 0\) となるような磁場を準備した場合、それがその後の任意の時間ステップでも維持されます。
+発生するのは、離散化により生まれる丸め誤差のみです。</p>
+
+<h3 id="emf-の計算">EMF の計算</h3>
+
+<p>CT 法の基本的なアイディアは、ここまでで尽きていると言っても良いでしょう。
+しかし、実際の計算では (4) - (9) の EMF をどのように計算するかが問題になります。
+<a href="/simulation/hlld">HLLD 法</a>などのリーマン解法で計算されるのは、面中心のフラックスです。
+セル中心の値に加え、面中心のフラックスの情報も用いることで、正しくエッジでの EMF を計算する必要があります。</p>
+
+<h2 id="各提案手法の比較">各提案手法の比較</h2>
+
+<p>(1) 式より</p>
+
+\[\begin{align}
+&amp;\frac{\partial \mathbf{B}}{\partial t} + \nabla \times \mathbf{E} 
+= \mathbf{0} \notag \\
+&amp;\Longrightarrow \ 
+\frac{\partial B_x}{\partial t} + \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} 
+= 0, \ 
+\frac{\partial B_y}{\partial t} + \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} 
+= 0, \
+\frac{\partial B_z}{\partial t} + \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} 
+= 0 \tag{11}
+\end{align}\]
+
+<p>のように書けることから、\(B_y\) に対する \(x\) 方向の フラックス \(F_{[B_y]}\) と \(B_x\) に対する \(y\) 方向のフラックス \(G_{[B_x]}\) がそれぞれ</p>
+
+\[F_{[B_y]} = - E_z, \quad G_{[B_x]} = E_z \tag{12}\]
+
+<p>のように与えられることがわかります。
+以降では、この関係式を用いて説明していきます。
+また以降では簡単のため、2次元で各手法を解説します。</p>
+
+<h3 id="balsara--spicer-1999-の方法-算術平均"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999198961538?via%3Dihub">Balsara &amp; Spicer (1999)</a> の方法: 算術平均</h3>
+
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999198961538?via%3Dihub">Balsara &amp; Spicer (1999)</a> は、エッジでの EMF を求めるために、単純な平均を用いることを提案しました。</p>
+
+<p><img src="/assets/images/simulation/ct_02.png" alt="" /><br />
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999198961538?via%3Dihub">Balsara &amp; Spicer (1999)</a> の手法の説明図。黒点はセル中心 \((i, j), (i+1, j), (i, j+1), (i+1, j+1)\) を表す。また青矢印とマゼンダ矢印はそれぞれ、\(x\) 方向と \(y\) 方向のフラックスを表現している。</p>
+
+<p>\(E_{z, i+1/2, j+1/2, k}\) の周囲にある 4 つの \(E_z\) の平均をとります。
+すなわち</p>
+
+\[\begin{align}
+\mathcal{E}_{z, i+1/2, j+1/2, k}^\mathrm{arithm}
+&amp;= \frac{E_{z, i+1/2, j, k} + E_{z, i+1/2, j+1, k} + E_{z, i, j+1/2, k} + E_{z, i+1, j+1/2, k}}{4} \notag \\
+&amp;\underbrace{=}_{(12)} \frac{- F_{[B_y], i+1/2, j, k} - F_{[B_y], i+1/2, j+1, k} + G_{[B_x], i, j+1/2, k} + G_{[B_x], i+1, j+1/2, k}}{4} \tag{13}
+\end{align}\]
+
+<p>のようになります。</p>
+
+<p class="note">各項の符号は、ストークスの周回積分の向きと関係ないことに注意が必要です。</p>
+
+<p>このようにして全てのエッジでの電場を計算すれば、(4) - (9) 式を用いて 1 ステップ後の磁場を計算することができます。<br />
+この手法の長所は、圧倒的に実装が簡単なことです。
+<a href="/simulation/hlld">HLLD 法</a> などの近似リーマン解法を実装したあとであれば、そこから各面を通過するフラックスの磁場成分を抽出し、4つを差し引きして割るという操作だけで済みます。
+また <a href="/simulation/hlld">HLLD 法</a> や <a href="/simulation/hll">HLL 法</a> などの解法に依存せずに用いることができます。
+短所としては、散逸が小さいことから、物理的でない振動が発生します。
+これにより、ループ状の磁場形状が崩れたり、Orszag-Tang の渦問題ではガス圧が負になるなどの不具合が生じます。
+CT 法実装の足がかりとして最初に実装し、テスト問題を解く程度なら問題ありませんが、実用的でない手法と言えるでしょう。</p>
+
+<h3 id="gardiner--stone-2005-の手法-ct-contact"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub">Gardiner &amp; Stone (2005)</a> の手法: CT-Contact</h3>
+
+<p>この手法は、現在の (相対論的効果を含めない) MHD シミュレーションの標準的な手法として用いられています。
+先ほどの手法は 4 つの値を平均する操作からエッジでの電場を計算していましたが、こちらは空間的な再構成から求めます。</p>
+
+<p><img src="/assets/images/simulation/ct_03.png" alt="" /><br />
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub">Gardiner &amp; Stone (2005)</a> の手法の説明図。
+青点は面中心での電場を表している。マゼンダ四角は微分を計算するさらなる中間地点 \((i+1/2, j+1/4), (i+1/2, j+3/4), (i+1/4, j+1/2), (i+3/4, j+1/2)\) を表す。</p>
+
+<p>4 つの境界面それぞれからのテイラー展開として、\(\mathcal{E}_{z, i+1/2, j+1/2, k}\) を表現しましょう。
+このとき、\(i\) と \(i + 1/2\) の中間点として \(i + 1/4\) を定義するなどします。
+すると</p>
+
+\[\mathcal{E}_{z, i+1/2, j+1/2, k} 
+= E_{z, i+1/2, j, k} + \frac{\Delta y}{2} \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+1/4} \tag{14}\]
+
+\[\mathcal{E}_{z, i+1/2, j+1/2, k} 
+= E_{z, i+1/2, j+1, k} - \frac{\Delta y}{2} \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+3/4} \tag{15}\]
+
+\[\mathcal{E}_{z, i+1/2, j+1/2, k} 
+= E_{z, i, j+1/2, k} + \frac{\Delta x}{2} \left( \frac{\partial E_z}{\partial x}\right)_{i+1/4, j+1/2} \tag{16}\]
+
+\[\mathcal{E}_{z, i+1/2, j+1/2, k} 
+= E_{z, i+1, j+1/2, k} - \frac{\Delta x}{2} \left( \frac{\partial E_z}{\partial x}\right)_{i+3/4, j+1/2} \tag{17}\]
+
+<p>です。
+この 4 つの平均をとると</p>
+
+\[\begin{align}
+\mathcal{E}_{z, i+1/2, j+1/2, k} 
+&amp;= \frac{E_{z, i+1/2, j, k} + E_{z, i+1/2, j+1, k} + E_{z, i, j+1/2, k} + E_{z, i+1, j+1/2, k}}{4} \notag \\
+&amp; \qquad + \frac{\Delta y}{8} \left\{ \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+1/4} - \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+3/4} \right\} \notag \\
+&amp; \qquad + \frac{\Delta x}{8} \left\{ \left( \frac{\partial E_z}{\partial x}\right)_{i+1/4, j+1/2} - \left( \frac{\partial E_z}{\partial x}\right)_{i+3/4, j+1/2} \right\} \notag \\
+&amp;\underbrace{=}_{(13)} \mathcal{E}_{z, i+1/2, j+1/2, k}^\mathrm{arithm} + \frac{\Delta y}{8} \left\{ \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+1/4} - \left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+3/4} \right\} \notag \\
+&amp; \qquad + \frac{\Delta x}{8} \left\{ \left( \frac{\partial E_z}{\partial x}\right)_{i+1/4, j+1/2} - \left( \frac{\partial E_z}{\partial x}\right)_{i+3/4, j+1/2} \right\} \tag{18}
+\end{align}\]
+
+<p>を得ます。
+この式において、微分の項をゼロとしたものが、<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999198961538?via%3Dihub">Balsara &amp; Spicer (1999)</a> の方法に一致します。
+この微分の計算を、<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub">Gardiner &amp; Stone (2005)</a> は、次のように風上差分で表現することにしました。</p>
+
+\[\left( \frac{\partial E_z}{\partial y}\right)_{i+1/2, j+1/4} 
+= \frac{1 + s_{i+1/2, j}}{2} \frac{E_{z, i, j+1/2} - E_{z, i, j}}{\Delta y / 2} + \frac{1 - s_{i+1/2, j}}{2} \frac{E_{z, i+1, j+1/2} - E_{z, i+1, j}}{\Delta y / 2} \tag{19}\]
+
+<p>ここで \(s_{i+1/2, j}\) は、面 \((i+1/2, j)\) を通過する流れを \(\pm 1, 0\) で表すものです。
+\(s_{i+1/2, j} = 1\) ならば、流体は \(x &gt; 0\) に向かって (すなわち \(i \rightarrow i+1\) に向かって) 流れており、\(s_{i+1/2, j} = -1\) ならば逆方向となります。
+流れの向きによって、\(i\) での微分を用いるか、\(i+1\) での微分を用いるかを切り替えています。
+もし \(s_{i+1/2, j} = 0\) ならば、\(i\) と \(i + 1\) での微分の平均値を用いる形になっています。</p>
+
+<p><img src="/assets/images/simulation/ct_04.png" alt="" /><br />
+風上差分を説明する図。図は特に、\(s_{i+1/2, j} = 1\) の場合を表す。</p>
+
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub">Gardiner &amp; Stone (2005)</a> の論文では、風向き方向を \(v_{x, i+1/2, j}\) で表現しています。
+しかし、実用上は面 \((i+1/2, j)\) 上で定義される質量フラックス \(F_{[\rho], i+1/2, j} = (\rho v_x)_{i+1/2, j}\) の符号関数を計算したもの \(\mathrm{sign} (F_{[\rho], i+1/2, j})\) で判定するのが良いでしょう。
+このように、接触不連続面 (エントロピー波) がどちらの向きに動いているかを用いることから、この手法を “CT-Contact” と
+この手法の長所は、実装および計算が軽量で済むことです。
+<a href="/simulation/hlld">HLLD 法</a> などの近似リーマン解法により計算されたフラックスと、セル中心のフラックスの差から微分を計算することができます。
+それでありながら、2 次精度手法としては散逸も少ない利点もあります。
+このような利点から、<a href="https://iopscience.iop.org/article/10.1086/588755">Athena</a>/<a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab929b">Athena++</a> などの最先端の MHD コードで採用されており、これを実装する安心感もあります。<br />
+短所としては、微分の計算手法から、精度が空間 2 次精度止まりであることです。
+高次精度化への一般化は考えられておらず、そのためには別の方法を考える必要があります。
+そして、長所の部分で触れたように、微分の計算部分には近似リーマン解法により計算されたフラックスが必要となります。
+すなわち、<a href="/simulation/hll">HLL 法</a> を使うか <a href="/simulation/hlld">HLLD 法</a> を用いるか、はたまた Roe 法を利用するかによって、結果が異なることに注意が必要です。
+理論的な側面では、電場の微分 (19) 式が、この選択則に従うかどうかは自明ではありません。
+「このように計算すれば上手くいく」という経験則にとどまっており、将来的には、理論的・数学的にこの計算手法が妥当であることを検証する必要があるでしょう。</p>
+
+<h3 id="londrillo--del-zanna-2004-の手法-uct-hll"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999103005102?via%3Dihub">Londrillo &amp; Del Zanna (2004)</a> の手法: UCT-HLL</h3>
+
+<p>先ほどの CT-Contact は、経験則的に得たものでしたが、こちらは原理から導出された手法です。
+この手法は今では、一般相対論的な MHD (GRMHD) 計算でよく用いられている手法の一つです。
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999103005102?via%3Dihub">Londrillo &amp; Del Zanna (2004)</a> では、辺上に定義される EMF \(\mathcal{E}_{z, i+1/2, j+1/2}\) を求めるのに \((i, j), (i+1, j), (i, j+1), (i+1, j+1)\) の 4 つの位置が持つ状態から、近似リーマン解法を用いて計算することを提案しました。
+辺上の \(\mathcal{E}_z = (\mathbf{v} \times \mathbf{B})_z = v_x B_y - v_y B_x\) を計算するには、辺上での \(v_x, v_y, B_x, B_y\) の値が必要となります。
+そのために、下図のように</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://ui.adsabs.harvard.edu/abs/1988ApJ...332..659E/abstract">Evans &amp; Hawley, 1988, “Simulation of Magnetohydrodynamic Flows: A Constrained Transport Model”</a><br />
+[] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999198961538?via%3Dihub">Balsara &amp; Spicer, 1999, “A Staggered Mesh Algorithm Using High Order Godunov Fluxes to Ensure Solenoidal Magnetic Fields in Magnetohydrodynamic Simulations”</a><br />
+[] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub">Gardiner &amp; Stone, 2005, “An unsplit Godunov method for ideal MHD via constrained transport”</a><br />
+[] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999107005669?via%3Dihub">Gardiner &amp; Stone, 2008, “An unsplit Godunov method for ideal MHD via constrained transport in three dimensions”</a><br />
+[] <a href="https://iopscience.iop.org/article/10.1086/588755">Stone et al., 2008, “Athena: A New Code for Astrophysical MHD”</a><br />
+[] <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab929b">Stone et al., 2020, “Athena++ Adaptive Mesh Refinement Framework: Design and Magnetohydrodynamic Solvers”</a><br />
+[] <a href="https://link.amazon/B05g3abjX">冨坂幸治, 花輪知幸, 牧野淳一郎, “シミュレーション天文学”</a><br />
+[] <a href="https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html">CANS+ ドキュメント</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

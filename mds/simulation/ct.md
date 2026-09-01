@@ -73,9 +73,9 @@ $$
 |$$\mathcal{E}_x, \mathcal{E}_y, \mathcal{E}_z$$|辺中心|
 
 ![](/assets/images/simulation/ct_01.png)  
-各物理量の定義位置を表した図。密度・速度・全エネルギーはセル中心 (青点)、磁場の各成分は面の中心、電場の各成分は辺の中心で定義されている。  
+各物理量の定義位置を表した図。密度・速度・全エネルギーはセル中心 (青点)、磁場の各成分は面の中心 (マゼンダ矢印)、電場の各成分は辺の中心 (緑矢印) で定義されている。  
 
-ここで、面中心で定義される磁場を $$\mathbf{b} = (b_x, b_y ,b_z)$$、そして辺中心で定義される EMF を $$\boldsymbol{\mathcal{E}}=(\mathcal{E}_x, \mathcal{E}_y, \mathcal{E}_z)$$ のように書き、これまでセル中心で定義されていたものとは違うことを強調しています。
+ここで、面中心で定義される磁場を $$\mathbf{b} = (b_x, b_y ,b_z)$$、そして辺中心で定義される EMF を $$\boldsymbol{\mathcal{E}}=(\mathcal{E}_x, \mathcal{E}_y, \mathcal{E}_z)$$ のように書き、これまでセル中心で定義されていたものとは違うことを強調しています。またこのような格子配置を、スタガード格子 (staggered grid) と呼びます。
 これらの定義と (2) 式より、例えば $$(i-1/2, j, k)$$ の場所にある $$x$$ 軸に垂直な面での磁場 $$b_x$$ は 
 
 $$
@@ -266,7 +266,7 @@ $$s_{i+1/2, j} = 1$$ ならば、流体は $$x > 0$$ に向かって (すなわ�
 しかし、実用上は面 $$(i+1/2, j)$$ 上で定義される質量フラックス $$F_{[\rho], i+1/2, j} = (\rho v_x)_{i+1/2, j}$$ の符号関数を計算したもの $$\mathrm{sign} (F_{[\rho], i+1/2, j})$$ で判定するのが良いでしょう。
 このように、接触不連続面 (エントロピー波) がどちらの向きに動いているかを用いることから、この手法を "CT-Contact" と呼びます。
 この手法の長所は、実装および計算が軽量で済むことです。
-[HLLD 法](/simulation/hlld) などの近似リーマン解法により計算されたフラックスと、セル中心のフラックスの差から微分を計算することができます。
+[HLLD 法](/simulation/hlld) などの近似リーマン解法により計算された面中心でのフラックスと、セル中心のフラックスの差から微分を計算することができます。
 それでありながら、2 次精度手法としては散逸が少ない利点もあります。
 このような利点から、[Athena](https://iopscience.iop.org/article/10.1086/588755)/[Athena++](https://iopscience.iop.org/article/10.3847/1538-4365/ab929b) などの最先端の MHD コードで採用されており、これを実装する安心感もあります。  
 短所としては、微分の計算手法から、精度が空間 2 次精度止まりであることです。
@@ -291,9 +291,8 @@ $$s_{i+1/2, j} = 1$$ ならば、流体は $$x > 0$$ に向かって (すなわ�
 辺 $$(i + 1/2, j + 1/2)$$ を中心に、その周囲に定義される磁場と速度から補間を行う。
 
 辺 $$(i + 1/2, j + 1/2)$$ を中心として、図のように上側から時計回りに N, NE, E, SE, S, SW, W, NW と方向を定義します。
-辺 $$(i + 1/2, j + 1/2)$$
-$$v_x, v_y$$ はセル中心で定義されている量であるため、そこから再構成を行うと、$$v^\mathrm{NE}, v^\mathrm{SE}, v^\mathrm{SW}, v^\mathrm{NW}$$ のように補間を行うことができます。
-同様に、磁場 $$B_x, B_y$$ についても NE, SE, SW, NW の値を補間から求める必要があります。
+$$v_x, v_y$$ はセル中心で定義されている量であるため、そこから斜め方向に補間を行うことで、$$v^\mathrm{NE}, v^\mathrm{SE}, v^\mathrm{SW}, v^\mathrm{NW}$$ を推定することができます。
+同様に、磁場 $$B_x, B_y$$ についても NE, SE, SW, NW の値を補間から求める必要がありますが、次のような議論から N, E, S, W の 4 方向のみで十分であることがわかります。
 $$B_x$$ は $$x$$ 方向に垂直な面の中心、$$B_y$$ は $$y$$ 方向に垂直な面の中心、でそれぞれ定義されている量です。
 $$x$$ 方向の 1 次元のみ考えた場合
 
@@ -532,7 +531,180 @@ $$
 
 ### [Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) の手法: UCT-HLLD
 
-(工事中...)
+[Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) では、まず [HLL](/simulation/hll) や [HLLD](/simulation/hlld) のように中間状態の数を固定して考えず、一般化された UCT スキームを考察しました。
+まずフラックスが、次のような形に整理できると仮定します。
+
+$$
+F
+= a_x^L F^L + a_x^R F^R - (d_x^R B_y^R - d_x^L B_y^L) \tag{43}
+$$
+
+$$a_x^L + a_x^R = 1$$ のように、重みが規格化されているとします。
+第一項はフラックスによるもの、第二項は磁場の左右の状態に依存する部分です。
+(43) 式において、$$L \rightarrow \mathrm{W}, R \rightarrow \mathrm{E}, F \rightarrow \bar{v}_x B_y$$ としましょう。
+
+$$
+(\bar{v}_x B_y)_{i+1/2, j+1/2} 
+= a_x^\mathrm{W} (\bar{v}_x B_y)^\mathrm{W} + a_x^\mathrm{E} (\bar{v}_x B_y)^\mathrm{E} - (d_x^\mathrm{E} B_y^\mathrm{E} - d_x^\mathrm{W} B_y^\mathrm{W}) \tag{43}
+$$
+
+です。
+ここで、$$\bar{v}_x$$ は $$y$$ 面上で風上化された速度であり、(38), (39) 式のように計算されます。
+同様に $$B_y$$ は $$y$$ 面内 (E, W) で定義される物理量であり、$$x$$ 面内 (N, S) では定義されていません。
+よって、$$\bar{v}_x, B_y$$ については、$$x$$ 方向を考慮する必要がないことがわかります。
+同様に $$L \rightarrow \mathrm{S}, R \rightarrow \mathrm{N}, F \rightarrow \bar{v}_y B_x$$ とすると
+
+$$
+(\bar{v}_y B_x)_{i+1/2, j+1/2} 
+= a_y^\mathrm{N} (\bar{v}_y B_x)^\mathrm{N} + a_y^\mathrm{S} (\bar{v}_y B_x)^\mathrm{S} - (d_y^\mathrm{N} B_x^\mathrm{N} - d_y^\mathrm{S} B_x^\mathrm{S}) \tag{44}
+$$
+
+と求まります。
+以上から、フラックスの形を (43) 式のように仮定した場合
+
+$$
+\begin{align}
+\mathcal{E}_{z, i+1/2, j+1/2} 
+&= - (\bar{v}_x B_y)_{i+1/2, j+1/2} + (\bar{v}_y B_x)_{i+1/2, j+1/2} \notag \\
+&= - a_x^\mathrm{W} (\bar{v}_x B_y)^\mathrm{W} - a_x^\mathrm{E} (\bar{v}_x B_y)^\mathrm{E} + a_y^\mathrm{N} (\bar{v}_y B_x)^\mathrm{N} + a_y^\mathrm{S} (\bar{v}_y B_x)^\mathrm{S} \notag \\
+& \qquad + (d_x^\mathrm{E} B_y^\mathrm{E} - d_x^\mathrm{W} B_y^\mathrm{W}) - (d_y^\mathrm{N} B_x^\mathrm{N} - d_y^\mathrm{S} B_x^\mathrm{S}) \tag{45}
+\end{align}
+$$
+
+のように、辺上での EMF を求めることができました。
+係数 $$d$$ は元々 (43) 式で導入されたものであり、辺上については求められていません。
+そこで次のような単純平均から、求めることとしましょう。
+
+$$
+d_x^\mathrm{W} 
+= \frac{1}{2} (d_{x, i+1/2, j}^\mathrm{L} + d_{x, i+1/2, j+1}^\mathrm{L}), \quad 
+d_x^\mathrm{E} 
+= \frac{1}{2} (d_{x, i+1/2, j}^\mathrm{R} + d_{x, i+1/2, j+1}^\mathrm{R}) \tag{46}
+$$
+
+$$
+d_y^\mathrm{S} 
+= \frac{1}{2} (d_{y, i, j+1/2}^\mathrm{L} + d_{y, i+1, j+1/2}^\mathrm{L}), \quad 
+d_y^\mathrm{N} 
+= \frac{1}{2} (d_{y, i, j+1/2}^\mathrm{R} + d_{y, i+1, j+1/2}^\mathrm{R}) \tag{47}
+$$
+
+ここまでは一般的な扱いをしてきましたが、ここからは [HLLD](/simulation/hlld) に限定して話を進めていきます。
+[HLLD](/simulation/hlld) では、リーマンファンを 5 つの波が作る 4 つの中間状態で近似します。
+
+![](/assets/images/simulation/ct_06.png)  
+HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を考える。  
+
+$$\lambda^L, \lambda^R$$ をそれぞれ左右に進行する速進磁気音波速度で伝わる衝撃波面、$$\lambda^{L \ast}, \lambda^{R \ast}$$ をそれぞれアルヴェーン波で伝わる回転不連続面、そしてその間に $$\lambda^\ast$$ で伝播する接触不連続面があります。
+例えば、$$x$$ 方向一次元のみを考えましょう。
+すると $$B_y$$ は接触不連続面では連続で、$$\lambda^L, \lambda^{L \ast}, \lambda^{R \ast}, \lambda^R$$ ではジャンプを経験します。
+この事実から、フラックスをロー法のように書くと
+
+$$
+\begin{align}
+F 
+&= \frac{1}{2} \left\{ F^L + F^R - \vert \lambda^L \vert (B_y^{L\ast} - B_y^L) - \vert \lambda^{L \ast} \vert (B_y^{\ast \ast} - B_y^{L \ast}) \right. \notag \\
+& \left. \qquad - \vert \lambda^{R \ast} \vert (B_y^{R\ast} - B_y^{\ast \ast}) - \vert \lambda^R \vert (B_y^R - B_y^{R \ast}) \right\}
+\end{align} \tag{48}
+$$
+
+まず速進磁気音波速度で伝わる衝撃波面をまたぐ $$B_y$$ のジャンプを、$$B_y^L, B_y^R$$ に比例する形に書き直しましょう。
+すなわち [HLLD のページ](/simulation/hlld)の (15), (17) 式を、次のような形に整理します。
+
+$$
+B_y^{s \ast} - B_y^s 
+= B_y^s \chi^s, \qquad \chi^s 
+= \frac{(v_x^s - \lambda^\ast)(\lambda^s - \lambda^\ast)}{(\lambda^{s\ast} - \lambda^s)(\lambda^{s\ast} + \lambda^s - 2 \lambda^\ast)} \tag{49}
+$$
+
+ここで $$s = L, R$$ です。
+$$\ast \ast$$ 領域の状態は、アルヴェーンモードに挟まれており、HLL 平均で与えられます。
+よって
+
+$$
+B_y^{\ast \ast} 
+= \frac{\lambda^{R \ast} B_y^{R \ast} - \lambda^{L \ast} B_y^{L \ast} + F^{L \ast} - F^{R \ast}}{\lambda^{R \ast} - \lambda^{L \ast}} \tag{50}
+$$
+
+これらを (48) 式に入れてガシガシと計算し、(43) 式のように整理すると、次のようになります。
+
+$$
+a^L 
+= \frac{1 + \nu^\ast}{2}, \quad 
+a^R 
+= \frac{1 - \nu^\ast}{2}, \quad \nu^\ast 
+= \frac{\vert \lambda^{R\ast} \vert - \vert \lambda^{L \ast}\vert}{\lambda^{R \ast} - \lambda^{L \ast}} 
+= \frac{\lambda^{R \ast} + \lambda^{L \ast}}{\vert \lambda^{R\ast} \vert + \vert \lambda^{L \ast} \vert} \tag{51}
+$$
+
+$$
+d^s 
+= \frac{1}{2} (\nu^s - \nu^\ast) \tilde{\chi}^s + \frac{1}{2} (\vert \lambda^{s\ast} \vert - \nu^\ast \lambda^{s \ast} ) \tag{52}
+$$
+
+$$
+\tilde{\chi}^s 
+= (\lambda^{s \ast} - \lambda^s) \chi^s \tag{53}
+$$
+
+$$
+\nu^s 
+= \frac{\vert \lambda^{s \ast} \vert - \vert \lambda^s \vert}{\lambda^{s \ast} - \lambda^s} 
+= \frac{\lambda^{s \ast} + \lambda^s}{\vert \lambda^{s \ast} \vert + \vert \lambda^s \vert} \tag{54}
+$$
+
+$$\nu^s$$ は $$[-1, 1]$$ の風上化のための重みを表し、$$\nu^\ast$$ は 2 つの回転不連続面の非対称性を表す量です。
+[UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll) の場合、(30) 式から
+
+$$
+a^L 
+= \frac{\alpha_x^+}{\alpha_x^+ + \alpha_x^-} 
+= \frac{\alpha^R}{\alpha^R + \alpha^L} \tag{55}
+$$
+
+などのように、$$a^L, a^R$$ は速進磁気音波で伝わる衝撃波面の速度で決定されていたのに対し、UCT-HLLD ではアルヴェーン波速度で決定されます。
+(51) - (54) 式で気をつけなければならないのは、$$B_x$$ がゼロとなるときです。
+$$B_y \rightarrow 0$$ かつ $$B_x^2 \gtrsim \gamma P$$ のとき、$$\lambda^{s\ast} \rightarrow \lambda^s$$ となります。
+そしてこのとき、$$\tilde{\chi}^s \rightarrow (v_x^s - \lambda^\ast) / 2, \nu^s = \pm 1$$ となるため、特別な処方は必要ありません。
+しかし $$B_x \rightarrow 0$$ の場合、$$\lambda^{R \ast}, \lambda^{L \ast} \rightarrow \lambda^\ast$$ のように 2 つの回転波がエントロピーモードに縮退します。
+このとき、$$\tilde{\chi}^s \rightarrow v_x^\ast - \lambda^\ast$$ は正則なままですが、$$\nu^\ast$$ が特によどみ点で不定となります。
+よってこのときは 5 つの波による 4 つの中間状態を用いる [HLLD](/simulation/hlld) ではなく、$$\lambda^\ast$$ をまたいで $$B_y$$ が不連続な 3 波パターンに落とした方が良いでしょう。
+これは [HLLC 法](/simulation/hllc) の考え方に他なりません。
+[Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) では、UCT-HLLC についても式の導出を行なっており、それは上式で $$\nu^\ast = 0$$ とすることで達成できるとしています。
+つまり
+
+$$
+\nu^\ast 
+= \left\{ \begin{array}{ll}
+\frac{\vert \lambda^{R\ast} \vert - \vert \lambda^{L \ast} \vert}{\lambda^{R \ast} - \lambda^{L \ast}} & \mathrm{if} \ \vert \lambda^{R \ast} - \lambda^{L \ast}\vert > \epsilon \vert \lambda^{R} - \lambda^{L}\vert \\
+0 & \mathrm{otherwise}
+\end{array} \right. \tag{56}
+$$
+
+のようにすれば、$$B_x \rightarrow 0$$ の場合も正しく扱うことができます。
+ここで $$\epsilon = 10^{-9}$$ は小さな値です。  
+このようにして求めた $$a^{L, R}, d^{L, R}$$、そして $$\bar{v}_t = a^L v_t^L + a^R v_t^R \ (t = y, z)$$ を (45) 式に代入することで、辺中心で定義された EMF $$\mathcal{E}_{z, i+1/2, j+1/2}$$ を計算することができます。
+先ほど説明したように、$$a^L \rightarrow \frac{\alpha^+}{\alpha^+ + \alpha^-}, a^R \rightarrow \frac{\alpha^-}{\alpha^+ + \alpha^-}, d^L = d^R = \frac{\alpha^+ \alpha^-}{\alpha^+ + \alpha^-}$$ のようにするだけで [UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll) に変更することができます。
+すなわち、同じアルゴリズムで係数部分だけ変更すれば、[UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll) と UCT-HLLD を切り替えることが可能です。  
+UCT-HLLD 手法の最大の長所は、なんといっても散逸の小ささです。
+[Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) では様々なテスト計算を実行しました。
+例えば、MRI シアリングボックス計算では、マクスウェル応力で [UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll) の 3 倍の値を達成し、磁場の散逸の小ささを示しました。
+またカレントシート問題でも、磁気エネルギーが長時間保存される計算結果を示しています。
+「散逸が小さいと数値振動が発生して計算が不安定になりやすいのでは？」という心配もありますが、Orszag-Tang の渦問題なども安定して解く実力も持ちます。
+散逸が小さく実装も容易な手法として、[CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) がありましたが、これは流体部分を解くための近似リーマン解法の特性をそのまま継承するのでした。
+しかし、UCT-HLLD は流体部分でどの近似リーマン解法を用いるかに依存せず、一定の散逸を与えます。
+接触不連続面の伝播速度とアルヴェーン速度を局所的に再定義しさえすれば、ロー法や [HLLC 法](/simulation/hllc) で流体部分を解きつつ、EMF のみ UCT-HLLD にすることができます。
+既存の実装コードへの後付けが容易で、他の部分はイジる必要がないという利点もあります。
+さらに、2 次精度止まりだった [CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) と異なり、再構成演算子の精度を向上させることで、高次スキームに拡張することができます。
+高次精度化が可能という長所は、同系統の手法である [UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll) と同じです。  
+短所としては、実装が複雑なことが挙げられるでしょう。
+伝播する波の計算ののち、$$\chi^s, \nu^s, \nu^\ast$$ の計算も必要です。
+[CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) が質量フラックスの符号で分岐するだけだったことと比べると、実装の手間は数倍に膨れ上がります。
+$$B_x \rightarrow 0$$ では波動の縮退が起こるため、その例外処理も必要です。
+そうまでして苦労して実装した UCT-HLLD でも、実は 2 次精度までなら [CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) と互角の性能になります。
+UCT-HLLD の真価を発揮したい場合には、高次精度化が必須と言えるでしょう。
+
+{% include adsense.html %}
 
 ### [Tóth (2000)](https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub) の手法: Flux-CT
 
@@ -554,7 +726,9 @@ $$
 [8] [Mignone & Del Zanna, 2021, "Systematic construction of upwind constrained transport schemes for MHD"](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub)  
 [9] [Del Zanna et al., 2007, "ECHO: a Eulerian conservative high-order scheme for general relativistic magnetohydrodynamics and magnetodynamics"](https://www.aanda.org/articles/aa/abs/2007/37/aa7093-07/aa7093-07.html)  
 [10] [Porth et al., 2017, "The black hole accretion code"](https://link.springer.com/article/10.1186/s40668-017-0020-2)  
-[11] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
-[12] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
+[11] [Miyoshi & Kusano, 2005, "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics"](https://www.sciencedirect.com/science/article/abs/pii/S0021999105001142?via%3Dihub)  
+[] [Porth et al., 2019, "The Event Horizon General Relativistic Magnetohydrodynamic Code Comparison Project"](https://iopscience.iop.org/article/10.3847/1538-4365/ab29fd)  
+[] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
+[] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
 
 {% include adsense.html %}

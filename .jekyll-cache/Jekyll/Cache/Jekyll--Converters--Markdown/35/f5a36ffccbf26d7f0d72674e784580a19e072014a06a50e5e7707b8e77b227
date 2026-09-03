@@ -1,4 +1,4 @@
-I"4�
+I" �
 <details open="">
   <summary class="text-delta">
     Table of contents
@@ -16,8 +16,8 @@
           <li><a href="#londrillo--del-zanna-2004-の手法-uct-hll" id="markdown-toc-londrillo--del-zanna-2004-の手法-uct-hll">Londrillo &amp; Del Zanna (2004) の手法: UCT-HLL</a></li>
           <li><a href="#del-zanna-et-al-2007-の手法-uct-hll-の改良" id="markdown-toc-del-zanna-et-al-2007-の手法-uct-hll-の改良">Del Zanna et al. (2007) の手法: UCT-HLL の改良</a></li>
           <li><a href="#mignone--del-zanna-2021-の手法-uct-hlld" id="markdown-toc-mignone--del-zanna-2021-の手法-uct-hlld">Mignone &amp; Del Zanna (2021) の手法: UCT-HLLD</a></li>
-          <li><a href="#tóth-2000-の手法-flux-ct" id="markdown-toc-tóth-2000-の手法-flux-ct">Tóth (2000) の手法: Flux-CT</a></li>
           <li><a href="#minoshima-et-al-2019-の手法-ct-flux" id="markdown-toc-minoshima-et-al-2019-の手法-ct-flux">Minoshima et al. (2019) の手法: CT-Flux</a></li>
+          <li><a href="#tóth-2000-の手法-flux-ct" id="markdown-toc-tóth-2000-の手法-flux-ct">Tóth (2000) の手法: flux-CT</a></li>
         </ol>
       </li>
       <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
@@ -546,7 +546,7 @@ d_y^\mathrm{N}
 <a href="/simulation/hlld">HLLD</a> では、リーマンファンを 5 つの波が作る 4 つの中間状態で近似します。</p>
 
 <p><img src="/assets/images/simulation/ct_06.png" alt="" /><br />
-HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を考える。</p>
+HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を考えるが、\(B_y\) は \(\lambda^\ast\) ではジャンプをしないことに注意。</p>
 
 <p>\(\lambda^L, \lambda^R\) をそれぞれ左右に進行する速進磁気音波速度で伝わる衝撃波面、\(\lambda^{L \ast}, \lambda^{R \ast}\) をそれぞれアルヴェーン波で伝わる回転不連続面、そしてその間に \(\lambda^\ast\) で伝播する接触不連続面があります。
 例えば、\(x\) 方向一次元のみを考えましょう。
@@ -556,7 +556,7 @@ HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を�
 \[\begin{align}
 F 
 &amp;= \frac{1}{2} \left\{ F^L + F^R - \vert \lambda^L \vert (B_y^{L\ast} - B_y^L) - \vert \lambda^{L \ast} \vert (B_y^{\ast \ast} - B_y^{L \ast}) \right. \notag \\
-&amp; \left. \qquad - \vert \lambda^{R \ast} \vert (B_y^{R\ast} - B_y^{\ast \ast}) - \vert \lambda^R \vert (B_y^R - B_y^{R \ast}) \right\}
+&amp; \left. \qquad \qquad - \vert \lambda^{R \ast} \vert (B_y^{R\ast} - B_y^{\ast \ast}) - \vert \lambda^R \vert (B_y^R - B_y^{R \ast}) \right\} \notag 
 \end{align} \tag{48}\]
 
 <p>まず速進磁気音波速度で伝わる衝撃波面をまたぐ \(B_y\) のジャンプを、\(B_y^L, B_y^R\) に比例する形に書き直しましょう。
@@ -631,15 +631,75 @@ UCT-HLLD 手法の最大の長所は、なんといっても散逸の小ささ�
 接触不連続面の伝播速度とアルヴェーン速度を局所的に再定義しさえすれば、ロー法や <a href="/simulation/hllc">HLLC 法</a> で流体部分を解きつつ、EMF のみ UCT-HLLD にすることができます。
 既存の実装コードへの後付けが容易で、他の部分はイジる必要がないという利点もあります。
 さらに、2 次精度止まりだった <a href="/simulation/ct#gardiner--stone-2005-の手法-ct-contact">CT-Contact</a> と異なり、再構成演算子の精度を向上させることで、高次スキームに拡張することができます。
-高次精度化が可能という長所は、同系統の手法である <a href="/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll">UCT-HLL</a> と同じです。</p>
+高次精度化が可能という長所は、同系統の手法である <a href="/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll">UCT-HLL</a> と同じです。<br />
+短所としては、実装が複雑なことが挙げられるでしょう。
+伝播する波の計算ののち、\(\chi^s, \nu^s, \nu^\ast\) の計算も必要です。
+<a href="/simulation/ct#gardiner--stone-2005-の手法-ct-contact">CT-Contact</a> が質量フラックスの符号で分岐するだけだったことと比べると、実装の手間は数倍に膨れ上がります。
+\(B_x \rightarrow 0\) では波動の縮退が起こるため、その例外処理も必要です。
+そうまでして苦労して実装した UCT-HLLD でも、実は 2 次精度までなら <a href="/simulation/ct#gardiner--stone-2005-の手法-ct-contact">CT-Contact</a> と互角の性能になります。
+UCT-HLLD の真価を発揮したい場合には、高次精度化が必須と言えるでしょう。</p>
 
-<h3 id="tóth-2000-の手法-flux-ct"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub">Tóth (2000)</a> の手法: Flux-CT</h3>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 
-<p>(工事中…)</p>
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h3 id="minoshima-et-al-2019-の手法-ct-flux"><a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab1a36/meta">Minoshima et al. (2019)</a> の手法: CT-Flux</h3>
 
 <p>(工事中…)</p>
+
+<h3 id="tóth-2000-の手法-flux-ct"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub">Tóth (2000)</a> の手法: flux-CT</h3>
+
+<p>CT 法の考え方がイメージしづらい点として、磁場だけが他の物理量と違う場所で定義されることが挙げられます。
+しかしこの点は実際の実装を困難にします。
+例えば適合格子細分化法 (Adaptive Mesh Refinement: AMR) での粗い格子の値を補間し、細かい格子の値を決定する prolongation において、補間後の細かい格子でも \(\nabla \cdot \mathbf{B} = 0\) を保証するようにしなければなりません。
+また AMR でなくても、境界条件の処理が複雑になるケースがあります。
+さらに、円筒座標や球面座標の場合には、グリッド間隔が異なることや曲率を考慮した CT 法の計算が必要となります。
+そこでスタガードに変数を保持することなく、CT 法と同じ利益を得ることができないかを追求したのが、<a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub">Tóth (2000)</a> で提案された flux-CT と呼ばれる手法です。<br />
+Flux-CT はセル中心の \(\mathbf{B}\) のみを保持する代わりに、\(\nabla \cdot \mathbf{B} =0\) を満たすようにフラックスを平均化する、というものです。
+最初に、<a href="/simulation/ct#balsara--spicer-1999-の手法-算術平均">Balsara &amp; Spicer (1999)</a> の算術平均により、辺での EMF を計算します。</p>
+
+\[\mathcal{E}_{z, i+1/2, j+1/2} 
+= \frac{G_{[B_x], i, j+1/2} + G_{[B_x], i+1, j+1/2} - F_{[B_y], i+1/2, j} - F_{[B_y], i+1/2, j+1}}{4} \tag{57}\]
+
+<p>このようにして得られた EMF を単純に平均することで、再び面上で計算されるフラックスを求めます。</p>
+
+\[\hat{F}_{[B_y], i+1/2, j} 
+= - \frac{1}{2} (\mathcal{E}_{z, i+1/2, j+1/2} + \mathcal{E}_{z, i+1/2, j-1/2}) \tag{58}\]
+
+\[\hat{G}_{[B_x], i, j+1/2} 
+= \frac{1}{2} (\mathcal{E}_{z, i+1/2, j+1/2} + \mathcal{E}_{z, i-1/2, j+1/2}) \tag{59}\]
+
+<p>これらを用い、セル中心の磁場 \(B_x, B_y\) を更新します。</p>
+
+\[B_{x, i, j}^{n+1} 
+= B_{x, i, j}^n - \frac{\Delta t}{\Delta y} (\hat{G}_{i, j+1/2} - \hat{G}_{i, j-1/2}), \quad B_{y, i, j}^{n+1} 
+= B_{y, i, j}^n - \frac{\Delta t}{\Delta x} (\hat{F}_{i+1/2, j} - \hat{F}_{i-1/2, j}) \tag{60}\]
+
+<p>実は、この手法では普通の \(\nabla \cdot \mathbf{B}\)、すなわちセル中心の定義から計算される</p>
+
+\[(\nabla \cdot \mathbf{B})_{i, j}^n 
+= \frac{B_{x, i+1, j}^n - B_{x, i-1, j}^n }{2 \Delta x} + \frac{B_{y, i, j+1}^n - B_{y, i, j-1}^n }{2 \Delta y} \tag{61}\]
+
+<p>は保存されません。
+保存されるのは、セルの角を中心として横方向に平均化された発散</p>
+
+\[(\nabla \cdot \mathbf{B})_{i+1/2, j+1/2}^n 
+= \frac{\frac{B_{x, i+1, j}^n + B_{x, i+1, j+1}^n}{2} - \frac{B_{x, i, j}^n + B_{x, i, j+1}^n}{2}}{\Delta x} + \frac{\frac{B_{y, i, j+1}^n + B_{y, i+1, j+1}^n}{2} - \frac{B_{y, i, j}^n + B_{y, i+1, j+1}^n}{2}}{\Delta y} \tag{62}\]
+
+<p>です。<br />
+長所としては、スタガード変数が不要なことです。
+すでにセル中心の MHD 計算コードを実装している場合、そこにフラックスを修正する部分を書き足すだけで実装が完了します。
+面中心や辺中心を考える必要がなく、GRMHD や曲座標に代表される曲線座標との相性も良い手法です。
+このことから、flux-CT は <a href="https://iopscience.iop.org/article/10.1086/374594">HARM</a> と呼ばれる GRMHD 計算コードで利用されています。<br />
+欠点としては、<a href="/simulation/ct#balsara--spicer-1999-の手法-算術平均">Balsara &amp; Spicer (1999)</a> の算術平均を土台にしており、中心補間による数値振動が発生する可能性を持ちます。
+この手法に <a href="/simulation/ct#gardiner--stone-2005-の手法-ct-contact">CT-Contact</a> や <a href="/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll">UCT-HLL</a>, <a href="/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld">UCT-HLLD</a> を組合せることも可能ですが、そうすると (58), (59) 式のような辺から面へのマッピングの関係が崩れ、(62) 式の \(\nabla \cdot \mathbf{B}\) 保存が破れることになりかねません。
+また、(62) 式の \(\nabla \cdot \mathbf{B}\) 保存にも問題があります。
+これはあくまでセルの角を中心とした \(\nabla \cdot \mathbf{B}\) であり、セル中心で測定される \(\nabla \cdot \mathbf{B}\) とは似て非なるものです。
+他のスタガードな CT が保証するのは、セル体積についての物理的な磁束の収支ですが、flux-CT はそれを保証しないことに注意しましょう。</p>
 
 <h2 id="参考文献">参考文献</h2>
 
@@ -653,8 +713,12 @@ UCT-HLLD 手法の最大の長所は、なんといっても散逸の小ささ�
 [8] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub">Mignone &amp; Del Zanna, 2021, “Systematic construction of upwind constrained transport schemes for MHD”</a><br />
 [9] <a href="https://www.aanda.org/articles/aa/abs/2007/37/aa7093-07/aa7093-07.html">Del Zanna et al., 2007, “ECHO: a Eulerian conservative high-order scheme for general relativistic magnetohydrodynamics and magnetodynamics”</a><br />
 [10] <a href="https://link.springer.com/article/10.1186/s40668-017-0020-2">Porth et al., 2017, “The black hole accretion code”</a><br />
-[11] <a href="https://link.amazon/B05g3abjX">冨坂幸治, 花輪知幸, 牧野淳一郎, “シミュレーション天文学”</a><br />
-[12] <a href="https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html">CANS+ ドキュメント</a></p>
+[11] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999105001142?via%3Dihub">Miyoshi &amp; Kusano, 2005, “A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics”</a><br />
+[12] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub">Tóth, 2000, “The \(\nabla \cdot \mathbf{B} = 0\) Constraint in Shock-Capturing Magnetohydrodynamics Codes”</a><br />
+[13] <a href="https://iopscience.iop.org/article/10.1086/374594">Gammie et al., 2003, “HARM: A Numerical Scheme for General Relativistic Magnetohydrodynamics”</a><br />
+[] <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab29fd">Porth et al., 2019, “The Event Horizon General Relativistic Magnetohydrodynamic Code Comparison Project”</a><br />
+[] <a href="https://link.amazon/B05g3abjX">冨坂幸治, 花輪知幸, 牧野淳一郎, “シミュレーション天文学”</a><br />
+[] <a href="https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html">CANS+ ドキュメント</a></p>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
 

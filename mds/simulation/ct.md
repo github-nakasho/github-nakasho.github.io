@@ -193,9 +193,9 @@ $$
 このようにして全てのエッジでの電場を計算すれば、(4) - (9) 式を用いて 1 ステップ後の磁場を計算することができます。  
 この手法の長所は、圧倒的に実装が簡単なことです。
 [HLLD 法](/simulation/hlld) などの近似リーマン解法を実装したあとであれば、そこから各面を通過するフラックスの磁場成分を抽出し、4つを差し引きして割るという操作だけで済みます。
-また [HLLD 法](/simulation/hlld) や [HLL 法](/simulation/hll) などの解法に依存せずに用いることができます。
+また [HLLD 法](/simulation/hlld) や [HLL 法](/simulation/hll) などの解法に依存せずに用いることができます。  
 短所としては、中心補間であるために、物理的でない振動が発生することです。
-これにより、ループ状の磁場形状が崩れたり、Orszag-Tang の渦問題ではガス圧が負になるなどの不具合が生じます。
+これにより、ループ磁場形状が崩れたり、Orszag-Tang の渦問題ではガス圧が負になるなどの不具合が生じます。
 CT 法実装の足がかりとして最初に実装し、テスト問題を解く程度なら問題ありませんが、実用的ではない手法であると割り切って考えるのが良いでしょう。
 
 ### [Gardiner & Stone (2005)](https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub) の手法: CT-Contact
@@ -265,6 +265,11 @@ $$s_{i+1/2, j} = 1$$ ならば、流体は $$x > 0$$ に向かって (すなわ�
 [Gardiner & Stone (2005)](https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub) の論文では、風向き方向を $$v_{x, i+1/2, j}$$ で表現しています。
 しかし、実用上は面 $$(i+1/2, j)$$ 上で定義される質量フラックス $$F_{[\rho], i+1/2, j} = (\rho v_x)_{i+1/2, j}$$ の符号関数を計算したもの $$\mathrm{sign} (F_{[\rho], i+1/2, j})$$ で判定するのが良いでしょう。
 このように、接触不連続面 (エントロピー波) がどちらの向きに動いているかを用いることから、この手法を "CT-Contact" と呼びます。
+
+{: .note}
+ちなみに CT-Contact の呼び名は、この後出てくる [Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) などによるものです。
+[Gardiner & Stone (2005)](https://www.sciencedirect.com/science/article/abs/pii/S0021999104004784?via%3Dihub) の手法と呼ばれたり、省略して GS05 と記述するものもあります。
+
 この手法の長所は、実装および計算が軽量で済むことです。
 [HLLD 法](/simulation/hlld) などの近似リーマン解法により計算された面中心でのフラックスと、セル中心のフラックスの差から微分を計算することができます。
 それでありながら、2 次精度手法としては散逸が少ない利点もあります。
@@ -593,7 +598,7 @@ $$
 [HLLD](/simulation/hlld) では、リーマンファンを 5 つの波が作る 4 つの中間状態で近似します。
 
 ![](/assets/images/simulation/ct_06.png)  
-HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を考える。  
+UCT-HLLD 法の説明図。5 つの波の伝播による、4 つの中間状態を考えるが、$$B_y$$ は $$\lambda^\ast$$ ではジャンプをしないことに注意。  
 
 $$\lambda^L, \lambda^R$$ をそれぞれ左右に進行する速進磁気音波速度で伝わる衝撃波面、$$\lambda^{L \ast}, \lambda^{R \ast}$$ をそれぞれアルヴェーン波で伝わる回転不連続面、そしてその間に $$\lambda^\ast$$ で伝播する接触不連続面があります。
 例えば、$$x$$ 方向一次元のみを考えましょう。
@@ -604,7 +609,7 @@ $$
 \begin{align}
 F 
 &= \frac{1}{2} \left\{ F^L + F^R - \vert \lambda^L \vert (B_y^{L\ast} - B_y^L) - \vert \lambda^{L \ast} \vert (B_y^{\ast \ast} - B_y^{L \ast}) \right. \notag \\
-& \left. \qquad - \vert \lambda^{R \ast} \vert (B_y^{R\ast} - B_y^{\ast \ast}) - \vert \lambda^R \vert (B_y^R - B_y^{R \ast}) \right\}
+& \left. \qquad \qquad - \vert \lambda^{R \ast} \vert (B_y^{R\ast} - B_y^{\ast \ast}) - \vert \lambda^R \vert (B_y^R - B_y^{R \ast}) \right\} \notag 
 \end{align} \tag{48}
 $$
 
@@ -706,13 +711,88 @@ UCT-HLLD の真価を発揮したい場合には、高次精度化が必須と�
 
 {% include adsense.html %}
 
-### [Tóth (2000)](https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub) の手法: Flux-CT
+## [Tóth (2000)](https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub) の手法: flux-CT
 
-(工事中...)
+CT 法の考え方がイメージしづらい点として、磁場だけが他の物理量と違う場所で定義されることが挙げられます。
+しかしこの点は実際の実装を困難にします。
+例えば適合格子細分化法 (Adaptive Mesh Refinement: AMR) での粗い格子の値を補間し、細かい格子の値を決定する prolongation において、補間後の細かい格子でも $$\nabla \cdot \mathbf{B} = 0$$ を保証するようにしなければなりません。
+また AMR でなくても、境界条件の処理が複雑になるケースがあります。
+さらに、円筒座標や球面座標の場合には、グリッド間隔が異なることや曲率を考慮した CT 法の計算が必要となります。
+そこでスタガードに変数を保持することなく、CT 法と同じ利益を得ることができないかを追求したのが、[Tóth (2000)](https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub) で提案された flux-CT と呼ばれる手法です。  
+Flux-CT はセル中心の $$\mathbf{B}$$ のみを保持する代わりに、$$\nabla \cdot \mathbf{B} =0$$ を満たすようにフラックスを平均化する、というものです。
+最初に、[Balsara & Spicer (1999)](/simulation/ct#balsara--spicer-1999-の手法-算術平均) の算術平均により、辺での EMF を計算します。
 
-### [Minoshima et al. (2019)](https://iopscience.iop.org/article/10.3847/1538-4365/ab1a36/meta) の手法: CT-Flux
+$$
+\mathcal{E}_{z, i+1/2, j+1/2} 
+= \frac{G_{[B_x], i, j+1/2} + G_{[B_x], i+1, j+1/2} - F_{[B_y], i+1/2, j} - F_{[B_y], i+1/2, j+1}}{4} \tag{57}
+$$
 
-(工事中...)
+このようにして得られた EMF を単純に平均することで、再び面上で計算されるフラックスを求めます。
+
+$$
+\hat{F}_{[B_y], i+1/2, j} 
+= - \frac{1}{2} (\mathcal{E}_{z, i+1/2, j+1/2} + \mathcal{E}_{z, i+1/2, j-1/2}) \tag{58}
+$$
+
+$$
+\hat{G}_{[B_x], i, j+1/2} 
+= \frac{1}{2} (\mathcal{E}_{z, i+1/2, j+1/2} + \mathcal{E}_{z, i-1/2, j+1/2}) \tag{59}
+$$
+
+これらを用い、セル中心の磁場 $$B_x, B_y$$ を更新します。
+
+$$
+B_{x, i, j}^{n+1} 
+= B_{x, i, j}^n - \frac{\Delta t}{\Delta y} (\hat{G}_{i, j+1/2} - \hat{G}_{i, j-1/2}), \quad B_{y, i, j}^{n+1} 
+= B_{y, i, j}^n - \frac{\Delta t}{\Delta x} (\hat{F}_{i+1/2, j} - \hat{F}_{i-1/2, j}) \tag{60}
+$$
+
+実は、この手法では普通の $$\nabla \cdot \mathbf{B}$$、すなわちセル中心の定義から計算される
+
+$$
+(\nabla \cdot \mathbf{B})_{i, j}^n 
+= \frac{B_{x, i+1, j}^n - B_{x, i-1, j}^n }{2 \Delta x} + \frac{B_{y, i, j+1}^n - B_{y, i, j-1}^n }{2 \Delta y} \tag{61}
+$$
+
+は保存されません。
+保存されるのは、セルの角を中心として横方向に平均化された発散
+
+$$
+(\nabla \cdot \mathbf{B})_{i+1/2, j+1/2}^n 
+= \frac{\frac{B_{x, i+1, j}^n + B_{x, i+1, j+1}^n}{2} - \frac{B_{x, i, j}^n + B_{x, i, j+1}^n}{2}}{\Delta x} + \frac{\frac{B_{y, i, j+1}^n + B_{y, i+1, j+1}^n}{2} - \frac{B_{y, i, j}^n + B_{y, i+1, j+1}^n}{2}}{\Delta y} \tag{62}
+$$
+
+です。  
+長所としては、スタガード変数が不要なことです。
+すでにセル中心の MHD 計算コードを実装している場合、そこにフラックスを修正する部分を書き足すだけで実装が完了します。
+面中心や辺中心を考える必要がなく、GRMHD や曲座標に代表される曲線座標との相性も良い手法です。
+このことから、flux-CT は [HARM](https://iopscience.iop.org/article/10.1086/374594) と呼ばれる GRMHD 計算コードで利用されています。  
+欠点としては、[Balsara & Spicer (1999)](/simulation/ct#balsara--spicer-1999-の手法-算術平均) の算術平均を土台にしており、中心補間による数値振動が発生する可能性を持ちます。
+この手法に [CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) や [UCT-HLL](/simulation/ct#londrillo--del-zanna-2004-の手法-uct-hll), [UCT-HLLD](/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld) を組合せることも可能ですが、そうすると (58), (59) 式のような辺から面へのマッピングの関係が崩れ、(62) 式の $$\nabla \cdot \mathbf{B}$$ 保存が破れることになりかねません。
+また、(62) 式の $$\nabla \cdot \mathbf{B}$$ 保存にも問題があります。
+これはあくまでセルの角を中心とした $$\nabla \cdot \mathbf{B}$$ であり、セル中心で測定される $$\nabla \cdot \mathbf{B}$$ とは似て非なるものです。
+他のスタガードな CT が保証するのは、セル体積についての物理的な磁束の収支ですが、flux-CT はそれを保証しないことに注意しましょう。
+
+## 結局、どの CT 法を選べば良いのか？
+
+[UCT-HLLD](/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld) を提案した [Mignone & Del Zanna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0021999120305222?via%3Dihub) では、様々な CT 法による数値計算結果の比較を行なっています。
+ループ形状の弱磁場移流問題では、[Balsara & Spicer (1999)](/simulation/ct#balsara--spicer-1999-の手法-算術平均) の方法は数値振動が起こり、ループ形状を保てないことが示されています。
+[UCT-HLLD](/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld) は散逸の少ない有効な手法として紹介されていますが、2 次精度かつ [HLLD 法](/simulation/hlld)によるフラックス計算を用いる場合では、[CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) と同様の結果となることが、カレントシート問題や Orszag-Tang の渦問題などから示されています。
+[Puzzoni et al. (2021)](https://academic.oup.com/mnras/article/508/2/2771/6380521) では、数値計算手法がテアリング不安定性・リコネクション率・粒子加速に与える影響を調査しました。
+すると、[HLLD](/simulation/hlld) + [UCT-HLLD](/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld) + [WENO-Z](/simulation/reconstruction#weno-z) による計算では、$$a/\Delta x \gtrsim 10$$ で計算結果に収束が見られたのに対し、[CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) などの 2 次の　EMF 計算手法では $$a / \Delta x \gtrsim 20$$ が必要と示しました ($$a$$: 初期においたカレントシートの幅)。
+ここまでの議論から、2 次精度でも十分扱うことが可能な物理であれば [CT-Contact](/simulation/ct#gardiner--stone-2005-の手法-ct-contact) で十分と言えるでしょう。
+高次精度で十分に領域を分解した計算が必要となる場合には、実装に時間と労力をかけ、[UCT-HLLD](/simulation/ct#mignone--del-zanna-2021-の手法-uct-hlld) を選ぶのが良いかもしれません。
+
+## 実装が難しい...それでも CT 法を選ぶ理由
+
+$$\nabla \cdot \mathbf{B} = 0$$ を保証する代表的な手法の一つに、[Dedner et al. (2002)](https://www.sciencedirect.com/science/article/abs/pii/S002199910196961X) の 双曲型発散クリーニング手法があります。
+これは $$\nabla \cdot \mathbf{B} \neq 0$$ となった場合に、それを移流しながら拡散することで $$\nabla \cdot \mathbf{B} \approx 0$$ を維持するというものです。
+しかし、この説明から分かる通り、発散クリーニング手法では (移流しながらゼロに拡散させるとはいえ) $$\nabla \cdot \mathbf{B} \neq 0$$ となるような非物理的な磁場の生成を許してしまいます。
+[Tomida et al. (2026)](https://iopscience.iop.org/article/10.3847/1538-4365/ae8785) では CT 法との比較を行なったところ、Dedner の手法では、磁場が強く局在化している場合や、時間刻みが急激に変化するような場合に不正確な結果を招くことを示したのです。
+これを踏まえて [Tomida et al. (2026)](https://iopscience.iop.org/article/10.3847/1538-4365/ae8785) では発散クリーニングを修正する方法を示しましたが、それでも多くの場合に CT 法の方がより信頼できる結果になると主張しています。
+初期宇宙での星形成は、磁場増幅に大きく寄与していると考えられています。
+しかし、そのような急速な磁場成長のシミュレーションでは、発散クリーニング手法の非物理的な磁場の影響を受けている可能性があるとしたのです。
+時間刻みが急激に変化するような状況は、AMR や自己重力計算を行う場合に頻繁に発生するものであり、これまでの MHD 計算結果や今後の発散クリーニング手法の利用に一石を投じる論文となっています。
 
 ## 参考文献
 
@@ -727,8 +807,15 @@ UCT-HLLD の真価を発揮したい場合には、高次精度化が必須と�
 [9] [Del Zanna et al., 2007, "ECHO: a Eulerian conservative high-order scheme for general relativistic magnetohydrodynamics and magnetodynamics"](https://www.aanda.org/articles/aa/abs/2007/37/aa7093-07/aa7093-07.html)  
 [10] [Porth et al., 2017, "The black hole accretion code"](https://link.springer.com/article/10.1186/s40668-017-0020-2)  
 [11] [Miyoshi & Kusano, 2005, "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics"](https://www.sciencedirect.com/science/article/abs/pii/S0021999105001142?via%3Dihub)  
-[] [Porth et al., 2019, "The Event Horizon General Relativistic Magnetohydrodynamic Code Comparison Project"](https://iopscience.iop.org/article/10.3847/1538-4365/ab29fd)  
-[] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
-[] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
+[12] [Tóth, 2000, "The $$\nabla \cdot \mathbf{B} = 0$$ Constraint in Shock-Capturing Magnetohydrodynamics Codes"](https://www.sciencedirect.com/science/article/abs/pii/S0021999100965197?via%3Dihub)  
+[Puzzoni et al. (2021)](https://academic.oup.com/mnras/article/508/2/2771/6380521)
+[13] [Gammie et al., 2003, "HARM: A Numerical Scheme for General Relativistic Magnetohydrodynamics"](https://iopscience.iop.org/article/10.1086/374594)  
+[14] [Puzzoni et al., 2021, "On the impact of numerical method on magnetic reconnection and particle acceleration - I. The MHD case"](https://academic.oup.com/mnras/article/508/2/2771/6380521)  
+[15] [Dedner et al., 2002, "Hyperbolic Divergence Cleaning for the MHD Equations"](https://www.sciencedirect.com/science/article/abs/pii/S002199910196961X)  
+[16] [Tomida et al., 2026, "Systematic Comparison between Constrained Transport and Mixed Divergence Cleaning Methods for Astrophysical Magnetohydrodynamic Simulations"](https://iopscience.iop.org/article/10.3847/1538-4365/ae8785)  
+[17] [Porth et al., 2019, "The Event Horizon General Relativistic Magnetohydrodynamic Code Comparison Project"](https://iopscience.iop.org/article/10.3847/1538-4365/ab29fd)  
+[18] [冨坂幸治, 花輪知幸, 牧野淳一郎, "シミュレーション天文学"](https://link.amazon/B05g3abjX)  
+[19] [松本倫明, 大須賀健, 須佐元, "輻射電磁流体シミュレーションの基礎"](https://link.amazon/B08XqMTXb)  
+[20] [CANS+ ドキュメント](https://www.astro.phys.s.chiba-u.ac.jp/cans/doc/index.html)  
 
 {% include adsense.html %}

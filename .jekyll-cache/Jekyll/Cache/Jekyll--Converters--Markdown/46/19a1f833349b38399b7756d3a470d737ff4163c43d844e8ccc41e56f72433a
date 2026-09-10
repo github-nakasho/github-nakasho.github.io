@@ -1,0 +1,246 @@
+I"f*
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#誤差関数-error-function" id="markdown-toc-誤差関数-error-function">誤差関数 (error function)</a>    <ol>
+      <li><a href="#定義" id="markdown-toc-定義">定義</a></li>
+      <li><a href="#基本的な性質" id="markdown-toc-基本的な性質">基本的な性質</a></li>
+      <li><a href="#級数展開" id="markdown-toc-級数展開">級数展開</a></li>
+      <li><a href="#スケール化された相補誤差関数-scaled-complementary-error-function" id="markdown-toc-スケール化された相補誤差関数-scaled-complementary-error-function">スケール化された相補誤差関数 (scaled complementary error function)</a></li>
+      <li><a href="#虚部誤差関数ドーソン関数" id="markdown-toc-虚部誤差関数ドーソン関数">虚部誤差関数・ドーソン関数</a></li>
+      <li><a href="#ファデーエワ関数" id="markdown-toc-ファデーエワ関数">ファデーエワ関数</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="誤差関数-error-function">誤差関数 (error function)</h1>
+
+<p>ここでは、プラズマ物理や統計で頻繁に現れる、誤差関数についてまとめています。</p>
+
+<h2 id="定義">定義</h2>
+
+<p>誤差関数は、積分を用いて次のように定義されます。</p>
+
+\[\mathrm{erf} (x) 
+\equiv \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} dt \tag{1}\]
+
+<p>この関数は</p>
+
+\[\mathrm{erf} (\infty) 
+= \frac{2}{\sqrt{\pi}} \underbrace{\int_0^\infty e^{-t^2} dt}_{ガウス積分の半分} 
+= 1 \tag{2}\]
+
+<p>のように、規格化されています。
+また相補的な誤差関数 (complementary error function) として</p>
+
+\[\mathrm{erfc} (x) 
+\equiv 1 - \mathrm{erf} (x) 
+= \frac{2}{\sqrt{\pi}} \int_0^\infty e^{-t^2} dt - \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} dt 
+= \frac{2}{\sqrt{\pi}} \int_x^\infty e^{-t^2} dt \tag{3}\]
+
+<p>も定義されます。</p>
+
+<h2 id="基本的な性質">基本的な性質</h2>
+
+\[\mathrm{erf} (-x) 
+= \frac{2}{\sqrt{\pi}} \int_0^{-x} e^{-t^2} dt 
+\underbrace{=}_{t \rightarrow -t} \frac{2}{\sqrt{\pi}} \int_0^{x} e^{-t^2} (-dt) 
+= - \mathrm{erf} (x) \tag{4}\]
+
+<p>のように、誤差関数は奇関数であることがわかります。<br />
+誤差関数の導関数は、その定義から</p>
+
+\[\frac{d}{dx} \mathrm{erf} (x) 
+= \frac{2}{\sqrt{\pi}} e^{-x^2} \tag{5}\]
+
+<p>です。
+導関数が \(- \infty &lt; x&lt; \infty\) で常に正であることから、\(\mathrm{erf} (x)\) は単調増加関数であることもわかります。<br />
+逆に、誤差関数を積分したものは</p>
+
+\[\begin{align}
+\int \mathrm{erf} (x) dx 
+&amp;\underbrace{=}_{部分積分} x \mathrm{erf} (x) - \int x \underbrace{\frac{d}{dx} \mathrm{erf} (x)}_{(5)} dx 
+\underbrace{=}_{(5)} x \mathrm{erf} (x) - \frac{2}{\sqrt{\pi}} \underbrace{\int x e^{-x^2} dx}_{= - e^{-x^2} / 2} \notag \\
+&amp;= x \mathrm{erf} (x) + \frac{e^{-x^2}}{\sqrt{\pi}}  \tag{6}
+\end{align}\]
+
+<p>のように計算できます。<br />
+erf, erfc をグラフに描画すると、次のようになります。</p>
+
+<p><img src="/assets/images/math/error_function_01.png" alt="" /></p>
+
+<h2 id="級数展開">級数展開</h2>
+
+<p>erf の \(x \ll 1\) での振る舞いを調べるために、erf をテイラー展開してみましょう。
+そのために、まずは \(e^{-t^2}\) を展開したものを考えます。</p>
+
+\[e^{-t^2} 
+= \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{n!} \tag{7}\]
+
+<p>そして</p>
+
+\[\int_0^x t^{2n} dt 
+= \frac{x^{2n+1}}{2n+1} \tag{8}\]
+
+<p>より、erf は</p>
+
+\[\mathrm{erf} (x) 
+= \frac{2}{x} \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{n! (2n+1)} 
+= \frac{2}{x} \left( x - \frac{x^3}{3} + \frac{x^5}{10} - \frac{x^7}{42} + \cdots \right) \tag{9}\]
+
+<p>のように表現することができます。<br />
+同様に、\(x \gg 1\) についても考えてみましょう。
+この場合は、erfc について調べるのが便利です。
+(3) 式の積分部分は、\(e^{-t^2} = - \frac{1}{2t} \frac{d}{dt} e^{-t^2}\) であることを用いて</p>
+
+\[\begin{align}
+\int_x^\infty e^{-t^2} dt 
+&amp;= \int_x^\infty \left( - \frac{1}{2t} \frac{d}{dt} e^{-t^2} \right) dt
+\underbrace{=}_{部分積分} \left[ - \frac{e^{-t^2}}{2t} \right]_{x}^\infty - \int_x^\infty \frac{e^{-t^2}}{2t^2} dt \notag \\
+&amp;= \frac{e^{-x^2}}{2x} - \frac{1}{2} \int_x^\infty \frac{e^{-t^2}}{t^2} dt \tag{10}
+\end{align}\]
+
+<p>のように書き直すことができます。
+さらに</p>
+
+\[\begin{align}
+\int_x^\infty \frac{e^{-t^2}}{t^2} dt 
+&amp;= \int_x^\infty \left( - \frac{1}{2t^3} \frac{d}{dt} e^{-t^2} \right) dt 
+\underbrace{=}_{部分積分} \left[ - \frac{e^{-t^2}}{2t^3} \right]_x^\infty - \int_x^\infty \frac{3 e^{-t^2}}{2 t^4} dt \notag \\
+&amp;= \frac{e^{-x^2}}{2 x^3} - \frac{3}{2} \int_x^\infty \frac{e^{-t^2}}{t^4} dt \tag{11}
+\end{align}\]
+
+<p>のように、部分積分を繰り返します。
+これにより</p>
+
+\[\mathrm{erfc} (x) 
+= \frac{e^{-x^2}}{\sqrt{\pi} x} \left( 1 - \frac{1}{2x^2} + \frac{3}{4x^4} - \frac{15}{8x^6} + \cdots \right) 
+= \frac{e^{-x^2}}{\sqrt{\pi} x} \sum_{n=0}^\infty (-1)^n \frac{(2n-1)!!}{(2x^2)^n} \tag{12}\]
+
+<p>を得ます。
+(12) 式の先頭に出てきた \(\frac{e^{-x^2}}{\sqrt{\pi} x}\) は、ガウス分布の裾の確率を表すものとして、あらゆる場面で出てきます。</p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h2 id="スケール化された相補誤差関数-scaled-complementary-error-function">スケール化された相補誤差関数 (scaled complementary error function)</h2>
+
+<p>(12) 式において、先頭に出てきた \(e^{-x^2}\) は \(x\) が少し大きくなっただけで急激に小さな値となるため、数値計算で用いると容易にアンダーフローを起こします。
+そこで、実際に計算する場合には、次のスケールかされた相補誤差関数を用います。</p>
+
+\[\mathrm{erfcx} (x) 
+\equiv e^{x^2} \mathrm{erfc} (x) \tag{13}\]
+
+<p>その定義から</p>
+
+\[\mathrm{erfcx} (0) 
+= \mathrm{erfc} (0) 
+= 1 \tag{14}\]
+
+<p>であり、(12) 式から単調減少関数であることもわかります。
+また、(13) 式のように定義しておけば、(12) 式から\(x \rightarrow \infty\) で</p>
+
+\[\mathrm{erfcs} (x) \ \longrightarrow \ \frac{1}{\sqrt{\pi} x} \tag{15}\]
+
+<p>に漸近することがわかります。
+実際に etfcx を描画すると、次のようになります。</p>
+
+<p><img src="/assets/images/math/error_function_02.png" alt="" /></p>
+
+<h2 id="虚部誤差関数ドーソン関数">虚部誤差関数・ドーソン関数</h2>
+
+<p>虚部誤差関数 erfi を、次のように定義します。</p>
+
+\[\mathrm{erfi} (x) 
+\equiv -i \mathrm{erf} (ix) 
+= - \frac{2i}{\sqrt{\pi}} \int_0^{ix} e^{-t^2} dt 
+\underbrace{=}_{t \rightarrow it} - \frac{2i}{\sqrt{\pi}} \int_0^{x} e^{t^2} (i dt) 
+= \frac{2}{\sqrt{\pi}} \int_0^x e^{t^2} dt \tag{16}\]
+
+<p>となります。
+グラフは、次のようになります。</p>
+
+<p><img src="/assets/images/math/error_function_03.png" alt="" /></p>
+
+<p>この erfi を用いることで、次のドーソン関数 (Dawson’s function) \(F(x)\) を</p>
+
+\[F(x) 
+\equiv e^{-x^2} \int_0^x e^{t^2} dt 
+= \frac{\sqrt{\pi}}{2} e^{-x^2} \mathrm{erfi} (x) \tag{17}\]
+
+<p>のように書き換えることができます。
+ドーソン関数は、次のような関数です。</p>
+
+<p><img src="/assets/images/math/error_function_04.png" alt="" /></p>
+
+<h2 id="ファデーエワ関数">ファデーエワ関数</h2>
+
+<p>また、スケール化された複素相補誤差関数を</p>
+
+\[w(z) 
+\equiv e^{-z^2} \mathrm{erfc} (-iz) \tag{18}\]
+
+<p>のように定義することもできます。
+これはファデーエワ関数 (Faddeeva function) と呼ばれます。
+ファデーエワ関数は、複素数値を持つ関数です。
+実軸上での実部・虚部の値を次に示します。</p>
+
+<p><img src="/assets/images/math/error_function_05.png" alt="" /></p>
+
+<p>複素数平面上でのファデーエワ関数の絶対値は、次のようになります。</p>
+
+<p><img src="/assets/images/math/error_function_06.png" alt="" /></p>
+
+<p>\(e^{-z^2}\) から、\(\mathrm{Im}(z) &lt; 0\) の部分では急激にその大きさが増大します。<br />
+\(z = x \ (x \in \mathbb{R})\) の場合、ファデーエワ関数は</p>
+
+\[\begin{align}
+w(x) 
+&amp;= e^{-x^2} \mathrm{erfc} (-ix) 
+\underbrace{=}_{(3)} e^{-x^2} (1 - \mathrm{erf} (-ix)) 
+\underbrace{=}_{(4)} e^{-x^2} (1 + \mathrm{erf} (ix)) \notag \\
+&amp;\underbrace{=}_{(16)} e^{-x^2} + e^{-x^2} \frac{-1}{i} \mathrm{erfi} (x) 
+\underbrace{=}_{(17)} e^{-x^2} + \frac{2i}{\sqrt{\pi}} F(x) \tag{19}
+\end{align}\]
+
+<p>となります。
+また、ファデーエワ関数において</p>
+
+\[w(\zeta) + w(-\zeta) 
+= e^{-\zeta^2} \{ \mathrm{erfc} (-i\zeta) + \mathrm{erfc} (i\zeta) \} 
+= e^{-\zeta^2} \{ 2 - \underbrace{\mathrm{erf} (-i\zeta)}_{(2)} - \mathrm{erf} (i\zeta) \}
+= 2 e^{-\zeta^2} \ \Longrightarrow \ w(-z) 
+= 2 e^{-\zeta^2} - w(\zeta) \tag{20}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://math-functions-1.watson.jp/sub1_spec_070.html">特殊関数グラフィックスライブラリー, 誤差関数</a><br />
+[2] <a href="https://mathworld.wolfram.com/Erf.html">Wolfram MathWorld, Erf</a><br />
+[3] <a href="https://mathworld.wolfram.com/DawsonsIntegral.html">Wolfram MathWorld, Dawson’s Integral</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

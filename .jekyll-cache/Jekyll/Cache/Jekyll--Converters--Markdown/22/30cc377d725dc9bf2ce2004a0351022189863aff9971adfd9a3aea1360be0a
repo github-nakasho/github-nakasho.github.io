@@ -1,0 +1,118 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#プラズマ運動論の基礎方程式" id="markdown-toc-プラズマ運動論の基礎方程式">プラズマ運動論の基礎方程式</a>    <ol>
+      <li><a href="#クリモントビッチ方程式" id="markdown-toc-クリモントビッチ方程式">クリモントビッチ方程式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="プラズマ運動論の基礎方程式">プラズマ運動論の基礎方程式</h1>
+
+<p>プラズマは、電磁的に相互作用しあう多数の家電粒子の集合体です。
+そららの粒子個々の運動を考慮に入れてプラズマを扱うのが、ここで述べる運動論です。
+ここでは、プラズマ運動論の基礎となる方程式を導出していきましょう。</p>
+
+<h2 id="クリモントビッチ方程式">クリモントビッチ方程式</h2>
+
+<p>プラズマ中の荷電粒子の運動は、初期時刻での位置・速度を指定すれば、以降の時刻での位置・速度は運動方程式を用いることで決定することができます。
+\(i\) 番目のプラズマ粒子が位置 \(\mathbf{x}\) と速度 \(\mathbf{v}\) からなる 6 次元空間を運動するとき、その軌跡を \((\mathbf{X}_i, \mathbf{V}_i)\) のように書くことにします。
+ここで大文字の \(\mathbf{X}, \mathbf{V}\) はラグランジュ座標による表示を強調したもので、その時間発展は運動方程式</p>
+
+\[\frac{d\mathbf{X}_i}{dt} 
+= \mathbf{V}_i \tag{1}\]
+
+\[\frac{d\mathbf{V}_i}{dt} 
+= \frac{q_i}{m_i} \left( \mathbf{E}_i + \frac{\mathbf{V}_i}{c} \times \mathbf{B} \right) \tag{2}\]
+
+<p>により記述されます。
+ここで電場 \(\mathbf{E}\) と磁場 \(\mathbf{B}\) は、時刻 \(t\) での粒子の位置 \(\mathbf{x} = \mathbf{X}_i (t)\) における値です。
+電磁場は、以下のマクスウェル方程式を用いて求めることができます。</p>
+
+\[\nabla \cdots \mathbf{E} (\mathbf{x}, t) 
+= 4\pi \rho (\mathbf{x}, t) \tag{3}\]
+
+\[\nabla \cdots \mathbf{B} (\mathbf{x}, t) 
+= 0 \tag{4}\]
+
+\[\nabla \times \mathbf{E} (\mathbf{x}, t) 
+= - \frac{1}{c} \frac{\partial \mathbf{B} (\mathbf{x}, t)}{\partial t} \tag{5}\]
+
+\[\nabla \times \mathbf{B} (\mathbf{x}, t) 
+= \frac{4\pi}{c} \mathbf{j} (\mathbf{x}, t) + \frac{1}{c} \frac{\partial \mathbf{E} (\mathbf{x}, t)}{\partial t} \tag{6}\]
+
+<p>ここでは、場の量はオイラー座標 \((\mathbf{x}, t)\) の関数として表示しています。
+マクスウェル方程式の右辺に現れている電流密度・電荷密度は、ラグランジュ座標で表された粒子の量と、以下の関係にあります。</p>
+
+\[\mathbf{j} (\mathbf{x}, t) 
+= \sum_i q_i \mathbf{V}_i \delta (\mathbf{x} - \mathbf{X}_i (t)) \tag{7}\]
+
+\[\rho (\mathbf{x}, t) 
+= \sum_i q_i \delta (\mathbf{x} - \mathbf{X}_i (t)) \tag{8}\]
+
+<p>(1) - (8) 式は閉じた方程式系を成しています。
+よって、これらを全ての粒子について解けば、原理的にはプラズマの全ての振る舞いを知ることが可能です。<br />
+しかし以降では、粒子の一つ一つの軌道を追うことからは離れ、プラズマを集団的に扱うことを考えましょう。
+そのために、(電子とイオンなど) 粒子の種類 \(s\) ごとに、オイラー座標での密度関数を定義することにします。</p>
+
+\[N_s (\mathbf{x}, \mathbf{v}, t)
+= \sum_{i=1}^{N_{s0}} \delta(\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i) \tag{9}\]
+
+<p>ここで、総和の計算は粒子の種類ごとに、全ての粒子について行うことにします (\(i = 1, 2, \dots, N_{s0}\))。
+このとき、粒子と場の量を結ぶ式 (7), (8) は</p>
+
+\[\mathbf{j} (\mathbf{x}, t) 
+= \sum_s q_s \int N_s (\mathbf{x}, \mathbf{v}, t) \mathbf{v} d^3 \mathbf{v} \tag{10}\]
+
+\[\rho (\mathbf{x}, t) 
+= \sum_s q_s \int N_s (\mathbf{x}, \mathbf{v}, t) d^3 \mathbf{v} \tag{11}\]
+
+<p>のように、粒子での総和の代わりに、密度関数を速度空間で積分することで得られます。
+このように定義された密度関数が、どのように時間発展するかを考えてみましょう。
+(9) 式のオイラー時間微分を計算すると</p>
+
+\[\begin{align}
+\frac{\partial N_s (\mathbf{x}, \mathbf{v}, t)}{\partial t} 
+&amp;= - \sum_i \dot{\mathbf{X}}_i \cdot \nabla_x \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) \notag \\
+&amp; \qquad - \sum_i \dot{\mathbf{V}}_i \cdot \nabla_v \delta (\mathbf{x} - \mathbf{X}_i(t)) \delta (\mathbf{v} - \mathbf{V}_i (t)) \tag{12} 
+\end{align}\]
+
+<p>のようになります。
+ここで、ドット \(( \dot{} )\) はラグランジュ時間微分を表し、さらに \(\nabla_x = (\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}), \nabla_v = (\frac{\partial}{\partial v_x}, \frac{\partial}{\partial v_y}, \frac{\partial}{\partial v_z})\) です。
+運動方程式 (1), (2) を用い、(12) 式から \(\dot{\mathbf{X}}, \dot{\mathbf{V}}\) を消去すると</p>
+
+\[\begin{align}
+\frac{\partial N_s (\mathbf{x}, \mathbf{v}, t)}{\partial t} 
+&amp;= - \sum_i \mathbf{V}_i \cdot \nabla_x \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) \notag \\
+&amp; \qquad - \sum_i \frac{q_i}{m_i} \left( \mathbf{E} + \frac{\mathbf{V}_i}{c} \times \mathbf{B}\right) \cdot \nabla_v \delta (\mathbf{x} - \mathbf{X}_i(t)) \delta (\mathbf{v} - \mathbf{V}_i (t)) \tag{13}
+\end{align}\]
+
+<p>のようになります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

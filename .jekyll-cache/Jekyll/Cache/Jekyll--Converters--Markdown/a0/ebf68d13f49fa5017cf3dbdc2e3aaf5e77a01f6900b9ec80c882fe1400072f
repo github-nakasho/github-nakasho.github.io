@@ -1,0 +1,99 @@
+I"G
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#マルコフ連鎖モンテカルロ法-工事中" id="markdown-toc-マルコフ連鎖モンテカルロ法-工事中">マルコフ連鎖モンテカルロ法 (工事中)</a>    <ol>
+      <li><a href="#静的モンテカルロ" id="markdown-toc-静的モンテカルロ">静的モンテカルロ</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="マルコフ連鎖モンテカルロ法-工事中">マルコフ連鎖モンテカルロ法 (工事中)</h1>
+
+<p>マルコフ連鎖モンテカルロ法 (Markov-Chain Monte-Carlo: MCMC) は、マルコフ連鎖を用い、モンテカルロ積分を実行する手法です。
+MCMC は様々な分野で応用されており、私のウェブサイトで扱っているような宇宙物理・天文分野のデータ解析にも、もちろん用いられています。</p>
+
+<h2 id="静的モンテカルロ">静的モンテカルロ</h2>
+
+<p>そもそも、なぜ MCMC が必要なのでしょうか？
+ここではまず、一様にサンプリングを行う、静的モンテカルロ法 (マルコフ連鎖を用いないモンテカルロ法) について考えてから、その疑問に到達することにしましょう。<br />
+規格化因子が不明な分布 \(P (\mathbf{x})\) があるとします。
+ここで \(P (\mathbf{x})\) には</p>
+
+\[P(\mathbf{x}) 
+= \frac{1}{Z} e^{-E(\mathbf{x}) / T}, \quad Z 
+= \sum_\mathbf{x} e^{-E(\mathbf{x}) / T} \tag{1}\]
+
+<p>のような分布が考えられますが、規格化因子 \(Z\) (統計物理では分配関数) が不明であるため、\(P (\mathbf{x})\) の値そのものを知ることは、今の場合はできません。
+このとき、ある統計量 \(A (\mathbf{x})\) の、分布 \(P(\mathbf{x})\) のもとでの期待値は、次のように書かれます。</p>
+
+\[\mathbb{E} (A(\mathbf{x})) 
+= \sum_{\mathbf{x}} A(\mathbf{x}) P (\mathbf{x}) \tag{2}\]
+
+<p>これを求める問題を考えることにしましょう。
+また \(P(\mathbf{x})\) の規格化因子 \(Z\) も求めるにはどうすれば良いでしょうか、というのが今考えたい問題です。<br />
+ただし何もない状況からこの問題を解くのは難しいため、私たちは以下のような道具を用いることができるとします。</p>
+
+<ul>
+  <li>定数 \(Z\) に対し \(P(\mathbf{x}) = \tilde{P} (\mathbf{x}) / Z\) のように書けることはわかっており、\(\tilde{P} (\mathbf{x})\) は効率よく計算できるものとする。</li>
+  <li>\(P (\mathbf{x})\) によく似た分布 \(Q (\mathbf{x})\) からのサンプルは、効率よく生成できるとする (2 つは似ていないくても良いが、その場合にはサンプリング効率が悪化する)。</li>
+  <li>\(\mathbf{x}\) を与えると、\(Q(\mathbf{x})\) の値が計算できる。</li>
+  <li>\(P(\mathbf{x}) \neq 0\) となる \(\mathbf{x}\) については、\(Q(\mathbf{x}) \neq 0\) とする。</li>
+</ul>
+
+<p>これらの道具を使うと、次のようなアルゴリズムを考えることができます。</p>
+
+<ol>
+  <li>\(Q(\mathbf{x})\) からサンプル \(\mathbf{x}^{(\alpha)}\) を生成する。</li>
+  <li>統計量 \(A(\mathbf{x})\) と \(w^{(\alpha)} = \tilde{P} (\mathbf{x}^{(\alpha)}) / Q(\mathbf{x}^{(\alpha)})\) を計算する。</li>
+  <li>手順 1, 2 を \(\alpha = 1\) から \(M \ (\gg 1)\) まで繰り返す。</li>
+  <li>これらから、期待値が次のように計算できる。
+\(\mathbb{E} (A (\mathbf{x})) 
+= \sum_\mathbf{x} A(\mathbf{x}) P(\mathbf{x}) 
+= \frac{\sum_{\alpha = 1}^M A(\mathbf{x}^{(\alpha)}) w^{(\alpha)}}{\sum_{\alpha=1}^M w^{(\alpha)}}\)</li>
+  <li>さらに、規格化定数は \(Z = \sum_{\alpha=1}^M w^{(\alpha)} / M\) と計算できる。</li>
+</ol>
+
+<p>連続変数の場合、\(P(\mathbf{x}) \rightarrow p(\mathbf{x}) d\mathbf{x}\)、和の計算部分を \(\Sigma \rightarrow \int\) のように置き換えれば、そのまま成り立ちます。<br />
+この方法を、円の面積を求める問題に応用してみましょう。
+これは「乱数を用いて \(\pi\) を求める」のような文脈で、度々用いられる手法です。
+円の面積を求めるために、正方形の中で一様分布する擬似乱数をコンピュータで生成し、円の中に入った割合と正方形の面積との積から、円の面積を求めるというものです。
+一辺が 2 の正方形と、それに内接する半径 1 の円を考えれば、これから \(\pi\) を計算することが可能です。<br />
+今の場合、\(p(\mathbf{x})\) を単位円内の一様密度、\(q (\mathbf{x})\) (\(Q(\mathbf{x})\) の連続変数バージョン) を外接する正方形内の一様密度とします。
+このとき、円の面積が \(Z\) に対応します。
+正方形が円をすっかり含む、というのが「\(P(\mathbf{x}) \neq 0\) となる \(\mathbf{x}\) については、\(Q(\mathbf{x}) \neq 0\)」という条件に対応します。
+外接する正方形ではなく、もっと大きな正方形を考えることもできますが、効率が落ちることに注意しましょう。
+これは、\(q(\mathbf{x})\) が \(p(\mathbf{x})\) に似ているほど、サンプリング効率が良くなることを意味します。<br />
+ここでは簡単な例を示しましたが、一般的には多次元・多変量の分布の形は複雑で、人の手で分布の形を書くことはできません。
+静的なモンテカルロは、元の分布 \(P(\mathbf{x})\) 全体を大域的に近似するような分布 \(Q(\mathbf{x})\) を考える必要があります。
+そのため、静的モンテカルロ法を、多次元・多変量分布からのサンプリングに使うことは、困難と言えるでしょう。
+これを解決する手段として、\(P(\mathbf{x})\) の局所的な性質をもとに、多次元・多変量の場合に適した手法として考えられたのが、MCMC の考え方です。<br />
+\(P(\mathbf{x})\) の値が小さい場合、その近傍の点 \(\mathbf{x}'\) では \(P(\mathbf{x}')\) の値が大きくなる可能性があります。
+そうしたなら \(\mathbf{x}'\) に移動し、再び \(\mathbf{x}'\) 周辺を探索します。
+これを繰り返し、真の分布へとたどり着く、というのが MCMC です。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

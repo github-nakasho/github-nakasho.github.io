@@ -1,0 +1,368 @@
+I"o[
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#プラズマ運動論の基礎方程式" id="markdown-toc-プラズマ運動論の基礎方程式">プラズマ運動論の基礎方程式</a>    <ol>
+      <li><a href="#クリモントビッチ方程式" id="markdown-toc-クリモントビッチ方程式">クリモントビッチ方程式</a></li>
+      <li><a href="#ボルツマン方程式とブラソフ方程式" id="markdown-toc-ボルツマン方程式とブラソフ方程式">ボルツマン方程式とブラソフ方程式</a></li>
+      <li><a href="#フォッカープランク方程式" id="markdown-toc-フォッカープランク方程式">フォッカー・プランク方程式</a></li>
+      <li><a href="#ランダウ方程式" id="markdown-toc-ランダウ方程式">ランダウ方程式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="プラズマ運動論の基礎方程式">プラズマ運動論の基礎方程式</h1>
+
+<p>プラズマは、電磁的に相互作用しあう多数の家電粒子の集合体です。
+そららの粒子個々の運動を考慮に入れてプラズマを扱うのが、ここで述べる運動論です。
+ここでは、プラズマ運動論の基礎となる方程式を導出していきましょう。</p>
+
+<h2 id="クリモントビッチ方程式">クリモントビッチ方程式</h2>
+
+<p>プラズマ中の荷電粒子の運動は、初期時刻での位置・速度を指定すれば、以降の時刻での位置・速度は運動方程式を用いることで決定することができます。
+\(i\) 番目のプラズマ粒子が位置 \(\mathbf{x}\) と速度 \(\mathbf{v}\) からなる 6 次元空間を運動するとき、その軌跡を \((\mathbf{X}_i, \mathbf{V}_i)\) のように書くことにします。
+ここで大文字の \(\mathbf{X}, \mathbf{V}\) はラグランジュ座標による表示を強調したもので、その時間発展は運動方程式</p>
+
+\[\frac{d\mathbf{X}_i}{dt} 
+= \mathbf{V}_i \tag{1}\]
+
+\[\frac{d\mathbf{V}_i}{dt} 
+= \frac{q_i}{m_i} \left( \mathbf{E}_i + \frac{\mathbf{V}_i}{c} \times \mathbf{B} \right) \tag{2}\]
+
+<p>により記述されます。
+ここで電場 \(\mathbf{E}\) と磁場 \(\mathbf{B}\) は、時刻 \(t\) での粒子の位置 \(\mathbf{x} = \mathbf{X}_i (t)\) における値です。
+電磁場は、以下のマクスウェル方程式を用いて求めることができます。</p>
+
+\[\nabla \cdot \mathbf{E} (\mathbf{x}, t) 
+= 4\pi \rho (\mathbf{x}, t) \tag{3}\]
+
+\[\nabla \cdot \mathbf{B} (\mathbf{x}, t) 
+= 0 \tag{4}\]
+
+\[\nabla \times \mathbf{E} (\mathbf{x}, t) 
+= - \frac{1}{c} \frac{\partial \mathbf{B} (\mathbf{x}, t)}{\partial t} \tag{5}\]
+
+\[\nabla \times \mathbf{B} (\mathbf{x}, t) 
+= \frac{4\pi}{c} \mathbf{j} (\mathbf{x}, t) + \frac{1}{c} \frac{\partial \mathbf{E} (\mathbf{x}, t)}{\partial t} \tag{6}\]
+
+<p>ここでは、場の量はオイラー座標 \((\mathbf{x}, t)\) の関数として表示しています。
+マクスウェル方程式の右辺に現れている電流密度・電荷密度は、ラグランジュ座標で表された粒子の量と、以下の関係にあります。</p>
+
+\[\mathbf{j} (\mathbf{x}, t) 
+= \sum_i q_i \mathbf{V}_i \delta (\mathbf{x} - \mathbf{X}_i (t)) \tag{7}\]
+
+\[\rho (\mathbf{x}, t) 
+= \sum_i q_i \delta (\mathbf{x} - \mathbf{X}_i (t)) \tag{8}\]
+
+<p>(1) - (8) 式は閉じた方程式系を成しています。
+よって、これらを全ての粒子について解けば、原理的にはプラズマの全ての振る舞いを知ることが可能です。<br />
+しかし以降では、粒子の一つ一つの軌道を追うことからは離れ、プラズマを集団的に扱うことを考えましょう。
+そのために、(電子とイオンなど) 粒子の種類 \(s\) ごとに、オイラー座標での密度関数を定義することにします。</p>
+
+\[N_s (\mathbf{x}, \mathbf{v}, t)
+= \sum_{i=1}^{N_{s0}} \delta(\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i) \tag{9}\]
+
+<p>ここで、総和の計算は粒子の種類ごとに、全ての粒子について行うことにします (\(i = 1, 2, \dots, N_{s0}\))。
+このとき、粒子と場の量を結ぶ式 (7), (8) は</p>
+
+\[\mathbf{j} (\mathbf{x}, t) 
+= \sum_s q_s \int N_s (\mathbf{x}, \mathbf{v}, t) \mathbf{v} d^3 \mathbf{v} \tag{10}\]
+
+\[\rho (\mathbf{x}, t) 
+= \sum_s q_s \int N_s (\mathbf{x}, \mathbf{v}, t) d^3 \mathbf{v} \tag{11}\]
+
+<p>のように、粒子での総和の代わりに、密度関数を速度空間で積分することで得られます。
+このように定義された密度関数が、どのように時間発展するかを考えてみましょう。
+(9) 式のオイラー時間微分を計算しましょう。
+\(\delta (\mathbf{x} - \mathbf{X}_i(t))\) の時間微分は</p>
+
+\[\frac{\partial}{\partial t} \delta (\mathbf{x} - \mathbf{X}_i(t)) 
+\underbrace{=}_{\mathbf{u} = \mathbf{x} - \mathbf{X}_i (t)} \frac{\partial \mathbf{u} }{\partial t} \cdot \frac{\partial}{\partial \mathbf{u}} \delta (\mathbf{u}) 
+= - \dot{\mathbf{X}}_i \delta'(\mathbf{u}) \tag{12}\]
+
+<p>のようになります。
+一方</p>
+
+\[\frac{\partial}{\partial \mathbf{x}} \delta (\mathbf{x} - \mathbf{X}_i(t)) 
+= \delta'(\mathbf{u}) \cdot \frac{\partial \mathbf{u}}{\partial \mathbf{x}} 
+= \delta'(\mathbf{u}) \tag{13}\]
+
+<p>が成り立つことから</p>
+
+\[\frac{\partial}{\partial t} \delta (\mathbf{x} - \mathbf{X}_i(t)) 
+= - \dot{\mathbf{X}}_i \cdot \frac{\partial}{\partial \mathbf{x}} \delta(\mathbf{x} - \mathbf{X}_i(t)) \tag{14}\]
+
+<p>のように書くことができます。
+\(\delta (\mathbf{v} - \mathbf{V}_i(t))\) の時間微分も同様に計算することで</p>
+
+\[\begin{align}
+\frac{\partial N_s (\mathbf{x}, \mathbf{v}, t)}{\partial t} 
+&amp;= - \sum_i \dot{\mathbf{X}}_i \cdot \nabla_x \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) \notag \\
+&amp; \qquad - \sum_i \dot{\mathbf{V}}_i \cdot \nabla_v \delta (\mathbf{x} - \mathbf{X}_i(t)) \delta (\mathbf{v} - \mathbf{V}_i (t)) \tag{15} 
+\end{align}\]
+
+<p>を得ます。
+途中、\(\nabla_x = \frac{\partial}{\partial \mathbf{x}}, \nabla_v = \frac{\partial}{\partial \mathbf{v}}\) としました。
+ここに (1), (2) 式を用いることで、\(\dot{\mathbf{X}}_i, \dot{\mathbf{V}}_i\) を消去すると</p>
+
+\[\begin{align}
+\frac{\partial N_s (\mathbf{x}, \mathbf{v}, t)}{\partial t} 
+&amp;= - \sum_i \mathbf{V}_i \cdot \nabla_x \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) \notag \\
+&amp; \qquad - \sum_i \frac{q_i}{m_i}\left( \mathbf{E} + \frac{\mathbf{V}_i}{c} \times \mathbf{B} \right) \cdot \nabla_v \delta (\mathbf{x} - \mathbf{X}_i(t)) \delta (\mathbf{v} - \mathbf{V}_i (t)) \tag{16} 
+\end{align}\]
+
+<p>となります。
+右辺第一項において、\(\mathbf{V}_i \delta (\mathbf{v} - \mathbf{V}_i(t)) = \mathbf{v} \delta (\mathbf{v} - \mathbf{V}_i(t))\) が成り立つことを用いると</p>
+
+\[\begin{align}
+(第一項) 
+&amp;= \sum_i \mathbf{v} \cdot \nabla_x \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) \notag \\
+&amp;= \mathbf{v} \cdot \nabla_x \sum_i \delta (\mathbf{x} - \mathbf{X}_i (t)) \delta (\mathbf{v} - \mathbf{V}_i(t)) 
+\underbrace{=}_{(9)} \mathbf{v} \cdot \nabla_x N_s \tag{17} 
+\end{align}\]
+
+<p>のように整理することができます。
+第二項も同様に整理しますが、粒子の総和をとる部分において \(q_i \rightarrow q_s, m_i \rightarrow m_s\) のように、粒子種で電荷と質量が共通していることを用いると</p>
+
+\[\frac{\partial N_s}{\partial t} + \mathbf{v} \cdot \nabla_x N_s + \frac{q_s}{m_s} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B}\right) \cdot \nabla_v N_s 
+= 0 \tag{18}\]
+
+<p>を得ます。
+これを、クリモントビッチ方程式 (Klimontovich equation) と呼び、プラズマ粒子一つ一つの情報をスパイク的なデルタ関数の集合として含む密度関数の時間発展を、オイラー座標で記述したものです。
+(18) 式のクリモントビッチ方程式、(3) - (6) 式のマクスウェル方程式、(10), (11) 式は、閉じた時間発展方程式系をなしています。
+そのため、全ての粒子および電磁場の初期条件を与えれば、プラズマの運動を決定論的に解くことができます。<br />
+クリモントビッチ方程式は、プラズマ密度の保存則を表しています。
+\(\nabla_x, \nabla_v\) が \(\mathbf{x}, \mathbf{v}\) に対する微分演算子であること、および \(\nabla \cdot (\mathbf{v} \times \mathbf{B}) = 0\) であることを用いると</p>
+
+\[\frac{\partial N_s}{\partial t} + \nabla_x \cdot (N_s \mathbf{v}) + \nabla_v \cdot \left\{ \frac{q_s}{m_s} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B}\right) \right\} N_s 
+= 0 \tag{19}\]
+
+<p>のように書き直すことができます。
+これは質量保存則 (連続の式) \(\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0\) と同じ形をしていることから、プラズマが \((\mathbf{x}, \mathbf{v})\) の 6 次元位相空間において、生成・消滅をしないことを表しています。</p>
+
+<h2 id="ボルツマン方程式とブラソフ方程式">ボルツマン方程式とブラソフ方程式</h2>
+
+<p>ここまでで導出してきたクリモントビッチ方程式は、時刻 \(t\) に個々の粒子が 6 次元位相空間 \((\mathbf{x}, \mathbf{v})\) のある点に存在することを表す、スパイク的な密度関数の時間発展を記述するものでした。
+しかし、高温プラズマを扱う上で必要となるのは、デバイ半径程度またはそれ以上の空間スケールでの情報であり、この体積空間中には極めて多数の粒子が含まれることになります。
+そのため、プラズマ運動論の基礎方程式において実際に必要となるのは、クリモントビッチ方程式の密度関数を座標と速度空間の微小体積 \(\Delta \mathbf{x} \Delta \mathbf{v}\) で平均化して得られる、空間的に滑らかな分布関数です。
+そこで、スパイク的な密度関数 \(N_s (\mathbf{x}, \mathbf{v}, t)\) を、空間的に平均化された滑らかな部分とその残りのデルタ関数的な振る舞いをする部分に分けて</p>
+
+\[N_s (\mathbf{x}, \mathbf{v}, t)
+= f_s (\mathbf{x}, \mathbf{v}, t) + \delta N_s (\mathbf{x}, \mathbf{v}, t), \quad 
+f_s (\mathbf{x}, \mathbf{v}, t) 
+\equiv \langle N_s (\mathbf{x}, \mathbf{v}, t) \rangle \tag{20}\]
+
+<p>のように表すことにしましょう。
+ここで \(\langle \cdots \rangle\) は平均処理を表します。
+クリモントビッチ方程式 (18) に、(20) 式の分解を代入しましょう。
+すると</p>
+
+\[(第一項) 
+= \frac{\partial}{\partial t} (f_s + \delta N_s) \tag{21}\]
+
+\[(第二項) 
+= \mathbf{v} \cdot \nabla_x (f_s + \delta N_s) \tag{22}\]
+
+<p>次に、電場と磁場についても滑らかな部分とスパイク的な部分とに分けて考えることにしましょう。
+すなわち</p>
+
+\[\mathbf{E}
+= \mathbf{E}^m + \delta \mathbf{E}, \quad 
+\mathbf{B}
+= \mathbf{B}^m + \delta \mathbf{B} \tag{23}\]
+
+<p>のようにすると、ローレンツ力部分は</p>
+
+\[\mathbf{a} 
+\equiv \frac{q_s}{m_s} \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B}\right) 
+= \mathbf{a}^m + \delta \mathbf{a} \tag{24}\]
+
+<p>のように、同様に滑らかな部分とスパイク的な部分に分けることができます。
+ここで</p>
+
+\[\mathbf{a}^m 
+= \frac{q_s}{m_s} \left( \mathbf{E}^m + \frac{\mathbf{v}}{c} \times \mathbf{B}^m \right), \quad
+\delta \mathbf{a} 
+= \frac{q_s}{m_s} \left( \delta \mathbf{E} + \frac{\mathbf{v}}{c} \times \delta \mathbf{B} \right) \tag{25}\]
+
+<p>です。
+これらを用いると、(18) 式の第三項は</p>
+
+\[(\mathbf{a}^m + \delta \mathbf{a}) \cdot \nabla_v (f_s + \delta N_s) 
+= \mathbf{a}^m \cdot \nabla_v f_s + \mathbf{a}^m \cdot \nabla_v \delta N_s + \delta \mathbf{a} \cdot \nabla_v f_s + \delta \mathbf{a} \cdot \nabla_v \delta N_s \tag{26}\]
+
+<p>のようになります。
+定義から、\(\langle \delta N_s \rangle = 0, \langle \delta \mathbf{E} \rangle = \mathbf{0}, \langle \delta \mathbf{B} \rangle = \mathbf{0}\) です。
+これらから、クリモントビッチ方程式の平均を取ると</p>
+
+\[\frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla_x f_s + \langle \mathbf{a}^m \cdot \nabla_v f_s + \mathbf{a}^m \cdot \nabla_v \delta N_s + \delta \mathbf{a} \cdot \nabla_v f_s + \delta \mathbf{a} \cdot \nabla_v \delta N_s \rangle 
+= 0 \tag{27}\]
+
+<p>第三項の平均処理部分では</p>
+
+\[\langle \mathbf{a}^m \cdot \nabla_v f_s \rangle 
+= \mathbf{a}^m \cdot \nabla_v f_s \tag{28}\]
+
+\[\langle \mathbf{a}^m \cdot \nabla_v \delta N_s \rangle 
+= \mathbf{a}^m \cdot \nabla_v \langle \delta N_s \rangle 
+= 0 \tag{29}\]
+
+\[\langle \delta \mathbf{a} \cdot \nabla_v f_s \rangle 
+= \langle \delta \mathbf{a} \rangle \cdot \nabla_v f_s 
+= 0 \tag{30}\]
+
+<p>のようになることから、最終的に</p>
+
+\[\frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla_x f_s + \mathbf{a}^m \cdot \nabla_v f_s 
+= - \langle \delta \mathbf{a} \cdot \nabla_v \delta N_s \rangle \tag{31}\]
+
+<p>を得ます。
+右辺がゼロとなっていないのは、\(\delta \mathbf{a}, \delta N_s\) は微小量ではないためです。
+(20), (23)式の分解では、滑らかな平均部分とスパイク的な部分とに分けただけであり、その大きさには言及していません。
+よって一般には、右辺はゼロにはならないことがわかります。
+(31) 式の左辺は、全て \((\mathbf{x}, \mathbf{v})\) 空間において滑らかに変化する関数です。
+右辺は、電磁場を介しての離散的な粒子同士の相関であり、衝突効果を表しています。
+特に、この右辺を \(\left( \frac{\partial f_s}{\partial t}\right)_\mathrm{c}\) のように書いたものを、ボルツマン方程式 (Boltzmann equation) と呼びます。</p>
+
+<p class="note">この衝突という言葉は、いささか誤解を招くかもしれません。
+この衝突項の実情は、私たちが想像する二体衝突ではなく、デバイ半径内の多数の粒子との弱い相互作用の累積です。
+プラズマでは小角度散乱の積み重ねが支配的であるためです。</p>
+
+<p>この右辺の衝突項を無視したもの</p>
+
+\[\frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla_x f_s + \mathbf{a}^m \cdot \nabla_v f_s 
+= 0 \tag{32}\]
+
+<p>を、無衝突ボルツマン方程式あるいはブラソフ方程式 (Vlasov equation) と呼びます。
+宇宙物理では弱結合プラズマ (高温かつ十分希薄なプラズマ) を扱うため、右辺はゼロとしても差し支えありません。
+よって、このブラソフ方程式がよく用いられます。</p>
+
+<h2 id="フォッカープランク方程式">フォッカー・プランク方程式</h2>
+
+<p>高温プラズマでは、粒子間衝突が極めてまれな系です。
+しかし、輸送現象や電離・再結合のように、粒子間衝突が本質的な役割を果たす重要な物理現象も多く存在します。
+このような現象を扱うには、先ほどのブラソフ方程式では当然不十分で、粒子間衝突の効果を近似的に取り入れた定式化が必要になります。
+プラズマでの粒子間衝突は、デバイ半径程度以下の近距離の相互作用によるものです。
+一方、衝突と衝突との時間間隔は、長さにすると平均自由行程程度であり、これはデバイ半径に比べるとはるかに長いことが知られています (プラズマパラメータ程度)。
+このため、一つの衝突が起こっている間に次の衝突が始まることはなく、各衝突は独立に起こると考えられるでしょう。
+このような状況下では、衝突過程は過去の履歴に依存せずに生じるマルコフ確率過程と見なすことができます。
+そして、このようにして起こるクーロン衝突は小角度散乱がメインであり、1 回の衝突での粒子の運動量変化はごくわずかです。
+ここでは、このような場合に成り立つ方程式を見てみましょう。<br />
+今、時刻 \(t\) に粒子の運動量が \(\mathbf{p} \sim \mathbf{p} + d \mathbf{p}\) に発見される確率を \(F(\mathbf{p}, t) d^3 \mathbf{p}\)、単位時間に粒子の運動量が \(\mathbf{p}\) から \(\mathbf{p} + \Delta \mathbf{p}\) に変化する遷移確率を \(W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})\) のように書くことにします。
+この \(F(\mathbf{p}, t)\) の時間発展は、次のマスター方程式で与えられます。</p>
+
+\[F(\mathbf{p}, t + \Delta t) 
+= \int F(\mathbf{p} - \Delta \mathbf{p}, t) W(\mathbf{p}- \Delta \mathbf{p} \rightarrow \mathbf{p}) d^3 \Delta \mathbf{p} \tag{33}\]
+
+<p>非積分関数の部分をテイラー展開しましょう。
+このとき、\(F\) と \(W\) をまとめて展開すると</p>
+
+\[F(\mathbf{p} - \Delta \mathbf{p}, t) W(\mathbf{p} - \Delta \mathbf{p}\rightarrow \mathbf{p}) 
+= F W - \Delta \mathbf{p} \frac{\partial}{\partial \mathbf{p}} (FW) + \frac{1}{2} \Delta \mathbf{p}^2 \frac{\partial^2}{\partial \mathbf{p}^2} (FW) - \cdots \tag{34}\]
+
+<p>を得ます。
+(33) 式に代入し、両辺を \(\Delta \mathbf{p}\) で積分すると、次のような \(W\) のモーメントが現れます。</p>
+
+\[\langle \Delta \mathbf{p} \rangle 
+= \int \Delta \mathbf{p} W d^3 \Delta \mathbf{p}, \quad \langle \Delta \mathbf{p}^2 \rangle 
+= \int \Delta \mathbf{p}^2 W d^3 \Delta \mathbf{p} \tag{35}\]
+
+<p>(34) 式の \(F W\) の項は、\(\int W d^3 \mathbf{p} = 1\) のように規格化されていることから、そのまま \(F\) となります。
+よって</p>
+
+\[F(\mathbf{p} - \Delta \mathbf{p}, t) - F(\mathbf{p}, t) 
+= - \frac{\partial}{\partial \mathbf{p}} (F \langle \Delta \mathbf{p} \rangle) + \frac{1}{2} \frac{\partial^2}{\partial \mathbf{p}^2} (F \langle \Delta \mathbf{p}^2 \rangle) \tag{36}\]
+
+<p>のようになります。
+途中、3 次以上の項を無視しました。
+両辺を \(\Delta t\) で割ることで、最終的に</p>
+
+\[\frac{\partial F}{\partial t} 
+= - \frac{\partial}{\partial \mathbf{p}} \left( F \frac{\langle \Delta \mathbf{p} \rangle}{\Delta t}\right) + \frac{1}{2} \frac{\partial^2}{\partial \mathbf{p}^2} \left( F \frac{\langle \Delta \mathbf{p}^2 \rangle}{\Delta t}\right) \tag{38}\]
+
+<p>ここまで \(F\) を用いてきましたが、その意味合いから \(F \rightarrow f_s\) のようにすることで、(31) 式の右辺 \(\left( \frac{\partial f_s}{\partial t}\right)_\mathrm{c}\) に対応させることができます。
+モーメントの部分を</p>
+
+\[A_n (\mathbf{p}) 
+= \int (\Delta \mathbf{p})^n W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p}) d^3 \Delta \mathbf{p} \tag{39}\]
+
+<p>のように書くことにしましょう。
+すると係数 \(\mathbf{A}_1\) はベクトル量で、摩擦を表す係数となります。
+\(A_2\) はテンソルで、二階微分の項にあることから、拡散を表す係数であることがわかります。
+熱平衡に近い高温プラズマでは、\(A_n (\mathbf{p}) \ (n \geq 3)\) は無視できます。</p>
+
+<h2 id="ランダウ方程式">ランダウ方程式</h2>
+
+<p>ここで、考えている粒子の速度を \(\mathbf{v}\)、衝突する相手の粒子の速度を \(\mathbf{v}'\) としましょう。
+そして 2 粒子間の相対速度が、衝突前に \(\mathbf{u}\)、衝突後には \(\mathbf{u} + \Delta \mathbf{u}\) になったとします。
+すなわち、\(\mathbf{u} = \mathbf{v} - \mathbf{v}'\) であり、衝突はクーロン散乱であることから \(u = \vert \mathbf{u} \vert = \vert \mathbf{u} + \Delta \mathbf{u} \vert\) です。
+すると、先ほどの \(W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})\) は、クーロン衝突の断面積を用いて</p>
+
+\[\begin{align}
+W(\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p}) d^3 \mathbf{p}
+&amp;= \int f(\mathbf{v}', t) u d\sigma d^3 \mathbf{v}' \notag \\
+&amp;= \int f(\mathbf{v}', t) u \left( \frac{qq'}{2 m^\ast u^2 \sin^2 (\chi / 2)} \right)^2 \sin \chi d\chi d\varphi d^3 \mathbf{v}' \tag{40}
+\end{align}\]
+
+<p>のように求めることができます。
+ここで \(f(\mathbf{v}', t)\) は衝突相手となる粒子の速度分布関数、\(q\) と \(q'\) はそれぞれ衝突する粒子と衝突相手となる粒子の電荷、\(m^\ast\) は換算質量、\(\chi\) は散乱方向の角度、\(\varphi\) は散乱の方位角を表します。
+運動量の変化を、\(\mathbf{u}\) と平行な方向と垂直な方向とに分離しましょう。</p>
+
+\[\Delta \mathbf{p} 
+= m^\ast \Delta \mathbf{u} 
+\equiv \Delta \mathbf{p}_\perp + \Delta \mathbf{p}_\parallel \tag{41}\]
+
+\[\Delta \mathbf{p}_\perp 
+= m^\ast \Delta \mathbf{u}_\perp 
+= m^\ast u \sin \chi \left( \begin{array}{c} 
+\cos \varphi \\
+\sin \varphi
+\end{array} \right) \tag{42}\]
+
+\[\Delta \mathbf{p}_\parallel 
+= m^\ast \Delta \mathbf{u}_\parallel 
+= m^\ast \mathbf{u} (\cos \chi - 1) 
+= -2 m^\ast \mathbf{u} \sin^2 (\chi / 2) \tag{43}\]
+
+<p>(42) 式では、\(\mathbf{u}\) に垂直な面内での 2 次元ベクトルの成分を用いて表しています。
+(35) 式と同様、\(\langle \cdots \rangle\) を \(W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})\) をかけて \(\Delta \mathbf{p}\) で積分したものとします。
+\(\chi, \varphi\) の積分を実行することで</p>
+
+\[\langle \Delta \mathbf{p}_\perp \rangle 
+= \mathbf{0} \tag{44}\]
+
+\[\langle \Delta \mathbf{p}_\parallel \rangle 
+= - \frac{\alpha}{m^\ast} \int \frac{\mathbf{u}}{u^3} f(\mathbf{v}', t) d^3 \mathbf{v}', \quad \left( \alpha \equiv 4\pi (qq')^2 \log \Lambda_\mathrm{c} \right) \tag{45}\]
+
+\[\langle \Delta \mathbf{p}_\perp^2 \rangle 
+= \alhpa \int \frac{\Delta}{u} f(\mathbf{v}', t) d^3 \mathbf{v}, \quad \left( \Delta \equiv I - \frac{\mathbf{u} \mathbf{u}}{u^2}\right) \tag{46}\]
+
+<p>を得ます。
+\(I\) は 3 x 3 の単位テンソルです。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+:ET

@@ -301,8 +301,269 @@ $$
 この衝突項の実情は、私たちが想像する二体衝突ではなく、デバイ半径内の多数の粒子との弱い相互作用の累積です。
 プラズマでは小角度散乱の積み重ねが支配的であるためです。
 
+この右辺の衝突項を無視したもの
+
+$$
+\frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla_x f_s + \mathbf{a}^m \cdot \nabla_v f_s 
+= 0 \tag{32}
+$$
+
+を、無衝突ボルツマン方程式あるいはブラソフ方程式 (Vlasov equation) と呼びます。
+宇宙物理では弱結合プラズマ (高温かつ十分希薄なプラズマ) を扱うため、右辺はゼロとしても差し支えありません。
+よって、このブラソフ方程式がよく用いられます。
+
+{% include adsense.html %} 
+
+## フォッカー・プランク方程式
+
+高温プラズマでは、粒子間衝突が極めてまれな系です。
+しかし、輸送現象や電離・再結合のように、粒子間衝突が本質的な役割を果たす重要な物理現象も多く存在します。
+このような現象を扱うには、先ほどのブラソフ方程式では当然不十分で、粒子間衝突の効果を近似的に取り入れた定式化が必要になります。
+プラズマでの粒子間衝突は、デバイ半径程度以下の近距離の相互作用によるものです。
+一方、衝突と衝突との時間間隔は、長さにすると平均自由行程程度であり、これはデバイ半径に比べるとはるかに長いことが知られています (プラズマパラメータ程度)。
+このため、一つの衝突が起こっている間に次の衝突が始まることはなく、各衝突は独立に起こると考えられるでしょう。
+このような状況下では、衝突過程は過去の履歴に依存せずに生じるマルコフ確率過程と見なすことができます。
+そして、このようにして起こるクーロン衝突は小角度散乱がメインであり、1 回の衝突での粒子の運動量変化はごくわずかです。
+ここでは、このような場合に成り立つ方程式を見てみましょう。  
+今、時刻 $$t$$ に粒子の運動量が $$\mathbf{p} \sim \mathbf{p} + d \mathbf{p}$$ に発見される確率を $$F(\mathbf{p}, t) d^3 \mathbf{p}$$、単位時間に粒子の運動量が $$\mathbf{p}$$ から $$\mathbf{p} + \Delta \mathbf{p}$$ に変化する遷移確率を $$W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})$$ のように書くことにします。
+この $$F(\mathbf{p}, t)$$ の時間発展は、次のマスター方程式で与えられます。
+
+$$
+F(\mathbf{p}, t + \Delta t) 
+= \int F(\mathbf{p} - \Delta \mathbf{p}, t) W(\mathbf{p}- \Delta \mathbf{p} \rightarrow \mathbf{p}) d^3 \Delta \mathbf{p} \tag{33}
+$$
+
+非積分関数の部分をテイラー展開しましょう。
+このとき、$$F$$ と $$W$$ をまとめて展開すると
+
+$$
+F(\mathbf{p} - \Delta \mathbf{p}, t) W(\mathbf{p} - \Delta \mathbf{p}\rightarrow \mathbf{p}) 
+= F W - \Delta \mathbf{p} \frac{\partial}{\partial \mathbf{p}} (FW) + \frac{1}{2} \Delta \mathbf{p}^2 \frac{\partial^2}{\partial \mathbf{p}^2} (FW) - \cdots \tag{34}
+$$
+
+を得ます。
+(33) 式に代入し、両辺を $$\Delta \mathbf{p}$$ で積分すると、次のような $$W$$ のモーメントが現れます。
+
+$$
+\langle \Delta \mathbf{p} \rangle 
+= \int \Delta \mathbf{p} W d^3 \Delta \mathbf{p}, \quad \langle \Delta \mathbf{p}^2 \rangle 
+= \int \Delta \mathbf{p}^2 W d^3 \Delta \mathbf{p} \tag{35}
+$$
+
+(34) 式の $$F W$$ の項は、$$\int W d^3 \mathbf{p} = 1$$ のように規格化されていることから、そのまま $$F$$ となります。
+よって
+
+$$
+F(\mathbf{p} - \Delta \mathbf{p}, t) - F(\mathbf{p}, t) 
+= - \frac{\partial}{\partial \mathbf{p}} (F \langle \Delta \mathbf{p} \rangle) + \frac{1}{2} \frac{\partial^2}{\partial \mathbf{p}^2} (F \langle \Delta \mathbf{p}^2 \rangle) \tag{36}
+$$
+
+のようになります。
+途中、3 次以上の項を無視しました。
+両辺を $$\Delta t$$ で割ることで、最終的に
+
+$$
+\frac{\partial F}{\partial t} 
+= - \frac{\partial}{\partial \mathbf{p}} \left( F \frac{\langle \Delta \mathbf{p} \rangle}{\Delta t}\right) + \frac{1}{2} \frac{\partial^2}{\partial \mathbf{p}^2} \left( F \frac{\langle \Delta \mathbf{p}^2 \rangle}{\Delta t}\right) \tag{38}
+$$
+
+ここまで $$F$$ を用いてきましたが、その意味合いから $$F \rightarrow f_s$$ のようにすることで、(31) 式の右辺 $$\left( \frac{\partial f_s}{\partial t}\right)_\mathrm{c}$$ に対応させることができます。
+モーメントの部分を
+
+$$
+A_n (\mathbf{p}) 
+= \int (\Delta \mathbf{p})^n W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p}) d^3 \Delta \mathbf{p} \tag{39}
+$$
+
+のように書くことにしましょう。
+すると係数 $$\mathbf{A}_1$$ はベクトル量で、摩擦を表す係数となります。
+$$A_2$$ はテンソルで、二階微分の項にあることから、拡散を表す係数であることがわかります。
+熱平衡に近い高温プラズマでは、$$A_n (\mathbf{p}) \ (n \geq 3)$$ は無視できます。
+
+## ランダウ方程式とバレスク・レナード・ゲルンセー方程式
+
+ここで、考えている粒子の速度を $$\mathbf{v}$$、衝突する相手の粒子の速度を $$\mathbf{v}'$$ としましょう。
+そして 2 粒子間の相対速度が、衝突前に $$\mathbf{u}$$、衝突後には $$\mathbf{u} + \Delta \mathbf{u}$$ になったとします。
+すなわち、$$\mathbf{u} = \mathbf{v} - \mathbf{v}'$$ であり、衝突はクーロン散乱であることから $$u = \vert \mathbf{u} \vert = \vert \mathbf{u} + \Delta \mathbf{u} \vert$$ です。
+すると、先ほどの $$W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})$$ は、クーロン衝突の断面積を用いて
+
+$$
+\begin{align}
+W(\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p}) d^3 \mathbf{p}
+&= \int f(\mathbf{v}', t) u d\sigma d^3 \mathbf{v}' \notag \\
+&= \int f(\mathbf{v}', t) u \left( \frac{qq'}{2 m^\ast u^2 \sin^2 (\chi / 2)} \right)^2 \sin \chi d\chi d\varphi d^3 \mathbf{v}' \tag{40}
+\end{align}
+$$
+
+のように求めることができます。
+ここで $$f(\mathbf{v}', t)$$ は衝突相手となる粒子の速度分布関数、$$q$$ と $$q'$$ はそれぞれ衝突する粒子と衝突相手となる粒子の電荷、$$m^\ast$$ は換算質量、$$\chi$$ は散乱方向の角度、$$\varphi$$ は散乱の方位角を表します。
+運動量の変化を、$$\mathbf{u}$$ と平行な方向と垂直な方向とに分離しましょう。
+
+$$
+\Delta \mathbf{p} 
+= m^\ast \Delta \mathbf{u} 
+\equiv \Delta \mathbf{p}_\perp + \Delta \mathbf{p}_\parallel \tag{41}
+$$
+
+$$
+\Delta \mathbf{p}_\perp 
+= m^\ast \Delta \mathbf{u}_\perp 
+= m^\ast u \sin \chi \left( \begin{array}{c} 
+\cos \varphi \\
+\sin \varphi
+\end{array} \right) \tag{42}
+$$
+
+$$
+\Delta \mathbf{p}_\parallel 
+= m^\ast \Delta \mathbf{u}_\parallel 
+= m^\ast \mathbf{u} (\cos \chi - 1) 
+= -2 m^\ast \mathbf{u} \sin^2 (\chi / 2) \tag{43}
+$$
+ 
+(42) 式では、$$\mathbf{u}$$ に垂直な面内での 2 次元ベクトルの成分を用いて表しています。
+(35) 式と同様、$$\langle \cdots \rangle$$ を $$W (\mathbf{p} \rightarrow \mathbf{p} + \Delta \mathbf{p})$$ をかけて $$\Delta \mathbf{p}$$ で積分したものとします。
+散乱角 $$\chi$$ については適当な下限を導入して $$\chi, \varphi$$ の積分を実行し、クーロン対数を含まない項を無視すると
+
+$$
+\langle \Delta \mathbf{p}_\perp \rangle 
+= \mathbf{0} \tag{44}
+$$
+
+$$
+\langle \Delta \mathbf{p}_\parallel \rangle 
+= - \frac{\alpha}{m^\ast} \int \frac{\mathbf{u}}{u^3} f(\mathbf{v}', t) d^3 \mathbf{v}', \quad \left( \alpha \equiv 4\pi (qq')^2 \log \Lambda_\mathrm{c} \right) \tag{45}
+$$
+
+$$
+\langle \Delta \mathbf{p}_\perp^2 \rangle 
+= \alpha \int \frac{\Delta}{u} f(\mathbf{v}', t) d^3 \mathbf{v}, \quad \left( \Delta \equiv I - \frac{\mathbf{u} \mathbf{u}}{u^2}\right) \tag{46}
+$$
+
+を得ます。
+$$I$$ は 3 x 3 の単位テンソルであり、$$\mathbf{u} \mathbf{u}$$ は次のようなテンソルです。
+
+$$
+\mathbf{u} \mathbf{u} 
+= \left( \begin{array}{ccc} 
+u_x u_x & u_x u_y & u_x u_z \\
+u_y u_x & u_y u_y & u_y u_z \\
+u_z u_x & u_z u_y & u_z u_z \\
+\end{array} \right) \tag{47}
+$$
+
+このようにすると、$$\mathbf{A}_1 (\mathbf{p}) = \langle \Delta \mathbf{p}_\parallel \rangle, A_2 (\mathbf{p}) = \langle \Delta \mathbf{p}_\perp^2 \rangle$$ となります。  
+今、フォッカー・プランク方程式 (38) を次のように変形しましょう。
+
+$$
+\frac{\partial F}{\partial t} 
+= \frac{\partial}{\partial \mathbf{p}} \cdot \left[ \left\{ - \mathbf{A}_1 (\mathbf{p}) + \frac{1}{2} \frac{\partial}{\partial \mathbf{p}} \cdot A_2 (\mathbf{p}) \right\} F(\mathbf{p}, t) + \frac{1}{2} A_2 (\mathbf{p}) \cdot \frac{\partial}{\partial \mathbf{p}} F(\mathbf{p}, t) \right] \tag{48}
+$$
+
+次に
+
+$$
+\frac{\mathbf{u}}{u^3} 
+= - \frac{1}{2} \frac{\partial}{\partial \mathbf{v}} \cdot \frac{\Delta}{u} 
+= \frac{1}{2} \frac{\partial}{\partial \mathbf{v}'} \cdot \frac{\Delta}{u} \tag{49}
+$$
+
+を用いると
+
+$$
+\begin{align}
+\int \frac{\mathbf{u}}{u^3} f(\mathbf{v}', t) d^3 \mathbf{v}' 
+&= - \frac{1}{2} \frac{\partial}{\partial \mathbf{v}} \cdot \int \frac{\Delta}{u} f(\mathbf{v}', t) d^3 \mathbf{v}' 
+= \frac{1}{2} \int f(\mathbf{v}', t) \frac{\partial}{\partial \mathbf{v}'} \cdot \frac{\Delta}{u} d^3 \mathbf{v}' \notag \\
+&= - \frac{1}{2} \int \frac{\Delta}{u} \cdot \frac{\partial}{\partial \mathbf{v}'} f(\mathbf{v}', t) d^3 \mathbf{v}' \tag{50}
+\end{align}
+$$
+
+$$
+\left\{ - \mathbf{A}_1 (\mathbf{p}) + \frac{1}{2} \frac{\partial}{\partial \mathbf{p}} \cdot A_2 (\mathbf{p}) \right\} 
+= - \frac{\alpha}{2m'} \int \frac{\Delta}{u} \cdot \frac{\partial}{\partial \mathbf{v}'} f(\mathbf{v}', t) d^3 \mathbf{v}' \tag{51}
+$$
+
+のようになります。
+これらから、(48) 式は
+
+$$
+\frac{\partial f_s (\mathbf{v}, t)}{\partial t} 
+= \frac{\partial}{\partial \mathbf{v}} \cdot \sum_{s'} \frac{\alpha_{s s'}}{2 m_s} \int \frac{\Delta}{u} \cdot \left( \frac{1}{m_s} \frac{\partial}{\partial \mathbf{v}} - \frac{1}{m_s'} \frac{\partial}{\partial \mathbf{v}'}\right) f_s(\mathbf{v}, t) f_{s'} (\mathbf{v}', t) d^3 \mathbf{v}' \tag{52}
+$$
+
+のように書き換えられます。
+ここで運動量分布関数 $$F(\mathbf{p}, t)$$ を、速度分布関数 $$f(\mathbf{v}, t)$$ で置き換え、さらに下付き添字の $$s$$ で粒子の種類を表し、粒子種の和を取りました。
+この方程式は、かの有名なランダウにより最初に導出されたため、ランダウ方程式とも呼ばれます。
+この方程式では、散乱角 $$\chi$$ についての積分の下限を、適当な物理的理由から導入していますが、これより厳密に集団的効果を取り入れて導いたのが、バレスク・レナード・ゲルンセー方程式 (Balescu-Lenard-Guernsey equation) です。
+その導出は複雑であるため、結果のみを以下に示します。
+
+$$
+\frac{\partial f_s(\mathbf{v}, t)}{\partial t} 
+= \frac{\partial}{\partial \mathbf{v}} \cdot \sum_{s'} \int \mathbf{Q}_{ss'} \cdot \left( \frac{1}{m_s} \frac{\partial}{\partial \mathbf{v}} - \frac{1}{m_s'} \frac{\partial}{\partial \mathbf{v}'}\right) f_s (\mathbf{v}, t) f_{s'} (\mathbf{v}', t) d^3 \mathbf{v}' \tag{53}
+$$
+
+$$
+\mathbf{Q}_{ss'} 
+= \frac{2 q_s^2 q_{s'}^2}{m_s} \int \frac{\mathbf{k}\mathbf{k}}{k^4} \frac{\delta (\mathbf{k} \cdot (\mathbf{v} - \mathbf{v}'))}{\vert \varepsilon_\mathrm{L} (\mathbf{k}, \mathbf{k} \cdot \mathbf{v}) \vert^2} d^3 \mathbf{k} \tag{54}
+$$
+
+ここで $$\varepsilon_\mathrm{L} (\mathbf{k}, \omega)$$ は縦誘電率です。
+これがプラズマの集団効果を表しており、波数ベクトル $$\mathbf{k}$$ は大きさが衝突パラメータの逆数に等しいベクトルです。
+縦誘電率 $$\varepsilon_\mathrm{L} (\mathbf{k}, \omega)$$ を 1 で近似し、さらに関係式
+
+$$
+\int d^3 \mathbf{k} 
+= \int_0^\infty k^2 dk \int d\cos \chi \int d\varphi \tag{55}
+$$
+
+$$
+\delta (\mathbf{k}\cdot (\mathbf{v} - \mathbf{v}')) 
+= \frac{1}{ku} \delta (\cos (\pi / 2 - \chi)) \tag{56}
+$$
+
+を用いると
+
+$$
+\int \frac{\mathbf{k} \mathbf{k}}{k^4} \delta (\mathbf{k} \cdot (\mathbf{v} - \mathbf{v}')) d^3 \mathbf{k} 
+= \frac{\pi \Delta}{u} \int_0^\infty \frac{dk}{k} \tag{57}
+$$
+
+となります。
+ここで $$k$$ での積分に適当な上限・下限を導入して評価することで、ランダウ方程式が再現されます。
+このうち、上限については散乱角の最大値から決めますが、下限については $$k$$ の小さいところで成り立つ集団効果による関係式 $$\vert \varepsilon_\mathrm{L} (\mathbf{k}, \mathbf{k}\cdot \mathbf{v})\vert^2 \simeq 1/ (k^4 \lambda_D^4)$$ を用いることで、見かけ上の発散が抑えられることがわかります。
+(52), (53) 式はいずれもこのままでは複雑であるため、実際の計算ではもっと簡単なモデル方程式が用いられます。
+その代表的なものに、レナード・バーンスタインモデル (Lenard-Bernstein model) があります。
+これは 1 次元モデルで、次のように書かれます。
+
+$$
+\frac{\partial f(v, t)}{\partial t} 
+= \nu \frac{\partial}{\partial v} \left\{ v_T^2 \frac{\partial f(v, t)}{\partial v} + v f(v, t)\right\} \tag{58}
+$$
+
+$$\nu$$ は通常の衝突周波数、$$v_T$$ は熱速度です。
+この方程式の解は、初期分布を $$f(v_0, 0)$$ として以下のように求めることができます。
+
+$$
+f(v, t) 
+= \int P(v_0 \rightarrow v, t) f(v_0, 0) dv_0 \tag{59}
+$$
+
+$$
+P(v_0 \rightarrow v, t) 
+= \frac{\exp \left( - \frac{(v-v_0 \psi(t))^2}{2 v_T^2 (1-\psi^2 (t))}\right)}{\sqrt{2\pi} v_T (1 - \psi^2(t))^{1/2}}, \psi(t) 
+= e^{-\nu t} \tag{60}
+$$
+
+この解は、任意の初期分布がどのようにして最終的な熱平衡分布 (マクスウェル・ボルツマン分布) に近づいていくかを示しています。
+(58) 式の第二項の摩擦により初速度を失いつつ、第一項の拡散により速度空間で分布がガウス関数のように広がっていきます。
+このような熱平衡分布への接近過程は、(52), (53) 式のどちらでも、本質的には変わりません。
+
 ## 参考文献
 
-[] []()  
+[1] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/3PHKTdK)  
+[2] [Chen, 内田 岱二郎(訳), "プラズマ物理入門"](https://amzn.to/4akfJ5T)  
+[3] [宮本健郎, "プラズマ物理・核融合"](https://amzn.to/3PHHMmm)  
+[4] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://link.amazon/B0gEgpr2t)  
 
 {% include adsense.html %} 

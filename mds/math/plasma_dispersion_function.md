@@ -103,7 +103,7 @@ $$
 
 $$
 Z(x) 
-= \frac{1}{\sqrt{\pi}} \mathcal{P} \int_{-\infty}^\infty \frac{e^{-z^2}}{z-x} dz + 2i\sqrt{\pi} e^{-x^2} \tag{7}
+= \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \frac{e^{-z^2}}{z-\zeta} dz + 2i\sqrt{\pi} e^{-\zeta^2} \tag{7}
 $$
 
 となります。  
@@ -122,6 +122,7 @@ $$
 
 のように書くことができます。
 $$\sigma$$ が不連続に変化していますが、これに応じて主値積分の側にも対応する不連続が存在するため、$$Z$$ 自身は連続かつ正則な関数となっています。
+また、(8) 式の $$\mathcal{P}$$ は、$$\zeta$$ が実数のときのみ意味を持ちます。
 
 {% include adsense.html %}
 
@@ -165,7 +166,7 @@ $$\zeta = is$$ とおいて、さらに $$Y(s) = Z(is)$$ のようにすれば
 $$
 \frac{dZ}{d\zeta} 
 = - i Y', \quad \frac{d^2 Z}{d\zeta^2} 
-= Y'' \tag{12}
+= - Y'' \tag{12}
 $$
 
 のような関係が得られることから、これらを (11) 式に代入することで
@@ -203,7 +204,7 @@ $$
 
 ## 級数展開
 
-$$\zeta \ll 1$$ の場合に、$$Z = \sum_{n\geq 0} a_n \zeta^n$$ のようにテイラー展開したときの係数を求めてみましょう。
+$$\vert \zeta \vert \ll 1$$ の場合に、$$Z = \sum_{n\geq 0} a_n \zeta^n$$ のようにテイラー展開したときの係数を求めてみましょう。
 これを (10) 式に代入すると
 
 $$
@@ -244,20 +245,34 @@ $$
 以上から
 
 $$
+\begin{align}
 Z(\zeta) 
-= i \sqrt{\pi} - 2 \zeta - i \sqrt{\pi} \zeta^2 + \frac{4}{3} \zeta^3 + \frac{i\sqrt{\pi}}{2} \zeta^4 - \frac{8}{15} \zeta^5 + \cdots \quad (\zeta \ll 1) \tag{21}
+&= i \sqrt{\pi} - 2 \zeta - i \sqrt{\pi} \zeta^2 + \frac{4}{3} \zeta^3 + \frac{i\sqrt{\pi}}{2} \zeta^4 - \frac{8}{15} \zeta^5 + \cdots \quad (\zeta \ll 1) \notag \\
+&= i \sqrt{\pi} \underbrace{\left( 1 - \zeta^2 + \frac{1}{2} \zeta^4 - \cdots \right)}_{= e^{-\zeta^2} のテイラー展開} - 2 \zeta \left( 1 - \frac{2}{3} \zeta^2 + \frac{4}{15} \zeta^4 - \cdots \right) \notag \\
+&= i\sqrt{\pi} e^{-\zeta^2} - 2 \zeta \left( 1 - \frac{2}{3} \zeta^2 + \frac{4}{15} \zeta^4 - \cdots \right) \tag{21}
+\end{align}
 $$
 
 となります。
 偶数次の項の係数は純虚数、奇数次の項の係数は実数になっていることがわかります。  
-同様に、$$\zeta \gg 1$$ についても考えてみましょう。
-ただしこれを求めるために、$$Z = - \sum_{n \geq 0} c_n \zeta^{-(2n+1)}$$ の形を仮定することにします。
-先ほどと同じく、これを (10) 式の微分方程式に代入し、$$\zeta^{-2m}$$ の係数を比較することで
+続いて、$$\vert \zeta \vert \gg 1$$ についても考えてみましょう。
+$$\vert \zeta \vert \ll 1$$ の場合には、$$z = \zeta$$ の極が原点付近にいるため、特に場合分けは必要ありませんでした。
+しかし $$\vert \zeta \vert \gg 1$$ では、極が実軸から遠く離れた場所にあるか ($$\mathrm{Im}(\zeta) > 0, \mathrm{Im}(\zeta) < 0$$)、極が実軸上にあるか ($$\mathrm{Im}(\zeta) =0$$) で話が異なってきます。
+そこで (8) 式のように、極の寄与を分離しましょう。
+
+$$
+Z(\zeta) 
+= G(\zeta) + i \sigma \sqrt{\pi} e^{-\zeta^2} \tag{22}
+$$
+
+この $$G$$ は、(10) 式を満たします。
+これを求めるために、$$G = - \sum_{n \geq 0} c_n \zeta^{-(2n+1)}$$ の形を仮定することにします。
+これを (10) 式の微分方程式に代入し、$$\zeta^{-2m}$$ の係数を比較することで
 
 $$
 (2m - 1) c_{m-1} - 2 c_m 
 = 0 \ \Longrightarrow \ c_m 
-= \frac{2m-1}{2} c_{m-1} \tag{21}
+= \frac{2m-1}{2} c_{m-1} \tag{23}
 $$
 
 また $$c_0 = 1$$ から順次計算していくと
@@ -266,18 +281,31 @@ $$
 c_1 
 = \frac{1}{2}, \quad c_2 
 = \frac{3}{4}, \quad c_3 
-= \frac{15}{8}, \dots \tag{22}
+= \frac{15}{8}, \dots \tag{24}
 $$
 
 を得ます。
 以上から
 
 $$
-Z (\zeta) 
-= - \frac{1}{\zeta} \left( 1 + \frac{1}{2} \zeta^{-2} + \frac{3}{4} \zeta^{-4} + \frac{15}{8} \zeta^{-6} + \cdots \right) \tag{23}
+G (\zeta) 
+= - \frac{1}{\zeta} \left( 1 + \frac{1}{2} \zeta^{-2} + \frac{3}{4} \zeta^{-4} + \frac{15}{8} \zeta^{-6} + \cdots \right) \tag{25}
 $$
 
-と求まります。
+であり、最終的に
+
+$$
+Z(\zeta) 
+= i \sigma \sqrt{\pi} e^{-\zeta^2} - \frac{1}{\zeta} \left( 1 + \frac{1}{2} \zeta^{-2} + \frac{3}{4} \zeta^{-4} + \frac{15}{8} \zeta^{-6} + \cdots \right) \tag{26}
+$$
+
+となります。
+
+{: .note}
+$$e^{-\zeta^2}$$ は $$Z' = -2 \zeta Z$$ の一般解、そして (25) 式で求めた $$G(\zeta)$$ は $$Z' = -2 (1 + \zeta Z)$$ の特殊解と見ることができます。
+強制振動の方程式を解を求めたときと同様に、これらの解を重ね合わせることで $$Z' = -2 (1 + \zeta Z)$$ の一般解を求めていると考えることができます。
+
+{% include adsense.html %}
 
 ## [誤差関数のファミリー](/math/error_function)との関係式
 
@@ -285,7 +313,7 @@ $$\mathrm{Im} (\zeta) > 0$$ とすると
 
 $$
 \frac{1}{z -\zeta} 
-= i \int_0^\infty e^{-i (z - \zeta) s} ds \tag{24}
+= i \int_0^\infty e^{-i (z - \zeta) s} ds \tag{27}
 $$
 
 のように変形することができます。
@@ -294,11 +322,11 @@ $$
 $$
 \begin{align}
 Z(\zeta) 
-&= \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \left( \int_0^\infty e^{-z^2 - i (z - \zeta) s} ds\right) dz 
-= \frac{1}{\sqrt{\pi}} \int_0^\infty e^{i \zeta s} \left( \int_{-\infty}^\infty e^{-z^2 - isz } dz\right) ds \notag \\
-&\underbrace{=}_{ガウス積分} \frac{1}{\sqrt{\pi}} \int_0^\infty e^{i \zeta s} \sqrt{\pi} e^{-s^2 / 4} ds 
+&= i \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \left( \int_0^\infty e^{-z^2 - i (z - \zeta) s} ds\right) dz 
+= i \frac{1}{\sqrt{\pi}} \int_0^\infty e^{i \zeta s} \left( \int_{-\infty}^\infty e^{-z^2 - isz } dz\right) ds \notag \\
+&\underbrace{=}_{ガウス積分} i \frac{1}{\sqrt{\pi}} \int_0^\infty e^{i \zeta s} \sqrt{\pi} e^{-s^2 / 4} ds 
 = i \int_0^\infty e^{i\zeta s - s^2 /4} ds 
-\underbrace{=}_{s = 2u} 2i \int_0^\infty e^{2i\zeta u - u^2} du \tag{25}
+\underbrace{=}_{s = 2u} 2i \int_0^\infty e^{2i\zeta u - u^2} du \tag{28}
 \end{align}
 $$
 
@@ -307,7 +335,7 @@ $$
 
 $$
 Z(\zeta) 
-= 2i e^{-\zeta^2} \int_{-i\zeta}^{\infty - i\zeta} e^{-v^2} dv \tag{26}
+= 2i e^{-\zeta^2} \int_{-i\zeta}^{\infty - i\zeta} e^{-v^2} dv \tag{29}
 $$
 
 $$e^{-v^2}$$ は $$\vert \mathrm{Re}(v) \vert \rightarrow \infty$$ で急激に減衰するため、積分の終端である $$\infty - i\zeta$$ を $$\infty$$ としても差し支えないでしょう。
@@ -315,7 +343,7 @@ $$e^{-v^2}$$ は $$\vert \mathrm{Re}(v) \vert \rightarrow \infty$$ で急激に�
 
 $$
 Z(\zeta) 
-= 2i e^{-\zeta^2} \int_{-i\zeta}^{\infty} e^{-v^2} dv \tag{27}
+= 2i e^{-\zeta^2} \int_{-i\zeta}^{\infty} e^{-v^2} dv \tag{30}
 $$
 
 となります。
@@ -323,15 +351,15 @@ $$
 
 $$
 w(\zeta) 
-= e^{-\zeta^2} \mathrm{erfc} (-iz) 
-= \frac{2e^{-\zeta^2}}{\sqrt{\pi}} \int_{-i\zeta}^\infty e^{-v^2} dv \tag{28}
+= e^{-\zeta^2} \mathrm{erfc} (-i\zeta) 
+= \frac{2e^{-\zeta^2}}{\sqrt{\pi}} \int_{-i\zeta}^\infty e^{-v^2} dv \tag{31}
 $$
 
 であることを思い出せば、最終的に
 
 $$
 Z(\zeta) 
-= i \sqrt{\pi} w(\zeta) \tag{29} 
+= i \sqrt{\pi} w(\zeta) \tag{32} 
 $$
 
 を得ます。
@@ -339,14 +367,14 @@ $$\zeta = x \ (x \in \mathbb{R})$$ の場合、[ファデーエワ関数](/math/
 
 $$
 w(x) 
-= e^{-x^2} + \frac{2i}{\sqrt{\pi}} F(x) \tag{30}
+= e^{-x^2} + \frac{2i}{\sqrt{\pi}} F(x) \tag{33}
 $$
 
 と書けることを用いると
 
 $$
 Z(x) 
-= i\sqrt{\pi} e^{-x^2} - 2 F(x) \tag{31}
+= i\sqrt{\pi} e^{-x^2} - 2 F(x) \tag{34}
 $$
 
 のように書くこともできます。
@@ -356,7 +384,7 @@ $$
 Z(i\xi) 
 = i\sqrt{\pi} w(i\xi) 
 = i\sqrt{\pi} e^{\xi^2} \mathrm{erfc} (\xi) 
-= i \sqrt{\pi} \mathrm{erfcx} \tag{32}
+= i \sqrt{\pi} \mathrm{erfcx} (\xi) \tag{35}
 $$
 
 のようにもなります。
@@ -370,7 +398,7 @@ $$
 Z(-\zeta)
 = i \sqrt{\pi} w(-\zeta) 
 = i \sqrt{\pi} (2 e^{-\zeta^2} - w(\zeta)) 
-= 2 i \sqrt{\pi} e^{-\zeta^2} - Z(\zeta) \tag{33}
+= 2 i \sqrt{\pi} e^{-\zeta^2} - Z(\zeta) \tag{36}
 $$
 
 さらに [$$w(-\bar{\zeta}) = \overline{w(\zeta)}$$](/math/error_function#ファデーエワ関数) より
@@ -380,13 +408,28 @@ Z(-\bar{\zeta})
 = i \sqrt{\pi} w(-\bar{\zeta}) 
 = i \sqrt{\pi} \overline{w(\zeta)} 
 = - \overline{i \sqrt{\pi} w(\zeta)} 
-= - \overline{Z(\zeta)} \tag{34}
+= - \overline{Z(\zeta)} \tag{37}
 $$
 
 も成り立ちます。
 
+## プラズマ分散関数の可視化
+
+(32) 式のようにプラズマ分散関数が書かれることを思い出すと、Julia 言語の `SpecialFunctions.jl` で定義される `erfcx` を用いることで、簡単に図示することができます。
+以下は、$$\zeta = x \ (x \in \mathbb{R})$$ の場合に、$$Z(\zeta)$$ を描画したものです。
+
+![](/assets/images/math/plasma_dispersion_function_03.png)  
+
+虚部は偶関数であり、(19) 式で示したように $$\zeta = 0$$ で最大値 $$Z(0) = i\sqrt{\pi} \approx 1.77 i$$ となることが確認できます。
+また実部は奇関数となることも、例えば (21), (26) 式などと整合性が取れていることがわかります。
+
 ## 参考文献
 
-[1] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://link.amazon/B0evrT2UD)  
+[1] [Fried & Conte, 1961, "The Plasma Dispersion Function"](https://www.sciencedirect.com/book/monograph/9781483229294/the-plasma-dispersion-function?via=ihub%3D)  
+[2] [Beresnyak, "2023 NRL plasma formulary"](https://www.nrl.navy.mil/News-Media/Publications/NRL-Plasma-Formulary/)  
+[3] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/3PHKTdK)  
+[4] [Chen, 内田 岱二郎(訳), "プラズマ物理入門"](https://amzn.to/4akfJ5T)  
+[5] [宮本健郎, "プラズマ物理・核融合"](https://amzn.to/3PHHMmm)  
+[6] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://link.amazon/B0gEgpr2t)  
 
 {% include adsense.html %}

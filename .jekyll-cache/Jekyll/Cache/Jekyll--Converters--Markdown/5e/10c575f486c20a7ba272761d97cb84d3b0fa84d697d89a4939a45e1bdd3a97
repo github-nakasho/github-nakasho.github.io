@@ -1,0 +1,95 @@
+I"a
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#イオン音波" id="markdown-toc-イオン音波">イオン音波</a>    <ol>
+      <li><a href="#前提条件" id="markdown-toc-前提条件">前提条件</a></li>
+      <li><a href="#分散関係式" id="markdown-toc-分散関係式">分散関係式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="イオン音波">イオン音波</h1>
+
+<p>ここでは、電子とイオンの双方が応答する 2 成分の一様プラズマを考えましょう。
+この場合、<a href="/plasma/langmuir_landau_damping">電子による高周波のラングミュア波</a>に加えて、質量の大きいイオンが静電的に応答するために生じるイオン音波 (ion acoustic wave) が出現します。</p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>イオン音波が<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>せずに存在するには、次の 2 つを満たす必要があります。</p>
+
+<ul>
+  <li>波動の位相速度と同じ速度を持つ共鳴粒子の数が少ない (共鳴粒子数が少ないため減衰が強く起こらない)</li>
+  <li>波動の位相速度付近での分布関数の傾きがゼロ (位相速度よりわずかに遅い粒子とわずかに速い粒子が同数ならば減衰と増幅が釣り合う)</li>
+</ul>
+
+<p>よって、波が電子とイオンの両方とあまり強く相互作用しないためには、位相速度が</p>
+
+\[v_i \equiv \sqrt{\frac{2 T_i}{m_i}} 
+\ll \frac{\vert \omega \vert}{k} 
+\ll v_e \equiv \sqrt{\frac{2 T_e}{m_e}} \tag{1}\]
+
+<p>の間にある必要があります。
+このときの分布関数を見ると、上の条件が満たされていることがわかります。</p>
+
+<p><img src="/assets/images/plasma/ion_acoustic_wave_01.png" alt="" /><br />
+電子とイオンの速度分布関数。イオン音波の位相速度を縦線で表したとき、共鳴粒子数が少ないことと、分布関数の傾きがゼロに近いことが求められる。</p>
+
+<p class="note">電子とイオンの間の熱緩和時間は、<a href="/astroelec/spitzer_thermal#4つの場合の衝突頻度">イオン間の緩和時間に比べて \(\sqrt{\frac{m_i}{m_e}}\) 倍長い</a>ため、平衡状態の電子温度とイオン温度は一般に異なっていても差し支えありません。</p>
+
+<h2 id="分散関係式">分散関係式</h2>
+
+<p>それでは、イオン音波の分散関係式を導出していきましょう。
+電子とイオンの両方についてボルツマン分布を仮定すると、<a href="/plasma/langmuir_landau_damping#ボームグロスの分散関係式">ラングミュア波</a>のときと同様にして</p>
+
+\[\varepsilon_\mathrm{L} (k, \omega) 
+= 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} \{1 + \zeta_e Z (\zeta_e)\} + \frac{2\omega_{pi}^2}{k^2 v_i^2} \{1 + \zeta_i Z (\zeta_i)\} \tag{2}\]
+
+<p>を得ます。
+ここで \(\zeta_e = \frac{\omega}{k v_e}, \zeta_i = \frac{\omega}{k v_i}\) です。
+位相速度の条件 (1) 式から、<a href="/math/plasma_dispersion_function">\(Z(\zeta_i)\) は \(\vert \zeta_i \vert \gg 1\) で展開し、\(Z(\zeta_e)\) は \(\vert \zeta_e \vert \ll 1\) で展開した漸近式</a>を用いることにしましょう。
+すると</p>
+
+\[\zeta_e Z(\zeta_e) 
+\approx i \sqrt{\pi} \zeta e^{-\zeta_e^2} - 2 \zeta_e^2 
+\underbrace{\approx}_{\zeta^2 \sim 0} i \sqrt{\pi} \zeta_e \tag{3}\]
+
+\[\zeta_i Z(\zeta_i) 
+\approx i \sqrt{\pi} \zeta_i e^{-\zeta_i^2} - 1 - \frac{1}{2 \zeta_i^2} - \frac{3}{4 \zeta_i^4} \tag{4}\]
+
+<p>より、(2) 式は</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{L} (k, \omega) 
+&amp;\approx 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} (1 + i \sqrt{\pi} \zeta_e) + \frac{2 \omega_{pi}^2}{k^2 v_i^2} \left( i \sqrt{\pi} \zeta_i e^{-\zeta_i^2} - \frac{1}{2 \zeta_i^2} - \frac{3}{4 \zeta_i^4} \right) \notag \\
+&amp;= 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} - \frac{\omega_{pi}^2}{k^2 v_i^2 \zeta_i^2} \left( 1 + \frac{3}{2\zeta_i^2} \right) + i\sqrt{\pi} \left( \frac{2\omega_{pe}^2}{k^2 v_e^2} \zeta_e + \frac{2\omega_{pi}^2}{k^2 v_i^2} \zeta_i e^{-\zeta_i^2}\right) \notag \\
+&amp;\underbrace{=}_{\zeta = \omega / k v} 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} - \frac{\omega_{pi}^2}{\omega^2} \left( 1 + \frac{3 k^2 v_i^2}{2\omega^2} \right) + i\sqrt{\pi} \left( \frac{2\omega_{pe}^2}{k^2 v_e^2} \frac{\omega}{k v_e} + \frac{2\omega_{pi}^2}{k^2 v_i^2} \frac{\omega}{k v_i} e^{-\frac{\omega^2}{k^2 v_i^2}}\right) \tag{5}
+\end{align}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="https://amzn.to/4akfJ5T">Chen, 内田 岱二郎(訳), “プラズマ物理入門”</a><br />
+[] <a href="https://physics.thick.jp/Plasma_Physics/Section4/4-10.html">物理学のフィロソフィア、”電子プラズマ波 (ラングミュア波)”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

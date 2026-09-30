@@ -1,0 +1,230 @@
+I"fE
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#イオン音波" id="markdown-toc-イオン音波">イオン音波</a>    <ol>
+      <li><a href="#前提条件" id="markdown-toc-前提条件">前提条件</a></li>
+      <li><a href="#分散関係式" id="markdown-toc-分散関係式">分散関係式</a></li>
+      <li><a href="#イオン音波のランダウ減衰" id="markdown-toc-イオン音波のランダウ減衰">イオン音波のランダウ減衰</a></li>
+      <li><a href="#イオン音波の応用観測" id="markdown-toc-イオン音波の応用観測">イオン音波の応用・観測</a>        <ol>
+          <li><a href="#電離圏大気の観測のための非干渉性散乱レーダー" id="markdown-toc-電離圏大気の観測のための非干渉性散乱レーダー">電離圏大気の観測のための非干渉性散乱レーダー</a></li>
+          <li><a href="#太陽近傍でのイオン音波の観測" id="markdown-toc-太陽近傍でのイオン音波の観測">太陽近傍でのイオン音波の観測</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="イオン音波">イオン音波</h1>
+
+<p>ここでは、電子とイオンの双方が応答する 2 成分の一様プラズマを考えましょう。
+この場合、<a href="/plasma/langmuir_landau_damping">電子による高周波のラングミュア波</a>に加えて、質量の大きいイオンが静電的に応答するために生じるイオン音波 (ion acoustic wave) が出現します。</p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>イオン音波が<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>せずに存在するには、次の 2 つを満たす必要があります。</p>
+
+<ul>
+  <li>波動の位相速度と同じ速度を持つ共鳴粒子の数が少ない (共鳴粒子数が少ないため減衰が強く起こらない)</li>
+  <li>波動の位相速度付近での分布関数の傾きがゼロ (位相速度よりわずかに遅い粒子とわずかに速い粒子が同数ならば減衰と増幅が釣り合う)</li>
+</ul>
+
+<p>よって、波が電子とイオンの両方とあまり強く相互作用しないためには、位相速度が</p>
+
+\[v_i \equiv \sqrt{\frac{2 T_i}{m_i}} 
+\ll \frac{\vert \omega \vert}{k} 
+\ll v_e \equiv \sqrt{\frac{2 T_e}{m_e}} \tag{1}\]
+
+<p>の間にある必要があります。
+このときの分布関数を見ると、上の条件が満たされていることがわかります。</p>
+
+<p><img src="/assets/images/plasma/ion_acoustic_wave_01.png" alt="" /><br />
+電子とイオンの速度分布関数。イオン音波の位相速度を縦線で表したとき、共鳴粒子数が少ないことと、分布関数の傾きがゼロに近いことが求められる。</p>
+
+<p class="note">電子とイオンの間の熱緩和時間は、<a href="/astroelec/spitzer_thermal#4つの場合の衝突頻度">イオン間の緩和時間に比べて \(\sqrt{\frac{m_i}{m_e}}\) 倍長い</a>ため、平衡状態の電子温度とイオン温度は一般に異なっていても差し支えありません。</p>
+
+<h2 id="分散関係式">分散関係式</h2>
+
+<p>それでは、イオン音波の分散関係式を導出していきましょう。
+電子とイオンの両方についてボルツマン分布を仮定すると、<a href="/plasma/langmuir_landau_damping#ボームグロスの分散関係式">ラングミュア波</a>のときと同様にして</p>
+
+\[\varepsilon_\mathrm{L} (k, \omega) 
+= 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} \{1 + \zeta_e Z (\zeta_e)\} + \frac{2\omega_{pi}^2}{k^2 v_i^2} \{1 + \zeta_i Z (\zeta_i)\} \tag{2}\]
+
+<p>を得ます。
+ここで \(\zeta_e = \frac{\omega}{k v_e}, \zeta_i = \frac{\omega}{k v_i}\) です。
+位相速度の条件 (1) 式から、<a href="/math/plasma_dispersion_function">\(Z(\zeta_i)\) は \(\vert \zeta_i \vert \gg 1\) で展開し、\(Z(\zeta_e)\) は \(\vert \zeta_e \vert \ll 1\) で展開した漸近式</a>を用いることにしましょう。
+すると</p>
+
+\[\zeta_e Z(\zeta_e) 
+\approx i \sqrt{\pi} \zeta e^{-\zeta_e^2} - 2 \zeta_e^2 
+\underbrace{\approx}_{\zeta^2 \sim 0} i \sqrt{\pi} \zeta_e \tag{3}\]
+
+\[\zeta_i Z(\zeta_i) 
+\approx i \sqrt{\pi} \zeta_i e^{-\zeta_i^2} - 1 - \frac{1}{2 \zeta_i^2} - \frac{3}{4 \zeta_i^4} \tag{4}\]
+
+<p>より、(2) 式は</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{L} (k, \omega) 
+&amp;\approx 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} (1 + i \sqrt{\pi} \zeta_e) + \frac{2 \omega_{pi}^2}{k^2 v_i^2} \left( i \sqrt{\pi} \zeta_i e^{-\zeta_i^2} - \frac{1}{2 \zeta_i^2} - \frac{3}{4 \zeta_i^4} \right) \notag \\
+&amp;= 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} - \frac{\omega_{pi}^2}{k^2 v_i^2 \zeta_i^2} \left( 1 + \frac{3}{2\zeta_i^2} \right) + i\sqrt{\pi} \left( \frac{2\omega_{pe}^2}{k^2 v_e^2} \zeta_e + \frac{2\omega_{pi}^2}{k^2 v_i^2} \zeta_i e^{-\zeta_i^2}\right) \notag \\
+&amp;\underbrace{=}_{\zeta = \omega / k v} 1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} - \frac{\omega_{pi}^2}{\omega^2} \left( 1 + \frac{3 k^2 v_i^2}{2\omega^2} \right) + i\sqrt{\pi} \left( \frac{2\omega_{pe}^2}{k^2 v_e^2} \frac{\omega}{k v_e} + \frac{2\omega_{pi}^2}{k^2 v_i^2} \frac{\omega}{k v_i} e^{-\frac{\omega^2}{k^2 v_i^2}}\right) \tag{5}
+\end{align}\]
+
+<p>すると角周波数の実部は、\(\mathrm{Re} (\varepsilon_\mathrm{L} (k, \omega_\mathrm{r})) = 0\) を解くことで得られます。</p>
+
+\[1 + \frac{2\omega_{pe}^2}{k^2 v_e^2} - \frac{\omega_{pi}^2}{\omega_\mathrm{r}^2} \left( 1 + \frac{3 k^2 v_i^2}{2\omega_\mathrm{r}^2} \right) 
+= 0 \ \Longrightarrow \ \omega_\mathrm{r}^2 
+= \frac{1 + \frac{3}{2} \frac{k^2 v_i^2}{\omega_\mathrm{r}^2}}{1 + \frac{2 \omega_{pe}^2}{k^2 v_e^2}} \omega_{pi}^2 \tag{6}\]
+
+<p>ここで、イオンにおいては \(\frac{k^2 v_i^2}{\omega_\mathrm{r}^2} \ll 1\) であることに注意すると</p>
+
+\[\omega_\mathrm{r}^2 
+\approx \frac{1}{1 + \frac{2\omega_{pe}^2}{k^2 v_e^2}} \omega_{pi}^2 
+= \frac{k^2}{k^2 + \frac{2\omega_{pe}^2}{v_e^2}} \omega_{pi}^2 \tag{7}\]
+
+<p>のようになります。
+さらに<a href="/plasma/debye_huckel#デバイ長-debye-length">電子のデバイ長 \(\lambda_{De}^2 = v_e^2 / (2\omega_{pe}^2)\)</a>、そして<a href="/plasma/debye_huckel#デバイ長-debye-length">電子のデバイ長</a>の逆数をデバイ波数として \(k_{De} \equiv 1 / \lambda_{De}\) のように定義すれば</p>
+
+\[\omega_\mathrm{r}^2 
+\approx \frac{k^2}{k^2 + k_{De}^2} \omega_{pi}^2 \tag{8}\]
+
+<p>のように整理されます。
+<a href="/plasma/langmuir_landau_damping">ラングミュア波</a>と比較すると、イオン音波では \(\frac{k^2}{k^2} \rightarrow \frac{k^2}{k^2 + k_{De}^2}\) のように、分母が置き換わっています。
+これは、イオンが感じる電気的な復元力のうち、何割かが電子によって遮蔽されるためです。
+実際、(8) 式は長波長極限 \(k^2 \ll k_{De}^2\) において</p>
+
+\[\omega_\mathrm{r}^2 
+\approx \frac{k^2}{k_{De}^2} \omega_{pi}^2 
+= k^2 \lambda_{De}^2 \omega_{pi}^2 
+= k^2 \frac{k_B T_e}{4 \pi e^2 n_e} \frac{4\pi e^2 n_i}{m_i} 
+\underbrace{=}_{n_e = n_i} k^2 \frac{k_B T_e}{m_i} 
+= k^2 c_s^2 \quad \left( c_s \equiv \sqrt{\frac{k_B T_e}{m_i}}\right) \tag{9}\]
+
+<p>のようになります。
+途中、水素の完全電離プラズマを仮定して電子と陽子の電荷の大きさを同じとし、電気的中性条件から \(n_e = n_i\) としました。
+また \(c_s\) は音速です。
+<a href="/plasma/debye_huckel#デバイ長-debye-length">デバイ長 \(\lambda_{De}\)</a> よりも波長が長いため、電気的な復元力が完全に遮蔽され、熱的な圧力による普通の音波になっていることがわかります。
+一方、短波長極限 \(k^2 \gg k_{De}^2\) では、\(\omega_\mathrm{r}^2 \approx \omega_{pi}^2\) のようになります。
+これは短波長 (すなわち高周波) では、電子がイオン振動についていけず、負の一様な背景電荷とみなすことができるためです。
+この場合、<a href="/plasma/debye_huckel#デバイ遮蔽-debye-shielding">電子によるデバイ遮蔽</a>は効かず、イオンだけの純粋な<a href="/plasma/propagation_cold#分散関係式の導出">プラズマ振動</a>に一致します。</p>
+
+<h2 id="イオン音波のランダウ減衰">イオン音波のランダウ減衰</h2>
+
+<p>位相速度に関する条件式 (1) が成り立ち、イオンによる波動の<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>が起こらないためには</p>
+
+\[\frac{\omega_\mathrm{r}}{k} 
+\approx c_s \gg v_i \ \Longrightarrow \ 
+T_e \gg T_i \tag{10}\]
+
+<p>の温度条件が必要であるとわかります。
+角周波数の虚部 \(\omega_\mathrm{i}\) から、この波動の成長率 (減衰率) を計算してみましょう。
+(5) 式の実部より</p>
+
+\[\frac{\partial \varepsilon_\mathrm{r}}{\partial \omega_\mathrm{r}} 
+= \frac{2 \omega_{pi}^2}{\omega_\mathrm{r}^3} + \frac{6 k^2 v_i^2 \omega_{pi}^2}{\omega_\mathrm{r}^5} 
+= \frac{2 \omega_{pi}^2}{\omega_\mathrm{r}^3} \left( 1 + \frac{3 k^2 v_i^2}{\omega_\mathrm{r}^2} \right) 
+\underbrace{\approx}_{k^2 v_i^2 / \omega_\mathrm{r}^2 \ll 1} \frac{2 \omega_{pi}^2}{\omega_\mathrm{r}^3} \tag{11}\]
+
+<p>です。
+そして (5) 式の虚部から</p>
+
+\[\begin{align}
+\omega_\mathrm{i} 
+&amp;= - \frac{\varepsilon_\mathrm{i}}{\frac{\partial \varepsilon_\mathrm{r}}{\partial \omega_\mathrm{r}}} 
+= - \sqrt{\pi} \left( \frac{2\omega_{pe}^2}{k^2 v_e^2} \frac{\omega_\mathrm{r}}{k v_e} + \frac{2\omega_{pi}^2}{k^2 v_i^2} \frac{\omega_\mathrm{r}}{k v_i} e^{-\frac{\omega^2}{k^2 v_i^2}}\right) \frac{\omega_\mathrm{r}^3}{2 \omega_{pi}^2} \notag \\
+&amp;= - \sqrt{\pi} \omega_\mathrm{r} \left\{ \left( \frac{\omega_\mathrm{r}}{k v_e} \right)^3 \frac{\omega_{pe}^2}{\omega_{pi}^2} + \left(\frac{\omega_\mathrm{r}}{k v_i} \right)^3 e^{-\frac{\omega_\mathrm{r}^2}{k^2 v_i^2}}\right\} \tag{12}
+\end{align}\]
+
+<p>となります。
+指数部分の肩において \(\frac{\omega_\mathrm{r}}{k v_i} \approx \frac{c_s}{v_i} \ll 1\) であることから、第二項は無視できるほど小さいことがわかります。
+さらに</p>
+
+\[\frac{\omega_\mathrm{r}}{k v_e} 
+\approx \frac{c_s}{v_e} 
+= \sqrt{\frac{k_B T_e}{m_i}} \sqrt{\frac{m_e}{2 k_B T_e}} 
+= \sqrt{\frac{m_e}{2m_i}}, \quad \frac{\omega_{pe}^2}{\omega_{pi}^2} 
+= \frac{m_i}{m_e} \tag{13}\]
+
+<p>であることを用いれば、(12) 式は</p>
+
+\[\omega_\mathrm{i} 
+= - \sqrt{\frac{\pi m_e}{8 m_i}} \tag{14}\]
+
+<p>のように整理されます。
+すなわちイオン音波は、長波長 \(k \ll k_{De}\) において、\(\omega_\mathrm{r} \approx k c_s\) を満たす低周波の減衰波です。
+イオン温度が上昇し、\(T_i \sim T_e\) となると、波動の位相速度がイオンの熱速度に近くなるため、イオンの<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>のためにイオン音波は強く減衰されます。</p>
+
+<h2 id="イオン音波の応用観測">イオン音波の応用・観測</h2>
+
+<p>これまで議論してきた通り、イオン音波は \(T_e \gg T_i\) のときに伝播が可能となります。
+この存在条件の難しさから、このイオン音波が観測されること自体が重要な情報になります。
+以下では、このイオン音波を応用した技術や、イオン音波自身の観測例についてご説明します。</p>
+
+<h3 id="電離圏大気の観測のための非干渉性散乱レーダー">電離圏大気の観測のための非干渉性散乱レーダー</h3>
+
+<p>非干渉性散乱 (Incoherent Scatter: IS) レーダーは、上空に向けて放射した電波が大気中の電子により散乱されてわずかに戻ってくることを利用したものです。
+これにより、電子・イオンの組成・運動・温度などの電離圏の種々の物理量を連続して観測できます。
+地上から放出された電磁波が電離圏内のイオン音波に散乱されると、その周波数が変化するだけでなく、スペクトルのピークが 2 つに分離します。
+さらに<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>などの効果により、スペクトルが鈍ることが知られています。</p>
+
+<p><img src="/assets/images/plasma/ion_acoustic_wave_01.png" alt="" /><br />
+イオン音波によるレーダーの散乱スペクトル。</p>
+
+<p>このスペクトル形状は、次のような情報を持つことが知られています。</p>
+
+<ul>
+  <li>全受信パワー: 電子密度 \(n_e\)</li>
+  <li>スペクトル幅: イオン温度 \(T_i / m_i\)</li>
+  <li>周波数の全体のシフト: イオンのドリフト速度 \(v_i\)</li>
+  <li>ピークの鋭さ: 電子とイオンの温度比 \(T_e / T_i\)</li>
+</ul>
+
+<p>\(T_e / T_i \gg 1\) のとき、イオン音波は<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>が起こることなく伝播できるため、\(T_e / T_i\) が大きいほど<a href="/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>が起こらずに鋭いピークとなります。</p>
+
+<h3 id="太陽近傍でのイオン音波の観測">太陽近傍でのイオン音波の観測</h3>
+
+<p>これまでの議論から、\(T_e \simeq T_i\) となる 1 AU の太陽風では、イオン音波はすぐに減衰するために存在できません。
+しかし \(T_e &gt; T_i\) となる太陽近傍領域ではイオン音波が存在することが、パーカー・ソーラー・プローブ (PSP) の観測から確認されました。
+<a href="https://iopscience.iop.org/article/10.3847/1538-4357/abafb4">Mozer et al. (2020)</a> では、PSP が太陽半径の 55 倍の距離にいたときに観測されたバーストについて報告しました。
+そのバーストには、ドップラーシフトしたイオン音波が含まれており、60 Hz から 陽子プラズマ振動数である 2200 Hz に至るまでの全周波数帯域で観測されました。
+このイオン音波発生機構として、論文ではイオン・イオン音波不安定性の可能性が高いことを議論しています。<br />
+さらに <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac2259">Mozer et al. (2021)</a> では、PSP が太陽半径の 20 倍の距離にいたときに 12 時間に以上にわたって観測された、連続的な狭帯域の静電放射を報告しました。
+観測周波数は 1000 Hz 以下で、これは局所的なイオンプラズマ周波数よりもはるかに小さいものです。
+またこの静電波の波束は 1.5 Hz の頻度で繰り返していることもわかりました。
+この場所が \(T_e / T_i \sim 5\) のようなイオン音波が存在できる条件であったことから、この静電放射をイオン音波と解釈しています。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://angeo.copernicus.org/articles/43/633/2025/">Hatch et al., 2025, “Toolkit for incoherent scatter radar experiment design and application to EISCAT_3D”</a><br />
+[2] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abafb4">Mozer et al., 2020, “Large-amplitude, Wideband, Doppler-shifte, Ion Acoustic Waves Observed on the Parker Solar Probe”</a><br />
+[3] <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac2259">Mozer et al., 2021, “Triggered Ion-acoustic Waves in the Solar Wind”</a><br />
+[4] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[5] <a href="https://amzn.to/4akfJ5T">Chen, 内田 岱二郎(訳), “プラズマ物理入門”</a><br />
+[6] <a href="https://physics.thick.jp/Plasma_Physics/Section4/4-13.html">物理学のフィロソフィア、”イオン音波”</a><br />
+[7] <a href="https://www.nipr.ac.jp/info/notice/20191128.html">国立極地研究所, “南極大気の精密観測～南極域初の非干渉性散乱レーダー観測を支える適応的信号処理技術を開発～”</a><br />
+[8] <a href="https://pithia-nrf.eu/activities-results/outreach/space-weather-research-instruments/incoherent-scatter-radar">PITHIA-NRF Research Infrastructure, “Incoherent scatter radar”</a><br />
+[9] <a href="https://cedarscience.org/sites/default/files/meeting/semeter06.pdf">Joshua Semeter, “Incoherent Scatter Radar 101”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -234,7 +234,7 @@ $$
 したがって、3MHz以下の低周波電磁波を宇宙に向けて放射すると、電離層の表面で反射されます。
 地球の裏側との交信に、この物理現象を利用していたこともあります。
 
-![](/assets/images/plasma/propagation_cold_02.png)
+![](/assets/images/plasma/propagation_cold_02.png){: width="50%"}  
 
 ## プラズマの屈折率を利用した観測
 

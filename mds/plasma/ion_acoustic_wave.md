@@ -18,7 +18,7 @@ nav_order: 13
 {:toc}
 </details>
 
-{% include adsense.html %} 
+{% include adsense.html %}
 
 # イオン音波
 
@@ -132,9 +132,11 @@ $$
 これは短波長 (すなわち高周波) では、電子がイオン振動についていけず、負の一様な背景電荷とみなすことができるためです。
 この場合、[電子によるデバイ遮蔽](/plasma/debye_huckel#デバイ遮蔽-debye-shielding)は効かず、イオンだけの純粋な[プラズマ振動](/plasma/propagation_cold#分散関係式の導出)に一致します。
 
+{% include adsense.html %}
+
 ## イオン音波のランダウ減衰
 
-位相速度に関する条件式 (1) が成り立ち、イオンによる波動のランダウ減衰が起こらないためには
+位相速度に関する条件式 (1) が成り立ち、イオンによる波動の[ランダウ減衰](/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)が起こらないためには
 
 $$
 \frac{\omega_\mathrm{r}}{k} 
@@ -186,12 +188,55 @@ $$
 
 のように整理されます。
 すなわちイオン音波は、長波長 $$k \ll k_{De}$$ において、$$\omega_\mathrm{r} \approx k c_s$$ を満たす低周波の減衰波です。
-イオン温度が上昇し、$$T_i \sim T_e$$ となると、波動の位相速度がイオンの熱速度に近くなるため、イオンのランダウ減衰のためにイオン音波は強く減衰されます。
+イオン温度が上昇し、$$T_i \sim T_e$$ となると、波動の位相速度がイオンの熱速度に近くなるため、イオンの[ランダウ減衰](/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)のためにイオン音波は強く減衰されます。
+
+## イオン音波の応用・観測
+
+これまで議論してきた通り、イオン音波は $$T_e \gg T_i$$ のときに伝播が可能となります。
+この存在条件の難しさから、このイオン音波が観測されること自体が重要な情報になります。
+以下では、このイオン音波を応用した技術や、イオン音波自身の観測例についてご説明します。
+
+### 電離圏大気の観測のための非干渉性散乱レーダー
+
+非干渉性散乱 (Incoherent Scatter: IS) レーダーは、上空に向けて放射した電波が大気中の電子により散乱されてわずかに戻ってくることを利用したものです。
+これにより、電子・イオンの組成・運動・温度などの電離圏の種々の物理量を連続して観測できます。
+地上から放出された電磁波が電離圏内のイオン音波に散乱されると、その周波数が変化するだけでなく、スペクトルのピークが 2 つに分離します。
+さらに[ランダウ減衰](/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)の効果により、スペクトルが鈍ることが知られています。
+
+![](/assets/images/plasma/ion_acoustic_wave_02.png)  
+イオン音波によるレーダーの散乱スペクトル。  
+
+このスペクトル形状は、次のような情報を持つことが知られています。
+
+* 全受信パワー: 電子密度 $$n_e$$
+* スペクトル幅: イオン温度 $$T_i / m_i$$
+* 周波数の全体のシフト: イオンのドリフト速度 $$v_i$$
+* ピークの鋭さ: 電子とイオンの温度比 $$T_e / T_i$$
+
+$$T_e / T_i \gg 1$$ のとき、イオン音波は[ランダウ減衰](/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)が起こることなく伝播できるため、$$T_e / T_i$$ が大きいほど[ランダウ減衰](/plasma/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)が起こらずに鋭いピークとなります。
+
+### 太陽近傍でのイオン音波の観測
+
+これまでの議論から、$$T_e \simeq T_i$$ となる 1 AU の太陽風では、イオン音波はすぐに減衰するために存在できません。
+しかし $$T_e > T_i$$ となる太陽近傍領域ではイオン音波が存在することが、パーカー・ソーラー・プローブ (PSP) の観測から確認されました。
+[Mozer et al. (2020)](https://iopscience.iop.org/article/10.3847/1538-4357/abafb4) では、PSP が太陽半径の 55 倍の距離にいたときに観測されたバーストについて報告しました。
+そのバーストには、ドップラーシフトしたイオン音波が含まれており、60 Hz から 陽子プラズマ振動数である 2200 Hz に至るまでの全周波数帯域で観測されました。
+このイオン音波発生機構として、論文ではイオン・イオン音波不安定性の可能性が高いことを議論しています。  
+さらに [Mozer et al. (2021)](https://iopscience.iop.org/article/10.3847/2041-8213/ac2259) では、PSP が太陽半径の 20 倍の距離にいたときに 12 時間に以上にわたって観測された、連続的な狭帯域の静電放射を報告しました。
+観測周波数は 1000 Hz 以下で、これは局所的なイオンプラズマ周波数よりもはるかに小さいものです。
+またこの静電波の波束は 1.5 Hz の頻度で繰り返していることもわかりました。
+この場所が $$T_e / T_i \sim 5$$ のようなイオン音波が存在できる条件であったことから、この静電放射をイオン音波と解釈しています。
 
 ## 参考文献
 
-[] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/3PHKTdK)  
-[] [Chen, 内田 岱二郎(訳), "プラズマ物理入門"](https://amzn.to/4akfJ5T)  
-[] [物理学のフィロソフィア、"電子プラズマ波 (ラングミュア波)"](https://physics.thick.jp/Plasma_Physics/Section4/4-10.html)  
+[1] [Hatch et al., 2025, "Toolkit for incoherent scatter radar experiment design and application to EISCAT_3D"](https://angeo.copernicus.org/articles/43/633/2025/)  
+[2] [Mozer et al., 2020, "Large-amplitude, Wideband, Doppler-shifte, Ion Acoustic Waves Observed on the Parker Solar Probe"](https://iopscience.iop.org/article/10.3847/1538-4357/abafb4)  
+[3] [Mozer et al., 2021, "Triggered Ion-acoustic Waves in the Solar Wind"](https://iopscience.iop.org/article/10.3847/2041-8213/ac2259)  
+[4] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/3PHKTdK)  
+[5] [Chen, 内田 岱二郎(訳), "プラズマ物理入門"](https://amzn.to/4akfJ5T)  
+[6] [物理学のフィロソフィア、"イオン音波"](https://physics.thick.jp/Plasma_Physics/Section4/4-13.html)  
+[7] [国立極地研究所, "南極大気の精密観測～南極域初の非干渉性散乱レーダー観測を支える適応的信号処理技術を開発～"](https://www.nipr.ac.jp/info/notice/20191128.html)  
+[8] [PITHIA-NRF Research Infrastructure, "Incoherent scatter radar"](https://pithia-nrf.eu/activities-results/outreach/space-weather-research-instruments/incoherent-scatter-radar)  
+[9] [Joshua Semeter, "Incoherent Scatter Radar 101"](https://cedarscience.org/sites/default/files/meeting/semeter06.pdf)  
 
 {% include adsense.html %}

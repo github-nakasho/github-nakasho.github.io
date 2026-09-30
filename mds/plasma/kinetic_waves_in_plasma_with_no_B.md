@@ -468,7 +468,7 @@ $$
 このとき、(44) 式は、$$\varepsilon_\mathrm{L} (k, \omega) = 0 \ (\omega = \omega_\mathrm{r} + i \omega_\mathrm{i})$$ において極を持ちます。
 よって、ラプラス逆変換の積分計算のために、複素数 $$\omega$$ の平面上での積分路を次図のように変形させます。
 
-![](/assets/images/dispersion_relation_01.png)  
+![](/assets/images/plasma/dispersion_relation_01.png)  
 ラプラス逆変換のための積分経路。P は極の位置を表す。  
 
 すると積分は

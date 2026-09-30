@@ -1,0 +1,140 @@
+I"#
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁場なしプラズマ中の電磁波" id="markdown-toc-磁場なしプラズマ中の電磁波">磁場なしプラズマ中の電磁波</a>    <ol>
+      <li><a href="#横誘電率の計算" id="markdown-toc-横誘電率の計算">横誘電率の計算</a></li>
+      <li><a href="#電磁波" id="markdown-toc-電磁波">電磁波</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁場なしプラズマ中の電磁波">磁場なしプラズマ中の電磁波</h1>
+
+<h2 id="横誘電率の計算">横誘電率の計算</h2>
+
+<p>等方的な一様プラズマ中では、波動を縦波と横波に分離できます。
+そのため、<a href="/plasma/langmuir_landau_damping">ラングミュア波</a>や<a href="/plasma/ion_acoustic_wave">イオン音波</a>では、縦波について考えてきました。
+そこで以降では、横波について調べてみましょう。</p>
+
+<p>誘電率と縦誘電率・横誘電率との関係は</p>
+
+\[\varepsilon_\mathrm{T} (\mathbf{k}, \omega) 
+= \frac{1}{2} (\mathrm{Tr} \ \varepsilon - \varepsilon_\mathrm{L}) \tag{1}\]
+
+<p>にあるのでした。
+そして誘電率と縦誘電率はそれぞれ</p>
+
+\[\varepsilon 
+= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) I + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{\mathbf{v} \mathbf{v}}{\omega - \mathbf{k} \cdot \mathbf{v}} (\mathbf{k} \cdot \nabla_v f_{0, s}) d^3 \mathbf{v} \tag{2}\]
+
+\[\varepsilon_\mathrm{L}
+= \frac{\mathbf{k} \varepsilon \mathbf{k}}{k^2} 
+= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v}\tag{3}\]
+
+<p>で与えられることから、横誘電率は</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{T} 
+&amp;= \frac{3}{2} \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{2\pi q_s^2}{m_s \omega^2} \int \frac{v_x^2 + v_y^2 + v_z^2}{\omega - \mathbf{k} \cdot \mathbf{v}} (\mathbf{k} \cdot \nabla_v f_{0, s}) d^3 \mathbf{v} \notag \\
+&amp; \qquad - \frac{1}{2} \left( 1 - \frac{\omega_p^2}{\omega^2} \right) - \sum_s \frac{2\pi q_s^2}{m_s \omega^2} \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v} \notag \\ 
+&amp;= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{1}{2} \left( v^2 - \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \right) \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v} \tag{4}
+\end{align}\]
+
+<p>となります。
+ここで、等方的なプラズマを考えているため、伝播する波の波数ベクトルを \(x\) 軸の方向にとっても問題はありません。
+すると \(\mathbf{k} = k (1, 0, 0)\) より</p>
+
+\[\mathbf{v}^2 - \frac{\mathbf{k} \cdot \mathbf{v}\mathbf{v} \cdot \mathbf{k}}{k^2} 
+= v_x^2 + v_y^2 + v_z^2 - \frac{v_x^2 k^2}{k^2} 
+= v_y^2 + v_z^2 \tag{5}\]
+
+<p>となります。
+そして電子のみからなる 1 成分プラズマを考え、分布関数 \(f_{0, e}\) にボルツマン分布関数を仮定しましょう。</p>
+
+\[f_{0, e} 
+= \frac{n_0}{(\pi v_e^2)^{3/2}} e^{-\frac{v^2}{v_e^2}} \tag{6}\]
+
+\[\mathbf{k} \cdot \nabla_v f_{0, e} 
+= k \frac{\partial}{\partial v_x} \frac{n_0}{(\pi v_e^2)^{3/2}} e^{-\frac{v^2}{v_e^2}} 
+= \frac{n_0 k}{(\pi v_e^2)^{3/2}} \left( - \frac{2 v_x}{v_e^2}\right) e^{-\frac{v^2}{v_e^2}} \tag{7}\]
+
+\[\begin{align}
+\varepsilon_\mathrm{T} 
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{4\pi e^2}{m_e \omega^2} \frac{n_0}{(\pi v_e^2)^{3/2} v_e^2} \int (v_y^2 + v_z^2) \frac{k v_x}{k v_x - \omega} e^{-\frac{v^2}{v_e^2}} d^3 \mathbf{v} \notag \\
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \frac{1}{(\pi v_e^2)^{3/2} v_e^2} \int_{-\infty}^\infty \frac{k v_x}{k v_x - \omega} e^{-\frac{v_x^2}{v_e^2}} dv_x \iint_{-\infty}^\infty (v_y^2 + v_z^2) e^{-\frac{v_y^2 + v_z^2}{v_e^2}} dv_y dv_z \tag{8}
+\end{align}\]
+
+<p>途中、<a href="/plasma/propagation_cold#分散関係式の導出">電子プラズマ振動数 \(\omega_{pe} = \sqrt{\frac{4\pi e^2 n_0}{m_e}}\)</a> を用いました。
+\(v_y, v_z\) の積分部分において、\(v_y = R \cos \varphi, v_z = R \sin \varphi\) のように変数変換をすると、\(dv_y dv_z = R dR d\varphi\) のようになります。
+また積分範囲は \(v_y, v_z \in [-\infty, \infty]\) から \(R \in [0, \infty], \varphi \in [0, 2\pi]\) のようになります。
+すると</p>
+
+\[\begin{align}
+(v_y, v_z の積分) 
+&amp;= \int_0^\infty R^3 e^{-\frac{R^2}{v_e^2}} dR \int_0^{2\pi} d\varphi 
+= - \pi \int_0^\infty R^2 v_e^2 \underbrace{\left( - \frac{2R}{v_e^2} e^{-\frac{R^2}{v_e^2}} \right)}_{=\frac{d}{dR} e^{-\frac{R^2}{v_e^2}}} dR \notag \\
+&amp;\underbrace{=}_{部分積分} - \pi v_e^2 \left( \left[ R^2 e^{-\frac{R^2}{v_e^2}}\right]_0^\infty - 2 \int_0^\infty R e^{-\frac{R^2}{v_e^2}} dR \right) 
+= - \pi v_e^4 \int_0^\infty \left( - \frac{2R}{v_e^2} \right) e^{-\frac{R^2}{v_e^2}} dR \notag \\
+&amp;= - \pi v_e^4 \left[ e^{-\frac{R^2}{v_e^2}} \right]_0^\infty 
+= \pi v_e^4 \tag{9}
+\end{align}\]
+
+<p>のように計算されます。
+以上より</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{T} 
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \frac{1}{\sqrt{\pi} v_e} \int_{-\infty}^\infty \frac{k v_x}{k v_x - \omega} e^{-\frac{v_x^2}{v_e^2}} dv_x \notag \\
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \frac{1}{\sqrt{\pi} v_e} \int_{-\infty}^\infty \frac{\frac{v_x}{v_e}}{\frac{v_x}{v_e} - \frac{\omega}{k v_e}} e^{-\frac{v_x^2}{v_e^2}} dv_x \notag \\
+&amp;\underbrace{=}_{z = v_x / v_e, \zeta = \omega / k v_e} \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \frac{z}{z - \zeta} e^{-z^2} dz \notag \\
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \left( \frac{z- \zeta}{z - \zeta} + \frac{\zeta}{z - \zeta} \right)e^{-z^2} dz \notag \\
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{\omega_{pe}^2}{\omega^2} \{1 + \zeta Z(\zeta) \} 
+= 1 + \frac{\omega_{pe}^2}{\omega^2} \zeta Z(\zeta) \tag{10}
+\end{align}\]
+
+<p>のように、<a href="/math/plasma_dispersion_function">プラズマ分散関数 \(Z(\zeta)\)</a>を用いて表現することができます。</p>
+
+<h2 id="電磁波">電磁波</h2>
+
+<p>ここで考えている波動は電磁波であるとし、波動の位相速度は電子の熱速度より十分速いとしましょう。
+すなわち \(\zeta = \frac{\omega}{k v_e} \gg 1\) です。
+すると<a href="/math/plasma_dispersion_function#級数展開">プラズマ分散関数の \(\zeta \gg 1\) の場合の級数展開</a>と、<a href="/plasma/kinetic_waves_in_plasma_with_no_B#縦横モードの分離">横波の分散関係式 \(\varepsilon_\mathrm{T} = c^2 k^2 / \omega^2\)</a>より</p>
+
+\[\varepsilon_\mathrm{T} 
+\approx 1 + \frac{\omega_{pe}^2}{\omega^2} \zeta \left( i \sigma \sqrt{\pi} e^{-\zeta^2} - \frac{1}{\zeta} \right)
+= 1 - \frac{\omega_{pe}^2}{\omega^2} + i \sigma \sqrt{\pi} \frac{\omega_{pe}^2}{\omega^2} \zeta e^{-\zeta^2} 
+= \frac{c^2 k^2}{\omega^2} \tag{11}\]
+
+<p>実部のみを考えると</p>
+
+\[1 - \frac{\omega_{pe}^2}{\omega^2} - \frac{c^2 k^2}{\omega^2} 
+= 0 \ \Longrightarrow \ \omega^2 
+= \omega_{pe}^2 + c^2 k^2 \tag{12}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="https://amzn.to/4akfJ5T">Chen, 内田 岱二郎(訳), “プラズマ物理入門”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

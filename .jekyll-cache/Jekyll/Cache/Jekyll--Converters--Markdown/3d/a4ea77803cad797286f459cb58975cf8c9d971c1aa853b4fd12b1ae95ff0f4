@@ -1,0 +1,98 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#磁場なしプラズマ中の電磁波" id="markdown-toc-磁場なしプラズマ中の電磁波">磁場なしプラズマ中の電磁波</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="磁場なしプラズマ中の電磁波">磁場なしプラズマ中の電磁波</h1>
+
+<p>等方的な一様プラズマ中では、波動を縦波と横波に分離できます。
+そのため、<a href="/plasma/langmuir_landau_damping">ラングミュア波</a>や<a href="/plasma/ion_acoustic_wave">イオン音波</a>では、縦波について考えてきました。
+そこで以降では、横波について調べてみましょう。</p>
+
+<p>誘電率と縦誘電率・横誘電率との関係は</p>
+
+\[\varepsilon_\mathrm{T} (\mathbf{k}, \omega) 
+= \frac{1}{2} (\mathrm{Tr} \ \varepsilon - \varepsilon_\mathrm{L}) \tag{1}\]
+
+<p>にあるのでした。
+そして誘電率と縦誘電率はそれぞれ</p>
+
+\[\varepsilon 
+= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) I + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{\mathbf{v} \mathbf{v}}{\omega - \mathbf{k} \cdot \mathbf{v}} (\mathbf{k} \cdot \nabla_v f_{0, s}) d^3 \mathbf{v} \tag{2}\]
+
+\[\varepsilon_\mathrm{L}
+= \frac{\mathbf{k} \varepsilon \mathbf{k}}{k^2} 
+= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v}\tag{3}\]
+
+<p>で与えられることから、横誘電率は</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{T} 
+&amp;= \frac{3}{2} \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{2\pi q_s^2}{m_s \omega^2} \int \frac{v_x^2 + v_y^2 + v_z^2}{\omega - \mathbf{k} \cdot \mathbf{v}} (\mathbf{k} \cdot \nabla_v f_{0, s}) d^3 \mathbf{v} \notag \\
+&amp; \qquad - \frac{1}{2} \left( 1 - \frac{\omega_p^2}{\omega^2} \right) - \sum_s \frac{2\pi q_s^2}{m_s \omega^2} \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v} \notag \\ 
+&amp;= \left( 1 - \frac{\omega_p^2}{\omega^2} \right) + \sum_s \frac{4\pi q_s^2}{m_s \omega^2} \int \frac{1}{2} \left( v^2 - \frac{\mathbf{k} \cdot \mathbf{v} \mathbf{v} \cdot \mathbf{k}}{k^2} \right) \frac{\mathbf{k} \cdot \nabla_v f_{0, s}}{\omega - \mathbf{k} \cdot \mathbf{v}} d^3 \mathbf{v} \tag{4}
+\end{align}\]
+
+<p>となります。
+ここで、等方的なプラズマを考えているため、伝播する波の波数ベクトルを \(x\) 軸の方向にとっても問題はありません。
+すると \(\mathbf{k} = k (1, 0, 0)\) より</p>
+
+\[\mathbf{v}^2 - \frac{\mathbf{k} \cdot \mathbf{v}\mathbf{v} \cdot \mathbf{k}}{k^2} 
+= v_x^2 + v_y^2 + v_z^2 - \frac{v_x^2 k^2}{k^2} 
+= v_y^2 + v_z^2 \tag{5}\]
+
+<p>となります。
+そして電子のみからなる 1 成分プラズマを考え、分布関数 \(f_{0, e}\) にボルツマン分布関数を仮定しましょう。</p>
+
+\[f_{0, e} 
+= \frac{n_0}{(\pi v_e^2)^{3/2}} e^{-\frac{v^2}{v_e^2}} \tag{6}\]
+
+\[\mathbf{k} \cdot \nabla_v f_{0, e} 
+= k \frac{\partial}{\partial v_x} \frac{n_0}{(\pi v_e^2)^{3/2}} e^{-\frac{v^2}{v_e^2}} 
+= \frac{n_0 k}{(\pi v_e^2)^{3/2}} \left( - \frac{2 v_x}{v_e^2}\right) e^{-\frac{v^2}{v_e^2}} \tag{7}\]
+
+\[\begin{align}
+\varepsilon_\mathrm{T} 
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{4\pi e^2}{m_e \omega^2} \frac{n_0}{(\pi v_e^2)^{3/2} v_e^2} \int (v_y^2 + v_z^2) \frac{k v_x}{k v_x - \omega} e^{-\frac{v^2}{v_e^2}} d^3 \mathbf{v} \notag \\
+&amp;= \left( 1 - \frac{\omega_{pe}^2}{\omega^2}\right) + \frac{4\pi e^2}{m_e \omega^2} \frac{n_0}{(\pi v_e^2)^{3/2} v_e^2} \int_{-\infty}^\infty \frac{k v_x}{k v_x - \omega} e^{-\frac{v_x^2}{v_e^2}} dv_x \iint_{-\infty}^\infty (v_y^2 + v_z^2) e^{-\frac{v_y^2 + v_z^2}{v_e^2}} dv_y dv_z \tag{8}
+\end{align}\]
+
+<p>\(v_y, v_z\) の積分部分において、\(v_y = R \cos \varphi, v_z = R \sin \varphi\) のように変数変換をすると、\(dv_y dv_z = R dR d\varphi\) のようになります。
+また積分範囲は \(v_y, v_z \in [-\infty, \infty]\) から \(R \in [0, \infty], \varphi \in [0, 2\pi]\) のようになります。
+すると</p>
+
+\[(v_y v_z の積分) 
+= \int_0^\infty R^3 e^{-\frac{R^2}{v_e^2}} dR \int_0^{2\pi} d\varphi 
+= - \pi \int_0^\infty R^2 v_e^2 \left( - \frac{2R}{v_e^2} e^{-\frac{R^2}{v_e^2}} \right)\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="https://amzn.to/4akfJ5T">Chen, 内田 岱二郎(訳), “プラズマ物理入門”</a><br />
+[] <a href="https://physics.thick.jp/Plasma_Physics/Section4/4-13.html">物理学のフィロソフィア、”イオン音波”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

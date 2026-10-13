@@ -1,0 +1,96 @@
+I"
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#プラズマエコー" id="markdown-toc-プラズマエコー">プラズマエコー</a>    <ol>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="プラズマエコー">プラズマエコー</h1>
+
+<p>ここでは、ランダウ減衰・逆ランダウ減衰 (ランダウ増幅) の重要な応用例である、プラズマエコーについてまとめています。</p>
+
+<p>##</p>
+
+<p><a href="/plasma/kinetic_waves_in_plasma_with_no_B#プラズマ系の初期値と固有モードの関係">線形化されたブラソフ方程式 (リンク先の(37)式)</a>を、分布関数の摂動成分 \(f_k\) について形式的に解くと</p>
+
+\[f_k(v, t) 
+= e^{-ikvt} \left( f_k(v, 0) + \frac{e}{m_e} \int_0^t e^{ikvt'} E_k(t') \frac{\partial f_e (v)}{\partial v} dt' \right) \tag{1}\]
+
+<p>のように書かれます。
+この式を見ると、分布関数の摂動成分は時間とともに際限なく振動を続け、初期分布に関する情報を伝播させます。
+もちろん、これを \(v\) について積分して得られる密度 \(n_k (t)\) や、それから計算されるでんば \(E_k(t)\) には、(初期分布が滑らかな関数である限り) この振動は残りません。
+ラングミュア波やイオン音波などの部分で見たように、通常これらの積分量は、ランダウ減衰により初期分布に関係なく時間とともに減衰していきます。
+分布関数の摂動成分のこの振動を通した初期状態の記憶は、無衝突系においては、個々の粒子がその初期速度をいつまでも記憶していることを反映しています。
+したがって、仮にわずかでも衝突があれば、この振動は減衰し、初期状態に対する記憶は忘れ去られてしまいます。
+言い換えると、ランダウ減衰が本質的に無衝突な物理系での減衰であることを表しています。<br />
+この分布関数の振動という形で残されている、初期状態に対する記憶を実際に観測する方法はないのでしょうか？
+また (1) 式を \(v\) で積分したものは、本当にいつもランダウ減衰してしまうのでしょうか？
+このような問題は、1960 年代に Q 装置 (Q-machine) と呼ばれる装置を用いて調べられてきました。
+低温・低密度のプラズマ中に電子プラズマ波やイオン音波などの波動を励起し、静電プローブを用いてその伝播特性を調べ、ランダウ減衰と思われる現象を賢章する実験が行われた頃から興味を持たれてきたのです。
+そして 1967 年に、次に説明するプラズマエコー (plasma echo) と呼ばれる現象を通じて、これが確認されました。<br />
+最初に、(1) 式の初期分布がどのよに作られるかを考えてみましょう。
+一つは、プラズマがもともと個々の粒子から離散的になっているという効果 (discreteness effect) が考えられます。
+各プラズマ粒子の周りには電場ができ、また粒子の運動に伴って電流が流れます。
+これらの微視的な電場・電流に対する分布関数の線形応答をフーリエ分解すると、常にこのような初期摂動分布が形成されます。
+これがプラズマ中のノイズ源となり、これにより生成される電磁場のゆらぎは、揺動散逸定理により決定されます。
+外部から波数 \(k\) の電磁場をプラズマ中に印加する実験手法について考えましょう。
+外部電場を</p>
+
+\[E_\mathrm{ext} (x, t) 
+= E_0 \cos kx \delta (\omega_p t) \tag{2}\]
+
+<p>のように表すことにします。
+ここで \(\omega_p\) はプラズマ振動数です。
+<a href="/plasma/kinetic_waves_in_plasma_with_no_B#プラズマ系の初期値と固有モードの関係">線形化されたブラソフ方程式</a>の電場の部分にこの外部電場を代入し、\(t = -0\) から \(+0\) まで積分すると</p>
+
+\[f_k(v, t=+0) 
+= \frac{eE_0}{2m_e \omega_p} \frac{\partial f_0(v)}{\partial v} \tag{3}\]
+
+<p>を得ます。
+これが後の \(f_k(v, t)\) を決める初期分布になります。
+これは速度 \(v\) の滑らかな関数であることから、それを \(v\) で積分したものには、分布関数の振動の効果は現れません。
+したがって、\(E_k(t)\) はランダウ減衰します。<br />
+これに対し、プラズマエコーは次のような外部電場で励起された分布関数に関する情報を引き出そうとするものです。</p>
+
+\[E_\mathrm{ext} (x, t) 
+= E_1 \cos k_1 x \delta (\omega_p t) + E_2 \cos k_2 x \delta (\omega_p(t-\tau)), \quad 
+(\gamma \tau \gg 1, k_2 &gt; k_1 &gt; 0) \tag{4}\]
+
+<p>ただし、\(\gamma\) は典型的なランダウ減衰率です。
+まず \(0 &lt; t &lt; \tau\) では \(f_{\pm k_1} (v, t)\) のみが作られます。
+これを (4) 式に代入して</p>
+
+\[f_{\pm k_1} (v, t) 
+= e^{\mp i k_1 vt} \frac{e}{m_e} \left( \frac{E_1}{2\omega_p} \frac{\partial f_0}{\partial v} + \int_0^t e^{\mp ik_1 vt} E_{k_1} (t') \frac{\partial f_0}{\partial v} dt' \right) \tag{5}\]
+
+<p>次に、\(t = \tau + 0\) では、\(f_{\pm k_2}\) と \(f_{\pm (k_2 \pm k_1)}\) が作られます。
+全て考えるのは面倒なので、ここではこのうちの \(f_{k_3} \ (k_3 = k_2 - k_1)\) に注目することにしましょう。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,82 @@
+I"s
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビーム駆動型不安定性" id="markdown-toc-ビーム駆動型不安定性">ビーム駆動型不安定性</a>    <ol>
+      <li><a href="#冷たいビームプラズマ系" id="markdown-toc-冷たいビームプラズマ系">冷たいビームプラズマ系</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビーム駆動型不安定性">ビーム駆動型不安定性</h1>
+
+<p>プラズマにおいて、不安定性を引き起こすエネルギー源の代表として、粒子流 (ビーム) が挙げられます。
+ビームはプラズマと同じ粒子種でも、異なる粒子種でも構いません。
+前者の場合、粒子分布関数は 2 つのピークを持つ「こぶあり」(bump in tail あるいは bump on tail) 分布となります。
+ビームの場合、不安定性は粒子の運動エネルギーを源として励起されます。
+しかし、見方を変えると、運動する粒子ビーム中に存在する固有モードとプラズマ中の固有モードの位相速度が一致する振動数・波長でモード間のカップリング (結合) が起こり、不安定性が起こるとも言えます。<br />
+粒子ビームにより励起される不安定性は、静電波から電磁波まで極めて広範囲にわたります。
+静電的な不安定性としては、2 流体不安定性・イオン音波不安定性などがあります。
+背景磁場の存在下でのビーム励起の不安定性では、磁力線に垂直に近い伝搬方向を持つイオンサイクロトロン不安定性・変形 2 流体不安定性などが挙げられます。
+アルヴェーン速度を越えるイオンビームからは、磁力線に平行に伝搬する電磁波であるアルヴェーン・イオンサイクロトロン波 (Alfven ion cyclotron wave, AIC 波) が励起されます。
+地球が太陽と向き合う面に形成される衝撃波面であるバウショックの上流領域で観測される磁気流体波は、この波動モードと考えられています。</p>
+
+<h2 id="冷たいビームプラズマ系">冷たいビームプラズマ系</h2>
+
+<p>ミクロな不安定性の典型例である、ビーム駆動型不安定性についてまとめましょう。
+粒子ビームは宇宙プラズマや実験室プラズマにおいて、普遍的に存在します。<br />
+簡単のため、ここでは磁場のない一様な電子プラズマ中に、単一エネルギーを持つ粒子ビームが入射した場合を考えます。
+各成分の温度はゼロとして、デルタ関数で表される分布関数</p>
+
+\[f_{\mathrm{b}0} 
+= n_\mathrm{b} \delta (v_x - v_\mathrm{b}), \quad 
+f_{\mathrm{e}0} 
+= n_\mathrm{e} \delta (v_x) \tag{1}\]
+
+<p>を用いることにします。
+\(f_{\mathrm{b}0}, f_{\mathrm{e}0}\) はそれぞれ、ビーム成分と一様な電子プラズマの分布関数です。
+<a href="/plasma/kinetic_waves_in_plasma_with_no_B#縦横モードの分離">背景磁場のないプラズマ中での静電波に対する縦誘電率の計算 (リンク先ページの (57) 式)</a>の積分は</p>
+
+\[\begin{align}
+\int_{-\infty}^\infty \frac{k_x}{k_x v_x - \omega} \frac{\partial \delta(v_x - v_\mathrm{b})}{\partial v_x} dv_x 
+&amp;\underbrace{=}_{\xi = v_x - v_d} \int_{-\infty}^\infty \frac{k_x}{k_x (\xi + v_\mathrm{b}) - \omega} \frac{\partial \delta(\xi)}{\partial \xi} d\xi \notag \\
+&amp;= \int_{-\infty}^\infty \frac{1}{\xi + v_\mathrm{b} - \frac{\omega}{k_x}} \frac{\partial \delta(\xi)}{\partial \xi} d\xi \notag \\
+&amp;\underbrace{=}_{部分積分} \left[ \frac{\delta(\xi)}{\xi + v_\mathrm{b} - \frac{\omega}{k_x}} \right]_{-\infty}^\infty + \int_{-\infty}^\infty \frac{\delta(\xi)}{(\xi + v_\mathrm{b} - \frac{\omega}{k_x})^2} d\xi \notag \\
+&amp;= \frac{1}{(v_\mathrm{b} - \frac{\omega}{k_x})^2} \tag{2}
+\end{align}\]
+
+\[\int_{-\infty}^\infty \frac{k_x}{k_x v_x - \omega} \frac{\partial \delta(v_x)}{\partial v_x} dv_x 
+= \frac{k_x^2}{\omega^2} \tag{3}\]
+
+<p>のようになります。
+よって、分散関係式は</p>
+
+\[\varepsilon_\mathrm{L} 
+= 1 - \frac{4\pi e^2}{m_e k_x^2} \frac{n_\mathrm{b} k_x^2}{(\omega - k_x v_\mathrm{b})^2} - \frac{4\pi e^2}{m_e k_x^2} \frac{n_e k_x^2}{\omega^2} 
+=\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,349 @@
+I"Ka
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ビーム駆動型不安定性" id="markdown-toc-ビーム駆動型不安定性">ビーム駆動型不安定性</a>    <ol>
+      <li><a href="#冷たいビームプラズマ系" id="markdown-toc-冷たいビームプラズマ系">冷たいビームプラズマ系</a></li>
+      <li><a href="#有限温度のビームプラズマ系-イオン音波不安定性" id="markdown-toc-有限温度のビームプラズマ系-イオン音波不安定性">有限温度のビームプラズマ系: イオン音波不安定性</a>        <ol>
+          <li><a href="#冷たい極限" id="markdown-toc-冷たい極限">冷たい極限</a></li>
+          <li><a href="#有限温度の場合" id="markdown-toc-有限温度の場合">有限温度の場合</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ビーム駆動型不安定性">ビーム駆動型不安定性</h1>
+
+<p>プラズマにおいて、不安定性を引き起こすエネルギー源の代表として、粒子流 (ビーム) が挙げられます。
+ビームはプラズマと同じ粒子種でも、異なる粒子種でも構いません。
+前者の場合、粒子分布関数は 2 つのピークを持つ「こぶあり」(bump in tail あるいは bump on tail) 分布となります。
+ビームの場合、不安定性は粒子の運動エネルギーを源として励起されます。
+しかし、見方を変えると、運動する粒子ビーム中に存在する固有モードとプラズマ中の固有モードの位相速度が一致する振動数・波長でモード間のカップリング (結合) が起こり、不安定性が起こるとも言えます。<br />
+粒子ビームにより励起される不安定性は、静電波から電磁波まで極めて広範囲にわたります。
+静電的な不安定性としては、2 流体不安定性・イオン音波不安定性などがあります。
+背景磁場の存在下でのビーム励起の不安定性では、磁力線に垂直に近い伝搬方向を持つイオンサイクロトロン不安定性・変形 2 流体不安定性などが挙げられます。
+アルヴェーン速度を越えるイオンビームからは、磁力線に平行に伝搬する電磁波であるアルヴェーン・イオンサイクロトロン波 (Alfven ion cyclotron wave, AIC 波) が励起されます。
+地球が太陽と向き合う面に形成される衝撃波面であるバウショックの上流領域で観測される磁気流体波は、この波動モードと考えられています。</p>
+
+<h2 id="冷たいビームプラズマ系">冷たいビームプラズマ系</h2>
+
+<p>ミクロな不安定性の典型例である、ビーム駆動型不安定性についてまとめましょう。
+粒子ビームは宇宙プラズマや実験室プラズマにおいて、普遍的に存在します。<br />
+簡単のため、ここでは磁場のない一様な電子プラズマ中に、単一エネルギーを持つ粒子ビームが入射した場合を考えます。
+各成分の温度はゼロとして、デルタ関数で表される分布関数</p>
+
+\[f_{\mathrm{b}0} 
+= n_\mathrm{b} \delta (v_x - v_\mathrm{b}), \quad 
+f_{\mathrm{e}0} 
+= n_\mathrm{e} \delta (v_x) \tag{1}\]
+
+<p>を用いることにします。
+\(f_{\mathrm{b}0}, f_{\mathrm{e}0}\) はそれぞれ、ビーム成分と一様な電子プラズマの分布関数です。
+<a href="/plasma/kinetic_waves_in_plasma_with_no_B#縦横モードの分離">背景磁場のないプラズマ中での静電波に対する縦誘電率の計算 (リンク先ページの (57) 式)</a>の積分は</p>
+
+\[\begin{align}
+\int_{-\infty}^\infty \frac{k_x}{k_x v_x - \omega} \frac{\partial \delta(v_x - v_\mathrm{b})}{\partial v_x} dv_x 
+&amp;\underbrace{=}_{\xi = v_x - v_d} \int_{-\infty}^\infty \frac{k_x}{k_x (\xi + v_\mathrm{b}) - \omega} \frac{\partial \delta(\xi)}{\partial \xi} d\xi \notag \\
+&amp;= \int_{-\infty}^\infty \frac{1}{\xi + v_\mathrm{b} - \frac{\omega}{k_x}} \frac{\partial \delta(\xi)}{\partial \xi} d\xi \notag \\
+&amp;\underbrace{=}_{部分積分} \left[ \frac{\delta(\xi)}{\xi + v_\mathrm{b} - \frac{\omega}{k_x}} \right]_{-\infty}^\infty + \int_{-\infty}^\infty \frac{\delta(\xi)}{(\xi + v_\mathrm{b} - \frac{\omega}{k_x})^2} d\xi \notag \\
+&amp;= \frac{1}{(v_\mathrm{b} - \frac{\omega}{k_x})^2} \tag{2}
+\end{align}\]
+
+\[\int_{-\infty}^\infty \frac{k_x}{k_x v_x - \omega} \frac{\partial \delta(v_x)}{\partial v_x} dv_x 
+= \frac{k_x^2}{\omega^2} \tag{3}\]
+
+<p>のようになります。
+よって、分散関係式は</p>
+
+\[\varepsilon_\mathrm{L} (k_x, \omega)
+= 1 - \frac{4\pi e^2}{m_e k_x^2} \frac{n_\mathrm{b} k_x^2}{(\omega - k_x v_\mathrm{b})^2} - \frac{4\pi e^2}{m_e k_x^2} \frac{n_e k_x^2}{\omega^2} 
+= 1 - \frac{\omega_{p \mathrm{b}}^2}{(\omega - k_x v_\mathrm{b})^2} - \frac{\omega_{p \mathrm{e}}^2}{\omega^2} 
+= 0 \tag{4}\]
+
+<p>を解くことにより求めることができます。
+これは \(\omega\) についての 4 次方程式であるため、ビーム密度や速度によって 4 個または 3 個の実数解、2 個の実数解と 2 個の複素数解の場合に分けることができます。<br />
+根の個数は、図形的な方法に調べることができます。
+関数 \(\varepsilon (k_x, \omega)\) を \(\omega\) についてプロットすると、次図のようになります。</p>
+
+<p><img src="/assets/images/plasma/beam_driven_instability_01.png" alt="" /><br />
+冷たいビームプラズマの不安定性。\(\omega \rightarrow \pm \infty\) では、1 に漸近する。中央の曲線の極大値がゼロより小さいとき、系が不安定となる。</p>
+
+<p>これらの曲線のうち、両側の 2 本は必ず値がゼロと交差するため、実数解が 2 つ存在します。
+残りの 2 つの解が実数解となるか複素共役な複素数解となるかは、中央の曲線の極大値とゼロとの大小関係により決定されます。
+極大値の位置は</p>
+
+\[\begin{align}
+&amp;\frac{\partial \varepsilon_\mathrm{L}}{\partial \omega} 
+= \frac{2\omega_{p \mathrm{b}}^2}{(\omega - k_x v_\mathrm{b})^3} + \frac{2 \omega_{p \mathrm{e}}^2}{\omega^3} 
+= 0 \ \Longrightarrow \ 
+\left( \frac{k_x v_\mathrm{b} - \omega}{\omega} \right)^3 
+= \left( \frac{\omega_{p \mathrm{b}}}{\omega_{p \mathrm{e}}} \right)^2 \notag \\
+&amp;\Longrightarrow \ 
+\frac{k_x v_\mathrm{b} - \omega}{\omega} 
+= \left( \frac{\omega_{p \mathrm{b}}}{\omega_{p \mathrm{e}}} \right)^{2/3} \ \Longrightarrow \ 
+\omega_\ast 
+= \frac{k_x v_\mathrm{b}}{1 + \left( \frac{\omega_{p \mathrm{b}}}{\omega_{p \mathrm{e}}} \right)^{2/3}} \tag{5}
+\end{align}\]
+
+<p>のように求まります。
+これを再び \(\varepsilon_\mathrm{L} (\omega)\) に代入することで、極大値を求めましょう。
+式を見やすくするために \(\alpha \equiv (\omega_{p \mathrm{b}} / \omega_{p \mathrm{e}})^{2/3}\) とすると</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{L} (\omega_\ast) 
+&amp;= 1 - \frac{\omega_{p \mathrm{b}}^2 (1 + \alpha)^2}{\alpha^2 k_x^2 v_\mathrm{b}^2} - \frac{\omega_{p \mathrm{e}}^2 (1 + \alpha)^2}{k_x^2 v_\mathrm{b}^2} 
+= 1 - \frac{(1 + \alpha)^2}{k_x^2 v_\mathrm{b}^2} \left( \frac{\omega_{p \mathrm{b}}^2}{\alpha^2} + \omega_{p \mathrm{e}}^2 \right) \notag \\
+&amp;\underbrace{=}_{\omega_{p \mathrm{b}}^2 / \alpha^3 = \omega_{p \mathrm{e}}^2} 1 - \frac{\omega_{p \mathrm{e}}^2}{k_x^2 v_\mathrm{b}^2} (1 + \alpha)^3 \tag{6}
+\end{align}\]
+
+<p>と計算できます。
+これがゼロより大きければ、4 つの実数解を持ちます。
+すなわち</p>
+
+\[\frac{k_x v_\mathrm{b}}{\omega_{p \mathrm{e}}} 
+\geq (1 + \alpha)^{3/2} 
+= \left\{ 1 + \left( \frac{\omega_{p \mathrm{b}}^2}{\omega_{p \mathrm{e}}^2} \right)^{1/3} \right\}^{3/2} \tag{7}\]
+
+<p>の場合、このビームプラズマ系は安定であるとわかります。
+特に、ビームプラズマの両成分がともに電子であるときは \(\omega_{p \mathrm{b}}^2 / \omega_{p \mathrm{e}}^2 = n_\mathrm{b} / n_\mathrm{e}\) となります。
+(7) 式は、ドリフト速度がある値を越えると、ビームプラズマ系が不安定性に対して安定になることを示しています。
+これは速度シアが原因で起こる、流体のケルビン・ヘルムホルツ不安定性などと矛盾しているように見えます。
+しかし、安定化する原因は、ドリフト速度が大きくなるにつれてビーム中の固有モードが周囲のプラズマと相互作用しなくなることにあります。
+ビーム速度を固定した場合、波数がある波数より小さい (波長が長い) モードに対してビーム不安定性が起こり、その成長率は波数 \(k\) の関数となります。<br />
+冷たい電子ビームプラズマ系の分散関係式 (4) を数値的に解いて描画したものを、次図に示します。</p>
+
+<p><img src="/assets/images/plasma/beam_driven_instability_02.png" alt="" /></p>
+
+<p>図には 3 つの曲線が存在し、ある波数 \(k_0\) より大きな部分では 4 つの実数解が存在します。
+しかし \(\vert k_x \vert &lt; k_0\) ではそのうちの 2 つが複素数解となり、その一方は成長解、他方が減衰解となります。
+図中の点線は複素数解の虚部 (の絶対値) を表したもので、その値は \(\vert \omega_\mathrm{i} \vert / \omega_{p \mathrm{e}} \sim 0.1\) 程度となります。
+これはかなり激しい不安定性です。
+図をよく見ると、不安定性に対応する曲線が \(\omega = \pm \omega_{p \mathrm{e}}, k_x v_\mathrm{b} \pm \omega_{p \mathrm{b}}\) の 4 つのモードが結合・分岐してできていることがわかります。
+これらのうちで不安定性を起こしているのは、ビーム中に存在する固有モードのうちの \(\omega / k_x &lt; v_\mathrm{b}\) を満たす遅い方の波動 \(\omega = k_x v_\mathrm{b} - \omega_{p \mathrm{b}}\) です。
+以上から、静止プラズマ中のプラズマ振動と、ビーム中のプラズマ振動という、2 つの固有モードがカップリングを起こした結果として不安定性が生じていることが理解できます。</p>
+
+<p class="note">一方、ドリフト速度が熱速度程度まで遅い場合、<a href="/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰">ランダウ減衰</a>が聞いてやはり安定となります。</p>
+
+<h2 id="有限温度のビームプラズマ系-イオン音波不安定性">有限温度のビームプラズマ系: イオン音波不安定性</h2>
+
+<p>次により一般的に、有限温度をもつようなビームプラズマ系を考えてみましょう。
+ここでは、電子とイオンの 2 成分プラズマを用いることにします。
+電子の速度分布関数は分布中心がシフトしたボルツマン分布、イオンについてはシフトのない分布を用います。
+すなわち</p>
+
+\[f_{e0}(v_x) 
+= \frac{n_0}{\sqrt{\pi} v_e} e^{- \frac{(v_x - v_\mathrm{b})^2}{v_e^2}} \tag{8}\]
+
+\[f_{i0}(v_x) 
+= \frac{n_0}{\sqrt{\pi} v_i} e^{- \frac{v_x^2}{v_i^2}} \tag{9}\]
+
+<p>のようにします。
+イオンが背景にあるところに、ビーム速度 \(v_\mathrm{b}\) で電子を打ち込むような系を考えていることになります。</p>
+
+<p><img src="/assets/images/plasma/beam_driven_instability_03.png" alt="" /></p>
+
+<p>先ほどと同様に、縦誘電率を計算しましょう。</p>
+
+\[\begin{align}
+\int_{-\infty}^\infty \frac{k_x}{\omega - k_x v_x} \frac{\partial f_{e0}}{\partial v_x} dv_x 
+&amp;= \frac{2}{v_e^2} \int_{-\infty}^\infty \frac{k_x}{k_x v_x - \omega} (v_x - v_\mathrm{b}) e^{-\frac{(v_x - v_\mathrm{b})^2}{v_e^2}} dv_x \notag \\
+&amp;\underbrace{=}_{z = (v_x - v_\mathrm{b}) / v_e} \frac{2}{v_e^2} \int_{-\infty}^\infty \frac{k_x}{k_x (v_e z + v_\mathrm{b}) - \omega} v_e z e^{-z^2} v_e dz \notag \\
+&amp;= \frac{2}{v_e} \int_{-\infty}^\infty \frac{z}{z - \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}} e^{-z^2} dz 
+= \frac{2}{v_e} \int_{-\infty}^\infty \left( 1 + \frac{\frac{\omega - k_x v_\mathrm{b}}{k_x v_e}}{z - \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}}\right) e^{-z^2} dz \notag \\
+&amp;= \frac{2}{v_e} \int_{-\infty}^\infty e^{-z^2} dz + \frac{2}{v_e} \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \int_{-\infty}^\infty \frac{e^{-z^2}}{z - \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}} dz \notag \\
+&amp;= \frac{2\sqrt{\pi}}{v_e} + \frac{2 \sqrt{\pi}}{v_e} \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} Z \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \right) \tag{10}
+\end{align}\]
+
+\[\int_{-\infty}^\infty \frac{k_x}{\omega - k_x v_x} \frac{\partial f_{i0}}{\partial v_x} dv_x 
+= \frac{2 \sqrt{\pi}}{v_i} + \frac{2\sqrt{\pi}}{v_i} \frac{\omega}{k_x v_i} Z \left( \frac{\omega}{k_x v_i}\right) \tag{11}\]
+
+<p>途中、<a href="/math/plasma_dispersion_function">プラズマ分散関数</a>を用いました。
+これらを用いると、縦誘電率は最終的に</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{L} (k_x, \omega) 
+&amp;= 1 + \frac{4\pi e^2}{m_e k_x^2} \frac{n_0}{\sqrt{\pi} v_e} \left\{ \frac{2\sqrt{\pi}}{v_e} + \frac{2 \sqrt{\pi}}{v_e} \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} Z \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \right) \right\} \notag \\
+&amp; \qquad \qquad + \frac{4\pi e^2}{m_i k_x^2} \frac{n_0}{\sqrt{\pi} v_i} \left\{ \frac{2 \sqrt{\pi}}{v_i} + \frac{2\sqrt{\pi}}{v_i} \frac{\omega}{k_x v_i} Z \left( \frac{\omega}{k_x v_i}\right)\right\} \notag \\
+&amp;= 1 + \frac{2 \omega_{pe}^2}{k_x^2 v_e^2} \left\{ 1 + \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} Z \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \right) \right\} + \frac{2 \omega_{pi}^2}{v_i^2 k_x^2} \left\{ 1 + \frac{\omega}{k_x v_i} Z \left( \frac{\omega}{k_x v_i}\right)\right\} \tag{12}
+\end{align}\]
+
+<p>のように求まります。</p>
+
+<h3 id="冷たい極限">冷たい極限</h3>
+
+<p>本題に入る前に、冷たいプラズマ極限をとってみましょう。
+このとき、\(v_e, v_i \rightarrow 0\) であることから、<a href="/math/plasma_dispersion_function#級数展開">プラズマ分散関数の引数が大きな場合について漸近展開</a>しましょう。
+すると</p>
+
+\[Z \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}\right) 
+\approx - \frac{k_x v_e}{\omega - k_x v_\mathrm{b}} \left\{ 1 + \frac{1}{2} \left( \frac{k_x v_e}{\omega - k_x v_\mathrm{b}} \right)^2\right\} \tag{13}\]
+
+\[Z \left( \frac{\omega}{k_x v_i}\right) 
+\approx - \frac{k_x v_i}{\omega} \left\{ 1 + \frac{1}{2} \left( \frac{k_x v_i}{\omega} \right)^2\right\} \tag{14}\]
+
+<p>より、分散関係式 \(\varepsilon_\mathrm{L} = 0\) は</p>
+
+\[\varepsilon_\mathrm{L} (k_x, \omega) 
+= 1 - \frac{\omega_{pe}^2}{k_x^2 v_e^2} \left( \frac{k_x v_e}{\omega - k_x v_\mathrm{b}} \right)^2 - \frac{\omega_{pi}^2}{k_x^2 v_i^2} \left( \frac{k_x v_i}{\omega} \right)^2 
+= 1 - \frac{\omega_{pe}^2}{(\omega - k_x v_\mathrm{b})^2} - \frac{\omega_{pi}^2}{\omega^2} 
+= 0 \tag{15}\]
+
+<p>のようになります。
+途中、<a href="/math/plasma_dispersion_function#級数展開">プラズマ分散関数を級数展開</a>したときの虚部は無視しました。
+これは<a href="/plasma/beam_driven_instability#冷たいビームプラズマ系">冷たいビームプラズマ系で求めた (4) 式</a>と同じです。
+不安定になる波数について考えると、今の状況設定では (7) 式において \(\omega_{p \mathrm{b}} \rightarrow \omega_{pe}, \omega_{pe} \rightarrow \omega_{pi}\) のように置き換えることで条件式を得ることができます。
+すなわち、与えられたドリフト速度 \(v_\mathrm{b}\) に対して、小さな波数</p>
+
+\[\frac{k_x v_\mathrm{b}}{\omega_{pi}} 
+\leq \left\{ 1 + \left( \frac{\omega_{pe}^2}{\omega_{pi}^2}\right)^{1/3} \right\}^{3/2} 
+= \left\{ 1 + \left( \frac{m_i}{m_e}\right)^{1/3} \right\}^{3/2} \tag{16}\]
+
+<p>で不安定となります。
+途中、プラズマ振動数を用いて変形し、さらに電気的中性条件から \(n_i = n_e\) としました。
+質量比が \(m_i / m_e \gg 1\) であることに注意すると、不安定な波数は</p>
+
+\[\frac{k_x v_\mathrm{b}}{\omega_{pi}} 
+\lesssim \frac{\omega_{pe}}{\omega_{pi}} \ \Longrightarrow \ 
+k_x \lesssim \frac{\omega_{pe}}{v_\mathrm{b}} \tag{17}\]
+
+<p>のようになります。
+\(k_x v_\mathrm{b} \approx \omega_{pe}\) として、(15) 式の解を求めてみましょう。
+すると</p>
+
+\[\frac{\omega_{pe}^2}{(\omega - \omega_{pe})^2} 
+= \left( 1 - \frac{\omega}{\omega_{pe}} \right)^{-2} 
+= 1 + \frac{2\omega}{\omega_{pe}} + \frac{3\omega^2}{\omega_{pe}^2} + \cdots \tag{18}\]
+
+<p>のように展開できます。
+さらに \(\omega \simeq \omega_{pi} \ (\ll \omega_{pe})\) と仮定して、(18) 式の 1 次までを考慮すると</p>
+
+\[\begin{align}
+&amp;\varepsilon_\mathrm{L} 
+\approx 1 - \left( 1 + \frac{2\omega}{\omega_{pe}} \right) - \frac{\omega_{pi}^2}{\omega^2} 
+= - \frac{2\omega}{\omega_{pe}} - \frac{\omega_{pi}^2}{\omega^2} 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+\omega^3 
+\approx - \frac{1}{2} \omega_{pi}^2 \omega_{pe} \underbrace{=}_{\omega_{pi}^2 = \omega_{pe}^2 m_e / m_i} - \frac{m_e}{2m_i} \omega_{pe}^3 \tag{19} 
+\end{align}\]
+
+<p>となります。
+これを解くとき、複素数を考慮します。
+すなわち \(-1\) の三乗根である \(e^{\pm i \pi /3}, e^{i\pi} = -1\) を用いることで</p>
+
+\[\omega 
+\approx \left( \frac{m_e}{2m_i} \right) \omega_{pe} \times \left\{ \begin{array}{l}
+e^{\pm i\pi / 3} \\
+-1
+\end{array} \right. \tag{20}\]
+
+<p>のように求められます。
+\(m_e / m_i \ll 1\) であることから、この解は先ほどの \(\omega \ll \omega_{pe}\) の仮定を満たしていることがわかります。
+冷たいプラズマの条件下の場合、波の位相速度 \(\omega / k_x\) は (デルタ関数的な) 粒子の分布関数のすそ部分にかからず、共鳴粒子は存在しません。
+すなわち、この場合に起こる現象は流体的であり、全てのプラズマ粒子が非共鳴的に関与する形で不安定性が生じます。
+そのため、このようにして得られる不安定性は、成長率が振動数と同程度の大きさを持つ強い不安定性となります。
+実際、(20) 式の \(e^{i\pi/ 3}\) の根が成長モードに対応し、このときの成長率 (虚部) は</p>
+
+\[\gamma 
+= \frac{\sqrt{3}}{2} \left( \frac{m_e}{2m_i} \right)^{1/3} \omega_{pe} 
+= \frac{\sqrt{3}}{2} \vert \omega \vert \tag{21}\]
+
+<p>となります。
+これはブンネマン不安定性 (Bunneman instability) と呼ばれる、2 流体不安定性 (two-stream instability) の一種です。</p>
+
+<h3 id="有限温度の場合">有限温度の場合</h3>
+
+<p>続いて、電子とイオンが有限温度をもち、さらに \(\vert (\omega / k_x) - v_\mathrm{b} \vert \sim v_e\) である場合を考えましょう。</p>
+
+<p><img src="/assets/images/plasma/beam_driven_instability_04.png" alt="" /></p>
+
+<p>この場合、(12) 式の電子成分 (第二項) については、<a href="/math/plasma_dispersion_function#級数展開">プラズマ分散関数の引数が小さな場合について漸近展開</a>すると</p>
+
+\[Z \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}\right) 
+\approx i\sqrt{\pi} \exp \left\{ - \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \right)^2 \right\} \tag{22}\]
+
+<p>となります。
+上図のように考えると、イオン成分 (第三項) については \(\frac{\omega}{k_x v_i} \gg 1\) であるため、先ほどと同様に<a href="/math/plasma_dispersion_function#級数展開">プラズマ分散関数の引数が大きな場合の漸近展開</a>を計算しましょう。</p>
+
+\[Z \left( \frac{\omega}{k_x v_i} \right) 
+\approx i\sqrt{\pi} \exp \left\{ - \left( \frac{\omega}{k_x v_i}\right)^2 \right\} - \frac{k_x v_i}{\omega} \left\{ 1 + \frac{1}{2} \left( \frac{k_x v_i}{\omega} \right)^2\right\} \tag{23}\]
+
+<p>これらより、(12) 式から分散関係式 \(\varepsilon_\mathrm{L} = 0\) は</p>
+
+\[\begin{align}
+\varepsilon_\mathrm{L} (k_x, \omega) 
+&amp;= 1 + \frac{2 \omega_{pe}^2}{k_x^2 v_e^2} \left[ 1 + \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} i \sqrt{\pi} \exp \left\{ - \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}\right)^2 \right\} \right] \notag \\
+&amp; \qquad + \frac{2 \omega_{pi}^2}{k_x^2 v_i^2} \left[ 1 + \frac{\omega}{k_x v_i} i\sqrt{\pi} \exp \left\{ - \left( \frac{\omega}{k_x v_i}\right)^2 \right\} - \left\{ 1 + \frac{1}{2} \left( \frac{k_x v_i}{\omega} \right)^2\right\} \right] \notag \\
+&amp;= 1 + \frac{2 \omega_{pe}^2}{k_x^2 v_e^2} \left[ 1 + \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} i \sqrt{\pi} \exp \left\{ - \left( \frac{\omega - k_x v_\mathrm{b}}{k_x v_e}\right)^2 \right\} \right] \notag \\
+&amp; \qquad + \frac{2 \omega_{pi}^2 \omega}{k_x^3 v_i^3} i\sqrt{\pi} \exp \left\{ - \left( \frac{\omega}{k_x v_i}\right)^2 \right\} - \frac{\omega_{pi}^2}{\omega^2} 
+= 0 \tag{24}
+\end{align}\]
+
+<p>となります。
+この式の実部は</p>
+
+\[1 + \frac{2\omega_{pe}^2}{k_x^2 v_e^2} - \frac{\omega_{pi}^2}{\omega_\mathrm{r}^2} 
+= 0 \tag{25}\]
+
+<p>であり、これは電子による遮蔽を受けているイオンプラズマ波動、すなわち<a href="/plasma/ion_acoustic_wave">イオン音波</a>に他なりません (真空中で \(1\) なのが \(1 + \frac{2\omega_{pe}^2}{k_x^2 v_e^2}\) に修正されています)。
+この式を解くことで、振動数は</p>
+
+\[\frac{k_x^2 v_e^2 + 2 \omega_{pe}^2}{k_x^2 v_e^2} 
+= \frac{\omega_{pi}^2}{\omega_r^2} \ \Longrightarrow \ 
+\omega_\mathrm{r}^2 
+= \frac{k_x^2 v_e^2}{k_x^2 v_e^2 + 2\omega_{pe}^2} \omega_{pi}^2 
+\underbrace{=}_{\lambda_\mathrm{De}^2 = v_e^2 / 2 \omega_{pe}^2} \frac{1}{1 + \frac{1}{k_x^2 \lambda_\mathrm{De}^2}} \omega_{pi}^2 
+= \frac{k_x^2 \lambda_\mathrm{De}^2}{ 1 + k_x^2 \lambda_\mathrm{De}^2} \omega_{pi}^2 \tag{26}\]
+
+<p>のようになります。
+ここにさらに<a href="/plasma/debye_huckel#デバイ長-debye-length">電子のデバイ長</a> \(\lambda_\mathrm{De} = \sqrt{\frac{k_B T}{4\pi e^2 n_e}}\) と<a href="/plasma/propagation_cold#分散関係式の導出">イオンのプラズマ振動数</a> \(\omega_{pi} = \sqrt{\frac{4\pi e^2 n_i}{m_i}}\)、そして \(n_e = n_i\) であることを用いると</p>
+
+\[\omega_\mathrm{r}^2 
+= \frac{k_x^2}{1 + k_x^2 \lambda_\mathrm{De}^2} \frac{k_B T}{m_i} 
+\underbrace{=}_{C_s^2 = P/\rho = k_B T / m_i} \frac{k_x^2 C_s^2}{1 + k_x^2 \lambda_\mathrm{De}^2} \tag{27}\]
+
+<p>のように整理されます。
+一方、\(\varepsilon_\mathrm{L}\) の虚部から</p>
+
+\[\varepsilon_\mathrm{i} 
+= \frac{2 \omega_{pe}^2}{k_x^2 v_e^2} \frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \sqrt{\pi} + \frac{2\omega_{pi}^2 \omega}{k_x^3 v_i^3} \sqrt{\pi} \exp \left\{ - \left( \frac{\omega}{k_x v_i}\right)^2 \right\} \tag{28}\]
+
+<p>のようになります。
+途中、電子の寄与については \(\frac{\omega - k_x v_\mathrm{b}}{k_x v_e} \ll 1\) とし、\(\exp \{\cdots\} \sim 1\) としました。
+さらに</p>
+
+\[\frac{\partial \varepsilon_\mathrm{r}}{\partial \omega_\mathrm{r}} 
+= \frac{2 \omega_{pi}^2}{\omega_\mathrm{r}^3} \tag{29}\]
+
+<p>より、角周波数の虚部は</p>
+
+\[\omega_\mathrm{i} 
+= - \frac{\varepsilon_\mathrm{i}}{\frac{\partial \varepsilon_\mathrm{r}}{\partial \omega_\mathrm{r}}} 
+= - \frac{\omega_\mathrm{r}^3}{2 \omega_{pi}^2} \frac{2 \omega_{pe}^2}{k_x^3 v_e^3} (\omega_\mathrm{r} - k_x v_\mathrm{b}) - \frac{\omega_\mathrm{r}^3}{2 \omega_{pi}^2} \frac{2 \omega_{pi}^2 \omega_\mathrm{r}}{k_x^3 v_i^3} \sqrt{\pi} \exp \left\{ - \left( \frac{\omega}{k_x v_i} \right)^2\right\}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -184,7 +184,7 @@ $$
 21 cm 線は 1420 MHz の周波数ですが、宇宙膨張に伴う赤方偏移により、周波数がさらに下がります。
 よってこれを地球上から観測するのは、電離層による電波の反射やその他のノイズにより、困難です。
 そこで考えられているのが、電離層のない月面に電波望遠鏡を建設しようという試みです。
-アメリカが主導となっている [Lunar Surface Electromagnetics Experiment (LuSEE) - Night](https://arxiv.org/abs/2301.10345) などが計画されいます。
+アメリカが主導となっている [Lunar Surface Electromagnetics Experiment (LuSEE) - Night](https://arxiv.org/abs/2301.10345) などが計画されています。
 
 ### 金属の光沢
 

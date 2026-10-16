@@ -1,0 +1,376 @@
+I"�k
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ワイベル不安定性" id="markdown-toc-ワイベル不安定性">ワイベル不安定性</a>    <ol>
+      <li><a href="#ワイベル不安定性が起こる条件" id="markdown-toc-ワイベル不安定性が起こる条件">ワイベル不安定性が起こる条件</a></li>
+      <li><a href="#成長率" id="markdown-toc-成長率">成長率</a></li>
+      <li><a href="#直感的な理解" id="markdown-toc-直感的な理解">直感的な理解</a></li>
+      <li><a href="#ワイベル不安定性の応用例" id="markdown-toc-ワイベル不安定性の応用例">ワイベル不安定性の応用例</a>        <ol>
+          <li><a href="#ガンマ線バースト-grb-での衝撃波" id="markdown-toc-ガンマ線バースト-grb-での衝撃波">ガンマ線バースト (GRB) での衝撃波</a></li>
+          <li><a href="#無衝突衝撃波と粒子加速" id="markdown-toc-無衝突衝撃波と粒子加速">無衝突衝撃波と粒子加速</a></li>
+          <li><a href="#宇宙磁場生成増幅機構としてのワイベル不安定性" id="markdown-toc-宇宙磁場生成増幅機構としてのワイベル不安定性">宇宙磁場生成・増幅機構としてのワイベル不安定性</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ワイベル不安定性">ワイベル不安定性</h1>
+
+<p>この不安定性は、<a href="">Weibel (1959)</a> で提案されました。
+磁場のないプラズマにおいて、粒子の速度分布が異方性を持つ場合、その異方性をエネルギー源として起こる不安定性です。
+ワイベル不安定性は、電磁モード (横波モード) の不安定性であり、速度分散が大きな方向の電流密度のゆらぎが指数関数的に増大します。
+以降では、このワイベル不安定性の導出と、その物理的な意味についてみていきましょう。</p>
+
+<h2 id="ワイベル不安定性が起こる条件">ワイベル不安定性が起こる条件</h2>
+
+<p>先ほど述べた通り、磁場のないプラズマを考えましょう。
+ただし、ここではイオンは電子より質量が十分大きく、動かない背景とします。
+すなわち、以降では電子のみを考え、その速度分布関数は</p>
+
+\[f_0 
+= n_0 F_\perp (v_x) F_\perp (v_y) F_\parallel (v_z), \qquad
+\left( F_\perp (v) 
+\equiv \frac{1}{\sqrt{\pi} v_\perp} e^{-v^2 / v_\perp^2}, F_\parallel (v) 
+\equiv \frac{1}{\sqrt{\pi} v_\parallel} e^{-v^2 / v_\parallel^2} \right) \tag{1}\]
+
+<p>のように、温度に非等方性があるようなマクスウェル・ボルツマン分布関数を考えます。
+この場合、\(x, y\) 方向と \(z\) 方向で、温度が異なっていることになります。
+\(v_\perp, v_\parallel\) はそれぞれの方向の熱速度であり</p>
+
+\[v_\perp^2 
+= \frac{2 k_B T_\perp}{m_e}, \quad v_\parallel^2 
+= \frac{2 k_B T_\parallel}{m_e} \tag{2}\]
+
+<p>で与えられます。<br />
+今、平衡状態に摂動が加わったとします。
+この摂動は \(\mathbf{k} = k \mathbf{e}_z\) のように、\(z\) 方向に伝播する摂動とします。
+すなわち、\(v_\parallel\) は摂動に平行な方向の熱速度であり、\(v_\perp\) はそれに垂直な方向の熱速度です。
+またこのとき、電磁場に対しては \(\mathbf{E}_1 = E_{1x} e^{-i(\omega t - kz)}\mathbf{e}_x, \mathbf{B}_1 = B_{1y} e^{-i(\omega t - kz)} \mathbf{e}_y\) のように、横波の摂動が加わったとします。 
+ファラデーの法則は</p>
+
+\[\nabla \times \mathbf{E} 
+= - \frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} \ \Longrightarrow \ 
+i k E_{1x} 
+= \frac{i \omega}{c} B_{1y} \ \Longrightarrow \ 
+B_{1y} 
+= \frac{ck}{\omega} E_{1x} \tag{3}\]
+
+<p>のように線形化されます。
+分布関数の摂動量 \(f_1\) も \(e^{-i(\omega t - kz)}\) に比例する形であるとすると、<a href="/plasma/kinetic_eqs#ボルツマン方程式とブラソフ方程式">ブラソフ方程式</a>を線形化したものは</p>
+
+\[-i \omega f_1 + i v_z k f_1 - \frac{e}{m_e} \left( \mathbf{E}_1 + \frac{\mathbf{v}}{c} \times \mathbf{B}_1 \right) \cdot \frac{\partial f_0}{\partial \mathbf{v}} 
+= 0 \tag{4}\]
+
+<p>のようになります。</p>
+
+\[\mathbf{v} \times \mathbf{B}_1 
+= (v_x \mathbf{e}_x + v_y \mathbf{e}_y + v_z \mathbf{e}_z) \times \mathbf{B}_1 
+= (- v_z B_{1y} \mathbf{e}_x + v_x B_{1y} \mathbf{e}_z) e^{-i(\omega t - kz)} \tag{5}\]
+
+<p>より、(4) 式は</p>
+
+\[-i (\omega - v_z k) f_1 
+= \frac{e}{m_e} \left\{ \left( E_{1x} - \frac{v_z B_{1y}}{c}\right) \frac{\partial f_0}{\partial v_x} + \frac{v_x B_{1y}}{c} \frac{\partial f_0}{\partial z} \right\} \tag{6}\]
+
+<p>のようになります。
+分布関数の速度微分がそれぞれ</p>
+
+\[\frac{\partial f_0}{\partial v_x} 
+= - \frac{2 v_x}{v_\perp^2} f_0, \quad \frac{\partial v_0}{\partial v_z} 
+= - \frac{2 v_z}{v_\parallel^2} f_0 \tag{7}\]
+
+<p>のように計算されるため、これを (6) 式に代入すると</p>
+
+\[\begin{align}
+-i (\omega - v_z k) f_1 
+&amp;= \frac{e}{m_e} \left\{ \left( E_{1x} - \frac{v_z B_{1y}}{c}\right) \left( - \frac{2 v_x}{v_\perp^2} f_0 \right) + \frac{v_x B_{1y}}{c} \left( - \frac{2 v_z}{v_\parallel^2} f_0\right) \right\} \notag \\
+&amp;= - \frac{2 e v_x f_0}{m_e v_\perp^2} \left\{ E_{1x} + \frac{v_z B_{1y}}{c} \left( \frac{v_\perp^2 }{v_\parallel^2} -1 \right) \right\} \notag \\
+&amp;\underbrace{=}_{(3)} - \frac{2 e v_x f_0 E_{1x}}{m_e v_\perp^2} \left\{ 1 + \frac{v_z k}{\omega} \left( \frac{v_\perp^2 }{v_\parallel^2} -1 \right) \right\}\tag{8}
+\end{align}\]
+
+<p>のようになります。
+温度の非等方性を表すパラメータとして</p>
+
+\[A 
+\equiv \frac{T_\perp}{T_\parallel} - 1 
+\underbrace{=}_{(2)} \frac{v_\perp^2}{v_\parallel^2} - 1 \tag{9}\]
+
+<p>を用いると、速度分布関数の摂動量 \(f_1\) が</p>
+
+\[-i (\omega - v_z k) f_1 
+= - \frac{2 e v_x f_0 E_{1x}}{m_e v_\perp^2} \left( 1 + \frac{v_z k}{\omega}A \right) \ \Longrightarrow \ 
+f_1 
+= - \frac{2ie v_x f_0 E_{1x}}{m_e v_\perp^2} \frac{1 + \frac{k v_z}{\omega} A}{\omega - kv_z} \tag{10}\]
+
+<p>のようになります。<br />
+これを用いると、\(x\) 方向の電流密度 \(j_{1x}\) は</p>
+
+\[j_{1x}
+= -e \iiint v_x f_1 d^3 \mathbf{v} 
+= \frac{2 i e^2 E_{1x}}{m_e v_\perp^2} \iiint v_x^2 f_0 \frac{1 + \frac{k v_z}{\omega} A}{\omega - k v_z} d^3 \mathbf{v} \tag{11}\]
+
+<p>のように書けます。</p>
+
+\[\int_{-\infty}^\infty v_x^2 F_\perp (v_x) dv_x 
+= \frac{v_\perp^2}{2}, \quad \int_{-\infty}^\infty F_\perp (v_y) dv_y = 1 \tag{12}\]
+
+<p>であることを用いると、(11) 式の積分は</p>
+
+\[j_{1x}
+= \frac{i n_0 e^2 E_{1x}}{m_e} \int_{-\infty}^\infty F_\parallel (v_z) \frac{1 + \frac{k v_z}{\omega} A}{\omega - kv_z} dv_z \tag{13}\]
+
+<p>となります。</p>
+
+\[1 + \frac{kv_z}{\omega} A 
+= 1 + A - A + \frac{kv_z}{\omega} A 
+= 1 + A - \frac{\omega - k v_z}{\omega} A \tag{14}\]
+
+<p>のように式変形を行うと、(13) 式の積分は</p>
+
+\[\begin{align}
+\int_{-\infty}^\infty F_\parallel (v_z) \frac{1 + \frac{k v_z}{\omega} A}{\omega - kv_z} dv_z 
+&amp;= \int_{-\infty}^\infty F_\parallel (v_z) \frac{1}{\omega - kv_z} \left( 1 + A - \frac{\omega - k v_z}{\omega} A \right) dv_z \notag \\
+&amp;= (1 + A) \int_{-\infty}^\infty \frac{F_\parallel (v_z)}{\omega - kv_z} dv_z - \frac{A}{\omega} \int_{-\infty}^\infty F_\parallel (v_z) dv_z \notag \\
+&amp;= (1 + A) \int_{-\infty}^\infty \frac{F_\parallel (v_z)}{\omega - kv_z} dv_z - \frac{A}{\omega} \tag{15}
+\end{align}\]
+
+<p>のようになります。
+第一項は</p>
+
+\[\begin{align}
+\int_{-\infty}^\infty \frac{F_\parallel (v_z)}{\omega - kv_z} dv_z
+&amp;\underbrace{=}_{(1)} \frac{1}{\sqrt{\pi} v_\parallel} \int_{-\infty}^\infty \frac{e^{-v_z^2 / v_\parallel^2}}{\omega - kv_z} 
+\underbrace{=}_{t = v_z / v_\parallel} \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty \frac{e^{-t^2}}{\omega - k v_\parallel t} dt \notag \\
+&amp;\underbrace{=}_{\zeta = \omega / kv_\parallel} - \frac{1}{\sqrt{\pi} k v_\parallel} \int_{-\infty}^\infty \frac{e^{-t^2}}{t - \zeta} dt 
+= - \frac{\zeta}{\omega} Z(\zeta) \tag{16}
+\end{align}\]
+
+<p>のように整理されます。
+途中、<a href="/math/plasma_dispersion_function">プラズマ分散関数 \(Z (\zeta)\)</a> を用いました。
+以上から、電流密度が</p>
+
+\[j_{1x}
+= - \frac{i n_0 e^2 E_{1x}}{m_e \omega} \{ (1 + A) \zeta Z(\zeta) + A \} 
+= - \frac{i\omega_{pe}^2 E_{1x}}{4\pi \omega} \{ (1 + A) \zeta Z(\zeta) + A \} \tag{17}\]
+
+<p>のように求まります。
+今、興味があるのは、成長するモードです。
+よって、<a href="/math/plasma_dispersion_function">プラズマ分散関数</a>の積分において \(\mathrm{Im} (\omega) &gt; 0\) を考えているため、\(Z(\zeta)\) の定義の積分をそのまま用いることができます。
+また誘電率と電流密度は、電気伝導度 \(\sigma\) を用いて</p>
+
+\[\varepsilon_\mathrm{T} 
+= 1 + \frac{4\pi i \sigma}{\omega}, \quad j_{1x} 
+= \sigma E_{1x} \tag{18}\]
+
+<p>の関係にあることから</p>
+
+\[\varepsilon_\mathrm{T} 
+= 1 + \frac{\omega_{pe}^2}{\omega^2} \{ (1 + A) \zeta Z(\zeta) + A \} \tag{19}\]
+
+<p>のように、横誘電率を求めることができます。<br />
+<a href="/plasma/kinetic_waves_in_plasma_with_no_B#縦横モードの分離">横波の分散関係式 \(k^2 c^2 = \omega^2 \varepsilon_\mathrm{T}\)</a> より</p>
+
+\[\omega^2 - k^2 c^2 + \omega_{pe}^2 \{(1+A) \zeta Z(\zeta) + A\} 
+= 0 \tag{20}\]
+
+<p>を解けばよいことがわかります。
+この式は、\(\zeta = \frac{\omega}{k v_\parallel}\) のようにプラズマ分散関数も \(\omega\) に依存しているため、解析的に解くことができません。
+そこで \(\omega = i \gamma \ (\gamma &gt; 0)\) のように、純成長解を仮定して求めることにしましょう。
+そして \(s = \frac{\gamma}{kv_\parallel}\) のようにおくと \(\zeta = \frac{i \gamma}{k v_\parallel} = is\) のようになることから、<a href="/math/plasma_dispersion_function#誤差関数のファミリーとの関係式">プラズマ分散関数の公式 \(Z(is) = i \sqrt{\pi} \mathrm{erfcx} (s)\)</a> を用いることができます。
+以上から</p>
+
+\[\gamma^2 + k^2 c^2 
+= \omega_{pe}^2 \{A - (1+A) G(s)\}, \quad
+G(s) 
+\equiv \sqrt{\pi} s \cdot \mathrm{erfcx} (s) \tag{21}\]
+
+<p>のように、実数の方程式にすることができました。
+ここで、<a href="/math/error_function#スケール化された相補誤差関数-scaled-complementary-error-function">\(\mathrm{erfcx}\) はスケール化された相補誤差関数</a>です。
+<a href="/math/error_function#スケール化された相補誤差関数-scaled-complementary-error-function">\(\mathrm{erfcx}(0) = 1\) であり、さらに \(s \rightarrow \infty\) では \(\mathrm{erfcx} \rightarrow \frac{1}{\sqrt{\pi} s}\)</a> であることから、\(G(s)\) は \(G(0) = 0, G(\infty) = 1\) まで単調増加するような関数です。
+すると、\(s\) が \(0 \rightarrow \infty\) のように変化するとき、(21) 式の右辺は \(\omega_{pe}^2 A \rightarrow - \omega_{pe}^2\) のように変化します。
+左辺 \(\gamma^2 + k^2 c^2\) は必ずゼロ以上の値であるため、実数解が存在するには \(\omega_{pe}^2 A\) が正の領域が存在する必要があります。
+すなわち \(A &gt; 0\) でなければなりません。
+\(A\) の定義式 (9) より、\(T_\perp &gt; T_\parallel\) が、不安定性が起こる条件であることがわかります。
+\(A = 0\) の場合、これは \(T_\perp = T_\parallel\) のように、温度が等方的に分布していることを表します。
+この式からも、温度異方性が不安定性を駆動するエネルギー源となっていることがわかります。<br />
+波数の条件についても求めてみましょう。
+これまでの議論から、不安定性が起こる \(A &gt; 0\) において、(21) 式の右辺は \(\gamma\) の単調減少関数なのでした。
+そして左辺は \(\gamma\) の単調増加関数です。
+これらが解を持つ (すなわち左辺の関数と右辺の関数が交点を持つ) ためには、\(\gamma = 0\) で左辺が右辺より小さくなければなりません。
+よって \(\gamma = 0\) のときから</p>
+
+\[k^2 c^2 
+&lt; A \omega_{pe}^2 \ \Longrightarrow \ k 
+&lt; k_\mathrm{max} 
+= \frac{\sqrt{A} \omega_{pe}}{c} \tag{22}\]
+
+<p>のように条件が求まります。
+ある波数 \(k_\mathrm{max}\) よりも波数が小さい (すなわち波長が長い) と、不安定性が起こることがわかります。</p>
+
+<h2 id="成長率">成長率</h2>
+
+<p>先ほどの議論から、\(s \gg 1 \ (\gamma \gg k v_\parallel)\) では不安定性が起こりません。
+よって、ここでは \(s \ll 1 \ (\gamma \ll k v_\parallel)\) の場合に、その成長率を求めてみましょう。
+このとき、\(\mathrm{erfcs} (s) \sim 1\) より、\(G(s) \approx \sqrt{\pi} s\) です。
+以上から</p>
+
+\[k^2 c^2 
+\approx \omega_{pe}^2 \left\{ A - (1 + A) \sqrt{\pi} \frac{\gamma}{k v_\parallel} \right\} \ \Longrightarrow \ 
+\gamma (k) \approx \frac{k v_\parallel}{\sqrt{\pi}} \frac{A - \frac{k^2 c^2}{\omega_{pe}^2}}{1 + A} \tag{23}\]
+
+<p>であり、さらに \(A\) の定義式 (9) から</p>
+
+\[\frac{1}{1 + A} 
+= \frac{T_\parallel}{T_\perp} \tag{24}\]
+
+<p>を用いれば</p>
+
+\[\gamma (k) 
+\approx \frac{k v_\parallel}{\sqrt{\pi}} \frac{T_\parallel}{T_\perp} \left\{ \left( \frac{T_\perp}{T_\parallel} -1 \right) - \frac{k^2 c^2}{\omega_{pe}^2} \right\} \tag{25}\]
+
+<p>のように書くこともできます。
+このような近似を行った場合、(24) 式の右辺が正 (不安定性が成長する) となるためには</p>
+
+\[\frac{T_\perp}{T_\parallel} \geq 1 + \frac{k^2 c^2}{\omega_{pe}^2} \tag{26}\]
+
+<p>の条件を満たす必要があります。
+\(\gamma \ll k v_\parallel\) の近似を行ったため、先ほどの議論で得た \(T_\perp / T_\parallel &gt; 1\) とは異なります。
+しかしここでも、\(k\) が小さいほど (すなわち波長が長いほど) 不安定性が起こりやすいという結果に変わりはありません。<br />
+(22) 式を \(k\) で微分し、\(\gamma (k)\) が最大となる波数と、最大成長率を求めてみましょう。</p>
+
+\[\begin{align}
+&amp;\frac{d\gamma}{dk} \approx \frac{v_\parallel}{\sqrt{\pi} (1+A)} \left\{ A - \frac{k^2 c^2}{\omega_{pe}^2} + k \left( A - \frac{2k c^2}{\omega_{pe}^2}\right) \right\} 
+= \frac{v_\parallel}{\sqrt{\pi} (1+A)} \left( A - \frac{3k^2 c^2}{\omega_{pe}^2}\right) 
+= 0 \notag \\
+&amp;\Longrightarrow \ 
+k^\ast 
+= \frac{\sqrt{A} \omega_{pe}}{\sqrt{3} c} 
+\underbrace{=}_{(22)} \frac{k_\mathrm{max}}{\sqrt{3}} \tag{27} 
+\end{align}\]
+
+<p>よって</p>
+
+\[\gamma (k^\ast) 
+\approx \frac{2}{3 \sqrt{3\pi}} \frac{A^{3/2}}{1 + A} \frac{v_\parallel \omega_{pe}}{c} \tag{28}\]
+
+<p>のように、最大成長率も計算できます。</p>
+
+<h2 id="直感的な理解">直感的な理解</h2>
+
+<p>ワイベル不安定性は、次のように直感的に解釈することができます。
+ここでも、波動の伝播方向を \(z\) 方向としましょう。
+このとき、磁場は \(y\) 成分しか持たず
+そして \(z\) 方向は冷たい極限を考え、\(v_\parallel = 0\) として、\(z\) 方向に電子は運動していないものとします。
+この状況を整理すると、下図左パネルのようになります。</p>
+
+<p><img src="/assets/images/plasma/weibel_instability_01.png" alt="" /><br />
+左パネル: \(z\) 方向に伝播する摂動中を、電子 (黒丸) が運動する様子。
+磁場が存在しなければ電子は破線矢印のように運動するが、摂動磁場 \(\mathbf{B}_1\) により、電子の軌道が曲げられる。
+右パネル: 電子の運動により生まれる電流を、マゼンダ矢印で表したもの。</p>
+
+<p>ここでは、紙面垂直に我々から遠ざかる方向の磁場 (\(\otimes\)) 付近にいる電子を A, B, G, H とし、紙面垂直に我々に近づく方向の磁場 (\(\odot\)) 付近にいる電子を C, D, E, F としましょう。
+これら電子のうち、B, D は、磁場のローレンツ力により \(\otimes\) 磁場と \(\odot\) 磁場の中間の位置に集まるような運動をすることがわかります。
+この中間位置に右向きに運動する電子が集められることから、右パネルのように左向きの電流が発生することがわかります。
+左向きの電流は、摂動磁場 \(\mathbf{B}_1\) と同じ方向に磁場を生み出すため、摂動磁場を強め、ゆらぎが成長していきます。
+同様に、E, G は \(\odot\) 磁場と \(\otimes\) 磁場の中間位置に集まります。
+この中間位置には左向きに運動する電子が集められることから、右向きの電流が生まれ、これが先ほど同じく摂動磁場を強めます。
+C, F の電子は \(\odot\) の向きを持つ摂動磁場の位置に集められますが、これらは左右の向きが反対であるため、正味の電流は生み出しません。
+このようにして、電流が生み出され、磁場がない状態から磁場を成長させていきます。<br />
+今度は逆に \(x\) 方向に冷たい極限を考え、\(v_\perp = 0\) として、電子が \(z\) 方向のみ運動している場合を考えましょう。</p>
+
+<p><img src="/assets/images/plasma/weibel_instability_02.png" alt="" /><br />
+左パネル: 先ほどと同じ図だが、電子の運動が \(z\) 方向になっている場合を示したもの。
+右パネル: 電子の運動により生まれる電流。先ほどとは向きが逆になっていることに注意。</p>
+
+<p>上図左パネルの電子のうち、B, C は \(\otimes\) 磁場と \(\odot\) 磁場の中間の位置に集まるような運動をします。
+軌道が曲げられることで、B, C の電子の運動は左向きとなり、結果として生まれる電流は右向きとなります。
+するとこの電流が生み出す磁場は、初期に与えられた摂動磁場 \(\mathbf{B}_1\) と逆向きとなります。
+摂動磁場を打ち消す方向に磁場が生成されるため、摂動磁場は減衰していきます。
+F, G, の電子についても同様に、摂動磁場を打ち消す方向の電流を生み出します。
+ここまで見てきたように、摂動に垂直な方向の温度が大きい (熱速度が大きい) と摂動が成長し、摂動に平行な方向の温度が大きいと摂動が減衰します。
+これは、成長率を求めた先ほどまでの定量的な議論と一致します。</p>
+
+<h2 id="ワイベル不安定性の応用例">ワイベル不安定性の応用例</h2>
+
+<p>ここでは、ワイベル不安定性が重要な働きをすると考えられている物理現象についてみていきましょう。</p>
+
+<h3 id="ガンマ線バースト-grb-での衝撃波">ガンマ線バースト (GRB) での衝撃波</h3>
+
+<p>ワイベル不安定性は、温度の非等方性が存在する場合に発生するのでした。
+このような非等方性は、プラズマどうしが激しくぶつかる場所で、自然に発生します。
+このような理由から、プラズマどうしが激しく衝突を起こす<a href="/mhd/shock">衝撃波</a>部分では、ワイベル不安定性が発生し、強い磁場が生成するとされています。
+ガンマ線バースト (GRB) は、恒星進化の最終段階でのブラックホール形成やコンパクト天体同士の合体に付随するジェットからのガンマ線が観測されていると考えられています。
+そしてそのジェットが作る<a href="/mhd/mhd_shock_perp">衝撃波が星間磁場を圧縮</a>し、強い<a href="/astroelec/sync_spectrum">シンクロトロン放射</a>が生まれると考えられてきました。
+しかし星間磁場を圧縮しただけでは、GRB の残光を説明できるほどの<a href="/astroelec/sync_spectrum">シンクロトロン放射</a>が生まれないという問題が指摘されてきました。
+そこで <a href="https://iopscience.iop.org/article/10.1086/308038">Medvedev &amp; Loeb (1999)</a> では GRB の残光から来る放射を、ワイベル不安定性で生成される磁場で説明しました。
+さらに <a href="https://iopscience.iop.org/article/10.1086/309374">Medvedev (2000)</a> では、ワイベル不安定性により生成された乱流磁場中を超相対論的な電子が通過することで、<a href="/astroelec/jitter">ジッター放射</a> と呼ばれる違う放射になることを示しました。
+しかし、一様媒質中を伝播する相対論的無衝突衝撃波で発生するワイベル不安定性では、増幅された磁場はすぐに減衰することがわかっており、衝撃波下流の広い放射領域を占めることができないことも指摘されています (<a href="https://iopscience.iop.org/article/10.1086/527374">Spitkovsky (2007)</a>)。
+これに対し、<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab4a10">Tomita et al. (2019)</a> は、非一様な媒質中であれば減衰が穏やかになりうることを示しました。</p>
+
+<p><img src="/assets/images/plasma/weibel_instability_03.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab4a10">Tomita et al. (2019)</a> より、PIC シミュレーションによる結果。
+左カラムは一様媒質の結果、中央カラムと右カラムは非一様媒質の結果を示したもの。
+特に中央カラムでは、下流領域に強い磁場が見られる。</p>
+
+<p>GRB の放射機構は未知の部分が多く残っていますが、着実にその理解が進みつつあります。</p>
+
+<h3 id="無衝突衝撃波と粒子加速">無衝突衝撃波と粒子加速</h3>
+
+<p>衝撃波では粒子どうしの衝突・散乱による散逸過程が必要となりますが、無衝突プラズマではこれが起こりません。
+無衝突プラズマ中で発生する無衝突衝撃波では、電磁場がプラズマ粒子を減速・等方化する役割を果たします。
+ここまで議論してきたワイベル不安定性が、乱流的な磁場を生成し、これが無衝突衝撃波の散逸を担います。<br />
+さらに、ワイベル不安定性で生まれた乱流磁場により、粒子が衝撃波面の前後に散乱されます。
+これにより、<a href="/plasma/1st_fermi">フェルミ加速</a>を考えたときの状況設定が成り立ちます。</p>
+
+<h3 id="宇宙磁場生成増幅機構としてのワイベル不安定性">宇宙磁場生成・増幅機構としてのワイベル不安定性</h3>
+
+<p>銀河団や銀河間空間の磁場がどのようにして生まれ、増幅されてきたかは、大きな問題となっています。
+これまでの研究では、宇宙に種磁場の存在を仮定することで、これが銀河形成などのダイナモ機構によって増幅されるというシナリオが考えられてきました (<a href="https://academic.oup.com/mnras/article/453/4/3999/2593643">Marinacci et al. (2015)</a>)。
+しかし、種磁場自体はどのように生まれたかについては、議論の余地がありました。
+そこで <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad0b0f">Zhou et al. (2024)</a> では、プラズマの PIC シミュレーションを用い、種磁場生成から増幅に至るまでの一連の過程を示しました。
+磁場のない弱衝突プラズマで乱流のような大局的な運動が起こると、それが位相混合を生じさせ、結果として熱的な圧力の異方性が発達します。
+この異方性がワイベル不安定性を誘発し、プラズマ運動論スケールの種磁場を生成します。
+これによりプラズマが磁化し、ミラー不安定性やファイヤーホース不安定性などのラーモア半径スケールの不安定性の発生を可能にします。
+最終的には、その後に発生する乱流ダイナモが、磁場を等分配程度まで増幅することができるとしました。
+大規模な乱流により、初期に磁場を持たないプラズマ中において、エネルギー等分配程度の磁場が生成しうることを示したのです。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://iopscience.iop.org/article/10.1086/308038">Mikhail V. Medvedev and Abraham Loeb, 1999, ApJ, 526, 697</a><br />
+[] <a href="https://iopscience.iop.org/article/10.1086/309374">Mikhail V. Medvedev, 2000, ApJ, 540, 704</a><br />
+[] <a href="https://iopscience.iop.org/article/10.1086/527374">Anatoly Spitkovsky, 2008, ApJ, 673, L39</a><br />
+[] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab4a10">Sara Tomita et al., 2019, ApJ, 886, 54</a><br />
+[] <a href="https://academic.oup.com/mnras/article/453/4/3999/2593643">Federico Marinacci et al., 2015, MNRAS, 453, 3999</a><br />
+[] <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad0b0f">Muni Zhou et al., 2024, ApJ, 960, 12</a></p>
+
+<p>[] <a href="https://iopscience.iop.org/article/10.1086/379309">Okabe &amp; Hattori, 2003, “Spontaneous Generation of the Magnetic Field and Suppretion of the Heat Conduction in Cold Fronts”</a><br />
+[] <a href="https://link.amazon/B0iDa6ujJ">Krall &amp; Trivelpiece, “Principles of Plasma Physics”</a><br />
+[] <a href="https://sci.nao.ac.jp/workshops/rironkon19/slides/SaraTomita.pdf">冨田沙羅, 大平豊, 山崎了, “非一様媒質中を伝播する相対論的無衝突衝撃波における磁場増幅過程”</a><br />
+[] <a href="https://www.astro.phys.s.chiba-u.ac.jp/hpci/ss2014/">宇宙磁気流体・プラズマシミュレーションサマースクール発表会資料, “Weibel instability &amp; numerical Cherenkov”</a><br />
+[] <a href="https://www.astro.phys.s.chiba-u.ac.jp/pcans/em2d_wbl.html">pCANS ドキュメント, “Weibel 不安定性”</a><br />
+[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="https://link.amazon/B0gEgpr2t">観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

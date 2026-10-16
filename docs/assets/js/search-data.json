@@ -1464,7 +1464,7 @@
   },"209": {
     "doc": "ビーム駆動型不安定性",
     "title": "参考文献",
-    "content": "[1] Neronov &amp; Vovk, 2010, “Evidence for Strong Extragalactic Magnetic Fields from Fermi Observations of TeV Blazars” [2] Broderick et al., 2014, “The Cosmological Impact of Luminous TeV Blazars. I. Implications of Plasma Instabilities for the Intergalactic Magnetic Field and Extragalactic Gamma-Ray Background” [3] Sironi &amp; Giannios, 2014, “Relativistic Pair Beams from TeV Blazars: A Source of Reprocessed GeV Emission Rather Than Intergalactic Heating” [4] Perry &amp; Lyubarsky, 2021, “The role of resonant plasma instabilities in the evolution of blazar-induced pair beams” [5] Matsumoto et al., 1994, “Electrostatic Solitary Waves (ESW) in the magnetotail: BEN wave forms observed by GEOTAIL” [6] Omura et al., 1994, “Computer simulation of electrostatic solitary waves: A nonlinear model of broadband electrostatic noise” [7] 田中基彦, 西川恭治, “高温プラズマの物理学” [8] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II” . ",
+    "content": "[1] Neronov &amp; Vovk, 2010, “Evidence for Strong Extragalactic Magnetic Fields from Fermi Observations of TeV Blazars” [2] Broderick et al., 2014, “The Cosmological Impact of Luminous TeV Blazars. I. Implications of Plasma Instabilities for the Intergalactic Magnetic Field and Extragalactic Gamma-Ray Background” [3] Sironi &amp; Giannios, 2014, “Relativistic Pair Beams from TeV Blazars: A Source of Reprocessed GeV Emission Rather Than Intergalactic Heating” [4] Perry &amp; Lyubarsky, 2021, “The role of resonant plasma instabilities in the evolution of blazar-induced pair beams” [5] Matsumoto et al., 1994, “Electrostatic Solitary Waves (ESW) in the magnetotail: BEN wave forms observed by GEOTAIL” [6] Omura et al., 1994, “Computer simulation of electrostatic solitary waves: A nonlinear model of broadband electrostatic noise” [7] 田中基彦, 西川恭治, “高温プラズマの物理学” [8] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II” [9] pCANS ドキュメント, “電子-電子 静電 2 流体不安定性” . ",
     "url": "/plasma/beam_driven_instability#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/plasma/beam_driven_instability#参考文献"
@@ -6649,54 +6649,54 @@
     
     "relUrl": "/astroelec/ics_spectrum"
   },"950": {
-    "doc": "一般相対性理論",
-    "title": "一般相対性理論",
-    "content": "ここでは宇宙物理を理解するために必要となる、一般相対論についてメモしていきます。 . 数学的に厳密な議論を欠いている部分もあります。ご容赦ください。 . ",
-    "url": "/gr#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96",
-    
-    "relUrl": "/gr#一般相対性理論"
-  },"951": {
-    "doc": "一般相対性理論",
-    "title": "一般相対性理論",
-    "content": " ",
-    "url": "/gr",
-    
-    "relUrl": "/gr"
-  },"952": {
     "doc": "ホーム",
     "title": "宇宙物理メモ",
     "content": "このウェブサイトはgithub-nakashoが運営するwebsiteです。 宇宙物理メモというサイト名ですが、宇宙物理以外のトピックスについても勉強し、適宜まとめています。 . ",
     "url": "/#%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E3%83%A1%E3%83%A2",
     
     "relUrl": "/#宇宙物理メモ"
-  },"953": {
+  },"951": {
     "doc": "ホーム",
     "title": "CV(?)",
     "content": "GitHub . github-nakasho . Twitter . @tweetnakasho . Current Job . 2019/10-. Jij Inc.で研究開発、技術ブログ作成 . Interests . | 宇宙物理学/天文学 | 磁気流体力学 | 組合せ最適化 | 量子アニーリング | 量子回路 | スーパーコンピュータによるシミュレーション | . Skills . | Mac, Linux | C, Python, Julia | OpenMP, MPI並列化 | Git (GitHub, Bitbucket) | ウェブサイト作成 | Illustrator, Photoshopを用いた簡単なイラスト作成 | . For fun . | 子育て (2022年末より) | 宇宙物理学・物理・数学・プログラミングの知識をこのwebsiteにまとめること | 筋トレ (とりあえずベンチプレス100kgを目指して頑張っています) | 寺社仏閣巡り | アニメ鑑賞 | . Daily routine . | astro-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | quant-phのチェック -&gt; 自分のGitHubリポジトリにIssuesとして登録 | . ",
     "url": "/#cv",
     
     "relUrl": "/#cv"
-  },"954": {
+  },"952": {
     "doc": "ホーム",
     "title": "ほしいものリストなど",
     "content": ". | 日本アマゾン | アメリカアマゾン | . ",
     "url": "/#%E3%81%BB%E3%81%97%E3%81%84%E3%82%82%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AA%E3%81%A9",
     
     "relUrl": "/#ほしいものリストなど"
-  },"955": {
+  },"953": {
     "doc": "ホーム",
     "title": "プライバシーポリシー",
     "content": ". | 当サイトはGoogle アナリティクスによる訪問者解析を行っております。 | 当サイトはGoogle アドセンスによる広告表示を行なっております | 当サイトはAmazon アソシエイトプログラムに参加しております。 | . ",
     "url": "/#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC",
     
     "relUrl": "/#プライバシーポリシー"
-  },"956": {
+  },"954": {
     "doc": "ホーム",
     "title": "ホーム",
     "content": ". ",
     "url": "/",
     
     "relUrl": "/"
+  },"955": {
+    "doc": "一般相対性理論",
+    "title": "一般相対性理論",
+    "content": "ここでは宇宙物理を理解するために必要となる、一般相対論についてメモしていきます。 . 数学的に厳密な議論を欠いている部分もあります。ご容赦ください。 . ",
+    "url": "/gr#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96",
+    
+    "relUrl": "/gr#一般相対性理論"
+  },"956": {
+    "doc": "一般相対性理論",
+    "title": "一般相対性理論",
+    "content": " ",
+    "url": "/gr",
+    
+    "relUrl": "/gr"
   },"957": {
     "doc": "誘導方程式",
     "title": "磁気流体における誘導方程式",
@@ -14020,75 +14020,75 @@
     
     "relUrl": "/circuits/series_parallel_resonance"
   },"2003": {
-    "doc": "相対論的衝撃波",
-    "title": "相対論的衝撃波",
-    "content": "相対論的衝撃波は、宇宙物理学への応用上欠かすことのできない重要な物理現象です。 衝撃波では物理量が不連続に変化しますが、衝撃波の静止系で不連続面での物理量の変化を調べてみましょう。 . ",
-    "url": "/rmhd/shock#%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E8%A1%9D%E6%92%83%E6%B3%A2",
-    
-    "relUrl": "/rmhd/shock#相対論的衝撃波"
-  },"2004": {
-    "doc": "相対論的衝撃波",
-    "title": "相対論的なランキン・ユゴニオの関係式の導出",
-    "content": "上流側の物理量には添字1、下流側の物理量には添字2をつけて表すことにします。 衝撃波面を\\(x=0\\)にとり、流体は\\(x\\)軸方向に定常的に運動しているものとします。 すると運動量保存則から、下流でも運動方向は\\(x\\)軸方向となります。 エネルギーと運動量の保存則から . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1 = \\frac{A_2}{c^2} \\gamma_2^2 v_2 \\tag{1}\\] \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1^2 + P_1 = \\frac{A_2}{c^2} \\gamma_2^2 v_2^2 + P_2 \\tag{2}\\] とわかります。 ここで\\(A_i = \\varepsilon_i + P_i\\)としました。 上流の物理量から、下流の物理量を求めることを考えましょう。 未知の量が\\(\\varepsilon_2, P_2, v_2\\)の3つであるのに対し、式の数は2つであるため、これだけでは下流の物理量を求めることができません。 そこで状態方程式を与えることで、\\(\\varepsilon, P\\)との間の関係を定めて解くことにしましょう。 . (1)式の両辺に\\(v_2\\)をかけると . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1 v_2 = \\frac{A_2}{c^2} \\gamma_2^2 v_2^2 \\tag{3}\\] を得ます。 (3)式を(2)式に用いれば . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1^2 - \\frac{A_1}{c^2} \\gamma_1^2 v_1 v_2 = \\frac{A_1}{c^2} \\gamma_1^2 v_1 (v_1 - v_2) = P_2 - P_1 \\tag{4}\\] のようになります。 さらに . \\[\\gamma_i^2 = \\frac{1}{1-\\tfrac{v_i^2}{c^2}} = \\frac{c^2}{c^2 - v_i^2} \\ \\Longrightarrow \\ \\gamma_i^2 v_i^2 = c^2 (\\gamma_i^2 - 1) \\tag{5}\\] を(2)式に用いると . \\[\\begin{align} &amp;A_1 (\\gamma_1^2 - 1) + P_1 = A_2 (\\gamma_2^2 - 1) + P_2 \\underbrace{=}_{(3)} A_1 \\gamma_1^2 \\frac{v_1}{v_2} - A_2 + P_2 \\notag \\\\ &amp;\\Longrightarrow \\ A_1 \\gamma_1^2 \\left( 1 - \\frac{v_1}{v_2} \\right) = A_1 - A_2 - P_1 + P_2 = \\varepsilon_1 - \\varepsilon_2 \\tag{6} \\end{align}\\] となります。 (4)式と(6)式の比をとりましょう。 すると . \\[\\frac{\\tfrac{A_1}{c^2} \\gamma_1^2 v_1 (v_1 - v_2)}{A_1 \\gamma_1^2 \\left( 1 - \\tfrac{v_1}{v_2} \\right)} = - \\frac{v_1 v_2}{c^2} = \\frac{P_2 - P_1}{\\varepsilon_1 - \\varepsilon_2} \\ \\Longrightarrow \\ v_2 = \\frac{P_1 - P_2}{(\\varepsilon_1 - \\varepsilon_2) v_1} c^2 \\tag{7}\\] のように、\\(v_1\\)を用いて\\(v_2\\)を表現することができます。 ここから . \\[v_1 - v_2 = v_1 - \\frac{P_1 - P_2}{(\\varepsilon_1 - \\varepsilon_2) v_1} c^2 = \\frac{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1} \\tag{8}\\] を(4)式に代入しましょう。 . \\[\\begin{aligned} &amp;\\frac{A_1}{c^2} \\gamma_1^2 v_1 \\frac{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1} = P_2 - P_1 \\ \\Longrightarrow \\ A_1 \\gamma_1^2 = \\frac{(P_2 - P_1)(\\varepsilon_1 - \\varepsilon_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1-P_2) c^2} \\notag \\\\ &amp;\\Longrightarrow \\ A_1 = \\frac{(P_2 - P_1)(\\varepsilon_1 - \\varepsilon_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1-P_2) c^2} \\left( 1 - \\frac{v_1^2}{c^2}\\right) = \\frac{(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2)}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \\notag \\\\ &amp; \\qquad \\qquad = \\frac{(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2)}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \\end{aligned}\\] \\(A_1 = \\varepsilon_1 + P_1\\)であることを思い出すと . \\[\\begin{aligned} &amp;(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2) = (\\varepsilon_1 + P_1) \\{ (\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2 \\} \\notag \\\\ &amp;\\Longrightarrow \\ (P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) c^2 + (\\varepsilon_1 + P_1) (P_1 - P_2) c^2 = (\\varepsilon_1 + P_1) (\\varepsilon_1 - \\varepsilon_2) v_1^2 + (P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) v_1^2 \\notag \\\\ &amp;\\Longrightarrow \\ - (P_2 - P_1) (\\varepsilon_2 + P_1) c^2 = (\\varepsilon_1 - \\varepsilon_2) (\\varepsilon_1 + P_2) v_1^2 \\end{aligned}\\] 以上より . \\[\\frac{v_1^2}{c^2} = \\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)} \\ \\Longrightarrow \\ \\frac{v_1}{c} = \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\tag{9}\\] これを(7)の途中式に代入すると . \\[\\frac{v_2}{c} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\frac{c}{v_1} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}{(P_2 - P_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\tag{10}\\] を得ます。 これらから、上流と下流の速度の比と積がそれぞれ . \\[\\frac{v_1}{v_2} = \\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2} \\tag{11}\\] \\[\\frac{v_1 v_2}{c^2} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\tag{12}\\] 対応するローレンツ因子も計算してみましょう。 . \\[\\begin{aligned} \\sqrt{1-\\frac{v_1^2}{c^2}} &amp;= \\sqrt{1 - \\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2) - (P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 \\varepsilon_2 - \\varepsilon_1^2 - \\varepsilon_1P_2 - P_2 P_1 + P_1 \\varepsilon_2 + P_1^2 }{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 \\varepsilon_2 - \\varepsilon_1^2 - \\varepsilon_1P_2 - P_2 P_1 + P_1 \\varepsilon_2 + P_1^2 + \\varepsilon_1 P_1 - \\varepsilon_1 P_1}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1 ) + P_1 (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} = \\sqrt{\\frac{(\\varepsilon_1 + P_1) (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\end{aligned}\\] より . \\[\\gamma_1 = \\frac{1}{\\sqrt{1-\\frac{v_1^2}{c^2}}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}} \\tag{13}\\] です。 同様に . \\[\\begin{aligned} \\sqrt{1-\\frac{v_2^2}{c^2}} &amp;= \\sqrt{1 - \\frac{(P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1) - (P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2^2 + \\varepsilon_2 P_1 - \\varepsilon_1 \\varepsilon_2 - P_2 \\varepsilon_1 - P_2^2 + P_1 P_2}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2^2 + \\varepsilon_2 P_1 - \\varepsilon_1 \\varepsilon_2 - P_2 \\varepsilon_1 - P_2^2 + P_1 P_2 + \\varepsilon_2 P_2 - \\varepsilon_2 P_2}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2 ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1) + P_2 ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(\\varepsilon_2 + P_2) ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\end{aligned}\\] より . \\[\\gamma_2 = \\frac{1}{\\sqrt{1-\\frac{v_2^2}{c^2}}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 + P_2) ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}} \\tag{14}\\] と求まります。 上流と下流の流体の相対速度\\(v_\\mathrm{rel}\\)も計算してみましょう。 . \\[\\begin{align} \\frac{v_\\mathrm{rel}}{c} &amp;= \\frac{v_1 - v_2}{c \\left( 1 - \\frac{v_1 v_2}{c^2}\\right)} \\underbrace{=}_{(12)} \\left( \\frac{v_1}{c} - \\frac{v_2}{c} \\right) \\frac{1}{1 - \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\notag \\\\ &amp;= \\sqrt{\\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\left( \\sqrt{\\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2}} - \\sqrt{\\frac{\\varepsilon_1 + P_2}{\\varepsilon_2 + P_1}}\\right) \\frac{\\varepsilon_2 - \\varepsilon_1}{\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1} \\notag \\\\ &amp;= \\sqrt{\\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\frac{\\varepsilon_2 + P_1 - \\varepsilon_1 - P_2}{\\sqrt{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}} \\frac{\\varepsilon_2 - \\varepsilon_1}{\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1} \\notag \\\\ &amp;= \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_2 - \\varepsilon_1)}{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}} \\tag{15} \\end{align}\\] また対応するローレンツ因子は . \\[\\gamma_\\mathrm{rel} = \\gamma_1 \\gamma_2 \\left( 1- \\frac{v_1 v_2}{c^2}\\right) \\underbrace{=}_{(12), (13), (14)} \\sqrt{\\frac{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 + P_2)}} \\tag{16}\\] のようになります。 これらから、速度の比は有限となり、衝撃波の強さを表す量として\\(\\varepsilon_2 / \\varepsilon_1\\)または\\(\\gamma_\\mathrm{rel}\\)を取るのが適当であることがわかります。 . 弱い衝撃波の極限では、\\(P_2 \\simeq P_1, \\varepsilon_2 \\simeq \\varepsilon_1\\)より . \\[(9) \\ \\Longrightarrow \\ \\frac{v_1}{c} \\approx \\sqrt{\\frac{\\Delta P}{\\Delta \\varepsilon}} \\approx \\sqrt{\\frac{dP}{d\\varepsilon}} = \\frac{c_s}{c} \\tag{17}\\] となります。 途中、\\(P_2 - P_1 = \\Delta P, \\varepsilon_2 - \\varepsilon_1 = \\Delta \\varepsilon\\)としました。 \\(v_2\\)においても同様に\\(c_s\\)となることから、弱い衝撃波極限では\\(v_1 = v_2 = c_s\\)になることがわかります。 すなわち、衝撃波は上流の速度が音速を超えた場合にのみ生じると言えます。 超相対論的極限では、状態方程式が\\(P = \\varepsilon / 3\\)となるため . \\[\\frac{v_1}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3}\\right)}{\\left( \\varepsilon_2 - \\varepsilon_1\\right) (\\varepsilon_1 + \\frac{\\varepsilon_2}{3})}} = \\sqrt{\\frac{3 \\varepsilon_2 + \\varepsilon_1}{3(3\\varepsilon_1 + \\varepsilon_2)}} \\tag{18}\\] \\[\\frac{v_2}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right)}{\\left( \\varepsilon_2 - \\varepsilon_1\\right) (\\varepsilon_2 + \\frac{\\varepsilon_1}{3})}} = \\sqrt{\\frac{3\\varepsilon_1 + \\varepsilon_2}{3(3\\varepsilon_2 + \\varepsilon_1)}} \\tag{19}\\] \\[\\frac{v_1}{v_2} = \\frac{3 \\varepsilon_2 + \\varepsilon_1}{3 \\varepsilon_1 + \\varepsilon_2} \\tag{20}\\] \\[\\frac{v_\\mathrm{rel}}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) (\\varepsilon_2 - \\varepsilon_1)}{\\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3}\\right)}} = \\frac{\\sqrt{3} (\\varepsilon_2 - \\varepsilon_1)}{\\sqrt{(3\\varepsilon_1 + \\varepsilon_2) (3\\varepsilon_2 + \\varepsilon_1)}} \\tag{21}\\] \\[\\gamma_\\mathrm{rel} = \\sqrt{\\frac{\\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3} \\right)}{\\left( \\varepsilon_1 + \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_2}{3}\\right)}} = \\sqrt{\\frac{\\left(3 \\varepsilon_1 + \\varepsilon_2\\right) \\left( 3\\varepsilon_2 + \\varepsilon_1 \\right)}{16 \\varepsilon_1 \\varepsilon_2}} = \\frac{1}{4} \\sqrt{\\left( 3 + \\frac{\\varepsilon_2}{\\varepsilon_1}\\right) \\left( 3 + \\frac{\\varepsilon_1}{\\varepsilon_2}\\right)} \\tag{22}\\] のような関係式を得ます。 さらに強い衝撃波の極限\\(\\tfrac{\\varepsilon_2}{\\varepsilon_1} \\rightarrow \\infty\\)では、\\(v_1 \\rightarrow c, v_2 \\rightarrow \\tfrac{c}{3}, v_\\mathrm{rel} \\rightarrow c, \\gamma_\\mathrm{rel} \\rightarrow \\sqrt{\\frac{3\\varepsilon_2}{16\\varepsilon_1}}\\)となります。 逆に弱い衝撃波の極限\\(\\tfrac{\\varepsilon_2}{\\varepsilon_1} \\rightarrow 1\\)では、\\(v_1 \\rightarrow \\tfrac{c}{\\sqrt{3}}, v_2 \\rightarrow \\tfrac{c}{\\sqrt{3}}\\)のように、上流の下流も音速で運動していることがわかります。 一般の状態方程式には粒子数が入るため、保存する粒子数についての連続の式を考慮する必要があります。 粒子が生成・崩壊しないとすると . \\[n_1 \\gamma_1 v_1 = n_2 \\gamma_2 v_2 \\tag{23}\\] です。 (13), (14)式より . \\[\\frac{\\gamma_2}{\\gamma_1} = \\sqrt{\\frac{(\\varepsilon_2 + P_1) (\\varepsilon_1 + P_1)}{(\\varepsilon_2 + P_2) (\\varepsilon_1 + P_2)}} \\tag{24}\\] であることと、(11)式を用いれば . \\[\\frac{n_1}{n_2} = \\frac{\\gamma_2 v_2}{\\gamma_1 v_1} = \\sqrt{\\frac{(\\varepsilon_1 + P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 + P_2)(\\varepsilon_2 + P_1)}} \\ \\Longrightarrow \\ \\frac{(\\varepsilon_1 + P_1) (\\varepsilon_1 + P_2)}{n_1^2} = \\frac{(\\varepsilon_2 + P_2) (\\varepsilon_2 + P_1)}{n_2^2} \\tag{25}\\] を得ます。 特にこの式を、相対論的なランキン・ユゴニオの関係式と呼びます。 上流の物理量(添字1が付いたもの)が与えられたとき、(9)式から\\(\\varepsilon_2, P_2\\)の関係式が与えられます。 これに(25)式および状態方程式を合わせれば、\\(\\varepsilon_2, P_2, n_2\\)を求めることができます。 そうして得られたものを(10)式に代入すれば、下流の速度\\(v_2\\)が求められることになります。 一般的な場合は複雑で、数値的な取り扱いが必要となります。 そのため、\\(P_1 = 0, \\varepsilon_1 = n_1 mc^2\\)という、強い衝撃波の極限のみを考えてみましょう。 この場合のランキン・ユゴニオの関係式は . \\[\\frac{\\varepsilon_1(\\varepsilon_1 + P_2)}{n_1^2} = \\frac{\\varepsilon_2 (\\varepsilon_2 + P_2)}{n_2^2} \\tag{26}\\] のようになります。 また上流と下流の相対的なローレンツ因子は、(16)式より . \\[\\gamma_\\mathrm{rel} = \\sqrt{\\frac{\\varepsilon_2 (\\varepsilon_1 + P_2)}{\\varepsilon_1 (\\varepsilon_2 + P_2)}} \\ \\Longrightarrow \\ \\frac{\\varepsilon_1 + P_2}{\\varepsilon_2 + P_2} = \\gamma_\\mathrm{rel}^2 \\frac{\\varepsilon_1}{\\varepsilon_2} \\tag{27}\\] となることから . \\[\\frac{\\varepsilon_1}{n_1^2} = \\frac{\\varepsilon_2}{n_2^2} \\frac{1}{\\gamma_\\mathrm{rel}^2} \\frac{\\varepsilon_2}{\\varepsilon_1} \\ \\Longrightarrow \\ \\frac{\\varepsilon_2}{n_2} = \\gamma_\\mathrm{rel} \\frac{\\varepsilon_1}{n_1} = \\gamma_\\mathrm{rel} m c^2 \\tag{28}\\] を得ます。 これは、下流での1粒子辺の内部エネルギーが\\(\\gamma_\\mathrm{rel}\\)となることがわかります。 さらに状態方程式として . \\[P = (\\Gamma -1) (\\varepsilon - n mc^2) \\tag{29}\\] を用いることにすると . \\[\\frac{P_2}{n_2} = (\\Gamma - 1) \\left( \\frac{\\varepsilon_2}{n_2} - mc^2\\right) \\underbrace{=}_{(28)} (\\Gamma -1) (\\gamma_\\mathrm{rel} - 1) mc^2 \\tag{30}\\] (28), (30)式を(26)式に代入していきましょう。 . \\[\\frac{\\varepsilon_1}{n_1} \\left( \\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1}\\right) = \\frac{\\varepsilon_2}{n_2} \\left( \\frac{\\varepsilon_2}{n_2} + \\frac{P_2}{n_2} \\right)\\] \\[(左辺) = mc^2 \\left( mc^2 + \\frac{n_2}{n_1} \\frac{P_2}{n_2}\\right) = mc^2 \\left\\{ mc^2 + \\frac{n_2}{n_1} (\\Gamma - 1) (\\gamma_\\mathrm{rel}-1) mc^2 \\right\\}\\] \\[(右辺) = \\gamma_\\mathrm{rel} mc^2 \\{\\gamma_\\mathrm{rel} mc^2 + (\\Gamma - 1) (\\gamma_\\mathrm{rel} -1) mc^2\\}\\] より . \\[\\begin{align} \\frac{n_2}{n_1} &amp;= \\frac{\\gamma_\\mathrm{rel} \\{ \\gamma_\\mathrm{rel} + (\\Gamma - 1) (\\gamma_\\mathrm{rel} - 1) \\} - 1}{(\\Gamma -1)(\\gamma_\\mathrm{rel} - 1)} = \\frac{\\gamma_\\mathrm{rel}^2 + \\gamma_\\mathrm{rel} (\\Gamma -1) (\\gamma_\\mathrm{rel} -1) -1}{(\\Gamma -1) (\\gamma_\\mathrm{rel}-1)} \\notag \\\\ &amp;= \\frac{(\\gamma_\\mathrm{rel} -1) \\{(\\gamma_\\mathrm{rel}+1) + \\gamma_\\mathrm{rel} (\\Gamma -1)\\}}{(\\Gamma -1) (\\gamma_\\mathrm{rel}-1)} = \\frac{\\gamma_\\mathrm{rel} \\Gamma +1}{\\Gamma -1} \\tag{31} \\end{align}\\] と求めることができます。 この比は\\(\\gamma_\\mathrm{rel} \\gg 1\\)のとき、\\(\\gamma_\\mathrm{rel}\\)に比例して大きくなることがわかります。 しかし、速度の比は . \\[\\begin{align} \\frac{v_1}{v_2} &amp;\\underbrace{=}_{(11)} \\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2} = \\frac{\\frac{\\varepsilon_2}{n_1}}{\\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1}} = \\frac{\\frac{n_2}{n_1} \\frac{\\varepsilon_2}{n_2}}{mc^2 + \\frac{n_2}{n_1}\\frac{P_2}{n_2}} = \\frac{\\frac{\\gamma_\\mathrm{rel} \\Gamma + 1}{\\Gamma -1} \\gamma_\\mathrm{rel} mc^2}{mc^2 + \\frac{\\gamma_\\mathrm{rel} \\Gamma +1}{\\Gamma-1} (\\Gamma-1) (\\gamma_\\mathrm{rel} -1) mc^2} \\notag \\\\ &amp;= \\frac{\\gamma_\\mathrm{rel} \\Gamma + 1}{(\\Gamma - 1) (\\gamma_\\mathrm{rel} \\Gamma - \\Gamma + 1)} \\tag{32} \\end{align}\\] であり、また . \\[\\begin{align} \\frac{\\gamma_1}{\\gamma_2} &amp;\\underbrace{=}_{(24)} \\sqrt{\\frac{(\\varepsilon_2 + P_2) (\\varepsilon_1 + P_2)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{n_1} + \\frac{P_2}{n_1} \\right) \\left( \\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1} \\right)}{ \\frac{\\varepsilon_1}{n_1} \\frac{\\varepsilon_2}{n_1}}} = \\sqrt{\\frac{\\frac{n_2}{n_1} \\left( \\frac{\\varepsilon_2}{n_2} + \\frac{P_2}{n_2}\\right) \\left( mc^2 + \\frac{n_2}{n_1} \\frac{P_2}{n_2}\\right)}{ mc^2 \\frac{n_2}{n_1} \\frac{\\varepsilon_2}{n_2}}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\{\\gamma_\\mathrm{rel} mc^2 + (\\Gamma -1)(\\gamma_\\mathrm{rel} -1) mc^2\\} \\{ mc^2 + (\\gamma_\\mathrm{rel} \\Gamma + 1)(\\gamma_\\mathrm{rel} -1) mc^2\\} }{\\gamma_\\mathrm{rel} m^2 c^4}} \\notag \\\\ &amp;= \\sqrt{\\frac{ \\gamma_\\mathrm{rel} (\\gamma_\\mathrm{rel} \\Gamma - \\Gamma +1)^2}{\\gamma_\\mathrm{rel}}} = \\gamma_\\mathrm{rel} \\Gamma - \\Gamma + 1 \\tag{33} \\end{align}\\] のように整理されます。 ここからわかるように、衝撃波静止系で見た数密度の比\\(\\frac{n_2 \\gamma_2}{n_1 \\gamma_1} = \\frac{v_1}{v_2}\\)はそれほど大きくならないことがわかります。 また\\(\\gamma_1\\)と\\(\\gamma_\\mathrm{rel}\\)の関係式は . \\[\\gamma_1^2 = \\frac{(\\gamma_\\mathrm{rel} + 1) \\{\\Gamma (\\gamma_\\mathrm{rel} -1) + 1\\}^2}{\\Gamma (2-\\Gamma) (\\gamma_\\mathrm{rel}-1) + 2} \\tag{34}\\] となります。 . ",
-    "url": "/rmhd/shock#%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E3%81%AA%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%83%A6%E3%82%B4%E3%83%8B%E3%82%AA%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F%E3%81%AE%E5%B0%8E%E5%87%BA",
-    
-    "relUrl": "/rmhd/shock#相対論的なランキンユゴニオの関係式の導出"
-  },"2005": {
-    "doc": "相対論的衝撃波",
-    "title": "無衝突衝撃波について",
-    "content": "衝撃波は、衝撃波面の薄い領域で粘性による散逸が起こることによる構造です。 宇宙物理など多くの場合では、媒質は中性流体ではなく、電離したプラズマです。 しかも、粒子どうしの衝突が頻繁には起こらない無衝突プラズマであることが知られています。 このときには、粒子間の相互作用は電磁場を媒介として起こるとされています。 2つの無衝突プラズマを超音速で衝突させると、2つのプラズマはお互いにすり抜けようとしますが、この状態は電磁場の不安定モードを強く励起します。 このようにして励起されたプラズマ波動により荷電粒子の機動が乱され、衝撃波構造を形成します。 これを無衝突衝撃波と呼びます。 無衝突衝撃波が実際に生じることは、非相対論的な場合ですが、太陽風が地球磁気圏に衝突して形成する弓状衝撃波や超新星残骸など多くの天体で観測されています。 またガンマ線バーストでは、相対論的な衝撃波が生じていると考えられています。 多くの場合、プラズマ中に磁場が存在していますが、たとえもともとのプラズマが磁場を含んでいなくとも、ワイベル不安定性により自発的に磁場が生成され、衝撃波構造を形成できると考えられています。 無衝突衝撃波の構造は流体のスケールで見れば十分小さいため、衝撃波の十分下流で熱平衡状態になるとすると、上流と下流の物理量の関係は、ここまで考えてきたような流体力学的なもので記述できるはずです。 しかし、無衝突衝撃波は散逸の過程は流体力学的な粘性散逸ではないため、そこでは高エネルギーの非熱的粒子の加速などの現象が起こります。 この効果は流体力学では記述できないため、衝撃波の構造なども修正が必要となります。 この研究テーマは、現代の宇宙物理学およびプラズマ物理学の最先端の研究課題の一つとなっています。 . ",
-    "url": "/rmhd/shock#%E7%84%A1%E8%A1%9D%E7%AA%81%E8%A1%9D%E6%92%83%E6%B3%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
-    
-    "relUrl": "/rmhd/shock#無衝突衝撃波について"
-  },"2006": {
-    "doc": "相対論的衝撃波",
-    "title": "参考文献",
-    "content": "[1] Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics” [2] 北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析” [3] 田中 秀和, “宇宙流体力学” [4] 高原文郎, “特殊相対論” . ",
-    "url": "/rmhd/shock#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
-    
-    "relUrl": "/rmhd/shock#参考文献"
-  },"2007": {
-    "doc": "相対論的衝撃波",
-    "title": "相対論的衝撃波",
-    "content": ". | 相対論的衝撃波 . | 相対論的なランキン・ユゴニオの関係式の導出 | 無衝突衝撃波について | 参考文献 | . | . ",
-    "url": "/rmhd/shock",
-    
-    "relUrl": "/rmhd/shock"
-  },"2008": {
     "doc": "衝撃波",
     "title": "衝撃波",
     "content": "ここでは磁場を考えない、流体衝撃波(hydrodynamical shock)について考えます。 . ",
     "url": "/mhd/shock#%E8%A1%9D%E6%92%83%E6%B3%A2",
     
     "relUrl": "/mhd/shock#衝撃波"
-  },"2009": {
+  },"2004": {
     "doc": "衝撃波",
     "title": "垂直・断熱衝撃波",
     "content": ". 衝撃波面と同じ速度で運動する系で衝撃波を観測してみましょう。簡単のため、衝撃波面は定常・等速度で伝播していくものとし、さらに流体は衝撃波面に対して垂直な方向した運動していないとします。また流体の速度は非相対論的とします。 以降、衝撃波面を挟んで上流側(pre-shock)の物理量には1、下流側(post-shock)の物理量には2の添字をつけて式変形を考えていきます。 質量保存(連続の式)より、衝撃波面を挟んで、その前後では . \\[\\rho_1 v_1 = \\rho_2 v_2 \\tag{1}\\] 運動量保存式より . \\[\\rho_1 v_1 v_1 + P_1 = \\rho_2 v_2 v_2 + P_2 \\tag{2}\\] エネルギー保存式より . \\[\\left( \\frac{1}{2} v^2_1 + e_1 + \\frac{P_1}{\\rho_1} \\right) \\rho_1 v_1 = \\left( \\frac{1}{2} v^2_2 + e_2 + \\frac{P_2}{\\rho_2} \\right) \\rho_2 v_2 \\tag{3}\\] です。ここで\\(e\\)は単位体積あたりの内部エネルギー\\(e = \\frac{P}{(\\gamma-1) \\rho}\\)です。以下では . \\[\\frac{\\rho_2}{\\rho_1} = \\frac{v_1}{v_2} \\equiv x, \\quad \\frac{P_2}{P_1} \\equiv y \\tag{4}\\] のように変数変換をして、式変形を進めましょう。この\\(x\\)を圧縮率と呼びます。(2)式より . \\[\\rho_1 v_1^2 + P_1 = \\rho_1 v_1^2 \\frac{\\rho_2}{\\rho_1} \\frac{v_2^2}{v_1^2} P_1 \\frac{P_2}{P_1} \\underbrace{=}_{(4)} \\frac{\\rho v_1^2}{x} + P_1 y\\] ここでさらに . \\[C_s^2 = \\frac{\\gamma P_1}{\\rho_1}, \\quad M \\equiv \\frac{v}{C_s}\\] のように音速とMach数を導入すると . \\[\\rho_1 v_1^2 + \\frac{\\rho_1 C_{s1}^2}{\\gamma} = \\frac{\\rho_1 v_1^2}{x} + \\frac{\\rho_1 C_{s1}^2}{\\gamma} y \\ \\underbrace{\\Longrightarrow}_{\\times \\rho^{-1} C_{s1}^{-2}} \\ M_1^2 + \\frac{1}{\\gamma} = \\frac{M_1^2}{x} + \\frac{y}{\\gamma} \\ \\Longrightarrow \\ y = 1 + \\gamma M_1^2 \\left( 1-\\frac{1}{x}\\right) \\tag{5}\\] (1), (3)式より . \\[\\begin{aligned} &amp;\\frac{1}{2} v_1^2 + \\frac{\\gamma}{\\gamma-1} \\underbrace{\\frac{P_1}{\\rho_1}}_{= C_{s1}^2/\\gamma} = \\frac{1}{2} v_2^2 + \\frac{\\gamma}{\\gamma-1} \\frac{P_2}{\\rho_2} = \\frac{1}{2} v_1^2 \\frac{v_2^2}{v_1^2} + \\frac{\\gamma}{\\gamma-1} \\frac{P_1}{\\rho_1} \\frac{P_2}{P_1} \\frac{\\rho_1}{\\rho_2} = \\frac{1}{2} \\frac{v_1^2}{x^2} + \\frac{C_{s1}^2}{\\gamma-1} \\frac{y}{x} \\\\ &amp;\\Longrightarrow \\ \\frac{\\gamma-1}{2} M_1^2 \\left( 1- \\frac{1}{x^2} \\right) + \\left( 1-\\frac{y}{x}\\right) = 0 \\end{aligned}\\] この両辺に\\(x^2\\)をかけて、さらに(5)式を用いると . \\[\\frac{\\gamma-1}{2} M_1^2 (x^2-1) + \\left\\{ x^2 - x - \\gamma M_1^2 (x-1) \\right\\} = 0 \\ \\Longrightarrow \\ (x-1) \\left\\{ \\frac{\\gamma-1}{2} M_1^2 (x+1) + x - \\gamma M_1^2 \\right\\} = 0\\] よってこの式には . \\[x-1 = 0, \\quad \\frac{\\gamma-1}{2} M_1^2 (x+1) + x - \\gamma M_1^2 = 0\\] の2つの解があることがわかります。最初の\\(x=1\\)の解は\\(\\rho_1 = \\rho_2, v_1 = v2, P_1 = P_2\\)で、衝撃波面を挟んで何も起こっていないような解なので、この解に意味はありません。よって2つ目の解について調べましょう。すると(5)式より . \\[x = \\frac{\\rho_2}{\\rho_1} = \\frac{v_1}{v_2} = \\frac{(\\gamma+1)M_1^2}{(\\gamma-1)M_1^2 + 2}, \\quad y = \\frac{P_2}{P_1} = 1 + \\gamma M_1^2 \\left( 1 - \\frac{(\\gamma-1)M_1^2 + 2}{(\\gamma+1)M_1^2}\\right) = \\frac{2\\gamma M_1^2 - \\gamma + 1}{\\gamma + 1} \\tag{6}\\] この衝撃波面前後での物理量のジャンプ条件をRankine-Hugoniot(ランキン・ユゴニオ)の式と呼びます。もし上流側の流体の速度がとても大きい場合、(6)式で\\(M_1 \\rightarrow \\infty\\)の極限をとると . \\[x \\rightarrow \\frac{\\gamma + 1}{\\gamma -1}, \\quad y \\rightarrow \\frac{2\\gamma}{\\gamma+1} M_1^2 \\tag{7}\\] のようになります。どんなに流体の速度が大きく強い衝撃波であったとしてもしても、断熱の物理条件では有限の圧縮率になることがわかります。特に理想気体\\(\\gamma = 5/3\\)のときは\\(x = 4\\)です。断熱の場合、衝撃波で強く圧縮しようとしても圧力上昇からそこまで圧縮することができず、密度圧縮率が有限の値になります。 . ",
     "url": "/mhd/shock#%E5%9E%82%E7%9B%B4%E6%96%AD%E7%86%B1%E8%A1%9D%E6%92%83%E6%B3%A2",
     
     "relUrl": "/mhd/shock#垂直断熱衝撃波"
-  },"2010": {
+  },"2005": {
     "doc": "衝撃波",
     "title": "衝撃波の発生条件",
     "content": "ガスのエントロピー . 衝撃波の前後で変化が起こる量としてエントロピーがあります。よってここではガスの単位体積あたりのエントロピーの導出から行いましょう。エネルギー保存則を求める過程で出現した内部エネルギーが満たす式より . \\[\\rho \\frac{De}{Dt} + \\rho P \\frac{D}{Dt} \\left( \\frac{1}{\\rho} \\right) = -\\mathcal{L}\\] これと内部エネルギーが\\(e = \\frac{P}{(\\gamma-1) \\rho}\\)と書かれることより . \\[\\begin{aligned} \\frac{\\rho}{\\gamma-1} \\frac{D}{Dt} \\left( \\frac{P}{\\rho}\\right) - \\frac{P}{\\rho} \\frac{D\\rho}{Dt} &amp;= \\frac{1}{\\gamma-1} \\frac{DP}{Dt} - \\frac{\\gamma}{\\gamma-1} \\frac{P}{\\rho} \\frac{D\\rho}{Dt} = \\frac{\\rho^\\gamma}{\\gamma-1} \\left( \\rho^{-\\gamma} \\frac{DP}{Dt} - \\gamma \\rho^{-\\gamma-1} \\frac{D\\rho}{Dt}\\right) \\\\ &amp;= \\frac{\\rho^\\gamma}{\\gamma-1} \\frac{D}{Dt} \\left( \\frac{P}{\\rho^\\gamma}\\right) = - \\mathcal{L} \\end{aligned}\\] のように整理されます。さらにこの式は定積熱容量を用いると . \\[\\rho^\\gamma \\frac{\\mu}{k_B} C_V \\frac{D}{Dt} \\left( \\frac{P}{\\rho^\\gamma} \\right) = \\rho^\\gamma \\frac{\\rho T}{P} C_V \\frac{D}{Dt} \\left( \\frac{P}{\\rho^\\gamma} \\right) = \\rho C_V T \\frac{D}{Dt} \\left( \\log \\frac{P}{\\rho^\\gamma} \\right) = -\\mathcal{L}\\] のようになります。そもそものエントロピーが満たす式 . \\[\\rho T \\frac{Ds}{Dt} = - \\mathcal{L}\\] との比較から、エントロピーが . \\[s = C_V \\log \\frac{P}{\\rho^\\gamma} \\tag{8}\\] のように表記できるとわかります。 . 衝撃波でのエントロピー変化と衝撃波発生条件 . 衝撃波前後のエントロピーの差をとると . \\[s_2 - s_1 = C_V \\log \\left\\{ \\frac{P_2}{P_1} \\left( \\frac{\\rho_1}{\\rho_2} \\right)^\\gamma \\right\\} = C_V \\log \\frac{P_2}{P_1} - \\gamma C_V \\log \\frac{\\rho_2}{\\rho_1}\\] 両辺を\\(M_1\\)で微分します。下流の物理量が上流の流体の速度に依存しているのに対して、上流の物理量は特に上流の流体の速度に依存していないと考えると\\(P_1, \\rho_1, s_1\\)はこの微分に関して定数と考えることができます。よって . \\[\\frac{ds_2}{dM_1} = C_V \\frac{d}{dM_1} \\log P_2 - \\gamma C_V \\frac{d}{dM_1} \\log \\rho_2 = \\frac{C_V}{P_2} \\frac{dP_2}{dM_1} - \\frac{\\gamma C_V}{\\rho_2} \\frac{d\\rho_2}{dM_1}\\] また(6)式より . \\[\\frac{dP_2}{dM_1} = \\frac{4\\gamma}{\\gamma+1} M_1 P_1\\] \\[\\frac{d\\rho_2}{dM_1} = \\frac{4(\\gamma+1) M_1}{\\{ 2+(\\gamma-1) M_1^2\\}^2} \\rho_1\\] 以上より . \\[\\begin{align} \\frac{ds_2}{dM_1} &amp;= C_V \\frac{P_1}{P_2} \\frac{4\\gamma}{\\gamma+1} M_1 - \\gamma C_V \\frac{\\rho_1}{\\rho_2} \\frac{4(\\gamma+1) M_1}{\\{ 2+(\\gamma-1) M_1^2\\}^2} \\notag \\\\ &amp;\\underbrace{=}_{(6)} C_V \\frac{4\\gamma}{2\\gamma M_1^2 - \\gamma + 1} M_1 - \\frac{\\gamma C_V}{M_1} \\frac{4}{2+(\\gamma-1) M_1^2} \\notag \\\\ &amp;= 4\\gamma C_V \\frac{(\\gamma-1) (M_1^2-1)^2}{M_1 (2\\gamma M_1^2-\\gamma+1)(2+(\\gamma-1)M_1^2)} \\tag{9} \\end{align}\\] (6)式の\\(P_2/ P_1&gt;0\\)より\\(2\\gamma M_1^2-\\gamma+1&gt;0\\)であることが保証されます。比熱比は一般に\\(\\gamma&gt;1\\)なので、(9)式の最右辺は0より大きく、\\(ds_2/dM_1 &gt; 0\\)となります。\\(M_1 = 1\\)のとき(9)式から\\(ds_2/dM_1=0\\)となることからもわかるように、上流側と下流側で物理量が全て同じとなり\\(s_1 = s_2\\)となります。よって衝撃波が発生している\\(M_1 &gt; 1\\)のときには常に\\(s_2 &gt; s_1\\)が成立します。逆を言えば、\\(M_1&gt;1\\)が衝撃波の発生条件と考えることができます。 . 下流側の速度 . 次は下流側の流体の速度について考えましょう。 . \\[M_2^2 = \\frac{v_2^2}{C_{s2}} = \\frac{\\rho_1}{\\gamma P_1} \\frac{\\rho_2}{\\rho_1} \\frac{P_1}{P_2} \\frac{v_2^2}{v_1^2} v_1^2 \\underbrace{=}_{(6)} \\frac{v_1^2}{C_{s1}^2} \\frac{1}{xy} = M_1^2 \\frac{2 + (\\gamma-1) M_1^2}{(\\gamma+1) M_1^2} \\frac{\\gamma+1}{2\\gamma M_1^2-\\gamma+1}\\] これより . \\[M_2^2 -1 = -\\frac{M_1^2-1}{\\frac{2\\gamma}{\\gamma+1} (M_1^2-1) + 1} \\tag{10}\\] これと先程の衝撃波発生条件\\(M_1&gt;1\\)と合わせると\\(M_2^2&lt;1\\)であり、下流側は必ず亜音速となることがわかります。 . ",
     "url": "/mhd/shock#%E8%A1%9D%E6%92%83%E6%B3%A2%E3%81%AE%E7%99%BA%E7%94%9F%E6%9D%A1%E4%BB%B6",
     
     "relUrl": "/mhd/shock#衝撃波の発生条件"
-  },"2011": {
+  },"2006": {
     "doc": "衝撃波",
     "title": "垂直・等温衝撃波",
     "content": "実際の星間空間では衝撃波で加熱された星間ガスは放射を出し、エネルギーを失って冷却されます。冷却時間が着目している物理現象の時間スケールよりも十分に短い場合には、一度衝撃波により加熱されたとしてもすぐに冷却過程が起こります。このような場合、結果として衝撃波の前後で温度の変化が起こらないと見なすことができます。これを等温衝撃波(isothermal shock)と呼びます。以下では等温衝撃波でのジャンプ条件を求めてみましょう。 質量保存・運動量保存・エネルギー保存((1), (2), (3)式)に変化はなく、唯一変わるのは音速の式です。等温条件から圧力と音速は . \\[P_1 = \\frac{\\rho_1}{\\mu m_p} k_B T, \\quad P_2 = \\frac{\\rho_2}{\\mu m_p} k_B T \\ \\Longrightarrow \\ \\frac{P_1}{\\rho_1} = \\frac{P_2}{\\rho_2} = \\frac{k_B T}{\\mu m_p} = C_s^2\\] のようになります。これは先程までの断熱衝撃波で考えた音速において\\(\\gamma=1\\)とした場合と同じです。よって(6)式から、等温衝撃波では . \\[x = y = M_1^2 \\tag{11}\\] となります。断熱の場合と違い、流体の速度が大きくなればなるほど圧縮率が大きくなります。これは先述の通り、衝撃波で圧縮されても温度が上がらないことから圧力上昇が鈍くなり、いくらでも圧縮できることを表しています。 . ",
     "url": "/mhd/shock#%E5%9E%82%E7%9B%B4%E7%AD%89%E6%B8%A9%E8%A1%9D%E6%92%83%E6%B3%A2",
     
     "relUrl": "/mhd/shock#垂直等温衝撃波"
-  },"2012": {
+  },"2007": {
     "doc": "衝撃波",
     "title": "衝撃波",
     "content": ". | 衝撃波 . | 垂直・断熱衝撃波 | 衝撃波の発生条件 . | ガスのエントロピー | 衝撃波でのエントロピー変化と衝撃波発生条件 | 下流側の速度 | . | 垂直・等温衝撃波 | . | . ",
     "url": "/mhd/shock",
     
     "relUrl": "/mhd/shock"
+  },"2008": {
+    "doc": "相対論的衝撃波",
+    "title": "相対論的衝撃波",
+    "content": "相対論的衝撃波は、宇宙物理学への応用上欠かすことのできない重要な物理現象です。 衝撃波では物理量が不連続に変化しますが、衝撃波の静止系で不連続面での物理量の変化を調べてみましょう。 . ",
+    "url": "/rmhd/shock#%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E8%A1%9D%E6%92%83%E6%B3%A2",
+    
+    "relUrl": "/rmhd/shock#相対論的衝撃波"
+  },"2009": {
+    "doc": "相対論的衝撃波",
+    "title": "相対論的なランキン・ユゴニオの関係式の導出",
+    "content": "上流側の物理量には添字1、下流側の物理量には添字2をつけて表すことにします。 衝撃波面を\\(x=0\\)にとり、流体は\\(x\\)軸方向に定常的に運動しているものとします。 すると運動量保存則から、下流でも運動方向は\\(x\\)軸方向となります。 エネルギーと運動量の保存則から . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1 = \\frac{A_2}{c^2} \\gamma_2^2 v_2 \\tag{1}\\] \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1^2 + P_1 = \\frac{A_2}{c^2} \\gamma_2^2 v_2^2 + P_2 \\tag{2}\\] とわかります。 ここで\\(A_i = \\varepsilon_i + P_i\\)としました。 上流の物理量から、下流の物理量を求めることを考えましょう。 未知の量が\\(\\varepsilon_2, P_2, v_2\\)の3つであるのに対し、式の数は2つであるため、これだけでは下流の物理量を求めることができません。 そこで状態方程式を与えることで、\\(\\varepsilon, P\\)との間の関係を定めて解くことにしましょう。 . (1)式の両辺に\\(v_2\\)をかけると . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1 v_2 = \\frac{A_2}{c^2} \\gamma_2^2 v_2^2 \\tag{3}\\] を得ます。 (3)式を(2)式に用いれば . \\[\\frac{A_1}{c^2} \\gamma_1^2 v_1^2 - \\frac{A_1}{c^2} \\gamma_1^2 v_1 v_2 = \\frac{A_1}{c^2} \\gamma_1^2 v_1 (v_1 - v_2) = P_2 - P_1 \\tag{4}\\] のようになります。 さらに . \\[\\gamma_i^2 = \\frac{1}{1-\\tfrac{v_i^2}{c^2}} = \\frac{c^2}{c^2 - v_i^2} \\ \\Longrightarrow \\ \\gamma_i^2 v_i^2 = c^2 (\\gamma_i^2 - 1) \\tag{5}\\] を(2)式に用いると . \\[\\begin{align} &amp;A_1 (\\gamma_1^2 - 1) + P_1 = A_2 (\\gamma_2^2 - 1) + P_2 \\underbrace{=}_{(3)} A_1 \\gamma_1^2 \\frac{v_1}{v_2} - A_2 + P_2 \\notag \\\\ &amp;\\Longrightarrow \\ A_1 \\gamma_1^2 \\left( 1 - \\frac{v_1}{v_2} \\right) = A_1 - A_2 - P_1 + P_2 = \\varepsilon_1 - \\varepsilon_2 \\tag{6} \\end{align}\\] となります。 (4)式と(6)式の比をとりましょう。 すると . \\[\\frac{\\tfrac{A_1}{c^2} \\gamma_1^2 v_1 (v_1 - v_2)}{A_1 \\gamma_1^2 \\left( 1 - \\tfrac{v_1}{v_2} \\right)} = - \\frac{v_1 v_2}{c^2} = \\frac{P_2 - P_1}{\\varepsilon_1 - \\varepsilon_2} \\ \\Longrightarrow \\ v_2 = \\frac{P_1 - P_2}{(\\varepsilon_1 - \\varepsilon_2) v_1} c^2 \\tag{7}\\] のように、\\(v_1\\)を用いて\\(v_2\\)を表現することができます。 ここから . \\[v_1 - v_2 = v_1 - \\frac{P_1 - P_2}{(\\varepsilon_1 - \\varepsilon_2) v_1} c^2 = \\frac{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1} \\tag{8}\\] を(4)式に代入しましょう。 . \\[\\begin{aligned} &amp;\\frac{A_1}{c^2} \\gamma_1^2 v_1 \\frac{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1} = P_2 - P_1 \\ \\Longrightarrow \\ A_1 \\gamma_1^2 = \\frac{(P_2 - P_1)(\\varepsilon_1 - \\varepsilon_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1-P_2) c^2} \\notag \\\\ &amp;\\Longrightarrow \\ A_1 = \\frac{(P_2 - P_1)(\\varepsilon_1 - \\varepsilon_2) c^2}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1-P_2) c^2} \\left( 1 - \\frac{v_1^2}{c^2}\\right) = \\frac{(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2)}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \\notag \\\\ &amp; \\qquad \\qquad = \\frac{(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2)}{(\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2} \\end{aligned}\\] \\(A_1 = \\varepsilon_1 + P_1\\)であることを思い出すと . \\[\\begin{aligned} &amp;(P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) (c^2 - v_1^2) = (\\varepsilon_1 + P_1) \\{ (\\varepsilon_1 - \\varepsilon_2) v_1^2 - (P_1 - P_2) c^2 \\} \\notag \\\\ &amp;\\Longrightarrow \\ (P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) c^2 + (\\varepsilon_1 + P_1) (P_1 - P_2) c^2 = (\\varepsilon_1 + P_1) (\\varepsilon_1 - \\varepsilon_2) v_1^2 + (P_2 - P_1) (\\varepsilon_1 - \\varepsilon_2) v_1^2 \\notag \\\\ &amp;\\Longrightarrow \\ - (P_2 - P_1) (\\varepsilon_2 + P_1) c^2 = (\\varepsilon_1 - \\varepsilon_2) (\\varepsilon_1 + P_2) v_1^2 \\end{aligned}\\] 以上より . \\[\\frac{v_1^2}{c^2} = \\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)} \\ \\Longrightarrow \\ \\frac{v_1}{c} = \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\tag{9}\\] これを(7)の途中式に代入すると . \\[\\frac{v_2}{c} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\frac{c}{v_1} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}{(P_2 - P_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\tag{10}\\] を得ます。 これらから、上流と下流の速度の比と積がそれぞれ . \\[\\frac{v_1}{v_2} = \\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2} \\tag{11}\\] \\[\\frac{v_1 v_2}{c^2} = \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1} \\tag{12}\\] 対応するローレンツ因子も計算してみましょう。 . \\[\\begin{aligned} \\sqrt{1-\\frac{v_1^2}{c^2}} &amp;= \\sqrt{1 - \\frac{(P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2) - (P_2 - P_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 \\varepsilon_2 - \\varepsilon_1^2 - \\varepsilon_1P_2 - P_2 P_1 + P_1 \\varepsilon_2 + P_1^2 }{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 \\varepsilon_2 - \\varepsilon_1^2 - \\varepsilon_1P_2 - P_2 P_1 + P_1 \\varepsilon_2 + P_1^2 + \\varepsilon_1 P_1 - \\varepsilon_1 P_1}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_1 (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1 ) + P_1 (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} = \\sqrt{\\frac{(\\varepsilon_1 + P_1) (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}} \\end{aligned}\\] より . \\[\\gamma_1 = \\frac{1}{\\sqrt{1-\\frac{v_1^2}{c^2}}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}} \\tag{13}\\] です。 同様に . \\[\\begin{aligned} \\sqrt{1-\\frac{v_2^2}{c^2}} &amp;= \\sqrt{1 - \\frac{(P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1) - (P_2 - P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2^2 + \\varepsilon_2 P_1 - \\varepsilon_1 \\varepsilon_2 - P_2 \\varepsilon_1 - P_2^2 + P_1 P_2}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2^2 + \\varepsilon_2 P_1 - \\varepsilon_1 \\varepsilon_2 - P_2 \\varepsilon_1 - P_2^2 + P_1 P_2 + \\varepsilon_2 P_2 - \\varepsilon_2 P_2}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\varepsilon_2 ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1) + P_2 ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{(\\varepsilon_2 + P_2) ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}} \\end{aligned}\\] より . \\[\\gamma_2 = \\frac{1}{\\sqrt{1-\\frac{v_2^2}{c^2}}} = \\sqrt{\\frac{(\\varepsilon_2 - \\varepsilon_1) (\\varepsilon_2 + P_1)}{(\\varepsilon_2 + P_2) ( \\varepsilon_2 - \\varepsilon_1 - P_2 + P_1)}} \\tag{14}\\] と求まります。 上流と下流の流体の相対速度\\(v_\\mathrm{rel}\\)も計算してみましょう。 . \\[\\begin{align} \\frac{v_\\mathrm{rel}}{c} &amp;= \\frac{v_1 - v_2}{c \\left( 1 - \\frac{v_1 v_2}{c^2}\\right)} \\underbrace{=}_{(12)} \\left( \\frac{v_1}{c} - \\frac{v_2}{c} \\right) \\frac{1}{1 - \\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\notag \\\\ &amp;= \\sqrt{\\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\left( \\sqrt{\\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2}} - \\sqrt{\\frac{\\varepsilon_1 + P_2}{\\varepsilon_2 + P_1}}\\right) \\frac{\\varepsilon_2 - \\varepsilon_1}{\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1} \\notag \\\\ &amp;= \\sqrt{\\frac{P_2 - P_1}{\\varepsilon_2 - \\varepsilon_1}} \\frac{\\varepsilon_2 + P_1 - \\varepsilon_1 - P_2}{\\sqrt{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}} \\frac{\\varepsilon_2 - \\varepsilon_1}{\\varepsilon_2 - \\varepsilon_1 - P_2 + P_1} \\notag \\\\ &amp;= \\sqrt{\\frac{(P_2 - P_1) (\\varepsilon_2 - \\varepsilon_1)}{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}} \\tag{15} \\end{align}\\] また対応するローレンツ因子は . \\[\\gamma_\\mathrm{rel} = \\gamma_1 \\gamma_2 \\left( 1- \\frac{v_1 v_2}{c^2}\\right) \\underbrace{=}_{(12), (13), (14)} \\sqrt{\\frac{(\\varepsilon_1 + P_2) (\\varepsilon_2 + P_1)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 + P_2)}} \\tag{16}\\] のようになります。 これらから、速度の比は有限となり、衝撃波の強さを表す量として\\(\\varepsilon_2 / \\varepsilon_1\\)または\\(\\gamma_\\mathrm{rel}\\)を取るのが適当であることがわかります。 . 弱い衝撃波の極限では、\\(P_2 \\simeq P_1, \\varepsilon_2 \\simeq \\varepsilon_1\\)より . \\[(9) \\ \\Longrightarrow \\ \\frac{v_1}{c} \\approx \\sqrt{\\frac{\\Delta P}{\\Delta \\varepsilon}} \\approx \\sqrt{\\frac{dP}{d\\varepsilon}} = \\frac{c_s}{c} \\tag{17}\\] となります。 途中、\\(P_2 - P_1 = \\Delta P, \\varepsilon_2 - \\varepsilon_1 = \\Delta \\varepsilon\\)としました。 \\(v_2\\)においても同様に\\(c_s\\)となることから、弱い衝撃波極限では\\(v_1 = v_2 = c_s\\)になることがわかります。 すなわち、衝撃波は上流の速度が音速を超えた場合にのみ生じると言えます。 超相対論的極限では、状態方程式が\\(P = \\varepsilon / 3\\)となるため . \\[\\frac{v_1}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3}\\right)}{\\left( \\varepsilon_2 - \\varepsilon_1\\right) (\\varepsilon_1 + \\frac{\\varepsilon_2}{3})}} = \\sqrt{\\frac{3 \\varepsilon_2 + \\varepsilon_1}{3(3\\varepsilon_1 + \\varepsilon_2)}} \\tag{18}\\] \\[\\frac{v_2}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right)}{\\left( \\varepsilon_2 - \\varepsilon_1\\right) (\\varepsilon_2 + \\frac{\\varepsilon_1}{3})}} = \\sqrt{\\frac{3\\varepsilon_1 + \\varepsilon_2}{3(3\\varepsilon_2 + \\varepsilon_1)}} \\tag{19}\\] \\[\\frac{v_1}{v_2} = \\frac{3 \\varepsilon_2 + \\varepsilon_1}{3 \\varepsilon_1 + \\varepsilon_2} \\tag{20}\\] \\[\\frac{v_\\mathrm{rel}}{c} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{3} - \\frac{\\varepsilon_1}{3}\\right) (\\varepsilon_2 - \\varepsilon_1)}{\\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3}\\right)}} = \\frac{\\sqrt{3} (\\varepsilon_2 - \\varepsilon_1)}{\\sqrt{(3\\varepsilon_1 + \\varepsilon_2) (3\\varepsilon_2 + \\varepsilon_1)}} \\tag{21}\\] \\[\\gamma_\\mathrm{rel} = \\sqrt{\\frac{\\left( \\varepsilon_1 + \\frac{\\varepsilon_2}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_1}{3} \\right)}{\\left( \\varepsilon_1 + \\frac{\\varepsilon_1}{3}\\right) \\left( \\varepsilon_2 + \\frac{\\varepsilon_2}{3}\\right)}} = \\sqrt{\\frac{\\left(3 \\varepsilon_1 + \\varepsilon_2\\right) \\left( 3\\varepsilon_2 + \\varepsilon_1 \\right)}{16 \\varepsilon_1 \\varepsilon_2}} = \\frac{1}{4} \\sqrt{\\left( 3 + \\frac{\\varepsilon_2}{\\varepsilon_1}\\right) \\left( 3 + \\frac{\\varepsilon_1}{\\varepsilon_2}\\right)} \\tag{22}\\] のような関係式を得ます。 さらに強い衝撃波の極限\\(\\tfrac{\\varepsilon_2}{\\varepsilon_1} \\rightarrow \\infty\\)では、\\(v_1 \\rightarrow c, v_2 \\rightarrow \\tfrac{c}{3}, v_\\mathrm{rel} \\rightarrow c, \\gamma_\\mathrm{rel} \\rightarrow \\sqrt{\\frac{3\\varepsilon_2}{16\\varepsilon_1}}\\)となります。 逆に弱い衝撃波の極限\\(\\tfrac{\\varepsilon_2}{\\varepsilon_1} \\rightarrow 1\\)では、\\(v_1 \\rightarrow \\tfrac{c}{\\sqrt{3}}, v_2 \\rightarrow \\tfrac{c}{\\sqrt{3}}\\)のように、上流の下流も音速で運動していることがわかります。 一般の状態方程式には粒子数が入るため、保存する粒子数についての連続の式を考慮する必要があります。 粒子が生成・崩壊しないとすると . \\[n_1 \\gamma_1 v_1 = n_2 \\gamma_2 v_2 \\tag{23}\\] です。 (13), (14)式より . \\[\\frac{\\gamma_2}{\\gamma_1} = \\sqrt{\\frac{(\\varepsilon_2 + P_1) (\\varepsilon_1 + P_1)}{(\\varepsilon_2 + P_2) (\\varepsilon_1 + P_2)}} \\tag{24}\\] であることと、(11)式を用いれば . \\[\\frac{n_1}{n_2} = \\frac{\\gamma_2 v_2}{\\gamma_1 v_1} = \\sqrt{\\frac{(\\varepsilon_1 + P_1) (\\varepsilon_1 + P_2)}{(\\varepsilon_2 + P_2)(\\varepsilon_2 + P_1)}} \\ \\Longrightarrow \\ \\frac{(\\varepsilon_1 + P_1) (\\varepsilon_1 + P_2)}{n_1^2} = \\frac{(\\varepsilon_2 + P_2) (\\varepsilon_2 + P_1)}{n_2^2} \\tag{25}\\] を得ます。 特にこの式を、相対論的なランキン・ユゴニオの関係式と呼びます。 上流の物理量(添字1が付いたもの)が与えられたとき、(9)式から\\(\\varepsilon_2, P_2\\)の関係式が与えられます。 これに(25)式および状態方程式を合わせれば、\\(\\varepsilon_2, P_2, n_2\\)を求めることができます。 そうして得られたものを(10)式に代入すれば、下流の速度\\(v_2\\)が求められることになります。 一般的な場合は複雑で、数値的な取り扱いが必要となります。 そのため、\\(P_1 = 0, \\varepsilon_1 = n_1 mc^2\\)という、強い衝撃波の極限のみを考えてみましょう。 この場合のランキン・ユゴニオの関係式は . \\[\\frac{\\varepsilon_1(\\varepsilon_1 + P_2)}{n_1^2} = \\frac{\\varepsilon_2 (\\varepsilon_2 + P_2)}{n_2^2} \\tag{26}\\] のようになります。 また上流と下流の相対的なローレンツ因子は、(16)式より . \\[\\gamma_\\mathrm{rel} = \\sqrt{\\frac{\\varepsilon_2 (\\varepsilon_1 + P_2)}{\\varepsilon_1 (\\varepsilon_2 + P_2)}} \\ \\Longrightarrow \\ \\frac{\\varepsilon_1 + P_2}{\\varepsilon_2 + P_2} = \\gamma_\\mathrm{rel}^2 \\frac{\\varepsilon_1}{\\varepsilon_2} \\tag{27}\\] となることから . \\[\\frac{\\varepsilon_1}{n_1^2} = \\frac{\\varepsilon_2}{n_2^2} \\frac{1}{\\gamma_\\mathrm{rel}^2} \\frac{\\varepsilon_2}{\\varepsilon_1} \\ \\Longrightarrow \\ \\frac{\\varepsilon_2}{n_2} = \\gamma_\\mathrm{rel} \\frac{\\varepsilon_1}{n_1} = \\gamma_\\mathrm{rel} m c^2 \\tag{28}\\] を得ます。 これは、下流での1粒子辺の内部エネルギーが\\(\\gamma_\\mathrm{rel}\\)となることがわかります。 さらに状態方程式として . \\[P = (\\Gamma -1) (\\varepsilon - n mc^2) \\tag{29}\\] を用いることにすると . \\[\\frac{P_2}{n_2} = (\\Gamma - 1) \\left( \\frac{\\varepsilon_2}{n_2} - mc^2\\right) \\underbrace{=}_{(28)} (\\Gamma -1) (\\gamma_\\mathrm{rel} - 1) mc^2 \\tag{30}\\] (28), (30)式を(26)式に代入していきましょう。 . \\[\\frac{\\varepsilon_1}{n_1} \\left( \\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1}\\right) = \\frac{\\varepsilon_2}{n_2} \\left( \\frac{\\varepsilon_2}{n_2} + \\frac{P_2}{n_2} \\right)\\] \\[(左辺) = mc^2 \\left( mc^2 + \\frac{n_2}{n_1} \\frac{P_2}{n_2}\\right) = mc^2 \\left\\{ mc^2 + \\frac{n_2}{n_1} (\\Gamma - 1) (\\gamma_\\mathrm{rel}-1) mc^2 \\right\\}\\] \\[(右辺) = \\gamma_\\mathrm{rel} mc^2 \\{\\gamma_\\mathrm{rel} mc^2 + (\\Gamma - 1) (\\gamma_\\mathrm{rel} -1) mc^2\\}\\] より . \\[\\begin{align} \\frac{n_2}{n_1} &amp;= \\frac{\\gamma_\\mathrm{rel} \\{ \\gamma_\\mathrm{rel} + (\\Gamma - 1) (\\gamma_\\mathrm{rel} - 1) \\} - 1}{(\\Gamma -1)(\\gamma_\\mathrm{rel} - 1)} = \\frac{\\gamma_\\mathrm{rel}^2 + \\gamma_\\mathrm{rel} (\\Gamma -1) (\\gamma_\\mathrm{rel} -1) -1}{(\\Gamma -1) (\\gamma_\\mathrm{rel}-1)} \\notag \\\\ &amp;= \\frac{(\\gamma_\\mathrm{rel} -1) \\{(\\gamma_\\mathrm{rel}+1) + \\gamma_\\mathrm{rel} (\\Gamma -1)\\}}{(\\Gamma -1) (\\gamma_\\mathrm{rel}-1)} = \\frac{\\gamma_\\mathrm{rel} \\Gamma +1}{\\Gamma -1} \\tag{31} \\end{align}\\] と求めることができます。 この比は\\(\\gamma_\\mathrm{rel} \\gg 1\\)のとき、\\(\\gamma_\\mathrm{rel}\\)に比例して大きくなることがわかります。 しかし、速度の比は . \\[\\begin{align} \\frac{v_1}{v_2} &amp;\\underbrace{=}_{(11)} \\frac{\\varepsilon_2 + P_1}{\\varepsilon_1 + P_2} = \\frac{\\frac{\\varepsilon_2}{n_1}}{\\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1}} = \\frac{\\frac{n_2}{n_1} \\frac{\\varepsilon_2}{n_2}}{mc^2 + \\frac{n_2}{n_1}\\frac{P_2}{n_2}} = \\frac{\\frac{\\gamma_\\mathrm{rel} \\Gamma + 1}{\\Gamma -1} \\gamma_\\mathrm{rel} mc^2}{mc^2 + \\frac{\\gamma_\\mathrm{rel} \\Gamma +1}{\\Gamma-1} (\\Gamma-1) (\\gamma_\\mathrm{rel} -1) mc^2} \\notag \\\\ &amp;= \\frac{\\gamma_\\mathrm{rel} \\Gamma + 1}{(\\Gamma - 1) (\\gamma_\\mathrm{rel} \\Gamma - \\Gamma + 1)} \\tag{32} \\end{align}\\] であり、また . \\[\\begin{align} \\frac{\\gamma_1}{\\gamma_2} &amp;\\underbrace{=}_{(24)} \\sqrt{\\frac{(\\varepsilon_2 + P_2) (\\varepsilon_1 + P_2)}{(\\varepsilon_1 + P_1) (\\varepsilon_2 + P_1)}} = \\sqrt{\\frac{\\left( \\frac{\\varepsilon_2}{n_1} + \\frac{P_2}{n_1} \\right) \\left( \\frac{\\varepsilon_1}{n_1} + \\frac{P_2}{n_1} \\right)}{ \\frac{\\varepsilon_1}{n_1} \\frac{\\varepsilon_2}{n_1}}} = \\sqrt{\\frac{\\frac{n_2}{n_1} \\left( \\frac{\\varepsilon_2}{n_2} + \\frac{P_2}{n_2}\\right) \\left( mc^2 + \\frac{n_2}{n_1} \\frac{P_2}{n_2}\\right)}{ mc^2 \\frac{n_2}{n_1} \\frac{\\varepsilon_2}{n_2}}} \\notag \\\\ &amp;= \\sqrt{\\frac{\\{\\gamma_\\mathrm{rel} mc^2 + (\\Gamma -1)(\\gamma_\\mathrm{rel} -1) mc^2\\} \\{ mc^2 + (\\gamma_\\mathrm{rel} \\Gamma + 1)(\\gamma_\\mathrm{rel} -1) mc^2\\} }{\\gamma_\\mathrm{rel} m^2 c^4}} \\notag \\\\ &amp;= \\sqrt{\\frac{ \\gamma_\\mathrm{rel} (\\gamma_\\mathrm{rel} \\Gamma - \\Gamma +1)^2}{\\gamma_\\mathrm{rel}}} = \\gamma_\\mathrm{rel} \\Gamma - \\Gamma + 1 \\tag{33} \\end{align}\\] のように整理されます。 ここからわかるように、衝撃波静止系で見た数密度の比\\(\\frac{n_2 \\gamma_2}{n_1 \\gamma_1} = \\frac{v_1}{v_2}\\)はそれほど大きくならないことがわかります。 また\\(\\gamma_1\\)と\\(\\gamma_\\mathrm{rel}\\)の関係式は . \\[\\gamma_1^2 = \\frac{(\\gamma_\\mathrm{rel} + 1) \\{\\Gamma (\\gamma_\\mathrm{rel} -1) + 1\\}^2}{\\Gamma (2-\\Gamma) (\\gamma_\\mathrm{rel}-1) + 2} \\tag{34}\\] となります。 . ",
+    "url": "/rmhd/shock#%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E3%81%AA%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%83%A6%E3%82%B4%E3%83%8B%E3%82%AA%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F%E3%81%AE%E5%B0%8E%E5%87%BA",
+    
+    "relUrl": "/rmhd/shock#相対論的なランキンユゴニオの関係式の導出"
+  },"2010": {
+    "doc": "相対論的衝撃波",
+    "title": "無衝突衝撃波について",
+    "content": "衝撃波は、衝撃波面の薄い領域で粘性による散逸が起こることによる構造です。 宇宙物理など多くの場合では、媒質は中性流体ではなく、電離したプラズマです。 しかも、粒子どうしの衝突が頻繁には起こらない無衝突プラズマであることが知られています。 このときには、粒子間の相互作用は電磁場を媒介として起こるとされています。 2つの無衝突プラズマを超音速で衝突させると、2つのプラズマはお互いにすり抜けようとしますが、この状態は電磁場の不安定モードを強く励起します。 このようにして励起されたプラズマ波動により荷電粒子の機動が乱され、衝撃波構造を形成します。 これを無衝突衝撃波と呼びます。 無衝突衝撃波が実際に生じることは、非相対論的な場合ですが、太陽風が地球磁気圏に衝突して形成する弓状衝撃波や超新星残骸など多くの天体で観測されています。 またガンマ線バーストでは、相対論的な衝撃波が生じていると考えられています。 多くの場合、プラズマ中に磁場が存在していますが、たとえもともとのプラズマが磁場を含んでいなくとも、ワイベル不安定性により自発的に磁場が生成され、衝撃波構造を形成できると考えられています。 無衝突衝撃波の構造は流体のスケールで見れば十分小さいため、衝撃波の十分下流で熱平衡状態になるとすると、上流と下流の物理量の関係は、ここまで考えてきたような流体力学的なもので記述できるはずです。 しかし、無衝突衝撃波は散逸の過程は流体力学的な粘性散逸ではないため、そこでは高エネルギーの非熱的粒子の加速などの現象が起こります。 この効果は流体力学では記述できないため、衝撃波の構造なども修正が必要となります。 この研究テーマは、現代の宇宙物理学およびプラズマ物理学の最先端の研究課題の一つとなっています。 . ",
+    "url": "/rmhd/shock#%E7%84%A1%E8%A1%9D%E7%AA%81%E8%A1%9D%E6%92%83%E6%B3%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+    
+    "relUrl": "/rmhd/shock#無衝突衝撃波について"
+  },"2011": {
+    "doc": "相対論的衝撃波",
+    "title": "参考文献",
+    "content": "[1] Rezzolla &amp; Zanotti, “Relativistic Hydrodynamics” [2] 北島 歓大, 2025, “相対論的流体力学の粒子法的数値計算法の開発及び高速噴流の解析” [3] 田中 秀和, “宇宙流体力学” [4] 高原文郎, “特殊相対論” . ",
+    "url": "/rmhd/shock#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    
+    "relUrl": "/rmhd/shock#参考文献"
+  },"2012": {
+    "doc": "相対論的衝撃波",
+    "title": "相対論的衝撃波",
+    "content": ". | 相対論的衝撃波 . | 相対論的なランキン・ユゴニオの関係式の導出 | 無衝突衝撃波について | 参考文献 | . | . ",
+    "url": "/rmhd/shock",
+    
+    "relUrl": "/rmhd/shock"
   },"2013": {
     "doc": "数値計算",
     "title": "数値計算 (Numerical simulation)",
@@ -17646,426 +17646,475 @@
     
     "relUrl": "/gr/weakfield"
   },"2521": {
+    "doc": "ワイベル不安定性",
+    "title": "ワイベル不安定性",
+    "content": "この不安定性は、Weibel (1959) で提案されました。 磁場のないプラズマにおいて、粒子の速度分布が異方性を持つ場合、その異方性をエネルギー源として起こる不安定性です。 ワイベル不安定性は、電磁モード (横波モード) の不安定性であり、速度分散が大きな方向の電流密度のゆらぎが指数関数的に増大します。 以降では、このワイベル不安定性の導出と、その物理的な意味についてみていきましょう。 . ",
+    "url": "/plasma/weibel_instability#%E3%83%AF%E3%82%A4%E3%83%99%E3%83%AB%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7",
+    
+    "relUrl": "/plasma/weibel_instability#ワイベル不安定性"
+  },"2522": {
+    "doc": "ワイベル不安定性",
+    "title": "ワイベル不安定性が起こる条件",
+    "content": "先ほど述べた通り、磁場のないプラズマを考えましょう。 ただし、ここではイオンは電子より質量が十分大きく、動かない背景とします。 すなわち、以降では電子のみを考え、その速度分布関数は . \\[f_0 = n_0 F_\\perp (v_x) F_\\perp (v_y) F_\\parallel (v_z), \\qquad \\left( F_\\perp (v) \\equiv \\frac{1}{\\sqrt{\\pi} v_\\perp} e^{-v^2 / v_\\perp^2}, F_\\parallel (v) \\equiv \\frac{1}{\\sqrt{\\pi} v_\\parallel} e^{-v^2 / v_\\parallel^2} \\right) \\tag{1}\\] のように、温度に非等方性があるようなマクスウェル・ボルツマン分布関数を考えます。 この場合、\\(x, y\\) 方向と \\(z\\) 方向で、温度が異なっていることになります。 \\(v_\\perp, v_\\parallel\\) はそれぞれの方向の熱速度であり . \\[v_\\perp^2 = \\frac{2 k_B T_\\perp}{m_e}, \\quad v_\\parallel^2 = \\frac{2 k_B T_\\parallel}{m_e} \\tag{2}\\] で与えられます。 今、平衡状態に摂動が加わったとします。 この摂動は \\(\\mathbf{k} = k \\mathbf{e}_z\\) のように、\\(z\\) 方向に伝播する摂動とします。 すなわち、\\(v_\\parallel\\) は摂動に平行な方向の熱速度であり、\\(v_\\perp\\) はそれに垂直な方向の熱速度です。 またこのとき、電磁場に対しては \\(\\mathbf{E}_1 = E_{1x} e^{-i(\\omega t - kz)}\\mathbf{e}_x, \\mathbf{B}_1 = B_{1y} e^{-i(\\omega t - kz)} \\mathbf{e}_y\\) のように、横波の摂動が加わったとします。 ファラデーの法則は . \\[\\nabla \\times \\mathbf{E} = - \\frac{1}{c} \\frac{\\partial \\mathbf{B}}{\\partial t} \\ \\Longrightarrow \\ i k E_{1x} = \\frac{i \\omega}{c} B_{1y} \\ \\Longrightarrow \\ B_{1y} = \\frac{ck}{\\omega} E_{1x} \\tag{3}\\] のように線形化されます。 分布関数の摂動量 \\(f_1\\) も \\(e^{-i(\\omega t - kz)}\\) に比例する形であるとすると、ブラソフ方程式を線形化したものは . \\[-i \\omega f_1 + i v_z k f_1 - \\frac{e}{m_e} \\left( \\mathbf{E}_1 + \\frac{\\mathbf{v}}{c} \\times \\mathbf{B}_1 \\right) \\cdot \\frac{\\partial f_0}{\\partial \\mathbf{v}} = 0 \\tag{4}\\] のようになります。 . \\[\\mathbf{v} \\times \\mathbf{B}_1 = (v_x \\mathbf{e}_x + v_y \\mathbf{e}_y + v_z \\mathbf{e}_z) \\times \\mathbf{B}_1 = (- v_z B_{1y} \\mathbf{e}_x + v_x B_{1y} \\mathbf{e}_z) e^{-i(\\omega t - kz)} \\tag{5}\\] より、(4) 式は . \\[-i (\\omega - v_z k) f_1 = \\frac{e}{m_e} \\left\\{ \\left( E_{1x} - \\frac{v_z B_{1y}}{c}\\right) \\frac{\\partial f_0}{\\partial v_x} + \\frac{v_x B_{1y}}{c} \\frac{\\partial f_0}{\\partial z} \\right\\} \\tag{6}\\] のようになります。 分布関数の速度微分がそれぞれ . \\[\\frac{\\partial f_0}{\\partial v_x} = - \\frac{2 v_x}{v_\\perp^2} f_0, \\quad \\frac{\\partial v_0}{\\partial v_z} = - \\frac{2 v_z}{v_\\parallel^2} f_0 \\tag{7}\\] のように計算されるため、これを (6) 式に代入すると . \\[\\begin{align} -i (\\omega - v_z k) f_1 &amp;= \\frac{e}{m_e} \\left\\{ \\left( E_{1x} - \\frac{v_z B_{1y}}{c}\\right) \\left( - \\frac{2 v_x}{v_\\perp^2} f_0 \\right) + \\frac{v_x B_{1y}}{c} \\left( - \\frac{2 v_z}{v_\\parallel^2} f_0\\right) \\right\\} \\notag \\\\ &amp;= - \\frac{2 e v_x f_0}{m_e v_\\perp^2} \\left\\{ E_{1x} + \\frac{v_z B_{1y}}{c} \\left( \\frac{v_\\perp^2 }{v_\\parallel^2} -1 \\right) \\right\\} \\notag \\\\ &amp;\\underbrace{=}_{(3)} - \\frac{2 e v_x f_0 E_{1x}}{m_e v_\\perp^2} \\left\\{ 1 + \\frac{v_z k}{\\omega} \\left( \\frac{v_\\perp^2 }{v_\\parallel^2} -1 \\right) \\right\\}\\tag{8} \\end{align}\\] のようになります。 温度の非等方性を表すパラメータとして . \\[A \\equiv \\frac{T_\\perp}{T_\\parallel} - 1 \\underbrace{=}_{(2)} \\frac{v_\\perp^2}{v_\\parallel^2} - 1 \\tag{9}\\] を用いると、速度分布関数の摂動量 \\(f_1\\) が . \\[-i (\\omega - v_z k) f_1 = - \\frac{2 e v_x f_0 E_{1x}}{m_e v_\\perp^2} \\left( 1 + \\frac{v_z k}{\\omega}A \\right) \\ \\Longrightarrow \\ f_1 = - \\frac{2ie v_x f_0 E_{1x}}{m_e v_\\perp^2} \\frac{1 + \\frac{k v_z}{\\omega} A}{\\omega - kv_z} \\tag{10}\\] のようになります。 これを用いると、\\(x\\) 方向の電流密度 \\(j_{1x}\\) は . \\[j_{1x} = -e \\iiint v_x f_1 d^3 \\mathbf{v} = \\frac{2 i e^2 E_{1x}}{m_e v_\\perp^2} \\iiint v_x^2 f_0 \\frac{1 + \\frac{k v_z}{\\omega} A}{\\omega - k v_z} d^3 \\mathbf{v} \\tag{11}\\] のように書けます。 . \\[\\int_{-\\infty}^\\infty v_x^2 F_\\perp (v_x) dv_x = \\frac{v_\\perp^2}{2}, \\quad \\int_{-\\infty}^\\infty F_\\perp (v_y) dv_y = 1 \\tag{12}\\] であることを用いると、(11) 式の積分は . \\[j_{1x} = \\frac{i n_0 e^2 E_{1x}}{m_e} \\int_{-\\infty}^\\infty F_\\parallel (v_z) \\frac{1 + \\frac{k v_z}{\\omega} A}{\\omega - kv_z} dv_z \\tag{13}\\] となります。 . \\[1 + \\frac{kv_z}{\\omega} A = 1 + A - A + \\frac{kv_z}{\\omega} A = 1 + A - \\frac{\\omega - k v_z}{\\omega} A \\tag{14}\\] のように式変形を行うと、(13) 式の積分は . \\[\\begin{align} \\int_{-\\infty}^\\infty F_\\parallel (v_z) \\frac{1 + \\frac{k v_z}{\\omega} A}{\\omega - kv_z} dv_z &amp;= \\int_{-\\infty}^\\infty F_\\parallel (v_z) \\frac{1}{\\omega - kv_z} \\left( 1 + A - \\frac{\\omega - k v_z}{\\omega} A \\right) dv_z \\notag \\\\ &amp;= (1 + A) \\int_{-\\infty}^\\infty \\frac{F_\\parallel (v_z)}{\\omega - kv_z} dv_z - \\frac{A}{\\omega} \\int_{-\\infty}^\\infty F_\\parallel (v_z) dv_z \\notag \\\\ &amp;= (1 + A) \\int_{-\\infty}^\\infty \\frac{F_\\parallel (v_z)}{\\omega - kv_z} dv_z - \\frac{A}{\\omega} \\tag{15} \\end{align}\\] のようになります。 第一項は . \\[\\begin{align} \\int_{-\\infty}^\\infty \\frac{F_\\parallel (v_z)}{\\omega - kv_z} dv_z &amp;\\underbrace{=}_{(1)} \\frac{1}{\\sqrt{\\pi} v_\\parallel} \\int_{-\\infty}^\\infty \\frac{e^{-v_z^2 / v_\\parallel^2}}{\\omega - kv_z} \\underbrace{=}_{t = v_z / v_\\parallel} \\frac{1}{\\sqrt{\\pi}} \\int_{-\\infty}^\\infty \\frac{e^{-t^2}}{\\omega - k v_\\parallel t} dt \\notag \\\\ &amp;\\underbrace{=}_{\\zeta = \\omega / kv_\\parallel} - \\frac{1}{\\sqrt{\\pi} k v_\\parallel} \\int_{-\\infty}^\\infty \\frac{e^{-t^2}}{t - \\zeta} dt = - \\frac{\\zeta}{\\omega} Z(\\zeta) \\tag{16} \\end{align}\\] のように整理されます。 途中、プラズマ分散関数 \\(Z (\\zeta)\\) を用いました。 以上から、電流密度が . \\[j_{1x} = - \\frac{i n_0 e^2 E_{1x}}{m_e \\omega} \\{ (1 + A) \\zeta Z(\\zeta) + A \\} = - \\frac{i\\omega_{pe}^2 E_{1x}}{4\\pi \\omega} \\{ (1 + A) \\zeta Z(\\zeta) + A \\} \\tag{17}\\] のように求まります。 今、興味があるのは、成長するモードです。 よって、プラズマ分散関数の積分において \\(\\mathrm{Im} (\\omega) &gt; 0\\) を考えているため、\\(Z(\\zeta)\\) の定義の積分をそのまま用いることができます。 また誘電率と電流密度は、電気伝導度 \\(\\sigma\\) を用いて . \\[\\varepsilon_\\mathrm{T} = 1 + \\frac{4\\pi i \\sigma}{\\omega}, \\quad j_{1x} = \\sigma E_{1x} \\tag{18}\\] の関係にあることから . \\[\\varepsilon_\\mathrm{T} = 1 + \\frac{\\omega_{pe}^2}{\\omega^2} \\{ (1 + A) \\zeta Z(\\zeta) + A \\} \\tag{19}\\] のように、横誘電率を求めることができます。 横波の分散関係式 \\(k^2 c^2 = \\omega^2 \\varepsilon_\\mathrm{T}\\) より . \\[\\omega^2 - k^2 c^2 + \\omega_{pe}^2 \\{(1+A) \\zeta Z(\\zeta) + A\\} = 0 \\tag{20}\\] を解けばよいことがわかります。 この式は、\\(\\zeta = \\frac{\\omega}{k v_\\parallel}\\) のようにプラズマ分散関数も \\(\\omega\\) に依存しているため、解析的に解くことができません。 そこで \\(\\omega = i \\gamma \\ (\\gamma &gt; 0)\\) のように、純成長解を仮定して求めることにしましょう。 そして \\(s = \\frac{\\gamma}{kv_\\parallel}\\) のようにおくと \\(\\zeta = \\frac{i \\gamma}{k v_\\parallel} = is\\) のようになることから、プラズマ分散関数の公式 \\(Z(is) = i \\sqrt{\\pi} \\mathrm{erfcx} (s)\\) を用いることができます。 以上から . \\[\\gamma^2 + k^2 c^2 = \\omega_{pe}^2 \\{A - (1+A) G(s)\\}, \\quad G(s) \\equiv \\sqrt{\\pi} s \\cdot \\mathrm{erfcx} (s) \\tag{21}\\] のように、実数の方程式にすることができました。 ここで、\\(\\mathrm{erfcx}\\) はスケール化された相補誤差関数です。 \\(\\mathrm{erfcx}(0) = 1\\) であり、さらに \\(s \\rightarrow \\infty\\) では \\(\\mathrm{erfcx} \\rightarrow \\frac{1}{\\sqrt{\\pi} s}\\) であることから、\\(G(s)\\) は \\(G(0) = 0, G(\\infty) = 1\\) まで単調増加するような関数です。 すると、\\(s\\) が \\(0 \\rightarrow \\infty\\) のように変化するとき、(21) 式の右辺は \\(\\omega_{pe}^2 A \\rightarrow - \\omega_{pe}^2\\) のように変化します。 左辺 \\(\\gamma^2 + k^2 c^2\\) は必ずゼロ以上の値であるため、実数解が存在するには \\(\\omega_{pe}^2 A\\) が正の領域が存在する必要があります。 すなわち \\(A &gt; 0\\) でなければなりません。 \\(A\\) の定義式 (9) より、\\(T_\\perp &gt; T_\\parallel\\) が、不安定性が起こる条件であることがわかります。 \\(A = 0\\) の場合、これは \\(T_\\perp = T_\\parallel\\) のように、温度が等方的に分布していることを表します。 この式からも、温度異方性が不安定性を駆動するエネルギー源となっていることがわかります。 波数の条件についても求めてみましょう。 これまでの議論から、不安定性が起こる \\(A &gt; 0\\) において、(21) 式の右辺は \\(\\gamma\\) の単調減少関数なのでした。 そして左辺は \\(\\gamma\\) の単調増加関数です。 これらが解を持つ (すなわち左辺の関数と右辺の関数が交点を持つ) ためには、\\(\\gamma = 0\\) で左辺が右辺より小さくなければなりません。 よって \\(\\gamma = 0\\) のときから . \\[k^2 c^2 &lt; A \\omega_{pe}^2 \\ \\Longrightarrow \\ k &lt; k_\\mathrm{max} = \\frac{\\sqrt{A} \\omega_{pe}}{c} \\tag{22}\\] のように条件が求まります。 ある波数 \\(k_\\mathrm{max}\\) よりも波数が小さい (すなわち波長が長い) と、不安定性が起こることがわかります。 . ",
+    "url": "/plasma/weibel_instability#%E3%83%AF%E3%82%A4%E3%83%99%E3%83%AB%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7%E3%81%8C%E8%B5%B7%E3%81%93%E3%82%8B%E6%9D%A1%E4%BB%B6",
+    
+    "relUrl": "/plasma/weibel_instability#ワイベル不安定性が起こる条件"
+  },"2523": {
+    "doc": "ワイベル不安定性",
+    "title": "成長率",
+    "content": "先ほどの議論から、\\(s \\gg 1 \\ (\\gamma \\gg k v_\\parallel)\\) では不安定性が起こりません。 よって、ここでは \\(s \\ll 1 \\ (\\gamma \\ll k v_\\parallel)\\) の場合に、その成長率を求めてみましょう。 このとき、\\(\\mathrm{erfcs} (s) \\sim 1\\) より、\\(G(s) \\approx \\sqrt{\\pi} s\\) です。 以上から . \\[k^2 c^2 \\approx \\omega_{pe}^2 \\left\\{ A - (1 + A) \\sqrt{\\pi} \\frac{\\gamma}{k v_\\parallel} \\right\\} \\ \\Longrightarrow \\ \\gamma (k) \\approx \\frac{k v_\\parallel}{\\sqrt{\\pi}} \\frac{A - \\frac{k^2 c^2}{\\omega_{pe}^2}}{1 + A} \\tag{23}\\] であり、さらに \\(A\\) の定義式 (9) から . \\[\\frac{1}{1 + A} = \\frac{T_\\parallel}{T_\\perp} \\tag{24}\\] を用いれば . \\[\\gamma (k) \\approx \\frac{k v_\\parallel}{\\sqrt{\\pi}} \\frac{T_\\parallel}{T_\\perp} \\left\\{ \\left( \\frac{T_\\perp}{T_\\parallel} -1 \\right) - \\frac{k^2 c^2}{\\omega_{pe}^2} \\right\\} \\tag{25}\\] のように書くこともできます。 このような近似を行った場合、(24) 式の右辺が正 (不安定性が成長する) となるためには . \\[\\frac{T_\\perp}{T_\\parallel} \\geq 1 + \\frac{k^2 c^2}{\\omega_{pe}^2} \\tag{26}\\] の条件を満たす必要があります。 \\(\\gamma \\ll k v_\\parallel\\) の近似を行ったため、先ほどの議論で得た \\(T_\\perp / T_\\parallel &gt; 1\\) とは異なります。 しかしここでも、\\(k\\) が小さいほど (すなわち波長が長いほど) 不安定性が起こりやすいという結果に変わりはありません。 (22) 式を \\(k\\) で微分し、\\(\\gamma (k)\\) が最大となる波数と、最大成長率を求めてみましょう。 . \\[\\begin{align} &amp;\\frac{d\\gamma}{dk} \\approx \\frac{v_\\parallel}{\\sqrt{\\pi} (1+A)} \\left\\{ A - \\frac{k^2 c^2}{\\omega_{pe}^2} + k \\left( A - \\frac{2k c^2}{\\omega_{pe}^2}\\right) \\right\\} = \\frac{v_\\parallel}{\\sqrt{\\pi} (1+A)} \\left( A - \\frac{3k^2 c^2}{\\omega_{pe}^2}\\right) = 0 \\notag \\\\ &amp;\\Longrightarrow \\ k^\\ast = \\frac{\\sqrt{A} \\omega_{pe}}{\\sqrt{3} c} \\underbrace{=}_{(22)} \\frac{k_\\mathrm{max}}{\\sqrt{3}} \\tag{27} \\end{align}\\] よって . \\[\\gamma (k^\\ast) \\approx \\frac{2}{3 \\sqrt{3\\pi}} \\frac{A^{3/2}}{1 + A} \\frac{v_\\parallel \\omega_{pe}}{c} \\tag{28}\\] のように、最大成長率も計算できます。 . ",
+    "url": "/plasma/weibel_instability#%E6%88%90%E9%95%B7%E7%8E%87",
+    
+    "relUrl": "/plasma/weibel_instability#成長率"
+  },"2524": {
+    "doc": "ワイベル不安定性",
+    "title": "直感的な理解",
+    "content": "ワイベル不安定性は、次のように直感的に解釈することができます。 ここでも、波動の伝播方向を \\(z\\) 方向としましょう。 このとき、磁場は \\(y\\) 成分しか持たず そして \\(z\\) 方向は冷たい極限を考え、\\(v_\\parallel = 0\\) として、\\(z\\) 方向に電子は運動していないものとします。 この状況を整理すると、下図左パネルのようになります。 . 左パネル: \\(z\\) 方向に伝播する摂動中を、電子 (黒丸) が運動する様子。 磁場が存在しなければ電子は破線矢印のように運動するが、摂動磁場 \\(\\mathbf{B}_1\\) により、電子の軌道が曲げられる。 右パネル: 電子の運動により生まれる電流を、マゼンダ矢印で表したもの。 . ここでは、紙面垂直に我々から遠ざかる方向の磁場 (\\(\\otimes\\)) 付近にいる電子を A, B, G, H とし、紙面垂直に我々に近づく方向の磁場 (\\(\\odot\\)) 付近にいる電子を C, D, E, F としましょう。 これら電子のうち、B, D は、磁場のローレンツ力により \\(\\otimes\\) 磁場と \\(\\odot\\) 磁場の中間の位置に集まるような運動をすることがわかります。 この中間位置に右向きに運動する電子が集められることから、右パネルのように左向きの電流が発生することがわかります。 左向きの電流は、摂動磁場 \\(\\mathbf{B}_1\\) と同じ方向に磁場を生み出すため、摂動磁場を強め、ゆらぎが成長していきます。 同様に、E, G は \\(\\odot\\) 磁場と \\(\\otimes\\) 磁場の中間位置に集まります。 この中間位置には左向きに運動する電子が集められることから、右向きの電流が生まれ、これが先ほど同じく摂動磁場を強めます。 C, F の電子は \\(\\odot\\) の向きを持つ摂動磁場の位置に集められますが、これらは左右の向きが反対であるため、正味の電流は生み出しません。 このようにして、電流が生み出され、磁場がない状態から磁場を成長させていきます。 今度は逆に \\(x\\) 方向に冷たい極限を考え、\\(v_\\perp = 0\\) として、電子が \\(z\\) 方向のみ運動している場合を考えましょう。 . 左パネル: 先ほどと同じ図だが、電子の運動が \\(z\\) 方向になっている場合を示したもの。 右パネル: 電子の運動により生まれる電流。先ほどとは向きが逆になっていることに注意。 . 上図左パネルの電子のうち、B, C は \\(\\otimes\\) 磁場と \\(\\odot\\) 磁場の中間の位置に集まるような運動をします。 軌道が曲げられることで、B, C の電子の運動は左向きとなり、結果として生まれる電流は右向きとなります。 するとこの電流が生み出す磁場は、初期に与えられた摂動磁場 \\(\\mathbf{B}_1\\) と逆向きとなります。 摂動磁場を打ち消す方向に磁場が生成されるため、摂動磁場は減衰していきます。 F, G, の電子についても同様に、摂動磁場を打ち消す方向の電流を生み出します。 ここまで見てきたように、摂動に垂直な方向の温度が大きい (熱速度が大きい) と摂動が成長し、摂動に平行な方向の温度が大きいと摂動が減衰します。 これは、成長率を求めた先ほどまでの定量的な議論と一致します。 . ",
+    "url": "/plasma/weibel_instability#%E7%9B%B4%E6%84%9F%E7%9A%84%E3%81%AA%E7%90%86%E8%A7%A3",
+    
+    "relUrl": "/plasma/weibel_instability#直感的な理解"
+  },"2525": {
+    "doc": "ワイベル不安定性",
+    "title": "ワイベル不安定性の応用例",
+    "content": "ここでは、ワイベル不安定性が重要な働きをすると考えられている物理現象についてみていきましょう。 . ガンマ線バースト (GRB) での衝撃波 . ワイベル不安定性は、温度の非等方性が存在する場合に発生するのでした。 このような非等方性は、プラズマどうしが激しくぶつかる場所で、自然に発生します。 このような理由から、プラズマどうしが激しく衝突を起こす衝撃波部分では、ワイベル不安定性が発生し、強い磁場が生成するとされています。 ガンマ線バースト (GRB) は、恒星進化の最終段階でのブラックホール形成やコンパクト天体同士の合体に付随するジェットからのガンマ線が観測されていると考えられています。 そしてそのジェットが作る衝撃波が星間磁場を圧縮し、強いシンクロトロン放射が生まれると考えられてきました。 しかし星間磁場を圧縮しただけでは、GRB の残光を説明できるほどのシンクロトロン放射が生まれないという問題が指摘されてきました。 そこで Medvedev &amp; Loeb (1999) では GRB の残光から来る放射を、ワイベル不安定性で生成される磁場で説明しました。 さらに Medvedev (2000) では、ワイベル不安定性により生成された乱流磁場中を超相対論的な電子が通過することで、ジッター放射 と呼ばれる違う放射になることを示しました。 しかし、一様媒質中を伝播する相対論的無衝突衝撃波で発生するワイベル不安定性では、増幅された磁場はすぐに減衰することがわかっており、衝撃波下流の広い放射領域を占めることができないことも指摘されています (Spitkovsky (2007))。 これに対し、Tomita et al. (2019) は、非一様な媒質中であれば減衰が穏やかになりうることを示しました。 . Tomita et al. (2019) より、PIC シミュレーションによる結果。 左カラムは一様媒質の結果、中央カラムと右カラムは非一様媒質の結果を示したもの。 特に中央カラムでは、下流領域に強い磁場が見られる。 . GRB の放射機構は未知の部分が多く残っていますが、着実にその理解が進みつつあります。 . 無衝突衝撃波と粒子加速 . 衝撃波では粒子どうしの衝突・散乱による散逸過程が必要となりますが、無衝突プラズマではこれが起こりません。 無衝突プラズマ中で発生する無衝突衝撃波では、電磁場がプラズマ粒子を減速・等方化する役割を果たします。 ここまで議論してきたワイベル不安定性が、乱流的な磁場を生成し、これが無衝突衝撃波の散逸を担います。 さらに、ワイベル不安定性で生まれた乱流磁場により、粒子が衝撃波面の前後に散乱されます。 これにより、フェルミ加速を考えたときの状況設定が成り立ちます。 . 宇宙磁場生成・増幅機構としてのワイベル不安定性 . 銀河団や銀河間空間の磁場がどのようにして生まれ、増幅されてきたかは、大きな問題となっています。 これまでの研究では、宇宙に種磁場の存在を仮定することで、これが銀河形成などのダイナモ機構によって増幅されるというシナリオが考えられてきました (Marinacci et al. (2015))。 しかし、種磁場自体はどのように生まれたかについては、議論の余地がありました。 そこで Zhou et al. (2024) では、プラズマの PIC シミュレーションを用い、種磁場生成から増幅に至るまでの一連の過程を示しました。 磁場のない弱衝突プラズマで乱流のような大局的な運動が起こると、それが位相混合を生じさせ、結果として熱的な圧力の異方性が発達します。 この異方性がワイベル不安定性を誘発し、プラズマ運動論スケールの種磁場を生成します。 これによりプラズマが磁化し、ミラー不安定性やファイヤーホース不安定性などのラーモア半径スケールの不安定性の発生を可能にします。 最終的には、その後に発生する乱流ダイナモが、磁場を等分配程度まで増幅することができるとしました。 大規模な乱流により、初期に磁場を持たないプラズマ中において、エネルギー等分配程度の磁場が生成しうることを示したのです。 . Zhou et al. (2024) より、磁場の強度分布を示したもの。 左から順にワイベル不安定性による成長がピークに達したとき、そこからさらに流体の典型的な時間スケールが経過したとき、そしてダイナモが頭打ちになった状態。 . ",
+    "url": "/plasma/weibel_instability#%E3%83%AF%E3%82%A4%E3%83%99%E3%83%AB%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7%E3%81%AE%E5%BF%9C%E7%94%A8%E4%BE%8B",
+    
+    "relUrl": "/plasma/weibel_instability#ワイベル不安定性の応用例"
+  },"2526": {
+    "doc": "ワイベル不安定性",
+    "title": "参考文献",
+    "content": "[1] Krall, N. A., &amp; Trivelpiece, A. W. 1973, Principles of Plasma Physics (McGraw-Hill) [2] Marinacci, F., Vogelsberger, M., Mocz, P., &amp; Pakmor, R. 2015, MNRAS, 453, 3999, doi: 10.1093/mnras/stv1692 [3] Medvedev, M. V. 2000, ApJ, 540, 704, doi: 10.1086/309374 [4] Medvedev, M. V., &amp; Loeb, A. 1999, ApJ, 526, 697, doi: 10.1086/308038 [5] Okabe, N., &amp; Hattori, M. 2003, ApJ, 599, 964, doi: 10.1086/379309 [6] Spitkovsky, A. 2008, ApJL, 673, L39, doi: 10.1086/527374 [7] Tomita, S., Ohira, Y., &amp; Yamazaki, R. 2019, ApJ, 886, 54, doi: 10.3847/1538-4357/ab4a10 [8] Zhou, M., Zhdankin, V., Kunz, M. W., Loureiro, N. F., &amp; Uzdensky, D. A. 2024, ApJ, 960, 12, doi: 10.3847/1538-4357/ad0b0f [9] 冨田沙羅, 大平豊, 山崎了, “非一様媒質中を伝播する相対論的無衝突衝撃波における磁場増幅過程” [10] 宇宙磁気流体・プラズマシミュレーションサマースクール発表会資料, “Weibel instability &amp; numerical Cherenkov” [11] pCANS ドキュメント, “Weibel 不安定性” [12] 田中基彦, 西川恭治, “高温プラズマの物理学” [14] 観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II” . ",
+    "url": "/plasma/weibel_instability#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
+    
+    "relUrl": "/plasma/weibel_instability#参考文献"
+  },"2527": {
+    "doc": "ワイベル不安定性",
+    "title": "ワイベル不安定性",
+    "content": ". | ワイベル不安定性 . | ワイベル不安定性が起こる条件 | 成長率 | 直感的な理解 | ワイベル不安定性の応用例 . | ガンマ線バースト (GRB) での衝撃波 | 無衝突衝撃波と粒子加速 | 宇宙磁場生成・増幅機構としてのワイベル不安定性 | . | 参考文献 | . | . ",
+    "url": "/plasma/weibel_instability",
+    
+    "relUrl": "/plasma/weibel_instability"
+  },"2528": {
     "doc": "白色矮星の振動",
     "title": "白色矮星の振動",
     "content": " ",
     "url": "/compact/white_dwarf_oscillations#%E7%99%BD%E8%89%B2%E7%9F%AE%E6%98%9F%E3%81%AE%E6%8C%AF%E5%8B%95",
     
     "relUrl": "/compact/white_dwarf_oscillations#白色矮星の振動"
-  },"2522": {
+  },"2529": {
     "doc": "白色矮星の振動",
     "title": "概要",
     "content": "白色矮星の中には、周期が\\(100\\sim 1000\\)秒の変光を示すものがあります。 それらは白色矮星のg-mode振動により、主に表面温度が変化することで起こるものです。 白色矮星の自由落下時間は数秒であるため、それらの振動は動径方向モードやp-modeではありえません。 単周期のものはまれで、ほとんどの場合には同時にいくつものモードの振動が存在し、ビートにより振幅が一定ではありません。 振幅は0.01magから0.3magまでと、多様に存在します。 . ",
     "url": "/compact/white_dwarf_oscillations#%E6%A6%82%E8%A6%81",
     
     "relUrl": "/compact/white_dwarf_oscillations#概要"
-  },"2523": {
+  },"2530": {
     "doc": "白色矮星の振動",
     "title": "分類",
     "content": "振動を示す白色矮星は、3つのグループに分けられます。 . | ZZ Ceti variables (DAV): 振動するDA型白色矮星で、\\(T_\\mathrm{eff} \\sim 10^4 \\mathrm{K}\\)と低いもの | Variable DB stars (DBV): 振動するDB型白色矮星で、\\(T_\\mathrm{eff} \\sim 3 \\times 10^4 \\mathrm{K}\\)と中程度のもの | Variable PG1159 stars (DOV): 振動する高温の白色矮星で、\\(T_\\mathrm{eff} \\gtrsim 10^5 \\mathrm{K}\\)のもの。 | . ",
     "url": "/compact/white_dwarf_oscillations#%E5%88%86%E9%A1%9E",
     
     "relUrl": "/compact/white_dwarf_oscillations#分類"
-  },"2524": {
+  },"2531": {
     "doc": "白色矮星の振動",
     "title": "物理量の抽出",
     "content": "白色矮星の振動の観測から正確な周期を得ることで、白色矮星の質量・水素の層の厚さ・自転周期などの情報を引き出すことができます。 また周期の時間変化が検出できれば、進化の速さを評価することも可能です。 g-mode振動に対し、動径方向の波数\\(k_r\\)は、特に\\(k_r \\gg k_h\\)のとき . \\[k_r \\simeq \\frac{N}{r\\sigma} \\sqrt{\\ell (\\ell + 1)} \\tag{1}\\] のように表されます。 ここで\\(k_h \\equiv \\sqrt{\\frac{\\ell (\\ell + 1)}{r}}\\)は水平方向の波数、\\(N\\)はBrunt-Väisälä振動数、そして\\(\\sigma\\)は角振動数を表します。 大局的振動の振動数は、量子化条件 . \\[n\\pi = \\int_{r_1}^{r_2} k_r dr = \\frac{\\sqrt{\\ell (\\ell + 1)}}{\\sigma} \\int_{r_1}^{r_2} \\frac{N}{r} dr \\tag{2}\\] によって求まります。 ここで\\(n\\)は整数、\\(r_1, r_2\\)は\\(k_r\\)が実数となる(伝搬可能な)層の境界の中心からの距離を表します。 したがって、白色矮星の振動周期は . \\[\\Pi = \\frac{2\\pi}{\\sigma} \\propto \\frac{n}{\\sqrt{\\ell (\\ell + 1)}} \\left( \\int_{r_1}^{r_2} \\frac{N}{r} dr\\right)^{-1} \\tag{3}\\] のように表されます。 . この辺の導出もしっかり解説する予定です。しかしいつになることやら... 水素は軽く、不透明度が大きいため、比較的広がった構造を持ちます。 そのため表面の水素の層の質量が大きいと、振動が伝搬可能な層の厚さ \\(r_2 - r_1 (\\ll r)\\)が大きいため、比較的周期が短くなります。 この性質から、観測される最も短い周期をモデルと比較することにより、水素層に含まれる質量を評価することができます。 またBrunt-Väisälä振動数は温度が下がるとその値が減少するため、ある振動モードの周期は、白色矮星の冷却が進むに連れて長くなっていきます。 それを計測することで、冷却率の観測的な評価をすることができます。 期待される周期変化率は、1年で\\(10^{-7} \\mathrm{s}\\)程度のわずかな量です。 そのため、これを観測的に決定するには、何年にも渡る観測が必要となります。 現在のところ得られている結果は、理論モデルの値と同程度であると知られています。 次の図の上パネルは、振動する(DB型)白色矮星の光度曲線の例です。 . Corsico et al. (2022)より . このような変光は、複数の固有振動の重ね合わせ \\(\\sum_j A_j \\exp (2\\pi i \\nu_j t)\\)として表されます。 この光度曲線をフーリエ変換することにより、下パネルのようなパワースペクトルが得られ、振動数を知ることができます。 . ",
     "url": "/compact/white_dwarf_oscillations#%E7%89%A9%E7%90%86%E9%87%8F%E3%81%AE%E6%8A%BD%E5%87%BA",
     
     "relUrl": "/compact/white_dwarf_oscillations#物理量の抽出"
-  },"2525": {
+  },"2532": {
     "doc": "白色矮星の振動",
     "title": "参考文献",
     "content": "[1] Corsico et al., 2022, “Pulsating hydrogen-deficient white dwarfs and pre-white dwarfs observed with TESS III. Asteroseismology of the DBV star GD 358” [2] Shapiro &amp; Teukolsky, “Black Holes, White Dwarfs, and Neutron Stars” . ",
     "url": "/compact/white_dwarf_oscillations#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/compact/white_dwarf_oscillations#参考文献"
-  },"2526": {
+  },"2533": {
     "doc": "白色矮星の振動",
     "title": "白色矮星の振動",
     "content": ". | 白色矮星の振動 . | 概要 | 分類 | 物理量の抽出 | 参考文献 | . | . ",
     "url": "/compact/white_dwarf_oscillations",
     
     "relUrl": "/compact/white_dwarf_oscillations"
-  },"2527": {
+  },"2534": {
     "doc": "白色矮星",
     "title": "白色矮星",
     "content": "ここでは、コンパクト天体の1つである白色矮星の特徴をまとめています。 . ",
     "url": "/compact/white_dwarfs#%E7%99%BD%E8%89%B2%E7%9F%AE%E6%98%9F",
     
     "relUrl": "/compact/white_dwarfs#白色矮星"
-  },"2528": {
+  },"2535": {
     "doc": "白色矮星",
     "title": "観測的特徴",
     "content": "白色矮星は、初期質量が\\(\\sim 8 M_\\odot\\)より小さい恒星が、AGB段階で水素を多く含む外層のほとんどを失い中心核だとなった恒星です。 そのため、核融合反応は起こしていません。 内部は電子の縮退圧で支えられており、構造は温度にほとんど依存しないことから、重力収縮をせずにゆっくりと冷えつつある段階です。 電子の縮退した中心核では、電子による熱伝導が非常に良いため、ほぼ等温になっています。 その外側に薄いヘリウムの層と水素の層が存在し、その中で温度が中心温度\\((10^6 \\sim 10^8 \\mathrm{K})\\)から表面温度へと変化します。 この薄い外挿は、中心核の温度を保つブランケットのはたらきをします。 白色矮星の進化経路 (cooling sequence) は、HR図上で、高温で明るい惑星状星雲中心核領域から主系列の高温側に主系列とほぼ平行に、暗く温度が低い領域へと伸びています。 . Gaia Collaboration (2018)より。上図はHR図全体、下図は白色矮星部分のみを拡大したもの。 . 白色矮星の典型的な半径は\\(\\sim 10^{-2} R_\\odot\\)で、典型的な表面温度は\\(\\sim 4 \\times 10^3 \\sim 10^5 \\mathrm{K}\\)の範囲を持ちます。 典型的な質量は\\(\\sim 0.6 M_\\odot\\)で、平均密度は太陽の\\(10^6\\)倍程度になります。 また表面重力は\\(\\log g \\sim 8\\)です。 白色矮星の自転は遅く、自転周期は数時間以上です。 太陽が仮に角運動量を保存したまま白色矮星サイズになったとすると、自転周期は数分程度になるはずです。 このことは、主系列星から白色矮星に至る進化の途中で、角運動量の多くが失われてなくてはならないことを意味します。 また、白色矮星には周期\\(100 \\sim 10^3\\)秒で変光を示すものが多くあります。 これは、白色矮星の薄い外層の非動径方向のgモード振動によるもので、その観測から質量・自転周期・水素外層の厚さ・冷却時間スケールなどの情報を引き出すことができます。 また白色矮星の10%以上が、\\(10 \\mathrm{KG} \\sim 10^9 \\mathrm{G}\\)の磁場を持つことが知られています。 白色矮星は、DA, DB, DC, DO, DZ, DQのようにスペクトル分類されます。 . | DA: 水素のバルマー線だけが観測され、ヘリウムや金属線は観測されません。白色矮星の80%凍度がDA型白色矮星に分類されます。強い重力により最も軽い水素が浮き上がり、純粋に近い水素の層を作っています。その層の厚さは\\(10^{-4} M_\\odot\\)以下であり、その下には純粋に近いヘリウムの層が存在すると推測されています。 | DB: 中性ヘリウムのスペクトル線が強く、水素または金属の輝線は観測されません。つまり、この白色矮星の大気はほぼ純粋なヘリウムで構成されています。全体の約20%がDB型白色矮星です。白色矮星のほとんどはDA, DBに分類されます。 | DC: 連続スペクトルで、目立つ輝線が見られないのが特徴です。 | DO: HeIIのスペクトル輝線が支配的に見られます。これは高温\\((T \\sim 10^5 \\mathrm{K})\\)の白色矮星です。 | DZ: 金属による輝線だけが観測されます。 | DQ: 炭素、または炭素を含む分子のスペクトル線が見られます。 | . その他にも、以下のような記号が用いられます。 . | P: 偏光が観測される強磁場白色矮星です。 | H: 偏光が観測されない強磁場白色矮星です。 | X: 特異なスペクトルや、分類不能なものを、Xと表します。 | E: 輝線が見られます。 | ?: 分類が不確定なものを表します。 | V: 変光をする場合に記載される記号です。 | . 白色矮星の表面元素組成は、対流外層の勢力や水素の浮揚効果により、白色矮星進化の途中でも変化する場合があります。 比較的温度の低い白色矮星では、(周囲の水素をイオン化しないため)星間物質からの降着 (\\(\\sim 10^{-17} M_\\odot / \\mathrm{yr}\\))を受け、それによる表面元素組成変化の効果も重要となる可能性もあります。 \\(T_\\mathrm{eff}\\)が30000-45000Kの領域はDBギャップと呼ばれ、その領域ではDB型白色矮星は存在しません。 それはわずかに外層に混合していた水素が浮き上がってきて、表面に純粋な水素の層を形成するためと考えられています。 30000Kよりも低くなると、\\({}^+ \\mathrm{He}\\)の不完全電離層により対流が発生します。 すると水素層が薄い場合は混合から表面がほとんどヘリウムとなり、DB型白色矮星となります。 比較的\\(T_\\mathrm{eff}\\)の低い領域では、DA型白色矮星の割合が表面温度が下がるほど小さくなる傾向にあります。 これは、低温になると水素電離に伴う表面対流層が発達するためです。 水素の層が薄いものほど高い表面温度で、下のヘリウム層との混合が起こり、水素層が薄い場合は水素の層がなくなるためと推測されます。 . Liebert et al. (1988)より。白色矮星の有効温度分布を示したもの。 Bergeron et al. (1997)より。DA型とそうでないものの、有効温度に対する頻度分布。 . ",
     "url": "/compact/white_dwarfs#%E8%A6%B3%E6%B8%AC%E7%9A%84%E7%89%B9%E5%BE%B4",
     
     "relUrl": "/compact/white_dwarfs#観測的特徴"
-  },"2529": {
+  },"2536": {
     "doc": "白色矮星",
     "title": "質量-半径関係",
     "content": "白色矮星の質量と半径の関係は、電子の縮退とチャンドラセカール限界質量のページをご覧ください。 これによると、白色矮星の限界質量は . \\[M_\\mathrm{Ch} = 1.46 \\left( \\frac{2}{\\mu_\\mathrm{e}}\\right)^2 M_\\odot\\] のようになります。 しかしこの議論では、原子核の効果が無視されています。 実際の白色矮星内部では、原子核の電荷はその静電場により電子を引き寄せるため、電子の自由な運動を妨げる効果を持ちます。 そのため、原子核の効果を無視した場合に比べ圧力は小さくなり、ある質量に対する白色矮星の半径も小さくなります。 この効果は、白色矮星を構成する原子核が重たい原子核であるほど、大きくなります。 . Shapiro &amp; Teukolsky, “Black Holes, White Dwarfs, and Neutron Stars”より。上表は、各種原子核が中性子化あるいは中性子過剰原子核になるのに必要なエネルギーと質量密度。真ん中図は、実際に観測されている白色矮星を、質量-半径の図にプロットしたもの。実線はゼロ温度での\\({}^{4} \\mathrm{He}, {}^{12} \\mathrm{C}, {}^{24} \\mathrm{Mg}, {}^{56} \\mathrm{Fe}\\)からなるモデルでの質量-半径関係の曲線。下図は真ん中図と同じものを、横軸を密度の対数、縦軸を質量にしたもの。 . 白色矮星の質量が増加し、限界質量近くになったとしましょう。 すると密度が非常に大きいため、温度が低くても種々の原子核反応が起こります。 中心付近に炭素が含まれている場合、\\(\\rho \\gtrsim 10^{10} \\mathrm{g/cm^3}\\)になると\\({}^{12} \\mathrm{C} + {}^{12} \\mathrm{C}\\)の反応が爆発的に起こり、Ia型超新星爆発が起こります。 このとき、星の全エネルギーが正となり、星全体が飛び散ってしまいます。 また炭素がなくO, Ne, Mgなどからなる場合は、電子が原子核に取り込まれ、中性子過剰な原子核になっていきます。 このとき、圧力を担っている電子の数が減少するため、収縮が起こりさらに電子捕獲が進みます。 そのため、白色矮星はつぶれ、中性子星になります。 . ",
     "url": "/compact/white_dwarfs#%E8%B3%AA%E9%87%8F-%E5%8D%8A%E5%BE%84%E9%96%A2%E4%BF%82",
     
     "relUrl": "/compact/white_dwarfs#質量-半径関係"
-  },"2530": {
+  },"2537": {
     "doc": "白色矮星",
     "title": "質量分布",
     "content": "連星系を構成していない単独の白色矮星の質量は、水素バルマー線の形状を用いて評価されます。 白色矮星のスペクトル線は、白色矮星大気の密度が高いために周囲の粒子からの摂動によって広がっています (pressure broadening。) 光球面での密度は重力が強いほど大きくなるため、スペクトル線の幅を理論的に計算された形状と比較することで、表面重力\\(g\\)の値を知ることができます。 . Tremblay &amp; Bergeron (2009)より . \\(g = GM / R^2\\)より、先ほどの質量-半径関係を用いれば、質量を求めることができます。 このようにして求められた白色矮星の質量に対する頻度分布は、\\(\\sim 0.6 M_\\odot\\)に鋭いピークを持ちます。 これは、AGB段階で中心核の質量が\\(\\sim 0.6 M_\\odot\\)に対応する光度になると、非常に強い恒星風により外層が飛ばされてしまうことを示唆しています。 また\\(\\sim 0.4 M_\\odot\\)あたりの小さなピークは、近接連星進化における質量交換によってできたと考えられています。 次の図は、SDSSのデータから求められたDA型白色矮星の質量分布 (volume limitted)を表しています。 . Kepler et al. (2007)より . そして次の図は、白色矮星の質量とそれが主系列星だった時点での質量との関係 (initial-to-final mass relation)を表します。 この関係は非常に不確定ですが、銀河内の散開星団中の白色矮星の質量 (\\(\\log g\\)から求められたもの)と、主系列転向質量 (turn-off mass)との関係などから、経験的に求められたものです。 図の直線は最小2乗法により求められたもので、曲線は白色矮星の質量分布と population synthesis model を用いて得られたものです。 . Ferrario et al. (2005)より . また質量放出率の光度や半径依存性に適当な式を仮定して計算された、主系列星から白色矮星までの進化モデルによってもinitial-to-final mass relationが得られます。 しかし白色矮星が連星系中にある場合、質量移動・降着が起こる場合があることに注意が必要です。 . ",
     "url": "/compact/white_dwarfs#%E8%B3%AA%E9%87%8F%E5%88%86%E5%B8%83",
     
     "relUrl": "/compact/white_dwarfs#質量分布"
-  },"2531": {
+  },"2538": {
     "doc": "白色矮星",
     "title": "参考文献",
     "content": "[1] Gaia Collaboration, 2018, “Gaia Data Release 2: Observational Hertzsprung-Russell diagrams” [2] Liebert &amp; Sion, 1994, “The Spectroscopic Classification of White Dwarfs: Unique Requirements and Challenges” [3] Liebert et al., 1988, “The Luminosity Function of White Dwarfs” [4] Bergeron et al., 1997, “The Chemical Evolution of Cool White Dwarfs and the Age of the Local Galactic Disk” [5] Tremblay &amp; Bergeron, 2009, “Spectroscopic Analysis of DA White Dwarfs: Stark Broadening of Hydrogen Lines Including Nonideal Effects” [6] Kepler et al., 2007, “White dwarf mass distribution in the SDSS” [7] Ferrario et al., 2005, “The open-cluster initial-final mass relationship and the high-mass tail of the white dwarf distribution” [8] Shapiro &amp; Teukolsky, “Black Holes, White Dwarfs, and Neutron Stars” . ",
     "url": "/compact/white_dwarfs#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/compact/white_dwarfs#参考文献"
-  },"2532": {
+  },"2539": {
     "doc": "白色矮星",
     "title": "白色矮星",
     "content": ". | 白色矮星 . | 観測的特徴 | 質量-半径関係 | 質量分布 | 参考文献 | . | . ",
     "url": "/compact/white_dwarfs",
     
     "relUrl": "/compact/white_dwarfs"
-  },"2533": {
+  },"2540": {
     "doc": "ウォルフ・ライエ星",
     "title": "ウォルフ・ライエ星 (Wolf-Rayet stars)",
     "content": " ",
     "url": "/stellar/wolf_rayet_stars#%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E6%98%9F-wolf-rayet-stars",
     
     "relUrl": "/stellar/wolf_rayet_stars#ウォルフライエ星-wolf-rayet-stars"
-  },"2534": {
+  },"2541": {
     "doc": "ウォルフ・ライエ星",
     "title": "概要",
     "content": "Wolf-Rayet (WR or W-R)星は、1867年にWolf, C.J.E.とRayet, G.A.P.によってスペクトルの眼視観測で発見された、高温(\\((3-6) \\times 10^4 \\mathrm{K}\\))の明るい\\((L \\sim 10^5 L_\\odot)\\)星です。 可視光領域に幅の広い強い輝線 \\((\\sim 10^3 \\mathrm{km/s})\\)を持ち、多くの場合は吸収線は観測されません。 輝線はWR星からの密度の濃い恒星風に起因します。 密度の濃い恒星風の存在により、静的な光球は存在せず、通常の有効温度の定義は適用できません。 またその膨大な質量放出により、形成時の組成を持つ外層はすでに失われています。 . ",
     "url": "/stellar/wolf_rayet_stars#%E6%A6%82%E8%A6%81",
     
     "relUrl": "/stellar/wolf_rayet_stars#概要"
-  },"2535": {
+  },"2542": {
     "doc": "ウォルフ・ライエ星",
     "title": "元素組成とスペクトル型",
     "content": "表面での水素含有量は少ないか全く観測されず、水素燃焼またはヘリウム燃焼の生成元素の含有率が大きくなります。 WR星は、形成時の質量が\\(\\sim 35 M_\\odot\\)より大きい大質量星が進化したものなので、その年齢は\\(10^7\\)年より短いとされています。 そのためWR星は星形成領域や、最近星形成が起こった場所に存在しています。 . Abbott &amp; Conti (1987)より . WR星のスペクトル型は、WN型とWC型に大別されます。 WN型のスペクトルにはヘリウムと窒素の輝線が顕著で、WC型ではヘリウム輝線とともに炭素・酸素の輝線が顕著となっています。 WC型の中で強いO IV輝線が観測されるものを、特にWO型とも呼ばれています。 WN型のWR星でのヘリウムと窒素含有量の過多は、CNOサイクルによる水素燃焼の生成物と説明されています。 WN型星はHeI/HeII比および種々の窒素輝線の強度比に基づいて、WN2, …, WN9に細分類されます。 これはhighest excitation (高温)からlowest excitationへの系列を表し、数字の小さい(大きい)グループはearly (late) typeと呼ばれます。 WC型WR星の表面元素組成は、ヘリウム燃焼生成物が表面に出てきていることを示しています。 ヘリウム燃焼では温度が高い環境のもとで酸素がより多く生成されるため、WO型星はより質量放出が進み、内部深くでヘリウム燃焼が起こっていた場所が表面に出てきていると解釈できます。 WC型は炭素イオン比と酸素イオン比から、WC4, …, WC9に細分類され、WO型はOIVとOVIの輝線強度比により、WO1, …, WO4に細分類されます。 次の図は、WR星のサブクラスと絶対光度との関係を表しています。 明らかに、late type WR星の方が明るい傾向にあります。 . Abbott &amp; Conti (1987)より . ",
     "url": "/stellar/wolf_rayet_stars#%E5%85%83%E7%B4%A0%E7%B5%84%E6%88%90%E3%81%A8%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%9E%8B",
     
     "relUrl": "/stellar/wolf_rayet_stars#元素組成とスペクトル型"
-  },"2536": {
+  },"2543": {
     "doc": "ウォルフ・ライエ星",
     "title": "質量放出率",
     "content": "観測的に得られたWR型星の質量放出率は、光度と化学組成に依存し、経験式として . \\[\\dot{M} \\simeq 1.0 \\times 10^{-11} \\left(\\frac{L}{L_\\odot}\\right)^{1.29} Y^{1.7} Z^{0.5} \\ [M_\\odot / \\mathrm{yr}] \\tag{1}\\] のように表されます (Nugis &amp; Lamers (2000))。 重元素量が多いと質量放出率が大きいという関係は、恒星風が輻射駆動であることと一致します。 またこのことは、WC型とWN型の数比が銀河によって異なり、私たちの銀河内でも中心からの距離に依存するという観測事実に説明を与えます。 . Abbott &amp; Conti (1987)より . Massey &amp; Johnson (1998)より . WR星の質量放出率は、同じ光度のO型星に比べて大きいことが判明しています。 またWR星では、恒星風の運動量放出率と光の運動量放出率の比 . \\[\\eta \\equiv \\frac{\\dot{M} v_\\infty}{L/c} \\tag{2}\\] が1より大きくなっています (大体 \\(1.4 &lt; \\eta \\lesssim 18\\)。) これを説明するためには、光子の多重散乱と光学的に厚い領域での加速を考える必要があります。 WR星の起源については、初期質量が\\(35M_\\odot\\)より大きい星が、盛大な恒星風による質量損失および高光度青色変光星 (luminous blue variables)の段階での間欠的な質量損失により、水素を多く含む外層を失い、水素燃焼またはヘリウム燃焼の起こっていた層が表面に出てきた状態であると説明されます。 質量放出の度合いが大きくなるにつれて、WN型、WC型、そしてWO型へと変わると考えられています。 . Hamann &amp; Koesterke (1998)より . ",
     "url": "/stellar/wolf_rayet_stars#%E8%B3%AA%E9%87%8F%E6%94%BE%E5%87%BA%E7%8E%87",
     
     "relUrl": "/stellar/wolf_rayet_stars#質量放出率"
-  },"2537": {
+  },"2544": {
     "doc": "ウォルフ・ライエ星",
     "title": "WR星としての寿命",
     "content": "次の図は、各金属量ごとにWR星としての寿命を描画したものです。 横軸には、初期質量をとっています。 . Maeder &amp; Meynet (1994)より . 実線は標準的な質量損失率、破線は大きな質量損失率のモデルを計算したものです。 この図から . | 初期質量が大きいほど、WR星としての寿命が長い | 重元素含有量が大きいほど、小さい初期質量の星でもWR星になることができる | 質量損失率が大きいほど、WR星としての寿命は短い | . ということがわかります。 . ",
     "url": "/stellar/wolf_rayet_stars#wr%E6%98%9F%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E5%AF%BF%E5%91%BD",
     
     "relUrl": "/stellar/wolf_rayet_stars#wr星としての寿命"
-  },"2538": {
+  },"2545": {
     "doc": "ウォルフ・ライエ星",
     "title": "質量光度関係",
     "content": "次の図は、理論モデルに基づいたWR星の質量光度関係を表したものです。 WR星の質量光度関係は、特に明るい部分で\\(L \\propto M\\)の関係に近くなっています。 この関係は、解析的にも導出することができます。 輻射によりエネルギーが運ばれる場合、局所光度 \\(L_r\\)は . \\[L_r = -4\\pi r^2 \\frac{4ac}{3\\kappa \\rho} T^3 \\frac{dT}{dr} \\tag{3}\\] のように表されます。 この式に、輻射圧\\(P_\\mathrm{rad}\\)が . \\[P_\\mathrm{rad} = \\frac{a}{3} T^4 = (1-\\beta) P \\quad (\\beta \\equiv P_\\mathrm{gas} / P) \\tag{4}\\] であることを用いると . \\[\\frac{dP_\\mathrm{rad}}{dr} = \\frac{4a}{3} T^3 \\frac{dT}{dr} \\ \\Longrightarrow \\ T^3 \\frac{dT}{dr} = \\frac{3}{4a} \\frac{dP_\\mathrm{rad}}{dr} \\tag{5}\\] より . \\[L_r = - \\frac{4\\pi c r^2}{\\kappa \\rho} \\frac{d}{dr} \\{(1-\\beta) P\\} = - \\frac{4\\pi c r^2}{\\kappa \\rho} \\frac{dP}{dr} \\frac{d}{dP} \\{(1-\\beta) P\\} \\tag{6}\\] と置き換えることができます。 そしてこの式に静水圧平衡の式 \\(\\frac{dP}{dr} = -\\frac{GM_r \\rho}{r^2}\\)を用いると . \\[L = \\frac{4\\pi c GM}{\\kappa} \\frac{d}{dP} \\{(1-\\beta) P\\} \\tag{7}\\] のように書くことができます。 ここでは、星の外層のみを考えることとし、\\(L_r \\simeq L, M_r \\simeq M\\)のようにしました。 大質量星の外層は密度が低いため、不透明度は電子散乱が支配的で、\\(\\kappa \\simeq 0.2 (1+X)\\)のように定数と考えることができます。 (7)式は積分できて . \\[LP = \\frac{4\\pi cGM}{\\kappa} (1-\\beta) P \\ \\Longrightarrow \\ L = \\frac{4\\pi cGM}{\\kappa} (1-\\beta) \\tag{8}\\] のようになります (積分定数は表面で\\(P=0\\)として決めました。) (8)式は、輻射圧が優勢 \\((\\beta \\ll 1)\\)のとき\\(L \\propto M\\)となることを表しています。 また\\(\\beta =0\\)の極限では、(8)式は\\(L\\)がエディントン光度となることを表しています。 大質量星の外層は密度が薄く、\\(\\beta \\ll 1\\)なので、それらの光度はエディントン光度に近いことがわかります。 . ",
     "url": "/stellar/wolf_rayet_stars#%E8%B3%AA%E9%87%8F%E5%85%89%E5%BA%A6%E9%96%A2%E4%BF%82",
     
     "relUrl": "/stellar/wolf_rayet_stars#質量光度関係"
-  },"2539": {
+  },"2546": {
     "doc": "ウォルフ・ライエ星",
     "title": "連星系を構成するWR星",
     "content": "WR星の約40%が、O型星との連星系をなします。 伴星のO型星の方が質量が大きいことは、質量を大量に失ってWR星となったことを表しています。 . van der Hucht &amp; Karel (2001)より . ",
     "url": "/stellar/wolf_rayet_stars#%E9%80%A3%E6%98%9F%E7%B3%BB%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8Bwr%E6%98%9F",
     
     "relUrl": "/stellar/wolf_rayet_stars#連星系を構成するwr星"
-  },"2540": {
+  },"2547": {
     "doc": "ウォルフ・ライエ星",
     "title": "最近のWR星研究",
     "content": "JWSTによるWR 140の詳細な観測 . 2021年に打ち上げられたJames Webb Space Telescope (JWST)は、観測を開始してから目覚ましい成果をあげています。 そのJWSTがWR星を観測し、そのデータを解析した研究の一つに、Lau et al. (2022)があります。 この研究では、WR140と呼ばれる連星系中にあるWR星の観測を行い、その周囲でのダスト形成や化学組成を詳細に解析しました。 . Lau et al. (2022)より . 一番大きな図の中心から伸びる青い8本の線は、中心に位置する連星からの光が飽和している(saturation, 宇宙物理を研究している方々はこれを「サチる」とも呼びます)ことから出る光学像であり、実際にこのような光が放たれているわけではありません。 このことからも、JWSTの観測装置の感度の良さがわかります。 そして、その中心部から波状に出ている模様が、この連星系から放出されたダストシェルを表しています。 観測から17個のシェルの存在が確認され、これらは130年以上かけて形成されていることがわかりました。 右の2つのパネルは、中心部の違う領域を拡大したものになります。 論文では、この波状模様やスペクトルを再現するモデルを考案・観測データとの比較を行うなどしています。 . チャンドラによる天の川銀河中心星団中のWR星の観測 . 1997年に打ち上げられたチャンドラ X線観測衛星は、今なお成果をあげています。 WR星に関する最近の研究では、例としてHua &amp; Li (2025)が挙げられます。 この論文では、天の川銀河中心に存在する星団をいくつか観測し、その中に含まれているWR星について詳細にデータ解析を行いました。 星団によって異なる化学組成を持つことが判明し、ここから星団内でのダスト喪失や親星の内部混合による核融合の影響を議論しています。 . Hua &amp; Li (2025)より . ",
     "url": "/stellar/wolf_rayet_stars#%E6%9C%80%E8%BF%91%E3%81%AEwr%E6%98%9F%E7%A0%94%E7%A9%B6",
     
     "relUrl": "/stellar/wolf_rayet_stars#最近のwr星研究"
-  },"2541": {
+  },"2548": {
     "doc": "ウォルフ・ライエ星",
     "title": "参考文献",
     "content": "[1] Abbott &amp; Conti, 1987, “Wolf-rayet stars” [2] Massey &amp; Johnson, 1998, “Evolved Massive Stars in the Local Group. II. A New Survey for Wolf-Rayet Stars in M33 and Its Implications for Massive Star Evolution: Evidence of the “Conti Scenario” in Action” [3] Hamann &amp; Koesterke, 1998, “The nitrogen spectra of Wolf-Rayet stars. A grid of models and its application to the Galactic WN sample” [4] Maeder &amp; Meynet, 1994, “New models of Wolf-Rayet stars and comparison with data in galaxies” [5] van der Hucht &amp; Karel, 2001, “The VIIth catalogue of galactic Wolf-Rayet stars” [6] Lau et al., 2022, “Nested dust shells around the Wolf–Rayet binary WR 140 observed with JWST” [7] Hua &amp; Li, 2025, “Chandra X-ray Measurement of Heavy Element Abundances of Wolf-Rayet Stars in the Galactic Center” [8] James Webb Space Telescope [9] Chandra X-ray Observatory [10] Lamers &amp; Cassinelli, “Introduction to Stellar Winds” [11] Kippenhahn, Weigert &amp; Weiss, “Stellar Structure and Evolution” [12] 野本憲一, 定金晃三, 佐藤勝彦, “恒星” . ",
     "url": "/stellar/wolf_rayet_stars#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/stellar/wolf_rayet_stars#参考文献"
-  },"2542": {
+  },"2549": {
     "doc": "ウォルフ・ライエ星",
     "title": "ウォルフ・ライエ星",
     "content": ". | ウォルフ・ライエ星 (Wolf-Rayet stars) . | 概要 | 元素組成とスペクトル型 | 質量放出率 | WR星としての寿命 | 質量光度関係 | 連星系を構成するWR星 | 最近のWR星研究 . | JWSTによるWR 140の詳細な観測 | チャンドラによる天の川銀河中心星団中のWR星の観測 | . | 参考文献 | . | . ",
     "url": "/stellar/wolf_rayet_stars",
     
     "relUrl": "/stellar/wolf_rayet_stars"
-  },"2543": {
+  },"2550": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": " ",
     "url": "/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93",
     
     "relUrl": "/nucl/wu#wuの実験"
-  },"2544": {
+  },"2551": {
     "doc": "Wuの実験",
     "title": "Who is Wu？",
     "content": "C.S.Wuさん。中国系アメリカ人の実験物理学者です。1956年に弱い相互作用においてパリティ保存が破れていることを実験で証明しました。この結果によってパリティ非保存を予言していたT.D.LeeとC.N.Yangに、1957年のノーベル物理学賞をもたらしたとされています。 . ",
     "url": "/nucl/wu#who-is-wu",
     
     "relUrl": "/nucl/wu#who-is-wu"
-  },"2545": {
+  },"2552": {
     "doc": "Wuの実験",
     "title": "パリティ保存とは？",
     "content": "空間反転対称性のことです。鏡のように左右だけでなく、上下も反転させた世界に行くことを考えましょう。反転世界でも同じ物理現象が起こる場合、これを「パリティ(Parity)が保存している」と言います。 . ",
     "url": "/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E4%BF%9D%E5%AD%98%E3%81%A8%E3%81%AF",
     
     "relUrl": "/nucl/wu#パリティ保存とは"
-  },"2546": {
+  },"2553": {
     "doc": "Wuの実験",
     "title": "パリティ変換",
     "content": "空間反転の変換を施す演算子を\\(P\\)としましょう。ある物理量\\(A\\)が空間反転によって . \\[A \\rightarrow A\\] のように変換されるとき、これをパリティが正であると呼びます。 . \\[A \\rightarrow -A\\] のように符号が反転するとき、これをパリティが負であると呼びます。 . ",
     "url": "/nucl/wu#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3%E5%A4%89%E6%8F%9B",
     
     "relUrl": "/nucl/wu#パリティ変換"
-  },"2547": {
+  },"2554": {
     "doc": "Wuの実験",
     "title": "例題",
     "content": "位置ベクトル . 位置ベクトル\\({\\bf r}\\)の向きは反転するので、これをパリティが負と言います。 . 運動量ベクトル . 同様に運動量ベクトル\\({\\bf p}\\)の向きも反転するので、パリティが負です。 . 角運動量ベクトル . 角運動量は\\({\\bf L} = {\\bf r} \\times {\\bf p}\\)で表されるので、空間反転してもベクトルの向きは反転しません。これをパリティが正と言います。 . ",
     "url": "/nucl/wu#%E4%BE%8B%E9%A1%8C",
     
     "relUrl": "/nucl/wu#例題"
-  },"2548": {
+  },"2555": {
     "doc": "Wuの実験",
     "title": "Wuの実験概要",
     "content": "コバルト原子核は、以下のような崩壊を起こします。 . \\[{}^{60}_{27} {\\rm Co} \\rightarrow {}^{60}_{28} {\\rm Ni} + e^- + \\bar{\\nu}_e\\] このときの\\(\\beta\\)線の角度分布を測定しましたというのがこの実験です。実験装置の概要図を以下に示します。 . コバルトはスピン5、ニッケルはスピン4を持ちます。パリティが保存しているならば、コバルトのスピン\\({\\bf J}\\)に対して角度\\(\\theta\\)の角度で放出される電子があるならば、全く同じ確率で反対方向にも電子はでるはずです。 . 逆にパリティ非保存ならば、コバルトのスピンと\\(\\beta\\)線電子の運動量\\({\\bf p}_e\\)の内積が期待値を持つことになります。 . ",
     "url": "/nucl/wu#wu%E3%81%AE%E5%AE%9F%E9%A8%93%E6%A6%82%E8%A6%81",
     
     "relUrl": "/nucl/wu#wuの実験概要"
-  },"2549": {
+  },"2556": {
     "doc": "Wuの実験",
     "title": "実験結果",
     "content": "以下がWu+ 1957の結果図です。 . 初期に、磁場によってCoのスピン方向を上向きか下向きかで揃えておきます。上向きのときと下向きのときとで\\(\\beta\\)線の検出量を計測した結果、Coのスピンと同じ方向に出る\\(\\beta\\)線量が少ないことがわかりました。 . ",
     "url": "/nucl/wu#%E5%AE%9F%E9%A8%93%E7%B5%90%E6%9E%9C",
     
     "relUrl": "/nucl/wu#実験結果"
-  },"2550": {
+  },"2557": {
     "doc": "Wuの実験",
     "title": "実験からわかったこと",
     "content": "コバルトはスピン5、ニッケルはスピン4を持ちます。角運動量の保存から、崩壊する粒子はコバルトとニッケルのスピン方向にそれぞれ1/2のスピン成分を持つはずです。実験から、電子はコバルトのスピン方向とは反対側に放出されるので、この実験で放出されるもう一つの粒子は右巻きであることがわかりました。 . ",
     "url": "/nucl/wu#%E5%AE%9F%E9%A8%93%E3%81%8B%E3%82%89%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8",
     
     "relUrl": "/nucl/wu#実験からわかったこと"
-  },"2551": {
+  },"2558": {
     "doc": "Wuの実験",
     "title": "参考文献",
     "content": ". | Wu+, 1957 | 素粒子物理学, 原, 稲見, 青木 | 理論電磁気学, 砂川 | . ",
     "url": "/nucl/wu#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/nucl/wu#参考文献"
-  },"2552": {
+  },"2559": {
     "doc": "Wuの実験",
     "title": "Wuの実験",
     "content": ". | Wuの実験 . | Who is Wu？ | パリティ保存とは？ | パリティ変換 | 例題 . | 位置ベクトル | 運動量ベクトル | 角運動量ベクトル | . | Wuの実験概要 | 実験結果 | 実験からわかったこと | 参考文献 | . | . ",
     "url": "/nucl/wu",
     
     "relUrl": "/nucl/wu"
-  },"2553": {
+  },"2560": {
     "doc": "X線バースター",
     "title": "X線バースター",
     "content": "小質量X線連星では、中性子星の周りに降着円盤ができます。 降着ガスは重力エネルギーを開放しながら円盤に沿って流れ込みます。 解放された重力エネルギーは、熱に変換され、円盤の表面から黒体放射として放出されます。 円盤は中性子星の表面近くまで延び、中性子星に近づくにつれてその温度が高くなります。 円盤中を中性子星表面スレスレまで降着してきたガスは、最初持っていた重力エネルギーの半分を黒体放射として解放しています。 最後に表面に落下すると、残りの半分の重力エネルギーが解放され、星表面の降着ガスは一気に加熱されます。 そして黒体放射でX線を放出するようになります。 小質量X線連星のスペクトルは、中性子星表面と円盤表面殻の黒体放射の重ね合わせとして説明することができます。 しかし、中性子星の小質量X線連星に特有な現象に、X線バーストと呼ばれるものがあります。 X線バーストとは、1秒程度の間にX線光度が急激に上昇し、その後数十秒かけてもとのX線高度に戻るような現象です。 . Galloway et al. (2020)より。横軸は秒単位の時間、縦軸は異なる装置で検出された光子フラックスを表す。 . このX線バーストは、1969年に初観測され、その結果は Belian et al. (1972) として公開されました。 このようなX線バーストを起こすX線連星を、X線バースター (X-ray burster)と呼びます。 X線バースターとなる中性子星は、それほど強い磁場を持たないとされています。 強い磁場を持つ場合、降着流は磁力線に沿って磁極領域に流れ込むため、先ほどの説明とは異なる降着の形態を取るためです。 . それぞれ弱磁場の中性子星への降着と、強磁場の中性子星への降着の様子。 . 中性子星への降着により物質が降り積り、ある臨界温度を超えると、バーストが起こります。 このメカニズムから分かるように、バースト発生後、再び降着によりガスが中性子星表面に降り積もると、再びバーストを起こすことができます。 典型的なX線バーストの間隔は、数時間から1日程度とされています。 X線バーストは、I型のII型の2種類に分類されます。 I型は、中性子星表面に降着した物質の不安定な核融合燃焼によるものとされています。 II型は、降着円盤から中性子星への散発的な質量降着が原因と考えられていますが、まだ2例しか発見されていません。 ここでは主に、I型のX線バースターについて議論していきましょう。 . ",
     "url": "/compact/x_ray_bursters#x%E7%B7%9A%E3%83%90%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
     
     "relUrl": "/compact/x_ray_bursters#x線バースター"
-  },"2554": {
+  },"2561": {
     "doc": "X線バースター",
     "title": "I型のX線バースターの観測的特徴など",
     "content": "I型X線バースターでは、X線はバースト成分と長く持続する成分として観測されます。 またX線バーストは繰り返し起こり、その発生間隔は数時間から数日程度まで及びます。 さらに一定期間X線バーストは観測されず、長く持続する成分のみが観測される場合もあり、その間はX線バースターは単にずっとX線を放射するX線源として観測されます。 バースト時に放出されるエネルギー量の時間平均と、持続成分のエネルギー量の時間平均の比を定義しましょう。 すなわち . \\[\\alpha \\equiv \\frac{\\int_0^T L_X (\\mathrm{burst}) dt / T}{\\int_0^T L_X (\\mathrm{persistene}) dt/T} \\approx \\frac{L_X (\\mathrm{burst}) \\Delta t_\\mathrm{burst}}{L_X (\\mathrm{persistent}) \\Delta t_\\mathrm{persistent}} \\tag{1}\\] です。 ここで\\(T\\)は観測時間、\\(\\Delta t_\\mathrm{burst}\\)と\\(\\Delta t_\\mathrm{persistent}\\)はそれぞれX線バーストと継続的なX線の時間です。 観測的には . \\[\\frac{L_X (\\mathrm{burst})}{L_X (\\mathrm{persistent})} \\sim 10, \\quad \\frac{\\Delta t_\\mathrm{burst}}{\\Delta t_\\mathrm{persistent}} \\sim 10^{-3} \\tag{2}\\] と判明しています。 よって\\(\\alpha \\sim 10^{-2}\\)と求まります。 ここで . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{T} \\simeq L_\\mathrm{nuc}, \\quad \\frac{\\int_0^T L_X (\\mathrm{persistent}) dt}{T} \\simeq L_\\mathrm{acc} \\tag{3}\\] としましょう。 ここで\\(L_\\mathrm{nuc}\\)は核融合反応による光度、\\(L_\\mathrm{acc}\\)は重力エネルギーの解放による光度です。 すると . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{\\int_0^T L_X (\\mathrm{persistent}) dt} \\simeq \\frac{L_\\mathrm{nuc}}{L_\\mathrm{acc}} \\simeq \\frac{0.007\\dot{M} c^2}{\\frac{GM\\dot{M}}{R}} = \\frac{0.007 c^2}{\\frac{GM}{R}} \\tag{4}\\] のようになります。 途中、核融合反応によるエネルギー放出を、水素からヘリウムが生成するときの質量欠損分としました。 中性子星の場合、典型的な値は\\(M \\sim M_\\odot, R\\sim 10^6 \\mathrm{cm}\\)なので . \\[\\frac{\\int_0^T L_X (\\mathrm{burst}) dt}{\\int_0^T L_X (\\mathrm{persistent}) dt} \\simeq \\frac{2 \\times 0.007R}{\\frac{2GM}{c^2}} \\simeq \\frac{0.014 \\times 10^6}{3 \\times 10^5} \\sim 0.04 \\tag{5}\\] と求まります。 途中、太陽質量のシュバルツシルト半径\\(r_g = \\frac{2GM}{c^2} \\sim 3 \\mathrm{km}\\)であることを用いました。 最終的に求まった値は、観測で求まっている\\(\\alpha \\sim 0.01\\)と同じ程度になっています。 . ",
     "url": "/compact/x_ray_bursters#i%E5%9E%8B%E3%81%AEx%E7%B7%9A%E3%83%90%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%AE%E8%A6%B3%E6%B8%AC%E7%9A%84%E7%89%B9%E5%BE%B4%E3%81%AA%E3%81%A9",
     
     "relUrl": "/compact/x_ray_bursters#i型のx線バースターの観測的特徴など"
-  },"2555": {
+  },"2562": {
     "doc": "X線バースター",
     "title": "核燃焼殻の熱的不安定性",
     "content": "平衡状態 . 中性子星表面に降り注いだガスの薄い層が、核融合燃焼を起こした場合の安定性を議論しましょう。 降着した質量が形成した薄い層の厚さ\\(\\Delta r\\)は、中性子星半径に比べて十分薄いとしましょう。 すると、質量降着層は平行平板層として扱うことができます。 一般相対論による効果を無視すると、静水圧平衡を表す式\\(\\frac{dP}{dr} = - \\rho g\\)から . \\[P \\approx \\frac{\\Delta M}{4\\pi R^2 \\Delta r} g \\Delta r \\approx \\frac{\\Delta M}{4\\pi R^2} \\frac{GM}{R^2} = \\sigma g_s \\tag{6}\\] のようになります。 ここで中性子星表面での重力と柱密度を . \\[g_s = \\frac{GM}{R^2}, \\quad \\sigma = \\rho \\Delta r = \\frac{\\Delta M}{4\\pi R^2} \\tag{7}\\] のようにしました。 (7)式から、圧力\\(P\\)は\\(\\sigma\\)に線形に依存する程度で、ほぼ一定であることがわかります。 そして今の設定では、エネルギー保存の方程式は . \\[C_P \\frac{dT}{dt} \\approx \\epsilon - \\epsilon_\\mathrm{rad} \\tag{8}\\] のように簡単化することができます。 さらに . \\[T \\frac{ds}{dt} = T C_P \\left( \\frac{d \\ln T}{dt} - \\nabla_\\mathrm{ad} \\frac{d \\ln P}{dt}\\right) \\approx C_P \\frac{dT}{dt} \\tag{9}\\] のように近似しましょう。 これは断熱膨張による冷却効果を無視したことに対応します。 そして . \\[\\nabla \\cdot \\mathbf{F} = \\nabla \\cdot \\left( - \\frac{16 \\sigma_\\mathrm{SB} T^3}{3\\kappa \\rho} \\nabla T\\right) \\approx \\frac{4ac T^4}{3\\kappa \\rho \\Delta r^2} = \\rho \\epsilon_\\mathrm{rad} \\tag{10}\\] のようにしましょう。 途中、\\(4\\sigma_\\mathrm{SB} = ac\\)であり、\\(a\\)は放射定数です。 ここから . \\[\\epsilon_\\mathrm{rad} = \\frac{4ac T^4}{3\\kappa \\rho^2 \\Delta r^2} = \\frac{4ac T^4}{3\\kappa \\sigma^2} \\tag{11}\\] のようになります。 . 摂動を加えたときの安定性解析 . 熱的な安定性を調べるために、温度に次のような擾乱が加わったとしましょう。 . \\[T(t) = T_0 + \\delta T (t) \\tag{12}\\] ここで\\(T_0\\)は摂動がない状態での温度、そして\\(\\delta T\\)は温度の摂動を表します。 (8)式より . \\[C_P \\frac{d}{dt}(T_0 + \\delta T) = C_P \\frac{d \\delta T}{dt} \\approx \\epsilon (T_0 + \\delta T) - \\epsilon_\\mathrm{rad} (T_0 + \\delta T) \\tag{13}\\] \\(\\epsilon, \\epsilon_\\mathrm{rad}\\)も線形化しましょう。 . \\[\\epsilon (T_0 + \\delta T) \\approx \\epsilon (T_0) + \\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_{T_0} \\delta T \\tag{14}\\] \\[\\epsilon_\\mathrm{rad} (T_0 + \\delta T) \\approx \\epsilon_\\mathrm{rad} (T_0) + \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_{T_0} \\delta T \\tag{15}\\] 平衡状態では\\(C_P \\frac{dT_0}{dt} = \\epsilon(T_0) - \\epsilon_\\mathrm{rad} (T_0) =0\\)より . \\[C_P \\frac{d \\delta T}{dt} \\approx \\left. \\left( \\frac{\\partial \\epsilon}{\\partial T} - \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} \\delta T \\ \\Longrightarrow \\ C_P \\frac{d}{dt} \\left( \\frac{\\delta T}{T_0}\\right) = F \\frac{\\delta T}{T_0} \\tag{16}\\] ここで . \\[F = \\frac{1}{C_P T_0} \\left. \\left( \\frac{\\partial \\epsilon}{\\partial T} - \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} \\tag{17}\\] です。 これをもう少し具体的に整理していきましょう。 \\(\\epsilon\\)(核融合反応による項)を計算していきましょう。 圧力が平衡状態のままの一定に保たれている場合、密度も変化するため . \\[\\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_P = \\left. \\frac{\\partial \\epsilon}{\\partial T} \\right|_\\rho + \\left. \\frac{\\partial \\epsilon}{\\partial \\rho} \\right|_T \\left. \\frac{\\partial \\rho}{\\partial T} \\right|_\\rho \\tag{19}\\] のような連鎖律となります。 両辺を対数微分にすると . \\[\\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_P = \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_\\rho + \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln \\rho} \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P = \\epsilon_T + \\epsilon_\\rho \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\tag{20}\\] のようになります。 途中 . \\[\\epsilon_T \\equiv \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} \\right|_\\rho, \\quad \\epsilon_\\rho \\equiv \\left. \\frac{\\partial \\ln \\epsilon}{\\partial \\ln \\rho} \\right|_T \\tag{21}\\] としました。 同様に、放射エネルギー損失(11)式の温度依存性から . \\[\\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_P = \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T} \\right|_\\rho + \\left. \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial \\rho} \\right|_T \\left. \\frac{\\partial \\rho}{\\partial T} \\right|_P \\tag{22}\\] となります。 両辺を対数微分にすると . \\[\\begin{align} \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T} \\right|_P &amp;= \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T} \\right|_\\rho + \\left. \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln \\rho} \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\notag \\\\ &amp;= \\left. \\frac{\\partial}{\\partial \\ln T} (\\ln T^4 - \\ln \\kappa - \\ln \\rho^2) \\right|_\\rho + \\left. \\frac{\\partial}{\\partial \\ln \\rho} (\\ln T^4 - \\ln \\kappa - \\ln \\rho^2) \\right|_T \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\notag \\\\ &amp;= 4 - \\left. \\frac{\\partial \\ln \\kappa }{\\partial \\ln T} \\right|_\\rho - \\left( \\left. \\frac{\\partial \\ln \\kappa}{\\partial \\ln \\rho} \\right|_T + 2\\right) \\left. \\frac{\\partial \\ln \\rho }{\\partial \\ln T} \\right|_P = 4 - \\kappa_T - (\\kappa_\\rho + 2) \\left. \\frac{\\partial \\ln \\rho }{\\partial \\ln T} \\right|_P \\tag{23} \\end{align}\\] となります。 先程と同様に、途中 . \\[\\kappa_T \\equiv \\left. \\frac{\\partial \\ln \\kappa }{\\partial \\ln T} \\right|_\\rho, \\quad \\kappa_\\rho \\equiv \\left. \\frac{\\partial \\ln \\kappa}{\\partial \\ln \\rho} \\right|_T \\tag{24}\\] のように置きました。 以上を用いて(17)式を整理しましょう。 . \\[\\begin{align} F &amp;= \\frac{1}{C_P T_0^2} \\left. \\left( \\epsilon \\frac{T}{\\epsilon} \\frac{\\partial \\epsilon}{\\partial T} - \\epsilon_\\mathrm{rad} \\frac{T}{\\epsilon_\\mathrm{rad}} \\frac{\\partial \\epsilon_\\mathrm{rad}}{\\partial T}\\right) \\right|_{T_0} = \\frac{1}{C_P T_0^2} \\left. \\left( \\epsilon \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} - \\epsilon_\\mathrm{rad} \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T}\\right) \\right|_{T_0} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left. \\left( \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\frac{\\partial \\ln \\epsilon}{\\partial \\ln T} - \\frac{\\partial \\ln \\epsilon_\\mathrm{rad}}{\\partial \\ln T}\\right) \\right|_{T_0} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left\\{ \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\left( \\epsilon_T + \\epsilon_\\rho \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right) - 4 + \\kappa_T + (\\kappa_\\rho + 2) \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right\\} \\notag \\\\ &amp;= \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} \\left\\{ \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\epsilon_T - 4 + \\kappa_T + \\left( \\frac{\\epsilon}{\\epsilon_\\mathrm{rad}} \\epsilon_\\rho + \\kappa_\\rho + 2 \\right) \\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P \\right\\} \\tag{25} \\end{align}\\] 本来は(25)式の+2がいらないらしい...計算ミス？結果としては同じような振る舞いとなるからまぁﾖｼ(๑˃̵ᴗ˂̵)و . 不安定となる条件は？ . (16)式から . \\[\\frac{\\delta T}{T_0} \\propto \\exp \\left( Ft/ C_P\\right) \\tag{26}\\] のようになります。 \\(F&gt;0\\)の場合、摂動温度が指数関数的に増大することがわかります。 そこで(25)式から、現実的な場合に\\(F&gt;0\\)となるかどうかを調べてみましょう。 中性子星表面に降着したガスが、理想気体であるとすると . \\[P = \\frac{\\rho k_B T}{\\mu m_p} \\ \\Longrightarrow \\ \\ln P = \\ln \\rho + \\ln T \\ \\Longrightarrow \\ d \\ln P = d\\ln \\rho + d\\ln T \\tag{27}\\] のようになります。 圧力が一定の場合 . \\[\\left. \\frac{\\partial \\ln \\rho}{\\partial \\ln T} \\right|_P = -1 \\tag{28}\\] となることがわかります。 さらに現実的な場合においては . \\[\\epsilon_\\rho \\sim 1, \\quad \\kappa_\\rho \\sim 1, \\quad \\kappa_T \\sim 0, \\quad \\epsilon \\simeq \\epsilon_\\mathrm{rad} \\tag{29}\\] が良い近似として成り立ちます。 すると(25)式は . \\[F \\approx \\frac{\\epsilon_\\mathrm{rad}}{C_P T_0^2} (\\epsilon_T - 8 ) \\tag{30}\\] となります。 以上から\\(\\epsilon_T \\gg 1\\)であるなら、温度が指数的に増加し、不安定であるとわかります。 例えば、トリプルアルファ反応によるヘリウム生成過程で発生するエネルギーは . \\[\\epsilon_{3\\alpha} \\approx 5.1 \\times 10^{21} \\frac{\\rho_2^2 Y^3}{T_8^3} \\exp \\left( - \\frac{44.04}{T_8}\\right) \\ [\\mathrm{erg/g/s}] \\tag{31}\\] です。 ここで\\(\\rho_2 = \\rho / 10^2 \\mathrm{g}, T_8 = T/10^8 \\mathrm{K}\\)、そして\\(Y\\)はヘリウム組成比です。 ここから、ヘリウム燃焼温度である\\(T_8 \\sim 1\\)では . \\[\\epsilon_T \\approx -3 + \\frac{44.04}{T_8} \\sim 41 \\tag{32}\\] のようになり、ヘリウム燃焼は中性子星表面の薄い殻部分では強く不安定であることがわかります。 これにより質量が降り積もった中性子星表面で核燃焼が暴走し、X線バーストが発生します。 CNOサイクルによる水素燃焼の場合 . \\[\\epsilon_\\mathrm{CNO} \\approx 8.67 \\times 10^{27} X_\\mathrm{CNO} X \\rho T_6^{-2/3} \\exp \\left( - \\frac{152.28}{T_6^{1/3}}\\right) \\ [\\mathrm{erg/g/s}] \\tag{33}\\] です。 ここで\\(T_6 = T / 10^6 \\mathrm{K}\\)です。 \\(T_6 \\sim 10\\)の場合 . \\[\\epsilon_T \\approx - \\frac{2}{3} + \\frac{50.76}{T_6^{1/3}} \\sim 23 \\tag{34}\\] のように値が求まります。 これは、水素燃焼も同様に不安定であることがわかります。 しかし\\(T \\gtrsim 10^8 \\mathrm{K}\\)の高温でのCNO燃焼の場合、エネルギー発生率は\\(\\epsilon \\approx 5.8 \\times 10^{15} Z_\\mathrm{CNO} [\\mathrm{erg/g/s}]\\)のように温度にほぼ依存しない形となります。 以上から、\\(\\frac{\\partial \\epsilon}{\\partial T} \\sim 0\\)となり、水素燃焼が安定に起こることがわかります。 . 質量降着率とX線バーストの関係 . ここまで見てきたように、温度によってX線バーストを引き起こす核燃焼が異なることがわかります。 伴星から中性子星に降着する物質においてヘリウム組成比が大きくなると、表面で起こる薄い殻におけるヘリウム燃焼は不安定となり、これがX線バーストを引き起こします。 この不安定性は質量降着率にも依存します。 質量降着率とX線バーストにおける種類の関係を、以下の表にまとめました。 . | 降着率 | 核燃焼のタイプ | . | \\(\\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 2.6 \\times 10^{-8}\\) | 水素とヘリウムの混合した層内で、安定して水素とヘリウム核燃焼が起こる | . | \\(2.6 \\times 10^{-8} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 10^{-9}\\) | 水素とヘリウムの混合した層内で、熱的に不安定なヘリウムフラッシュが起こる | . | \\(10^{-9} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1}) &gt; 2 \\times 10^{-10}\\) | 水素燃焼が安定に燃えたのち、生成物であるヘリウムが水素層の下に蓄積する。その後ヘリウム量がある臨界値に達すると、熱的に不安定なヘリウムのみのフラッシュが起こる | . | \\(2 \\times 10^{-10} &gt; \\dot{M}/(M_\\odot \\mathrm{yr}^{-1})\\) | 熱的に不安定な水素燃焼が、フラッシュを引き起こす | . Bildsten (1997)より。 . ",
     "url": "/compact/x_ray_bursters#%E6%A0%B8%E7%87%83%E7%84%BC%E6%AE%BB%E3%81%AE%E7%86%B1%E7%9A%84%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7",
     
     "relUrl": "/compact/x_ray_bursters#核燃焼殻の熱的不安定性"
-  },"2556": {
+  },"2563": {
     "doc": "X線バースター",
     "title": "最近の観測: スーパーバースト",
     "content": "小質量X線連星の中には、X線バーストよりもさらに明るい突発現象を起こすことがあります。 これをスーパーバーストと呼びます。 これは Cornelisse et al. (2000)で初めて報告されました。 通常のX線バーストの総エネルギーは\\(10^{39}\\)ergですが、スーパーバーストでは\\(10^{42}\\)ergにも達します。 また通常のX線バーストが十秒程度で元の明るさに戻るのに対し、スーパーバーストでは1時間以上(場合によっては数日)かけてゆっくりと元の明るさに戻ります。 このスーパーバーストの原因は、降着した外層の下部に蓄積した炭素などの重元素の核融合燃焼による、特大の爆発と考えられています。 炭素などの重元素の核燃焼が点火することで、その上部に蓄積している水素やヘリウムの核燃焼にも点火が起き、特大の爆発が起こるのです。 . Aoyama et al. (2025)より。 . ",
     "url": "/compact/x_ray_bursters#%E6%9C%80%E8%BF%91%E3%81%AE%E8%A6%B3%E6%B8%AC-%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B9%E3%83%88",
     
     "relUrl": "/compact/x_ray_bursters#最近の観測-スーパーバースト"
-  },"2557": {
+  },"2564": {
     "doc": "X線バースター",
     "title": "参考文献",
     "content": "[1] Galloway et al., 2020, “The Multi-INstrument Burst ARchive (MINBAR)” [2] Belian et al., 1972, “A Probable Precursor to the X-Ray Nova Centaurus XR-4” [3] Bildsten, 1997, “Thermonuclear Burning on Rapidly Accreting Neutron Stars” [4] Zand, 2017, “Understanding superbursts” [5] Cornelisse et al., 2000, “The longest thermonuclear X-ray burst ever observed?. A BeppoSAX Wide Field Camera observation of 4U 1735-44” [6] Aoyama et al., 2025, “Thermonuclear Superburst of MAXI J1752-457 Observed with NinjaSat and MAXI” [7] Zand, “X-ray bursts and superbursts” [8] 小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象” . ",
     "url": "/compact/x_ray_bursters#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/compact/x_ray_bursters#参考文献"
-  },"2558": {
+  },"2565": {
     "doc": "X線バースター",
     "title": "X線バースター",
     "content": ". | X線バースター . | I型のX線バースターの観測的特徴など | 核燃焼殻の熱的不安定性 . | 平衡状態 | 摂動を加えたときの安定性解析 | 不安定となる条件は？ | 質量降着率とX線バーストの関係 | . | 最近の観測: スーパーバースト | 参考文献 | . | . ",
     "url": "/compact/x_ray_bursters",
     
     "relUrl": "/compact/x_ray_bursters"
-  },"2559": {
+  },"2566": {
     "doc": "X線パルサー",
     "title": "X線パルサー",
     "content": " ",
     "url": "/compact/x_ray_pulsars#x%E7%B7%9A%E3%83%91%E3%83%AB%E3%82%B5%E3%83%BC",
     
     "relUrl": "/compact/x_ray_pulsars#x線パルサー"
-  },"2560": {
+  },"2567": {
     "doc": "X線パルサー",
     "title": "アルヴェーン半径",
     "content": "降着流が球対称であると仮定しましょう。 中心にいる中性子星の質量を\\(M\\)、半径を\\(R\\)としましょう。 中性子星が双極子磁場を持っているとして . \\[B \\approx \\frac{\\mu}{r^3} \\tag{1}\\] のように書けるとします。 ここで\\(\\mu = B_s R^3\\)は磁気双極子モーメント、\\(r\\)は中心星からの距離です。 すると、この双極子磁場による磁気圧は . \\[P_\\mathrm{mag} = \\frac{B^2}{8\\pi} = \\frac{\\mu^2}{8\\pi r^6} \\tag{2}\\] となります。 中心にいる中性子星への降着が定常的であり、\\(\\dot{M} = 4\\pi r^2 \\rho v\\)が一定であるとしましょう。 磁気圧と降着ガスの動圧 (ram presure) \\(P_\\mathrm{ram} = \\rho v^2\\)が等しくなる半径を、\\(r_M\\)としましょう。 そして降着ガスの自由落下速度を \\(v_\\mathrm{ff}= \\sqrt{2GM/r}\\)とします。 すると . \\[\\begin{align} &amp;\\frac{\\mu^2}{8\\pi r_M^6} = \\rho v^2 = \\vert \\rho v \\vert v_\\mathrm{ff} = \\frac{\\dot{M}}{4\\pi r_M^2} \\sqrt{\\frac{2MG}{r_M}} \\notag \\\\ &amp;\\Longrightarrow \\ r_M^\\mathrm{(sph)} = \\left( \\frac{\\mu^4}{8GM\\dot{M}^2}\\right)^{1/7} \\simeq 5.1 \\times 10^8 \\dot{M}_{16}^{-2/7} m_1^{-1/7} \\mu_{30}^{4/7} \\ [\\mathrm{cm}] \\tag{3} \\end{align}\\] のようになります。 ここで\\(\\dot{M}_{16} \\equiv \\dot{M} / (10^{16} \\mathrm{g/s}), m_1 = M/M_\\odot, \\mu_{30} = \\mu / (10^{30} \\mathrm{G \\ cm^2})\\)です。 \\(\\mu = 10^{30} \\mathrm{G \\ cm^2}\\)は、\\(B_s = 10^{12} \\mathrm{G}, R = 10^6 \\mathrm{cm}\\)に対応します。 この\\(r_M\\)をアルヴェーン半径 (Alfvén radius)と呼びます。 ここで、降着ガスが重力エネルギーを解放することにより放出される光度を\\(L_\\mathrm{acc} = GM\\dot{M} / R\\)として、\\(\\dot{M}\\)を消去すると . \\[r_M^\\mathrm{(sph)} = \\left( \\frac{\\mu^4 GM}{8 R^2 L_\\mathrm{acc}^2} \\right)^{1/7} \\simeq 2.9 \\times 10^8 m_1^{1/7} R_6^{-2/7} L_{37}^{-2/7} \\mu_{30}^{4/7} \\tag{4}\\] のようにも整理できます。 ここで、\\(R_6 = R/10^6 \\mathrm{cm}, L_{37} = L_\\mathrm{acc} / 10^{37} \\mathrm{erg/s}\\)です。 円盤降着に対しては、アルヴェーン半径は . \\[r_M^\\mathrm{(disc)} \\approx 0.5 r_M^\\mathrm{(sph)} \\tag{5}\\] のように経験的に近似されます。 \\(M \\sim M_\\odot, R \\sim 10^6 \\mathrm{cm}\\)のような典型的な中性子星のとき、\\(r_M^\\mathrm{(disc)} &lt; R\\)となる臨界磁場強度を\\(B_{s:\\mathrm{crit}}\\)としましょう。 そして\\(L_\\mathrm{acc} \\sim 10 L_\\mathrm{Edd} \\sim 1.2 \\times 10^{39} \\mathrm{erg/s}\\)とすると . \\[B_{s:\\mathrm{crit}} \\sim 1.7 \\times 10^9 \\ [\\mathrm{G}] \\tag{6}\\] のようになります。 \\(B_s &lt; B_{s: \\mathrm{crit}}\\)の場合、双極子磁場が降着に与える影響は少ないと考えることができます。 . ",
     "url": "/compact/x_ray_pulsars#%E3%82%A2%E3%83%AB%E3%83%B4%E3%82%A7%E3%83%BC%E3%83%B3%E5%8D%8A%E5%BE%84",
     
     "relUrl": "/compact/x_ray_pulsars#アルヴェーン半径"
-  },"2561": {
+  },"2568": {
     "doc": "X線パルサー",
     "title": "Fastness parameter と共回転半径",
     "content": "次に、中性子星の双極子磁場が、中性子星のスピン角速度\\(\\Omega_\\ast\\)と同じ角速度で共回転している場合を考えましょう。 先ほどのアルヴェーン半径より内側\\((r \\lesssim r_M)\\)を中性子星磁気圏とし、そこに存在する物質は磁場と強く相互作用しているために、磁力線に沿った方向にしか運動できないとします。 さらに磁気圏より外側 \\((r \\gtrsim r_M)\\)にいる降着物質は、ケプラー回転による円盤を形成しており、その速度は . \\[v_\\varphi \\approx r \\Omega_K (r) = \\sqrt{\\frac{GM}{r}} \\tag{7}\\] であるとします。 この設定で、\\(r = r_M\\)で降着物質に働く力について考えてみましょう。 共回転する磁気圏から見ると、アルヴェーン半径にいる降着物質には、遠心力\\(r_M \\Omega_\\ast^2\\)が働きます。 物質が中性子星に降着するには、重力が遠心力より大きくなければなりません。 よって . \\[r_M \\Omega_\\ast^2 &lt; r_M \\Omega_K^2 (r_M) \\ \\Longrightarrow \\ \\omega_\\ast \\equiv \\frac{\\Omega_\\ast}{\\Omega_K (r_M)} &lt; 1 \\tag{8}\\] とわかります。 この\\(\\omega_\\ast\\)をfastness parameterと呼びます。 外側から降着する物質の角速度が、共回転する磁気圏と同じ角速度になる半径を、共回転半径 \\(r_\\Omega\\)としましょう。 すなわち . \\[\\Omega_K (r_\\Omega) = \\Omega_\\ast = \\frac{2\\pi}{P_\\ast} \\ \\Longrightarrow \\ r_\\Omega = \\left( \\frac{GM P_\\ast^2}{4\\pi^2}\\right)^{1/3} \\simeq 1.5 \\times 10^8 P_\\ast^{2/3} m_1^{1/3} \\ [\\mathrm{cm}] \\tag{9}\\] ここで、\\(P_\\ast = \\frac{2\\pi}{\\Omega_\\ast}\\)は中性子星の自転周期です。 \\(r = r_M\\)でガスが遠心力により離れていかないためには . \\[\\Omega_K (r_\\Omega) = \\Omega_\\ast &lt; \\Omega_K (r_M) \\ \\Longrightarrow \\ r_\\Omega &gt; r_M \\tag{10}\\] であることもわかります。 . ",
     "url": "/compact/x_ray_pulsars#fastness-parameter-%E3%81%A8%E5%85%B1%E5%9B%9E%E8%BB%A2%E5%8D%8A%E5%BE%84",
     
     "relUrl": "/compact/x_ray_pulsars#fastness-parameter-と共回転半径"
-  },"2562": {
+  },"2569": {
     "doc": "X線パルサー",
     "title": "平衡状態での自転周期",
     "content": "中性子星への質量降着が非常に長い時間に渡って行われると、降着物質が持つ角運動量により中性子星の自転が速くなることが考えられます。 \\(r = r_M\\)での重力と遠心力が等しくなるとき、物質は降着を起こさなくなると考えることができます。 (8)式の\\(\\omega_\\ast = 1\\)から . \\[\\begin{align} P_\\mathrm{eq} &amp;\\equiv \\frac{2\\pi}{\\Omega_K (r_M)} = \\frac{2\\pi}{\\sqrt{GM}} r_M^{3/2} \\simeq \\frac{2\\pi}{\\sqrt{G m_1 M_\\odot}} (0.5 \\times 2.9 \\times 10^8 m_1^{1/7} R_6^{-2/7} L_{37}^{-2/7} \\mu_{30}^{4/7})^{3/2} \\notag \\\\ &amp;\\simeq 1.0 m_1^{-2/7} R_6^{-3/7} L_{37}^{-3/7} \\mu_{30}^{6/7} \\ [\\mathrm{s}]\\tag{11} \\end{align}\\] のように求まります。 これは、質量降着をしている強磁場中性子星の最小自転周期とも言えます。 \\(L = L_\\mathrm{Edd} = 1.3 \\times 10^{38} \\mathrm{erg/s}, M=M_\\odot, R = 10^6 \\mathrm{cm}\\)の場合 . \\[P_\\mathrm{eq} \\simeq 2 \\times 10^{-3} B_9^{6/7} \\ [\\mathrm{s}] \\tag{12}\\] のようになります。 ここで\\(B_9 = B/10^9 \\mathrm{G}\\)であり、\\(\\mu = B R^3\\)を用いました。 (12)式を\\(P_\\mathrm{eq} \\propto B\\)のように近似しましょう。 さらに、双極子放射から導出した磁場と自転周期\\(P\\)と自転周期の変化率\\(\\dot{P}\\)の関係式 . \\[B = \\sqrt{\\frac{3c^2 I}{2\\pi^2 R^6} P \\dot{P}} \\tag{13}\\] を用いると . \\[\\dot{P}_\\mathrm{spinup} \\simeq 5 \\times 10^{-16} R_6^6 I_{45}^{-1} P_\\mathrm{eq} \\tag{14}\\] のようになります。 \\(P-\\dot{P}\\)平面に中性子星をプロットすると、このスピンアップの直線が現れることを示しています。 . ",
     "url": "/compact/x_ray_pulsars#%E5%B9%B3%E8%A1%A1%E7%8A%B6%E6%85%8B%E3%81%A7%E3%81%AE%E8%87%AA%E8%BB%A2%E5%91%A8%E6%9C%9F",
     
     "relUrl": "/compact/x_ray_pulsars#平衡状態での自転周期"
-  },"2563": {
+  },"2570": {
     "doc": "X線パルサー",
     "title": "質量降着による強磁場を持つ中性子星のスピンアップ",
     "content": "中性子星表面での磁場が\\(B \\gtrsim B_{s: \\mathrm{crit}} \\sim 10^9 \\mathrm{G}\\)の場合、アルヴェーン半径\\(r_M\\)が中性子星半径\\(R\\)より大きくなり、中性子星磁気圏の磁場が降着流に強く影響を与えます。 自転する中性子星と共回転する(双極子)磁場に貫かれた磁気圏では、プラズマは磁力線に沿った方向に運動します。 そのため、降着円盤の降着流は磁力線に沿って、中性子星磁極方向に集まります。 このようにして磁極領域に形成される降着柱 (accretion column)は、圧縮され高温度になり、X線やγ線を放出します。 磁軸と自転軸が一致していない場合、磁極にある降着柱からの高エネルギー放射が自転周期とともに変化し、X線がパルスのように見えるX線パルサーとして観測されます。 スピンが平衡状態になる前の\\(\\omega_\\ast &lt; 1\\)の場合、アルヴェーン半径に位置する降着円盤中のガスの軌道運動速度は、磁場の共回転速度を上回っています。 共回転速度と軌道運動速度が同じ方向の場合、\\(r \\sim r_M\\)の降着ガスが共回転磁気圏にトルクを与え、スピンアップさせます。 このトルクが内部へと伝わり、最終的に中性子星をスピンアップさせることになります。 したがって、ガスが降着円盤の内側に移動するにつれて、軌道運動の速度\\(v_\\varphi\\)が\\(r_M \\Omega_K (r_M)\\)から\\(r_M \\Omega_\\ast\\)に急激に変化するような遷移領域が、\\(r_M\\)付近に存在することになります。 (磁気圏内のプラズマと磁場は中性子星とともに共回転していることを仮定しています。したがって磁場のトロイダル成分 \\(B_\\varphi\\)は\\(r \\sim r_M\\)付近の遷移領域で生成されることに注意が必要です。) 今、その遷移領域の幅を\\(\\delta (\\ll r_M)\\)とすると、自転する中性子星の角運動量の満たす方程式は . \\[I \\frac{d\\Omega_\\ast}{dt} = \\dot{M} \\ell_0 + N \\tag{15}\\] となります。 ここで\\(I\\)は中性子星の慣性モーメント、\\(N\\)は遷移領域の外側からくるトルク、そして\\(\\ell_0 = \\sqrt{GM r_M}\\)は\\(r = r_M\\)での単位質量あたりの角運動量です。 \\(N\\)が無視できるとすると . \\[\\begin{align} \\dot{\\nu} &amp;= \\frac{1}{2\\pi} \\frac{d\\Omega_\\ast}{dt} = \\frac{\\dot{M} \\ell_0}{2\\pi I} \\notag \\\\ &amp;\\simeq \\frac{R L_\\mathrm{acc}}{2\\pi I} \\sqrt{\\frac{r_M}{GM}} \\underbrace{\\simeq}_{(4)} \\frac{10^{43} R_6 L_{37}}{2\\pi \\times 10^{45} I_{45}} \\sqrt{\\frac{0.5 \\times 2.9 \\times 10^8}{6.67 \\times 10^{-8} \\times 2 \\times 10^{33} m_1 }} m_1^{1/14} R_6^{-1/7} L_{37}^{-1/7} \\mu_{30}^{2/7} \\notag \\\\ &amp;\\simeq 1.8 \\times 10^{-12} m_1^{-3/7} R_6^{6/7} L_{37}^{6/7} \\mu_{30}^{2/7} I_{45}^{-1} \\ [\\mathrm{Hz/s}] \\tag{16} \\end{align}\\] のようになります。 ここで\\(I_{45} = I / 10^{45} \\mathrm{g/cm^2}\\)であり、途中\\(L_\\mathrm{acc} = GM \\dot{M} / R\\)を用いました。 すると . \\[P = \\frac{2\\pi}{\\Omega} = \\frac{1}{\\nu} \\ \\Longrightarrow \\ \\dot{P} = - \\frac{\\dot{\\nu}}{\\nu^2} = - P^2 \\dot{\\nu} \\tag{17}\\] より . \\[\\begin{align} - \\frac{\\dot{P}}{P} &amp;= P \\dot{\\nu} \\simeq 1.8 \\times 10^{-12} m_1^{-3/7} R_6^{6/7} \\mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\\mathrm{s}^{-1}] \\notag \\\\ &amp;\\simeq 5.7 \\times 10^{-5} m_1^{-3/7} R_6^{6/7} \\mu_{30}^{2/7} I_{45}^{-1} P L_{37}^{6/7} [\\mathrm{yr}^{-1}] \\tag{18} \\end{align}\\] となります。 スピンアップ率 \\(- \\dot{P} / P\\)が、\\(P L^{6/7}\\)に比例していることがわかります。 . ",
     "url": "/compact/x_ray_pulsars#%E8%B3%AA%E9%87%8F%E9%99%8D%E7%9D%80%E3%81%AB%E3%82%88%E3%82%8B%E5%BC%B7%E7%A3%81%E5%A0%B4%E3%82%92%E6%8C%81%E3%81%A4%E4%B8%AD%E6%80%A7%E5%AD%90%E6%98%9F%E3%81%AE%E3%82%B9%E3%83%94%E3%83%B3%E3%82%A2%E3%83%83%E3%83%97",
     
     "relUrl": "/compact/x_ray_pulsars#質量降着による強磁場を持つ中性子星のスピンアップ"
-  },"2564": {
+  },"2571": {
     "doc": "X線パルサー",
     "title": "降着柱",
     "content": "ここまで議論してきたように、強い磁場をもつ中性子星への降着はアルヴェーン半径で堰き止められ、磁力線に沿って磁極領域に流れていきます。 . それぞれ弱磁場の中性子星への降着と、強磁場の中性子星への降着の様子。 . ここでは、磁軸と回転軸が揃っていない強磁場を持つ中性子星について考えてみましょう。 簡単のため、中性子星磁場は双極子磁場であるとします。 . \\(\\theta\\)を磁軸からの角度とすると、双極子磁場の曲線の方程式は . \\[r = C \\sin^2 \\theta \\tag{19}\\] です。 磁力線と降着円盤が\\(r = r_M\\)で、角度\\(\\theta = \\alpha\\)で交差しているとすると . \\[C = \\frac{r_M}{\\sin^2 \\alpha} \\tag{20}\\] と求まります。 この磁力線が、\\(r = R, \\theta = \\beta\\)のように中性子星表面に根付いているとすると . \\[\\sin^2\\beta = \\frac{R}{C} = \\frac{R}{r_M} \\sin^2 \\alpha \\tag{21}\\] のようになります。 降着物質が、\\(\\pi R^2 \\sin^2 \\beta\\)の面積領域に降着するとしましょう。 この降着領域と中性子星表面との面積比は . \\[f_\\mathrm{disk} = \\frac{\\pi R^2 \\sin^2 \\beta}{4\\pi R^2} = \\frac{R \\sin^2 \\alpha}{4r_M} \\left( \\mathrm{or} \\ \\frac{R \\sin^2 \\alpha}{2r_M} \\right) \\tag{22}\\] のようになります。 (22)式の\\((\\cdots )\\)は、2つの磁極を考慮した場合のものです。 もし磁場がとても強い場合、降着物質は磁極領域の限られた面積部分に集まり、そこで重力エネルギーを解放することになります。 降着円盤から磁力線に沿ってガスが降着すると、磁極領域にガスが集まり、降着柱を形成します。 磁力線に沿って物質が降着すると、その途中でガスは超音速となり、衝撃波を形成すると考えられます。 . Becker &amp; Wolff (2007)より。 . このときのガスの落下速度を\\(v \\sim v_\\mathrm{ff} = \\sqrt{2GM/R} \\sim c/2\\)、そして\\(L_\\mathrm{acc} \\sim L_\\mathrm{Edd}\\)としましょう。 すると、この降着ガスを構成するプラズマ中の陽子の平均自由行程は . \\[\\lambda_d \\equiv \\frac{m^2 v^4}{2\\pi n e^4 \\ln \\Lambda} \\gtrsim 5 \\times 10^9 \\ [\\mathrm{cm}] \\gg R_\\ast \\sim 10^6 \\ [\\mathrm{cm}] \\tag{23}\\] と求まります。 ここでクーロン対数は\\(\\ln \\Lambda \\sim 20\\)としました。 もしこの降着柱部分で衝撃波が発生した場合、平均自由行程がとても長いため、この設定では衝突による衝撃波を形成することができません。 衝撃波の厚みは平均自由行程\\(\\lambda_d\\)より十分小さいため、このときにできる衝撃波は無衝突衝撃波ということになります。 最近でこそ無衝突衝撃波についてのPICシミュレーションなどが盛んに行われるようになりましたが、磁場がない場合ですら、無衝突衝撃波についてはまだよく理解されていません。 無衝突衝撃波の主な問題は、秩序だったエネルギーを拡散しランダム化するために、粘性以外の過程が必要となることです。 もう一つの困難な点として、質量降着率が大きくない場合でも、放射圧が降着流のダイナミクスに大きく影響する可能性があることです。 さらには、中性子星への降着の場合、強磁場を適切に考慮する必要があります。 ここではその困難な詳細を省いて、これまでに研究されてきた降着柱の理論モデルについて見ていきましょう。 主に3つのモデルが存在します。 . | エディントン降着率を下回る場合 \\((L_\\mathrm{acc} &lt; L_\\mathrm{Edd})\\)。放射圧無視、降着流中に衝撃波も存在しない。 | エディントン降着率を下回る場合 \\((L_\\mathrm{acc} &lt; L_\\mathrm{Edd})\\)。放射圧無視、降着流中に無衝突衝撃波が存在する。 | エディントン降着率を上回る場合 \\((L_\\mathrm{acc} &gt; L_\\mathrm{Edd})\\)。放射圧がガス圧を上回り、ガスが中性子星表面に落ち込むのをせき止める。光子と電子の衝突が起こるため、電子とともに動いている陽子も減速する。 | . 以降では、3番目のケースについて簡単に議論していきましょう。 降着柱での放射場のエネルギー密度は\\(U_\\mathrm{rad}\\)で、放射圧は\\(P_\\mathrm{rad} = U_\\mathrm{rad}/3\\)とします。 放射圧はガスを膨張させますが、中性子星磁場による磁気圧は降着流を圧縮し、狭い領域に閉じ込めます。 しかし簡単のため、ここでは磁場の応力は運動量保存方程式では無視することにしましょう。 定常的な流れを考えると . \\[-A \\rho v = \\dot{M} = \\mathrm{Const.} \\tag{24}\\] \\[\\rho v \\frac{\\partial v}{\\partial z} + \\frac{1}{3} \\frac{\\partial U_\\mathrm{rad}}{\\partial z} + g \\rho = 0 \\tag{25}\\] となります。 ここで質量降着率\\(\\dot{M}\\)は定数とし、降着を起こしている磁極領域の面積を\\(A = 4\\pi R^2 f_\\mathrm{disk}\\)としました。 (25)式でさらに重力を無視すると、(25)式は積分することができます。 . \\[U_\\mathrm{rad} = 3 \\rho \\vert v \\vert (v_\\mathrm{ff} - v) = 3 \\vert \\rho v \\vert v_\\mathrm{ff} (1 - Q^{1/2}) = 3 \\rho v_\\mathrm{ff}^2 (Q^{1/2} - Q) \\tag{26}\\] ここで\\(Q = v^2 / v_\\mathrm{ff}^2\\)です。 ガスは下向きに落下していくため、優先的に下向きに放射を散乱させます。 この効果による放射流束の修正を考慮すると . \\[\\mathbf{F} = - \\frac{c}{3} \\frac{m_p}{\\sigma_T \\rho} \\nabla U_\\mathrm{rad} + U_\\mathrm{rad} \\mathbf{v} \\tag{27}\\] のようになります。 ここで\\(\\kappa = \\sigma_T / m_p\\)は、水素のみから構成されるプラズマガスでの電子散乱による不透明度です。 ガスの落下による運動エネルギーの減少が、即座に全て放射に変換されるとすると . \\[\\nabla \\cdot \\mathbf{F} = - \\rho \\mathbf{v} \\cdot \\nabla \\left( \\frac{v^2}{2} \\right) = - \\rho v \\frac{\\partial }{\\partial z} \\left( \\frac{v^2}{2}\\right) \\tag{28}\\] とすることができます。 これらの式を用いると、以下のような\\(Q\\)に対する偏微分方程式を得ることができます。 . \\[\\nabla^2 Q = \\frac{\\sigma_T \\rho \\vert v \\vert}{c m_p} \\frac{\\partial}{\\partial z} (6 Q^{1/2} - 5Q) \\tag{29}\\] この微分方程式を、\\(z=0, \\infty\\)そして\\(r=r_c\\) (降着柱の半径) での境界条件のもとで積分をすれば、\\(Q\\)を求めることができます。 次の図は、横軸\\(\\kappa S r / c\\)、縦軸\\(\\kappa S z/c\\)のQの等高線を示したものです。 . Davidson (1973)より。a, b, cはそれぞれ\\(Q=0.9, 0.5, 0.1\\)の等高線を表す。 . 典型的な値\\(r_c = 10^5 \\mathrm{cm}, \\dot{M} = 10^{17} \\mathrm{g/s}, v = c/2\\)に対し、降着柱の底での温度\\(T_b\\)を求めてみましょう。 すると\\(\\rho \\vert v \\vert = 3 \\times 10^6 \\mathrm{g/cm^2/s}\\)であり、\\(U_\\mathrm{rad} = 1.4 \\times 10^{17} \\mathrm{erg/cm^3}\\)となります。 降着柱の底での光学的厚みが、放射場を熱化させるのに十分大きいとすると . \\[T_b = \\left( \\frac{c}{4\\sigma_\\mathrm{SB}} U_\\mathrm{rad} \\right)^{1/4} \\sim 6.6 \\times 10^7 \\ [\\mathrm{K}] \\tag{30}\\] と求まります。 この温度は、観測されるX線放射を十分説明することができます。 . ",
     "url": "/compact/x_ray_pulsars#%E9%99%8D%E7%9D%80%E6%9F%B1",
     
     "relUrl": "/compact/x_ray_pulsars#降着柱"
-  },"2565": {
+  },"2572": {
     "doc": "X線パルサー",
     "title": "最近の研究",
     "content": "X線パルサーの新しい描像 . これまで考えられてきたX線パルサーの描像は、中性子星の磁極方向に光のビームが出るというものです。 磁極を正面から覗き込めるときにのみ、中性子星からの光を観測することができます。 これは宇宙灯台のモデルと呼ばれ、これまで長らく考えられてきました。 それに対し、Kawashima et al. (2016)では降着柱の輻射流体シミュレーションを行い、これまでと異なる宇宙灯台モデルを提案しました。 この研究で新しく提案されたのは、降着柱の側面が明るく輝くモデルです。 . 左図は既存の宇宙灯台モデル、右図は新しいモデル。既存モデルは磁軸領域を見たときのみ眩しく見えるのに対し、新モデルは降着柱の側面が多く見えるときに眩しく見える。 . このモデルを考慮することで、これまではブラックホールと考えられてきた超高光度X線源 (Ultra-Luminous X-ray souces: ULXs)が、中性子星パルサーでも説明がつくことを示したのです。 . Kawashima et al. (2016)より。超臨界降着により形成される降着柱の、ガス密度と放射エネルギー密度のカラーコントア。右端のパネルは放射光度の動径分布を表したもの。 . Kawashima et al. (2016)より。降着柱の側面からエネルギーが流出する概念図。 . ",
     "url": "/compact/x_ray_pulsars#%E6%9C%80%E8%BF%91%E3%81%AE%E7%A0%94%E7%A9%B6",
     
     "relUrl": "/compact/x_ray_pulsars#最近の研究"
-  },"2566": {
+  },"2573": {
     "doc": "X線パルサー",
     "title": "一般相対論的磁気流体シミュレーション",
     "content": "同じくシミュレーション研究ですが、Inoue et al. (2023)では一般相対論の効果も含めた磁気流体計算を実施しました。 しかも、先ほどは降着柱の部分のみを計算していましたが、こちらの研究では降着円盤部分も含めた中性子星表面への降着の様子を3次元シミュレーションし、降着率による降着柱と磁気圏の . Inoue et al. (2023)より。左パネルから、降着率(初期トーラスのガス密度)が小さな順に計算結果を並べたもの。 . 降着率が小さいと降着柱が形成されていますが、降着率が大きい場合には磁気圏が消失していることがわかります。 . ",
     "url": "/compact/x_ray_pulsars#%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E7%A3%81%E6%B0%97%E6%B5%81%E4%BD%93%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3",
     
     "relUrl": "/compact/x_ray_pulsars#一般相対論的磁気流体シミュレーション"
-  },"2567": {
+  },"2574": {
     "doc": "X線パルサー",
     "title": "参考文献",
     "content": "[1] Becker &amp; Wolff, 2007, “Thermal and Bulk Comptonization in Accretion-powered X-Ray Pulsars” [2] Davidson, 1973, “Accretion at a Magnetic Pole of a Neutron Star” [3] Kawashima et al., 2016, “A radiation-hydrodynamics model of accretion columns for ultra-luminous X-ray pulsars” [4] Inoue et al., 2023, “Modeling of Thermal Emission from ULX Pulsar Swift J0243.6+6124 with General Relativistic Radiation MHD Simulations” [5] Frank, King, Raine, “Accretion Power in Astrophysics” [6] Longair, “High Energy Astrophysics” [7] 小山勝ニ, 嶺重慎, “ブラックホールと高エネルギー現象” . ",
     "url": "/compact/x_ray_pulsars#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/compact/x_ray_pulsars#参考文献"
-  },"2568": {
+  },"2575": {
     "doc": "X線パルサー",
     "title": "X線パルサー",
     "content": ". | X線パルサー . | アルヴェーン半径 | Fastness parameter と共回転半径 | 平衡状態での自転周期 | 質量降着による強磁場を持つ中性子星のスピンアップ | 降着柱 | 最近の研究 . | X線パルサーの新しい描像 | . | 一般相対論的磁気流体シミュレーション | 参考文献 | . | . ",
     "url": "/compact/x_ray_pulsars",
     
     "relUrl": "/compact/x_ray_pulsars"
-  },"2569": {
+  },"2576": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": "デバイ・ヒュッケルの理論で出現した以下のポテンシャルを、もとの方程式から求めてみましょう。 ここでは\\(\\mu = 1/\\lambda_D\\)とした、以下の方程式の解を求めます。 . \\[\\left( \\Delta - \\mu^2 \\right) \\phi = - 4\\pi q_0 \\delta^3(\\mathbf{r}) \\tag{1}\\] ",
     "url": "/plasma/yukawa_pot#%E6%B9%AF%E5%B7%9D%E5%9E%8B%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%81%AE%E5%B0%8E%E5%87%BA",
     
     "relUrl": "/plasma/yukawa_pot#湯川型ポテンシャルの導出"
-  },"2570": {
+  },"2577": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "フーリエ変換による方法",
     "content": "今回はフーリエ変換の方法を用いて解きます。 左辺の\\(\\phi\\)の逆フーリエ変換を考えると . \\[(\\Delta - \\mu^2) \\iiint_{-\\infty}^\\infty \\hat{\\phi}(\\mathbf{k}) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (\\Delta-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = \\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{2}\\] これと、右辺のデルタ関数の積分表示より . \\[\\iiint_{-\\infty}^\\infty \\hat{\\phi} (\\mathbf{k}) (-k^2-\\mu^2) e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} = - \\frac{4\\pi q_0}{(2\\pi)^3} \\iiint_{-\\infty}^\\infty e^{i \\mathbf{r} \\cdot \\mathbf{k}} d^3 \\mathbf{k} \\tag{3}\\] 両辺を比較することで . \\[\\hat{\\phi} (\\mathbf{k}) = \\frac{q_0}{2\\pi^2} \\frac{1}{k^2 + \\mu^2} \\tag{4}\\] を得ます。 逆フーリエ変換したものが求まったので、これをフーリエ変換すればそれが(1)式の解になります。 積分の取り方としては、\\(\\mathbf{r} \\cdot \\mathbf{k} = rk \\cos \\theta\\)のように、\\(\\mathbf{r}\\)からの偏角を用いた極座標設定にすると計算が便利です。 . \\[\\begin{align} \\phi(\\mathbf{r}) &amp;= \\frac{q_0}{2\\pi^2} \\iiint_{-\\infty}^\\infty \\frac{e^{i\\mathbf{r} \\cdot \\mathbf{k}}}{k^2 + \\mu^2} d^3 \\mathbf{k} \\underbrace{=}_{d^3 \\mathbf{k}= k^2 \\sin \\theta dk d\\theta d\\varphi} \\frac{q_0}{2\\pi^2} \\int_0^\\infty dk \\int_0^\\pi \\int_0^{2\\pi} d\\varphi e^{ikr \\cos \\theta} \\frac{k^2}{k^2 + \\mu^2} \\sin \\theta \\notag \\\\ &amp;\\underbrace{=}_{\\nu = \\cos \\theta} \\frac{q_0}{\\pi} \\int_0^\\infty dk \\int_{-1}^1 d\\nu e^{irk\\nu} \\frac{k^2}{k^2 + \\mu^2} = \\frac{q_0}{\\pi} \\int_0^\\infty \\frac{k^2}{k^2 + \\mu^2} \\frac{e^{irk} - e^{-irk}}{irk} dk \\notag \\\\ &amp;= \\frac{2q_0}{\\pi r} \\int_0^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk \\tag{5} \\end{align}\\] 最後に出てきた被積分関数は偶関数であるため、以下のように変形することができます。 . \\[\\phi (r) = \\frac{q_0}{\\pi r} \\int_{-\\infty}^\\infty \\frac{k \\sin rk}{k^2 + \\mu^2} dk = \\frac{q_0}{2i \\pi r} \\int_{-\\infty}^\\infty \\frac{k}{k^2 + \\mu^2} (e^{irk} - e^{-irk}) dk \\tag{6}\\] ",
     "url": "/plasma/yukawa_pot#%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AB%E3%82%88%E3%82%8B%E6%96%B9%E6%B3%95",
     
     "relUrl": "/plasma/yukawa_pot#フーリエ変換による方法"
-  },"2571": {
+  },"2578": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "複素平面上での積分",
     "content": "(6)式の積分を計算するために . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} \\quad (z = x+ iy) \\tag{7}\\] を、下図左パネルの複素平面上の閉曲路で積分することを考えましょう。 . \\[\\left\\{ \\begin{array}{lll} C_1 &amp; : &amp; 実軸上 -R \\rightarrow R \\\\ C_2 &amp; : &amp; z = R e^{i\\theta} \\quad (\\theta : 0 \\rightarrow \\pi) \\end{array} \\right. \\tag{8}\\] ただし、\\(R &gt; \\mu\\)とします。 留数定理より . \\[\\oint_{C_1 + C_2} f(z) dz = 2\\pi i \\mathrm{Res} (f; i\\mu) \\tag{9}\\] です。 ここで\\(\\mathrm{Res} (f; i\\mu)\\)は、関数\\(f(z)\\)の\\(z = i\\mu\\)における留数(residue)を表すものです。 留数を求めるために、\\(f(z)\\)を変形しましょう。 . \\[f(z) = \\frac{z}{z^2 + \\mu^2} e^{irz} = \\frac{1}{2} \\left( \\frac{1}{z-i\\mu} + \\frac{1}{z+ i\\mu} \\right) e^{irz} \\tag{10}\\] \\(e^{irz}\\)を\\(z = i\\mu\\)の周りでテイラー展開すると . \\[e^{irz} = e^{-r\\mu} + ir e^{-r\\mu} (z-i\\mu) + ((z-i\\mu)の2次以上の項)\\] のようになるため、 . \\[f(z) = \\frac{1}{2} \\frac{e^{-r\\mu}}{z-i\\mu} + \\frac{1}{2} ir e^{-r\\mu} + ((z-i\\mu)の1次以上の項) + \\frac{1}{2} \\frac{e^{irz}}{z+i\\mu} \\tag{11}\\] を得ます。 右辺において第一項以外は\\(z=i\\mu\\)で正則なので . \\[\\mathrm{Res}(f; i\\mu) = \\frac{1}{2} e^{-r\\mu} \\tag{12}\\] となります。 (9), (12)式より . \\[\\int_{-R}^R f(x) dx + \\int_{C_2} f(z) dz = i\\pi e^{-r\\mu} \\ \\underbrace{\\Longrightarrow}_{R \\rightarrow \\infty} \\ \\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r\\mu} - \\lim_{R \\rightarrow \\infty} \\int_{C_2} f(z) dz \\tag{13}\\] (13)式の極限部分の値を求めましょう。 \\(C_2\\)上では\\(z = R e^{i\\theta}, dz = iR e^{i\\theta} d\\theta\\)より . \\[\\begin{align} \\lim_{R\\rightarrow \\infty} \\left| \\int_{C_2} f(z) dz \\right| &amp;= \\lim_{R\\rightarrow \\infty} \\left| \\int_0^\\pi iR e^{i\\theta} \\frac{R e^{i\\theta}}{R^2 e^{2i\\theta} + \\mu^2} e^{irR e^{i\\theta}} d\\theta \\right| \\notag \\\\ &amp;\\leq \\lim_{R\\rightarrow \\infty} \\int_0^\\pi \\left| \\frac{i R^2 e^{2i\\theta}}{R^2 e^{2i\\theta} + \\mu^2}\\right| \\left| e^{irR\\cos \\theta} e^{-rR\\sin \\theta}\\right| d\\theta \\notag \\\\ &amp;\\leq \\lim_{R \\rightarrow \\infty} \\int_0^\\pi \\frac{R^2}{R^2 - \\mu^2} e^{-rR \\sin \\theta} d\\theta \\tag{14} \\end{align}\\] のように大きさを評価することができます。 最後の指数部分において、\\(0 \\leq \\sin \\theta \\leq 1 \\ (0 \\leq \\theta \\leq \\pi)\\)より、この極限値は0となります。 よって . \\[\\int_{-\\infty}^\\infty f(x) dx = i\\pi e^{-r \\mu} \\tag{15}\\] と求まります。 同様に(6)式の第二項を計算するために . \\[g(z) = \\frac{z}{z^2 + \\mu^2} e^{-irz} \\quad (z = x + iy) \\tag{16}\\] を、上図右パネルの複素平面上の閉曲路で積分を行います。 この場合は\\(z= -i\\mu\\)での留数を考えて計算を行うこと、そして経路が時計回りであることから符号に注意すると、次のようになります。 . \\[\\int_{-\\infty}^\\infty g(x) dx = -i\\pi e^{-r\\mu} \\tag{17}\\] (6), (15), (17)式より . \\[\\phi (r) = \\frac{q_0}{r} e^{-\\mu r} \\tag{18}\\] のようになります。 比較のために、普通のクーロンポテンシャル\\(\\phi(r) = q_0 / r\\)とともに図示したグラフを示します。 このグラフでは\\(q_0 = 1, \\mu = 1\\)として可視化しています。 . 青線はクーロンポテンシャル、橙線は湯川型ポテンシャルです。 (18)式からも明らかですが、湯川型ポテンシャルはクーロンポテンシャルよりも素早く減衰します。 \\(r=1/\\mu = 1.0\\)ではクーロンポテンシャルの\\(1/e\\)倍になります。 このことから\\(r=1/\\mu\\)程度が、ポテンシャルの影響がある範囲と見ることができます。 デバイ・ヒュッケルの理論から導かれた、弱結合プラズマ中での静電ポテンシャル\\(\\phi (r) = \\frac{q_0}{r} e^{-r/\\lambda_D}\\)では、\\(r = \\lambda_D\\)程度しかポテンシャルの影響がないことがわかります。 当然ながら、\\(\\mu = 1/\\lambda_D = 0\\)ではクーロンポテンシャルと等しくなります。 これは、元の数式である(1)式が . \\[\\Delta \\phi = - 4\\pi q_0 \\tag{19}\\] のように、真空中で点電荷を原点に置いた場合に一致することからもわかります。 . ",
     "url": "/plasma/yukawa_pot#%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2%E4%B8%8A%E3%81%A7%E3%81%AE%E7%A9%8D%E5%88%86",
     
     "relUrl": "/plasma/yukawa_pot#複素平面上での積分"
-  },"2572": {
+  },"2579": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "補遺: Juliaスクリプト",
     "content": "using Plots gr() len = 100 r = range(0.1, 2.0, length=len) coulomb = 1.0 ./ r yukawa = exp.(-r) ./ r plot(r, coulomb, linewidth=3, xlabel=\"r\", ylabel=\"Potential\", label=\"Coulomb\") plot!(r, yukawa, linewidth=3, label=\"Yukawa\") savefig(\"yukawa_pot_02.png\") . ",
     "url": "/plasma/yukawa_pot#%E8%A3%9C%E9%81%BA-julia%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88",
     
     "relUrl": "/plasma/yukawa_pot#補遺-juliaスクリプト"
-  },"2573": {
+  },"2580": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "参考文献",
     "content": "[1] Chen, “プラズマ物理入門” [2] 小野高幸, 三好由純, “太陽地球圏” [3] 田中基彦, 西川恭治, “高温プラズマの物理学” . ",
     "url": "/plasma/yukawa_pot#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/plasma/yukawa_pot#参考文献"
-  },"2574": {
+  },"2581": {
     "doc": "湯川型ポテンシャルの導出",
     "title": "湯川型ポテンシャルの導出",
     "content": ". | 湯川型ポテンシャルの導出 . | フーリエ変換による方法 | 複素平面上での積分 | 補遺: Juliaスクリプト | 参考文献 | . | . ",
     "url": "/plasma/yukawa_pot",
     
     "relUrl": "/plasma/yukawa_pot"
-  },"2575": {
+  },"2582": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta\\)関数",
     "content": "ゼータ関数には色々な種類がありますが、普通は宇宙物理の人間が示しているのはリーマンのゼータ関数のことです。これはやはりオイラーによって導入されていました。しかし、後にゲオルグ・フリードリヒ・ベルンハルト・リーマンが大きな貢献をしたことと、その時に好んで\\(\\zeta\\)(ゼータ)を用いて表現ため、この名前がつきました。 . ",
     "url": "/math/zeta#zeta%E9%96%A2%E6%95%B0",
     
     "relUrl": "/math/zeta#zeta関数"
-  },"2576": {
+  },"2583": {
     "doc": "ゼータ関数",
     "title": "定義",
     "content": "ゼータ関数を、ガンマ関数を用いて . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{u^{z-1}}{e^u-1} du\\] と定義します。 . \\[\\begin{aligned} \\zeta (z) &amp;= \\frac{1}{\\Gamma(z)} \\int_0^\\infty \\frac{e^{-u} u^{z-1}}{1-e^{-u}} \\underbrace{=}_{無限等比級数} \\frac{1}{\\Gamma(z)} \\int_0^\\infty e^{-u} u^{z-1} \\sum_{k=0}^\\infty e^{-ku} du = \\frac{1}{\\Gamma(z)} \\int_0^\\infty u^{z-1} \\sum_{k=1}^\\infty e^{-ku} du \\\\ &amp;= \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty u^{z-1} e^{-ku} du \\end{aligned}\\] \\(v = ku\\)とおくと . \\[\\zeta (z) = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\int_0^\\infty (v/k)^{z-1} e^{-v} \\frac{dv}{k} = \\frac{1}{\\Gamma(z)} \\sum_{k=1}^\\infty \\frac{1}{k^z} \\underbrace{\\int_0^\\infty v^{z-1} e^{-v} dv}_{=\\Gamma(z)} = \\sum_{k=1}^\\infty \\frac{1}{k^z}\\] となります。ガンマ関数で表現されていたゼータ関数が、整数の逆数の無限和で表現されることがわかりました。 では実際のガンマ関数の値はどのようなものになるでしょうか。\\(\\zeta(1), \\zeta(2), \\zeta(4)\\)の値を具体的に求めてみましょう。 . ",
     "url": "/math/zeta#%E5%AE%9A%E7%BE%A9",
     
     "relUrl": "/math/zeta#定義"
-  },"2577": {
+  },"2584": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (1)\\)の計算",
     "content": "関数\\(f(x) = 1/x (x&gt;0)\\)を考えてみましょう。ある正の整数\\(k\\)に対して . \\[\\int_k^{k+1} \\frac{1}{x} dx \\lt \\int_{k}^{k+1} \\frac{1}{k} dx = \\frac{1}{k} [x]_k^{k+1} = \\frac{1}{k}\\] であることがわかります(下図参照)。 . \\(\\sum_{k=1}^n\\)で和をとると、最左辺は . \\[\\int_1^{n+1} \\frac{1}{x} dx = [\\ln x]_1^{n+1} = \\ln (n+1)\\] \\[\\therefore \\ln (n+1) \\lt \\sum_{k=1}^n \\frac{1}{k}\\] この両辺を\\(\\lim_{n\\rightarrow \\infty}\\)とすると\\(\\zeta(1) = \\infty\\)であることがわかります。 . ",
     "url": "/math/zeta#zeta-1%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-1の計算"
-  },"2578": {
+  },"2585": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (2)\\)の計算",
     "content": "唐突ですが\\(y=x^2 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{1}{3\\pi} [x^3]^\\pi_{-\\pi} = \\frac{2\\pi^2}{3}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^2 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{2}{n\\pi} \\int_{-\\pi}^\\pi x \\sin nx dx \\\\ &amp;= \\frac{2}{n\\pi} \\left[ \\frac{1}{n} x \\cos nx \\right]_{-\\pi}^\\pi - \\frac{2}{n^2 \\pi} \\int_{-\\pi}^\\pi \\cos nx dx = \\frac{4}{n^2} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^2 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2} (-1)^n \\cos nx\\] フーリエ級数の公式より係数\\(a_0\\)は\\(1/2\\)したものを足していることに注意しましょう。ここに\\(x=\\pi\\)を代入すると . \\[\\pi^2 = \\frac{\\pi^2}{3} + \\sum_{n=1}^\\infty \\frac{4}{n^2}(-1)^{2n} = \\frac{\\pi^2}{3} + 4\\zeta(2) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(2) = \\frac{\\pi^2}{6}\\] これはバーゼルの問題と呼ばれており、他にも解法が存在します。ご自身で探求されるのも良いでしょう。 . ",
     "url": "/math/zeta#zeta-2%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-2の計算"
-  },"2579": {
+  },"2586": {
     "doc": "ゼータ関数",
     "title": "\\(\\zeta (4)\\)の計算",
     "content": "同様に\\(y=x^4 (-\\pi \\leq x \\leq \\pi)\\)が繰り返されている周期関数\\(f(x)\\)をフーリエ級数で表現することを考えましょう。 . \\[a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 dx = \\frac{1}{5\\pi} [x^5]^\\pi_{-\\pi} = \\frac{2\\pi^4}{5}\\] \\[\\begin{aligned} a_n &amp;= \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^4 \\cos nx dx = \\frac{1}{\\pi} \\left[ \\frac{1}{n} x^4 \\sin n x \\right]_{-\\pi}^\\pi - \\frac{4}{n\\pi} \\int_{-\\pi}^\\pi x^3 \\sin nx dx \\\\ &amp;= \\frac{4}{n\\pi} \\left[ \\frac{1}{n} x^3 \\cos nx \\right]_{-\\pi}^\\pi - \\frac{12}{n^2} \\underbrace{\\frac{1}{\\pi}\\int_{-\\pi}^\\pi x^2 \\cos nx dx}_{\\zeta(2)での計算より} = \\frac{8\\pi^2}{n^2} (-1)^n - \\frac{48}{n^4} (-1)^n \\end{aligned}\\] \\[b_n = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi x^4 \\sin nx dx \\underbrace{=}_{奇関数} 0\\] 以上より . \\[f(x) = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^n \\cos nx\\] ここに\\(x=\\pi\\)を代入すると . \\[\\pi^4 = \\frac{\\pi^4}{5} + \\sum_{n=1}^\\infty \\left( \\frac{8\\pi^2}{n^2} -\\frac{48}{n^4} \\right) (-1)^{2n} = \\frac{\\pi^4}{5} + 8\\pi^2 \\zeta(2) - 48 \\zeta(4) \\ \\Longrightarrow \\  \\therefore \\ \\zeta(4) = \\frac{\\pi^4}{90}\\] ",
     "url": "/math/zeta#zeta-4%E3%81%AE%E8%A8%88%E7%AE%97",
     
     "relUrl": "/math/zeta#zeta-4の計算"
-  },"2580": {
+  },"2587": {
     "doc": "ゼータ関数",
     "title": "参考文献",
     "content": ". | 数理系のための基礎と応用 微分積分II -理論を中心に-, 金子 | 解析入門I, 杉浦 | 物理数学, 高橋 | 物理数学I, 福山, 小形 | 2017 大学入試短期集中ゼミ数学 III, 福島 國光 | 高校数学の美しい物語 | Wolfram MathWorld | . ",
     "url": "/math/zeta#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE",
     
     "relUrl": "/math/zeta#参考文献"
-  },"2581": {
+  },"2588": {
     "doc": "ゼータ関数",
     "title": "ゼータ関数",
     "content": ". | \\(\\zeta\\)関数 . | 定義 | \\(\\zeta (1)\\)の計算 | \\(\\zeta (2)\\)の計算 | \\(\\zeta (4)\\)の計算 | . | 参考文献 | . ",

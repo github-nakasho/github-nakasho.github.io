@@ -147,6 +147,8 @@ $$
 {: .note}
 一方、ドリフト速度が熱速度程度まで遅い場合、[ランダウ減衰](/langmuir_landau_damping#ラングミュア波の減衰-ランダウ減衰)が効いてやはり安定となります。
 
+{% include adsense.html %}
+
 ## 有限温度のビームプラズマ系: イオン音波不安定性
 
 次により一般的に、有限温度をもつようなビームプラズマ系を考えてみましょう。
@@ -441,6 +443,8 @@ $$T_e \gg T_i$$ のときには、第二項のイオンの[ランダウ減衰](/
 この理由は、波の位相速度付近に存在する比較的少数の電子とのランダウ共鳴 $$v_x \frac{\partial f_{0e}}{\partial v_x} > 0$$ を通して不安定性が励起されるためです。
 一般に、運動論的 (共鳴) 不安定性は、流体的 (非共鳴) 不安定性に比べ、成長率が小さくなります。
 
+{% include adsense.html %}
+
 ## ビームと背景プラズマの密度が異なる場合
 
 最後に、ビームの数密度を $$n_\mathrm{b}$$、背景となる電子プラズマの数密度を $$n_0$$ とし、次のような速度分布関数を考えてみましょう。
@@ -580,5 +584,6 @@ AGN の中には、ブレーザーと呼ばれる天体があります。
 [6] [Omura et al., 1994, "Computer simulation of electrostatic solitary waves: A nonlinear model of broadband electrostatic noise"](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/94GL01605)  
 [7] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://amzn.to/3PHKTdK)  
 [8] [観山正見, 野本憲一, 二間瀬敏史, "天体物理学の基礎 II"](https://link.amazon/B0gEgpr2t)  
+[9] [pCANS ドキュメント, "電子-電子 静電 2 流体不安定性"](https://www.astro.phys.s.chiba-u.ac.jp/pcans/em1d_ebeam.html)  
 
 {% include adsense.html %}

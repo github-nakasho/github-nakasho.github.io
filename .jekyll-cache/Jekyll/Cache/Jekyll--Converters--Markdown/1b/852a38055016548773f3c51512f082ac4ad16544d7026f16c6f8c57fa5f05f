@@ -1,0 +1,59 @@
+I"G
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#ワイベル不安定性" id="markdown-toc-ワイベル不安定性">ワイベル不安定性</a>    <ol>
+      <li><a href="#ワイベル不安定性の設定" id="markdown-toc-ワイベル不安定性の設定">ワイベル不安定性の設定</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="ワイベル不安定性">ワイベル不安定性</h1>
+
+<p>この不安定性は、<a href="">Weibel (1959)</a> で提案されました。
+磁場のないプラズマにおいて、粒子の速度分布が異方性を持つ場合、その異方性をエネルギー源として起こる不安定性です。
+ワイベル不安定性は、電磁モード (横波モード) の不安定性であり、速度分散が大きな方向の電流密度のゆらぎが指数関数的に増大します。
+以降では、このワイベル不安定性の導出と、その物理的な意味についてみていきましょう。</p>
+
+<h2 id="ワイベル不安定性の設定">ワイベル不安定性の設定</h2>
+
+<p>先ほど述べた通り、磁場のないプラズマを考えましょう。
+ただし、ここではイオンは電子より質量が十分大きく、動かない背景とします。
+すなわち、以降では電子のみを考え、その速度分布関数は</p>
+
+\[f_0 
+= n_0 F_\perp (v_x) F_\perp (v_y) F_\parallel (v_z), \qquad
+\left( F_\perp (v) 
+\equiv \frac{1}{\sqrt{\pi} v_\perp} e^{-v^2 / v_\perp^2}, F_\parallel (v) 
+\equiv \frac{1}{\sqrt{\pi} v_\parallel} e^{-v^2 / v_\parallel^2} \tag{1}\]
+
+<p>のように、温度に非等方性があるようなマクスウェル・ボルツマン分布関数を考えます。
+この場合、\(x, y\) 方向と \(z\) 方向で、温度が異なっていることになります。
+\(v_\perp, v_\parallel\)</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href="https://amzn.to/3PHKTdK">田中基彦, 西川恭治, “高温プラズマの物理学”</a><br />
+[] <a href="https://link.amazon/B0gEgpr2t">観山正見, 野本憲一, 二間瀬敏史, “天体物理学の基礎 II”</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

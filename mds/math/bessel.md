@@ -1040,6 +1040,176 @@ $$
 のようになります。
 $$z \gg 1$$では、ベッセル関数は$$\cos$$で振動しつつ、$$z^{-1/2}$$でその振幅を減衰させるような関数であるとわかります。
 
+## ベッセル関数の二乗の総和
+
+[ベッセル関数を用いたフーリエ級数展開](/math/bessel#フーリエ級数展開)から
+
+$$
+e^{iz \sin \varphi} 
+= \sum_{n=-\infty}^\infty J_n (z) e^{in \varphi} \tag{24}
+$$
+
+のように書けるのでした。
+この両辺の複素共役をとると
+
+$$
+e^{-iz\sin \varphi} 
+= \sum_{n=-\infty}^\infty J_n (z) e^{-in\varphi} 
+$$
+
+を得ます。
+これらの辺々を掛け合わせると
+
+$$
+(左辺) 
+= e^{iz \sin \varphi} e^{-iz \sin \varphi} 
+= 1 
+$$
+
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty J_n(z) e^{in\varphi} \sum_{m=-\infty}^\infty J_m(z) e^{-im \varphi} 
+= \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty J_n(z) J_m(z) e^{i (n - m) \varphi} 
+$$
+
+となります。
+この両辺を、さらに $$\int_0^{2\pi} d\varphi$$ で積分しましょう。
+
+$$
+\int_0^{2\pi} e^{i (n - m) \varphi} d\varphi 
+= 2\pi \delta_{nm}
+$$
+
+より
+
+$$
+2\pi 
+= 2\pi \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty J_n(z) J_m(z) \delta_{nm} 
+= 2\pi \sum_{n = -\infty}^\infty J_n^2 (z) \ \Longrightarrow \ 
+\sum_{n = -\infty}^\infty J_n^2 (z) 
+= 1 \tag{25}
+$$
+
+を得ます。
+次に、(24) 式を $$\varphi$$ で微分すると
+
+$$
+iz \cos \varphi e^{iz \sin \varphi} 
+= \sum_{n = -\infty}^\infty J_n(z) in e^{in\varphi}
+$$
+
+そしてこれの両辺の複素共役を取れば
+
+$$
+-iz \cos \varphi e^{-iz \sin \varphi} 
+= \sum_{n = -\infty}^\infty J_n(z) (-in) e^{-in\varphi}
+$$
+
+となります。
+先ほどと同様に辺々を掛け合わせると
+
+$$
+z^2 \cos^2 \varphi 
+= \sum_{n = -\infty}^\infty J_n (z) n e^{in \varphi} \sum_{m = -\infty}^\infty J_m (z) m e^{-im \varphi} 
+= \sum_{n = -\infty}^\infty \sum_{m = -\infty}^\infty n m J_n (z) J_m (z) e^{i (n - m) \varphi}
+$$
+
+となります。
+そしてこの両辺を $$\int_0^{2\pi} d\varphi$$ で積分すれば
+
+$$
+\begin{align}
+&z^2 \pi 
+= 2\pi \sum_{n = -\infty}^\infty \sum_{m = -\infty}^\infty n m J_n (z) J_m (z) \delta_{nm} 
+= 2\pi \sum_{n = -\infty}^\infty n^2 J_n^2 (z) \notag \\
+&\Longrightarrow \ 
+\sum_{n = -\infty}^\infty n^2 J_n^2 (z) 
+= \frac{1}{2} z^2 \tag{26}
+\end{align}
+$$
+
+のような関係式も得ることができます。
+
+## ウェーバーの積分
+
+ウェーバー (Weber) の積分と呼ばれる、次の式を証明しましょう。
+
+$$
+\int_0^\infty z J_0 (az) e^{-b^2 z^2} dz
+= \frac{1}{2b^2} e^{-\frac{a^2}{4b^2}} \tag{27}
+$$
+
+まずは、$$J_0$$ の級数表現より
+
+$$
+J_0 (az) 
+= \sum_{k=0}^\infty \frac{(-1)^k}{(k!)^2} \left( \frac{az}{2}\right)^{2k}
+$$
+
+これを左辺に代入すると
+
+$$
+\int_0^\infty z J_0 (az) e^{-b^2 z^2} dz 
+= \sum_{k=0}^\infty \frac{(-1)^k}{(k!)^2} \left( \frac{a}{2}\right)^{2k} \int_0^\infty z^{2k+1} e^{-b^2 z^2} dz 
+$$
+
+のようになります。
+積分部分において、$$u = b^2 z^2 \ (du = 2b^2 z dz)$$ のようにおくと
+
+$$
+\int_0^\infty z^{2k+1} e^{-b^2 z^2} dz 
+= \frac{1}{2 b^2} \int_0^\infty \left( \frac{u}{b^2} \right)^k e^{-u} du 
+= \frac{1}{2 b^2 b^{2k}} \underbrace{\int_0^\infty u^k e^{-u} du}_{ = \Gamma(k+1)} 
+= \frac{1}{2 b^2 b^{2k}} k! 
+$$
+
+のように計算できます。
+途中、[ガンマ関数](/math/gamma)を用いました。
+すると
+
+$$
+\begin{align}
+\int_0^\infty z J_0 (az) e^{-b^2 z^2} dz 
+&= \sum_{k=0}^\infty \frac{(-1)^k}{(k!)^2} \left( \frac{a}{2}\right)^{2k} \frac{1}{2 b^2 b^{2k}} k! 
+= \frac{1}{2 b^2} \sum_{k=0}^\infty \frac{(-1)^k}{k!} \left( \frac{a}{2b}\right)^{2k} \notag \\
+&= \frac{1}{2 b^2} \sum_{k=0}^\infty \frac{1}{k!} \left( - \frac{a^2}{4b^2}\right)^{k} 
+= \frac{1}{2b^2} e^{-\frac{a^2}{4b^2}} \notag 
+\end{align}
+$$
+
+のように、(27) 式を示すことができました。
+
+## ベッセル関数の加法定理 (工事中...)
+
+ここでは、ベッセル関数について成り立つ、いくつかの加法定理について見ていきましょう。
+ベッセル関数の母関数 (1) 式より
+
+$$
+\exp \left\{ \frac{u}{2} \left( t - \frac{1}{t} \right)\right\} 
+= \sum_{n = -\infty}^\infty J_n(u) t^n, \quad 
+\exp \left\{ \frac{v}{2} \left( t - \frac{1}{t} \right)\right\} 
+= \sum_{m = -\infty}^\infty J_m(v) t^m 
+$$
+
+と書けます。
+これらの辺々を掛け合わせると
+
+$$
+(左辺) 
+= \exp \left\{ \frac{u + v}{2} \left( t - \frac{1}{t}\right)\right\} 
+= \sum_{n=-\infty}^\infty J_n(u + v) t^n
+$$
+
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty J_n (u)t^n \sum_{m=-\infty}^\infty J_m(v) t^m 
+= \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty J_n (u) J_m(v) t^{n+m} 
+$$
+
+
+
+
+
 ## ベッセル関数の概形
 
 以下にいくつかの$$n$$に対するベッセル関数を図示するスクリプトを示します。
@@ -1079,8 +1249,9 @@ if __name__ == '__main__':
 [1] [田島, 近道, "改訂 演習工科の数学4 複素関数"](https://amzn.to/405zY0w)  
 [2] [中山, "裳華房フィジックスライブラリー 物理数学 II"](https://amzn.to/3GxeWRt)  
 [3] [福山, 小形, "基礎物理学シリーズ3 物理数学 I"](https://amzn.to/3o5YUaz)  
-[4] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)  
-[5] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)  
-[6] [Mathematica tutorial for the fourst course. Part VI: Bessel Functions](https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch6/bessel.html)  
+[4] [森口繁一, 宇田川銈久, 一松信, "岩波 数学公式 III, 特殊関数"](https://link.amazon/B0dzFOP1M)  
+[] [倭算数理研究所, ベッセル関数(円柱関数)の公式あれこれ](https://wasan.hatenablog.com/entry/2017/06/03/223531)  
+[] [まめけびのごきげん数学・物理, 第1種ベッセル関数の積分表示(2) ポアソン公式の導出](https://mamekebi-science.com/math/integral/besselfunction-integralrepresentation-2/)  
+[] [Mathematica tutorial for the fourst course. Part VI: Bessel Functions](https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch6/bessel.html)  
 
 {% include adsense.html %}

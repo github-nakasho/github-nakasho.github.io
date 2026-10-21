@@ -1179,7 +1179,7 @@ $$
 
 のように、(27) 式を示すことができました。
 
-## ベッセル関数の加法定理 (工事中...)
+## ベッセル関数の加法定理
 
 ここでは、ベッセル関数について成り立つ、いくつかの加法定理について見ていきましょう。
 ベッセル関数の母関数 (1) 式より
@@ -1206,9 +1206,125 @@ $$
 = \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty J_n (u) J_m(v) t^{n+m} 
 $$
 
+ここで、右辺の総和において $$n \rightarrow n - m$$ のように置換しましょう。
+$$n, m$$ は $$-\infty$$ から $$\infty$$ まで総和を取るため、このように置換を行っても、総和を取る範囲に変更はありません。
+よって
 
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty J_{n-m} (u) J_m(v) t^{n}
+$$
 
+のようになります。
+同じ $$t^n$$ の係数を比較すれば
 
+$$
+J_n (u + v) 
+= \sum_{m=-\infty}^\infty J_{n-m} (u) J_m(v) \tag{28}
+$$
+
+を得ます。  
+より一般化された加法定理についても示しておきましょう。
+これは、グラーフ (Graf) の加法定理とも呼ばれます。
+先ほどと同じく、母関数 (1) 式より
+
+$$
+\exp \left\{ \frac{u}{2} \left( t - \frac{1}{t} \right)\right\} 
+= \sum_{n=-\infty}^\infty J_n (u) t^n, \quad 
+\exp \left\{ \frac{v}{2} \left( te^{i(\pi - \varphi)} - \frac{1}{te^{i(\pi - \varphi)}} \right)\right\} 
+= \sum_{m=-\infty}^\infty J_m (v) \left( t e^{i(\pi - \varphi)} \right)^m
+$$
+
+となります。
+ただし、後者の方は $$t \rightarrow t e^{i(\pi - \varphi)}$$ のように、変数 $$t$$ を $$\pi - \varphi$$ だけ回転したものになっています。
+左辺どうしを掛け合わせると
+
+$$
+\begin{align}
+(左辺) 
+&= \exp \left\{ \frac{u}{2} \left( t - \frac{1}{t} \right) + \frac{v}{2} \left( te^{i(\pi - \varphi)} - \frac{1}{te^{i(\pi - \varphi)}} \right)\right\} 
+= \exp \left[ \frac{1}{2} \left\{ (u + v e^{i(\pi - \varphi)}) t - \frac{u + v e^{-i(\pi - \varphi)}}{t} \right\} \right] \notag \\
+&= \exp \left[ \frac{1}{2} \left\{ (u - v e^{-i\varphi}) t - \frac{u - v e^{i\varphi}}{t} \right\} \right] \notag 
+\end{align}
+$$
+
+ここで $$u -v e^{-i\varphi} = w e^{i\chi}$$ とすると、この両辺の複素共役をとることで $$u - v e^{i\varphi} = w e^{-i\chi}$$ と書くこともできます。
+これを適用すれば
+
+$$
+(左辺) 
+= \exp \left\{ \frac{1}{2} \left( w e^{i\chi} t - \frac{w e^{-i\chi}}{t} \right) \right\} 
+= \exp \left\{ \frac{w}{2} \left( t e^{i\chi} - \frac{1}{t e^{i\chi}} \right) \right\} 
+= \sum_{n=-\infty}^\infty J_n(w) (t e^{i\chi})^n 
+$$
+
+のようになります。
+一方、右辺どうしを掛け合わせたものは
+
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty J_n(u) t^n \sum_{m=-\infty}^\infty J_m(v) t^m (-1)^m e^{-im\varphi} 
+= \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty (-1)^m J_n(u) J_m(v) e^{-im\varphi} t^{n+m}  
+$$
+
+のようになります。
+ここで先ほどと同様に、$$n \rightarrow n-m$$ のようにすることで
+
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty (-1)^m J_(n-m)(u) J_m(v) e^{-im\varphi} t^n 
+$$
+
+以上より、右辺と左辺で $$t^n$$ の係数を比較すれば
+
+$$
+J_n(w) e^{in\chi} 
+= \sum_{m=-\infty}^\infty (-1)^m J_{n-m}(u) J_m (v) e^{-im \varphi} \tag{29}
+$$
+
+となります。
+ここで、$$m \rightarrow -m$$ のようにすると
+
+$$
+\begin{align}
+J_n(w) e^{in\chi} 
+&= \sum_{m=-\infty}^\infty (-1)^{-m} J_{n+m}(u) J_{-m} (v) e^{im \varphi} 
+= \sum_{m=-\infty}^\infty (-1)^{-m} J_{n+m}(u) (-1)^m J_m (v) e^{im \varphi} \notag \\
+&= \sum_{m=-\infty}^\infty J_{n+m}(u) J_m (v) e^{im \varphi} \tag{30}
+\end{align}
+$$
+
+となります。
+途中、[(10) 式 $$J_{-m} (v) = (-1)^m J_m (v)$$](/math/bessel#ベッセル関数のべき乗表示) の関係式を用いました。
+このようにして、一般化された加法定理を得ることができました。
+ここで
+
+$$
+u - v e^{-i \varphi} 
+= w e^{i\chi} \ \Longrightarrow \ 
+w = \sqrt{u^2 + v^2 - 2 uv \cos \varphi} \tag{31}
+$$
+
+です。
+ここに $$\varphi = 0$$ (すなわち $$\chi = 0$$) を代入した、特別な場合について見てみましょう。
+このとき $$w = \sqrt{u^2 + v^2 - 2uv} = u-v$$ となるため、(29) 式より
+
+$$
+J_n(u - v) 
+= \sum_{m=-\infty}^\infty (-1)^m J_{n-m} (u) J_m (v) 
+$$
+
+ここで $$v \rightarrow - v$$ のように置換することで
+
+$$
+J_n(u + v) 
+= \sum_{m=-\infty}^\infty J_{n-m} (u) (-1)^m J_m(-v) 
+= \sum_{m=-\infty}^\infty J_{n-m} (u) (-1)^{2m} J_m(v) 
+= \sum_{m=-\infty}^\infty J_{n-m} (u) J_m(v) 
+$$
+
+のように、(28) 式と同じものを得ることができます。
+ここでも、[(10) 式から $$J_m(-v) = (-1)^m J_m(v)$$](/math/bessel#ベッセル関数のべき乗表示) を用いました。
 
 ## ベッセル関数の概形
 

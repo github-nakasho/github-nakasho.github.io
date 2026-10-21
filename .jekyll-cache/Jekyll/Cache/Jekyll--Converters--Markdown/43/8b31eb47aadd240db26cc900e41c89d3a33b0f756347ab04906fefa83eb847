@@ -1,0 +1,106 @@
+I"*
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#第一種修正ベッセル関数" id="markdown-toc-第一種修正ベッセル関数">第一種修正ベッセル関数</a>    <ol>
+      <li><a href="#定義" id="markdown-toc-定義">定義</a></li>
+      <li><a href="#母関数" id="markdown-toc-母関数">母関数</a></li>
+      <li><a href="#積分表示" id="markdown-toc-積分表示">積分表示</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="第一種修正ベッセル関数">第一種修正ベッセル関数</h1>
+
+<p>ここでは、修正ベッセル関数の中でも、第一種の修正ベッセル関数についてまとめていきます。</p>
+
+<h2 id="定義">定義</h2>
+
+<p>第一種修正ベッセル関数は、次のように定義されます。</p>
+
+\[\begin{align}
+I_n(z) 
+&amp;\equiv i^{-n} J_n(iz) 
+= i^{-n} \left( \frac{iz}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{iz}{2} \right)^{2k} \notag \\
+&amp;= \left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k (i^2)^k}{k! (n+k)!} \left( \frac{z}{2} \right)^{2k} 
+= \left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{1}{k! (n+k)!} \left( \frac{z}{2} \right)^{2k} \tag{1}
+\end{align}\]
+
+<p>ここで <a href="/math/bessel">\(J_n (z)\) はベッセル関数</a>です。</p>
+
+<h2 id="母関数">母関数</h2>
+
+<p><a href="/math/bessel#ベッセル関数の積分表示">ベッセル関数の母関数展開</a>は</p>
+
+\[\exp \left\{ \frac{z}{2} \left( t - \frac{1}{t} \right) \right\} 
+= \sum_{n=-\infty}^\infty J_n(z) t^n \tag{2}\]
+
+<p>のように与えられるのでした。
+(1) 式の定義から、\(z \rightarrow iz, t \rightarrow i^{-1} t\) のように置換すると</p>
+
+\[(左辺) 
+= \exp \left\{ \frac{iz}{2} \left( \frac{t}{i} - \frac{i}{t} \right)\right\} 
+= \exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right)\right\} \tag{3}\]
+
+\[(右辺) 
+= \sum_{n=-\infty}^\infty J_n(iz) (i^{-1} t)^n 
+= \sum_{n=-\infty}^\infty i^{-n} J_n(iz) t^n \tag{4}\]
+
+<p>となります。
+以上より第一種の修正ベッセル関数の母関数が</p>
+
+\[\exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right)\right\} 
+= \sum_{n=-\infty}^\infty I_n(z) t^n \tag{5}\]
+
+<p>のようになることがわかります。</p>
+
+<h2 id="積分表示">積分表示</h2>
+
+<p>(5) 式において、\(t = e^{i\varphi}\) とおくと</p>
+
+\[(左辺) 
+= \exp \left\{ \frac{z}{2} \left( e^{i\varphi} + e^{-i\varphi} \right)\right\} 
+= e^{z\cos \varphi} \tag{6}\]
+
+<p>のようになることから</p>
+
+\[e^{z\cos \varphi} 
+= \sum_{n=-\infty}^\infty I_n(z) e^{in\varphi} \tag{7}\]
+
+<p>となります。
+すなわち、\(e^{z\cos \varphi}\) をフーリエ級数展開すると、その係数は \(I_n(z)\) となります。
+(7) 式の両辺に \(e^{-im\varphi}\) をかけ、\(\int_{-\pi}^\pi d\varphi\) で積分を行うと</p>
+
+\[\int_{-\pi}^\pi e^{i(n-m)\varphi} d\varphi 
+= 2\pi \delta_{mn} \tag{8}\]
+
+<p>より</p>
+
+\[I_n(z) 
+= \frac{1}{2\pi} \int_{-\pi}^\pi e^{z\cos \varphi} e^{-in \varphi} d\varphi \tag{9}\]
+
+<p>のように求まります。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

@@ -1,0 +1,182 @@
+I"
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#第一種修正ベッセル関数" id="markdown-toc-第一種修正ベッセル関数">第一種修正ベッセル関数</a>    <ol>
+      <li><a href="#定義" id="markdown-toc-定義">定義</a></li>
+      <li><a href="#母関数" id="markdown-toc-母関数">母関数</a></li>
+      <li><a href="#積分表示" id="markdown-toc-積分表示">積分表示</a></li>
+      <li><a href="#ベッセル関数の積分と第一種修正ベッセル関数の関係式" id="markdown-toc-ベッセル関数の積分と第一種修正ベッセル関数の関係式">ベッセル関数の積分と第一種修正ベッセル関数の関係式</a></li>
+      <li><a href="#総和を含む関係式" id="markdown-toc-総和を含む関係式">総和を含む関係式</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="第一種修正ベッセル関数">第一種修正ベッセル関数</h1>
+
+<p>ここでは、修正ベッセル関数の中でも、第一種の修正ベッセル関数についてまとめていきます。</p>
+
+<h2 id="定義">定義</h2>
+
+<p>第一種修正ベッセル関数は、次のように定義されます。</p>
+
+\[\begin{align}
+I_n(z) 
+&amp;\equiv i^{-n} J_n(iz) 
+= i^{-n} \left( \frac{iz}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k}{k! (n+k)!} \left( \frac{iz}{2} \right)^{2k} \notag \\
+&amp;= \left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{(-1)^k (i^2)^k}{k! (n+k)!} \left( \frac{z}{2} \right)^{2k} 
+= \left( \frac{z}{2} \right)^n \sum_{k=0}^\infty \frac{1}{k! (n+k)!} \left( \frac{z}{2} \right)^{2k} \tag{1}
+\end{align}\]
+
+<p>ここで <a href="/math/bessel">\(J_n (z)\) はベッセル関数</a>です。</p>
+
+<h2 id="母関数">母関数</h2>
+
+<p><a href="/math/bessel#ベッセル関数の積分表示">ベッセル関数の母関数展開</a>は</p>
+
+\[\exp \left\{ \frac{z}{2} \left( t - \frac{1}{t} \right) \right\} 
+= \sum_{n=-\infty}^\infty J_n(z) t^n \tag{2}\]
+
+<p>のように与えられるのでした。
+(1) 式の定義から、\(z \rightarrow iz, t \rightarrow i^{-1} t\) のように置換すると</p>
+
+\[(左辺) 
+= \exp \left\{ \frac{iz}{2} \left( \frac{t}{i} - \frac{i}{t} \right)\right\} 
+= \exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right)\right\} \tag{3}\]
+
+\[(右辺) 
+= \sum_{n=-\infty}^\infty J_n(iz) (i^{-1} t)^n 
+= \sum_{n=-\infty}^\infty i^{-n} J_n(iz) t^n \tag{4}\]
+
+<p>となります。
+以上より第一種の修正ベッセル関数の母関数が</p>
+
+\[\exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right)\right\} 
+= \sum_{n=-\infty}^\infty I_n(z) t^n \tag{5}\]
+
+<p>のようになることがわかります。
+この母関数展開において、\(t \rightarrow 1/t\) とすると</p>
+
+\[\exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right) \right\} 
+= \sum_{n=-\infty}^\infty I_n (z) t^{-n} \tag{6}\]
+
+<p>となります。
+これと (5) 式において \(n \rightarrow -n\) としたものが等しいため</p>
+
+\[I_{-n} (z) 
+= I_n (z) \tag{7}\]
+
+<p>のような、対称性もわかります。</p>
+
+<h2 id="積分表示">積分表示</h2>
+
+<p>(5) 式において、\(t = e^{i\varphi}\) とおくと</p>
+
+\[(左辺) 
+= \exp \left\{ \frac{z}{2} \left( e^{i\varphi} + e^{-i\varphi} \right)\right\} 
+= e^{z\cos \varphi} \tag{8}\]
+
+<p>のようになることから</p>
+
+\[e^{z\cos \varphi} 
+= \sum_{m=-\infty}^\infty I_m(z) e^{im\varphi} \tag{9}\]
+
+<p>となります。
+すなわち、\(e^{z\cos \varphi}\) をフーリエ級数展開すると、その係数は \(I_n(z)\) となります。
+右辺において、総和を \(-\infty \leq m \leq -1, m = 0, 1 \leq m \leq \infty\) のように分解しましょう。</p>
+
+\[\begin{align}
+e^{z\cos \varphi} 
+&amp;= I_0 (z) + \sum_{m=1}^\infty I_m(z) e^{im\varphi} + \sum_{m=-1}^{-\infty} I_m(z) e^{im\varphi} \notag \\
+&amp;= I_0 (z) + \sum_{m=1}^\infty I_m(z) e^{im\varphi} + \sum_{m=1}^{\infty} \underbrace{I_{-m}(z)}_{(7)} e^{-im\varphi} \notag \\
+&amp;= I_0 (z) + \sum_{m=1}^\infty I_m(z) (e^{im\varphi} + e^{-im\varphi}) 
+= I_0 (z) + 2 \sum_{m=1}^\infty I_m(z) \cos m\varphi \tag{10}
+\end{align}\]
+
+<p>となります。
+(10) 式の両辺に \(e^{-in\varphi}\) をかけ、\(\int_{-\pi}^\pi d\varphi\) で積分を行うと</p>
+
+\[\int_{-\pi}^\pi e^{i(m-n)\varphi} d\varphi 
+= 2\pi \delta_{mn} \tag{11}\]
+
+<p>より</p>
+
+\[I_n(z) 
+= \frac{1}{2\pi} \int_{-\pi}^\pi e^{z\cos \varphi} e^{-in \varphi} d\varphi \tag{12}\]
+
+<p>のように求まります。
+\(e^{-in\varphi} = \cos n\varphi - i\sin n \varphi\) のうち、\(\sin n \varphi\) は奇関数であるため、\(\int_{-\pi}^\pi d\varphi\) の積分でゼロとなります。
+\(e^{z\cos \varphi}, \cos n \varphi\) はともに偶関数であるため、(12) 式は</p>
+
+\[I_n(z) 
+= \frac{1}{\pi} \int_{0}^\pi e^{z\cos \varphi} \cos n\varphi d\varphi \tag{13}\]
+
+<p>のように書き換えることもできます。</p>
+
+<h2 id="ベッセル関数の積分と第一種修正ベッセル関数の関係式">ベッセル関数の積分と第一種修正ベッセル関数の関係式</h2>
+
+<p><a href="/math/bessel#ウェーバーの積分">ウェーバーの積分</a>から</p>
+
+\[\int_0^\infty x J_0(ax) e^{-b^2 x^2} dx 
+= \frac{1}{2b^2} e^{-\frac{a^2}{4b^2}} \tag{14}\]
+
+<p>のように書けるのでした。
+また<a href="/math/bessel#ベッセル関数の加法定理">ベッセル関数の加法定理</a>から</p>
+
+\[\begin{align}
+&amp;J_n (ax) e^{in\chi}
+= \sum_{m=-\infty}^\infty J_{n+m} (ux) J_m (vx) e^{im\varphi} \notag \\
+&amp;\underbrace{\Longrightarrow}_{n=0} \ 
+J_0 (ax) 
+= \sum_{m=-\infty}^\infty J_{m} (ux) J_m (vx) e^{im\varphi}, \quad (a^2 = u^2 + v^2 - 2uv \cos \varphi) \tag{15}
+\end{align}\]
+
+<p>となります。
+これを (14) 式に代入すると</p>
+
+\[\sum_{m=-\infty}^\infty e^{im\varphi} \int_0^\infty x J_m(ux) J_m(vx) e^{-b^2 x^2} dx 
+= \frac{1}{2b^2} e^{-\frac{u^2 + v^2}{4b^2}} e^{\frac{uv \cos\varphi}{2b^2}} \tag{16}\]
+
+<p>のようになります。
+ここで \(z = \frac{uv}{2b^2}\) とおくと</p>
+
+\[e^{z\cos \varphi} 
+= 2b^2 e^{\frac{u^2 + v^2}{4b^2}} \sum_{m=-\infty}^\infty e^{im\varphi} \int_0^\infty x J_m (ux) J_m(vx) e^{-b^2 x^2} dx \tag{17}\]
+
+<p>のように整理されます。
+(17) 式と (9) 式を見比べることで</p>
+
+\[I_m (\frac{uv}{2b^2}) 
+= 2b^2 e^{\frac{u^2 + v^2}{4b^2}} \int_0^\infty x J_m (ux) J_m (vx) e^{-b^2 x^2} dx \tag{18}\]
+
+<p>のように、第一種修正ベッセル関数とベッセル関数の関係式を導くことができました。</p>
+
+<h2 id="総和を含む関係式">総和を含む関係式</h2>
+
+<p>(18) 式において、\(\beta = \alpha, b=1\) とすると</p>
+
+\[I_n\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

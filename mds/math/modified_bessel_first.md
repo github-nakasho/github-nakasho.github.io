@@ -20,7 +20,7 @@ nav_order: 27
 
 {% include adsense.html %}
 
-# 第一種修正ベッセル関数　(工事中...)
+# 第一種修正ベッセル関数
 
 ここでは、修正ベッセル関数の中でも、第一種の修正ベッセル関数についてまとめていきます。
 
@@ -146,6 +146,8 @@ I_n(z)
 $$
 
 のように書き換えることもできます。
+
+{% include adsense.html %}
 
 ## ベッセル関数の積分と第一種修正ベッセル関数の関係式
 
@@ -287,15 +289,185 @@ $$
 
 を得ます。
 
+{% include adsense.html %}
 
+## 第一種ベッセル関数が満たす漸化式
 
+母関数展開の式 (6) の両辺を $$z$$ で微分すると
 
+$$
+\begin{align}
+(左辺) 
+&= \frac{1}{2} \left( t + \frac{1}{t} \right) \exp \left\{ \frac{z}{2} \left( t + \frac{1}{t}\right) \right\}
+= \frac{1}{2} \left( t + \frac{1}{t} \right) \sum_{n=-\infty}^\infty I_n(z) t^n \notag \\
+&= \frac{1}{2} \left( \sum_{n=-\infty}^\infty I_n(z) t^{n+1} + \sum_{n=-\infty}^\infty I_n(z) t^{n-1} \right) \tag{26} 
+\end{align}
+$$
 
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty I_n'(z) t^n \tag{27}
+$$
 
+(左辺)の第一項において $$n+1 \rightarrow n$$、そして第二項において $$n-1 \rightarrow n$$ のようにし、$$t^n$$ に揃えることで
 
+$$
+I_{n-1} (z) + I_{n+1} (z)
+= 2 I_n'(z) \tag{28}
+$$
 
+を得ます。
+同様に (6) 式の両辺を $$t$$ で微分すると
+
+$$
+\begin{align}
+(左辺) 
+&= \frac{z}{2} \left( 1 - \frac{1}{t^2}\right) \exp \left\{ \frac{z}{2} \left( t + \frac{1}{t} \right)\right\} 
+= \frac{z}{2} \left( 1 - \frac{1}{t^2}\right) \sum_{n=-\infty}^\infty I_n(z) t^n \notag \\
+&= \frac{z}{2} \left( \sum_{n=-\infty}^\infty I_n(z) t^n - \sum_{n=-\infty}^\infty I_n(z) t^{n-2} \right) \tag{29}
+\end{align}
+$$
+
+$$
+(右辺) 
+= \sum_{n=-\infty}^\infty I_n(z) n t^{n-1} \tag{30}
+$$
+
+(左辺)の第一項において $$n \rightarrow n-1$$、そして第二項において $$n-2 \rightarrow n-1$$ のようにし、$$t^{n-1}$$ に揃えることで
+
+$$
+I_{n-1} (z)- I_{n+1} (z) 
+= \frac{2n}{z} I_n (z) \tag{31}
+$$
+
+となります。
+また、(28), (31) 式を足し合わせることで
+
+$$
+2I_{n-1} (z) 
+= 2I_n'(z) + \frac{2n}{z} I_n(z) \ \Longrightarrow \ 
+z I_n'(z) + n I_n(z) 
+= z I_{n-1} (z) \tag{32}
+$$
+
+さらに (28), (31) 式を引き算することで
+
+$$
+2 I_{n+1} (z) 
+= 2 I_n'(z) - \frac{2n}{z} I_n (z) \ \Longrightarrow \ 
+z I_n' (z) - n I_n (z) 
+= z I_{n+1} (z) \tag{33}
+$$
+
+のような漸化式も求めることができます。
+
+## 第一種ベッセル関数が満たす微分方程式
+
+(32), (33) 式から、$$I_n(z)$$ の次数 $$n$$ を上げ下げする演算子を考えることができます。
+(32) 式からは
+
+$$
+\left( \frac{d}{dz} + \frac{n}{z} \right) I_n(z) 
+= I_{n-1} (z) \tag{34}
+$$
+
+のように下降演算子が、そして (33) 式からは
+
+$$
+\left( \frac{d}{dz} - \frac{n}{z} \right) I_n(z) 
+= I_{n+1} (z) \tag{35}
+$$
+
+のように上昇演算子が見出せます。
+これらを用いると、$$I_n(z)$$ の次数を 1 つ下げてから 1 つ上げると、元の $$I_n(z)$$ に戻るはずなので
+
+$$
+\begin{align}
+I_n (z) 
+&= \left( \frac{d}{dz} - \frac{n-1}{z} \right) \left( \frac{d}{dz} + \frac{n}{z} \right) I_n(z) 
+= \left( \frac{d}{dz} - \frac{n-1}{z} \right) \left( I_n'(z) + \frac{n I_n(z)}{z} \right) \notag \\
+&= I_n''(z) + \frac{n I_n'(z)}{z} - \frac{n I_n(z)}{z^2} - \frac{n-1}{z} I_n' (z) - \frac{n (n-1)}{z^2} I_n(z) 
+= I_n''(z) + \frac{I_n'(z)}{z} - \frac{n^2}{z^2} I_n(z) \tag{36}
+\end{align}
+$$
+
+以上より $$I_n(z)$$ は
+
+$$
+\frac{d^2}{dz^2} I_n(z) + \frac{1}{z} \frac{d}{dz} I_n(z) - \left( 1 + \frac{n^2}{z^2} \right) I_n(z) 
+= 0 \tag{37} 
+$$
+
+のような微分方程式を満たすことがわかります。
+これは、[ベッセル関数 $$J_n(z)$$ が満たす微分方程式 (7)](/math/bessel#ベッセルの微分方程式) の符号を修正した形になっています。
+
+## 微分を含む関係式
+
+(18) 式において $$b = 1$$ としたものを考えることにしましょう。
+すなわち
+
+$$
+\frac{1}{2} e^{-\frac{u^2 + v^2}{4}} I_n (uv / 2) 
+= \int_0^\infty x J_n(ux) J_n(vx) e^{-x^2} dx \tag{38}
+$$
+
+右辺を $$\Phi (u, v)$$ のような二変数の関数とし、これを $$v, u$$ で偏微分しましょう。
+すると
+
+$$
+\frac{\partial \Phi}{\partial v} 
+= \int_0^\infty x^2 J_n (ux) J_n' (vx) e^{-x^2} dx \ \Longrightarrow \ 
+\frac{\partial^2 \Phi}{\partial u \partial v} 
+= \int_0^\infty x^3 J_n' (ux) J_n' (vx) e^{-x^2} dx \tag{39}
+$$
+
+となります。
+そして
+
+$$
+\frac{\partial}{\partial v} (左辺) 
+= \frac{1}{2} \left\{ e^{-\frac{u^2 + v^2}{4}} \left( - \frac{v}{2}\right) I_n(uv/2) + e^{-\frac{u^2 + v^2}{4}} I_n' (uv/2) \frac{u}{2} \right\} 
+= \frac{1}{4} e^{-\frac{u^2 + v^2}{4}} \{ u I_n'(uv/2) - v I_n(uv/2) \} \tag{40}
+$$
+
+$$
+\begin{align}
+\frac{\partial^2}{\partial u \partial v} (左辺) 
+&= \frac{1}{4} \left[ e^{-\frac{u^2 + v^2}{4}} \left( -\frac{u}{2} \right) \{ u I_n'(uv/2) - v I_n(uv/2) \} + e^{-\frac{u^2 + v^2}{4}} \left\{ I_n'(uv/2) + u I_n''(uv/2) \frac{v}{2} - v I_n' (uv/2) \frac{v}{2} \right\}\right] \notag \\
+&= \frac{1}{4} e^{-\frac{u^2 + v^2}{4}} \left\{ - \frac{u^2}{2} I_n'(uv/2) + \frac{uv}{2} I_n(uv/2) + I_n'(uv/2) + \frac{uv}{2} I_n''(uv/2) - \frac{v^2}{2} I_n' (uv/2) \right\} \notag \\
+&= \frac{1}{4} e^{-\frac{u^2 + v^2}{4}} \left[ - \frac{u^2 + v^2}{2} I_n'(uv/2) + \frac{uv}{2} \{I_n(uv/2) + I_n''(uv/2)\} + I_n' (uv/2) \right] \notag \\
+&\underbrace{=}_{(37)} \frac{1}{4} e^{-\frac{u^2 + v^2}{4}} \left[ - \frac{u^2 + v^2}{2} I_n'(uv/2) + \frac{uv}{2} \left\{I_n(uv/2) + \left( 1 + \frac{4n^2}{u^2 v^2}\right) I_n(uv/2) - \frac{2}{uv} I_n'(uv/2) \right\} + I_n' (uv/2) \right] \notag \\
+&= \frac{1}{4} e^{-\frac{u^2 + v^2}{4}} \left\{ \left( uv + \frac{2n^2}{uv} \right) I_n (uv/2) - \frac{u^2 + v^2}{2} I_n' (uv/2)\right\} \tag{41}
+\end{align}
+$$
+
+です。
+(39), (40) 式において、$$u = v$$ とすると
+
+$$
+\int_0^\infty x^2 J_n' (ux) J_n (ux) e^{-x^2} dx 
+= \frac{u}{4} e^{-u^2 / 2} \{ I_n' (u^2 / 2) - I_n (u^2 / 2) \} \tag{42}
+$$
+
+となります。
+そして (39), (41) 式において $$u=v$$ のようにすれば
+
+$$
+\int_0^\infty x^3 [J_n'(ux)]^2 e^{-x^2} dx 
+= \frac{1}{4} e^{-u^2 / 2} \left\{ \left( u^2 + \frac{2n^2}{u^2} \right) I_n(u^2/2) - u^2 I_n'(u^2 / 2) \right\} \tag{43}
+$$
+
+も得ます。
+
+{: .note}
+最初から $$u = v$$ として $$\frac{\partial^2}{\partial u^2}$$ とすると、(43) 式を得ることができません。
+これは $$(u, v)$$ の 2 次元平面を考えたとき、最初から $$u = v$$ とすると対角線上の情報しか得られなくなってしまうのと同様の現象です。
+異なる方向微分を考え、そのあとで $$u = v$$ の極限を取ることで、対角線上以外の部分での情報を得ることができます。
 
 ## 参考文献
 
+[1] [Wolfram MathWorld, "Modified Bessel Function of the First Kind"](https://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html)  
+[2] [田中基彦, 西川恭治, "高温プラズマの物理学"](https://link.amazon/B08J8tDwU)  
+[3] [森口繁一, 宇田川銈久, 一松信, "岩波 数学公式 III 特殊関数"](https://link.amazon/B0aPHP8z7)  
 
 {% include adsense.html %}

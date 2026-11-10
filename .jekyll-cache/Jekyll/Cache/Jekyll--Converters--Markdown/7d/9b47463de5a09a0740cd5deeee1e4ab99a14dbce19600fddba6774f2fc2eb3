@@ -1,0 +1,86 @@
+I"�
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#高速青色可視光突発天体" id="markdown-toc-高速青色可視光突発天体">高速青色可視光突発天体</a>    <ol>
+      <li><a href="#fbotslfbots-の発見とその特徴" id="markdown-toc-fbotslfbots-の発見とその特徴">FBOTs/LFBOTs の発見とその特徴</a>        <ol>
+          <li><a href="#最初の発見" id="markdown-toc-最初の発見">最初の発見</a></li>
+          <li><a href="#at2018cow" id="markdown-toc-at2018cow">AT2018cow</a></li>
+          <li><a href="#観測的特徴" id="markdown-toc-観測的特徴">観測的特徴</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="高速青色可視光突発天体">高速青色可視光突発天体</h1>
+
+<p>このページでは、比較的最近発見された天体である、高速青色可視光突発天体 (Fast Blue Optical Transients: FBOTs) および 高光度高速青色可視光突発天体 (Luminous FBOTs: LFBOTs) についてまとめています。</p>
+
+<p class="note">FBOTs および LFBOTs の観測と理論については、まだまだ議論が続いている段階です。そのため、この記事は 2026 年 10 月現在の情報であることにご留意ください。
+今後も進展があれば、随時加筆・修正を行う予定です。</p>
+
+<h2 id="fbotslfbots-の発見とその特徴">FBOTs/LFBOTs の発見とその特徴</h2>
+
+<h3 id="最初の発見">最初の発見</h3>
+
+<p>始まりは、<a href="https://iopscience.iop.org/article/10.1088/0004-637X/794/1/23">Drout et al. (2014)</a> による、<a href="">Pan-STARRS1 Medium Deep Survey (PS1-MDS)</a> の観測解析結果です。
+この論文では、典型的な超新星爆発よりも、明るくなる立ち上がりが減光よりも早く、明るさの極大で青い色 (\(g_\mathrm{P1} - r_\mathrm{P1} \lesssim -0.2\)) となるようなグループを発見しました。</p>
+
+<p><img src="/assets/images/compact/fbot_lfbot_01.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.1088/0004-637X/794/1/23">Drout et al. (2014)</a> より、素早く明るくなり、かつ極大で青さが目立つサンプル。</p>
+
+<p>その後、例えば <a href="https://academic.oup.com/mnras/article/481/1/894/5086083">Pursiainen et al. (2018)</a> でも似たような突発天体を多数発見し、高速な立ち上がりを見せる突発天体のサンプル数を増やしました。</p>
+
+<h3 id="at2018cow">AT2018cow</h3>
+
+<p>ハワイの観測所に設置された <a href="https://iopscience.iop.org/article/10.1088/1538-3873/aabadf">Asteroid Terrestrial-impact Last Alert System (ATLAS)</a> が、cow と呼ばれる天体を発見しました。
+この天体はシリアルとして AT2018cow と称されるようになります。
+通常とは異なるこの突発天体現象は、<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a> により初めて報告されました。
+観測的な特徴としては、ピーク光度が \(1.7 \times 10^{44} \mathrm{erg/s}\)、約 3.5 日の間に 5 等以上の増光がみられ、黒体放射のピークは 27000 K などが挙げられます。</p>
+
+<h3 id="観測的特徴">観測的特徴</h3>
+
+<p>すでに観測的特徴についていくつか出てきましたが、改めて FBOTs の特徴についてまとめておきましょう。</p>
+
+<ul>
+  <li>FWHM で 12 日以下という、高速な光度変化</li>
+  <li>最大で \(10^{44} \mathrm{erg/s}\) に達する光度</li>
+  <li>有効温度 \(2 \times 10^4 \mathrm{K}\) の青色</li>
+  <li>初期のスペクトルは高温であり、吸収線・輝線などの特徴がほぼ存在しない連続スペクトル</li>
+  <li>超高光度超新星 (SuperLuminous SuperNova: SLSN) に匹敵する光度だが、水素に乏しい SLSN-I 型に比べて X 線と電波でも明るい</li>
+</ul>
+
+<p>典型的な超新星爆発の光度がおよそ \(10^{41} \sim 10^{43} \mathrm{erg/s}\) であるため、それよりも 10 倍ほど明るいことがわかります。
+FBOTs の中でも、さらに光度が \(10^{45} \mathrm{erg/s}\) に達するような極端に明るいものがあります。
+これを LFBOTs と呼びます。</p>
+
+<p><img src="/assets/images/compact/fbot_lfbot_02.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a> より、AT2018cow のスペクトルの時間経過を示したもの。
+一番上にある 2.5 日などを見るとわかる通り、最初の数日間には輝線・吸収線が見られない。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

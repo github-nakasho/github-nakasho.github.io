@@ -4,7 +4,7 @@ title: 第二種修正ベッセル関数とエアリー関数
 parent: 数学
 math: mathjax3
 permalink: /math/modified_bessel_second_airy
-nav_order: 12
+nav_order: 28
 ---
 
 {: .no_toc }

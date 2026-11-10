@@ -1,0 +1,303 @@
+I"I
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#高速青色可視光突発天体" id="markdown-toc-高速青色可視光突発天体">高速青色可視光突発天体</a>    <ol>
+      <li><a href="#fbotslfbots-の発見とその特徴" id="markdown-toc-fbotslfbots-の発見とその特徴">FBOTs/LFBOTs の発見とその特徴</a>        <ol>
+          <li><a href="#最初の発見" id="markdown-toc-最初の発見">最初の発見</a></li>
+          <li><a href="#at2018cow" id="markdown-toc-at2018cow">AT2018cow</a></li>
+          <li><a href="#fbots-の定義観測的特徴" id="markdown-toc-fbots-の定義観測的特徴">FBOTs の定義・観測的特徴</a></li>
+          <li><a href="#lfbots-の定義観測的特徴" id="markdown-toc-lfbots-の定義観測的特徴">LFBOTs の定義・観測的特徴</a></li>
+        </ol>
+      </li>
+      <li><a href="#なぜ超新星爆発では説明できないのか" id="markdown-toc-なぜ超新星爆発では説明できないのか">なぜ超新星爆発では説明できないのか</a>        <ol>
+          <li><a href="#ni-量が足りない" id="markdown-toc-ni-量が足りない">Ni 量が足りない</a></li>
+          <li><a href="#光球面が内側に移動しつつ温度がいつまでも冷えない" id="markdown-toc-光球面が内側に移動しつつ温度がいつまでも冷えない">光球面が内側に移動しつつ、温度がいつまでも冷えない</a></li>
+          <li><a href="#x-線光度の大きさと変動" id="markdown-toc-x-線光度の大きさと変動">X 線光度の大きさと変動</a></li>
+          <li><a href="#どうしても超新星で説明したい非対称な星周物質分布" id="markdown-toc-どうしても超新星で説明したい非対称な星周物質分布">どうしても超新星で説明したい…非対称な星周物質分布</a></li>
+        </ol>
+      </li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="高速青色可視光突発天体">高速青色可視光突発天体</h1>
+
+<p>このページでは、比較的最近発見された天体である、高速青色可視光突発天体 (Fast Blue Optical Transients: FBOTs) および 高光度高速青色可視光突発天体 (Luminous FBOTs: LFBOTs) についてまとめています。</p>
+
+<p class="note">FBOTs および LFBOTs の観測と理論については、まだまだ議論が続いている段階です。そのため、この記事は 2026 年 10 月現在の情報であることにご留意ください。
+今後も進展があれば、随時加筆・修正を行う予定です。</p>
+
+<h2 id="fbotslfbots-の発見とその特徴">FBOTs/LFBOTs の発見とその特徴</h2>
+
+<h3 id="最初の発見">最初の発見</h3>
+
+<p>始まりは、<a href="https://iopscience.iop.org/article/10.1088/0004-637X/794/1/23">Drout et al. (2014)</a> による、<a href="">Pan-STARRS1 Medium Deep Survey (PS1-MDS)</a> の観測解析結果です。
+この論文では、典型的な超新星爆発よりも、明るくなる立ち上がりが減光よりも早く、明るさの極大で青い色 (\(g_\mathrm{P1} - r_\mathrm{P1} \lesssim -0.2\)) となるようなグループを発見しました。</p>
+
+<p><img src="/assets/images/compact/fbot_lfbot_01.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.1088/0004-637X/794/1/23">Drout et al. (2014)</a> より、素早く明るくなり、かつ極大で青さが目立つサンプル。</p>
+
+<p>その後、例えば <a href="https://academic.oup.com/mnras/article/481/1/894/5086083">Pursiainen et al. (2018)</a> でも似たような突発天体を多数発見し、高速な立ち上がりを見せる突発天体のサンプル数を増やしました。</p>
+
+<h3 id="at2018cow">AT2018cow</h3>
+
+<p>ハワイの観測所に設置された <a href="https://iopscience.iop.org/article/10.1088/1538-3873/aabadf">Asteroid Terrestrial-impact Last Alert System (ATLAS)</a> が、cow と呼ばれる天体を発見しました。
+この天体はシリアルとして AT2018cow と称されるようになります。
+通常とは異なるこの突発天体現象は、<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a> により初めて報告されました。
+観測的な特徴としては、ピーク光度が \(1.7 \times 10^{44} \mathrm{erg/s}\)、約 3.5 日の間に 5 等以上の増光がみられ、黒体放射のピークは 27000 K などが挙げられます。</p>
+
+<h3 id="fbots-の定義観測的特徴">FBOTs の定義・観測的特徴</h3>
+
+<p>すでに観測的特徴についていくつか出てきましたが、改めて FBOTs の特徴についてまとめておきましょう。
+測光観測による FBOTs の定義は次のようになります。</p>
+
+<ul>
+  <li>FWHM で 12 日以下という、急激な光度変化</li>
+  <li>極大で青色 \(g_\mathrm{P1} - r_\mathrm{P1} \lesssim -0.2\)</li>
+</ul>
+
+<p>またこれに付随して、FBOTs には次のような特徴があります。</p>
+
+<ul>
+  <li>最大で \(10^{44} \mathrm{erg/s}\) に達する光度</li>
+  <li>有効温度 \(2 \times 10^4 \mathrm{K}\) の青色</li>
+  <li>初期のスペクトルは高温であり、吸収線・輝線などの特徴がほぼ存在しない連続スペクトル</li>
+  <li>超高光度超新星 (SuperLuminous SuperNova: SLSN) に匹敵する光度だが、水素に乏しい SLSN-I 型に比べて X 線と電波でも明るい</li>
+</ul>
+
+<p>典型的な超新星爆発の光度がおよそ \(10^{41} \sim 10^{43} \mathrm{erg/s}\) であるため、それよりも 10 倍ほど明るいことがわかります。</p>
+
+<p><img src="/assets/images/compact/fbot_lfbot_02.png" alt="" /><br />
+<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a> より、AT2018cow のスペクトルの時間経過を示したもの。
+一番上にある 2.5 日などを見るとわかる通り、最初の数日間には輝線・吸収線が見られない。</p>
+
+<h3 id="lfbots-の定義観測的特徴">LFBOTs の定義・観測的特徴</h3>
+
+<p>FBOTs の定義は測光観測からくるものだったのに対し、LFBOTs と呼ばれるクラスは多波長観測から定義されます。
+<a href="https://academic.oup.com/mnras/article/508/4/5138/6385772">Perley et al. (2021)</a> では、AT2018cow の類似天体を判別したときの基準として、次のような特徴を議論しました。</p>
+
+<ul>
+  <li>測光観測による急激な光度の立ち上がり</li>
+  <li>高温度の光球が長時間維持される (なかなか冷却されない)</li>
+  <li>爆発により放出された放射性物質の崩壊による加熱からくる第二のピークがない</li>
+  <li>電波・ミリ波・X 線で極端に明るい</li>
+  <li>母銀河が矮小銀河</li>
+</ul>
+
+<p>この 5 つを満たすものが、LFBOTs と分類されます。
+また、LFBOTs はその決定に AT2018cow が大きく関わっていることから、<a href="https://academic.oup.com/mnras/article/508/4/5138/6385772">Perley et al. (2021)</a> では AT2018cow-like events と呼んでいます。<br />
+最後に、典型的な超新星爆発 (SLSN-I, Ia, IIP) と LFBOT (AT2018cow) の光度曲線の概形を示します。</p>
+
+<p><img src="/assets/images/compact/fbot_lfbot_03.png" alt="" /><br />
+AT2018cow, SLSN-I, Ia, IIP の光度曲線の概形を比較したもの。<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a>、<a href="https://iopscience.iop.org/article/10.3847/1538-4357/abbd98">Perley et al. (2020)</a>、<a href="https://iopscience.iop.org/article/10.1088/0004-637X/786/1/67">Anderson et al. (2014)</a>、<a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca161">Chen et al. (2023)</a> のデータを参考に、概形を描画した。</p>
+
+<h2 id="なぜ超新星爆発では説明できないのか">なぜ超新星爆発では説明できないのか</h2>
+
+<h3 id="ni-量が足りない">Ni 量が足りない</h3>
+
+<p>ここまで明るく輝く FBOTs や LFBOTs は、超新星爆発とは異なるものなのでしょうか。
+簡単な近似などを用い、光度曲線から放出物の量を見積もることで、既存の超新星では説明できないことを見ていきましょう。<br />
+超新星爆発が放出した物質中の、放射のエネルギー密度を \(u = a T^4\) としましょう。
+ここで \(a\) は輻射定数です。
+簡単化のため、放出された物質は量が多く、ここでは<a href="/atmos/diffusion">光学的厚さが十分大きな場合に成り立つ拡散近似</a>を適用しましょう。
+このとき、エネルギー流束は</p>
+
+\[\mathbf{F} 
+= -D \nabla u, \quad D 
+= \frac{c}{3\kappa \rho} \tag{1}\]
+
+<p>のようになります。
+すると、静止した一様密度球におけるエネルギー密度の時間変化を表す式は</p>
+
+\[\frac{\partial u}{\partial t} 
+= D \nabla^2 u \tag{2}\]
+
+<p>となります。
+\(u = e^{-t/t_0} \psi(r)\) のように変数分離を行い、(2) 式の解を求めることにしましょう。
+この \(e^{-t/t_0}\) は \(t = 0\) で超新星爆発が発生しエネルギーが急激に立ち上がってから、およそ \(t = t_0\) の時間で拡散し、減衰していく様子を表す部分と考えることができます。
+すると</p>
+
+\[- \frac{e^{-t/t_0}}{t_0} \psi(r) 
+= D e^{-t/t_0} \nabla^2 \psi \ \Longrightarrow \ \nabla^2 \psi 
+= \frac{\partial^2 \psi}{\partial r^2} + \frac{2}{r} \frac{\partial \psi}{\partial r}
+= - \frac{1}{t_0 D} \psi (r) \tag{3}\]
+
+<p>\(k^2 = \frac{1}{t_0 D}\) とおき、さらに \(R = kr\) のように変数変換すれば</p>
+
+\[k^2 \frac{\partial^2 \psi}{\partial R^2} + \frac{2k^2}{R} \frac{\partial \psi}{\partial R} 
+= - k^2 \psi \ \Longrightarrow \ 
+\frac{\partial^2 \psi}{\partial R^2} + \frac{2}{R} \frac{\partial \psi}{\partial R} + \psi 
+= 0 \tag{4}\]
+
+<p>を得ます。
+これは <a href="/math/sph_bessel#球ベッセル関数と球ノイマン関数が満たす微分方程式">\(n = 0\) の球ベッセル関数が満たす微分方程式</a>です。
+よって</p>
+
+\[\psi(r) 
+= j_0 (kr) 
+= \frac{\sin (kr)}{kr} \tag{5}\]
+
+<p>とわかります。
+今、放出物質は半径 \(R\) の球状領域内に限られており、その外側では物質は存在しない (\(u=0\)) とすると</p>
+
+\[\sin (kR) 
+= 0 \ \Longrightarrow \ kR 
+= \pi \tag{6}\]
+
+<p>より</p>
+
+\[t_0 
+= \frac{1}{D k^2} 
+= \frac{R^2}{D (kR)^2} 
+= \frac{3\kappa \rho R^2}{c \pi^2} \tag{7}\]
+
+<p>となります。
+考えている放出物質が一様密度で拡がっているとし、放出物質の総質量を \(M\) とすると、\(\rho = \frac{3M}{4\pi R^3}\) から</p>
+
+\[t_0 
+= \frac{9 \kappa M}{4\pi^3 cR} 
+= \frac{\kappa M}{\beta c R}, \quad \beta 
+= \frac{4\pi^3}{9} \sim 13.78 \tag{8}\]
+
+<p>となります。
+すなわち、エネルギーの減衰の仕方を決める \(t_0\) が分かれば、\(M\) が推定できることがわかります。<br />
+実際に観測されるのは光度曲線であるため、ここまでの議論と光度 \(L(t)\) とを結びつけましょう。
+放射物質全体の放射エネルギーを \(E\) とすると、熱力学第一法則より</p>
+
+\[\frac{dE}{dt} 
+= -P \frac{dV}{dt} + Q - L \tag{9}\]
+
+<p>ここで右辺第一項は超新星爆発による放出物が時間とともに拡がっていく (膨張する) ことによりエネルギーを失う効果、第二項は放射性物質の崩壊や中心星への降着に伴って解放されるエネルギーなどによる加熱、第三項は外部に放出される放射エネルギー (すなわち私たちが観測する光度) を意味します。
+これを解析的に解くために、放射が優勢の状態を仮定しましょう。
+このときの圧力は \(P = \frac{E}{3V}\) のように書かれます。
+さらに膨張は一定の速度 \(v\) で一様に起こっているとすると、半径は \(R = vt\) と計算できます。
+すると、第一項は</p>
+
+\[-P \frac{dV}{dt} 
+= - \frac{E}{3V} \frac{d}{dt} \left( \frac{4\pi}{3} v^3 t^3\right) 
+= - \frac{E}{3V} \frac{3}{t} \frac{4\pi}{3} v^3 t^3 
+= - \frac{E}{t} \tag{10}\]
+
+<p>のように書かれます。<br />
+最後に、観測される光度は、光子の拡散による染み出しによるものとしましょう。
+エネルギーが抜け出すのにかかる典型的な時間を \(t_0\) と考えることができるため</p>
+
+\[L 
+= \left\lvert - \frac{dE}{dt} \right\rvert 
+\approx \frac{E}{t_0(t)} \tag{11}\]
+
+<p>のように近似できます。
+これらより、(9) 式は</p>
+
+\[\frac{dE}{dt} 
+= - \frac{E}{t} - \frac{E}{t_0(t)} + Q 
+= - \frac{E}{t} - \frac{E \beta c v t}{\kappa M} + Q 
+= - \frac{E}{t} - \frac{2t}{\tau_m^2} E + Q \tag{12}\]
+
+<p>となります。
+ここで \(\tau_m^2 = \frac{2\kappa M}{\beta c v}\) のように置きました。
+両辺に \(t\) をかけ、さらに \(y = Et\) とおくと、\(\frac{dy}{dt} = E + t \frac{dE}{dt}\) より</p>
+
+\[\frac{dy}{dt} + \frac{2t}{\tau_m^2} y 
+= Qt \tag{13}\]
+
+<p>のように整理されます。
+この式の左辺は</p>
+
+\[e^{t^2 / \tau_m^2}\frac{dy}{dt} + \frac{2t}{\tau_m^2} e^{t^2 / \tau_m^2} y 
+= \frac{d}{dt} \left( e^{t^2 / \tau_m^2} y \right) \tag{14}\]
+
+<p>と変形できるため、両辺に \(e^{t^2 / \tau_m^2}\) をかけることで</p>
+
+\[\frac{d}{dt} \left( e^{t^2 / \tau_m^2} y \right) 
+= Qt e^{t^2 / \tau_m^2} \ \Longrightarrow \ 
+e^{t^2 / \tau_m^2} y 
+= \int_0^t Q(t') t' e^{t'^2 / \tau_m^2} dt' \tag{15}\]
+
+<p>のように解が求まります。
+ここから、光度は</p>
+
+\[L 
+\approx \frac{E}{t_0(t)}
+= \frac{E \beta c vt}{\kappa M} 
+= \frac{2}{\tau_m^2} y 
+= \frac{2}{\tau_m^2} e^{-t^2 / \tau_m^2} \int_0^t Q(t') t' e^{t'^2 / \tau_m^2} dt' \tag{16}\]
+
+<p>のように計算されます。
+(16) 式において \(Q = (一定)\) とした場合</p>
+
+\[L 
+= Q (1 - e^{-t^2 /\tau_m^2}) \tag{17}\]
+
+<p>のように求めることができます。
+このことから、\(\tau_m\) はどれくらいの時間スケールで増光するかを表すパラメータであることがわかります。
+\(\tau_m\) の定義式を、放出物質の総質量 \(M\) について解くことで</p>
+
+\[M 
+= \frac{\beta c v \tau_m^2}{2\kappa} 
+\approx 0.07 M_\odot \left( \frac{\tau_m}{2.5 \mathrm{d}}\right)^2 \left( \frac{v}{0.1c}\right) \left( \frac{\kappa}{0.2 \mathrm{cm^2/g}}\right)^{-1} \tag{18}\]
+
+<p>のようになります。
+(18) 式は、典型的な FBOTs の値で物理量を規格化しています。
+この式から、測光観測で \(\tau_m\) を特定し、さらに種々のモデルなどから \(v, \kappa\) の値を用いることで、超新星爆発の放出物質の総質量を見積もることができるとわかります。
+実際、Ia 型超新星の典型的な値である \(\tau_m \sim 13 \mathrm{days}, v \sim 10^4 \mathrm{km/s}, \kappa \sim 0.1 \mathrm{cm^2/g}\) を代入すると、\(M \sim 1.3 M_\odot\) となり、<a href="/compact/chandrasekhar_limit">白色矮星のチャンドラセカール限界質量</a>に近い値を得ることができます。
+(18) 式から、FBOTs の放出物の総量はおよそ \(0.1 M_\odot\) 程度とわかります。<br />
+超新星爆発により生まれた放射性物質が崩壊を起こすことで、放出された物質を加熱します。
+代表的な崩壊に \(\mathrm{Ni} \rightarrow \mathrm{Co} \rightarrow \mathrm{Fe}\) という反応があります。
+この加熱率は次の式で表されることが、原子核物理学から知られています。</p>
+
+\[Q(t) 
+= (6.45 e^{-t/8.8\mathrm{d}} + 1.45 e^{-t/111.3\mathrm{d}}) \times 10^{43} \left( \frac{M_\mathrm{Ni}}{1M_\odot}\right) \ [\mathrm{erg/s}] \tag{19}\]
+
+<p>(16) 式から \(L = 2y / \tau_m^2\) であることと、(13) 式を用いると</p>
+
+\[\frac{dL}{dt} 
+= \frac{2}{\tau_m^2} \frac{dy}{dt} 
+= \frac{2}{\tau_m^2} \left( Qt - \frac{2t}{\tau_m^2} y\right) 
+= \frac{2t}{\tau_m^2} \left( Q -L \right) \tag{20}\]
+
+<p>のように変形することができます。
+光度が最大となったとき、\(\frac{dL}{dt} = 0\) より、光度がピークに達したときの光度と加熱率との間に \(L_\mathrm{peak} = Q(t_\mathrm{peak})\) の関係が成り立つことがわかります。
+<a href="https://iopscience.iop.org/article/10.3847/2041-8213/aadd90">Prentice et al. (2018)</a> で観測が報告された AT2018cow の場合、\(t_\mathrm{peak} \sim 2.6 \mathrm{days}, L_\mathrm{peak} \sim 1.7 \times 10^{44} \mathrm{erg/s}\) です。 
+ここから</p>
+
+\[M_\mathrm{Ni} 
+\approx \frac{1.7 \times 10^{44}}{6.2 \times 10^{43}} 
+\sim 2.7 M_\odot \tag{21}\]
+
+<p>のように、放出物質中のニッケルの総質量が求まります。
+しかしこの結果は、(18) 式から求められた放出物質の総質量 0.1 \(M_\odot\) より大きくなっています。
+ピーク時の光度を再現するためには多量のニッケルが必要ですが、実際の FBOTs や LFBOTs は放出物質が少なく、ニッケルの量も少ないことがわかります。</p>
+
+<h3 id="光球面が内側に移動しつつ温度がいつまでも冷えない">光球面が内側に移動しつつ、温度がいつまでも冷えない</h3>
+
+<h3 id="x-線光度の大きさと変動">X 線光度の大きさと変動</h3>
+
+<h3 id="どうしても超新星で説明したい非対称な星周物質分布">どうしても超新星で説明したい…非対称な星周物質分布</h3>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[] <a href=""></a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET

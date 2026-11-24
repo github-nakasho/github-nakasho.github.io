@@ -1,0 +1,172 @@
+I"�4
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#平均場電気力学と-alpha-効果" id="markdown-toc-平均場電気力学と-alpha-効果">平均場電気力学と \(\alpha\) 効果</a>    <ol>
+      <li><a href="#パーカーの-alpha-omega-ダイナモ" id="markdown-toc-パーカーの-alpha-omega-ダイナモ">パーカーの \(\alpha \Omega\) ダイナモ</a></li>
+      <li><a href="#平均場電気力学" id="markdown-toc-平均場電気力学">平均場電気力学</a></li>
+      <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<h1 id="平均場電気力学と-alpha-効果">平均場電気力学と \(\alpha\) 効果</h1>
+
+<h2 id="パーカーの-alpha-omega-ダイナモ">パーカーの \(\alpha \Omega\) ダイナモ</h2>
+
+<p>カウリングの反ダイナモ定理を克服するには、定常・軸対称という仮定のどちらか一方でも緩和する必要があります。
+そこで、パーカーは次のようなモデルを考えました。<br />
+太陽の場合、<a href="">\(\Omega\) 効果</a>により増幅されたトロイダル磁場は、<a href="">磁気浮力</a>により太陽表面に上昇します。
+このとき、周囲の圧力が低下するため、磁束管は膨張をします。
+太陽の自転を考慮すると、膨張運動するガスはコリオリ力 \(- \boldsymbol{\Omega} \times \mathbf{v}\) を受けます。</p>
+
+<p><img src="/assets/images/mhd/mean_field_electrodynamics_01.png" alt="" /><br />
+太陽での<a href="">磁気浮力</a>と \(\alpha \Omega\) ダイナモ。
+左パネルは<a href="">磁気浮力</a>による磁束管の上昇・膨張、右パネルは北半球と南半球でのコリオリ力による磁力線のねじれ方向を表す。</p>
+
+<p>太陽の北半球 (極から見た時に自転が反時計回りに見える) では、運動するガスにはその進行方向を右に曲げるようなコリオリ力が働きます。
+磁場がガスに凍結している場合、ガスと一緒に磁力線も動くため、磁力線はねじられ、ポロイダル成分が生じます。
+このようにして生じるポロイダル成分は、その浮上した磁場付近に生じる一時的・局所的なものです。
+しかし、同様に生じた周囲のポロイダル磁場と磁気リコネクションすることにより、大局的なポロイダル磁場を作り出すことができると考えられます。<br />
+銀河円盤についても、同様に考えることができます。</p>
+
+<p><img src="/assets/images/mhd/mean_field_electrodynamics_02.png" alt="" /><br />
+銀河円盤で起こる \(\alpha \Omega\) ダイナモ。
+(a) 最初に超新星爆発が起こり磁場が磁力線が上昇する場合と、(b) 最初に重力収縮が起こり恒星からの恒星風により磁力線が上昇する場合。</p>
+
+<p>太陽と同様に、<a href="">\(\Omega\) 効果</a>により増幅されたトロイダル磁場が、銀河面上空のハロー方向に浮上します。
+(a) の場合、まずトロイダル磁場が<a href="">磁気浮力</a>や乱流、恒星風や超新星爆発により、ハロー方向に噴出されます。
+このとき、ハローは密度が低いために膨張運動を起こし、それに伴ってコリオリ力による回転運動も行います。
+このようにして、ハロー内に動径方向の磁場が生まれます。
+(b) の場合、トロイダル磁場が存在する場所で、ガスが重力収縮を起こします。
+するとコリオリ力により磁力線が回転し、磁場の向きが変化します。
+その後、何らかの作用により磁力線が浮上することで、動径方向の磁場が生まれます。
+しかし (a) と (b) では、新たに生成された動径方向の磁場の向きが反対になることに注意しましょう。
+太陽の場合は、北半球か南半球かで磁場の向きが決まっていましたが、銀河の場合は銀河面の上側か下側かだけでなく、上昇・膨張が先に起こるか収縮が先に起こるかによっても向きが変化します。</p>
+
+<p>注目していただきたいのは、先ほどの図の (a), (b) において、元の磁場と同じ方向に沿ったベクトルポテンシャルが生成されていることです。
+種となるトロイダル磁場に (符号は違えど) ほぼ比例するベクトルポテンシャルが生じると考えられるため、<a href="/mhd/anti_dynamo_theorem#軸対称な誘導方程式からの理解">軸対称の場合のベクトルポテンシャルの時間発展の式 (12)</a> に、次のような新しい項を付け加えることにします。</p>
+
+\[\frac{\partial A_\varphi}{\partial t} 
+= - \frac{\mathbf{v}_p \cdot \nabla}{R} (RA_\varphi) + \eta \left( \nabla^2 - \frac{1}{R^2} \right) A_\varphi + \alpha B_\varphi \tag{1}\]
+
+<p>新しい項の係数 \(\alpha\) の名前から、この効果を \(\alpha\) ダイナモ効果と呼びます。
+またこの式と<a href="/mhd/anti_dynamo_theorem#軸対称な誘導方程式からの理解">軸対称の場合のベクトルポテンシャルの時間発展の式 (20)</a> を合わせて、ダイナモ方程式とも呼びます。</p>
+
+<h2 id="平均場電気力学">平均場電気力学</h2>
+
+<p>先ほどは、経験的に係数 \(\alpha\) を持つ項を導入しましたが、ここでは平均場の枠組みから、\(\alpha\) の意味を説明してみましょう。
+磁場と速度場とを、平均場部分 \(\langle \mathbf{B} \rangle, \langle \mathbf{v} \rangle\) と、ゆらぎの部分 \(\mathbf{B}', \mathbf{v}'\) とに分けましょう。
+すなわち</p>
+
+\[\mathbf{B} 
+= \langle \mathbf{B} \rangle + \mathbf{B}', \quad
+\mathbf{v} 
+= \langle \mathbf{v} \rangle + \mathbf{v}' \tag{2}\]
+
+<p>のように書くことにします。
+ただし、演算子 \(\langle \cdots \rangle\) はアンサンブル平均を表し、これらの量は、次のようなレイノルズ則 (Reynolds rules) を満たします。</p>
+
+\[\begin{align}
+&amp;\langle \mathbf{v}_1 + \mathbf{v}_2 \rangle 
+= \langle \mathbf{v}_1 \rangle + \langle \mathbf{v}_2 \rangle, \quad 
+\langle \langle \mathbf{v} \rangle \rangle 
+= \langle \mathbf{v} \rangle, \quad 
+\langle \langle \mathbf{v}_1 \rangle \langle \mathbf{v}_2 \rangle \rangle 
+= \langle \mathbf{v}_1 \rangle \langle \mathbf{v}_2 \rangle, \quad 
+\langle \langle \mathbf{v} \rangle \mathbf{v}' \rangle = 0, \notag \\
+&amp;\left\langle \frac{\partial \mathbf{v}}{\partial t} \right\rangle 
+= \frac{\partial \langle \mathbf{v} \rangle}{\partial t}, \quad 
+\left\langle \frac{\partial \mathbf{v}}{\partial x} \right\rangle 
+= \frac{\partial \langle \mathbf{v} \rangle}{\partial x} \notag 
+\end{align} \tag{3}\]
+
+<p>これらを、誘導方程式に代入しましょう。</p>
+
+\[\begin{align}
+\frac{\partial}{\partial t} ( \langle \mathbf{B} \rangle + \mathbf{B}')
+&amp;= \nabla \times \{(\langle \mathbf{v}\rangle + \mathbf{v}') \times (\langle \mathbf{B}\rangle + \mathbf{B}') \} + \eta \nabla^2 (\langle \mathbf{B} \rangle + \mathbf{B}') \notag \\
+&amp;= \nabla \times (\langle \mathbf{v}\rangle \times \langle \mathbf{B}\rangle + \langle \mathbf{v}\rangle \times \mathbf{B}' + \mathbf{v}' \times \langle \mathbf{B}\rangle + \mathbf{v}' \times \mathbf{B}') + \eta \nabla^2 (\langle \mathbf{B} \rangle + \mathbf{B}') \tag{4}
+\end{align}\]
+
+<p>この両辺のアンサンブル平均を取ることにします。
+先ほどのレイノルズ則 (3) 式を用いることで</p>
+
+\[(左辺) 
+= \frac{\partial \langle \mathbf{B} \rangle}{\partial t} \tag{5}\]
+
+\[(右辺)
+= \nabla \times (\langle \mathbf{v} \rangle \times \langle \mathbf{B} \rangle) + \nabla \times \langle \mathbf{v}' \times \mathbf{B}' \rangle + \eta \nabla^2 \langle \mathbf{B} \rangle \tag{6}\]
+
+<p>となります。</p>
+
+<p class="note">(6) 式において、\(\langle \mathbf{v}' \times \mathbf{B}' \rangle\) が微少量の 2 次であるとして無視したくなる気持ちがありますが、グッとこらえましょう。この項を無視してしまうと、得られるのは \(\frac{\partial \langle \mathbf{B} \rangle}{\partial t} = \nabla \times (\langle \mathbf{v}\rangle \times \langle \mathbf{B} \rangle) + \eta \nabla^2 \langle \mathbf{B} \rangle\) となります。これは平均的な磁場・速度場による誘導方程式であり、ゆらぎの量による影響が入る余地がなくなってしまいます。</p>
+
+<p>これらの式を元の式 (4) から辺々引き算を行うことで、ゆらぎに対する式を得ます。</p>
+
+\[\frac{\partial \mathbf{B}'}{\partial t} 
+= \nabla \times (\langle \mathbf{v} \rangle \times \mathbf{B}' + \mathbf{v}' \times \langle \mathbf{B} \rangle + \mathbf{v}' \times \mathbf{B}' - \langle \mathbf{v}' \times \mathbf{B}' \rangle) + \eta \nabla^2 \mathbf{B}' \tag{7}\]
+
+<p>左辺はゆらぎの 1 次であるのに対し、右辺には \(\mathbf{v}' \times \mathbf{B}' - \langle \mathbf{v}' \times \mathbf{B}' \rangle\) のようなゆらぎの 2 次の量です。
+ゆらぎは小さなものであるとして、2 次の量は無視することにしましょう。
+そして理想的な状況を考え、散逸が小さい \(\eta \sim 0\) とします。
+さらに簡単のため、\(\langle \mathbf{v} \rangle = 0\) のような、平均的に静止しているような系について考えると</p>
+
+\[\frac{\partial \mathbf{B}'}{\partial t} 
+\simeq \nabla \times (\mathbf{v}' \times \langle \mathbf{B} \rangle) \tag{8}\]
+
+<p>を得ます。
+さらに近似して、ゆらぎの寿命を \(\tau\) とすると</p>
+
+\[\begin{align}
+\mathbf{B}' 
+&amp;\approx \tau \nabla \times (\mathbf{v}' \times \langle \mathbf{B} \rangle) \mathbf{e}_i
+= \tau \epsilon_{ijk} \partial_j (\epsilon_{k \ell m} v'_\ell \langle B_m \rangle) \mathbf{e}_i
+= \tau \epsilon_{kij} \epsilon_{k \ell m} \partial_j (v'_\ell \langle B_m\rangle) \mathbf{e}_i \notag \\
+&amp;= \tau (\delta_{i\ell} \delta_{jm} - \delta_{im} \delta_{j\ell}) \partial_j (v'_\ell \langle B_m\rangle) \mathbf{e}_i 
+= \tau \{\partial_j (v'_i \langle B_j\rangle) - \partial_j (v'_j \langle B_i\rangle)\} \mathbf{e}_i \notag \\
+&amp;= \tau \{ (\langle B_j\rangle \partial_j) v'_i + (\partial_j \langle B_j\rangle) v'_i - (\partial_j v'_j) \langle B_i\rangle - (v'_j \partial_j) \langle B_i\rangle \} \mathbf{e}_i \notag \\
+&amp;= \tau \{(\langle \mathbf{B} \rangle \cdot \nabla) \mathbf{v}' + \underbrace{(\nabla \cdot \langle \mathbf{B}\rangle)}_{=0} \mathbf{v}' - \underbrace{(\nabla \cdot \mathbf{v}')}_{=0 (非圧縮)} \langle \mathbf{B}\rangle - (\mathbf{v}' \cdot \nabla) \langle \mathbf{B} \rangle\} \notag \\
+&amp;= \tau \{(\langle \mathbf{B} \rangle \cdot \nabla) \mathbf{v}' - (\mathbf{v}' \cdot \nabla) \langle \mathbf{B} \rangle\}\tag{9}
+\end{align}\]
+
+<p>のようになります。
+これを用いて、(6) 式の \(\langle \mathbf{v}' \times \mathbf{B}' \rangle = \langle \epsilon_{ijk} v'_j B'_k\rangle \mathbf{e}_i\) を評価しましょう。</p>
+
+\[\begin{align}
+\langle \mathbf{v}' \times \mathbf{B}' \rangle_i 
+&amp; = \langle \epsilon_{ijk} v'_j \tau \{(\langle B_\ell \rangle \partial_\ell) v'_k - (v'_\ell \partial_\ell) \langle B_k \rangle\}\rangle 
+= \tau \epsilon_{ijk} \langle \langle B_\ell \rangle v'_j \partial_\ell v'_k - v'_j v'_\ell \partial_\ell \langle B_k \rangle \rangle \notag \\
+&amp; \underbrace{=}_{\langle B\rangle を外に出す} \tau \epsilon_{ijk} \left( \langle B_\ell \rangle \langle  v'_j \partial_\ell v'_k \rangle - \langle B_k \rangle \langle v'_j v'_\ell \partial_\ell \rangle ) \tag{10}
+\end{align}\]
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="https://doi.org/10.1017/S0022377819000539">Rincon, 2019, “Dynamo theories”</a><br />
+[2] <a href="https://doi.org/10.1146/annurev-astro-071221-052807">Brandenburg &amp; Ntormousi, 2023, “Galactic Dynamos”</a><br />
+[3] <a href="https://link.amazon/B00sd4tXP">Priest, “Solar Magnetohydrodynamics”</a><br />
+[4] <a href="https://link.amazon/B02l5xA77">Priest, “Magnetohydrodynamics of the Sun”</a><br />
+[5] <a href="https://link.amazon/B06J1skYa">桜井隆, 小島正宜, 小杉健郎, 柴田一成, “太陽”</a><br />
+[6] <a href="https://link.amazon/B00e7dDcc">柴田一成, 横山央明, 工藤哲洋, “宇宙電磁流体力学の基礎”</a><br />
+[7] <a href="https://link.amazon/B03DN6O3N">柴田一成, 福江純, 松元亮治, 嶺重慎, “活動する宇宙 -天体活動現象の物理-“</a></p>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9131160172347693" crossorigin="anonymous"></script>
+
+<!-- for_jekyll -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9131160172347693" data-ad-slot="3528582902" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+:ET
